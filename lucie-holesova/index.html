@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Lucie Holešová</title>
+<meta name="description" content="Úprava psů a koček v Janovicích u Frýdlantu nad Ostravicí. Se psem i s kočkou jedete na jednu adresu a termín domlouváte přímo s Lucií Holešovou.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Young+Serif&subset=latin-ext&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lucie Holešová",
+  "description": "Nabídka úpravy psů i koček.",
+  "telephone": "+420721958545",
+  "email": "holesovalucie@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Janovice 590",
+    "postalCode": "739 11",
+    "addressLocality": "Janovice",
+    "addressRegion": "Moravskoslezský kraj",
+    "addressCountry": "CZ"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "IČO",
+    "value": "66749026"
+  },
+  "sameAs": ["https://www.firmy.cz/detail/2527247-lucie-holesova-janovice.html"]
+}
+</script>
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<style>
+/* Koncept: podhorské okno a otevřená knížka. Dělený hero s obloukovým oknem, pod ním dvoustrana „Psí strana / Kočičí strana“ se hřbetem, zbytek stránky klidně zarovnaný vlevo na smetanovém papíře. */
+:root{
+  --berry:#2F3E6E;
+  --berry-deep:#1F2A4D;
+  --cream:#FBF6EC;
+  --honey:#E3A32B;
+  --moss:#5F7F52;
+  --moss-deep:#3C5633;
+  --cream-deep:#F3EAD7;
+  --paper:#FFFDF7;
+  --berry-tint:#E2E6F2;
+  --berry-mid:#B8C2DF;
+  --moss-tint:#E2EBDA;
+  --moss-mid:#A9C09B;
+  --honey-tint:#F8E6BC;
+  --text:#2A3352;
+  --muted:#515C7C;
+  --line:rgba(47,62,110,.2);
+  --f-head:"Young Serif",Georgia,"Times New Roman",serif;
+  --f-body:Karla,"Segoe UI",system-ui,Arial,sans-serif;
+}
+.page,.page *{box-sizing:border-box}
+.page{background:var(--cream);color:var(--text);font-family:var(--f-body);font-size:17px;line-height:1.6;color-scheme:light;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+.page h1,.page h2,.page h3,.page h4,.page p,.page ul,.page ol,.page figure,.page fieldset{margin:0;padding:0}
+.page ul,.page ol{list-style:none}
+.page a{color:var(--berry);text-underline-offset:3px}
+.page svg{display:block}
+.page h1,.page h2,.page h3{font-family:var(--f-head);font-weight:400;color:var(--berry);text-wrap:balance;line-height:1.14}
+.page h2{font-size:clamp(29px,4.2vw,44px)}
+.page :focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:4px}
+.page .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.page .sec{padding:clamp(56px,8vw,104px) 0}
+.page .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--moss-deep);margin-bottom:12px}
+.page .sec-head{max-width:720px}
+.page .sec-head h2{display:inline}
+.page .sec-lead{margin-top:14px;max-width:62ch;color:var(--text)}
+.page .pill{display:inline-block;vertical-align:middle;margin-left:8px;padding:3px 10px 4px;border:1.5px dashed #9A6A0E;border-radius:99px;background:var(--honey-tint);color:var(--berry-deep);font-family:var(--f-body);font-size:12.5px;font-weight:700;letter-spacing:.03em;line-height:1.3;white-space:nowrap}
+.page .pill-ok{border:1.5px solid var(--moss-deep);background:var(--moss-tint);color:var(--moss-deep)}
+.page .note{margin-top:14px;max-width:64ch;font-size:15.5px;color:var(--muted)}
+
+/* banner */
+.page .banner{background:var(--berry-deep);color:var(--cream);font-size:12.5px;line-height:1.4;text-align:center;padding:7px 16px;letter-spacing:.02em}
+
+/* header */
+.page .hd{border-bottom:1px solid var(--line);background:var(--cream)}
+.page .hd-in{display:flex;align-items:center;gap:16px;min-height:66px;padding-top:8px;padding-bottom:8px}
+.page .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;margin-right:auto}
+.page .brand svg{flex:none;width:38px;height:42px}
+.page .brand b{display:block;font-family:var(--f-head);font-weight:400;font-size:18px;line-height:1.1;color:var(--berry)}
+.page .brand i{display:block;font-style:normal;font-size:12.5px;letter-spacing:.06em;color:var(--muted);line-height:1.3;margin-top:2px}
+.page .nav{display:none;gap:26px}
+.page .nav a{font-size:15.5px;font-weight:500;text-decoration:none;color:var(--text);padding:6px 0;border-bottom:2px solid transparent}
+.page .nav a:hover{border-bottom-color:var(--honey)}
+.page .hd-tel{display:inline-flex;align-items:center;gap:8px;flex:none;font-weight:700;font-size:16px;text-decoration:none;color:var(--berry);border:2px solid var(--berry);border-radius:99px;padding:7px 13px;white-space:nowrap}
+.page .hd-tel:hover{background:var(--berry);color:var(--cream)}
+.page .hd-tel svg{width:16px;height:16px}
+
+/* hero */
+.page .hero{padding:26px 0 44px;position:relative;overflow:hidden}
+.page .hero-in{display:grid;gap:26px;align-items:center}
+.page .hero-txt{min-width:0}
+.page .place{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--moss-deep);margin-bottom:14px}
+.page .place svg{width:15px;height:18px;flex:none}
+.page h1{font-size:clamp(33px,8.7vw,62px);letter-spacing:-.005em}
+.page h1 mark{background:linear-gradient(transparent 64%,rgba(227,163,43,.55) 64%,rgba(227,163,43,.55) 94%,transparent 94%);color:inherit}
+.page .lede{margin-top:16px;font-size:18px;max-width:54ch}
+.page .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:22px}
+.page .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:13px 26px;border:0;border-radius:10px;background:var(--berry);color:var(--cream);font-family:var(--f-body);font-size:18px;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:5px 5px 0 var(--honey);transition:transform .15s,box-shadow .15s}
+.page .btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--honey)}
+.page .btn svg{width:18px;height:18px}
+.page .tel-big{display:inline-flex;flex-direction:column;text-decoration:none;line-height:1.2}
+.page .tel-big small{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.page .tel-big span{font-family:var(--f-head);font-size:25px;color:var(--berry);border-bottom:2px solid var(--honey)}
+.page .facts{display:none}
+.page .win{min-width:0;position:relative;width:min(250px,70%);margin:0 auto}
+.page .win svg{width:100%;height:auto;overflow:visible}
+
+/* book spread */
+.page .spread{background:var(--cream-deep)}
+.page .book{position:relative;margin-top:36px;padding:12px 12px 16px;border-radius:16px;background:var(--berry-deep);box-shadow:0 26px 38px -30px rgba(31,42,77,.75)}
+.page .book::after{content:"";position:absolute;right:38px;bottom:-30px;width:20px;height:62px;background:var(--honey);clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%)}
+.page .leaves{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;position:relative}
+.page .leaf{position:relative;min-width:0;padding:26px 20px 28px;color:var(--text)}
+.page .leaf-dog{background:linear-gradient(to top,rgba(31,42,77,.2),rgba(31,42,77,0) 30px) var(--berry-tint);border-radius:8px 8px 3px 3px}
+.page .leaf-cat{background:linear-gradient(to bottom,rgba(31,42,77,.2),rgba(31,42,77,0) 30px) var(--moss-tint);border-radius:3px 3px 8px 8px}
+.page .leaf-cat::before{content:"";position:absolute;left:10px;right:10px;top:-9px;border-top:2px dashed rgba(251,246,236,.8)}
+.page .run{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1.5px solid currentColor;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.page .leaf-dog .run{color:var(--berry)}
+.page .leaf-cat .run{color:var(--moss-deep)}
+.page .run span:last-child{letter-spacing:.06em;font-weight:500;text-transform:none}
+.page .leaf-head{display:flex;align-items:center;gap:16px;margin-top:22px}
+.page .leaf-head svg{flex:none;width:78px;height:78px}
+.page .leaf-head h3{font-size:clamp(25px,3vw,32px);min-width:0}
+.page .leaf-cat h3{color:var(--moss-deep)}
+.page .leaf-intro{margin-top:14px;max-width:46ch}
+.page .lines{margin-top:18px}
+.page .lines li{padding:14px 0;border-top:1px solid rgba(31,42,77,.16)}
+.page .lines li:last-child{border-bottom:1px solid rgba(31,42,77,.16)}
+.page .ln-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.page .ln-top h4{flex:1 1 100%;min-width:0;font-family:var(--f-body);font-size:18px;font-weight:700;line-height:1.3;color:var(--berry-deep)}
+.page .dots{flex:1 1 14px;min-width:14px;height:0;border-bottom:2px dotted rgba(31,42,77,.4);transform:translateY(-4px)}
+.page .price{flex:none;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;padding:3px 9px;border-radius:6px;background:var(--paper)}
+.page .leaf-dog .price{color:var(--berry)}
+.page .leaf-cat .price{color:var(--moss-deep)}
+.page .lines p{margin-top:6px;font-size:16px;max-width:48ch}
+.page .leaf-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;font-size:17px;text-decoration:none;padding:10px 0;border-bottom:2px solid currentColor}
+.page .leaf-cat .leaf-cta{color:var(--moss-deep)}
+.page .leaf-cta svg{width:18px;height:18px;transition:transform .15s}
+.page .leaf-cta:hover svg{transform:translateX(4px)}
+.page .spread-note{margin-top:46px}
+
+/* why */
+.page .why-in{display:grid;gap:34px}
+.page .quote{position:relative;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;padding:30px 24px 26px;background:var(--berry);color:var(--cream);border-radius:120px 120px 12px 12px}
+.page .quote svg{width:44px;height:36px;margin:22px 0 12px}
+.page .quote blockquote{margin:0;font-family:var(--f-head);font-size:clamp(26px,3.2vw,36px);line-height:1.2;color:var(--cream);text-wrap:balance}
+.page .quote p{margin-top:16px;font-size:15.5px;color:#DCE2F3;max-width:38ch}
+.page .quote a{color:var(--honey);font-weight:700}
+.page .quote :focus-visible{outline-color:var(--honey)}
+.page .why-list{min-width:0}
+.page .why-list h2{margin-bottom:6px}
+.page .why-item{display:grid;grid-template-columns:54px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.page .why-item:last-of-type{border-bottom:0}
+.page .why-item svg{width:54px;height:54px}
+.page .why-item h3{font-size:22px;margin-bottom:6px}
+.page .why-item p{max-width:58ch}
+.page .why-item a{font-weight:700}
+
+/* steps */
+.page .steps-sec{background:var(--moss-tint)}
+.page .steps{display:grid;gap:8px;margin-top:34px;counter-reset:s}
+.page .step{position:relative;min-width:0;display:grid;grid-template-columns:58px minmax(0,1fr);gap:18px;padding-bottom:26px}
+.page .step::before{content:"";position:absolute;left:28px;top:58px;bottom:0;border-left:2px dashed var(--moss-deep);opacity:.55}
+.page .step:last-child::before{display:none}
+.page .step:last-child{padding-bottom:0}
+.page .num{width:58px;height:58px;border-radius:50%;background:var(--paper);border:2px solid var(--moss-deep);display:flex;align-items:center;justify-content:center;font-family:var(--f-head);font-size:26px;color:var(--moss-deep);position:relative}
+.page .step h3{font-size:23px;color:var(--berry-deep);margin:8px 0 6px}
+.page .step p{max-width:44ch}
+
+/* gallery */
+.page .gal{display:grid;gap:28px;margin-top:34px}
+.page .pair{min-width:0}
+.page .pair-fr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.page .ph{aspect-ratio:4/5;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px 10px;border:2px dashed rgba(47,62,110,.55);border-radius:10px;background:var(--paper);text-align:center;color:var(--berry)}
+.page .ph-po{border-radius:999px 999px 10px 10px;background:var(--berry-tint);padding-top:34px}
+.page .pair-cat .ph{border-color:rgba(60,86,51,.6);color:var(--moss-deep)}
+.page .pair-cat .ph-po{background:var(--moss-tint)}
+.page .ph svg{width:34px;height:30px}
+.page .ph b{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.page .ph span{font-size:15px;font-weight:700;line-height:1.3}
+.page .pair figcaption{margin-top:10px;font-size:15.5px;color:var(--muted)}
+
+/* faq */
+.page .faq-sec{background:var(--cream-deep)}
+.page .faq-in{display:grid;gap:28px}
+.page .faq-call{margin-top:20px;font-size:17px}
+.page .faq-call a{font-family:var(--f-head);font-size:22px;white-space:nowrap}
+.page .faq-list{min-width:0;border-top:2px solid var(--berry)}
+.page .faq-list details{border-bottom:1px solid var(--line)}
+.page .faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 2px;cursor:pointer;list-style:none;font-family:var(--f-head);font-size:20px;line-height:1.3;color:var(--berry)}
+.page .faq-list summary::-webkit-details-marker{display:none}
+.page .faq-list summary i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--berry);position:relative}
+.page .faq-list summary i::before,.page .faq-list summary i::after{content:"";position:absolute;left:9px;right:9px;top:14px;height:2px;background:var(--cream);transition:transform .2s}
+.page .faq-list summary i::after{transform:rotate(90deg)}
+.page .faq-list details[open] summary i::after{transform:rotate(0)}
+.page .faq-list summary:hover{color:var(--berry-deep)}
+.page .faq-list details p{padding:0 46px 20px 2px;max-width:62ch}
+
+/* contact */
+.page .contact{background:var(--berry);color:var(--cream)}
+.page .contact :focus-visible{outline-color:var(--honey)}
+.page .contact h2{color:var(--cream)}
+.page .contact .eyebrow{color:var(--honey)}
+.page .ct-in{display:grid;gap:36px}
+.page .ct-info{min-width:0}
+.page .ct-lead{margin-top:14px;max-width:46ch;color:#E6EAF6}
+.page .ct-tel{display:inline-block;margin-top:22px;font-family:var(--f-head);font-size:clamp(34px,5vw,48px);line-height:1.1;color:var(--honey);text-decoration:none;border-bottom:2px solid rgba(227,163,43,.6)}
+.page .ct-rows{margin-top:26px;border-top:1px solid rgba(251,246,236,.28)}
+.page .ct-rows li{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:14px 0;border-bottom:1px solid rgba(251,246,236,.28)}
+.page .ct-rows dt,.page .ct-k{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C9D1EA}
+.page .ct-v{font-size:18px;color:var(--cream)}
+.page .ct-v a{color:var(--cream);font-weight:700}
+.page .ct-v .maplink{display:inline-flex;align-items:center;gap:6px;margin-top:4px;color:var(--honey)}
+.page .ct-v .maplink svg{width:16px;height:16px}
+.page .ct-v small{display:block;font-size:15px;color:#DCE2F3;margin-top:2px}
+.page .ct-note{margin-top:16px;font-size:15px;color:#DCE2F3;max-width:52ch}
+.page .form{min-width:0;background:var(--cream);color:var(--text);border-radius:14px;padding:24px 20px 26px;box-shadow:8px 8px 0 var(--honey)}
+.page .form :focus-visible{outline-color:var(--berry)}
+.page .form h3{font-size:25px}
+.page .form-sub{margin-top:6px;font-size:16px;color:var(--muted)}
+.page .fgrid{display:grid;gap:16px;margin-top:20px}
+.page .fld{min-width:0;display:grid;gap:6px}
+.page .two{display:grid;gap:16px}
+.page .fld label,.page .pick legend{font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--berry-deep)}
+.page .fld input,.page .fld textarea{width:100%;min-height:50px;padding:11px 13px;border:1.5px solid #7C87A8;border-radius:8px;background:var(--paper);color:var(--berry-deep);font-family:var(--f-body);font-size:17px;line-height:1.4}
+.page .fld textarea{min-height:104px;resize:vertical}
+.page .fld input::placeholder,.page .fld textarea::placeholder{color:#5F6988}
+.page .pick{border:0;min-width:0}
+.page .pick legend{padding:0;margin-bottom:6px}
+.page .pick-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.page .pick-row label{position:relative;display:flex;align-items:center;gap:10px;min-height:54px;padding:8px 12px;border:1.5px solid #7C87A8;border-radius:8px;background:var(--paper);font-size:17px;font-weight:700;color:var(--berry-deep);cursor:pointer}
+.page .pick-row input{width:20px;height:20px;margin:0;accent-color:var(--berry);flex:none}
+.page .pick-row label:has(input:checked){border-color:var(--berry);background:var(--berry-tint);box-shadow:inset 0 0 0 1px var(--berry)}
+.page .pick-row label.cat:has(input:checked){border-color:var(--moss-deep);background:var(--moss-tint);box-shadow:inset 0 0 0 1px var(--moss-deep)}
+.page .pick-row label.cat input{accent-color:var(--moss-deep)}
+.page .pick-row svg{width:30px;height:30px;margin-left:auto;flex:none}
+.page .form .btn{width:100%;margin-top:4px}
+.page .form-note{margin-top:16px;padding:12px 14px;border:1.5px dashed #9A6A0E;border-radius:8px;background:var(--honey-tint);color:var(--berry-deep);font-size:16px}
+.page .form-note[hidden]{display:none}
+
+/* footer */
+.page .ft{background:var(--berry-deep);color:#DCE2F3;padding:38px 0 118px;font-size:16px}
+.page .ft :focus-visible{outline-color:var(--honey)}
+.page .ft-in{display:grid;gap:22px}
+.page .ft b{display:block;font-family:var(--f-head);font-weight:400;font-size:22px;color:var(--cream)}
+.page .ft a{color:var(--cream)}
+.page .ft-src{padding-top:18px;border-top:1px solid rgba(251,246,236,.22);font-size:15px}
+
+/* call bar */
+.page .callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--cream);border-top:1px solid var(--line);box-shadow:0 -8px 20px -14px rgba(31,42,77,.5)}
+.page .callbar a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;border-radius:10px;background:var(--honey);color:var(--berry-deep);font-size:19px;font-weight:700;text-decoration:none}
+.page .callbar svg{width:20px;height:20px}
+
+@media (min-width:620px){
+  .page .gal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .page .fgrid .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .page .ln-top{flex-wrap:nowrap}
+  .page .ln-top h4{flex:0 1 auto}
+  .page .ft-in{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .page .ft-src{grid-column:1/-1}
+}
+@media (min-width:900px){
+  .page .wrap{padding:0 32px}
+  .page .nav{display:flex}
+  .page .hd-tel{background:var(--berry);color:var(--cream)}
+  .page .hd-tel:hover{background:var(--berry-deep)}
+  .page .hero{padding:56px 0 76px}
+  .page .hero-in{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:48px}
+  .page .lede{font-size:20px}
+  .page .cta-row{margin-top:30px}
+  .page .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:15.5px;color:var(--muted)}
+  .page .facts li{display:flex;align-items:center;gap:8px}
+  .page .facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--moss)}
+  .page .win{width:min(430px,100%);margin:0 0 0 auto}
+  .page .book{padding:16px 16px 20px;margin-top:44px}
+  .page .book::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:30px;transform:translateX(-50%);background:linear-gradient(#E3A32B,#E3A32B) top/100% 6px no-repeat,linear-gradient(#E3A32B,#E3A32B) bottom/100% 6px no-repeat,linear-gradient(90deg,#121830,#4A5B96 50%,#121830)}
+  .page .book::after{right:auto;left:calc(50% + 52px);bottom:-34px}
+  .page .leaves{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+  .page .leaf{padding:34px 44px 40px}
+  .page .leaf-dog{padding-right:54px;border-radius:8px 3px 3px 8px;background:linear-gradient(to left,rgba(31,42,77,.3),rgba(31,42,77,.08) 26px,rgba(31,42,77,0) 76px) var(--berry-tint);box-shadow:-4px 3px 0 var(--paper),-7px 6px 0 #D9D2C0}
+  .page .leaf-cat{padding-left:54px;border-radius:3px 8px 8px 3px;background:linear-gradient(to right,rgba(31,42,77,.3),rgba(31,42,77,.08) 26px,rgba(31,42,77,0) 76px) var(--moss-tint);box-shadow:4px 3px 0 var(--paper),7px 6px 0 #D9D2C0}
+  .page .leaf-cat::before{left:-16px;right:auto;top:6px;bottom:6px;border-top:0;border-left:2px dashed rgba(251,246,236,.75)}
+  .page .leaf-head svg{width:92px;height:92px}
+  .page .why-in{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:stretch}
+  .page .quote{padding:46px 38px 38px;border-radius:220px 220px 14px 14px}
+  .page .quote{min-height:520px;justify-content:center}
+  .page .quote blockquote{font-size:40px}
+  .page .quote svg{width:56px;height:46px;margin:0 0 18px}
+  .page .steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:44px}
+  .page .step{display:block;padding-bottom:0}
+  .page .step::before{left:70px;right:-40px;top:28px;bottom:auto;border-left:0;border-top:2px dashed var(--moss-deep)}
+  .page .step h3{margin-top:20px}
+  .page .gal{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:44px}
+  .page .faq-in{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:64px;align-items:start}
+  .page .ct-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+  .page .form{padding:34px 34px 36px}
+  .page .ft{padding-bottom:44px}
+  .page .callbar{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .page *{transition:none!important;animation:none!important}
+}
+</style>
+
+<div class="page" id="top">
+
+  <div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Lucie Holešová – úprava psů a koček</div>
+
+  <header class="hd">
+    <div class="wrap hd-in">
+      <a class="brand" href="#top" aria-label="Lucie Holešová, úprava psů a koček">
+        <svg viewBox="0 0 38 42" aria-hidden="true">
+          <path d="M3 40V18a16 16 0 0 1 32 0v22z" fill="#2F3E6E"/>
+          <path d="M6 40v-4a6.5 6.5 0 0 1 13 0v4z" fill="#FBF6EC"/>
+          <ellipse cx="6.2" cy="35.5" rx="2.3" ry="4.6" fill="#E3A32B"/><ellipse cx="18.8" cy="35.5" rx="2.3" ry="4.6" fill="#E3A32B"/>
+          <path d="M22 35.5v-9l4.6 4zM33 35.5v-9l-4.6 4z" fill="#B8C2DF"/>
+          <path d="M22 40v-4a5.5 5.5 0 0 1 11 0v4z" fill="#B8C2DF"/>
+          <circle cx="10.6" cy="35.4" r="1" fill="#1F2A4D"/><circle cx="14.4" cy="35.4" r="1" fill="#1F2A4D"/>
+          <circle cx="25.6" cy="35.6" r="1" fill="#1F2A4D"/><circle cx="29.4" cy="35.6" r="1" fill="#1F2A4D"/>
+          <path d="M1 40h36" stroke="#1F2A4D" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span><b>Lucie Holešová</b><i>úprava psů a koček</i></span>
+      </a>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#strany">Pes a kočka</a>
+        <a href="#proc">Proč sem</a>
+        <a href="#postup">Jak to chodí</a>
+        <a href="#dotazy">Dotazy</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="hd-tel" href="tel:+420721958545">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4l2 5-2.5 1.5a11 11 0 0 0 4 4L13 10l5 2v4a2 2 0 0 1-2 2C8.5 18 2 11.5 2 4a2 2 0 0 1 2-2z" fill="currentColor"/></svg>
+        721 958 545
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-in">
+        <div class="hero-txt">
+          <p class="place">
+            <svg viewBox="0 0 15 18" aria-hidden="true"><path d="M7.5 17C3.5 12 1 9.5 1 6.5a6.5 6.5 0 0 1 13 0C14 9.5 11.5 12 7.5 17z" fill="none" stroke="#3C5633" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="6.5" r="2" fill="#3C5633"/></svg>
+            Janovice pod Beskydami
+          </p>
+          <h1>Se psem i s kočkou na <mark>jednu adresu</mark> v Janovicích</h1>
+          <p class="lede">Lucie Holešová upravuje psy i kočky v Janovicích 590 u Frýdlantu nad Ostravicí. Jedním telefonátem domluvíte termín pro psa i pro kočku.</p>
+          <div class="cta-row">
+            <a class="btn" href="#kontakt">Objednat termín
+              <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" fill="none" stroke="#FBF6EC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="tel-big" href="tel:+420721958545"><small>nebo zavolejte</small><span>721 958 545</span></a>
+          </div>
+          <ul class="facts">
+            <li>psi i kočky</li>
+            <li>termín po telefonu</li>
+            <li>Janovice 590</li>
+          </ul>
+        </div>
+
+        <div class="win">
+          <svg viewBox="0 0 440 480" role="img" aria-label="Kresba: pes a kočka sedí vedle sebe v obloukovém okně, za nimi linka beskydských kopců">
+            <defs><clipPath id="hl-clip"><path d="M60 432V210a160 160 0 0 1 320 0v222z"/></clipPath></defs>
+            <path d="M60 432V210a160 160 0 0 1 320 0v222z" fill="#E2E6F2"/>
+            <g clip-path="url(#hl-clip)">
+              <circle cx="306" cy="150" r="30" fill="#F8E6BC"/>
+              <circle cx="306" cy="150" r="19" fill="#E3A32B"/>
+              <path d="M96 150c10-12 30-12 38 0h24c8 0 8 12 0 12H92c-8 0-6-10 4-12z" fill="#FFFDF7"/>
+              <path d="M60 322c34-24 62-58 104-62 30-2 44 22 72 18 34-6 50-44 82-42 28 2 42 34 62 56v140H60z" fill="#B8C2DF"/>
+              <path d="M60 370c46-30 98-40 150-20 54 20 116-22 170-6v88H60z" fill="#A9C09B"/>
+              <path d="M60 370c46-30 98-40 150-20 54 20 116-22 170-6" fill="none" stroke="#3C5633" stroke-width="3" stroke-linecap="round"/>
+              <path d="M88 352l7-16 7 16zM104 346l6-14 6 14zM346 340l7-16 7 16z" fill="#3C5633"/>
+              <path d="M220 50v382M60 206h320" fill="none" stroke="#2F3E6E" stroke-width="7"/>
+            </g>
+            <path d="M60 432V210a160 160 0 0 1 320 0v222" fill="none" stroke="#2F3E6E" stroke-width="16" stroke-linejoin="round"/>
+            <path d="M74 432V210a146 146 0 0 1 292 0v222" fill="none" stroke="#FBF6EC" stroke-width="2.5" opacity=".7"/>
+
+            <g transform="translate(217 434) scale(1.1) translate(-220 -434)">
+            <!-- pes -->
+            <path d="M206 418c26-2 36-24 24-44" fill="none" stroke="#1F2A4D" stroke-width="15" stroke-linecap="round"/>
+            <path d="M206 418c26-2 36-24 24-44" fill="none" stroke="#EFC063" stroke-width="8" stroke-linecap="round"/>
+            <path d="M121 434c-10-58 4-114 44-116 40 2 54 58 44 116z" fill="#EFC063" stroke="#1F2A4D" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M146 344c2 34 36 34 38 0-6-12-32-12-38 0z" fill="#FFF8E8"/>
+            <path d="M151 378v50M179 378v50" fill="none" stroke="#1F2A4D" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M138 434c2-14 22-14 24 0zM168 434c2-14 22-14 24 0z" fill="#FFF8E8" stroke="#1F2A4D" stroke-width="3.5" stroke-linejoin="round"/>
+            <ellipse cx="165" cy="276" rx="47" ry="43" fill="#EFC063" stroke="#1F2A4D" stroke-width="4"/>
+            <path d="M128 246c-28-4-36 44-20 72 18 2 26-22 24-52z" fill="#B97F1A" stroke="#1F2A4D" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M202 246c28-4 36 44 20 72-18 2-26-22-24-52z" fill="#B97F1A" stroke="#1F2A4D" stroke-width="4" stroke-linejoin="round"/>
+            <ellipse cx="165" cy="293" rx="23" ry="18" fill="#FFF8E8"/>
+            <ellipse cx="165" cy="283" rx="9" ry="6.5" fill="#1F2A4D"/>
+            <path d="M165 290v8c-5 8-14 6-16 0M165 298c5 8 14 6 16 0" fill="none" stroke="#1F2A4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="147" cy="267" r="5" fill="#1F2A4D"/><circle cx="183" cy="267" r="5" fill="#1F2A4D"/>
+            <circle cx="148.5" cy="265.5" r="1.5" fill="#FFF8E8"/><circle cx="184.5" cy="265.5" r="1.5" fill="#FFF8E8"/>
+            <path d="M139 254q8-6 15-2M191 254q-8-6-15-2" fill="none" stroke="#1F2A4D" stroke-width="2.5" stroke-linecap="round"/>
+
+            <!-- kočka -->
+            <path d="M318 420c34 6 48-26 28-44" fill="none" stroke="#1F2A4D" stroke-width="15" stroke-linecap="round"/>
+            <path d="M318 420c34 6 48-26 28-44" fill="none" stroke="#8C97BE" stroke-width="8" stroke-linecap="round"/>
+            <path d="M255 434c-8-52 6-94 35-96 29 2 43 44 35 96z" fill="#8C97BE" stroke="#1F2A4D" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M277 360c2 28 24 28 26 0-4-10-22-10-26 0z" fill="#FFF8E8"/>
+            <path d="M280 392v38M300 392v38" fill="none" stroke="#1F2A4D" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M269 434c2-12 18-12 20 0zM291 434c2-12 18-12 20 0z" fill="#FFF8E8" stroke="#1F2A4D" stroke-width="3.5" stroke-linejoin="round"/>
+            <path d="M256 302l-4-46 34 24zM324 302l4-46-34 24z" fill="#8C97BE" stroke="#1F2A4D" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M261 284l-2-16 13 9zM319 284l2-16-13 9z" fill="#F8E6BC"/>
+            <ellipse cx="290" cy="306" rx="39" ry="33" fill="#8C97BE" stroke="#1F2A4D" stroke-width="4"/>
+            <path d="M290 276v11M279 278l2 9M301 278l-2 9" fill="none" stroke="#1F2A4D" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="275" cy="303" rx="6" ry="7" fill="#E3A32B" stroke="#1F2A4D" stroke-width="2"/>
+            <ellipse cx="305" cy="303" rx="6" ry="7" fill="#E3A32B" stroke="#1F2A4D" stroke-width="2"/>
+            <ellipse cx="275" cy="303" rx="1.8" ry="5" fill="#1F2A4D"/><ellipse cx="305" cy="303" rx="1.8" ry="5" fill="#1F2A4D"/>
+            <path d="M285 316h10l-5 6z" fill="#1F2A4D"/>
+            <path d="M290 322c-3 7-10 5-11 1M290 322c3 7 10 5 11 1" fill="none" stroke="#1F2A4D" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M266 318l-26-5M266 323l-25 5M314 318l26-5M314 323l25 5" fill="none" stroke="#1F2A4D" stroke-width="2" stroke-linecap="round"/>
+
+            </g>
+            <!-- parapet -->
+            <rect x="28" y="432" width="384" height="26" rx="7" fill="#1F2A4D"/>
+            <rect x="52" y="458" width="336" height="9" rx="4" fill="#E3A32B"/>
+            <!-- jiskry čerstvé úpravy -->
+            <path d="M102 180l4 11 11 4-11 4-4 11-4-11-11-4 11-4zM350 214l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#E3A32B"/>
+            <!-- domovní číslo -->
+            <g transform="rotate(-5 38 372)">
+              <rect x="4" y="352" width="70" height="40" rx="5" fill="#2F3E6E" stroke="#FBF6EC" stroke-width="3"/>
+              <text x="39" y="380" text-anchor="middle" font-family="'Young Serif',Georgia,serif" font-size="23" fill="#FBF6EC">590</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec spread" id="strany">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Úprava a ceny</p>
+          <h2>Psí strana, kočičí strana</h2><span class="pill">ukázkový text</span>
+          <p class="sec-lead">Jedna knížka, dvě strany. Vlevo čtete, co čeká psa, vpravo, co čeká kočku. Objednáváte na stejném čísle a jedete na stejnou adresu.</p>
+        </div>
+
+        <div class="book">
+          <div class="leaves">
+            <article class="leaf leaf-dog">
+              <div class="run"><span>Psí strana</span><span>Janovice 590</span></div>
+              <div class="leaf-head">
+                <svg viewBox="0 0 92 92" aria-hidden="true">
+                  <circle cx="46" cy="46" r="44" fill="#FFFDF7" stroke="#2F3E6E" stroke-width="2.5"/>
+                  <path d="M27 34c-11-2-14 18-8 30 8 1 11-9 10-21zM65 34c11-2 14 18 8 30-8 1-11-9-10-21z" fill="#B8C2DF" stroke="#2F3E6E" stroke-width="3" stroke-linejoin="round"/>
+                  <ellipse cx="46" cy="46" rx="20" ry="19" fill="#FFFDF7" stroke="#2F3E6E" stroke-width="3"/>
+                  <ellipse cx="46" cy="50" rx="4.5" ry="3.2" fill="#2F3E6E"/>
+                  <path d="M46 53v4c-2 4-7 3-8 0M46 57c2 4 7 3 8 0" fill="none" stroke="#2F3E6E" stroke-width="2.2" stroke-linecap="round"/>
+                  <circle cx="38" cy="42" r="2.4" fill="#2F3E6E"/><circle cx="54" cy="42" r="2.4" fill="#2F3E6E"/>
+                  <path d="M70 16l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#E3A32B"/>
+                </svg>
+                <h3>Když přivezete psa</h3>
+              </div>
+              <p class="leaf-intro">Od koupele po poslední střih tlapek. Předem si řeknete, jak má pes vypadat, a podle toho se pracuje.</p>
+              <ul class="lines">
+                <li>
+                  <div class="ln-top"><h4>Koupání a fénování</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Srst se umyje šamponem podle typu srsti a vysuší až ke kůži.</p>
+                </li>
+                <li>
+                  <div class="ln-top"><h4>Střih podle plemene nebo přání</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Délku a tvar si domluvíte předem, klidně podle fotky.</p>
+                </li>
+                <li>
+                  <div class="ln-top"><h4>Vyčesání podsady</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Stará podsada jde ven a zacuchaná místa se uvolní.</p>
+                </li>
+                <li>
+                  <div class="ln-top"><h4>Drápky, tlapky, uši</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Drápky se zkrátí a srst mezi polštářky se zastřihne.</p>
+                </li>
+              </ul>
+              <a class="leaf-cta" href="#kontakt" data-pick="zvire-pes">Objednat termín pro psa
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </article>
+
+            <article class="leaf leaf-cat">
+              <div class="run"><span>Kočičí strana</span><span>Janovice 590</span></div>
+              <div class="leaf-head">
+                <svg viewBox="0 0 92 92" aria-hidden="true">
+                  <circle cx="46" cy="46" r="44" fill="#FFFDF7" stroke="#3C5633" stroke-width="2.5"/>
+                  <path d="M28 44l-2-22 17 11zM64 44l2-22-17 11z" fill="#A9C09B" stroke="#3C5633" stroke-width="3" stroke-linejoin="round"/>
+                  <ellipse cx="46" cy="49" rx="21" ry="18" fill="#FFFDF7" stroke="#3C5633" stroke-width="3"/>
+                  <path d="M46 33v6M41 34l1 5M51 34l-1 5" fill="none" stroke="#3C5633" stroke-width="2.2" stroke-linecap="round"/>
+                  <ellipse cx="38" cy="48" rx="2.6" ry="3.4" fill="#3C5633"/><ellipse cx="54" cy="48" rx="2.6" ry="3.4" fill="#3C5633"/>
+                  <path d="M43 54h6l-3 4z" fill="#3C5633"/>
+                  <path d="M46 58c-2 4-6 3-7 1M46 58c2 4 6 3 7 1" fill="none" stroke="#3C5633" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M31 55l-13-2M31 58l-12 3M61 55l13-2M61 58l12 3" fill="none" stroke="#3C5633" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+                <h3>Když přivezete kočku</h3>
+              </div>
+              <p class="leaf-intro">Kočka přijede v přepravce a všechno jde jejím tempem. Co snese a co ne, se domluví dřív, než se začne.</p>
+              <ul class="lines">
+                <li>
+                  <div class="ln-top"><h4>Vyčesání línající srsti</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Stará srst jde ven dřív, než skončí na gauči.</p>
+                </li>
+                <li>
+                  <div class="ln-top"><h4>Rozčesání zacuchaných míst</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Co nejde rozčesat hřebenem, to se opatrně vystříhá.</p>
+                </li>
+                <li>
+                  <div class="ln-top"><h4>Zkrácení drápků</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Krátký úkon, který doma často nejde udělat v klidu.</p>
+                </li>
+                <li>
+                  <div class="ln-top"><h4>Koupání po domluvě</h4><span class="dots" aria-hidden="true"></span><span class="price">Cena na dotaz</span></div>
+                  <p>Jen u koček, které vodu snesou. Proberete to po telefonu.</p>
+                </li>
+              </ul>
+              <a class="leaf-cta" href="#kontakt" data-pick="zvire-kocka">Objednat termín pro kočku
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <p class="note spread-note"><strong>Co je ověřené:</strong> Lucie Holešová upravuje psy i kočky. Jednotlivé úkony a jejich popisy jsou ukázka, přepíšeme je podle Vás. Ceník zveřejněný není, proto u každého řádku stojí Cena na dotaz.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="proc">
+      <div class="wrap why-in">
+        <figure class="quote">
+          <svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 34V20C2 9 8 3 18 2v7c-5 1-7 4-7 9h7v16zM26 34V20C26 9 32 3 42 2v7c-5 1-7 4-7 9h7v16z" fill="#E3A32B"/></svg>
+          <blockquote>Nabídka úpravy psů i koček.</blockquote>
+          <p>Tak zní celý veřejný popis živnosti Lucie Holešové <a href="https://www.firmy.cz/detail/2527247-lucie-holesova-janovice.html" target="_blank" rel="noopener">na Firmy.cz</a>. Jedna věta. Na webu z ní uděláme důvod, proč zavolat.</p>
+        </figure>
+
+        <div class="why-list">
+          <p class="eyebrow">Proč jet sem</p>
+          <h2>Tři věci, které platí už dnes</h2><span class="pill pill-ok">ověřené údaje</span>
+
+          <div class="why-item">
+            <svg viewBox="0 0 54 54" aria-hidden="true">
+              <circle cx="27" cy="27" r="26" fill="#E2E6F2"/>
+              <ellipse cx="21" cy="36" rx="8" ry="6.5" fill="#2F3E6E"/>
+              <circle cx="11" cy="27" r="3.2" fill="#2F3E6E"/><circle cx="17.5" cy="22" r="3.4" fill="#2F3E6E"/><circle cx="25" cy="22" r="3.4" fill="#2F3E6E"/><circle cx="31" cy="27.5" r="3.2" fill="#2F3E6E"/>
+              <ellipse cx="41" cy="21" rx="4.6" ry="3.8" fill="#3C5633"/>
+              <circle cx="35.3" cy="16" r="1.9" fill="#3C5633"/><circle cx="39" cy="12.8" r="2" fill="#3C5633"/><circle cx="43.3" cy="12.8" r="2" fill="#3C5633"/><circle cx="46.7" cy="16" r="1.9" fill="#3C5633"/>
+            </svg>
+            <div>
+              <h3>Pes i kočka na jednom místě</h3>
+              <p>Máte doma obojí? Nemusíte hledat dva salony. Lucie Holešová upravuje psy i kočky a stačí Vám jedno objednání.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <svg viewBox="0 0 54 54" aria-hidden="true">
+              <circle cx="27" cy="27" r="26" fill="#F8E6BC"/>
+              <path d="M18 14h6l3 8-4 2.5a17 17 0 0 0 7 7L33 27l8 3v6a3 3 0 0 1-3 3C25 39 15 29 15 17a3 3 0 0 1 3-3z" fill="#FFFDF7" stroke="#1F2A4D" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M33 14a8 8 0 0 1 7 7M33 19a3.5 3.5 0 0 1 2.5 2.5" fill="none" stroke="#1F2A4D" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h3>Živnost pod vlastním jménem</h3>
+              <p>Lucie Holešová podniká pod svým jménem, IČO 66749026. Na čísle <a href="tel:+420721958545">721 958 545</a> řeknete, co Váš pes nebo kočka potřebuje, a domluvíte termín.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <svg viewBox="0 0 54 54" aria-hidden="true">
+              <circle cx="27" cy="27" r="26" fill="#E2EBDA"/>
+              <path d="M9 40c8-8 14-10 20-5 5 4 10 1 16-3" fill="none" stroke="#3C5633" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M27 36c-6-8-9-11-9-16a9 9 0 0 1 18 0c0 5-3 8-9 16z" fill="#FFFDF7" stroke="#3C5633" stroke-width="2.4" stroke-linejoin="round"/>
+              <circle cx="27" cy="20" r="3.2" fill="#3C5633"/>
+            </svg>
+            <div>
+              <h3>Adresa, kterou najdete na mapě</h3>
+              <p>Janovice 590, 739 11 Janovice. Obec pod Beskydami u Frýdlantu nad Ostravicí. <a href="https://mapy.cz/zakladni?q=Janovice%20590%2C%20739%2011%20Janovice" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></p>
+            </div>
+          </div>
+
+          <p class="note">Hodnocení zákazníků zatím nikde zveřejněná nejsou, proto tu žádná neuvádíme. Až je budete mít, dostanou na webu vlastní místo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec steps-sec" id="postup">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Jak to chodí</p>
+          <h2>Od telefonátu po upravený kožich</h2><span class="pill">ukázkový text</span>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="num" aria-hidden="true">1</span>
+            <div>
+              <h3>Zavoláte nebo napíšete</h3>
+              <p>Řeknete, jestli jde o psa, nebo o kočku, jaké je to plemeno a v jakém stavu má srst. Domluvíte si den a hodinu.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="num" aria-hidden="true">2</span>
+            <div>
+              <h3>Přivezete zvíře do Janovic</h3>
+              <p>Na místě si ukážete, jak krátce stříhat a čeho se Váš pes nebo kočka bojí. Pak už má klid na práci.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="num" aria-hidden="true">3</span>
+            <div>
+              <h3>Odvezete si ho upravené</h3>
+              <p>Až je hotovo, zazvoní Vám telefon. Přijedete, zaplatíte domluvenou cenu a jedete domů.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="sec" id="galerie">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Před a po</p>
+          <h2>Tady se budou dívat nejdéle</h2>
+          <p class="sec-lead">Fotka před úpravou a po ní řekne zákazníkovi víc než odstavec textu. Stačí je vyfotit telefonem, na web je vložíme za Vás.</p>
+        </div>
+        <div class="gal">
+          <figure class="pair">
+            <div class="pair-fr">
+              <div class="ph"><b>Před</b>
+                <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 9h6l3-5h10l3 5h6v18H3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="17" r="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+                <span>Sem přijde Vaše fotka</span></div>
+              <div class="ph ph-po"><b>Po</b>
+                <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 9h6l3-5h10l3 5h6v18H3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="17" r="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+                <span>Sem přijde Vaše fotka</span></div>
+            </div>
+            <figcaption>Pes s delší srstí: před koupelí a po střihu.</figcaption>
+          </figure>
+          <figure class="pair">
+            <div class="pair-fr">
+              <div class="ph"><b>Před</b>
+                <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 9h6l3-5h10l3 5h6v18H3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="17" r="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+                <span>Sem přijde Vaše fotka</span></div>
+              <div class="ph ph-po"><b>Po</b>
+                <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 9h6l3-5h10l3 5h6v18H3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="17" r="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+                <span>Sem přijde Vaše fotka</span></div>
+            </div>
+            <figcaption>Pes s podsadou: před vyčesáním a po něm.</figcaption>
+          </figure>
+          <figure class="pair pair-cat">
+            <div class="pair-fr">
+              <div class="ph"><b>Před</b>
+                <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 9h6l3-5h10l3 5h6v18H3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="17" r="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+                <span>Sem přijde Vaše fotka</span></div>
+              <div class="ph ph-po"><b>Po</b>
+                <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 9h6l3-5h10l3 5h6v18H3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="17" cy="17" r="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+                <span>Sem přijde Vaše fotka</span></div>
+            </div>
+            <figcaption>Dlouhosrstá kočka: před rozčesáním a po něm.</figcaption>
+          </figure>
+        </div>
+        <p class="note">Popisky pod rámečky jsou jen návrh, co by se sem hodilo vyfotit.<span class="pill">ukázkový text</span></p>
+      </div>
+    </section>
+
+    <section class="sec faq-sec" id="dotazy">
+      <div class="wrap faq-in">
+        <div class="sec-head">
+          <p class="eyebrow">Časté dotazy</p>
+          <h2>Na co se lidé ptají před první návštěvou</h2><span class="pill">ukázkový text</span>
+          <p class="note">Ověřené je, že Lucie Holešová upravuje psy i kočky a že ceník zveřejněný není. Ostatní odpovědi jsou ukázka a přepíšeme je podle Vás.</p>
+          <p class="faq-call">Chybí tu Vaše otázka? Zavolejte na <a href="tel:+420721958545">721 958 545</a></p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Upravujete i kočky?<i aria-hidden="true"></i></summary>
+            <p>Ano, kočky sem patří stejně jako psi. Kočku přivezte v přepravce. Nejčastěji jde o vyčesání línající srsti, rozčesání zacuchaných míst a zkrácení drápků. Koupání se domlouvá předem podle povahy kočky.</p>
+          </details>
+          <details>
+            <summary>Jak dlouho úprava trvá?<i aria-hidden="true"></i></summary>
+            <p>Záleží na velikosti zvířete, délce srsti a na tom, jak moc je zacuchaná. Čas se odhadne už při objednání, abyste věděli, kdy si pro zvíře přijet.</p>
+          </details>
+          <details>
+            <summary>Pes má hodně zacuchanou srst. Půjde rozčesat?<i aria-hidden="true"></i></summary>
+            <p>Někdy ano. Někdy je k psovi šetrnější plsť ostříhat. Dozvíte se to předem, ještě než se začne stříhat, a rozhodnete se sami.</p>
+          </details>
+          <details>
+            <summary>Kolik úprava stojí?<i aria-hidden="true"></i></summary>
+            <p>Ceník zveřejněný není. Cenu se dozvíte po telefonu podle plemene, velikosti a stavu srsti, dřív než přijedete.</p>
+          </details>
+          <details>
+            <summary>Co mám vzít s sebou?<i aria-hidden="true"></i></summary>
+            <p>Psa na vodítku, kočku v přepravce. Hodí se i fotka střihu, který se Vám líbí.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec contact" id="kontakt">
+      <div class="wrap ct-in">
+        <div class="ct-info">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Objednejte termín pro psa nebo kočku</h2>
+          <p class="ct-lead">Nejrychlejší je zavolat. Když zrovna nemůžete, napište pár řádků do formuláře.</p>
+          <a class="ct-tel" href="tel:+420721958545">721 958 545</a>
+          <ul class="ct-rows">
+            <li><span class="ct-k">E-mail</span><span class="ct-v"><a href="mailto:holesovalucie@seznam.cz">holesovalucie@seznam.cz</a></span></li>
+            <li><span class="ct-k">Adresa</span><span class="ct-v">Janovice 590, 739 11 Janovice<br>
+              <a class="maplink" href="https://mapy.cz/zakladni?q=Janovice%20590%2C%20739%2011%20Janovice" target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15C4 10.5 2 8.5 2 6a6 6 0 0 1 12 0c0 2.5-2 4.5-6 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8" cy="6" r="1.8" fill="currentColor"/></svg>
+                Otevřít v Mapy.cz</a></span></li>
+            <li><span class="ct-k">Otevírací doba</span><span class="ct-v">Termín po telefonické domluvě<span class="pill">ukázkový text</span><small>Otevírací dobu doplníme podle Vás.</small></span></li>
+          </ul>
+          <p class="ct-note">Telefon, e-mail a adresa jsou ověřené z veřejného zápisu. Otevírací doba zveřejněná není.</p>
+        </div>
+
+        <form class="form" id="poptavka" novalidate>
+          <h3>Napište si o termín</h3>
+          <p class="form-sub">Stačí jméno, telefon a koho přivezete.</p>
+          <div class="fgrid">
+            <div class="two">
+              <div class="fld"><label for="jmeno">Jméno</label><input id="jmeno" name="jmeno" type="text" autocomplete="name" placeholder="Jana Nováková"></div>
+              <div class="fld"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="123 456 789"></div>
+            </div>
+            <fieldset class="pick">
+              <legend>Koho přivezete</legend>
+              <div class="pick-row">
+                <label for="zvire-pes"><input type="radio" id="zvire-pes" name="zvire" value="Pes" checked>Pes
+                  <svg viewBox="0 0 30 30" aria-hidden="true"><path d="M8 9c-5-1-6 8-3 13 3 0 4-4 4-9zM22 9c5-1 6 8 3 13-3 0-4-4-4-9z" fill="#B8C2DF" stroke="#2F3E6E" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="15" cy="15" rx="8.5" ry="8" fill="#FFFDF7" stroke="#2F3E6E" stroke-width="1.8"/><circle cx="12" cy="13.5" r="1.2" fill="#2F3E6E"/><circle cx="18" cy="13.5" r="1.2" fill="#2F3E6E"/><ellipse cx="15" cy="17" rx="2" ry="1.5" fill="#2F3E6E"/></svg>
+                </label>
+                <label class="cat" for="zvire-kocka"><input type="radio" id="zvire-kocka" name="zvire" value="Kočka">Kočka
+                  <svg viewBox="0 0 30 30" aria-hidden="true"><path d="M7 15l-1-10 8 5zM23 15l1-10-8 5z" fill="#A9C09B" stroke="#3C5633" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="15" cy="17" rx="9" ry="7.5" fill="#FFFDF7" stroke="#3C5633" stroke-width="1.8"/><circle cx="12" cy="16" r="1.2" fill="#3C5633"/><circle cx="18" cy="16" r="1.2" fill="#3C5633"/><path d="M13.5 19h3l-1.5 2z" fill="#3C5633"/></svg>
+                </label>
+              </div>
+            </fieldset>
+            <div class="fld"><label for="plemeno">Plemeno</label><input id="plemeno" name="plemeno" type="text" placeholder="třeba yorkšír, perská kočka"></div>
+            <div class="fld"><label for="zprava">Zpráva</label><textarea id="zprava" name="zprava" rows="4" placeholder="Co potřebujete a kdy se Vám to hodí"></textarea></div>
+            <button class="btn" type="submit" id="odeslat">Objednat termín</button>
+          </div>
+          <p class="form-note" id="form-note" role="status" hidden>Toto je ukázka formuláře. V ostré verzi webu přijde zpráva na holesovalucie@seznam.cz.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ft">
+    <div class="wrap ft-in">
+      <div><b>Lucie Holešová</b>úprava psů a koček<br>IČO: 66749026</div>
+      <div>Janovice 590<br>739 11 Janovice</div>
+      <div><a href="tel:+420721958545">721 958 545</a><br><a href="mailto:holesovalucie@seznam.cz">holesovalucie@seznam.cz</a></div>
+      <p class="ft-src"><a href="https://www.firmy.cz/detail/2527247-lucie-holesova-janovice.html" target="_blank" rel="noopener">Údaje z veřejného zápisu firmy na Firmy.cz</a></p>
+    </div>
+  </footer>
+
+  <div class="callbar">
+    <a href="tel:+420721958545">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4l2 5-2.5 1.5a11 11 0 0 0 4 4L13 10l5 2v4a2 2 0 0 1-2 2C8.5 18 2 11.5 2 4a2 2 0 0 1 2-2z" fill="#1F2A4D"/></svg>
+      Zavolat 721 958 545
+    </a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var page=document.querySelector('.page');if(!page)return;
+  var form=page.querySelector('#poptavka'),note=page.querySelector('#form-note');
+  if(form&&note){form.addEventListener('submit',function(e){e.preventDefault();note.hidden=false;note.scrollIntoView({block:'nearest'});});}
+  page.querySelectorAll('[data-pick]').forEach(function(a){
+    a.addEventListener('click',function(){var r=page.querySelector('#'+a.getAttribute('data-pick'));if(r)r.checked=true;});
+  });
+})();
+</script>
+</body>
+</html>

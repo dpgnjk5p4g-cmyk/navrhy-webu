@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Psí salón Zmudová</title>
+<meta name="description" content="Psí salón v Bohumíně: stříhání psů u Soni Zmudové, Jateční 1153, Nový Bohumín. Termín každý den dle telefonické domluvy. Tel. 776 386 354.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Psí salón – Soňa Zmudová",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jateční 1153",
+    "postalCode": "735 81",
+    "addressLocality": "Nový Bohumín",
+    "addressCountry": "CZ"
+  },
+  "telephone": "+420776386354",
+  "email": "sona.zmudova@gmail.com",
+  "sameAs": ["https://www.facebook.com/p/Ps%C3%AD-sal%C3%B3n-Zmudov%C3%A1-Bohum%C3%ADn-100087486111893"]
+}
+</script>
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<meta property="og:title" content="Psí salón Bohumín | Soňa Zmudová">
+
+
+<style>
+/* Koncept: tichá typografická stránka. Obří serifový nadpis přes celou šířku, hodně vzduchu, střídání vanilkových a čokoládových pásů; hlavním prvkem je časová osa návštěvy na mátovém pásu. */
+:root{
+  --cokolada:#4A2C1F;
+  --cokolada-tmava:#36201A;
+  --cokolada-stredni:#6B4A3A;
+  --cokolada-linka:#897261;
+  --karamel:#D98E4A;
+  --karamel-tmavy:#8F5220;
+  --karamel-svetly:#F2CFA6;
+  --vanilka:#FFF3DC;
+  --vanilka-svetla:#FFF9EC;
+  --vanilka-tmava:#F1E0BF;
+  --mata:#9FD3C0;
+  --mata-svetla:#DCEFE4;
+  --font-nadpis:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --font-text:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --sirka:1240px;
+  --okraj:clamp(16px,4.2vw,44px);
+  --pas:clamp(60px,9vw,124px);
+}
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--vanilka)}
+.page{background:var(--vanilka);color:var(--cokolada);font-family:var(--font-text);font-size:1.0625rem;line-height:1.6;font-weight:400;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+:where(.page) :where(h1,h2,h3,p,ul,ol,dl,dd,figure){margin:0}
+:where(.page) :where(ul,ol){padding:0;list-style:none}
+:where(.page) a{color:inherit}
+.page a[href^="tel:"]{white-space:nowrap}
+:where(.page) svg{display:block;flex:none}
+.wrap{width:min(100% - 2 * var(--okraj),var(--sirka));margin-inline:auto}
+:where(.page) :where(h1,h2,h3){font-family:var(--font-nadpis);font-weight:400;text-wrap:balance}
+:where(.page) h2{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.1;letter-spacing:-.005em}
+:where(.page) h3{font-size:1.5rem;line-height:1.2}
+.page :focus-visible{outline:3px solid var(--karamel-tmavy);outline-offset:3px;border-radius:6px}
+.tmavy :focus-visible,.volat :focus-visible{outline-color:var(--mata)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.kicker{font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--karamel-tmavy)}
+.tmavy .kicker{color:var(--mata)}
+.stitek-radek{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:18px}
+.ukazka{display:inline-block;font-size:.78rem;font-weight:500;line-height:1;letter-spacing:.02em;padding:.4rem .72rem;border-radius:999px;background:var(--mata);color:var(--cokolada-tmava)}
+.ukazka.na-mate{background:var(--vanilka-svetla);box-shadow:inset 0 0 0 1px var(--cokolada-linka)}
+.perex{max-width:36rem;color:var(--cokolada-stredni)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;padding:.9rem 1.7rem;border-radius:999px;font-family:var(--font-text);font-size:1.0625rem;font-weight:700;line-height:1.2;text-decoration:none;border:0;cursor:pointer;transition:background-color .2s,transform .2s}
+.btn-tmavy{background:var(--cokolada);color:var(--vanilka)}
+.btn-tmavy:hover{background:var(--cokolada-tmava)}
+.btn-karamel{background:var(--karamel);color:var(--cokolada-tmava)}
+.btn-karamel:hover{background:var(--karamel-svetly)}
+.odkaz{font-weight:700;text-decoration:underline;text-decoration-color:var(--karamel);text-decoration-thickness:2px;text-underline-offset:4px}
+.odkaz:hover{text-decoration-color:currentColor}
+
+/* banner */
+.banner{background:var(--cokolada-tmava);color:var(--vanilka);font-size:.8125rem;line-height:1.4;text-align:center;padding:8px 16px}
+
+/* hlavička */
+.hlavicka{background:var(--vanilka);border-bottom:1px solid var(--vanilka-tmava)}
+.hlavicka-in{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:12px}
+.znacka{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.znacka-text{display:flex;flex-direction:column;line-height:1}
+.znacka-maly{font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--karamel-tmavy)}
+.znacka-velky{font-family:var(--font-nadpis);font-size:1.5rem;line-height:1.05}
+.nav{display:none}
+.hl-tel{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;min-height:44px;padding:0 4px}
+.hl-tel span{text-decoration:underline;text-decoration-color:var(--karamel);text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* hero */
+.hero{padding-block:clamp(26px,5vw,64px) clamp(52px,8vw,104px)}
+.hero h1{font-size:clamp(2.6rem,8.4vw + .62rem,7.25rem);line-height:1.04;letter-spacing:-.012em;margin-top:clamp(12px,1.6vw,22px)}
+.hero h1 em{font-style:italic;text-decoration:underline;text-decoration-color:var(--karamel);text-decoration-thickness:.07em;text-underline-offset:.11em}
+.hero-pata{margin-top:clamp(20px,3.4vw,44px);display:flex;flex-direction:column;gap:36px}
+.hero-text{min-width:0}
+.lead{font-size:clamp(1.0625rem,1.5vw,1.3125rem);line-height:1.55;max-width:35rem}
+.cta-radek{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:22px}
+.hero-tel{font-weight:500}
+.hero-tel a{font-weight:700;white-space:nowrap;text-decoration:underline;text-decoration-color:var(--karamel);text-decoration-thickness:2px;text-underline-offset:4px}
+.hero-ozdoba{width:min(100%,300px);height:auto}
+
+/* termín podle Vás */
+.tmavy{background:var(--cokolada);color:var(--vanilka)}
+.termin{padding-block:var(--pas)}
+.termin-in{display:grid;gap:40px}
+.termin h2{font-size:clamp(2.2rem,5.4vw,4.1rem);line-height:1.06;margin-top:14px}
+.termin h2 span{color:var(--karamel)}
+.termin-text{margin-top:22px;max-width:34rem;color:var(--vanilka-tmava);font-size:1.125rem}
+.tyden{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(6px,1.2vw,12px)}
+.tyden li{aspect-ratio:1;border-radius:50%;background:var(--mata);color:var(--cokolada-tmava);display:grid;place-items:center;font-family:var(--font-nadpis);font-size:clamp(1rem,2.2vw,1.5rem);line-height:1}
+.tyden-popis{margin-top:16px;font-weight:500;font-size:1.0625rem}
+.tyden-popis strong{display:block;font-family:var(--font-nadpis);font-weight:400;font-size:1.625rem;line-height:1.2;color:var(--mata)}
+.termin-akce{margin-top:26px}
+
+/* služby */
+.sluzby{padding-block:var(--pas)}
+.sluzby-in{display:grid;gap:36px}
+.sluzby h2{margin-bottom:18px}
+.velikosti{border-top:2px solid var(--cokolada)}
+.velikost{display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px 16px;align-items:center;padding-block:26px;border-bottom:1px solid var(--cokolada-linka)}
+.velikost-pes{display:grid;place-items:center;grid-row:span 2;align-self:start}
+.velikost-text{min-width:0}
+.velikost-text p{margin-top:6px;color:var(--cokolada-stredni);max-width:34rem}
+.cena{grid-column:2;font-family:var(--font-nadpis);font-size:1.375rem;line-height:1.2;color:var(--karamel-tmavy)}
+.sluzby-pozn{margin-top:22px;max-width:36rem;color:var(--cokolada-stredni)}
+
+/* časová osa */
+.navsteva{background:var(--mata-svetla);padding-block:var(--pas)}
+.navsteva-hlava{max-width:46rem;margin-bottom:clamp(36px,5vw,64px)}
+.osa li{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:0 18px;padding-bottom:34px}
+.osa li::before{content:"";position:absolute;left:27px;top:56px;bottom:0;width:2px;background:var(--cokolada)}
+.osa li:last-child{padding-bottom:0}
+.osa li:last-child::before{display:none}
+.uzel{position:relative;width:56px;height:56px;border-radius:50%;background:var(--cokolada);display:grid;place-items:center}
+.osa li:last-child .uzel{background:var(--karamel)}
+.krok-cislo{font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--karamel-tmavy);margin-top:2px}
+.osa h3{margin-top:2px}
+.osa li p:last-child{margin-top:8px;max-width:30rem}
+
+/* jak se objednat */
+.objednat-pas{background:var(--vanilka-svetla);padding-block:clamp(44px,6vw,72px);border-bottom:1px solid var(--vanilka-tmava)}
+.objednat-in{display:grid;gap:30px}
+.objednat-hlava h2{font-size:clamp(1.75rem,3vw,2.25rem);margin-top:10px}
+.objednat-hlava .btn{margin-top:18px}
+.tri-kroky{display:grid;gap:22px}
+.tri-kroky li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 14px;align-items:start}
+.tri-cislo{font-family:var(--font-nadpis);font-size:2.75rem;line-height:.95;color:var(--karamel-tmavy)}
+.tri-kroky h3{font-size:1.3125rem}
+.tri-kroky p{margin-top:4px;color:var(--cokolada-stredni)}
+
+/* důvěra */
+.duvera{padding-block:var(--pas)}
+.duvera-in{display:grid;gap:36px}
+.duvera h2{margin-top:14px}
+.duvera .perex{margin-top:18px}
+.duvera-pes{display:none;margin-top:28px}
+.fakta{border-top:2px solid var(--cokolada)}
+.fakta div{display:grid;gap:4px 24px;padding-block:20px;border-bottom:1px solid var(--cokolada-linka)}
+.fakta dt{font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--karamel-tmavy);padding-top:.35em}
+.fakta dd{font-family:var(--font-nadpis);font-size:clamp(1.3125rem,2.2vw,1.625rem);line-height:1.25;min-width:0}
+.fakta dd small{display:block;font-family:var(--font-text);font-size:1rem;line-height:1.55;color:var(--cokolada-stredni);margin-top:6px}
+
+/* galerie */
+.galerie{background:var(--vanilka-tmava);padding-block:var(--pas)}
+.galerie-hlava{max-width:44rem;margin-bottom:clamp(30px,4vw,48px)}
+.galerie h2{margin-top:14px}
+.galerie .perex{margin-top:16px}
+.pary{display:grid;gap:28px}
+.par{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ramek{aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;padding:12px;border:2px dashed var(--cokolada-linka);border-radius:18px;background:var(--vanilka-svetla);text-align:center;min-width:0}
+.ramek.po{background:var(--mata-svetla)}
+.ramek-tag{align-self:flex-start;font-size:.8125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .65rem;border-radius:999px;background:var(--cokolada);color:var(--vanilka);line-height:1.2}
+.ramek-stred{margin:auto;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:.9375rem;font-weight:500;line-height:1.35;padding-bottom:18px}
+
+/* FAQ */
+.faq{padding-block:var(--pas)}
+.faq-in{display:grid;gap:30px}
+.faq-vic{margin-top:18px;max-width:26rem;color:var(--cokolada-stredni)}
+.faq-seznam{border-top:2px solid var(--cokolada)}
+.faq details{border-bottom:1px solid var(--cokolada-linka)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:22px 0;font-family:var(--font-nadpis);font-size:clamp(1.25rem,2vw,1.5rem);line-height:1.25}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:30px;height:30px;margin-top:2px;border-radius:50%;background:linear-gradient(var(--cokolada),var(--cokolada)) center/12px 2px no-repeat,linear-gradient(var(--cokolada),var(--cokolada)) center/2px 12px no-repeat,var(--mata)}
+.faq details[open] summary::after{background:linear-gradient(var(--vanilka),var(--vanilka)) center/12px 2px no-repeat,var(--cokolada)}
+.faq details p{padding:0 48px 24px 0;max-width:38rem;color:var(--cokolada-stredni)}
+
+/* kontakt */
+.kontakt{padding-block:var(--pas)}
+.kontakt-in{display:grid;gap:44px}
+.kontakt h2{margin-top:14px}
+.velky-tel{display:inline-block;margin-top:26px;font-family:var(--font-nadpis);font-size:clamp(2.6rem,7vw,4.5rem);line-height:1.05;color:var(--karamel);text-decoration:none}
+.velky-tel:hover{color:var(--karamel-svetly)}
+.udaje{margin-top:26px;border-top:1px solid var(--cokolada-linka);font-style:normal}
+.udaje div{display:grid;gap:2px 20px;padding-block:14px;border-bottom:1px solid var(--cokolada-linka)}
+.udaje dt{font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mata);padding-top:.3em}
+.udaje dd{min-width:0}
+.udaje dd small{display:block;font-size:1rem;color:var(--vanilka-tmava)}
+.tmavy .odkaz{text-decoration-color:var(--karamel)}
+.mapa{margin-top:26px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto;border-radius:20px}
+.mapa-odkazy{display:flex;flex-wrap:wrap;gap:10px 26px}
+.formular{background:var(--vanilka);color:var(--cokolada);border-radius:26px;padding:clamp(22px,3.4vw,40px);align-self:start}
+.formular h3{font-size:clamp(1.5rem,2.4vw,1.875rem)}
+.formular > p{margin-top:8px;color:var(--cokolada-stredni)}
+.pole-mriz{display:grid;gap:16px;margin-top:22px}
+.pole{display:grid;gap:6px;min-width:0}
+.pole label{font-weight:700;font-size:.9375rem}
+.pole input,.pole textarea{width:100%;min-width:0;font-family:var(--font-text);font-size:1rem;line-height:1.4;color:var(--cokolada);background:var(--vanilka-svetla);border:1.5px solid var(--cokolada-linka);border-radius:12px;padding:13px 14px;min-height:52px}
+.pole textarea{min-height:112px;resize:vertical}
+.pole input:focus-visible,.pole textarea:focus-visible{outline:3px solid var(--karamel-tmavy);outline-offset:2px;border-color:var(--cokolada);border-radius:12px}
+.napoveda{font-size:.875rem;color:var(--cokolada-stredni)}
+.formular .btn{margin-top:22px;width:100%}
+.form-pozn{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--mata);color:var(--cokolada-tmava);font-weight:500}
+
+/* patička */
+.paticka{background:var(--cokolada-tmava);color:var(--vanilka);padding-block:48px calc(110px + env(safe-area-inset-bottom,0px))}
+.paticka-in{display:grid;gap:28px}
+.paticka .znacka-maly{color:var(--mata)}
+.paticka-sloupec{font-style:normal;display:grid;gap:4px;align-content:start}
+.paticka-sloupec strong{font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mata)}
+.paticka-dole{margin-top:34px;padding-top:18px;border-top:1px solid var(--cokolada-stredni);font-size:.8125rem;color:var(--vanilka-tmava)}
+
+/* volání jedním klepnutím */
+.volat{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--cokolada-tmava);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.volat a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;border-radius:999px;background:var(--karamel);color:var(--cokolada-tmava);font-weight:700;font-size:1.0625rem;text-decoration:none}
+
+@media (min-width:560px){
+  .pole-mriz{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pole.cele{grid-column:1 / -1}
+  .formular .btn{width:auto}
+  .fakta div,.udaje div{grid-template-columns:150px minmax(0,1fr)}
+  .hero-ozdoba{width:340px}
+}
+@media (min-width:760px){
+  .velikost{grid-template-columns:104px minmax(0,1fr) auto;gap:24px}
+  .velikost-pes{grid-row:auto;align-self:center}
+  .cena{grid-column:auto;text-align:right}
+  .pary{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+  .tri-kroky{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .paticka-in{grid-template-columns:1.3fr 1fr 1fr 1fr}
+}
+@media (min-width:900px){
+  .paticka{padding-bottom:34px}
+  .volat{display:none}
+  .hlavicka{position:sticky;top:env(safe-area-inset-top,0px);z-index:40}
+  .hlavicka-in{padding-block:14px}
+  .nav{display:flex;gap:clamp(16px,2.2vw,34px);font-weight:500;font-size:1rem}
+  .nav a{text-decoration:none;padding:10px 0;border-bottom:2px solid transparent}
+  .nav a:hover{border-bottom-color:var(--karamel)}
+  .hl-tel{background:var(--cokolada);color:var(--vanilka);border-radius:999px;padding:0 20px;min-height:48px}
+  .hl-tel span{text-decoration:none}
+  .hl-tel:hover{background:var(--cokolada-tmava)}
+  .page section[id]{scroll-margin-top:84px}
+  .hero-pata{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:56px}
+  .hero-ozdoba{width:clamp(320px,31vw,430px)}
+  .termin-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:end}
+  .sluzby-in{grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:72px;align-items:start}
+  .page .duvera-pes{display:block}
+  .duvera-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+  .faq-in{grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:72px;align-items:start}
+  .kontakt-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px}
+  .objednat-in{grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:56px;align-items:center}
+}
+@media (min-width:980px){
+  .osa{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 30px}
+  .osa li{display:block;padding-bottom:0}
+  .osa li::before{left:56px;top:27px;bottom:auto;width:calc(100% - 26px);height:2px}
+  .uzel{margin-bottom:22px}
+  .osa h3{margin-top:4px}
+}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .btn:hover{transform:translateY(-1px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .page *{transition:none!important;animation:none!important}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="pes" viewBox="0 0 100 100">
+    <ellipse cx="21" cy="50" rx="13" ry="27" transform="rotate(12 21 50)" fill="#4A2C1F"/>
+    <ellipse cx="79" cy="50" rx="13" ry="27" transform="rotate(-12 79 50)" fill="#4A2C1F"/>
+    <circle cx="50" cy="50" r="32" fill="#D98E4A"/>
+    <ellipse cx="50" cy="63" rx="17" ry="13" fill="#FFF3DC"/>
+    <ellipse cx="50" cy="57" rx="6.5" ry="4.8" fill="#4A2C1F"/>
+    <rect x="49" y="60" width="2" height="8" rx="1" fill="#4A2C1F"/>
+    <circle cx="38" cy="44" r="3.6" fill="#4A2C1F"/>
+    <circle cx="62" cy="44" r="3.6" fill="#4A2C1F"/>
+  </symbol>
+  <symbol id="telefon" viewBox="0 0 24 24">
+    <rect x="6.5" y="2" width="11" height="20" rx="2.6" fill="currentColor"/>
+    <rect x="8.5" y="4.6" width="7" height="11.4" rx="1" fill="#D98E4A"/>
+    <circle cx="12" cy="18.9" r="1.2" fill="#D98E4A"/>
+  </symbol>
+  <symbol id="tlapka" viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="20" fill="#4A2C1F"/>
+    <ellipse cx="20" cy="25.5" rx="8" ry="6.4" fill="#FFF3DC"/>
+    <ellipse cx="10.4" cy="18" rx="3" ry="3.8" fill="#FFF3DC"/>
+    <ellipse cx="16.4" cy="12.4" rx="3" ry="4" fill="#FFF3DC"/>
+    <ellipse cx="23.6" cy="12.4" rx="3" ry="4" fill="#FFF3DC"/>
+    <ellipse cx="29.6" cy="18" rx="3" ry="3.8" fill="#FFF3DC"/>
+  </symbol>
+  <symbol id="fotak" viewBox="0 0 32 32">
+    <rect x="3" y="9" width="26" height="18" rx="4" fill="#4A2C1F"/>
+    <rect x="11" y="5" width="10" height="6" rx="2" fill="#4A2C1F"/>
+    <circle cx="16" cy="18" r="5.6" fill="#FFF3DC"/>
+    <circle cx="16" cy="18" r="2.6" fill="#D98E4A"/>
+  </symbol>
+</svg>
+
+<div class="page" id="top">
+
+  <div class="banner" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Psí salón Zmudová</div>
+
+  <header class="hlavicka">
+    <div class="wrap hlavicka-in">
+      <a class="znacka" href="#top" aria-label="Psí salón Zmudová, zpět nahoru">
+        <svg width="40" height="40" aria-hidden="true"><use href="#tlapka"/></svg>
+        <span class="znacka-text"><span class="znacka-maly">Psí salón</span><span class="znacka-velky">Zmudová</span></span>
+      </a>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#termin">Termín</a>
+        <a href="#sluzby">Služby</a>
+        <a href="#navsteva">Návštěva</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#dotazy">Dotazy</a>
+        <a href="#objednani">Kontakt</a>
+      </nav>
+      <a class="hl-tel" href="tel:+420776386354">
+        <svg width="20" height="20" aria-hidden="true"><use href="#telefon"/></svg>
+        <span>776 386 354</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-labelledby="hero-nadpis">
+      <div class="wrap">
+        <p class="kicker">Stříhání psů · Nový Bohumín</p>
+        <h1 id="hero-nadpis">Psí salón v&nbsp;Bohumíně, kde se termín <em>přizpůsobí Vám</em>.</h1>
+        <div class="hero-pata">
+          <div class="hero-text">
+            <p class="lead">Stříhání psů u Soni Zmudové na Jateční ulici v Novém Bohumíně. Pracovní doba je individuální, takže den i hodinu si domluvíte po telefonu.</p>
+            <div class="cta-radek">
+              <a class="btn btn-tmavy" href="#objednani">Objednat termín</a>
+              <p class="hero-tel">nebo zavolejte <a href="tel:+420776386354">776 386 354</a></p>
+            </div>
+          </div>
+          <svg class="hero-ozdoba" viewBox="0 0 440 170" role="img" aria-label="Kresba hřebenu a nůžek">
+            <defs>
+              <pattern id="zuby-hrube" x="24" y="66" width="14" height="52" patternUnits="userSpaceOnUse"><rect width="7" height="52" rx="3.5" fill="#4A2C1F"/></pattern>
+              <pattern id="zuby-jemne" x="140" y="66" width="9" height="52" patternUnits="userSpaceOnUse"><rect width="4.5" height="52" rx="2.25" fill="#4A2C1F"/></pattern>
+            </defs>
+            <circle cx="338" cy="85" r="76" fill="#9FD3C0"/>
+            <rect x="24" y="66" width="105" height="52" fill="url(#zuby-hrube)"/>
+            <rect x="140" y="66" width="94.5" height="52" fill="url(#zuby-jemne)"/>
+            <rect x="12" y="50" width="234" height="24" rx="12" fill="#4A2C1F"/>
+            <rect x="12" y="50" width="12" height="68" rx="6" fill="#4A2C1F"/>
+            <rect x="234" y="50" width="12" height="68" rx="6" fill="#4A2C1F"/>
+            <g transform="translate(244 42) rotate(-16 100 45) scale(.94)">
+              <polygon points="6,29 106,36 116,50 102,52" fill="#4A2C1F"/>
+              <polygon points="6,61 106,54 116,40 102,38" fill="#4A2C1F"/>
+              <path d="M110 45 L150 63" stroke="#4A2C1F" stroke-width="9" stroke-linecap="round" fill="none"/>
+              <path d="M110 45 L150 27" stroke="#4A2C1F" stroke-width="9" stroke-linecap="round" fill="none"/>
+              <circle cx="167" cy="70" r="16" stroke="#D98E4A" stroke-width="9" fill="none"/>
+              <circle cx="167" cy="20" r="16" stroke="#D98E4A" stroke-width="9" fill="none"/>
+              <circle cx="110" cy="45" r="4.5" fill="#FFF3DC"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="termin tmavy" id="termin" aria-labelledby="termin-nadpis">
+      <div class="wrap termin-in">
+        <div>
+          <p class="kicker">Termín podle Vás</p>
+          <h2 id="termin-nadpis">Pracovní doba je individuální. <span>Vše je na domluvě.</span></h2>
+          <p class="termin-text">Otevřeno je každý den dle telefonické domluvy, včetně soboty a neděle. Zavolejte, řekněte, kdy se Vám to hodí, a termín najdeme spolu.</p>
+        </div>
+        <div>
+          <ul class="tyden" aria-hidden="true">
+            <li>Po</li><li>Út</li><li>St</li><li>Čt</li><li>Pá</li><li>So</li><li>Ne</li>
+          </ul>
+          <p class="tyden-popis"><strong>Pondělí až neděle</strong>dle telefonické domluvy</p>
+          <p class="termin-akce">
+            <a class="btn btn-karamel" href="tel:+420776386354">
+              <svg width="22" height="22" aria-hidden="true" style="color:#36201A"><use href="#telefon"/></svg>
+              Zavolat 776 386 354
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sluzby" id="sluzby" aria-labelledby="sluzby-nadpis">
+      <div class="wrap sluzby-in">
+        <div>
+          <div class="stitek-radek">
+            <p class="kicker">Služby a ceník</p>
+            <span class="ukazka">ukázkový text</span>
+          </div>
+          <h2 id="sluzby-nadpis">Stříhání psů podle velikosti</h2>
+          <p class="perex">Každý pes je jinak velký a má jinou srst. Proto si cenu i potřebný čas řekneme předem po telefonu.</p>
+        </div>
+        <div>
+          <ul class="velikosti">
+            <li class="velikost">
+              <div class="velikost-pes"><svg width="46" height="46" aria-hidden="true"><use href="#pes"/></svg></div>
+              <div class="velikost-text">
+                <h3>Malý pes</h3>
+                <p>Koupel, vysušení a střih podle Vašich představ, s ohledem na drobnou postavu.</p>
+              </div>
+              <p class="cena">Cena na dotaz</p>
+            </li>
+            <li class="velikost">
+              <div class="velikost-pes"><svg width="60" height="60" aria-hidden="true"><use href="#pes"/></svg></div>
+              <div class="velikost-text">
+                <h3>Střední pes</h3>
+                <p>Koupel, vyčesání podsady a střih nebo úprava srsti podle jejího typu.</p>
+              </div>
+              <p class="cena">Cena na dotaz</p>
+            </li>
+            <li class="velikost">
+              <div class="velikost-pes"><svg width="72" height="72" aria-hidden="true"><use href="#pes"/></svg></div>
+              <div class="velikost-text">
+                <h3>Velký pes</h3>
+                <p>Koupel, důkladné vysušení a střih, na který si vyhradíme dostatek času.</p>
+              </div>
+              <p class="cena">Cena na dotaz</p>
+            </li>
+          </ul>
+          <p class="sluzby-pozn">Nevíte, kam Váš pes patří? Zavolejte na <a class="odkaz" href="tel:+420776386354">776 386 354</a>, stačí říct plemeno a kdy byl naposledy stříhaný.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="navsteva" id="navsteva" aria-labelledby="navsteva-nadpis">
+      <div class="wrap">
+        <div class="navsteva-hlava">
+          <div class="stitek-radek">
+            <p class="kicker">Návštěva krok za krokem</p>
+            <span class="ukazka na-mate">ukázkový text</span>
+          </div>
+          <h2 id="navsteva-nadpis">Od příchodu po předání v klidu a bez spěchu</h2>
+        </div>
+        <ol class="osa">
+          <li>
+            <div class="uzel" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1.6" fill="#FFF3DC"/><circle cx="14.8" cy="12.4" r="1.4" fill="#4A2C1F"/></svg>
+            </div>
+            <div>
+              <p class="krok-cislo">Krok 1</p>
+              <h3>Příchod a seznámení</h3>
+              <p>Pes si salón nejdřív očichá a v klidu se rozkouká. Nikam nespěcháme.</p>
+            </div>
+          </li>
+          <li>
+            <div class="uzel" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12.5" rx="4.5" fill="#FFF3DC"/><polygon points="8,15.5 8,21 14,15.5" fill="#FFF3DC"/><circle cx="8.4" cy="10.2" r="1.3" fill="#4A2C1F"/><circle cx="12" cy="10.2" r="1.3" fill="#4A2C1F"/><circle cx="15.6" cy="10.2" r="1.3" fill="#4A2C1F"/></svg>
+            </div>
+            <div>
+              <p class="krok-cislo">Krok 2</p>
+              <h3>Domluva střihu</h3>
+              <p>Řeknete, jak si úpravu představujete, a společně vybereme délku i tvar.</p>
+            </div>
+          </li>
+          <li>
+            <div class="uzel" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 2.6 C12 2.6 5.4 10.3 5.4 14.6 a6.6 6.6 0 0 0 13.2 0 C18.6 10.3 12 2.6 12 2.6z" fill="#9FD3C0"/><circle cx="9.8" cy="15.2" r="1.7" fill="#FFF3DC"/></svg>
+            </div>
+            <div>
+              <p class="krok-cislo">Krok 3</p>
+              <h3>Koupel a sušení</h3>
+              <p>Srst vykoupeme, vysušíme a rozčešeme, aby se dobře stříhala.</p>
+            </div>
+          </li>
+          <li>
+            <div class="uzel" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><path d="M9.4 8.6 L20.5 18.4" stroke="#FFF3DC" stroke-width="2.4" stroke-linecap="round" fill="none"/><path d="M9.4 15.4 L20.5 5.6" stroke="#FFF3DC" stroke-width="2.4" stroke-linecap="round" fill="none"/><circle cx="6.6" cy="6.8" r="3" stroke="#D98E4A" stroke-width="2.4" fill="none"/><circle cx="6.6" cy="17.2" r="3" stroke="#D98E4A" stroke-width="2.4" fill="none"/></svg>
+            </div>
+            <div>
+              <p class="krok-cislo">Krok 4</p>
+              <h3>Střih a úprava</h3>
+              <p>Stříháme trpělivě a s přestávkami, kdykoli je pes potřebuje.</p>
+            </div>
+          </li>
+          <li>
+            <div class="uzel" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3" fill="#4A2C1F"/><rect x="3.5" y="5" width="17" height="5" rx="2.5" fill="#36201A"/><rect x="7.2" y="2.6" width="2.4" height="5" rx="1.2" fill="#36201A"/><rect x="14.4" y="2.6" width="2.4" height="5" rx="1.2" fill="#36201A"/><circle cx="12" cy="14.8" r="2.6" fill="#FFF3DC"/></svg>
+            </div>
+            <div>
+              <p class="krok-cislo">Krok 5</p>
+              <h3>Předání a příští termín</h3>
+              <p>Ukážeme Vám výsledek a rovnou domluvíme, kdy přijít příště.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="objednat-pas" aria-labelledby="objednat-nadpis">
+      <div class="wrap objednat-in">
+        <div class="objednat-hlava">
+          <p class="kicker">Jak se objednat</p>
+          <h2 id="objednat-nadpis">Tři kroky a máte termín</h2>
+        </div>
+        <ol class="tri-kroky">
+          <li>
+            <span class="tri-cislo" aria-hidden="true">1</span>
+            <div>
+              <h3>Zavolejte</h3>
+              <p>Na číslo <a class="odkaz" href="tel:+420776386354">776 386 354</a>. Napsat můžete i e-mailem.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tri-cislo" aria-hidden="true">2</span>
+            <div>
+              <h3>Domluvíme termín</h3>
+              <p>Pracovní doba je individuální, den vybereme podle Vás.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tri-cislo" aria-hidden="true">3</span>
+            <div>
+              <h3>Přijďte</h3>
+              <p>Jateční 1153, Nový Bohumín.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="duvera" id="duvera" aria-labelledby="duvera-nadpis">
+      <div class="wrap duvera-in">
+        <div>
+          <p class="kicker">Co o salónu víte předem</p>
+          <h2 id="duvera-nadpis">Osobní salón, který vede Soňa Zmudová</h2>
+          <p class="perex">Salón nese jméno Soni Zmudové. Termín si domluvíte po telefonu a hodnocení si přečtete přímo u zdroje.</p>
+          <svg class="duvera-pes" width="112" height="112" aria-hidden="true"><use href="#pes"/></svg>
+        </div>
+        <dl class="fakta">
+          <div>
+            <dt>Salón</dt>
+            <dd>Psí salón – Soňa Zmudová<small>Psí salón a stříhání psů v Novém Bohumíně.</small></dd>
+          </div>
+          <div>
+            <dt>Pracovní doba</dt>
+            <dd>Individuální, vše na domluvě<small>Každý den dle telefonické domluvy, včetně soboty a neděle.</small></dd>
+          </div>
+          <div>
+            <dt>Objednání</dt>
+            <dd><a class="odkaz" href="tel:+420776386354">776 386 354</a><small>Nebo e-mailem na <a class="odkaz" href="mailto:sona.zmudova@gmail.com">sona.zmudova@gmail.com</a>.</small></dd>
+          </div>
+          <div>
+            <dt>Hodnocení</dt>
+            <dd>2 hodnocení na Firmy.cz<small><a class="odkaz" href="https://www.firmy.cz/detail/13401589-psi-salon-sona-zmudova-bohumin-novy-bohumin.html" target="_blank" rel="noopener">Hodnocení na Firmy.cz</a></small></dd>
+          </div>
+          <div>
+            <dt>Adresa a IČO</dt>
+            <dd>Jateční 1153, 735 81 Nový Bohumín<small>IČO 17592577</small></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="galerie" id="galerie" aria-labelledby="galerie-nadpis">
+      <div class="wrap">
+        <div class="galerie-hlava">
+          <p class="kicker">Galerie před a po</p>
+          <h2 id="galerie-nadpis">Proměny, které řeknou víc než slova</h2>
+          <p class="perex">Na hotovém webu tady budou Vaše fotky psů před střihem a po něm, vždy vedle sebe.</p>
+        </div>
+        <div class="pary">
+          <figure class="par">
+            <div class="ramek"><span class="ramek-tag">Před</span><span class="ramek-stred"><svg width="32" height="32" aria-hidden="true"><use href="#fotak"/></svg>Sem přijde Vaše fotka</span></div>
+            <div class="ramek po"><span class="ramek-tag">Po</span><span class="ramek-stred"><svg width="32" height="32" aria-hidden="true"><use href="#fotak"/></svg>Sem přijde Vaše fotka</span></div>
+          </figure>
+          <figure class="par">
+            <div class="ramek"><span class="ramek-tag">Před</span><span class="ramek-stred"><svg width="32" height="32" aria-hidden="true"><use href="#fotak"/></svg>Sem přijde Vaše fotka</span></div>
+            <div class="ramek po"><span class="ramek-tag">Po</span><span class="ramek-stred"><svg width="32" height="32" aria-hidden="true"><use href="#fotak"/></svg>Sem přijde Vaše fotka</span></div>
+          </figure>
+          <figure class="par">
+            <div class="ramek"><span class="ramek-tag">Před</span><span class="ramek-stred"><svg width="32" height="32" aria-hidden="true"><use href="#fotak"/></svg>Sem přijde Vaše fotka</span></div>
+            <div class="ramek po"><span class="ramek-tag">Po</span><span class="ramek-stred"><svg width="32" height="32" aria-hidden="true"><use href="#fotak"/></svg>Sem přijde Vaše fotka</span></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="dotazy" aria-labelledby="faq-nadpis">
+      <div class="wrap faq-in">
+        <div>
+          <div class="stitek-radek">
+            <p class="kicker">Časté dotazy</p>
+            <span class="ukazka">ukázkový text</span>
+          </div>
+          <h2 id="faq-nadpis">Na co se majitelé ptají nejčastěji</h2>
+          <p class="faq-vic">Nenašli jste svou otázku? Zavolejte na <a class="odkaz" href="tel:+420776386354">776 386 354</a>.</p>
+        </div>
+        <div class="faq-seznam">
+          <details open>
+            <summary>Jak se objednám?</summary>
+            <p>Zavolejte na 776 386 354 nebo napište e-mail. Pracovní doba je individuální, takže den i hodinu vybereme podle toho, kdy se to hodí Vám.</p>
+          </details>
+          <details>
+            <summary>Kolik stříhání stojí?</summary>
+            <p>Cena se odvíjí od velikosti psa a stavu srsti. Zavolejte, popište svého psa a cenu se dozvíte ještě před objednáním.</p>
+          </details>
+          <details>
+            <summary>Jak dlouho návštěva trvá?</summary>
+            <p>Záleží na velikosti psa a typu srsti. Při příchodu si řekneme, kdy si pro něj máte přijít.</p>
+          </details>
+          <details>
+            <summary>Můj pes se stříhání bojí. Co s tím?</summary>
+            <p>Řekněte to hned při objednání. Vyhradíme si víc času, postupujeme pomalu a děláme přestávky.</p>
+          </details>
+          <details>
+            <summary>Mám psa před návštěvou koupat nebo česat?</summary>
+            <p>Koupat nemusíte, koupel je součástí návštěvy. Pomůže, když psa před cestou vyvenčíte.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="kontakt tmavy" id="objednani" aria-labelledby="kontakt-nadpis">
+      <div class="wrap kontakt-in">
+        <div>
+          <p class="kicker">Objednání a kontakt</p>
+          <h2 id="kontakt-nadpis">Zavolejte a domluvíme termín, který se hodí Vám</h2>
+          <a class="velky-tel" href="tel:+420776386354">776 386 354</a>
+          <dl class="udaje">
+            <div>
+              <dt>E-mail</dt>
+              <dd><a class="odkaz" href="mailto:sona.zmudova@gmail.com">sona.zmudova@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Adresa</dt>
+              <dd>Jateční 1153, 735 81 Nový Bohumín</dd>
+            </div>
+            <div>
+              <dt>Otevírací doba</dt>
+              <dd>Pondělí až neděle: dle telefonické domluvy<small>Pracovní doba je individuální, vše na domluvě.</small></dd>
+            </div>
+          </dl>
+          <div class="mapa">
+            <svg viewBox="0 0 360 170" role="img" aria-label="Ilustrační mapka s vyznačeným místem salónu">
+              <rect x="0" y="0" width="360" height="170" fill="#DCEFE4"/>
+              <rect x="18" y="14" width="74" height="38" rx="8" fill="#9FD3C0"/>
+              <rect x="126" y="86" width="96" height="34" rx="8" fill="#9FD3C0"/>
+              <rect x="268" y="14" width="78" height="46" rx="8" fill="#9FD3C0"/>
+              <rect x="20" y="150" width="70" height="30" rx="8" fill="#9FD3C0"/>
+              <path d="M-10 68 H370" stroke="#FFF9EC" stroke-width="16" fill="none"/>
+              <path d="M108 -10 V180" stroke="#FFF9EC" stroke-width="16" fill="none"/>
+              <path d="M-10 142 L370 126" stroke="#FFF9EC" stroke-width="12" fill="none"/>
+              <path d="M252 -10 L236 180" stroke="#FFF9EC" stroke-width="12" fill="none"/>
+              <ellipse cx="176" cy="68" rx="15" ry="4.5" fill="#897261"/>
+              <path d="M176 68 C176 68 152 40 152 25 a24 24 0 0 1 48 0 C200 40 176 68 176 68z" fill="#D98E4A"/>
+              <circle cx="176" cy="25" r="9.5" fill="#4A2C1F"/>
+            </svg>
+            <p class="mapa-odkazy">
+              <a class="odkaz" href="https://mapy.cz/zakladni?q=Jate%C4%8Dn%C3%AD%201153%2C%20735%2081%20Nov%C3%BD%20Bohum%C3%ADn" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+              <a class="odkaz" href="https://www.facebook.com/p/Ps%C3%AD-sal%C3%B3n-Zmudov%C3%A1-Bohum%C3%ADn-100087486111893" target="_blank" rel="noopener">Facebook salónu</a>
+            </p>
+          </div>
+        </div>
+
+        <form class="formular" id="objednavka" novalidate>
+          <h3>Nebo napište, kdy se Vám to hodí</h3>
+          <p>Vyplňte pár údajů a termín doladíme po telefonu.</p>
+          <div class="pole-mriz">
+            <div class="pole">
+              <label for="f-jmeno">Jméno</label>
+              <input id="f-jmeno" name="jmeno" type="text" autocomplete="name">
+            </div>
+            <div class="pole">
+              <label for="f-telefon">Telefon</label>
+              <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel">
+            </div>
+            <div class="pole cele">
+              <label for="f-plemeno">Plemeno / mazlíček</label>
+              <input id="f-plemeno" name="plemeno" type="text">
+            </div>
+            <div class="pole cele">
+              <label for="f-kdy">Kdy se Vám to hodí</label>
+              <input id="f-kdy" name="kdy" type="text" aria-describedby="f-kdy-napoveda">
+              <span class="napoveda" id="f-kdy-napoveda">Třeba „sobota dopoledne“ nebo „kterýkoli všední den“.</span>
+            </div>
+            <div class="pole cele">
+              <label for="f-zprava">Zpráva</label>
+              <textarea id="f-zprava" name="zprava" rows="4"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-tmavy" id="f-odeslat" type="submit">Odeslat poptávku</button>
+          <p class="form-pozn" id="f-poznamka" role="status" tabindex="-1" hidden>Toto je ukázka formuláře. Na hotovém webu Vám poptávka přijde e-mailem.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="paticka">
+    <div class="wrap">
+      <div class="paticka-in">
+        <div>
+          <span class="znacka">
+            <svg width="40" height="40" aria-hidden="true"><use href="#tlapka"/></svg>
+            <span class="znacka-text"><span class="znacka-maly">Psí salón</span><span class="znacka-velky">Zmudová</span></span>
+          </span>
+        </div>
+        <address class="paticka-sloupec">
+          <strong>Adresa</strong>
+          <span>Psí salón – Soňa Zmudová</span>
+          <span>Jateční 1153</span>
+          <span>735 81 Nový Bohumín</span>
+        </address>
+        <address class="paticka-sloupec">
+          <strong>Kontakt</strong>
+          <a href="tel:+420776386354">776 386 354</a>
+          <a href="mailto:sona.zmudova@gmail.com">sona.zmudova@gmail.com</a>
+        </address>
+        <div class="paticka-sloupec">
+          <strong>Údaje</strong>
+          <span>IČO 17592577</span>
+          <span>Každý den dle telefonické domluvy</span>
+        </div>
+      </div>
+      <p class="paticka-dole">Návrh webu připravil Martin Fian</p>
+    </div>
+  </footer>
+
+  <div class="volat">
+    <a href="tel:+420776386354">
+      <svg width="22" height="22" aria-hidden="true" style="color:#36201A"><use href="#telefon"/></svg>
+      Zavolat 776 386 354
+    </a>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('objednavka');
+  var note = document.getElementById('f-poznamka');
+  if(!form || !note) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    note.hidden = false;
+    note.focus({preventScroll:true});
+    if(note.scrollIntoView){ note.scrollIntoView({block:'nearest'}); }
+  });
+})();
+</script>
+</body>
+</html>

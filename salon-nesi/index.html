@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Salon Nesi</title>
+<meta name="description" content="Stříhání a úpravy psů do 10 kg, koupání a trimování v Novém Jičíně. Česání koček, stříhání drápků psům, morčatům a králíkům.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Quicksand:wght@600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Salon Nesi",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hoblíkova 580/27",
+    "postalCode": "741 01",
+    "addressLocality": "Nový Jičín",
+    "addressCountry": "CZ"
+  },
+  "telephone": "+420606787460",
+  "email": "salonnesi@seznam.cz",
+  "sameAs": [
+    "https://www.facebook.com/people/Salon-Nesi-st%C5%99%C3%ADh%C3%A1n%C3%AD-a-%C3%BAprava-ps%C5%AF/100095034092681"
+  ]
+}
+</script>
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<meta property="og:title" content="Stříhání malých psů Nový Jičín | Salon Nesi">
+
+
+<style>
+/* Koncept: fialové pole s drobným tlapkovým vzorem, přes ně světlá karta s nabídkou a vykukujícím pejskem; dál se střídají lila, bílé a broskvové pásy a hlavním prvkem je výběr mazlíčka. */
+:root{
+  --violet:#6B4E9B;
+  --violet-dark:#553C7E;
+  --violet-deep:#3F2C61;
+  --violet-mid:#9A80C4;
+  --violet-soft:#C9B8E3;
+  --violet-pattern:#7A5EA9;
+  --lila:#F3EEF9;
+  --lila-2:#E6DCF3;
+  --lila-3:#D5C6EA;
+  --paper:#FFFFFF;
+  --peach:#F2B5A0;
+  --peach-light:#FBE5DC;
+  --peach-dark:#D98E75;
+  --ink:#2B2140;
+  --ink-soft:#574B6E;
+  --shadow:rgba(43,33,64,.26);
+  --font-head:"Quicksand","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --font-body:"Mulish","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+body{background:var(--lila);color:var(--ink)}
+.page{background:var(--lila);color:var(--ink);font-family:var(--font-body);font-weight:400;font-size:17px;line-height:1.6;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+.page *,.page *::before,.page *::after{box-sizing:border-box}
+.page :where(h1,h2,h3){font-family:var(--font-head);font-weight:700;color:var(--ink);line-height:1.15;margin:0;text-wrap:balance}
+.page :where(p,figure){margin:0}
+.page :where(ul,ol,dl,dd){margin:0;padding:0;list-style:none}
+.page a{color:var(--violet);text-underline-offset:3px}
+.page :where(svg){display:block}
+.page a[href^="tel:"]{white-space:nowrap}
+.page :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.on-dark :focus-visible,.on-dark:focus-visible{outline-color:var(--paper)}
+.wrap{width:100%;max-width:1176px;margin:0 auto;padding:0 18px}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* drobné stavební prvky */
+.pill{display:inline-block;font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:.04em;line-height:1;color:var(--ink);background:var(--peach-light);border:1px solid var(--peach);border-radius:999px;padding:5px 10px;vertical-align:middle}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:18px;line-height:1.2;color:var(--paper);background:var(--violet);border:0;border-radius:999px;padding:16px 28px;text-decoration:none;cursor:pointer;transition:background-color .15s ease,transform .15s ease}
+.page a.btn{color:var(--paper)}
+.btn:hover{background:var(--violet-dark)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:18px;height:18px;flex:none}
+.sec{padding:64px 0}
+.sec-head{max-width:640px;margin-bottom:32px}
+.sec-head h2{font-size:clamp(1.7rem,1.25rem + 1.9vw,2.5rem)}
+.sec-head p{margin-top:12px;color:var(--ink-soft)}
+
+/* 1. banner */
+.banner{background:var(--ink);color:var(--paper);font-size:13px;line-height:1.4;text-align:center;padding:8px 16px}
+
+/* 2. hlavička */
+.header{background:var(--paper);border-bottom:1px solid var(--lila-2)}
+.header__in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;padding-top:10px;padding-bottom:10px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.page a.brand{color:var(--ink)}
+.brand svg{width:36px;height:36px;flex:none}
+.brand__name{font-family:var(--font-head);font-weight:700;font-size:21px;line-height:1}
+.nav{display:none}
+.header__tel{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:700;font-size:16px;line-height:1;text-decoration:none;background:var(--lila);border-radius:999px;padding:10px 14px}
+.page a.header__tel{color:var(--violet-deep)}
+.header__tel svg{width:16px;height:16px;flex:none}
+
+/* 3. hero: karta přes barevnou plochu */
+.hero{position:relative;padding:62px 0 0}
+.hero__field{position:absolute;left:0;right:0;top:0;bottom:96px;background:var(--violet);border-radius:0 0 28px 28px;overflow:hidden}
+.hero__field svg{position:absolute;left:0;top:0;width:100%;height:100%}
+.hero__wrap{position:relative}
+.hero__eyebrow{display:none}
+.hero__card{position:relative;background:var(--paper);border-radius:26px;padding:24px 20px 22px;box-shadow:0 22px 44px -22px var(--shadow);display:grid;gap:24px}
+.hero__dog{position:absolute;right:20px;bottom:100%;width:104px;height:auto;transform:translateY(16.667%);pointer-events:none}
+.hero__main{min-width:0}
+.chip{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14px;line-height:1.2;color:var(--violet-deep);background:var(--lila);border-radius:999px;padding:7px 12px 7px 9px}
+.chip svg{width:16px;height:16px;flex:none}
+.hero h1{font-size:clamp(1.72rem,1.05rem + 3.1vw,3.2rem);margin-top:14px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--violet)}
+.hero__lead{margin-top:12px;color:var(--ink-soft);max-width:34em}
+.hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:20px}
+.hero__cta .btn{flex:1 1 220px;max-width:320px}
+.hero__tel{display:inline-flex;flex-direction:column;text-decoration:none;line-height:1.25}
+.hero__tel span{font-size:14px;color:var(--ink-soft)}
+.hero__tel strong{font-family:var(--font-head);font-weight:700;font-size:22px;color:var(--violet-deep)}
+.facts{display:grid;gap:14px;border-top:1px solid var(--lila-2);padding-top:20px;min-width:0}
+.facts__row{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start}
+.facts__ic{width:40px;height:40px;border-radius:50%;background:var(--lila);display:grid;place-items:center;color:var(--violet)}
+.facts__ic svg{width:20px;height:20px}
+.facts dt{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--violet)}
+.facts dd{font-weight:600;line-height:1.4}
+
+/* 4. výběr mazlíčka */
+.pets{padding-top:56px}
+.pets__tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.pet-tab{display:flex;align-items:center;gap:10px;min-width:0;width:100%;text-align:left;font-family:var(--font-head);font-weight:700;font-size:15px;line-height:1.2;color:var(--ink);background:var(--paper);border:2px solid var(--lila-3);border-radius:20px;padding:10px 12px 10px 10px;cursor:pointer;position:relative;transition:background-color .15s ease,border-color .15s ease,color .15s ease}
+.pet-tab:hover{border-color:var(--violet-mid)}
+.pet-tab__ic{flex:none;width:48px;height:48px;border-radius:50%;background:var(--lila-2);display:grid;place-items:center}
+.pet-tab__ic svg{width:38px;height:38px}
+.pet-tab__tx{min-width:0}
+.pet-tab[aria-selected="true"]{background:var(--violet);border-color:var(--violet);color:var(--paper)}
+.pets__panels{margin-top:14px}
+.pet-panel{background:var(--paper);border:2px solid var(--violet);border-radius:26px;padding:24px 20px;display:grid;gap:22px}
+.pet-panel__art{width:104px;height:104px;border-radius:50%;background:var(--lila-2);display:grid;place-items:center}
+.pet-panel__art svg{width:82px;height:82px}
+.pet-panel__body{min-width:0}
+.pet-panel h3{font-size:1.55rem}
+.pet-panel__sub{font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--violet);margin-top:6px}
+.checks{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.checks li{display:inline-flex;align-items:center;gap:8px;font-weight:600;line-height:1.3;background:var(--lila);border-radius:999px;padding:8px 14px 8px 10px}
+.checks svg{width:18px;height:18px;flex:none;color:var(--violet)}
+.pet-panel__note{margin-top:16px;color:var(--ink-soft);max-width:36em}
+.pet-panel__note .pill{margin-right:6px}
+.pet-panel__price{background:var(--peach-light);border-radius:20px;padding:20px;display:grid;gap:14px;min-width:0}
+.price-tag{font-family:var(--font-head);font-weight:700;font-size:1.4rem;line-height:1.2;color:var(--ink)}
+.price-tag small{display:block;font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink-soft);margin-bottom:2px}
+
+/* 5. služby a ceník */
+.services{background:var(--paper)}
+.services__grid{display:grid;gap:8px}
+.services__art{display:none}
+.pricelist__top{display:flex;justify-content:flex-start;margin-bottom:4px}
+.pricelist li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:6px 16px;padding:22px 0;border-bottom:1px solid var(--lila-3)}
+.pricelist li:first-child{border-top:1px solid var(--lila-3)}
+.pricelist__ic{width:48px;height:48px;border-radius:16px;background:var(--lila);display:grid;place-items:center;color:var(--violet);grid-row:span 2}
+.pricelist__ic svg{width:26px;height:26px}
+.pricelist__tx{min-width:0}
+.pricelist h3{font-size:1.2rem}
+.pricelist__for{font-size:14px;font-weight:700;color:var(--violet);margin-top:3px}
+.pricelist__tx p:last-child{color:var(--ink-soft);margin-top:6px;max-width:34em}
+.pricelist__price{grid-column:2;font-family:var(--font-head);font-weight:700;color:var(--violet-deep)}
+
+/* 6. důvěra */
+.trust{background:var(--peach-light)}
+.trust__grid{display:grid;gap:0}
+.trust__item{padding:22px 0;border-top:1px solid var(--peach);min-width:0}
+.trust__ic{display:flex;gap:6px;align-items:center;height:48px;color:var(--violet-deep)}
+.trust__ic svg{width:44px;height:44px;flex:none}
+.trust__ic--line svg{width:36px;height:36px}
+.trust__ic--trio svg{width:38px;height:38px}
+.trust h3{font-size:1.2rem;margin-top:12px}
+.trust__item p{margin-top:8px;max-width:32em}
+.trust__link{margin-top:10px;font-weight:700}
+.page .trust a{color:var(--violet-deep)}
+
+/* 7. jak probíhá návštěva */
+.steps{display:grid;gap:26px;position:relative;counter-reset:krok}
+.steps li{position:relative;display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;counter-increment:krok}
+.steps li::before{content:counter(krok);width:52px;height:52px;border-radius:50%;background:var(--peach);color:var(--ink);font-family:var(--font-head);font-weight:700;font-size:22px;display:grid;place-items:center}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:25px;top:60px;bottom:-18px;border-left:2px dashed var(--violet-soft)}
+.steps h3{font-size:1.25rem;margin-top:10px}
+.steps p{margin-top:8px;color:var(--ink-soft);max-width:30em}
+
+/* 8. galerie před a po */
+.gallery{background:var(--paper)}
+.gallery__grid{display:grid;gap:22px}
+.pair{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}
+.spot{aspect-ratio:4/5;border:2px dashed var(--violet-soft);border-radius:20px;background:var(--lila);display:flex;flex-direction:column;align-items:flex-start;padding:10px;min-width:0}
+.spot__tag{font-family:var(--font-head);font-weight:700;font-size:14px;line-height:1;color:var(--ink);background:var(--peach);border-radius:999px;padding:6px 12px}
+.spot__mid{flex:1;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;color:var(--ink-soft);font-size:14px;font-weight:600;line-height:1.35}
+.spot__mid svg{width:34px;height:34px;color:var(--violet-mid)}
+.pair__arrow{position:absolute;left:50%;top:50%;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;background:var(--violet);color:var(--paper);display:grid;place-items:center;box-shadow:0 0 0 4px var(--paper)}
+.pair__arrow svg{width:18px;height:18px}
+
+/* 9. FAQ */
+.faq__grid{display:grid;gap:8px}
+.faq__aside{margin-top:18px;color:var(--ink-soft)}
+.faq__aside a{font-weight:700;white-space:nowrap}
+.faq details{background:var(--paper);border-radius:18px;margin-bottom:10px}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) 28px;gap:14px;align-items:center;font-family:var(--font-head);font-weight:700;font-size:1.1rem;line-height:1.3;padding:18px 18px 18px 20px;border-radius:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:28px;height:28px;border-radius:50%;background:linear-gradient(var(--violet-deep),var(--violet-deep)) center/12px 2px no-repeat,linear-gradient(var(--violet-deep),var(--violet-deep)) center/2px 12px no-repeat,var(--lila-2)}
+.faq details[open] summary::after{background:linear-gradient(var(--violet-deep),var(--violet-deep)) center/12px 2px no-repeat,var(--lila-2)}
+.faq details p{padding:0 20px 20px;color:var(--ink-soft);max-width:38em}
+
+/* 10. objednání a kontakt */
+.contact{background:var(--paper)}
+.contact__box{display:grid;border-radius:28px;overflow:hidden;background:var(--lila)}
+.contact__info{position:relative;background:var(--violet);color:var(--paper);padding:30px 20px 28px;min-width:0}
+.contact__pattern{position:absolute;left:0;top:0;width:100%;height:100%}
+.contact__info > *:not(.contact__pattern){position:relative}
+.contact__info h2{color:var(--paper);font-size:clamp(1.6rem,1.2rem + 1.6vw,2.2rem)}
+.contact__lead{margin-top:10px;color:var(--lila)}
+.contact__tel{display:inline-block;font-family:var(--font-head);font-weight:700;font-size:clamp(2rem,1.5rem + 2vw,2.7rem);line-height:1.1;text-decoration:none;margin-top:20px}
+.page .contact__info a{color:var(--paper)}
+.contact__list{display:grid;gap:16px;margin-top:22px}
+.contact__row{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start}
+.contact__row svg{width:22px;height:22px;margin-top:3px;color:var(--peach)}
+.contact__row dt{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--lila)}
+.contact__row dd{font-weight:600;line-height:1.45}
+.contact__links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ghost{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px;line-height:1.2;text-decoration:none;border:2px solid var(--violet-soft);border-radius:999px;padding:10px 16px}
+.ghost svg{width:18px;height:18px;flex:none}
+.ghost:hover{background:var(--violet-dark)}
+.mapcard{margin-top:24px;border-radius:20px;overflow:hidden;background:var(--lila-2)}
+.mapcard svg{width:100%;height:auto}
+.mapcard__cap{background:var(--paper);color:var(--ink);font-weight:700;font-size:15px;line-height:1.35;padding:12px 16px}
+.contact__form{padding:28px 20px 30px;min-width:0}
+.contact__form h3{font-size:1.4rem}
+.contact__form > p{margin-top:8px;color:var(--ink-soft)}
+.form{display:grid;gap:16px;margin-top:20px}
+.field{display:grid;gap:6px;min-width:0}
+.field label{font-weight:700;font-size:15px}
+.field input,.field textarea{width:100%;min-width:0;font-family:var(--font-body);font-size:17px;line-height:1.4;color:var(--ink);background:var(--paper);border:2px solid var(--violet-mid);border-radius:14px;padding:12px 14px}
+.field textarea{min-height:108px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--ink-soft);opacity:1}
+.field input:focus-visible,.field textarea:focus-visible{outline:3px solid var(--ink);outline-offset:2px;border-color:var(--violet)}
+.form .btn{justify-self:start}
+.form__note{background:var(--peach-light);border:1px solid var(--peach);border-radius:14px;padding:12px 14px;font-weight:600;color:var(--ink)}
+
+/* 11. patička */
+.footer{background:var(--ink);color:var(--lila-2);padding:44px 0 calc(92px + env(safe-area-inset-bottom,0px));font-size:16px}
+.footer__grid{display:grid;gap:26px}
+.footer .brand__name{color:var(--paper)}
+.footer h3{font-size:14px;font-family:var(--font-body);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--violet-soft);margin-bottom:8px}
+.page .footer a{color:var(--paper)}
+.footer__about{margin-top:14px;max-width:26em}
+.footer__credit{margin-top:32px;padding-top:18px;border-top:1px solid var(--ink-soft);font-size:13px;color:var(--lila-3)}
+
+/* 12. mobilní lišta pro volání */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:18px;line-height:1.2;text-decoration:none;background:var(--violet-deep);padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 24px -12px var(--shadow)}
+.page a.callbar{color:var(--paper)}
+.callbar svg{width:20px;height:20px;flex:none;color:var(--peach)}
+
+@media (min-width:600px){
+  .wrap{padding:0 28px}
+  .hero__card{padding:32px 30px 30px}
+  .hero__dog{width:128px;right:36px}
+  .hero{padding-top:76px}
+  .facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .pets__tabs{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .pet-tab{flex-direction:column;text-align:center;padding:16px 10px 14px;gap:10px;font-size:17px}
+  .pet-tab__ic{width:64px;height:64px}
+  .pet-tab__ic svg{width:50px;height:50px}
+  .pet-tab[aria-selected="true"]::after{content:"";position:absolute;left:50%;bottom:-13px;width:20px;height:20px;margin-left:-10px;background:var(--violet);transform:rotate(45deg);border-radius:3px}
+  .pets__panels{margin-top:18px}
+  .gallery__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust__grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+  .footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact__info{padding:38px 34px}
+  .contact__form{padding:36px 34px}
+  .form{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .form .field--wide,.form .btn,.form__note{grid-column:1 / -1}
+}
+@media (min-width:860px){
+  .sec{padding:96px 0}
+  .sec-head{margin-bottom:44px}
+  .pets{padding-top:80px}
+  .pet-panel{grid-template-columns:auto minmax(0,1fr) minmax(230px,290px);align-items:center;gap:36px;padding:38px 40px}
+  .pet-panel__art{width:148px;height:148px}
+  .pet-panel__art svg{width:118px;height:118px}
+  .pet-panel__price{padding:26px}
+  .pet-panel__price .btn{width:100%;padding-left:18px;padding-right:18px}
+  .pricelist li{grid-template-columns:48px minmax(0,1fr) auto;align-items:center;column-gap:22px}
+  .pricelist__ic{grid-row:auto}
+  .pricelist__price{grid-column:auto;background:var(--lila);border-radius:999px;padding:8px 16px}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+  .steps li:not(:last-child)::after{left:64px;right:-28px;top:25px;bottom:auto;border-left:0;border-top:2px dashed var(--violet-soft)}
+  .steps li{grid-template-columns:minmax(0,1fr);gap:18px;justify-items:start}
+  .steps h3{margin-top:0}
+  .gallery__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .contact__box{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+  .contact__info{padding:48px 44px}
+  .contact__form{padding:48px 44px}
+  .form{grid-template-columns:minmax(0,1fr);gap:18px}
+  .footer__grid{grid-template-columns:1.3fr 1fr 1fr}
+}
+@media (min-width:960px){
+  .callbar{display:none}
+  .footer{padding-bottom:36px}
+  .header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+  .header__in{padding-top:14px;padding-bottom:14px;flex-wrap:nowrap}
+  .nav{display:flex;gap:6px 24px;flex-wrap:wrap;justify-content:center;min-width:0}
+  .nav a{font-weight:600;font-size:16px;text-decoration:none;padding:6px 0}
+  .page .nav a{color:var(--ink)}
+  .nav a:hover{color:var(--violet);text-decoration:underline;text-decoration-thickness:2px}
+  .header__tel{font-size:18px;background:var(--violet);padding:12px 18px}
+  .page a.header__tel{color:var(--paper)}
+  .header__tel:hover{background:var(--violet-dark)}
+  .page [id]{scroll-margin-top:92px}
+  .hero{padding-top:72px}
+  .hero__field{bottom:120px;border-radius:0 0 40px 40px}
+  .hero__eyebrow{display:block;color:var(--paper);font-family:var(--font-head);font-weight:600;font-size:18px;margin:0 0 30px;max-width:calc(100% - 330px)}
+  .hero__card{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:48px;align-items:center;padding:52px 52px 52px 56px;border-radius:34px}
+  .hero__dog{width:176px;right:92px}
+  .hero__lead{font-size:19px;margin-top:18px}
+  .hero__cta{margin-top:30px}
+  .hero__cta .btn{flex:0 0 auto;padding:18px 34px;font-size:19px}
+  .hero__tel strong{font-size:26px}
+  .facts{grid-template-columns:minmax(0,1fr);border-top:0;padding:30px 28px;background:var(--lila);border-radius:24px;gap:22px}
+  .facts__ic{background:var(--paper)}
+  .services__grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.35fr);gap:72px;align-items:start}
+  .services__side{position:sticky;top:112px}
+  .services__art{display:block;width:100%;max-width:300px;height:auto;margin-top:34px}
+  .trust__grid{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:0}
+  .trust__item{border-top:0;border-left:1px solid var(--peach);padding:4px 28px 4px 28px}
+  .trust__item:first-child{border-left:0;padding-left:0}
+  .faq__grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.35fr);gap:72px;align-items:start}
+}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+@media (prefers-reduced-motion:reduce){
+  .page *{transition:none!important;animation:none!important}
+}
+</style>
+
+<div class="page">
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="pet-dog" viewBox="0 0 64 64">
+    <ellipse cx="13" cy="34" rx="7.5" ry="14" transform="rotate(14 13 34)" fill="#D98E75"/>
+    <ellipse cx="51" cy="34" rx="7.5" ry="14" transform="rotate(-14 51 34)" fill="#D98E75"/>
+    <circle cx="32" cy="35" r="20" fill="#F2B5A0"/>
+    <ellipse cx="32" cy="43" rx="11" ry="9" fill="#FBE5DC"/>
+    <ellipse cx="32" cy="39" rx="4.2" ry="3.2" fill="#2B2140"/>
+    <circle cx="24" cy="31" r="2.6" fill="#2B2140"/>
+    <circle cx="40" cy="31" r="2.6" fill="#2B2140"/>
+    <path d="M32 42v3m0 0c-1.5 2.4-4.5 2.4-6 .4m6-.4c1.5 2.4 4.5 2.4 6 .4" fill="none" stroke="#2B2140" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M32 13 22 7.5v11z" fill="#6B4E9B"/>
+    <path d="M32 13l10-5.5v11z" fill="#6B4E9B"/>
+    <circle cx="32" cy="13" r="3.2" fill="#553C7E"/>
+  </symbol>
+  <symbol id="pet-cat" viewBox="0 0 64 64">
+    <path d="M10 11l18 10-15 15z" fill="#9A80C4"/>
+    <path d="M54 11 36 21l15 15z" fill="#9A80C4"/>
+    <path d="M14.5 17l9 5-7.5 7.5z" fill="#F2B5A0"/>
+    <path d="M49.5 17l-9 5 7.5 7.5z" fill="#F2B5A0"/>
+    <ellipse cx="32" cy="38" rx="21" ry="18" fill="#B9A3D9"/>
+    <ellipse cx="23.5" cy="35" rx="2.4" ry="3.4" fill="#2B2140"/>
+    <ellipse cx="40.5" cy="35" rx="2.4" ry="3.4" fill="#2B2140"/>
+    <path d="M29.3 41h5.4L32 44.2z" fill="#D98E75"/>
+    <path d="M32 44.2v2m0 0c-1.2 2-3.8 2-5 .4m5-.4c1.2 2 3.8 2 5 .4" fill="none" stroke="#2B2140" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M18 42l-9-2M18 45.5l-9 2M46 42l9-2M46 45.5l9 2" fill="none" stroke="#2B2140" stroke-width="1.3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="pet-guinea" viewBox="0 0 64 64">
+    <ellipse cx="11" cy="26" rx="7.5" ry="6" transform="rotate(-20 11 26)" fill="#F2B5A0"/>
+    <ellipse cx="53" cy="26" rx="7.5" ry="6" transform="rotate(20 53 26)" fill="#F2B5A0"/>
+    <ellipse cx="32" cy="37" rx="23" ry="18" fill="#D98E75"/>
+    <path d="M32 19c5.5 5.5 8 13 8 20.5 0 8-3.5 14-8 15.5-4.5-1.5-8-7.5-8-15.5 0-7.5 2.5-15 8-20.5z" fill="#FBE5DC"/>
+    <circle cx="18.5" cy="35" r="2.7" fill="#2B2140"/>
+    <circle cx="45.5" cy="35" r="2.7" fill="#2B2140"/>
+    <ellipse cx="32" cy="43" rx="3.2" ry="2.3" fill="#2B2140"/>
+    <path d="M32 45.3v2.2m0 0c-1 1.7-3.2 1.7-4.2.3m4.2-.3c1 1.7 3.2 1.7 4.2.3" fill="none" stroke="#2B2140" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="pet-rabbit" viewBox="0 0 64 64">
+    <ellipse cx="23" cy="19" rx="6.5" ry="16" transform="rotate(-8 23 19)" fill="#FFFFFF"/>
+    <ellipse cx="41" cy="19" rx="6.5" ry="16" transform="rotate(8 41 19)" fill="#FFFFFF"/>
+    <ellipse cx="23" cy="20" rx="2.9" ry="11" transform="rotate(-8 23 20)" fill="#F2B5A0"/>
+    <ellipse cx="41" cy="20" rx="2.9" ry="11" transform="rotate(8 41 20)" fill="#F2B5A0"/>
+    <ellipse cx="32" cy="44" rx="18" ry="16" fill="#FFFFFF"/>
+    <circle cx="21.5" cy="48" r="3.6" fill="#FBE5DC"/>
+    <circle cx="42.5" cy="48" r="3.6" fill="#FBE5DC"/>
+    <circle cx="24.5" cy="41" r="2.6" fill="#2B2140"/>
+    <circle cx="39.5" cy="41" r="2.6" fill="#2B2140"/>
+    <path d="M29.6 46.5h4.8L32 49.3z" fill="#D98E75"/>
+    <path d="M32 49.3v2m0 0c-1.1 1.8-3.4 1.8-4.5.3m4.5-.3c1.1 1.8 3.4 1.8 4.5.3" fill="none" stroke="#2B2140" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24">
+    <path d="M6.6 3h3l1.6 4.3-2.1 1.6a12 12 0 0 0 6 6l1.6-2.1 4.3 1.6v3a2.6 2.6 0 0 1-2.8 2.6C10.7 19.3 4.7 13.3 4 5.8A2.6 2.6 0 0 1 6.6 3z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24">
+    <path d="M12 2.5a7 7 0 0 0-7 7c0 5 7 12 7 12s7-7 7-12a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10" fill="currentColor"/>
+    <path d="M7.5 12.3l3 3 6-6.3" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 7v5.3l3.4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24">
+    <rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M4.5 7.5 12 13l7.5-5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <path d="M5 12h13m-5-5.5 5.5 5.5-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24">
+    <ellipse cx="12" cy="15.5" rx="5" ry="4.2" fill="currentColor"/>
+    <circle cx="5.3" cy="10.3" r="2.1" fill="currentColor"/>
+    <circle cx="9.4" cy="6.3" r="2.1" fill="currentColor"/>
+    <circle cx="14.6" cy="6.3" r="2.1" fill="currentColor"/>
+    <circle cx="18.7" cy="10.3" r="2.1" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24">
+    <circle cx="6.5" cy="6.5" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="6.5" cy="17.5" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M9 8.2 20.5 17M9 15.8 20.5 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24">
+    <path d="M10 3.5c3.2 3.9 5.5 6.9 5.5 10a5.5 5.5 0 0 1-11 0c0-3.1 2.3-6.1 5.5-10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="19" cy="7" r="2" fill="currentColor"/>
+    <circle cx="19.5" cy="13.5" r="1.4" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-comb" viewBox="0 0 24 24">
+    <rect x="3" y="5" width="18" height="5.5" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M6 10.5v8M9.6 10.5v8M13.2 10.5v8M16.8 10.5v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24">
+    <rect x="3" y="4" width="12" height="7" rx="3.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M14.5 9.5 20.5 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M5.5 11v3M9 11v3.5M12.5 11v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-bubble" viewBox="0 0 24 24">
+    <path d="M6 4h12a3 3 0 0 1 3 3v6.5a3 3 0 0 1-3 3h-6l-4.5 4v-4H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="8.5" cy="10.3" r="1.2" fill="currentColor"/>
+    <circle cx="12" cy="10.3" r="1.2" fill="currentColor"/>
+    <circle cx="15.5" cy="10.3" r="1.2" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24">
+    <path d="M5 7.5h2.5L9 5h6l1.5 2.5H19a2.5 2.5 0 0 1 2.5 2.5v7A2.5 2.5 0 0 1 19 19.5H5A2.5 2.5 0 0 1 2.5 17v-7A2.5 2.5 0 0 1 5 7.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="12" cy="13.3" r="3.3" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10" fill="currentColor"/>
+    <path d="M13.2 19v-6h2.1l.4-2.5h-2.5V9c0-.8.3-1.3 1.4-1.3h1.2V5.5c-.5-.1-1.2-.2-2-.2-2.1 0-3.4 1.2-3.4 3.4v1.8H8.3V13h2.1v6z" fill="#6B4E9B"/>
+  </symbol>
+  <symbol id="mark" viewBox="0 0 40 40">
+    <rect width="40" height="40" rx="13" fill="#6B4E9B"/>
+    <ellipse cx="20" cy="25" rx="7" ry="5.8" fill="#FFFFFF"/>
+    <circle cx="10.8" cy="18" r="2.9" fill="#F2B5A0"/>
+    <circle cx="16.6" cy="12.2" r="2.9" fill="#FFFFFF"/>
+    <circle cx="23.4" cy="12.2" r="2.9" fill="#FFFFFF"/>
+    <circle cx="29.2" cy="18" r="2.9" fill="#FFFFFF"/>
+  </symbol>
+</svg>
+
+<!-- 1. banner -->
+<p class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Salon Nesi</p>
+
+<!-- 2. hlavička -->
+<header class="header">
+  <div class="wrap header__in">
+    <a class="brand" href="#top" aria-label="Salon Nesi, na začátek stránky">
+      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand__name">Salon Nesi</span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#mazlicci">Mazlíčci</a>
+      <a href="#sluzby">Služby a&nbsp;ceník</a>
+      <a href="#navsteva">Jak to probíhá</a>
+      <a href="#galerie">Před a&nbsp;po</a>
+      <a href="#faq">Dotazy</a>
+      <a href="#objednani">Kontakt</a>
+    </nav>
+    <a class="header__tel" href="tel:+420606787460">
+      <svg aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>606 787 460</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 3. hero -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero__field" aria-hidden="true">
+    <svg focusable="false">
+      <defs>
+        <pattern id="paws" width="132" height="132" patternUnits="userSpaceOnUse">
+          <g transform="translate(30 34) rotate(-18)" fill="#7A5EA9">
+            <ellipse cx="0" cy="5" rx="6.5" ry="5.3" fill="#7A5EA9"/>
+            <circle cx="-8" cy="-2.5" r="2.7" fill="#7A5EA9"/>
+            <circle cx="-2.9" cy="-7" r="2.7" fill="#7A5EA9"/>
+            <circle cx="2.9" cy="-7" r="2.7" fill="#7A5EA9"/>
+            <circle cx="8" cy="-2.5" r="2.7" fill="#7A5EA9"/>
+          </g>
+          <g transform="translate(96 98) rotate(24)" fill="#7A5EA9">
+            <ellipse cx="0" cy="4" rx="5" ry="4.1" fill="#7A5EA9"/>
+            <circle cx="-6.2" cy="-2" r="2.1" fill="#7A5EA9"/>
+            <circle cx="-2.2" cy="-5.5" r="2.1" fill="#7A5EA9"/>
+            <circle cx="2.2" cy="-5.5" r="2.1" fill="#7A5EA9"/>
+            <circle cx="6.2" cy="-2" r="2.1" fill="#7A5EA9"/>
+          </g>
+          <circle cx="98" cy="28" r="2.4" fill="#7A5EA9"/>
+          <circle cx="30" cy="102" r="2.4" fill="#7A5EA9"/>
+          <circle cx="64" cy="66" r="1.7" fill="#7A5EA9"/>
+          <circle cx="126" cy="64" r="1.4" fill="#7A5EA9"/>
+          <circle cx="62" cy="6" r="1.4" fill="#7A5EA9"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#paws)"/>
+    </svg>
+  </div>
+  <div class="wrap hero__wrap">
+    <p class="hero__eyebrow">Stříhání a&nbsp;úprava psů do&nbsp;10&nbsp;kg, koček, morčat a&nbsp;králíků</p>
+    <div class="hero__card">
+      <svg class="hero__dog" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+        <defs><clipPath id="dog-clip"><rect x="0" y="0" width="160" height="100"/></clipPath></defs>
+        <g clip-path="url(#dog-clip)">
+          <ellipse cx="38" cy="66" rx="16" ry="31" transform="rotate(16 38 66)" fill="#D98E75"/>
+          <ellipse cx="122" cy="66" rx="16" ry="31" transform="rotate(-16 122 66)" fill="#D98E75"/>
+          <ellipse cx="80" cy="76" rx="43" ry="44" fill="#F2B5A0"/>
+          <ellipse cx="80" cy="96" rx="25" ry="19" fill="#FBE5DC"/>
+          <ellipse cx="80" cy="86" rx="8.5" ry="6.5" fill="#2B2140"/>
+          <circle cx="62" cy="68" r="5.4" fill="#2B2140"/>
+          <circle cx="98" cy="68" r="5.4" fill="#2B2140"/>
+          <circle cx="63.8" cy="66.2" r="1.7" fill="#FFFFFF"/>
+          <circle cx="99.8" cy="66.2" r="1.7" fill="#FFFFFF"/>
+        </g>
+        <path d="M80 30 58 18v24z" fill="#FFFFFF"/>
+        <path d="M80 30l22-12v24z" fill="#FFFFFF"/>
+        <circle cx="80" cy="30" r="6.5" fill="#F2B5A0"/>
+        <rect x="6" y="88" width="32" height="24" rx="12" fill="#F2B5A0"/>
+        <rect x="122" y="88" width="32" height="24" rx="12" fill="#F2B5A0"/>
+        <path d="M17 100v7M27 100v7M133 100v7M143 100v7" fill="none" stroke="#D98E75" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <div class="hero__main">
+        <p class="chip"><svg aria-hidden="true"><use href="#i-pin"/></svg>Nový&nbsp;Jičín</p>
+        <h1 id="hero-h">Salon v&nbsp;Novém&nbsp;Jičíně, kde se malý pes <em>neztratí mezi velkými</em></h1>
+        <p class="hero__lead">Stříháme, koupeme a&nbsp;trimujeme psy do&nbsp;10&nbsp;kg. Kočky učešeme a&nbsp;morčatům i&nbsp;králíkům zastřihneme drápky.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#objednani">Objednat termín<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="hero__tel" href="tel:+420606787460"><span>nebo rovnou zavolejte</span><strong>606 787 460</strong></a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div class="facts__row">
+          <span class="facts__ic" aria-hidden="true"><svg><use href="#i-paw"/></svg></span>
+          <div><dt>Pro koho</dt><dd>Psi do&nbsp;10&nbsp;kg, kočky, morčata a&nbsp;králíci</dd></div>
+        </div>
+        <div class="facts__row">
+          <span class="facts__ic" aria-hidden="true"><svg><use href="#i-clock"/></svg></span>
+          <div><dt>Kdy</dt><dd>Pondělí–pátek dle telefonické domluvy</dd></div>
+        </div>
+        <div class="facts__row">
+          <span class="facts__ic" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+          <div><dt>Kde</dt><dd>Hoblíkova 580/27, Nový&nbsp;Jičín</dd></div>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- 4. výběr mazlíčka -->
+<section class="sec pets" id="mazlicci" aria-labelledby="pets-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="pets-h">Koho k&nbsp;nám můžete přinést</h2>
+      <p>Vyberte svého mazlíčka a&nbsp;hned uvidíte, co pro něj v&nbsp;salonu děláme.</p>
+    </div>
+
+    <div class="pets__tabs" role="tablist" aria-label="Výběr mazlíčka">
+      <button class="pet-tab" type="button" role="tab" id="tab-pes" aria-controls="panel-pes" aria-selected="true">
+        <span class="pet-tab__ic" aria-hidden="true"><svg><use href="#pet-dog"/></svg></span>
+        <span class="pet-tab__tx">Pes do&nbsp;10&nbsp;kg</span>
+      </button>
+      <button class="pet-tab" type="button" role="tab" id="tab-kocka" aria-controls="panel-kocka" aria-selected="false" tabindex="-1">
+        <span class="pet-tab__ic" aria-hidden="true"><svg><use href="#pet-cat"/></svg></span>
+        <span class="pet-tab__tx">Kočka</span>
+      </button>
+      <button class="pet-tab" type="button" role="tab" id="tab-morce" aria-controls="panel-morce" aria-selected="false" tabindex="-1">
+        <span class="pet-tab__ic" aria-hidden="true"><svg><use href="#pet-guinea"/></svg></span>
+        <span class="pet-tab__tx">Morče</span>
+      </button>
+      <button class="pet-tab" type="button" role="tab" id="tab-kralik" aria-controls="panel-kralik" aria-selected="false" tabindex="-1">
+        <span class="pet-tab__ic" aria-hidden="true"><svg><use href="#pet-rabbit"/></svg></span>
+        <span class="pet-tab__tx">Králík</span>
+      </button>
+    </div>
+
+    <div class="pets__panels">
+      <div class="pet-panel" role="tabpanel" id="panel-pes" aria-labelledby="tab-pes" tabindex="0">
+        <div class="pet-panel__art" aria-hidden="true"><svg><use href="#pet-dog"/></svg></div>
+        <div class="pet-panel__body">
+          <h3>Pes do&nbsp;10&nbsp;kg</h3>
+          <p class="pet-panel__sub">Co pro něj uděláme</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Stříhání a&nbsp;úpravy</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Koupání</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Trimování</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Stříhání drápků</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Poradenství</li>
+          </ul>
+          <p class="pet-panel__note"><span class="pill">ukázkový text</span> Malý pes potřebuje klid, jemné ruce a&nbsp;tempo, které zvládne. Na to si u&nbsp;nás vždy uděláme čas.</p>
+        </div>
+        <div class="pet-panel__price">
+          <p class="price-tag"><small>Pes do&nbsp;10&nbsp;kg</small>Cena na dotaz</p>
+          <a class="btn" href="#objednani" data-pet="Pes do 10 kg">Objednat termín</a>
+        </div>
+      </div>
+
+      <div class="pet-panel" role="tabpanel" id="panel-kocka" aria-labelledby="tab-kocka" tabindex="0" hidden>
+        <div class="pet-panel__art" aria-hidden="true"><svg><use href="#pet-cat"/></svg></div>
+        <div class="pet-panel__body">
+          <h3>Kočka</h3>
+          <p class="pet-panel__sub">Co pro ni uděláme</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Česání</li>
+          </ul>
+          <p class="pet-panel__note"><span class="pill">ukázkový text</span> Česání přizpůsobíme povaze kočky a&nbsp;necháme jí přestávku, kdykoli ji potřebuje.</p>
+        </div>
+        <div class="pet-panel__price">
+          <p class="price-tag"><small>Kočka</small>Cena na dotaz</p>
+          <a class="btn" href="#objednani" data-pet="Kočka">Objednat termín</a>
+        </div>
+      </div>
+
+      <div class="pet-panel" role="tabpanel" id="panel-morce" aria-labelledby="tab-morce" tabindex="0" hidden>
+        <div class="pet-panel__art" aria-hidden="true"><svg><use href="#pet-guinea"/></svg></div>
+        <div class="pet-panel__body">
+          <h3>Morče</h3>
+          <p class="pet-panel__sub">Co pro ně uděláme</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Stříhání drápků</li>
+          </ul>
+          <p class="pet-panel__note"><span class="pill">ukázkový text</span> Drápky zkrátíme rychle a&nbsp;šetrně, aby se morčeti zase dobře běhalo.</p>
+        </div>
+        <div class="pet-panel__price">
+          <p class="price-tag"><small>Morče</small>Cena na dotaz</p>
+          <a class="btn" href="#objednani" data-pet="Morče">Objednat termín</a>
+        </div>
+      </div>
+
+      <div class="pet-panel" role="tabpanel" id="panel-kralik" aria-labelledby="tab-kralik" tabindex="0" hidden>
+        <div class="pet-panel__art" aria-hidden="true"><svg><use href="#pet-rabbit"/></svg></div>
+        <div class="pet-panel__body">
+          <h3>Králík</h3>
+          <p class="pet-panel__sub">Co pro něj uděláme</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Stříhání drápků</li>
+          </ul>
+          <p class="pet-panel__note"><span class="pill">ukázkový text</span> Králíka při stříhání bezpečně přidržíme, aby se nelekl a&nbsp;neporanil.</p>
+        </div>
+        <div class="pet-panel__price">
+          <p class="price-tag"><small>Králík</small>Cena na dotaz</p>
+          <a class="btn" href="#objednani" data-pet="Králík">Objednat termín</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. služby a ceník -->
+<section class="sec services" id="sluzby" aria-labelledby="services-h">
+  <div class="wrap services__grid">
+    <div class="services__side">
+      <div class="sec-head">
+        <h2 id="services-h">Služby a&nbsp;ceník</h2>
+        <p>Všechno, co Salon Nesi nabízí, pohromadě. Cenu Vám řekneme po telefonu na čísle <a href="tel:+420606787460">606 787 460</a>.</p>
+      </div>
+      <svg class="services__art" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+        <rect x="0" y="0" width="300" height="150" rx="28" fill="#F3EEF9"/>
+        <rect x="32" y="40" width="152" height="26" rx="9" fill="#6B4E9B"/>
+        <rect x="40" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="56" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="72" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="88" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="104" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="120" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="136" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="152" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <rect x="168" y="64" width="7" height="44" rx="3.5" fill="#6B4E9B"/>
+        <path d="M222 24l16 46M254 24l-16 46" fill="none" stroke="#C9B8E3" stroke-width="10" stroke-linecap="round"/>
+        <path d="M238 70l11 30M238 70l-11 30" fill="none" stroke="#F2B5A0" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="254" cy="112" r="12" fill="none" stroke="#F2B5A0" stroke-width="7"/>
+        <circle cx="222" cy="112" r="12" fill="none" stroke="#F2B5A0" stroke-width="7"/>
+        <circle cx="238" cy="70" r="4.5" fill="#2B2140"/>
+      </svg>
+    </div>
+    <div class="pricelist">
+      <p class="pricelist__top"><span class="pill">ukázkový text</span></p>
+      <ul>
+        <li>
+          <span class="pricelist__ic" aria-hidden="true"><svg><use href="#i-scissors"/></svg></span>
+          <div class="pricelist__tx">
+            <h3>Stříhání a&nbsp;úpravy psů do&nbsp;10&nbsp;kg</h3>
+            <p>Střih podle plemene i&nbsp;podle toho, jak se Vám o&nbsp;srst doma dobře pečuje.</p>
+          </div>
+          <p class="pricelist__price">Cena na dotaz</p>
+        </li>
+        <li>
+          <span class="pricelist__ic" aria-hidden="true"><svg><use href="#i-drop"/></svg></span>
+          <div class="pricelist__tx">
+            <h3>Koupání</h3>
+            <p>Vykoupání, vyfoukání a&nbsp;rozčesání, aby srst zůstala vzdušná a&nbsp;bez zacuchaných míst.</p>
+          </div>
+          <p class="pricelist__price">Cena na dotaz</p>
+        </li>
+        <li>
+          <span class="pricelist__ic" aria-hidden="true"><svg><use href="#i-comb"/></svg></span>
+          <div class="pricelist__tx">
+            <h3>Trimování</h3>
+            <p>Ruční odstranění odumřelé srsti u&nbsp;hrubosrstých plemen, aby mohla dorůst nová.</p>
+          </div>
+          <p class="pricelist__price">Cena na dotaz</p>
+        </li>
+        <li>
+          <span class="pricelist__ic" aria-hidden="true"><svg><use href="#i-brush"/></svg></span>
+          <div class="pricelist__tx">
+            <h3>Česání koček</h3>
+            <p>Vyčesání podsady a&nbsp;rozpletení zacuchaných míst v&nbsp;klidném tempu.</p>
+          </div>
+          <p class="pricelist__price">Cena na dotaz</p>
+        </li>
+        <li>
+          <span class="pricelist__ic" aria-hidden="true"><svg><use href="#i-paw"/></svg></span>
+          <div class="pricelist__tx">
+            <h3>Stříhání drápků</h3>
+            <p class="pricelist__for">Psi, morčata a&nbsp;králíci</p>
+            <p>Krátký zákrok, při kterém zvíře šetrně přidržíme a&nbsp;drápky zkrátíme na bezpečnou délku.</p>
+          </div>
+          <p class="pricelist__price">Cena na dotaz</p>
+        </li>
+        <li>
+          <span class="pricelist__ic" aria-hidden="true"><svg><use href="#i-bubble"/></svg></span>
+          <div class="pricelist__tx">
+            <h3>Poradenství</h3>
+            <p>Poradíme Vám, jak se o&nbsp;srst a&nbsp;drápky starat doma mezi návštěvami.</p>
+          </div>
+          <p class="pricelist__price">Cena na dotaz</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6. důvěra -->
+<section class="sec trust" aria-labelledby="trust-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="trust-h">Čtyři věci, které víte, ještě než zavoláte</h2>
+    </div>
+    <div class="trust__grid">
+      <div class="trust__item">
+        <div class="trust__ic" aria-hidden="true"><svg><use href="#pet-dog"/></svg></div>
+        <h3>Specializace na psy do&nbsp;10&nbsp;kg</h3>
+        <p>Stříhání, úpravy, koupání a&nbsp;trimování děláme pro psy do&nbsp;10&nbsp;kg.</p>
+      </div>
+      <div class="trust__item">
+        <div class="trust__ic trust__ic--trio" aria-hidden="true"><svg><use href="#pet-cat"/></svg><svg><use href="#pet-guinea"/></svg><svg><use href="#pet-rabbit"/></svg></div>
+        <h3>Kočky, morčata i&nbsp;králíci</h3>
+        <p>Kočky česáme. Morčatům a&nbsp;králíkům stříháme drápky.</p>
+      </div>
+      <div class="trust__item">
+        <div class="trust__ic trust__ic--line" aria-hidden="true"><svg><use href="#i-bubble"/></svg></div>
+        <h3>Poradenství</h3>
+        <p>Vedle úprav nabízí salon také poradenství.</p>
+      </div>
+      <div class="trust__item">
+        <div class="trust__ic trust__ic--line" aria-hidden="true"><svg><use href="#i-clock"/></svg></div>
+        <h3>Termín po domluvě</h3>
+        <p>Pondělí až pátek dle telefonické domluvy na čísle <a href="tel:+420606787460">606 787 460</a>. V&nbsp;sobotu a&nbsp;v&nbsp;neděli je zavřeno.</p>
+      </div>
+    </div>
+    <p class="trust__link"><a href="https://www.firmy.cz/detail/13540750-salon-nesi-novy-jicin.html" target="_blank" rel="noopener">Salon Nesi na Firmy.cz</a></p>
+  </div>
+</section>
+
+<!-- 7. jak probíhá návštěva -->
+<section class="sec visit" id="navsteva" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="visit-h">Jak probíhá návštěva</h2>
+      <p><span class="pill">ukázkový text</span></p>
+    </div>
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Zavoláte a&nbsp;domluvíme termín</h3>
+          <p>Řeknete nám, koho přinesete, kolik váží a&nbsp;co potřebuje. Termín vybereme mezi pondělím a&nbsp;pátkem.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Přinesete mazlíčka</h3>
+          <p>Na místě si ukážeme, jak má srst vypadat, a&nbsp;prohlédneme, v&nbsp;jakém je stavu. Pak už se mu věnujeme jen my.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Vyzvednete si ho upraveného</h3>
+          <p>Dáme Vám vědět, až bude hotovo. Při předání poradíme, jak o&nbsp;srst a&nbsp;drápky pečovat doma.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8. galerie před a po -->
+<section class="sec gallery" id="galerie" aria-labelledby="gallery-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="gallery-h">Před úpravou a&nbsp;po ní</h2>
+      <p>Na fotkách je rozdíl vidět nejlépe.</p>
+    </div>
+    <div class="gallery__grid">
+      <figure class="pair">
+        <div class="spot"><span class="spot__tag">Před</span><span class="spot__mid"><svg aria-hidden="true"><use href="#i-camera"/></svg>Sem přijde Vaše fotka</span></div>
+        <div class="spot"><span class="spot__tag">Po</span><span class="spot__mid"><svg aria-hidden="true"><use href="#i-camera"/></svg>Sem přijde Vaše fotka</span></div>
+        <span class="pair__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+      </figure>
+      <figure class="pair">
+        <div class="spot"><span class="spot__tag">Před</span><span class="spot__mid"><svg aria-hidden="true"><use href="#i-camera"/></svg>Sem přijde Vaše fotka</span></div>
+        <div class="spot"><span class="spot__tag">Po</span><span class="spot__mid"><svg aria-hidden="true"><use href="#i-camera"/></svg>Sem přijde Vaše fotka</span></div>
+        <span class="pair__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+      </figure>
+      <figure class="pair">
+        <div class="spot"><span class="spot__tag">Před</span><span class="spot__mid"><svg aria-hidden="true"><use href="#i-camera"/></svg>Sem přijde Vaše fotka</span></div>
+        <div class="spot"><span class="spot__tag">Po</span><span class="spot__mid"><svg aria-hidden="true"><use href="#i-camera"/></svg>Sem přijde Vaše fotka</span></div>
+        <span class="pair__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="sec faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq__grid">
+    <div>
+      <div class="sec-head">
+        <h2 id="faq-h">Na co se lidé ptají nejčastěji</h2>
+        <p><span class="pill">ukázkový text</span></p>
+        <p class="faq__aside">Nenašli jste odpověď? Zavolejte na <a href="tel:+420606787460">606 787 460</a>.</p>
+      </div>
+    </div>
+    <div>
+      <details open>
+        <summary>Berete i&nbsp;psy, kteří váží víc než 10&nbsp;kg?</summary>
+        <p>Salon se věnuje psům do&nbsp;10&nbsp;kg. Pokud si váhou nejste jistí, zavolejte nám a&nbsp;domluvíme se.</p>
+      </details>
+      <details>
+        <summary>Jak se k&nbsp;Vám objednám?</summary>
+        <p>Telefonicky na čísle <a href="tel:+420606787460">606 787 460</a>. Termíny domlouváme od pondělí do pátku, v&nbsp;sobotu a&nbsp;v&nbsp;neděli je zavřeno. Napsat můžete také na <a href="mailto:salonnesi@seznam.cz">salonnesi@seznam.cz</a>.</p>
+      </details>
+      <details>
+        <summary>Kolik úprava stojí?</summary>
+        <p>Cena záleží na velikosti zvířete, stavu srsti a&nbsp;na tom, co si objednáte. Zavolejte a&nbsp;řekneme Vám ji předem.</p>
+      </details>
+      <details>
+        <summary>Co když je srst hodně zacuchaná?</summary>
+        <p>Řekněte nám to už při objednání, ať si na úpravu vyhradíme dost času. Podle stavu srsti pak navrhneme postup, který je pro zvíře nejšetrnější.</p>
+      </details>
+      <details>
+        <summary>Stříháte drápky i&nbsp;morčatům a&nbsp;králíkům?</summary>
+        <p>Ano. Drápky stříháme psům, morčatům i&nbsp;králíkům. Termín si domluvte po telefonu.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. objednání a kontakt -->
+<section class="sec contact" id="objednani" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact__box">
+      <div class="contact__info on-dark">
+        <svg class="contact__pattern" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#paws)"/></svg>
+        <h2 id="contact-h">Objednejte svému mazlíčkovi termín</h2>
+        <p class="contact__lead">Nejrychleji to půjde po telefonu.</p>
+        <a class="contact__tel" href="tel:+420606787460">606 787 460</a>
+        <dl class="contact__list">
+          <div class="contact__row">
+            <svg aria-hidden="true"><use href="#i-mail"/></svg>
+            <div><dt>E-mail</dt><dd><a href="mailto:salonnesi@seznam.cz">salonnesi@seznam.cz</a></dd></div>
+          </div>
+          <div class="contact__row">
+            <svg aria-hidden="true"><use href="#i-pin"/></svg>
+            <div><dt>Adresa</dt><dd>Hoblíkova 580/27<br>741 01 Nový&nbsp;Jičín</dd></div>
+          </div>
+          <div class="contact__row">
+            <svg aria-hidden="true"><use href="#i-clock"/></svg>
+            <div><dt>Otevírací doba</dt><dd>Pondělí–pátek: dle telefonické domluvy<br>Sobota a&nbsp;neděle: zavřeno</dd></div>
+          </div>
+        </dl>
+        <div class="contact__links">
+          <a class="ghost" href="https://mapy.cz/zakladni?q=Hobl%C3%ADkova%20580%2F27%2C%20741%2001%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Otevřít v&nbsp;Mapy.cz</a>
+          <a class="ghost" href="https://www.facebook.com/people/Salon-Nesi-st%C5%99%C3%ADh%C3%A1n%C3%AD-a-%C3%BAprava-ps%C5%AF/100095034092681" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook salonu</a>
+        </div>
+        <div class="mapcard">
+          <svg viewBox="0 0 360 170" aria-hidden="true" focusable="false">
+            <rect width="360" height="170" fill="#E6DCF3"/>
+            <rect x="-10" y="-10" width="96" height="62" rx="12" fill="#D5C6EA"/>
+            <rect x="112" y="-10" width="120" height="62" rx="12" fill="#D5C6EA"/>
+            <rect x="258" y="-10" width="120" height="62" rx="12" fill="#D5C6EA"/>
+            <rect x="-10" y="78" width="96" height="110" rx="12" fill="#D5C6EA"/>
+            <rect x="112" y="78" width="120" height="110" rx="12" fill="#F2B5A0"/>
+            <rect x="258" y="78" width="120" height="110" rx="12" fill="#D5C6EA"/>
+            <path d="M0 65h360M99 0v170M245 0v170" fill="none" stroke="#FFFFFF" stroke-width="14"/>
+            <path d="M0 65h360" fill="none" stroke="#C9B8E3" stroke-width="2" stroke-dasharray="10 10"/>
+            <ellipse cx="172" cy="118" rx="16" ry="5" fill="#D98E75"/>
+            <path d="M172 116c-12-16-22-27-22-40a22 22 0 0 1 44 0c0 13-10 24-22 40z" fill="#6B4E9B"/>
+            <circle cx="172" cy="76" r="9" fill="#FFFFFF"/>
+          </svg>
+          <p class="mapcard__cap">Salon Nesi, Hoblíkova 580/27, Nový&nbsp;Jičín</p>
+        </div>
+      </div>
+
+      <div class="contact__form">
+        <h3>Nebo nám napište</h3>
+        <p>Vyplňte pár řádků a&nbsp;ozveme se Vám s&nbsp;termínem.</p>
+        <form class="form" id="poptavka" novalidate>
+          <div class="field">
+            <label for="f-jmeno">Jméno</label>
+            <input id="f-jmeno" name="jmeno" type="text" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-telefon">Telefon</label>
+            <input id="f-telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="f-mazlicek">Plemeno nebo mazlíček</label>
+            <input id="f-mazlicek" name="mazlicek" type="text" placeholder="např. yorkšír, kočka, morče">
+          </div>
+          <div class="field">
+            <label for="f-kdy">Kdy se Vám to hodí</label>
+            <input id="f-kdy" name="kdy" type="text" placeholder="např. úterý dopoledne">
+          </div>
+          <div class="field field--wide">
+            <label for="f-zprava">Zpráva</label>
+            <textarea id="f-zprava" name="zprava" rows="4"></textarea>
+          </div>
+          <button class="btn" type="submit" id="f-odeslat">Odeslat poptávku</button>
+          <p class="form__note" id="f-note" role="status" aria-live="polite" hidden>Toto je ukázka formuláře. Na hotovém webu Vám poptávka přijde e-mailem.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 11. patička -->
+<footer class="footer on-dark">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <span class="brand">
+          <svg aria-hidden="true"><use href="#mark"/></svg>
+          <span class="brand__name">Salon Nesi</span>
+        </span>
+        <p class="footer__about">Stříhání a&nbsp;úpravy psů do&nbsp;10&nbsp;kg, koupání, trimování. Česání koček, stříhání drápků psům, morčatům, králíkům. Poradenství.</p>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <p><a href="tel:+420606787460">606 787 460</a></p>
+        <p><a href="mailto:salonnesi@seznam.cz">salonnesi@seznam.cz</a></p>
+      </div>
+      <div>
+        <h3>Adresa</h3>
+        <p>Hoblíkova 580/27<br>741 01 Nový&nbsp;Jičín</p>
+        <p>IČO: 19582862</p>
+      </div>
+    </div>
+    <p class="footer__credit">Návrh webu připravil Martin Fian</p>
+  </div>
+</footer>
+
+<!-- 12. mobilní lišta pro volání -->
+<a class="callbar on-dark" href="tel:+420606787460">
+  <svg aria-hidden="true"><use href="#i-phone"/></svg>
+  <span>Zavolat 606 787 460</span>
+</a>
+
+</div>
+
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.pet-tab'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+
+  function select(i, focus) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (panels[j]) { panels[j].hidden = !on; }
+    });
+    if (focus) { tabs[i].focus(); }
+  }
+
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(i, false); });
+    t.addEventListener('keydown', function (e) {
+      var n = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { n = (i + 1) % tabs.length; }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { n = (i - 1 + tabs.length) % tabs.length; }
+      else if (e.key === 'Home') { n = 0; }
+      else if (e.key === 'End') { n = tabs.length - 1; }
+      if (n !== null) { e.preventDefault(); select(n, true); }
+    });
+  });
+
+  /* tlačítko v panelu předvyplní mazlíčka do formuláře */
+  var petField = document.getElementById('f-mazlicek');
+  var autoFilled = '';
+  Array.prototype.forEach.call(document.querySelectorAll('[data-pet]'), function (a) {
+    a.addEventListener('click', function () {
+      if (petField && (petField.value === '' || petField.value === autoFilled)) {
+        autoFilled = a.getAttribute('data-pet');
+        petField.value = autoFilled;
+      }
+    });
+  });
+
+  var form = document.getElementById('poptavka');
+  var note = document.getElementById('f-note');
+  if (form && note) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      note.hidden = false;
+    });
+  }
+})();
+</script>
+</body>
+</html>

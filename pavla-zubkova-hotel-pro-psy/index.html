@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Hotel pro psy Pavla Zůbková</title>
+<meta name="description" content="Hotel pro psy v Bartošovicích na Novojičínsku. Stříhání, úprava a koupání psů na stejné adrese. Spočítejte noci a ověřte termín po telefonu.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap&subset=latin-ext">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Pavla Zůbková – hotel pro psy","description":"Provozujeme hotel pro psy. Nabízíme stříhání, úpravu a koupání psů.","telephone":"+420732956743","email":"pavla.zubkova@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Bartošovice 275","postalCode":"742 54","addressLocality":"Bartošovice","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"06255582"},"sameAs":["https://www.firmy.cz/detail/13355241-pavla-zubkova-hotel-pro-psy-bartosovice.html"]}
+</script>
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<style>
+/* Koncept: stůl z pohlednicového papíru. Hero je jedna velká pohlednice z Bartošovic (obrázek + adresní strana se známkou a razítkem), další sekce jsou poštovní věci: podací lístek s počítadlem nocí, fotky, visačka na zavazadlo, gumová razítka. */
+:root{
+  --olive:#5E6B2F;--sky:#A9D3E8;--paper:#F5EFDF;--stamp:#2B4C8C;--ink:#23281B;--ochre:#D9A85C;
+  --olive-dark:#3C4520;--olive-soft:#8C9A4F;--paper-deep:#EAE1C8;--card:#FFFDF6;--sky-soft:#D5E9F3;--stamp-dark:#1F3A6E;--muted:#55593F;--line:#CFC6A8;--tag:#E7D9B4;
+  --serif:"Libre Caslon Text","Book Antiqua",Palatino,Georgia,serif;
+  --sans:"Hanken Grotesk","Segoe UI",system-ui,Arial,sans-serif;
+  --hand:Caveat,"Segoe Script","Bradley Hand",cursive;
+}
+.page,.page *{box-sizing:border-box}
+.page{font-family:var(--sans);font-size:17px;line-height:1.55;color:var(--ink);background:var(--paper);overflow-x:clip;-webkit-text-size-adjust:100%}
+.page [hidden]{display:none!important}
+.page h1,.page h2,.page h3{font-family:var(--serif);font-weight:400;line-height:1.16;margin:0;text-wrap:balance}
+.page p,.page ul,.page ol,.page dl,.page dd,.page fieldset{margin:0;padding:0}
+.page ul,.page ol{list-style:none}
+.page a{color:var(--stamp);text-underline-offset:3px}
+.page :focus-visible{outline:3px solid var(--stamp);outline-offset:3px;border-radius:4px}
+.page .wrap{max-width:1160px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.page section{scroll-margin-top:12px}
+.page .sec{padding:54px 0}
+.page .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);margin-bottom:10px}
+.page h2{font-size:clamp(28px,3.4vw,40px)}
+.page .lead{max-width:62ch;margin-top:14px;color:var(--muted)}
+.page .pill{display:inline-block;vertical-align:middle;font-family:var(--sans);font-size:12.5px;font-weight:600;line-height:1.3;letter-spacing:.02em;color:var(--stamp);border:1.5px dashed var(--stamp);border-radius:999px;padding:2px 10px;margin-left:6px;white-space:nowrap}
+.page .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 24px;background:var(--stamp);color:#fff;font:700 17px/1.2 var(--sans);text-decoration:none;border:0;border-radius:6px;box-shadow:0 3px 0 var(--stamp-dark);cursor:pointer;text-align:center}
+.page .btn:hover{background:var(--stamp-dark)}
+.page .btn svg{flex:none}
+.page .btn-line{background:transparent;color:var(--stamp);box-shadow:inset 0 0 0 2px var(--stamp)}
+.page .btn-line:hover{background:var(--stamp);color:#fff}
+
+/* banner + header */
+.page .banner{background:var(--stamp);color:#fff;font-size:13px;line-height:1.35;text-align:center;padding:7px 16px}
+.page .head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:12px;padding-bottom:12px}
+.page .mark{display:flex;align-items:center;gap:10px;min-width:0;color:var(--ink);text-decoration:none}
+.page .mark svg{flex:none;width:40px;height:40px}
+.page .mark b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.1}
+.page .mark small{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
+.page .mark small i{font-style:normal;display:none}
+.page .nav{display:none}
+.page .tel{flex:none;display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:8px 14px;border:1.5px solid var(--stamp);border-radius:6px;color:var(--stamp);font-weight:700;text-decoration:none;white-space:nowrap;background:var(--card)}
+.page .tel:hover{background:var(--stamp);color:#fff}
+
+/* hero: pohlednice */
+.page .hero{padding:6px 0 40px}
+.page .pc{position:relative;display:grid;background:var(--card);border-radius:5px;box-shadow:0 2px 4px rgba(35,40,27,.14),0 22px 44px -22px rgba(35,40,27,.5)}
+.page .pc-pic{position:relative;aspect-ratio:600/225;overflow:hidden;background:var(--sky);border-radius:5px 5px 0 0}
+.page .pc-pic svg{display:block;width:100%;height:auto;margin-top:-33%}
+.page .pc-cap{position:absolute;left:10px;bottom:10px;background:var(--card);font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.3;padding:3px 11px;border-radius:2px}
+.page .pc-back{position:relative;min-width:0;padding:16px 18px 22px}
+.page .pc-post{position:absolute;right:12px;top:-16px;display:flex;align-items:flex-start;pointer-events:none}
+.page .pc-post .pm{width:104px;height:66px;margin:14px -38px 0 0;transform:rotate(-9deg);position:relative;z-index:1}
+.page .pc-post .st{width:60px;height:73px;filter:drop-shadow(0 1px 1.5px rgba(35,40,27,.4));transform:rotate(3deg)}
+.page .pc-top{padding-right:132px;min-height:60px}
+.page .pc-top .eyebrow{margin:0}
+.page .pc-top span{display:none}
+.page h1{font-size:clamp(26px,7.1vw,31px);margin-top:6px}
+.page h1 em{font-style:italic;color:var(--olive)}
+.page .pc-lead{margin-top:10px;font-size:16.5px;line-height:1.5;color:var(--muted)}
+.page .hand{font-family:var(--hand);font-weight:500;font-size:25px;line-height:1.12;color:var(--stamp);margin-top:12px;transform:rotate(-1.2deg);transform-origin:left center}
+.page .hand span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.page .hand svg{width:19px;height:19px}
+.page .pc-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:16px}
+.page .pc-cta .btn{flex:1 1 220px}
+.page .pc-cta p{font-size:16px}
+.page .pc-cta p a{font-weight:700;white-space:nowrap}
+
+/* počítadlo nocí */
+.page .slip{display:grid;margin-top:26px;background:var(--card);border:1.5px solid var(--stamp);border-radius:5px;box-shadow:6px 6px 0 var(--paper-deep)}
+.page .slip>*{min-width:0}
+.page .f-a,.page .f-b{border:0;padding:22px 18px}
+.page .f-b{border-top:1.5px dashed var(--line)}
+.page legend{float:left;width:100%;font-family:var(--serif);font-size:21px;line-height:1.25;padding:0;margin-bottom:16px}
+.page legend+*{clear:both}
+.page .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.page .fld{display:block;min-width:0;margin-bottom:14px}
+.page .fld label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--stamp);margin-bottom:6px}
+.page .fld input,.page .fld textarea{display:block;width:100%;min-width:0;min-height:50px;padding:11px 12px;font:500 17px/1.3 var(--sans);color:var(--ink);background:#fff;border:1.5px solid var(--stamp);border-radius:4px;-webkit-appearance:none;appearance:none}
+.page .fld textarea{min-height:92px;resize:vertical}
+.page .fld input::placeholder,.page .fld textarea::placeholder{color:#6B6F5A;opacity:1}
+.page .fld input:focus-visible,.page .fld textarea:focus-visible{outline-offset:1px}
+.page .f-note{font-size:16px;color:var(--muted);margin-top:12px}
+.page .f-note[role=status]{color:var(--ink);background:var(--sky-soft);border-left:4px solid var(--stamp);padding:10px 12px;border-radius:2px}
+.page .res{background:var(--sky);padding:24px 18px 22px;display:flex;flex-direction:column;gap:14px}
+.page .res-k{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--stamp-dark)}
+.page .nights{font-family:var(--serif);font-size:clamp(44px,12vw,62px);line-height:1;color:var(--ink)}
+.page .res .nights.wait{font-size:clamp(30px,8vw,42px);line-height:1.1}
+.page .range{font-size:19px;font-weight:600;line-height:1.35;margin-top:6px}
+.page .hint{background:var(--card);border-left:4px solid var(--stamp);padding:10px 12px;font-size:16px;border-radius:2px}
+.page .hint button{font:700 16px/1.2 var(--sans);color:var(--stamp);background:none;border:0;padding:4px 0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.page .days{display:flex;flex-wrap:wrap;gap:5px}
+.page .day{display:flex;flex-direction:column;align-items:center;justify-content:center;width:38px;height:46px;background:var(--card);border-radius:3px;font-size:12px;line-height:1.15;color:var(--muted)}
+.page .day b{font-size:16px;color:var(--ink)}
+.page .day i{font-style:normal;text-transform:uppercase;letter-spacing:.05em}
+.page .day.end{background:var(--stamp);color:#fff}
+.page .day.end b{color:#fff}
+.page .day.gap{width:auto;padding:0 9px;background:transparent;color:var(--ink);font-weight:600;font-size:14px}
+.page .say{background:var(--card);padding:16px 16px 18px;border-radius:3px;position:relative}
+.page .say::after{content:"";position:absolute;left:28px;bottom:-10px;border:10px solid transparent;border-top-color:var(--card);border-bottom:0}
+.page .say q{display:block;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.45;quotes:"„" "“";margin-top:6px}
+.page .say .res-k{color:var(--stamp)}
+.page .res .btn{flex-direction:column;gap:3px;min-height:68px;margin-top:4px}
+.page .res .btn b{font-size:19px}
+.page .res .btn span{font-weight:500;font-size:16px}
+.page .res-note{font-size:16px;line-height:1.45;margin-top:auto}
+
+/* pobyt */
+.page .band{background:var(--paper-deep)}
+.page .shots{display:grid;gap:22px;margin-top:28px}
+.page .shot{display:grid;grid-template-columns:124px minmax(0,1fr);gap:14px;align-items:center;margin:0;background:var(--card);padding:10px;box-shadow:0 2px 3px rgba(35,40,27,.14),0 14px 24px -16px rgba(35,40,27,.5);min-width:0}
+.page .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;aspect-ratio:1;background:var(--paper);border:2px dashed var(--olive);color:var(--olive-dark);font-weight:600;font-size:14px;line-height:1.25;text-align:center;padding:8px}
+.page .ph svg{width:44px;height:44px}
+.page .shot h3{font-size:20px;font-style:italic;margin-bottom:4px}
+.page .shot p{font-size:16px;line-height:1.45;color:var(--muted)}
+
+/* denní režim */
+.page .sky{background:var(--sky)}
+.page .sky .lead,.page .sky .day-note{color:var(--ink)}
+.page .sky .eyebrow{color:var(--stamp-dark)}
+.page .daylist{position:relative;display:grid;gap:0;margin-top:26px}
+.page .daylist .arc{display:none}
+.page .daylist li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 14px;align-items:start;padding:14px 0;border-top:1.5px dashed rgba(31,58,110,.45)}
+.page .daylist li svg{width:44px;height:44px;grid-row:span 2}
+.page .daylist h3{font-size:21px;align-self:end}
+.page .daylist p{font-size:16px;grid-column:2}
+.page .day-note{font-size:16px;margin-top:16px}
+
+/* ceník */
+.page .two{display:grid;gap:28px}
+.page .two>*{min-width:0}
+.page .prices li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;align-items:baseline;padding:18px 0;border-top:1.5px solid var(--line)}
+.page .prices li:last-child{border-bottom:1.5px solid var(--line)}
+.page .prices h3{font-size:22px}
+.page .prices h3 small{font-family:var(--sans);font-size:14px;color:var(--muted);white-space:nowrap}
+.page .prices b{font-size:17px;color:var(--stamp);white-space:nowrap}
+.page .prices p{grid-column:1/-1;font-size:16px;color:var(--muted);max-width:52ch}
+
+/* podmínky + visačka */
+.page .conds{margin-top:22px}
+.page .conds div{padding:14px 0;border-top:1.5px solid var(--line)}
+.page .conds dt{font-family:var(--serif);font-size:20px}
+.page .conds dd{font-size:16px;color:var(--muted);margin-top:3px;max-width:54ch}
+.page .tagwrap{position:relative;max-width:380px;margin:64px auto 0;filter:drop-shadow(0 12px 14px rgba(35,40,27,.28))}
+.page .tagwrap>svg{position:absolute;left:50%;top:-55px;width:90px;height:96px;margin-left:-45px;z-index:2}
+.page .tag{position:relative;background:var(--tag);padding:84px 24px 24px;clip-path:polygon(24% 0,76% 0,100% 12%,100% 100%,0 100%,0 12%)}
+.page .tag::before{content:"";position:absolute;left:50%;top:26px;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:var(--paper-deep);box-shadow:0 0 0 6px #C7B588}
+.page .tag h3{font-size:25px;text-align:center}
+.page .tag .to{font-size:14px;text-align:center;letter-spacing:.08em;text-transform:uppercase;color:var(--olive-dark);margin-top:6px;font-weight:600}
+.page .tag ul{margin-top:14px}
+.page .tag li{border-bottom:1.5px solid #BFAE82}
+.page .tag li label{display:flex;align-items:center;gap:12px;min-height:50px;font-size:18px;font-weight:500;cursor:pointer}
+.page .tag input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--stamp);cursor:pointer}
+.page .tag input:checked+span{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--olive-dark)}
+.page .tag .count{font-size:16px;margin-top:14px;color:var(--olive-dark);font-weight:600}
+
+/* hotel i střih */
+.page .olive{background:var(--olive);color:#fff}
+.page .olive h2,.page .olive .eyebrow{color:#fff}
+.page .olive a{color:#fff}
+.page .olive :focus-visible{outline-color:#fff}
+.page .olive p{max-width:58ch}
+.page .olive .pill{color:#fff;border-color:#fff}
+.page .ask{margin-top:18px;padding:16px 18px;border:1.5px dashed rgba(255,255,255,.75);border-radius:4px}
+.page .ask b{font-family:var(--serif);font-weight:400;font-size:21px;display:block;margin-bottom:4px}
+.page .legend{font-size:16px;margin-top:14px}
+.page .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.page .pair div{background:var(--paper);color:var(--ink);padding:18px 14px;border-radius:4px 4px 0 0;min-width:0}
+.page .pair svg{width:46px;height:46px;display:block;margin-bottom:10px}
+.page .pair h3{font-size:20px}
+.page .pair p{font-size:16px;color:var(--muted);margin-top:4px}
+.page .plate{display:flex;align-items:center;gap:12px;background:var(--olive-dark);color:#fff;padding:14px 16px;border-radius:0 0 4px 4px;margin-top:10px;font-weight:600}
+.page .plate svg{flex:none;width:26px;height:26px}
+
+/* důvěra: razítka */
+.page .stamps{display:grid;gap:20px;margin-top:28px}
+.page .rs{border:2.5px solid var(--stamp);outline:1.5px solid var(--stamp);outline-offset:-8px;padding:24px 22px;color:var(--stamp);min-width:0;border-radius:3px}
+.page .rs:nth-child(1){transform:rotate(-.8deg)}
+.page .rs:nth-child(3){transform:rotate(.7deg)}
+.page .rs small{display:block;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.page .rs h3{font-size:25px;margin:6px 0 8px;color:var(--stamp)}
+.page .rs p{font-size:16px;color:var(--ink)}
+.page .rs a{font-weight:700}
+
+/* jak to probíhá */
+.page .steps{display:grid;gap:8px;margin-top:26px;counter-reset:s}
+.page .steps li{counter-increment:s;display:grid;grid-template-columns:54px minmax(0,1fr);gap:0 12px;padding:16px 0;border-top:2px dashed var(--olive-soft)}
+.page .steps li::before{content:counter(s);font-family:var(--serif);font-size:48px;line-height:.95;color:var(--stamp);grid-row:span 2}
+.page .steps h3{font-size:22px}
+.page .steps p{font-size:16px;color:var(--muted);grid-column:2;margin-top:4px;max-width:46ch}
+
+/* FAQ */
+.page .faq details{border-top:1.5px solid #BDB28E}
+.page .faq details:last-child{border-bottom:1.5px solid #BDB28E}
+.page .faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;list-style:none;padding:18px 2px;font-family:var(--serif);font-size:20px;line-height:1.3}
+.page .faq summary::-webkit-details-marker{display:none}
+.page .faq summary::after{content:"+";flex:none;width:32px;height:32px;border:1.5px solid var(--stamp);border-radius:4px;color:var(--stamp);font:600 22px/28px var(--sans);text-align:center}
+.page .faq details[open] summary::after{content:"–"}
+.page .faq details p{padding:0 2px 20px;max-width:60ch;color:var(--ink)}
+
+/* kontakt */
+.page .contact{background:var(--card);border-radius:5px;box-shadow:0 2px 4px rgba(35,40,27,.14),0 22px 44px -24px rgba(35,40,27,.5);padding:26px 18px;display:grid;gap:26px;position:relative}
+.page .contact>*{min-width:0}
+.page .big-tel{display:inline-block;font-family:var(--serif);font-size:clamp(34px,9.6vw,50px);line-height:1.1;text-decoration:none;margin:14px 0 6px;white-space:nowrap}
+.page .big-tel:hover{text-decoration:underline}
+.page .contact .btn{margin-top:20px}
+.page .addr{position:relative;padding-top:6px}
+.page .addr .pm{position:absolute;right:-8px;top:6px;width:112px;height:71px;transform:rotate(8deg);pointer-events:none}
+.page .addr dl div:first-child{padding-right:112px;min-height:84px}
+.page .addr dl div{padding:13px 0 11px;border-bottom:1.5px solid var(--line)}
+.page .addr dt{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--stamp)}
+.page .addr dd{font-size:18px;margin-top:2px;overflow-wrap:anywhere}
+.page .addr dd a{font-weight:600}
+
+/* patička + volací lišta */
+.page .foot{background:var(--olive-dark);color:var(--paper);padding:34px 0 112px;font-size:16px}
+.page .foot a{color:var(--sky)}
+.page .foot :focus-visible{outline-color:#fff}
+.page .foot b{font-family:var(--serif);font-weight:400;font-size:21px;display:block;margin-bottom:8px}
+.page .foot p+p{margin-top:8px}
+.page .foot .src{margin-top:18px;padding-top:16px;border-top:1px solid rgba(245,239,223,.3);font-size:16px}
+.page .callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1.5px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.page .callbar .btn{display:flex;width:100%;min-height:52px;box-shadow:none}
+
+@media (min-width:480px){
+  .page .mark small i{display:inline}
+}
+@media (max-width:359px){
+  .page .mark small,.page .tel svg{display:none}
+  .page .mark b{font-size:17px}
+  .page .mark svg{width:34px;height:34px}
+  .page .tel{padding:8px 10px}
+}
+@media (min-width:620px){
+  .page .pc-back{padding:22px 30px 30px}
+  .page .pc-post{right:22px;top:-34px}
+  .page .pc-post .pm{width:140px;height:88px;margin:16px -50px 0 0}
+  .page .pc-post .st{width:76px;height:92px}
+  .page .pc-top{padding-right:200px;min-height:70px}
+  .page .pc-top span{display:block;font-size:16px;color:var(--muted);margin-top:6px;line-height:1.45}
+  .page h1{font-size:38px}
+  .page .pc-lead{font-size:18px;max-width:56ch}
+  .page .hand{font-size:30px}
+  .page .pc-cta .btn{flex:0 0 auto}
+  .page .pc-cap{font-size:16px;left:14px;bottom:14px}
+  .page .shots{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .page .shot{display:block;padding:10px 10px 18px}
+  .page .ph{aspect-ratio:4/3;font-size:15px;gap:8px}
+  .page .ph svg{width:58px;height:58px}
+  .page .shot figcaption{padding:14px 6px 0}
+  .page .stamps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .page .f-a,.page .f-b{padding:26px 28px}
+  .page .res{padding:28px}
+  .page .contact{padding:34px}
+}
+@media (min-width:900px){
+  .page .sec{padding:84px 0}
+  .page .callbar{display:none}
+  .page .foot{padding-bottom:40px}
+  .page .head{padding-top:16px;padding-bottom:16px}
+  .page .mark b{font-size:21px}
+  .page .nav{display:flex;gap:28px}
+  .page .nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:16px;padding:6px 0;border-bottom:2px solid transparent}
+  .page .nav a:hover{border-bottom-color:var(--stamp);color:var(--stamp)}
+  .page .slip{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);margin-top:36px}
+  .page .f-a{grid-column:1;grid-row:1}
+  .page .f-b{grid-column:1;grid-row:2}
+  .page .res{grid-column:2;grid-row:1/3;padding:38px 40px 34px;gap:20px;border-radius:0 3px 3px 0}
+  .page .nights{font-size:84px}
+  .page .range{font-size:21px}
+  .page .day{width:48px;height:58px;font-size:13px}
+  .page .day b{font-size:19px}
+  .page .say{padding:20px 22px 22px}
+  .page .say q{font-size:22px}
+  .page .shots{gap:30px;margin-top:38px}
+  .page .shot:nth-child(1){transform:rotate(-1.4deg)}
+  .page .shot:nth-child(2){transform:rotate(.8deg) translateY(10px)}
+  .page .shot:nth-child(3){transform:rotate(-.6deg)}
+  .page .daylist{grid-template-columns:repeat(5,minmax(0,1fr));margin-top:30px}
+  .page .daylist .arc{display:block;position:absolute;left:0;top:0;width:100%;height:124px}
+  .page .daylist li{display:block;border-top:0;padding:124px 14px 0;text-align:center;position:relative}
+  .page .daylist li svg{position:absolute;left:50%;top:var(--y);margin-left:-23px;width:46px;height:46px}
+  .page .daylist h3{font-size:23px;margin-bottom:6px}
+  .page .daylist p{max-width:22ch;margin:0 auto}
+  .page .two{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start}
+  .page .two.even{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+  .page .tagwrap{margin-top:56px;transform:rotate(2deg)}
+  .page .pair{gap:14px}
+  .page .pair div{padding:24px 22px}
+  .page .steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+  .page .steps li{display:block;padding-top:20px}
+  .page .steps li::before{display:block;font-size:60px;margin-bottom:12px}
+  .page .contact{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;padding:48px 56px}
+  .page .addr .pm{width:160px;height:101px;top:-34px;right:-14px}
+  .page .addr dl div:first-child{padding-right:160px;min-height:0}
+}
+@media (min-width:1040px){
+  .page .hero{padding:22px 0 76px}
+  .page .pc{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);transform:rotate(-1.2deg);margin:0 6px}
+  .page .pc-pic{aspect-ratio:auto;margin:16px 0 16px 16px;border-radius:2px;min-height:520px}
+  .page .pc-pic svg{position:absolute;inset:0;width:100%;height:100%;margin:0}
+  .page .pc-cap{left:14px;bottom:14px;font-size:17px;padding:4px 14px}
+  .page .pc-back{padding:34px 44px 38px 56px;display:flex;flex-direction:column}
+  .page .pc-back::before{content:"";position:absolute;left:26px;top:40px;bottom:40px;width:1.5px;background:var(--line)}
+  .page .pc-post{right:32px;top:28px}
+  .page .pc-post .pm{width:170px;height:107px;margin:10px -58px 0 0}
+  .page .pc-post .st{width:86px;height:104px}
+  .page .pc-top{padding-right:220px;min-height:126px}
+  .page .pc-top span{font-size:15px;margin-top:8px}
+  .page h1{font-size:clamp(34px,3.25vw,44px);margin-top:0}
+  .page .pc-lead{font-size:18px;margin-top:16px;max-width:46ch}
+  .page .hand{font-size:33px;margin-top:20px}
+  .page .hand svg{width:24px;height:24px}
+  .page .pc-cta{margin-top:auto;padding-top:26px}
+  .page .pc-cta .btn{flex:0 0 auto}
+}
+@media (prefers-reduced-motion:no-preference){
+  .page .btn,.page .tel,.page .nav a{transition:background-color .15s,color .15s,border-color .15s}
+}
+</style>
+<div class="page">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="pm" viewBox="0 0 190 120">
+      <g fill="none" stroke="#2B4C8C">
+        <circle cx="60" cy="60" r="55" stroke-width="2.4"/>
+        <circle cx="60" cy="60" r="34" stroke-width="1.6"/>
+        <path d="M30 51h60M30 70h60" stroke-width="1.6"/>
+        <path d="M120 34q9-7 18 0t18 0 18 0 14 0M122 51q9-7 18 0t18 0 18 0 12 0M122 68q9-7 18 0t18 0 18 0 12 0M120 85q9-7 18 0t18 0 18 0 14 0" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <path id="pm-c" d="M15.5 60a44.5 44.5 0 1 1 89 0a44.5 44.5 0 1 1-89 0" fill="none"/>
+      <text font-family="'Hanken Grotesk','Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#2B4C8C"><textPath href="#pm-c" textLength="272" lengthAdjust="spacing">BARTOŠOVICE · HOTEL PRO PSY ·</textPath></text>
+      <text x="60" y="65" text-anchor="middle" font-family="'Hanken Grotesk','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2B4C8C">742 54</text>
+    </symbol>
+    <symbol id="paw" viewBox="0 0 40 40">
+      <path d="M20 19c-6 0-10.5 5.5-10.5 10 0 3.5 2.5 5 5 5 2.2 0 3.5-1 5.5-1s3.3 1 5.5 1c2.5 0 5-1.5 5-5 0-4.5-4.5-10-10.5-10z"/>
+      <ellipse cx="7.5" cy="17" rx="3.6" ry="4.8" transform="rotate(-18 7.5 17)"/><ellipse cx="15" cy="9.5" rx="3.8" ry="5.2" transform="rotate(-6 15 9.5)"/><ellipse cx="25" cy="9.5" rx="3.8" ry="5.2" transform="rotate(6 25 9.5)"/><ellipse cx="32.5" cy="17" rx="3.6" ry="4.8" transform="rotate(18 32.5 17)"/>
+    </symbol>
+    <symbol id="sun" viewBox="0 0 46 46">
+      <circle cx="23" cy="23" r="21" fill="#A9D3E8"/>
+      <path d="M23 4v6M23 36v6M4 23h6M36 23h6M9.6 9.6l4.2 4.2M32.2 32.2l4.2 4.2M36.4 9.6l-4.2 4.2M13.8 32.2l-4.2 4.2" stroke="#1F3A6E" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="23" cy="23" r="8.5" fill="#F5EFDF" stroke="#1F3A6E" stroke-width="2.2"/>
+    </symbol>
+    <symbol id="i-kotec" viewBox="0 0 54 54"><g fill="none" stroke="#5E6B2F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 26 27 9l20 17"/><path d="M12 24v21h30V24"/><path d="M21 45V35a6 6 0 0 1 12 0v10"/></g></symbol>
+    <symbol id="i-plot" viewBox="0 0 54 54"><g fill="none" stroke="#5E6B2F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 27h46M4 39h46"/><path d="M8 45V20l4-5 4 5v25M22 45V20l4-5 4 5v25M36 45V20l4-5 4 5v25"/></g></symbol>
+    <symbol id="i-okoli" viewBox="0 0 54 54"><g fill="none" stroke="#5E6B2F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 24 10 13M20 24 15 8M20 24V6M20 24l5-16M20 24l10-11"/><path d="M17 38l1-13h4l1 13"/><path d="M5 38h24M30 44q4-4 8 0t8 0M34 36q4-4 8 0t8 0"/></g></symbol>
+  </defs>
+</svg>
+
+<p class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Pavla Zůbková – hotel pro psy</p>
+
+<header class="wrap head">
+  <a class="mark" href="#top" aria-label="Hotel pro psy Bartošovice, Pavla Zůbková">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#A9D3E8"/><path d="M5 31h30" stroke="#5E6B2F" stroke-width="2.6" stroke-linecap="round"/><path d="M20 18 11 9M20 18 15 5M20 18V4M20 18l5-13M20 18l9-9" stroke="#5E6B2F" stroke-width="1.9" stroke-linecap="round" fill="none"/><path d="M17 31l1-12h4l1 12z" fill="#3C4520"/><circle cx="20" cy="18.5" r="4.2" fill="#3C4520"/></svg>
+    <span><b>Hotel pro psy</b><small>Pavla Zůbková<i> · Bartošovice</i></small></span>
+  </a>
+  <nav class="nav" aria-label="Hlavní navigace">
+    <a href="#termin">Termín</a><a href="#pobyt">Pobyt</a><a href="#cenik">Ceník</a><a href="#pribalit">Co přibalit</a><a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="tel" href="tel:+420732956743"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.5h3.2l1.7 4.8-2.3 1.8a13 13 0 0 0 5.7 5.7l1.8-2.3 4.8 1.7v3.2c0 1.7-1.4 3.1-3.1 3.1C10 20.5 3.5 14 3.5 5.6c0-1.7 1.4-3.1 3.1-3.1z" fill="currentColor"/></svg>732 956 743</a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="pc">
+      <div class="pc-pic">
+        <svg viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Kreslená pohlednice z Poodří: rybník s rákosím, řada hlavatých vrb, malý domek a pes spokojeně ležící v trávě">
+          <rect width="600" height="520" fill="#A9D3E8"/>
+          <circle cx="436" cy="92" r="30" fill="#F5EFDF"/>
+          <g fill="#F5EFDF"><ellipse cx="196" cy="118" rx="76" ry="15"/><ellipse cx="232" cy="104" rx="44" ry="16"/><ellipse cx="160" cy="108" rx="30" ry="11"/><ellipse cx="372" cy="176" rx="62" ry="11"/><ellipse cx="346" cy="166" rx="30" ry="11"/></g>
+          <path d="M262 62q8-8 16 0q8-8 16 0M306 88q6-6 12 0q6-6 12 0" fill="none" stroke="#2B4C8C" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M0 262q30-14 62-5 26-13 54-2 40-16 82-1 30-9 58 2 38-14 78-2 30-11 60 0 40-13 82 0 34-10 74 0 26-6 50 2v26H0z" fill="#7F9468"/>
+          <rect y="268" width="600" height="252" fill="#A3B062"/>
+          <!-- domek -->
+          <g transform="translate(-40 0)">
+            <rect x="472" y="212" width="9" height="16" fill="#3C4520"/>
+            <rect x="420" y="234" width="78" height="40" fill="#F5EFDF"/>
+            <path d="M410 236l49-34 49 34z" fill="#2B4C8C"/>
+            <rect x="452" y="248" width="14" height="26" fill="#5E6B2F"/>
+            <rect x="429" y="246" width="14" height="13" fill="#2B4C8C"/><rect x="475" y="246" width="14" height="13" fill="#2B4C8C"/>
+            <ellipse cx="528" cy="252" rx="20" ry="24" fill="#5E6B2F"/><rect x="525" y="262" width="5" height="14" fill="#3C4520"/>
+          </g>
+          <!-- hlavaté vrby -->
+          <defs><g id="vrba">
+            <ellipse cx="0" cy="-60" rx="27" ry="23" fill="#7E8C40"/>
+            <path d="M0-38-22-74M0-38-12-82M0-38 0-86M0-38 12-82M0-38 22-74M0-38-30-60M0-38 30-60" stroke="#4E5A26" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path d="M-6 0-5-30h10L6 0z" fill="#4A4630"/><circle cx="0" cy="-36" r="9.5" fill="#4A4630"/>
+          </g></defs>
+          <use href="#vrba" x="46" y="296"/><use href="#vrba" x="122" y="294"/><use href="#vrba" x="184" y="292"/><use href="#vrba" x="246" y="291"/><use href="#vrba" x="308" y="290"/>
+          <!-- rybník -->
+          <path d="M18 330C50 304 250 298 318 316c40 12-10 46-130 48C80 366-4 352 18 330z" fill="#A9D3E8" stroke="#6F9A4A" stroke-width="3"/>
+          <path d="M70 326h70M160 338h90M96 350h56M214 322h44" stroke="#F5EFDF" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <g stroke="#3C4520" stroke-width="2.6" stroke-linecap="round" fill="none"><path d="M104 360V316M114 364V308M124 362V320M96 358l-8-22M132 360l10-20"/></g>
+          <g fill="#8A5A2B"><rect x="101.5" y="306" width="5" height="16" rx="2.5"/><rect x="111.5" y="298" width="5" height="17" rx="2.5"/><rect x="121.5" y="310" width="5" height="15" rx="2.5"/></g>
+          <path d="M0 392C150 376 300 404 600 384v136H0z" fill="#8C9A4F"/>
+          <!-- pes -->
+          <g transform="translate(286 344) scale(.82)">
+            <ellipse cx="112" cy="84" rx="118" ry="9" fill="#5E6B2F" opacity=".45"/>
+            <path d="M196 54q34-2 36-32" fill="none" stroke="#C98F45" stroke-width="10" stroke-linecap="round"/>
+            <ellipse cx="170" cy="52" rx="38" ry="31" fill="#D9A85C"/>
+            <ellipse cx="108" cy="57" rx="72" ry="27" fill="#D9A85C"/>
+            <ellipse cx="166" cy="74" rx="32" ry="10" fill="#C98F45"/>
+            <rect x="-14" y="70" width="70" height="13" rx="6.5" fill="#C98F45"/>
+            <rect x="-22" y="64" width="68" height="13" rx="6.5" fill="#E8C387"/>
+            <path d="M62 30q9 22 2 44" fill="none" stroke="#2B4C8C" stroke-width="6" stroke-linecap="round"/>
+            <ellipse cx="34" cy="46" rx="27" ry="22" fill="#D9A85C"/>
+            <ellipse cx="8" cy="56" rx="19" ry="11.5" fill="#E8C387"/>
+            <ellipse cx="-8" cy="52" rx="5.5" ry="4.5" fill="#23281B"/>
+            <path d="M-3 62q9 5 18 0" fill="none" stroke="#23281B" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M18 42q6 5 13 0" fill="none" stroke="#23281B" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M40 26c20-4 28 14 24 34-2 10-10 10-15 2-6-10-11-24-9-36z" fill="#A8702F"/>
+          </g>
+          <g fill="#5E6B2F"><path d="M270 420l6-22 5 20 6-26 5 28zM362 424l5-18 5 16 6-22 5 24zM500 420l6-20 5 18 5-22 6 24z"/></g>
+          <path d="M0 440C150 424 330 452 600 432v88H0z" fill="#5E6B2F"/>
+          <g fill="#F5EFDF"><circle cx="210" cy="470" r="3.5"/><circle cx="246" cy="492" r="3"/><circle cx="388" cy="476" r="3.5"/><circle cx="470" cy="498" r="3"/><circle cx="540" cy="466" r="3.5"/><circle cx="318" cy="504" r="3"/></g>
+          <g stroke="#3C4520" stroke-width="3.2" stroke-linecap="round" fill="none"><path d="M120 520V404M140 520V386M162 520V414M184 520V398M106 520l-20-70M200 520l24-76M150 520l-34-50"/></g>
+          <g fill="#8A5A2B"><rect x="116.5" y="390" width="7" height="24" rx="3.5"/><rect x="136.5" y="372" width="7" height="24" rx="3.5"/><rect x="158.5" y="400" width="7" height="24" rx="3.5"/><rect x="180.5" y="384" width="7" height="24" rx="3.5"/></g>
+        </svg>
+        <span class="pc-cap">Pozdrav z&nbsp;Bartošovic</span>
+      </div>
+      <div class="pc-back">
+        <div class="pc-post" aria-hidden="true">
+          <svg class="pm" viewBox="0 0 190 120"><use href="#pm"/></svg>
+          <svg class="st" viewBox="0 0 96 116">
+            <defs><mask id="perf"><rect x="4" y="4" width="88" height="108" fill="#fff"/><rect x="4" y="4" width="88" height="108" fill="none" stroke="#000" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0.010 10.879"/></mask></defs>
+            <rect x="0" y="0" width="96" height="116" fill="#FFFFFF" mask="url(#perf)"/>
+            <rect x="13" y="13" width="70" height="90" fill="#5E6B2F"/>
+            <rect x="13" y="13" width="70" height="26" fill="#A9D3E8"/>
+            <path d="M13 39q18-8 35-3t35-2v8H13z" fill="#8C9A4F"/>
+            <use href="#paw" x="30" y="47" width="36" height="36" fill="#FFFFFF"/>
+            <text x="48" y="28" text-anchor="middle" font-family="'Hanken Grotesk','Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="1" fill="#1F3A6E">POODŘÍ</text>
+            <text x="48" y="97" text-anchor="middle" font-family="'Hanken Grotesk','Segoe UI',Arial,sans-serif" font-size="7.5" font-weight="700" letter-spacing=".8" fill="#FFFFFF">PSÍ HOTEL</text>
+          </svg>
+        </div>
+        <div class="pc-top">
+          <p class="eyebrow">Hotel pro psy · Bartošovice</p>
+          <span>Novojičínsko, rovina rybníků a&nbsp;luk v&nbsp;Poodří</span>
+        </div>
+        <h1>Vy odjedete v&nbsp;klidu. Váš pes má vlastní dovolenou <em>v&nbsp;Bartošovicích.</em></h1>
+        <p class="pc-lead">Hotel pro psy, stříhání, úprava a&nbsp;koupání na jedné adrese: Bartošovice 275. Termín domluvíte po telefonu.</p>
+        <p class="hand">„Mám se dobře, páníčku. Přijeď, až budeš chtít.“ <span>Tvůj pes <svg viewBox="0 0 40 40" aria-hidden="true"><use href="#paw" fill="#2B4C8C"/></svg></span></p>
+        <div class="pc-cta">
+          <a class="btn" href="#termin">Ověřit volný termín</a>
+          <p>nebo zavolejte <a href="tel:+420732956743">732 956 743</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="termin" style="padding-top:20px">
+  <div class="wrap">
+    <p class="eyebrow">Počítadlo nocí</p>
+    <h2>Kdy pojedete?</h2>
+    <p class="lead">Zadejte příjezd a&nbsp;odjezd. Počítadlo sečte noci a&nbsp;připraví větu, kterou stačí přečíst do telefonu. Zda je termín volný, potvrdí paní Zůbková při hovoru.</p>
+    <form class="slip" id="poptavka" novalidate>
+      <fieldset class="f-a">
+        <legend>Pobyt Vašeho psa</legend>
+        <div class="row">
+          <div class="fld"><label for="prijezd">Příjezd</label><input type="date" id="prijezd" name="prijezd"></div>
+          <div class="fld"><label for="odjezd">Odjezd</label><input type="date" id="odjezd" name="odjezd"></div>
+        </div>
+        <div class="fld" style="margin-bottom:0"><label for="pes">Pes: jméno a&nbsp;plemeno</label><input type="text" id="pes" name="pes" placeholder="např. Bety, border kolie" autocomplete="off" maxlength="60"></div>
+      </fieldset>
+      <div class="res">
+        <div aria-live="polite">
+          <p class="res-k">Váš pobyt</p>
+          <p class="nights" id="vysledek-noci">3 noci</p>
+          <p class="range" id="vysledek-rozsah">od pátku do pondělí</p>
+        </div>
+        <p class="hint" id="napoveda" hidden><span id="napoveda-text"></span> <button type="button" id="prohodit" hidden>Prohodit data</button></p>
+        <div class="days" id="vysledek-dny" aria-hidden="true"></div>
+        <div class="say">
+          <p class="res-k">Stačí říct do telefonu</p>
+          <q id="veta">Dobrý den, potřebuji ohlídat psa. Kdy máte volno?</q>
+        </div>
+        <a class="btn" href="tel:+420732956743"><b>Zavolat a&nbsp;ověřit termín</b><span>732 956 743</span></a>
+        <p class="res-note">Počítadlo jen počítá noci. O&nbsp;tom, zda je termín volný, rozhoduje vždy paní Zůbková po telefonu.</p>
+      </div>
+      <fieldset class="f-b">
+        <legend>Raději napíšete? Nechte vzkaz</legend>
+        <div class="row">
+          <div class="fld"><label for="jmeno">Vaše jméno</label><input type="text" id="jmeno" name="jmeno" autocomplete="name"></div>
+          <div class="fld"><label for="telefon">Váš telefon</label><input type="tel" id="telefon" name="telefon" autocomplete="tel" inputmode="tel"></div>
+        </div>
+        <div class="fld"><label for="zprava">Co má paní Zůbková o&nbsp;psovi vědět</label><textarea id="zprava" name="zprava" placeholder="např. bere léky, bojí se bouřky, nesnese se s kocoury"></textarea></div>
+        <button class="btn btn-line" type="submit">Odeslat poptávku termínu</button>
+        <p class="f-note" id="form-note">Ke vzkazu se přiloží příjezd, odjezd i&nbsp;počet nocí z&nbsp;počítadla.</p>
+      </fieldset>
+    </form>
+  </div>
+</section>
+
+<section class="sec band" id="pobyt">
+  <div class="wrap">
+    <p class="eyebrow">Pobyt</p>
+    <h2>Uvidíte, kde bude spát a&nbsp;kde se proběhne <span class="pill">ukázkový text</span></h2>
+    <p class="lead">Než psa někomu svěříte, chcete to místo vidět. Proto sem přijdou tři skutečné fotky z&nbsp;Bartošovic a&nbsp;pár vět od paní Zůbkové. Popisy pod fotkami jsou zatím jen otázky, na které web odpoví.</p>
+    <div class="shots">
+      <figure class="shot">
+        <div class="ph"><svg viewBox="0 0 54 54" aria-hidden="true"><use href="#i-kotec"/></svg>Sem přijde Vaše fotka</div>
+        <figcaption><h3>Kotec nebo pokoj</h3>
+        <p>Kde pes spí, na čem leží a&nbsp;co z&nbsp;domova může mít u&nbsp;sebe.</p></figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="ph"><svg viewBox="0 0 54 54" aria-hidden="true"><use href="#i-plot"/></svg>Sem přijde Vaše fotka</div>
+        <figcaption><h3>Výběh nebo zahrada</h3>
+        <p>Kde se pes proběhne, jak je místo oplocené a&nbsp;kdy v&nbsp;něm bývá.</p></figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="ph"><svg viewBox="0 0 54 54" aria-hidden="true"><use href="#i-okoli"/></svg>Sem přijde Vaše fotka</div>
+        <figcaption><h3>Okolí Bartošovic</h3>
+        <p>Rovina Poodří, rybníky a&nbsp;louky, kterými k&nbsp;hotelu přijedete.</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky" id="rezim">
+  <div class="wrap">
+    <p class="eyebrow">Denní režim</p>
+    <h2>Jak může vypadat psí den v&nbsp;hotelu <span class="pill">ukázkový text</span></h2>
+    <p class="lead">Pes zvládne odloučení líp, když má den stejný rytmus jako doma. Takhle může režim na webu vypadat.</p>
+    <ol class="daylist">
+      <svg class="arc" viewBox="0 0 1000 124" preserveAspectRatio="none" aria-hidden="true"><path d="M0 136Q500-74 1000 136" fill="none" stroke="#1F3A6E" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+      <li style="--y:76px"><svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="21" fill="#A9D3E8"/><path d="M23 8v5M8.5 15.5l4 3.5M37.5 15.5l-4 3.5" stroke="#1F3A6E" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M12.5 31a10.5 10.5 0 0 1 21 0z" fill="#F5EFDF" stroke="#1F3A6E" stroke-width="2.2" stroke-linejoin="round"/><path d="M5 31h36M13 37h20" stroke="#1F3A6E" stroke-width="2.2" stroke-linecap="round"/></svg><h3>Ráno</h3><p>Venčení a&nbsp;snídaně z&nbsp;krmiva, které psovi přibalíte.</p></li>
+      <li style="--y:27px"><svg viewBox="0 0 46 46" aria-hidden="true"><use href="#sun"/></svg><h3>Dopoledne</h3><p>Pohyb venku a&nbsp;čas očichat nové místo.</p></li>
+      <li style="--y:9px"><svg viewBox="0 0 46 46" aria-hidden="true"><use href="#sun"/></svg><h3>Poledne</h3><p>Klid a&nbsp;odpočinek na vlastním pelíšku nebo dece.</p></li>
+      <li style="--y:27px"><svg viewBox="0 0 46 46" aria-hidden="true"><use href="#sun"/></svg><h3>Odpoledne</h3><p>Druhá procházka nebo hra s&nbsp;oblíbenou hračkou.</p></li>
+      <li style="--y:76px"><svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="21" fill="#A9D3E8"/><path d="M29 8.5a14 14 0 1 0 8.5 21A11.5 11.5 0 0 1 29 8.5z" fill="#F5EFDF" stroke="#1F3A6E" stroke-width="2.2" stroke-linejoin="round"/></svg><h3>Večer</h3><p>Večeře, poslední venčení a&nbsp;klidná noc.</p></li>
+    </ol>
+    <p class="day-note">Ukázka, ne skutečný rozvrh. Časy a&nbsp;pořadí doplníme podle toho, jak den u&nbsp;paní Zůbkové opravdu běží.</p>
+  </div>
+</section>
+
+<section class="sec" id="cenik">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Ceník</p>
+      <h2>Tři služby, cenu řekne paní Zůbková</h2>
+      <p class="lead">Služby jsou ověřené z&nbsp;veřejného zápisu firmy. Ceny v&nbsp;něm uvedené nejsou, proto je tu zatím Cena na dotaz. Stačí zavolat na <a href="tel:+420732956743" style="white-space:nowrap;font-weight:700">732 956 743</a>.</p>
+    </div>
+    <ul class="prices">
+      <li><h3>Pobyt v&nbsp;hotelu pro psy <small>/ za noc</small></h3><b>Cena na dotaz</b><p>Váš pes zůstane v&nbsp;Bartošovicích, zatímco jste na dovolené nebo na cestách.</p></li>
+      <li><h3>Stříhání a&nbsp;úprava</h3><b>Cena na dotaz</b><p>Střih a&nbsp;úprava srsti Vašeho psa.</p></li>
+      <li><h3>Koupání</h3><b>Cena na dotaz</b><p>Koupel psa na stejné adrese jako hotel.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec band" id="pribalit">
+  <div class="wrap two even">
+    <div>
+      <p class="eyebrow">Před příjezdem</p>
+      <h2>Podmínky pobytu a&nbsp;co psovi přibalit <span class="pill">ukázkový text</span></h2>
+      <p class="lead">Tohle se v&nbsp;psích hotelech obvykle řeší předem. Přesné podmínky v&nbsp;Bartošovicích Vám řekne paní Zůbková po telefonu a&nbsp;na web je doplníme podle ní.</p>
+      <dl class="conds">
+        <div><dt>Očkování</dt><dd>Mějte po ruce očkovací průkaz a&nbsp;zeptejte se, která očkování musí být platná.</dd></div>
+        <div><dt>Zdraví</dt><dd>Řekněte předem o&nbsp;lécích, dietě, alergiích nebo o&nbsp;hárání feny.</dd></div>
+        <div><dt>Povaha</dt><dd>Popište, jak pes snáší jiné psy, cizí lidi a&nbsp;samotu.</dd></div>
+        <div><dt>Příjezd a&nbsp;odjezd</dt><dd>Čas předání si domluvíte po telefonu.</dd></div>
+      </dl>
+    </div>
+    <div class="tagwrap">
+      <svg viewBox="0 0 90 96" aria-hidden="true"><path d="M45 93C18 62 24 12 45 7C66 12 72 62 45 93z" fill="none" stroke="#3C4520" stroke-width="3" stroke-linecap="round"/></svg>
+      <div class="tag">
+        <h3>Co přibalit</h3>
+        <p class="to">Kam: Bartošovice 275</p>
+        <ul>
+          <li><label for="b1"><input type="checkbox" id="b1"><span>Pelíšek nebo deka</span></label></li>
+          <li><label for="b2"><input type="checkbox" id="b2"><span>Krmivo na celý pobyt</span></label></li>
+          <li><label for="b3"><input type="checkbox" id="b3"><span>Očkovací průkaz</span></label></li>
+          <li><label for="b4"><input type="checkbox" id="b4"><span>Vodítko</span></label></li>
+          <li><label for="b5"><input type="checkbox" id="b5"><span>Oblíbená hračka</span></label></li>
+        </ul>
+        <p class="count" id="sbaleno" aria-live="polite">Sbaleno 0 z&nbsp;5. Odškrtávejte, co už je v&nbsp;tašce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec olive" id="strih">
+  <div class="wrap two even">
+    <div>
+      <p class="eyebrow">Dvě služby, jedna cesta</p>
+      <h2>Hotel i&nbsp;střih na jedné adrese</h2>
+      <p style="margin-top:14px">Paní Zůbková provozuje hotel pro psy a&nbsp;zároveň nabízí stříhání, úpravu a&nbsp;koupání psů. Obojí najdete v&nbsp;Bartošovicích 275.</p>
+      <div class="ask">
+        <b>Zeptejte se při objednání <span class="pill">ukázkový text</span></b>
+        <p>Zeptejte se, zda může Váš pes před cestou domů projít koupelí a&nbsp;střihem. Vyzvedli byste si ho odpočatého a&nbsp;upraveného.</p>
+      </div>
+      <p class="legend">Ověřené je, že firma nabízí obě služby. Jejich spojení do jednoho pobytu je ukázka a&nbsp;potvrdí ho až paní Zůbková.</p>
+    </div>
+    <div style="align-self:center">
+      <div class="pair">
+        <div>
+          <svg viewBox="0 0 46 46" aria-hidden="true"><path d="M6 22 23 8l17 14" fill="none" stroke="#5E6B2F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 21v17h26V21" fill="none" stroke="#5E6B2F" stroke-width="2.6" stroke-linejoin="round"/><path d="M19 38v-9a4 4 0 0 1 8 0v9" fill="none" stroke="#2B4C8C" stroke-width="2.6"/></svg>
+          <h3>Hotel pro psy</h3>
+          <p>Pobyt přes noc, když jste pryč.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="13" cy="35" r="5.5" fill="none" stroke="#5E6B2F" stroke-width="2.6"/><circle cx="33" cy="35" r="5.5" fill="none" stroke="#5E6B2F" stroke-width="2.6"/><path d="M16 30 32 6M30 30 14 6" stroke="#2B4C8C" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+          <h3>Stříhání, úprava a&nbsp;koupání</h3>
+          <p>Péče o&nbsp;srst Vašeho psa.</p>
+        </div>
+      </div>
+      <p class="plate"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2.5a8 8 0 0 0-8 8c0 6 8 13 8 13s8-7 8-13a8 8 0 0 0-8-8z" fill="none" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="13" cy="10.5" r="2.8" fill="#FFFFFF"/></svg><span>Jedna adresa: Bartošovice&nbsp;275, 742&nbsp;54&nbsp;Bartošovice</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="duvera">
+  <div class="wrap">
+    <p class="eyebrow">Ověřené údaje</p>
+    <h2>Co o&nbsp;hotelu víme jistě</h2>
+    <div class="stamps">
+      <div class="rs"><small>Firmy.cz</small><h3>4 hodnocení</h3><p>Zákazníci hotel hodnotí na Firmy.cz. <a href="https://www.firmy.cz/detail/13355241-pavla-zubkova-hotel-pro-psy-bartosovice.html" target="_blank" rel="noopener">Přečíst hodnocení</a></p></div>
+      <div class="rs"><small>Provozní doba</small><h3>Dle telefonické domluvy</h3><p>Čas příjezdu i&nbsp;vyzvednutí si domluvíte po telefonu.</p></div>
+      <div class="rs"><small>Kontakt</small><h3>Jedno číslo na hotel i&nbsp;střih</h3><p>Na čísle <a href="tel:+420732956743" style="white-space:nowrap">732 956 743</a> domluvíte pobyt i&nbsp;stříhání.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="postup" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Jak to probíhá</p>
+    <h2>Od telefonátu po vrtění ocasem <span class="pill">ukázkový text</span></h2>
+    <ol class="steps">
+      <li><h3>Spočítáte noci a&nbsp;zavoláte</h3><p>V&nbsp;počítadle zadáte příjezd a&nbsp;odjezd. Hotovou větu přečtete do telefonu na čísle 732 956 743.</p></li>
+      <li><h3>Domluvíte termín a&nbsp;podmínky</h3><p>Paní Zůbková Vám řekne, zda má volno, kolik pobyt stojí a&nbsp;co potřebuje o&nbsp;psovi vědět.</p></li>
+      <li><h3>Přivezete psa do Bartošovic</h3><p>Na adresu Bartošovice 275 dorazíte v&nbsp;domluvený čas. Stejně si domluvíte i&nbsp;vyzvednutí.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec band faq" id="otazky">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Časté otázky</p>
+      <h2>Na co se majitelé ptají nejčastěji <span class="pill">ukázkový text</span></h2>
+      <p class="lead">Odpovědi jsou ukázka. Na web přijdou slovy paní Zůbkové.</p>
+    </div>
+    <div>
+      <details open><summary>Musí být pes očkovaný?</summary><p>Počítejte s&nbsp;tím, že ano. Vezměte s&nbsp;sebou očkovací průkaz a&nbsp;při telefonátu se zeptejte, která očkování paní Zůbková vyžaduje.</p></details>
+      <details><summary>Může pes přijet nejdřív na zkoušku?</summary><p>Zeptejte se na krátký pobyt na zkoušku, třeba na jedno odpoledne nebo jednu noc. Pes pozná místo i&nbsp;paní Zůbkovou a&nbsp;delší pobyt pak zvládne klidněji.</p></details>
+      <details><summary>Ohlídáte psa i&nbsp;na dva nebo tři týdny?</summary><p>Delší pobyt domluvte co nejdřív, hlavně před létem a&nbsp;svátky. Do počítadla zadejte celé období a&nbsp;zavolejte. Termín potvrdí paní Zůbková.</p></details>
+      <details><summary>Co když se můj pes nesnese s&nbsp;ostatními?</summary><p>Řekněte to hned při prvním telefonátu. Paní Zůbková Vám poví, zda a&nbsp;jak může Vašeho psa od ostatních oddělit.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kontakt">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2>Zavolejte do Bartošovic</h2>
+        <a class="big-tel" href="tel:+420732956743">732 956 743</a>
+        <p style="max-width:44ch;color:var(--muted)">Hotel funguje podle telefonické domluvy. Řekněte datum příjezdu, odjezdu a&nbsp;plemeno, zbytek doladíte v&nbsp;hovoru.</p>
+        <a class="btn" href="#termin">Spočítat noci a&nbsp;poptat termín</a>
+      </div>
+      <div class="addr">
+        <svg class="pm" viewBox="0 0 190 120" aria-hidden="true"><use href="#pm"/></svg>
+        <dl>
+          <div><dt>Komu</dt><dd>Pavla Zůbková – hotel pro psy</dd></div>
+          <div><dt>Adresa</dt><dd>Bartošovice 275, 742 54 Bartošovice<br><a href="https://mapy.cz/zakladni?q=Barto%C5%A1ovice%20275%2C%20742%2054%20Barto%C5%A1ovice" target="_blank" rel="noopener">Otevřít v&nbsp;Mapy.cz</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:pavla.zubkova@seznam.cz">pavla.zubkova@seznam.cz</a></dd></div>
+          <div><dt>Otevírací doba</dt><dd>Podle telefonické domluvy</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <b>Pavla Zůbková – hotel pro psy</b>
+    <p>Bartošovice 275, 742 54 Bartošovice</p>
+    <p><a href="tel:+420732956743">732 956 743</a> · <a href="mailto:pavla.zubkova@seznam.cz">pavla.zubkova@seznam.cz</a> · IČO 06255582</p>
+    <p class="src"><a href="https://www.firmy.cz/detail/13355241-pavla-zubkova-hotel-pro-psy-bartosovice.html" target="_blank" rel="noopener">Údaje z&nbsp;veřejného zápisu firmy na Firmy.cz</a></p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+420732956743"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.5h3.2l1.7 4.8-2.3 1.8a13 13 0 0 0 5.7 5.7l1.8-2.3 4.8 1.7v3.2c0 1.7-1.4 3.1-3.1 3.1C10 20.5 3.5 14 3.5 5.6c0-1.7 1.4-3.1 3.1-3.1z" fill="#FFFFFF"/></svg>Zavolat 732 956 743</a>
+</div>
+
+</div>
+<script>
+(function(){
+  var P=document.querySelector('.page');if(!P)return;
+  function q(s){return P.querySelector(s)}
+  var inA=q('#prijezd'),inB=q('#odjezd'),inDog=q('#pes');
+  var oN=q('#vysledek-noci'),oR=q('#vysledek-rozsah'),oD=q('#vysledek-dny'),oS=q('#veta'),oH=q('#napoveda'),oHT=q('#napoveda-text'),bSwap=q('#prohodit');
+  var G=['neděle','pondělí','úterý','středy','čtvrtka','pátku','soboty'];
+  var V=['v neděli','v pondělí','v úterý','ve středu','ve čtvrtek','v pátek','v sobotu'];
+  var Z=['ne','po','út','st','čt','pá','so'];
+  var now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  function pad(n){return n<10?'0'+n:''+n}
+  function iso(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+  function parse(v){var m=/^(\d{4})-(\d\d)-(\d\d)$/.exec(v||'');return m?new Date(+m[1],+m[2]-1,+m[3]):null}
+  function utc(d){return Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())}
+  function add(d,n){return new Date(d.getFullYear(),d.getMonth(),d.getDate()+n)}
+  function kr(d){return d.getDate()+'. '+(d.getMonth()+1)+'.'+(d.getFullYear()!==today.getFullYear()?' '+d.getFullYear():'')}
+  function noci(n){return n===1?'1 noc':(n<5?n+' noci':n+' nocí')}
+  function chip(d,lab){return '<span class="day'+(lab?' end':'')+'"><i>'+Z[d.getDay()]+'</i><b>'+d.getDate()+'.</b></span>'}
+  function render(){
+    var a=parse(inA.value),b=parse(inB.value),dog=inDog.value.replace(/\s+/g,' ').trim();
+    var je=dog?' Je to '+dog+'.':'',n=null,h='',sw=false,html='',i;
+    if(!a||!b){h='Vyberte den příjezdu i odjezdu. Noci se spočítají samy.'}
+    else{
+      n=Math.round((utc(b)-utc(a))/864e5);
+      if(n<0){h='Odjezd je dřív než příjezd. Nejspíš jsou data jen prohozená.';sw=true}
+      else if(a<today){h='Příjezd je v minulosti. Vyberte prosím dnešní nebo pozdější den.'}
+    }
+    bSwap.hidden=!sw;oH.hidden=!h;oHT.textContent=h;
+    if(h){
+      oN.className='nights wait';oN.textContent='Noci dopočítáme';oR.textContent='Jakmile budou obě data v pořádku.';oD.innerHTML='';
+      oS.textContent='Dobrý den, potřebuji ohlídat psa.'+je+' Kdy máte volno?';return;
+    }
+    oN.className='nights';
+    if(n===0){
+      oN.textContent='Bez noci';oR.textContent='Příjezd i odjezd '+V[a.getDay()]+' '+kr(a)+' To je hlídání jen přes den.';
+      oD.innerHTML=chip(a,1);
+      oS.textContent='Dobrý den, potřebuji ohlídat psa '+V[a.getDay()]+' '+kr(a)+' jen přes den, bez noci.'+je+' Je to u Vás možné?';return;
+    }
+    oN.textContent=noci(n);
+    oR.textContent='od '+G[a.getDay()]+' '+kr(a)+' do '+G[b.getDay()]+' '+kr(b);
+    if(n<=7){for(i=0;i<=n;i++)html+=chip(add(a,i),i===0||i===n)}
+    else{html=chip(a,1)+chip(add(a,1))+'<span class="day gap">a dalších '+(n-3)+' dní</span>'+chip(add(b,-1))+chip(b,1)}
+    oD.innerHTML=html;
+    oS.textContent='Dobrý den, potřebuji ohlídat psa od '+kr(a)+' do '+kr(b)+', tedy na '+noci(n)+'.'+je+' Máte volno?';
+  }
+  // ukázkový termín: nejbližší pátek (aspoň 3 dny dopředu) až pondělí
+  var off=(5-today.getDay()+7)%7;if(off<3)off+=7;
+  var a0=add(today,off);
+  inA.min=inB.min=iso(today);inA.value=iso(a0);inB.value=iso(add(a0,3));
+  [inA,inB,inDog].forEach(function(el){el.addEventListener('input',render);el.addEventListener('change',render)});
+  bSwap.addEventListener('click',function(){var t=inA.value;inA.value=inB.value;inB.value=t;render();inA.focus()});
+  render();
+  var form=q('#poptavka'),note=q('#form-note');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    note.setAttribute('role','status');
+    note.textContent='Toto je ukázka formuláře. V ostré verzi webu přijde zpráva na pavla.zubkova@seznam.cz. Termín zatím ověříte na čísle 732 956 743.';
+  });
+  var boxes=P.querySelectorAll('.tag input'),cnt=q('#sbaleno');
+  function pack(){var c=0;boxes.forEach(function(x){if(x.checked)c++});cnt.textContent=c===boxes.length?'Sbaleno 5 z 5. Může se jet.':'Sbaleno '+c+' z 5. Odškrtávejte, co už je v tašce.'}
+  boxes.forEach(function(x){x.addEventListener('change',pack)});
+})();
+</script>
+</body>
+</html>

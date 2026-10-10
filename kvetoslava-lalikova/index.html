@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Květoslava Lalíková</title>
+<meta name="description" content="Stříhání psů v Ostravě-Porubě. Úprava srsti všech plemen i kříženců, střih podle Vašeho přání, koupání, ošetření poškozené srsti, drápky a uši. Objednání telefonem nebo e-mailem.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Zilla+Slab:wght@500;600;700&subset=latin-ext&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Květoslava Lalíková",
+  "description": "Stříhání psů, péče o domácí zvířata. Úprava srsti všech plemen i kříženců.",
+  "telephone": "+420603948167",
+  "email": "certiklalik@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ukrajinská 1536/28",
+    "postalCode": "708 00",
+    "addressLocality": "Ostrava-Poruba",
+    "addressCountry": "CZ"
+  },
+  "identifier": { "@type": "PropertyValue", "name": "IČO", "value": "68201559" },
+  "sameAs": "https://www.firmy.cz/detail/2131368-kvetoslava-lalikova-ostrava-poruba.html"
+}
+</script>
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<style>
+/* Koncept: porubská smaltovaná cedule. Krémový papír, lahvově zelené pásy s arkádou, hodnocení jako smaltovaná domovní tabulka a objednávka jako papírový lístek přání. */
+:root{
+  --green:#1F4D3A; --mustard:#D9A520; --cream:#F7F2E3; --brick:#A6452C; --ink:#14271E; --paper:#FFFCF2;
+  --green-deep:#173A2C; --green-soft:#47735F; --cream-deep:#EDE5CB; --line:#D3C7A0;
+  --muted:#4B5A51; --on-green-muted:#CDD9CE; --mustard-light:#EDC65B; --enamel-line:#C7D2BC;
+  --f-head:"Zilla Slab",Rockwell,"Roboto Slab",Georgia,serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,Arial,sans-serif;
+}
+.page,.page *{box-sizing:border-box}
+.page{background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;overflow-x:clip;-webkit-text-size-adjust:100%}
+.page h1,.page h2,.page h3{font-family:var(--f-head);font-weight:700;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+.page p{margin:0}
+.page a{color:var(--brick);text-underline-offset:3px}
+.page svg{display:block}
+.page .nw,.page a[href^="tel:"]{white-space:nowrap}
+.page :focus-visible{outline:3px solid var(--brick);outline-offset:3px;border-radius:4px}
+.page .on-green :focus-visible,.page .plaque :focus-visible,.page .foot :focus-visible,.page .callbar :focus-visible{outline-color:var(--mustard-light)}
+.page .wrap{width:100%;max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4.2vw,44px)}
+.page .sec{padding-block:clamp(56px,8vw,104px)}
+.page .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brick);margin-bottom:12px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.page h2{font-size:clamp(29px,3.7vw,46px)}
+.page .sub{max-width:62ch;margin-top:14px;color:var(--muted);font-size:18px}
+.page .pill{display:inline-block;font-family:var(--f-body);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:none;line-height:1;padding:5px 9px 6px;border:1.5px solid var(--brick);color:var(--brick);border-radius:999px;background:var(--paper);white-space:nowrap;vertical-align:middle}
+.page .note{font-size:15px;color:var(--muted);max-width:62ch;margin-top:14px}
+.page .on-green{background:var(--green);color:var(--cream)}
+.page .on-green .eyebrow{color:var(--mustard-light)}
+.page .on-green .sub,.page .on-green .note{color:var(--on-green-muted)}
+.page .on-green a{color:var(--mustard-light)}
+.page .on-green .slip :focus-visible,.page .on-green .ticket :focus-visible{outline-color:var(--brick)}
+.page .on-green .pill{background:var(--green-deep);border-color:var(--mustard-light);color:var(--mustard-light)}
+
+/* banner + header */
+.page .banner{background:var(--ink);color:var(--cream);font-size:13px;line-height:1.35;text-align:center;padding:8px 16px}
+.page .head{border-bottom:1px solid var(--line)}
+.page .head-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding-block:10px}
+.page .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
+.page .brand svg{flex:none}
+.page .brand-t{display:flex;flex-direction:column;min-width:0}
+.page .brand-n{font-family:var(--f-head);font-weight:700;font-size:18px;line-height:1.1}
+.page .brand-s{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.page .nav{display:none;gap:26px}
+.page .nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:16px;padding:8px 0;border-bottom:2px solid transparent}
+.page .nav a:hover{border-bottom-color:var(--mustard)}
+.page .tel-top{display:inline-flex;align-items:center;gap:8px;flex:none;font-weight:700;font-size:16px;color:var(--ink);text-decoration:none;border:2px solid var(--green);border-radius:999px;padding:8px 13px;white-space:nowrap;background:var(--paper)}
+.page .tel-top:hover{background:var(--green);color:var(--cream)}
+
+/* hero */
+.page .hero{padding-top:26px}
+.page .hero-grid{display:grid;gap:24px;padding-bottom:40px}
+.page .hero-txt{min-width:0}
+.page h1{font-size:clamp(35px,5.3vw,68px);line-height:1.03}
+.page h1 em{font-style:normal;color:var(--green);box-shadow:inset 0 -.22em 0 var(--mustard)}
+.page .lead{font-size:clamp(18px,1.6vw,21px);line-height:1.5;max-width:54ch;margin-top:16px;color:#2B3B32}
+.page .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:22px}
+.page .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-body);font-weight:700;font-size:18px;line-height:1.2;text-decoration:none;border:0;border-radius:10px;padding:16px 26px;cursor:pointer;min-height:54px}
+.page .btn-main{background:var(--mustard);color:var(--ink);box-shadow:0 3px 0 #9A7310}
+.page .btn-main:hover{background:#E6B535}
+.page .btn-main:active{transform:translateY(2px);box-shadow:0 1px 0 #9A7310}
+.page a.btn-main{color:var(--ink)}
+.page .tel-link{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-head);font-weight:700;font-size:23px;color:var(--green);text-decoration:none;min-height:44px}
+.page .tel-link:hover{text-decoration:underline}
+.page .tel-link small{font-family:var(--f-body);font-size:15px;font-weight:600;color:var(--muted)}
+
+/* smaltovaná tabulka s hodnocením */
+.page .plaque{position:relative;background:var(--green);color:var(--cream);border-radius:20px;padding:24px 24px 22px;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;align-items:center;box-shadow:0 3px 0 var(--green-deep),0 22px 32px -22px #14271E}
+.page .plaque::before{content:"";position:absolute;inset:7px;border:1.5px solid var(--enamel-line);border-radius:14px;pointer-events:none}
+.page .plaque-label{display:none}
+.page .plaque-num{font-family:var(--f-head);font-weight:700;font-size:76px;line-height:.86;letter-spacing:-.02em;white-space:nowrap;font-variant-numeric:lining-nums}
+.page .plaque-num span{font-size:.24em;letter-spacing:0;font-weight:600;color:var(--on-green-muted);margin-left:.15em}
+.page .plaque-body{min-width:0}
+.page .stars{width:150px;max-width:100%;height:auto}
+.page .plaque-count{font-weight:600;font-size:16px;line-height:1.3;margin-top:8px}
+.page .plaque-src{font-size:14px;line-height:1.35;margin-top:6px;color:var(--on-green-muted)}
+.page .plaque-src a{color:var(--mustard-light);font-weight:700}
+.page .arcade{width:100%;height:48px}
+
+/* služby */
+.page .svc-head{display:grid;gap:8px 56px;margin-bottom:34px}
+.page .svc-top{display:grid;gap:16px}
+.page .svc-hi{position:relative;border-radius:18px;padding:30px 28px 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 18px;align-items:start}
+.page .svc-hi::before{content:"";position:absolute;inset:7px;border:1.5px solid var(--enamel-line);border-radius:12px;pointer-events:none}
+.page .svc-hi h3{font-size:clamp(25px,2.5vw,32px)}
+.page .svc-hi p{margin-top:10px;font-size:18px;max-width:34ch}
+.page .svc-hi svg{width:76px;height:76px}
+.page .svc-a{background:var(--green);color:var(--cream)}
+.page .svc-b{background:var(--mustard);color:var(--ink)}
+.page .svc-b::before{border-color:#7A5B0A}
+.page .tag{display:inline-block;margin-top:18px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 11px;border-radius:5px;line-height:1}
+.page .svc-a .tag{background:var(--mustard);color:var(--ink)}
+.page .svc-b .tag{background:var(--ink);color:var(--cream)}
+.page .svc-list{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:0 36px}
+.page .svc-list li{border-top:2px solid var(--ink);padding:16px 0 22px;min-width:0}
+.page .svc-row{display:flex;align-items:baseline;gap:10px}
+.page .svc-row h3{font-size:23px}
+.page .svc-row i{flex:1;min-width:16px;border-bottom:2px dotted var(--green-soft);transform:translateY(-4px)}
+.page .svc-row b{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);white-space:nowrap}
+.page .svc-list p{margin-top:6px;color:var(--muted)}
+.page .svc-more{margin-top:8px;font-weight:600}
+
+/* lístek přání */
+.page .slip-grid{display:grid;gap:32px}
+.page .slip-intro,.page .slip-aside{min-width:0}
+.page .slip-how{list-style:none;margin:0;padding:0;display:grid;gap:12px;max-width:46ch}
+.page .slip-how li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start}
+.page .slip-how svg{margin-top:2px}
+.page .slip-direct{margin-top:28px;padding-top:22px;border-top:1px solid var(--green-soft);display:none;gap:6px}
+.page .slip-direct a{font-family:var(--f-head);font-weight:700;font-size:25px;text-decoration:none;color:var(--cream);overflow-wrap:anywhere;display:inline-flex;align-items:center;gap:10px;min-height:40px}
+.page .slip-direct a:hover{text-decoration:underline}
+.page .slip-direct a.mail{font-size:20px}
+.page .slip-shadow{filter:drop-shadow(0 18px 22px #0C2218);min-width:0}
+.page .slip{background:var(--paper);color:var(--ink);padding:36px clamp(18px,4vw,36px) 38px}
+.page .slip,.page .ticket{--z:8px;
+  -webkit-mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/calc(2*var(--z)) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) 51% repeat-x;
+  mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/calc(2*var(--z)) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) 51% repeat-x}
+.page .slip-top{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:10px 16px}
+.page .slip-top h3{font-size:30px;letter-spacing:.06em;text-transform:uppercase}
+.page .slip-top p{font-size:14px;color:var(--muted);margin-top:4px}
+.page .stamp{font-family:var(--f-head);font-weight:700;font-size:13px;line-height:1.15;letter-spacing:.12em;text-transform:uppercase;color:var(--brick);border:2.5px solid var(--brick);border-radius:7px;padding:6px 10px;transform:rotate(-5deg);text-align:center}
+.page .slip hr{border:0;border-top:2px dashed var(--line);margin:20px 0}
+.page .slip fieldset{border:0;margin:0;padding:0;min-width:0}
+.page .slip legend,.page .lbl{display:block;padding:0;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.page .lbl small{font-weight:600;letter-spacing:0;text-transform:none;color:var(--muted);font-size:14px}
+.page .chks{display:grid;gap:0 24px}
+.page .chk{display:flex;align-items:center;gap:12px;min-height:46px;padding:6px 2px;cursor:pointer;border-bottom:1px dashed var(--line);font-family:var(--f-head);font-weight:600;font-size:19px;line-height:1.2}
+.page .chk input{-webkit-appearance:none;appearance:none;flex:none;width:26px;height:26px;margin:0;border:2px solid var(--ink);border-radius:4px;background:#FFFFFF center/20px no-repeat;cursor:pointer}
+.page .chk input:checked{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 10.5l4.6 4.8L17 4' fill='none' stroke='%23A6452C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.page .chk:hover input{border-color:var(--brick)}
+.page .fields{display:grid;gap:16px;margin-top:20px}
+.page .f{min-width:0}
+.page .slip input[type=text],.page .slip input[type=tel]{width:100%;font-family:var(--f-body);font-size:18px;line-height:1.3;color:var(--ink);background:#FFFFFF;border:1.5px solid var(--line);border-bottom:2.5px solid var(--ink);border-radius:5px 5px 0 0;padding:11px 12px;min-height:48px}
+.page .slip input::placeholder{color:#6B776F;opacity:1}
+.page .slip input[type=text]:focus,.page .slip input[type=tel]:focus{border-color:var(--green);border-bottom-color:var(--brick)}
+.page .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.page .chip{font-family:var(--f-body);font-size:15px;font-weight:600;color:var(--green);background:var(--cream);border:1.5px solid var(--green-soft);border-radius:999px;padding:7px 13px;cursor:pointer;min-height:36px}
+.page .chip:hover{background:var(--green);color:var(--cream)}
+.page .veta-box{background:var(--cream);border:2px solid var(--green);border-radius:8px;padding:16px 18px 18px}
+.page .veta{font-family:var(--f-head);font-weight:500;font-size:20px;line-height:1.4;overflow-wrap:anywhere}
+.page .veta::before{content:"„"}
+.page .veta::after{content:"“"}
+.page .veta-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:14px}
+.page .btn-copy{min-height:48px;padding:12px 20px;font-size:17px}
+.page .status{font-size:15px;font-weight:700;color:var(--green);min-height:1.4em}
+.page .via{display:grid;gap:8px;margin-top:16px}
+.page .via a{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;color:var(--ink);text-decoration:none;border:1.5px solid var(--line);border-radius:8px;padding:11px 14px;background:#FFFFFF;min-width:0;overflow-wrap:anywhere}
+.page .via a:hover{border-color:var(--green)}
+.page .via svg{flex:none;color:var(--brick)}
+.page .send-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:22px}
+.page .btn-ghost{background:var(--green);color:var(--cream);min-height:48px;padding:12px 22px;font-size:17px}
+.page .btn-ghost:hover{background:var(--green-deep)}
+.page .form-note{margin-top:14px;font-size:15px;font-weight:600;color:var(--ink);background:#F3E3B4;border-radius:6px;padding:11px 13px}
+.page .arcade-foot{margin-top:clamp(48px,7vw,88px)}
+.page .sec.slip-sec{padding-bottom:0}
+
+/* důvěra */
+.page .facts{display:grid;margin-top:34px;border-top:3px solid var(--ink)}
+.page .fact{padding:24px 0 26px;border-bottom:1px solid var(--line);min-width:0}
+.page .fact-big{font-family:var(--f-head);font-weight:700;font-size:clamp(28px,3vw,36px);line-height:1.05;color:var(--green)}
+.page .fact-big.num{font-size:64px;line-height:.9;display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px}
+.page .fact-big.num span{font-size:20px;font-weight:600;color:var(--muted)}
+.page .fact .stars{margin-top:10px;width:130px}
+.page .fact p.txt{margin-top:10px;max-width:38ch}
+.page .fact p.src{margin-top:8px;font-size:15px;color:var(--muted)}
+.page .fact p.src a{font-weight:700}
+
+/* postup */
+.page .how{background:var(--cream-deep)}
+.page .steps{list-style:none;margin:34px 0 0;padding:0;display:grid}
+.page .step{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;padding:22px 0;border-top:1px solid var(--line);align-items:start}
+.page .step-n{width:56px;height:68px;border-radius:28px 28px 0 0;background:var(--green);color:var(--cream);display:grid;place-items:center;font-family:var(--f-head);font-weight:700;font-size:30px;line-height:1;padding-top:8px}
+.page .step h3{font-size:24px}
+.page .step p{margin-top:8px;max-width:44ch;color:#2B3B32}
+
+/* galerie */
+.page .gal{display:grid;gap:14px;margin-top:32px;grid-template-columns:1fr 1fr}
+.page .spot{border:2px dashed var(--green-soft);border-radius:10px;background:var(--paper);min-height:170px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;min-width:0}
+.page .spot b{font-family:var(--f-head);font-size:19px;line-height:1.2;color:var(--green)}
+.page .spot span{font-size:14px;line-height:1.35;color:var(--muted)}
+.page .spot.s1{grid-column:1/-1;min-height:220px}
+.page .spot.s4{grid-column:1/-1}
+
+/* otázky */
+.page .faq-grid{display:grid;gap:28px}
+.page .faq{border-top:3px solid var(--ink)}
+.page .faq details{border-bottom:1px solid var(--line)}
+.page .faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 2px;font-family:var(--f-head);font-weight:700;font-size:21px;line-height:1.25;min-height:56px}
+.page .faq summary::-webkit-details-marker{display:none}
+.page .faq summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M8 14h12M14 8v12' stroke='%23F7F2E3' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center/28px no-repeat}
+.page .faq details[open] summary::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M8 14h12' stroke='%23F7F2E3' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E")}
+.page .faq summary:hover{color:var(--green)}
+.page .faq details p{padding:0 2px 20px;max-width:60ch;color:#2B3B32}
+
+/* kontakt */
+.page .kon-grid{display:grid;gap:36px}
+.page .kon-list{margin:28px 0 0;padding:0;display:grid}
+.page .kon-list>div{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px solid var(--green-soft);align-items:start}
+.page .kon-list svg{margin-top:4px;color:var(--mustard-light)}
+.page .kon-list dt{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-green-muted)}
+.page .kon-list dd{margin:2px 0 0;font-size:18px;overflow-wrap:anywhere}
+.page .kon-list dd a.big{font-family:var(--f-head);font-weight:700;font-size:32px;line-height:1.1;color:var(--cream);text-decoration:none}
+.page .kon-list dd a.big:hover{text-decoration:underline}
+.page .kon-list dd a.mid{font-family:var(--f-head);font-weight:700;font-size:22px;color:var(--cream)}
+.page .house{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+.page .house span{font-family:var(--f-head);font-weight:700;font-size:20px;line-height:1;padding:8px 13px;border-radius:7px;font-variant-numeric:lining-nums}
+.page .house .cp{background:var(--brick);color:var(--cream);box-shadow:inset 0 0 0 2px var(--brick),inset 0 0 0 3.5px #E8C9B8}
+.page .house .co{background:var(--cream);color:var(--green);box-shadow:inset 0 0 0 2px var(--cream),inset 0 0 0 3.5px var(--green)}
+.page .house a{font-weight:700;margin-left:6px}
+.page .ticket{background:var(--paper);color:var(--ink);padding:34px clamp(18px,3vw,32px) 36px}
+.page .ticket h3{font-size:24px;letter-spacing:.05em;text-transform:uppercase}
+.page .ticket .veta{margin-top:14px;padding-top:14px;border-top:2px dashed var(--line);font-size:19px}
+.page .ticket p.small{font-size:15px;color:var(--muted);margin-top:12px}
+.page .ticket .acts{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:18px;align-items:center}
+.page .ticket .acts a.plain{font-weight:700;color:var(--brick)}
+
+/* patička + volací lišta */
+.page .foot{background:var(--ink);color:var(--cream);padding:44px 0 118px;font-size:16px}
+.page .foot-grid{display:grid;gap:22px}
+.page .foot h3{font-size:22px}
+.page .foot p{color:#C5D0C6}
+.page .foot a{color:var(--mustard-light)}
+.page .foot .legal{margin-top:26px;padding-top:18px;border-top:1px solid #33483D;font-size:14px;display:grid;gap:6px}
+.page .callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 18px -10px #000000}
+.page .callbar a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--mustard);color:var(--ink);font-weight:700;font-size:19px;text-decoration:none;border-radius:10px;min-height:52px}
+
+@media (min-width:560px){
+  .page .chks{grid-template-columns:1fr 1fr}
+  .page .fields.two{grid-template-columns:1fr 1fr}
+  .page .via{grid-template-columns:auto minmax(0,1fr)}
+  .page .gal{grid-template-columns:repeat(4,1fr)}
+  .page .spot.s1{grid-column:span 2;grid-row:span 2}
+  .page .spot.s4{grid-column:span 2}
+}
+@media (min-width:760px){
+  .page{font-size:18px}
+  .page .svc-top{grid-template-columns:1fr 1fr;gap:22px}
+  .page .svc-hi{padding:38px 36px 34px}
+  .page .svc-hi svg{width:96px;height:96px}
+  .page .facts{grid-template-columns:1.15fr 1fr 1fr}
+  .page .fact{padding:28px 32px 6px;border-bottom:0;border-left:1px solid var(--line)}
+  .page .fact:first-child{padding-left:0;border-left:0}
+  .page .foot-grid{grid-template-columns:1.3fr 1fr 1fr}
+}
+@media (min-width:900px){
+  .page .callbar{display:none}
+  .page .foot{padding-bottom:44px}
+  .page .banner{font-size:14px}
+  .page .head-in{min-height:78px}
+  .page .brand-n{font-size:21px}
+  .page .tel-top{font-size:18px;padding:10px 18px}
+  .page .hero{padding-top:0}
+  .page .hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(330px,.75fr);gap:clamp(36px,5vw,76px);align-items:center;padding-block:60px 76px}
+  .page .plaque{display:block;padding:46px 46px 40px;border-radius:30px}
+  .page .plaque::before{inset:11px;border-radius:21px;border-width:2px}
+  .page .plaque::after{content:"";position:absolute;inset:0;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Ccircle cx='6' cy='6' r='5' fill='%23DCD2B0' stroke='%230E2A1E'/%3E%3Cpath d='M3.3 7.6l5.4-3.2' stroke='%230E2A1E' stroke-width='1.3' stroke-linecap='round'/%3E%3C/svg%3E") 21px 50%/12px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Ccircle cx='6' cy='6' r='5' fill='%23DCD2B0' stroke='%230E2A1E'/%3E%3Cpath d='M3.3 7.6l5.4-3.2' stroke='%230E2A1E' stroke-width='1.3' stroke-linecap='round'/%3E%3C/svg%3E") calc(100% - 21px) 50%/12px no-repeat}
+  .page .plaque-label{display:block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mustard-light);margin-bottom:14px}
+  .page .plaque-num{font-size:clamp(150px,14vw,196px)}
+  .page .plaque-num span{font-size:.17em}
+  .page .stars{width:230px;margin-top:18px}
+  .page .plaque-count{font-size:21px;margin-top:16px;font-family:var(--f-head)}
+  .page .plaque-src{font-size:15px;margin-top:14px;padding-top:14px;border-top:1px solid var(--green-soft)}
+  .page .svc-head{grid-template-columns:minmax(0,1fr) minmax(0,.8fr);align-items:end}
+  .page .slip-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-rows:auto 1fr;gap:28px clamp(36px,5vw,72px);align-items:start}
+  .page .slip-grid>.slip-shadow{grid-column:2;grid-row:1/3}
+  .page .slip-aside{grid-column:1;grid-row:2;position:sticky;top:28px}
+  .page .slip-direct{display:grid}
+  .page .steps{grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:6px solid var(--green);margin-top:44px}
+  .page .step{display:block;text-align:center;background:var(--cream);border:3px solid var(--green);border-bottom:0;border-radius:999px 999px 0 0;padding:54px 40px 44px}
+  .page .step+.step{margin-left:-3px}
+  .page .step-n{margin:0 auto 22px;background:var(--mustard);color:var(--ink);width:64px;height:76px;border-radius:32px 32px 0 0;font-size:34px}
+  .page .step h3{font-size:27px}
+  .page .step p{margin-inline:auto;max-width:30ch}
+  .page .faq-grid{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:64px}
+  .page .kon-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,6vw,88px)}
+  .page .slip-shadow.tk{align-self:center}
+}
+@media (min-width:1040px){ .page .nav{display:flex} }
+@media (min-width:1160px){ .page .svc-list{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:420px){ .page .brand-s{display:none} .page .tel-top{font-size:15px;padding:8px 11px} .page .brand-n{font-size:17px} }
+@media (prefers-reduced-motion:no-preference){
+  .page .btn,.page .chip,.page .tel-top,.page .via a{transition:background-color .15s,color .15s,border-color .15s,transform .1s}
+}
+</style>
+
+<div class="page" id="top">
+  <div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Květoslava Lalíková – stříhání psů</div>
+
+  <div class="head" role="banner">
+    <div class="wrap head-in">
+      <a class="brand" href="#top" aria-label="Květoslava Lalíková, stříhání psů, Poruba">
+        <svg width="38" height="40" viewBox="0 0 38 40" aria-hidden="true"><path d="M2 39V18a17 17 0 0 1 34 0v21z" fill="#1F4D3A"/><circle cx="13.5" cy="30" r="3.6" fill="none" stroke="#F7F2E3" stroke-width="2"/><circle cx="24.5" cy="30" r="3.6" fill="none" stroke="#F7F2E3" stroke-width="2"/><path d="M15.4 27 24 10M22.6 27 14 10" fill="none" stroke="#F7F2E3" stroke-width="2.2" stroke-linecap="round"/><circle cx="19" cy="20" r="1.6" fill="#D9A520"/></svg>
+        <span class="brand-t"><span class="brand-n">Květoslava Lalíková</span><span class="brand-s">Stříhání psů · Poruba</span></span>
+      </a>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#sluzby">Služby</a><a href="#listek">Lístek přání</a><a href="#postup">Jak to probíhá</a><a href="#otazky">Otázky</a><a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="tel-top" href="tel:+420603948167"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h4l2 5.5-2.8 2a12.5 12.5 0 0 0 4.8 4.8l2-2.8 5.5 2v4a2.5 2.5 0 0 1-2.5 2.5C10.6 20.5 3.5 13.4 3.5 5A2.5 2.5 0 0 1 6 2.5z" fill="currentColor"/></svg>603 948 167</a>
+    </div>
+  </div>
+
+  <main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-txt">
+        <p class="eyebrow">Stříhání psů · Ostrava-Poruba</p>
+        <h1>Řekněte, jak má Váš pes vypadat. V&nbsp;Porubě ho <em>tak ostříhám</em>.</h1>
+        <p class="lead">Upravuji srst všech plemen i kříženců. Střih podle Vašeho přání, koupání, ošetření poškozené srsti, drápky a uši na adrese Ukrajinská 1536/28.</p>
+        <div class="cta-row">
+          <a class="btn btn-main" href="#listek">Objednat termín</a>
+          <a class="tel-link" href="tel:+420603948167"><small>nebo volejte</small> 603 948 167</a>
+        </div>
+      </div>
+
+      <aside class="plaque" aria-label="Hodnocení na Firmy.cz">
+        <p class="plaque-label">Hodnocení na Firmy.cz</p>
+        <p class="plaque-num" aria-label="4,3 z 5">4,3<span aria-hidden="true">z 5</span></p>
+        <div class="plaque-body">
+          <svg class="stars" viewBox="0 0 120 24" role="img" aria-label="4,3 z 5 hvězdiček">
+            <defs>
+              <path id="st" d="M12 .6l3.12 8.31 8.86.4-6.94 5.53 2.37 8.55L12 18.5l-7.41 4.89 2.37-8.55L.02 9.31l8.86-.4z"/>
+              <clipPath id="cut86"><rect x="0" y="0" width="103.2" height="24"/></clipPath>
+            </defs>
+            <g fill="#47735F"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></g>
+            <g fill="#D9A520" clip-path="url(#cut86)"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></g>
+          </svg>
+          <p class="plaque-count">ze 17 hodnocení na Firmy.cz</p>
+          <p class="plaque-src"><a href="https://www.firmy.cz/detail/2131368-kvetoslava-lalikova-ostrava-poruba.html" target="_blank" rel="noopener">Hodnocení na Firmy.cz</a>, <span class="nw">stav k 9. 10. 2026</span></p>
+        </div>
+      </aside>
+    </div>
+    <svg class="arcade" width="100%" height="48" aria-hidden="true" focusable="false">
+      <defs><pattern id="arc" width="60" height="48" patternUnits="userSpaceOnUse"><rect width="60" height="48" fill="#1F4D3A"/><path d="M7 48V30a23 23 0 0 1 46 0v18z" fill="#F7F2E3"/><rect width="60" height="4" fill="#173A2C"/></pattern></defs>
+      <rect width="100%" height="48" fill="url(#arc)"/>
+    </svg>
+  </section>
+
+  <section class="sec" id="sluzby">
+    <div class="wrap">
+      <div class="svc-head">
+        <div>
+          <p class="eyebrow">Služby a ceny</p>
+          <h2>Co Vašemu psovi udělám</h2>
+          <p class="sub">Upravuji srst všech plemen i kříženců. Vyberete si jen to, co Váš pes potřebuje.</p>
+        </div>
+        <p class="note">Seznam služeb je z veřejného zápisu na Firmy.cz. Popisky pod názvy jsou <span class="pill">ukázkový text</span>. Ceny zápis neuvádí, proto je u všeho Cena na dotaz.</p>
+      </div>
+
+      <div class="svc-top">
+        <article class="svc-hi svc-a">
+          <div>
+            <h3>Střih podle Vašeho přání</h3>
+            <p>Řeknete mi, jak má pes vypadat, a podle toho stříhám. Nakrátko na léto, nebo jen zarovnat.</p>
+            <span class="tag">Cena na dotaz</span>
+          </div>
+          <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="30" cy="76" r="11" fill="none" stroke="#F7F2E3" stroke-width="5"/><circle cx="66" cy="76" r="11" fill="none" stroke="#F7F2E3" stroke-width="5"/><path d="M35.5 66 64 10M60.5 66 32 10" fill="none" stroke="#F7F2E3" stroke-width="6" stroke-linecap="round"/><circle cx="48" cy="41.5" r="4" fill="#D9A520"/></svg>
+        </article>
+        <article class="svc-hi svc-b">
+          <div>
+            <h3>Ošetření poškozené srsti</h3>
+            <p>Suchou, zacuchanou nebo polámanou srst ošetřím speciálními přípravky.</p>
+            <span class="tag">Cena na dotaz</span>
+          </div>
+          <svg viewBox="0 0 96 96" aria-hidden="true"><rect x="20" y="36" width="38" height="52" rx="8" fill="none" stroke="#14271E" stroke-width="5"/><rect x="31" y="20" width="16" height="16" fill="none" stroke="#14271E" stroke-width="5"/><rect x="27" y="9" width="24" height="11" rx="3" fill="#14271E"/><rect x="28" y="52" width="22" height="18" rx="3" fill="#1F4D3A"/><path d="M78 40c-6 8-10 13.5-10 18.5a10 10 0 0 0 20 0c0-5-4-10.5-10-18.5z" fill="#F7F2E3" stroke="#14271E" stroke-width="4" stroke-linejoin="round"/><path d="M78 14v10M73 19h10" stroke="#14271E" stroke-width="4" stroke-linecap="round"/></svg>
+        </article>
+      </div>
+
+      <ul class="svc-list">
+        <li><div class="svc-row"><h3>Koupání</h3><i></i><b>Cena na dotaz</b></div><p>Vykoupání a vysušení, aby se srst dobře česala a stříhala.</p></li>
+        <li><div class="svc-row"><h3>Stříhání drápků</h3><i></i><b>Cena na dotaz</b></div><p>Zkrácení drápků, aby pes pohodlně došlapoval.</p></li>
+        <li><div class="svc-row"><h3>Čištění uší</h3><i></i><b>Cena na dotaz</b></div><p>Šetrné vyčištění uší a srsti kolem nich.</p></li>
+      </ul>
+      <p class="svc-more">Nevíte, co vybrat? <a href="#listek">Zaškrtněte to v lístku přání</a> a cenu se dozvíte po telefonu.</p>
+    </div>
+  </section>
+
+  <section class="sec slip-sec on-green" id="listek">
+    <div class="wrap slip-grid">
+      <div class="slip-intro">
+        <p class="eyebrow">Objednání termínu</p>
+        <h2>Lístek přání: napište, jak má Váš pes vypadat</h2>
+        <p class="sub">Zaškrtněte, co pes potřebuje, a doplňte plemeno a přání. Lístek z toho složí hotovou větu.</p>
+      </div>
+      <div class="slip-shadow">
+        <form class="slip" id="lp-form" novalidate>
+          <div class="slip-top">
+            <div>
+              <h3>Lístek přání</h3>
+              <p>Květoslava Lalíková · stříhání psů · <span class="nw">Ostrava-Poruba</span></p>
+            </div>
+            <span class="stamp" aria-hidden="true">Podle přání<br>majitele</span>
+          </div>
+          <hr>
+          <fieldset>
+            <legend>Co pes potřebuje</legend>
+            <div class="chks">
+              <label class="chk" for="lp-s1"><input type="checkbox" id="lp-s1" value="střih podle přání" checked>Střih podle přání</label>
+              <label class="chk" for="lp-s2"><input type="checkbox" id="lp-s2" value="koupání" checked>Koupání</label>
+              <label class="chk" for="lp-s3"><input type="checkbox" id="lp-s3" value="ošetření poškozené srsti">Ošetření poškozené srsti</label>
+              <label class="chk" for="lp-s4"><input type="checkbox" id="lp-s4" value="stříhání drápků">Stříhání drápků</label>
+              <label class="chk" for="lp-s5"><input type="checkbox" id="lp-s5" value="čištění uší">Čištění uší</label>
+            </div>
+          </fieldset>
+          <div class="fields">
+            <div class="f">
+              <label class="lbl" for="lp-plemeno">Plemeno nebo kříženec</label>
+              <input type="text" id="lp-plemeno" name="plemeno" value="pudl" maxlength="60" autocomplete="off" placeholder="například pudl, kříženec teriéra">
+            </div>
+            <div class="f">
+              <label class="lbl" for="lp-prani">Vaše přání ke střihu</label>
+              <input type="text" id="lp-prani" name="prani" value="nakrátko na léto" maxlength="140" autocomplete="off" placeholder="například jen zarovnat">
+              <div class="chips" aria-label="Rychlé volby přání">
+                <button type="button" class="chip" id="lp-tip1" data-wish="nakrátko na léto">nakrátko na léto</button>
+                <button type="button" class="chip" id="lp-tip2" data-wish="jen zarovnat">jen zarovnat</button>
+                <button type="button" class="chip" id="lp-tip3" data-wish="delší, jen upravit tvar">delší, jen upravit tvar</button>
+              </div>
+            </div>
+          </div>
+          <div class="fields two">
+            <div class="f">
+              <label class="lbl" for="lp-jmeno">Vaše jméno <small>(nepovinné)</small></label>
+              <input type="text" id="lp-jmeno" name="jmeno" maxlength="60" autocomplete="name" placeholder="jméno a příjmení">
+            </div>
+            <div class="f">
+              <label class="lbl" for="lp-telefon">Váš telefon <small>(nepovinné)</small></label>
+              <input type="tel" id="lp-telefon" name="telefon" maxlength="20" autocomplete="tel" placeholder="kam Vám zavolat zpět">
+            </div>
+          </div>
+          <hr>
+          <div class="veta-box">
+            <p class="lbl" id="lp-veta-lbl">Hotová věta</p>
+            <p class="veta" id="lp-veta" aria-live="polite" aria-labelledby="lp-veta-lbl">Dobrý den, chtěl(a) bych objednat psa na střih podle přání a koupání. Plemeno: pudl. Přání: nakrátko na léto.</p>
+            <div class="veta-acts">
+              <button type="button" class="btn btn-main btn-copy" id="lp-kopie">Zkopírovat větu</button>
+              <span class="status" id="lp-stav" role="status"></span>
+            </div>
+          </div>
+          <div class="via">
+            <a href="tel:+420603948167"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h4l2 5.5-2.8 2a12.5 12.5 0 0 0 4.8 4.8l2-2.8 5.5 2v4a2.5 2.5 0 0 1-2.5 2.5C10.6 20.5 3.5 13.4 3.5 5A2.5 2.5 0 0 1 6 2.5z" fill="currentColor"/></svg>603 948 167</a>
+            <a href="mailto:certiklalik@seznam.cz" id="lp-mail"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 7l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Vložit větu do e-mailu na certiklalik@seznam.cz</a>
+          </div>
+          <div class="send-row">
+            <button type="submit" class="btn btn-ghost" id="lp-odeslat">Odeslat lístek z webu</button>
+          </div>
+          <p class="form-note" id="lp-note" role="status" hidden>Toto je ukázka formuláře. V ostré verzi webu přijde zpráva na certiklalik@seznam.cz.</p>
+        </form>
+      </div>
+      <div class="slip-aside">
+        <ul class="slip-how">
+          <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="3" width="22" height="22" rx="4" fill="none" stroke="#EDC65B" stroke-width="2.4"/><path d="M8 14.5l4 4 8-9.5" fill="none" stroke="#EDC65B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Větu přečtete do telefonu a nic nezapomenete.</span></li>
+          <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="6" width="22" height="16" rx="3" fill="none" stroke="#EDC65B" stroke-width="2.4"/><path d="M4 8l10 8 10-8" fill="none" stroke="#EDC65B" stroke-width="2.4" stroke-linejoin="round"/></svg><span>Nebo ji jedním klepnutím zkopírujete do <span class="nw">e-mailu</span>.</span></li>
+        </ul>
+        <div class="slip-direct">
+          <a href="tel:+420603948167">603 948 167</a>
+          <a class="mail" href="mailto:certiklalik@seznam.cz">certiklalik@seznam.cz</a>
+        </div>
+        <p class="note">Lístek přání je navržená funkce Vašeho webu. Vyplněný příklad v něm je <span class="pill">ukázkový text</span>.</p>
+      </div>
+
+    </div>
+    <svg class="arcade arcade-foot" width="100%" height="48" aria-hidden="true" focusable="false"><rect width="100%" height="48" fill="url(#arc)"/></svg>
+  </section>
+
+  <section class="sec" id="duvera">
+    <div class="wrap">
+      <p class="eyebrow">Ověřené údaje</p>
+      <h2>Co si můžete ověřit dřív, než zavoláte</h2>
+      <div class="facts">
+        <div class="fact">
+          <p class="fact-big num">4,3 <span>z 5 na Firmy.cz</span></p>
+          <svg class="stars" viewBox="0 0 120 24" role="img" aria-label="4,3 z 5 hvězdiček">
+            <defs><clipPath id="cut86b"><rect x="0" y="0" width="103.2" height="24"/></clipPath></defs>
+            <g fill="#D3C7A0"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></g>
+            <g fill="#D9A520" clip-path="url(#cut86b)"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></g>
+          </svg>
+          <p class="txt">Průměr ze 17 hodnocení.</p>
+          <p class="src"><a href="https://www.firmy.cz/detail/2131368-kvetoslava-lalikova-ostrava-poruba.html" target="_blank" rel="noopener">Hodnocení na Firmy.cz</a>, <span class="nw">stav k 9. 10. 2026</span></p>
+        </div>
+        <div class="fact">
+          <p class="fact-big">Všechna plemena i kříženci</p>
+          <p class="txt">Upravuji srst všech plemen i kříženců. Střih se řídí přáním majitele psa.</p>
+        </div>
+        <div class="fact">
+          <p class="fact-big">Domluva po telefonu</p>
+          <p class="txt">Termín si domluvíte na čísle <a href="tel:+420603948167">603 948 167</a> nebo <span class="nw">e-mailem</span>.</p>
+          <p class="src">Živnost na jméno Květoslava Lalíková, <span class="nw">IČO 68201559</span>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec how" id="postup">
+    <div class="wrap">
+      <p class="eyebrow">Jak to probíhá <span class="pill">ukázkový text</span></p>
+      <h2>Od přání k ostříhanému psovi ve třech krocích</h2>
+      <ol class="steps">
+        <li class="step"><span class="step-n" aria-hidden="true">1</span><div><h3>Napíšete přání</h3><p>Vyplníte lístek přání nebo rovnou zavoláte na 603 948 167. Stačí plemeno a jak má pes vypadat.</p></div></li>
+        <li class="step"><span class="step-n" aria-hidden="true">2</span><div><h3>Domluvíme termín</h3><p>Telefonem nebo <span class="nw">e-mailem</span> si potvrdíme den a hodinu. Cenu se dozvíte při domluvě.</p></div></li>
+        <li class="step"><span class="step-n" aria-hidden="true">3</span><div><h3>Přivedete psa do Poruby</h3><p>Na Ukrajinskou 1536/28. Stříhám podle Vašeho lístku a domů jde pes upravený tak, jak jste chtěli.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="galerie">
+    <div class="wrap">
+      <p class="eyebrow">Ukázky práce</p>
+      <h2>Fotky psů před střihem a po něm</h2>
+      <p class="sub">Místa na fotky jsou připravená. Pošlete nám je a doplníme je do webu.</p>
+      <div class="gal">
+        <div class="spot s1"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="12" width="36" height="26" rx="4" fill="none" stroke="#1F4D3A" stroke-width="2.6"/><path d="M15 12l3-5h8l3 5" fill="none" stroke="#1F4D3A" stroke-width="2.6" stroke-linejoin="round"/><circle cx="22" cy="25" r="7" fill="none" stroke="#A6452C" stroke-width="2.6"/></svg><b>Sem přijde Vaše fotka</b><span>Tip: stejný pes před střihem a po něm</span></div>
+        <div class="spot s2"><svg width="36" height="36" viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="12" width="36" height="26" rx="4" fill="none" stroke="#1F4D3A" stroke-width="2.6"/><path d="M15 12l3-5h8l3 5" fill="none" stroke="#1F4D3A" stroke-width="2.6" stroke-linejoin="round"/><circle cx="22" cy="25" r="7" fill="none" stroke="#A6452C" stroke-width="2.6"/></svg><b>Sem přijde Vaše fotka</b><span>Tip: střih podle přání</span></div>
+        <div class="spot s3"><svg width="36" height="36" viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="12" width="36" height="26" rx="4" fill="none" stroke="#1F4D3A" stroke-width="2.6"/><path d="M15 12l3-5h8l3 5" fill="none" stroke="#1F4D3A" stroke-width="2.6" stroke-linejoin="round"/><circle cx="22" cy="25" r="7" fill="none" stroke="#A6452C" stroke-width="2.6"/></svg><b>Sem přijde Vaše fotka</b><span>Tip: pes po koupání</span></div>
+        <div class="spot s4"><svg width="36" height="36" viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="12" width="36" height="26" rx="4" fill="none" stroke="#1F4D3A" stroke-width="2.6"/><path d="M15 12l3-5h8l3 5" fill="none" stroke="#1F4D3A" stroke-width="2.6" stroke-linejoin="round"/><circle cx="22" cy="25" r="7" fill="none" stroke="#A6452C" stroke-width="2.6"/></svg><b>Sem přijde Vaše fotka</b><span>Tip: kde v Porubě stříháte</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec how" id="otazky">
+    <div class="wrap faq-grid">
+      <div>
+        <p class="eyebrow">Časté otázky <span class="pill">ukázkový text</span></p>
+        <h2>Na co se majitelé psů ptají</h2>
+        <p class="sub">Nenašli jste odpověď? Zavolejte na <a href="tel:+420603948167">603 948 167</a>.</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Kolik stříhání stojí?</summary>
+          <p>Cena záleží na velikosti psa, stavu srsti a na tom, co všechno chcete udělat. Zavolejte nebo pošlete lístek přání a cenu se dozvíte při domluvě termínu.</p>
+        </details>
+        <details>
+          <summary>Stříháte i křížence a velká plemena?</summary>
+          <p>Ano. Upravuji srst všech plemen i kříženců. Do lístku napište plemeno nebo aspoň velikost psa, ať si na něj vyhradím dost času.</p>
+        </details>
+        <details>
+          <summary>Jak se objednám?</summary>
+          <p>Telefonem na 603 948 167 nebo e-mailem na certiklalik@seznam.cz. Když předem vyplníte lístek přání, máte větu k objednání hotovou.</p>
+        </details>
+        <details>
+          <summary>Co když má pes zacuchanou nebo poškozenou srst?</summary>
+          <p>Napište to do přání. Na poškozenou srst používám speciální přípravky a podle jejího stavu Vám řeknu, jaký střih dává smysl.</p>
+        </details>
+        <details>
+          <summary>Můžu přijít jen na drápky nebo čištění uší?</summary>
+          <p>Zaškrtněte v lístku jen stříhání drápků nebo čištění uší a termín si domluvíme po telefonu.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec on-green" id="kontakt">
+    <div class="wrap kon-grid">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2>Objednejte termín telefonem nebo <span class="nw">e-mailem</span></h2>
+        <dl class="kon-list">
+          <div><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h4l2 5.5-2.8 2a12.5 12.5 0 0 0 4.8 4.8l2-2.8 5.5 2v4a2.5 2.5 0 0 1-2.5 2.5C10.6 20.5 3.5 13.4 3.5 5A2.5 2.5 0 0 1 6 2.5z" fill="currentColor"/></svg>
+            <div><dt>Telefon</dt><dd><a class="big" href="tel:+420603948167">603 948 167</a></dd></div></div>
+          <div><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 7l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            <div><dt>E-mail</dt><dd><a class="mid" href="mailto:certiklalik@seznam.cz">certiklalik@seznam.cz</a></dd></div></div>
+          <div><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5a7 7 0 0 0-14 0C5 14.8 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>
+            <div><dt>Adresa</dt><dd>Ukrajinská 1536/28, <span class="nw">708 00 Ostrava-Poruba</span>
+              <div class="house"><span class="cp" aria-hidden="true">1536</span><span class="co" aria-hidden="true">28</span><a href="https://mapy.cz/zakladni?q=Ukrajinsk%C3%A1%201536%2F28%2C%20708%2000%20Ostrava-Poruba" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></div></dd></div></div>
+          <div><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5.5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><dt>Otevírací doba</dt><dd>Otevírací dobu doplníme podle Vás <span class="pill">ukázkový text</span><br>Objednání telefonem nebo <span class="nw">e-mailem</span>.</dd></div></div>
+        </dl>
+      </div>
+      <div class="slip-shadow tk"><div class="ticket">
+        <h3>Váš lístek přání</h3>
+        <p class="veta" id="k-veta">Dobrý den, chtěl(a) bych objednat psa na střih podle přání a koupání. Plemeno: pudl. Přání: nakrátko na léto.</p>
+        <p class="small">Tohle je věta z lístku přání. Upravte ji podle svého psa, doplňte jméno a telefon a pak zavolejte nebo napište.</p>
+        <div class="acts">
+          <a class="btn btn-main" href="#listek">Upravit lístek přání</a>
+          <a class="plain" href="tel:+420603948167">Zavolat 603 948 167</a>
+        </div>
+      </div></div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <h3>Květoslava Lalíková</h3>
+          <p>Stříhání psů, péče o domácí zvířata</p>
+          <p>IČO: 68201559</p>
+        </div>
+        <div>
+          <p>Ukrajinská 1536/28<br>708 00 Ostrava-Poruba</p>
+        </div>
+        <div>
+          <p><a href="tel:+420603948167">603 948 167</a><br><a href="mailto:certiklalik@seznam.cz">certiklalik@seznam.cz</a></p>
+        </div>
+      </div>
+      <div class="legal">
+        <p><a href="https://www.firmy.cz/detail/2131368-kvetoslava-lalikova-ostrava-poruba.html" target="_blank" rel="noopener">Údaje z veřejného zápisu firmy na Firmy.cz</a></p>
+        <p>Nezávazný návrh webu. Není to oficiální stránka firmy.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="callbar">
+    <a href="tel:+420603948167"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h4l2 5.5-2.8 2a12.5 12.5 0 0 0 4.8 4.8l2-2.8 5.5 2v4a2.5 2.5 0 0 1-2.5 2.5C10.6 20.5 3.5 13.4 3.5 5A2.5 2.5 0 0 1 6 2.5z" fill="currentColor"/></svg>Zavolat 603 948 167</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var form=document.getElementById('lp-form'); if(!form) return;
+  var out=document.getElementById('lp-veta'), mirror=document.getElementById('k-veta'),
+      status=document.getElementById('lp-stav'), mail=document.getElementById('lp-mail'),
+      note=document.getElementById('lp-note'), wish=document.getElementById('lp-prani'),
+      checks=form.querySelectorAll('input[type=checkbox]'), current='';
+  function val(id){var el=document.getElementById(id);return el?el.value.replace(/\s+/g,' ').replace(/^[\s.,]+|[\s.,]+$/g,''):''}
+  function joinCz(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' a '+a[a.length-1]}
+  function compose(){
+    var picked=[];
+    for(var i=0;i<checks.length;i++){if(checks[i].checked)picked.push(checks[i].value)}
+    var s='Dobrý den, chtěl(a) bych objednat psa'+(picked.length?' na '+joinCz(picked):'')+'.';
+    var breed=val('lp-plemeno'), w=val('lp-prani'), name=val('lp-jmeno'), tel=val('lp-telefon');
+    if(breed) s+=' Plemeno: '+breed+'.';
+    if(w) s+=' Přání: '+w+'.';
+    if(name) s+=' Jméno: '+name+'.';
+    if(tel) s+=' Telefon: '+tel+'.';
+    current=s;
+    out.textContent=s;
+    if(mirror) mirror.textContent=s;
+    if(mail) mail.href='mailto:certiklalik@seznam.cz?subject='+encodeURIComponent('Objednání stříhání psa')+'&body='+encodeURIComponent(s);
+  }
+  function changed(){compose();status.textContent='';note.hidden=true}
+  form.addEventListener('input',changed);
+  form.addEventListener('change',changed);
+  form.addEventListener('click',function(e){
+    var chip=e.target.closest?e.target.closest('.chip'):null;
+    if(chip){wish.value=chip.getAttribute('data-wish');changed();}
+  });
+  function selectOut(){
+    try{var r=document.createRange();r.selectNodeContents(out);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);}catch(e){}
+  }
+  document.getElementById('lp-kopie').addEventListener('click',function(){
+    var done=function(){status.textContent='Zkopírováno'};
+    var manual=function(){selectOut();status.textContent='Věta je označená. Zkopírujte ji ručně.'};
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(current).then(done,manual);}
+      else{manual();}
+    }catch(e){manual();}
+  });
+  form.addEventListener('submit',function(e){e.preventDefault();note.hidden=false;});
+  compose();
+})();
+</script>
+</body>
+</html>

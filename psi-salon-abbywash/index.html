@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Psí salón AbbyWash</title>
+<meta name="description" content="Psí salón s myčkou pro psy v Krnově. Koupání, mléčná lázeň a stříhání menších plemen. Objednání na telefonu 603 526 658.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fredoka:wght@500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Psí salón AbbyWash",
+  "description": "Provozujeme salón s myčkou pro psy, specializujeme se na menší plemena, koupání, mléčná lázeň, stříhání Vašich psích mazlíčků.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Opavská 248/20",
+    "postalCode": "794 01",
+    "addressLocality": "Krnov",
+    "addressCountry": "CZ"
+  },
+  "telephone": "+420603526658",
+  "email": "abbywashkrnov@gmail.com",
+  "sameAs": ["https://www.facebook.com/abbywashkrnov"]
+}
+</script>
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<meta property="og:title" content="Psí salón a myčka pro psy Krnov | AbbyWash">
+
+
+<style>
+/* Layout concept: rozcestník – krátký titulek a hned pod ním dvě velké barevné dlaždice (vykoupat / ostříhat); ceník jako jeden list, mléčná lázeň jako široký pás se stoupajícími bublinami, bubliny se lehce vracejí v celé stránce. */
+:root{
+  --aqua:#12A5B5;
+  --aqua-700:#0B7684;
+  --aqua-300:#7AD0DA;
+  --aqua-200:#BDE7EC;
+  --aqua-100:#E2F5F7;
+  --deep:#063B4A;
+  --deep-900:#042B36;
+  --deep-700:#0D5062;
+  --deep-muted:#3C6370;
+  --milk:#FFFDF8;
+  --milk-200:#F3ECDD;
+  --white:#FFFFFF;
+  --pink:#FF8FA3;
+  --pink-200:#FFC7D1;
+  --pink-100:#FFECEF;
+  --font-head:"Fredoka","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --font-body:"Figtree","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --wrap:1180px;
+  --gut:18px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--milk);color:var(--deep);font-family:var(--font-body);font-size:17px;line-height:1.6}
+.page{background:var(--milk);color:var(--deep);font-family:var(--font-body);font-size:17px;line-height:1.6;overflow-wrap:break-word}
+.page svg{display:block}
+.page p{margin:0}
+.page a{color:var(--aqua-700)}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.08;margin:0;text-wrap:balance;color:var(--deep)}
+.wrap{width:100%;max-width:calc(var(--wrap) + 2 * var(--gut));margin-inline:auto;padding-inline:var(--gut)}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px;border-radius:6px}
+.on-dark :focus-visible{outline-color:var(--pink)}
+[id]{scroll-margin-top:18px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* malé štítky */
+.sample{display:inline-block;font:600 .74rem/1.2 var(--font-body);letter-spacing:.03em;padding:.3em .75em;border:1.5px dashed var(--deep-muted);border-radius:999px;color:var(--deep-muted);background:transparent;vertical-align:middle;white-space:nowrap}
+.on-dark .sample{color:var(--aqua-200);border-color:var(--aqua-300)}
+.todo{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:2px dashed var(--aqua);border-radius:14px;background:var(--aqua-100);color:var(--deep);font-size:.95rem;line-height:1.45;font-weight:600}
+.todo svg{flex:none;width:20px;height:20px;margin-top:1px}
+.on-dark .todo{background:var(--deep-700);border-color:var(--aqua-300);color:var(--milk)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 .9rem/1.3 var(--font-body);color:var(--deep);letter-spacing:.01em}
+.eyebrow svg{flex:none;width:18px;height:18px}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 26px;border-radius:999px;border:0;background:var(--deep);color:var(--milk);font:600 1.12rem/1.2 var(--font-head);text-decoration:none;cursor:pointer;transition:transform .15s ease,background-color .15s ease}
+.page a.btn{color:var(--milk)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{background:var(--deep-700);transform:translateY(-2px)}
+.btn--light,.page a.btn--light{background:var(--milk);color:var(--deep)}
+.btn--light:hover{background:var(--aqua-100)}
+.btn--pink,.page a.btn--pink{background:var(--pink);color:var(--deep)}
+.btn--pink:hover{background:var(--pink-200)}
+
+/* banner */
+.banner{background:var(--deep-900);color:var(--milk);font-size:.8rem;line-height:1.35;text-align:center;padding:8px var(--gut)}
+
+/* hlavička */
+.head{background:var(--milk);border-bottom:2px solid var(--aqua-100)}
+.head__in{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:wrap;padding-block:10px}
+.brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;min-width:0}
+.brand svg{width:36px;height:36px;flex:none}
+.brand__txt{display:flex;flex-direction:column;line-height:1}
+.brand__name{font:600 1.32rem/1 var(--font-head);color:var(--deep);letter-spacing:-.01em}
+.brand__name b{font-weight:600;color:var(--aqua-700)}
+.brand__sub{font:600 .7rem/1.2 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--deep-muted);margin-top:3px}
+.nav{display:none}
+.head__tel{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:8px 13px;border-radius:999px;background:var(--aqua-100);border:2px solid var(--aqua);font:600 .98rem/1.1 var(--font-head);text-decoration:none;white-space:nowrap}
+.page a.head__tel{color:var(--deep)}
+.head__tel svg{width:18px;height:18px;flex:none}
+.head__tel:hover{background:var(--aqua-200)}
+
+/* hero – rozcestník */
+.hero{position:relative;background:var(--milk);padding:20px 0 44px;overflow:hidden}
+.hero__deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative}
+.hero__top{display:grid;gap:14px}
+.hero h1{font-weight:700;font-size:clamp(2.45rem,10.4vw,6.4rem);line-height:.98;letter-spacing:-.015em;margin-top:8px;padding-bottom:.2em}
+.hero h1 .wave{text-decoration:underline wavy var(--aqua);text-decoration-thickness:.07em;text-underline-offset:.13em;text-decoration-skip-ink:none}
+.hero__lead{font-size:1.02rem;line-height:1.5;max-width:34em;color:var(--deep)}
+.hero__act{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:14px}
+.hero__or{display:none;font-weight:600}
+.hero__or a{font-family:var(--font-head);font-size:1.15rem;white-space:nowrap}
+.cross{margin-top:22px}
+.cross__q{font:600 .95rem/1.3 var(--font-body);color:var(--deep-muted);margin-bottom:8px}
+.cross__grid{display:grid;gap:12px}
+.tile{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr);align-items:center;gap:12px;padding:14px;border-radius:24px;text-decoration:none;overflow:hidden;transition:transform .18s ease}
+.page a.tile{color:var(--deep)}
+.tile--wash{background:var(--aqua)}
+.tile--cut{background:var(--pink)}
+.tile:hover{transform:translateY(-3px)}
+.tile__pic{position:relative;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;flex:none}
+.tile--wash .tile__pic{background:var(--aqua-700)}
+.tile--cut .tile__pic{background:var(--pink-200)}
+.tile__pic svg{width:76%;height:76%}
+.tile__txt{position:relative;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.tile__title{font:600 1.45rem/1.1 var(--font-head);color:var(--deep)}
+.tile__line{display:inline-block;background:var(--milk);color:var(--deep);font:600 .9rem/1.3 var(--font-body);padding:4px 11px;border-radius:12px}
+.tile__go{display:none}
+.tile__bub{position:absolute;border-radius:50%;pointer-events:none}
+
+/* sekce obecně */
+.sec{padding:60px 0}
+.sec__head{display:grid;gap:12px;margin-bottom:28px}
+.sec h2{font-size:clamp(1.95rem,5.4vw,3.1rem)}
+.sec__lead{max-width:36em;color:var(--deep)}
+
+/* služby a ceník */
+.svcs{background:var(--aqua-100);padding-bottom:84px}
+.svcs__grid{display:grid;gap:26px}
+.sheet{background:var(--white);border-radius:28px;padding:6px 18px;border:2px solid var(--aqua-200)}
+.svc{display:grid;grid-template-columns:52px minmax(0,1fr);gap:6px 14px;padding:20px 0;border-bottom:3px dotted var(--aqua-200);border-radius:4px;scroll-margin-top:24px}
+.svc:last-child{border-bottom:0}
+.svc__ico{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;grid-row:span 2;align-self:start}
+.svc__ico svg{width:74%;height:74%}
+.svc__ico--aqua{background:var(--aqua)}
+.svc__ico--milk{background:var(--pink-100);border:2px solid var(--pink-200)}
+.svc__ico--pink{background:var(--pink)}
+.svc__body{min-width:0;display:grid;gap:8px;justify-items:start}
+.svc h3{font-size:1.38rem;line-height:1.15}
+.svc__body p{font-size:1rem;line-height:1.55}
+.svc__more{font-weight:600}
+.svc__dots{display:none}
+.svc__price{grid-column:2;justify-self:start;margin-top:6px;font:600 1.05rem/1.2 var(--font-head);color:var(--deep);background:var(--aqua-100);border-radius:999px;padding:7px 15px}
+.svc:target h3{text-decoration:underline;text-decoration-color:var(--pink);text-decoration-thickness:5px;text-underline-offset:5px}
+
+/* mléčná lázeň – pás */
+.milk{position:relative;background:var(--milk);padding:44px 0 64px}
+.milk__foam{position:absolute;left:0;top:-31px;width:100%;height:32px}
+.bubblefield{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.milk .wrap{position:relative}
+.milk__grid{display:grid;gap:28px;align-items:center}
+.milk__txt{display:grid;gap:16px;justify-items:start;min-width:0}
+.tag{display:inline-block;background:var(--pink);color:var(--deep);font:600 .88rem/1.2 var(--font-body);padding:6px 14px;border-radius:999px}
+.milk h2{font-weight:700;font-size:clamp(2.8rem,11vw,5.4rem);line-height:.95;letter-spacing:-.015em}
+.milk__fact{font:500 1.3rem/1.3 var(--font-head);max-width:22em}
+.milk__sample{display:grid;gap:10px;justify-items:start;max-width:33em;padding-left:16px;border-left:4px solid var(--pink-200)}
+.milk__act{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin-top:6px}
+.milk__act a:not(.btn){font-weight:600}
+.milk__art{min-width:0;justify-self:center;width:100%;max-width:520px}
+.milk__art svg{width:100%;height:auto;overflow:visible}
+.bub{animation:rise var(--dur,14s) linear infinite;animation-delay:var(--del,0s)}
+@keyframes rise{
+  0%{transform:translate(0,70px);opacity:0}
+  14%{opacity:1}
+  50%{transform:translate(8px,-50px)}
+  84%{opacity:1}
+  100%{transform:translate(-4px,-170px);opacity:0}
+}
+.page svg.d-only{display:none}
+
+/* menší plemena */
+.small{position:relative;background:var(--deep);color:var(--milk);overflow:hidden}
+.small__deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.small .wrap{position:relative}
+.small h2{color:var(--milk)}
+.small__grid{display:grid;gap:30px}
+.small__txt{display:grid;gap:16px;justify-items:start;min-width:0}
+.small__fact{font:500 1.35rem/1.3 var(--font-head);color:var(--aqua-200)}
+.small__txt p{max-width:33em}
+.small__chips{min-width:0;display:grid;gap:14px;justify-items:start;align-content:start}
+.small__cap{font:600 1rem/1.3 var(--font-body);color:var(--aqua-200);display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;align-items:center;gap:10px;list-style:none;margin:0;padding:0}
+.chips li{font:500 1.08rem/1.2 var(--font-head);padding:10px 18px;border-radius:999px;background:var(--aqua-300);color:var(--deep)}
+.chips li:nth-child(3n+2){background:var(--pink);color:var(--deep)}
+.chips li:nth-child(3n){background:transparent;color:var(--milk);box-shadow:inset 0 0 0 2px var(--aqua-300)}
+.chips li:nth-child(4n+1){font-size:1.25rem;padding:12px 22px}
+.small__call{font-weight:600;text-wrap:balance}
+.page .small a{color:var(--aqua-200)}
+
+/* důvěra */
+.trust__grid{display:grid;gap:28px}
+.trust__list{list-style:none;margin:0;padding:0;border-top:2px solid var(--aqua-200)}
+.trust__list li{display:grid;grid-template-columns:58px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:2px solid var(--aqua-200)}
+.trust__ico{width:58px;height:58px;border-radius:50%;display:grid;place-items:center}
+.trust__ico svg{width:72%;height:72%}
+.trust__list strong{display:block;font:600 clamp(1.35rem,3.6vw,2rem)/1.12 var(--font-head);color:var(--deep)}
+.trust__list span.t{display:block;font-size:1rem;color:var(--deep-muted);margin-top:4px}
+.trust__side{display:grid;gap:16px;align-content:start;justify-items:start;min-width:0}
+.facts{display:grid;gap:8px;margin:0;font-size:1rem}
+.facts div{display:flex;flex-wrap:wrap;gap:4px 10px}
+.facts dt{font-weight:700;margin:0}
+.facts dd{margin:0}
+.linkout{display:inline-flex;align-items:center;gap:8px;font-weight:700;min-height:44px}
+.linkout svg{width:18px;height:18px;flex:none}
+
+/* jak probíhá návštěva */
+.steps{background:var(--pink-100)}
+.steps__list{list-style:none;margin:0;padding:0;display:grid;gap:26px;position:relative}
+.step{display:grid;grid-template-columns:68px minmax(0,1fr);gap:16px;align-items:start;position:relative}
+.step__n{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font:700 2rem/1 var(--font-head);color:var(--deep);position:relative;z-index:1}
+.step:nth-child(1) .step__n{background:var(--aqua-300)}
+.step:nth-child(2) .step__n{background:var(--pink)}
+.step:nth-child(3) .step__n{background:var(--deep);color:var(--milk)}
+.step:not(:last-child)::before{content:"";position:absolute;left:32px;top:68px;bottom:-26px;border-left:4px dotted var(--pink)}
+.step h3{font-size:1.4rem;margin:6px 0 6px}
+.step p{max-width:30em}
+
+/* galerie */
+.gal__grid{display:grid;gap:22px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0}
+.spot{position:relative;aspect-ratio:4/5;border-radius:22px;border:3px dashed var(--aqua);background:var(--aqua-100);display:grid;place-items:center;align-content:center;gap:10px;padding:34px 10px 14px;text-align:center;min-width:0}
+.spot--after{border-color:var(--pink);background:var(--pink-100)}
+.spot svg{width:38px;height:38px}
+.spot span.l{font:600 .95rem/1.3 var(--font-body);color:var(--deep)}
+.spot b{position:absolute;left:12px;top:12px;font:600 .82rem/1 var(--font-head);letter-spacing:.04em;padding:6px 12px;border-radius:999px;background:var(--deep);color:var(--milk)}
+
+/* FAQ */
+.faq{background:var(--aqua-100)}
+.faq__grid{display:grid;gap:26px}
+.faq__side{display:grid;gap:14px;justify-items:start;align-content:start;min-width:0}
+.faq__list{display:grid;gap:10px;min-width:0}
+.faq details{background:var(--white);border-radius:20px;border:2px solid var(--aqua-200)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) 30px;gap:14px;align-items:center;padding:16px 18px;font:500 1.16rem/1.3 var(--font-head);color:var(--deep);border-radius:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:30px;height:30px;border-radius:50%;background:var(--aqua-100) linear-gradient(var(--deep),var(--deep)) center/12px 3px no-repeat;background-image:linear-gradient(var(--deep),var(--deep)),linear-gradient(var(--deep),var(--deep));background-size:12px 3px,3px 12px;background-position:center,center;background-repeat:no-repeat}
+.faq details[open] summary::after{background-size:12px 3px,0 0;background-color:var(--pink)}
+.faq details p{padding:0 18px 18px;max-width:38em}
+
+/* kontakt */
+.contact{position:relative;background:var(--deep);color:var(--milk);overflow:hidden}
+.contact h2{color:var(--milk)}
+.contact .wrap{position:relative}
+.contact__grid{display:grid;gap:34px}
+.contact__info{display:grid;gap:18px;min-width:0;align-content:start}
+.contact__lead{max-width:30em;color:var(--aqua-200)}
+.bigtel{display:inline-flex;align-items:center;gap:12px;font:700 clamp(2.2rem,9.4vw,3.9rem)/1 var(--font-head);text-decoration:none;letter-spacing:-.01em;justify-self:start}
+.page a.bigtel{color:var(--milk)}
+.bigtel svg{width:.72em;height:.72em;flex:none}
+.bigtel:hover{color:var(--aqua-200)}
+.clist{display:grid;gap:14px;margin:0}
+.clist div{display:grid;gap:2px}
+.clist dt{font:600 .78rem/1.3 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--aqua-300)}
+.clist dd{margin:0;font-size:1.08rem;overflow-wrap:anywhere}
+.page .contact a{color:var(--milk)}
+.hours{display:grid;gap:10px;justify-items:start}
+.hours strong{font:500 1.2rem/1.3 var(--font-head)}
+.hours__row{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.mapcard{background:var(--milk);border-radius:24px;overflow:hidden;color:var(--deep);min-width:0}
+.mapcard svg{width:100%;height:170px}
+.mapcard__foot{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;padding:14px 18px 16px}
+.mapcard__foot small{display:block;font-size:.95rem;font-weight:400;color:var(--deep-muted)}
+.mapcard__foot span{font-weight:600;line-height:1.35}
+.page .contact .mapcard a{color:var(--aqua-700);font-weight:700}
+.social{display:inline-flex;align-items:center;gap:10px;font-weight:600;min-height:44px;justify-self:start}
+.social svg{width:26px;height:26px;flex:none}
+.form{background:var(--milk);color:var(--deep);border-radius:28px;padding:22px 18px 24px;display:grid;gap:14px;min-width:0;align-content:start}
+.form h3{font-size:1.55rem}
+.form__grid{display:grid;gap:14px}
+.field{display:grid;gap:6px;min-width:0}
+.field label{font:600 .95rem/1.3 var(--font-body);color:var(--deep)}
+.field input,.field select,.field textarea{width:100%;min-width:0;font:400 1rem/1.4 var(--font-body);color:var(--deep);background:var(--white);border:2px solid var(--aqua-300);border-radius:14px;padding:12px 14px;min-height:50px}
+.field textarea{min-height:104px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--deep-muted);opacity:1}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:3px solid var(--deep);outline-offset:1px;border-color:var(--aqua-700)}
+.form .btn{justify-self:start}
+.form__note{background:var(--pink-100);border:2px solid var(--pink);border-radius:14px;padding:12px 14px;font-weight:600;line-height:1.45}
+
+/* patička */
+.foot{background:var(--deep-900);color:var(--aqua-200);padding:36px 0 calc(104px + env(safe-area-inset-bottom,0px));font-size:.98rem}
+.foot__grid{display:grid;gap:22px}
+.foot .brand__name{color:var(--milk)}
+.foot .brand__name b{color:var(--aqua-300)}
+.foot .brand__sub{color:var(--aqua-200)}
+.foot__col{display:grid;gap:4px;align-content:start;min-width:0}
+.foot__col strong{color:var(--milk);font:600 1.05rem/1.3 var(--font-head)}
+.page .foot a{color:var(--milk);overflow-wrap:anywhere}
+.foot__credit{font-size:.82rem;color:var(--aqua-200);margin-top:10px}
+
+/* mobilní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--deep);padding:9px 16px calc(9px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 18px rgba(6,59,74,.22)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:50px;border-radius:999px;background:var(--pink);font:600 1.15rem/1.1 var(--font-head);text-decoration:none}
+.page .callbar a{color:var(--deep)}
+.callbar svg{width:20px;height:20px;flex:none}
+.callbar :focus-visible{outline-color:var(--milk)}
+
+@media (min-width:560px){
+  .form__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .field--full{grid-column:1/-1}
+  .gal__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:760px){
+  :root{--gut:32px}
+  .banner{font-size:.86rem}
+  .hero{padding:44px 0 64px}
+  .hero__lead{font-size:1.15rem;line-height:1.55}
+  .hero__or{display:block}
+  .cross__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .cross__q{font-size:1.05rem;margin-bottom:12px}
+  .tile{grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:30px 30px 28px;border-radius:36px;min-height:250px;align-items:stretch}
+  .tile__pic{order:2;width:clamp(120px,15vw,176px);height:clamp(120px,15vw,176px);align-self:center}
+  .tile__txt{order:1;gap:12px;justify-content:center}
+  .tile__title{font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.02}
+  .tile__line{font-size:1.02rem;padding:6px 14px}
+  .tile__go{display:inline-flex;align-items:center;gap:10px;margin-top:10px;font:700 1.2rem/1.2 var(--font-head);color:var(--deep)}
+  .tile__go i{width:40px;height:40px;border-radius:50%;background:var(--deep);display:grid;place-items:center;flex:none}
+  .tile__go svg{width:18px;height:18px}
+  .sec{padding:92px 0}
+  .svcs{padding-bottom:120px}
+  .sheet{padding:10px 34px}
+  .svc{grid-template-columns:68px minmax(0,1fr) minmax(24px,110px) auto;align-items:center;gap:8px 22px;padding:28px 0}
+  .svc__ico{width:68px;height:68px;grid-row:auto;align-self:center}
+  .svc h3{font-size:1.6rem}
+  .svc__dots{display:block;border-bottom:4px dotted var(--aqua-300);height:4px}
+  .svc__price{grid-column:auto;justify-self:end;margin-top:0;font-size:1.15rem;padding:9px 18px}
+  .milk{padding:70px 0 96px}
+  .page svg.d-only{display:block}
+  .steps__list{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+  .step{grid-template-columns:minmax(0,1fr);gap:14px}
+  .step__n{width:92px;height:92px;font-size:2.7rem}
+  .step:not(:last-child)::before{left:92px;right:-34px;top:44px;bottom:auto;border-left:0;border-top:5px dotted var(--pink)}
+  .step h3{font-size:1.6rem;margin-top:4px}
+  .gal__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+  .form{padding:32px 32px 34px}
+  .callbar{display:none}
+  .foot{padding-bottom:44px}
+  .foot__grid{grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+}
+@media (min-width:980px){
+  [id]{scroll-margin-top:96px}
+  .svc{scroll-margin-top:110px}
+  .head{position:sticky;top:env(safe-area-inset-top,0px);z-index:40}
+  .head__in{padding-block:13px;flex-wrap:nowrap}
+  .nav{display:flex;gap:4px 26px;flex-wrap:wrap;justify-content:center;min-width:0}
+  .nav a{font:600 1rem/1.2 var(--font-body);text-decoration:none;padding:10px 2px;border-bottom:3px solid transparent}
+  .page .nav a{color:var(--deep)}
+  .nav a:hover{border-bottom-color:var(--pink)}
+  .head__tel{font-size:1.12rem;padding:9px 20px}
+  .brand svg{width:42px;height:42px}
+  .brand__name{font-size:1.6rem}
+  .hero__top{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:end}
+  .hero__side{padding-bottom:10px;display:grid;gap:8px}
+  .cross{margin-top:44px}
+  .svcs__grid{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:56px;align-items:start}
+  .svcs .sec__head{position:sticky;top:120px;margin-bottom:0}
+  .milk__grid{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:56px}
+  .small__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+  .trust__grid{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:64px;align-items:start}
+  .trust__list li{grid-template-columns:76px minmax(0,1fr);gap:22px;padding:24px 0}
+  .trust__ico{width:76px;height:76px}
+  .faq__grid{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:64px;align-items:start}
+  .contact__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px 64px;align-items:start}
+  .contact__info{grid-column:1;grid-row:1}
+  .form{grid-column:2;grid-row:1}
+  .mapcard{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);align-items:stretch}
+  .mapcard svg{height:230px}
+  .mapcard__foot{flex-direction:column;align-items:flex-start;justify-content:center;gap:14px;padding:28px 32px}
+  .mapcard__foot span{font:600 1.5rem/1.2 var(--font-head)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .bub{animation:none}
+  .btn,.tile{transition:none}
+  .btn:hover,.tile:hover{transform:none}
+}
+</style>
+
+<div class="page">
+
+<!-- sdílené piktogramy -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-tub" viewBox="0 0 96 96">
+      <circle cx="33" cy="27" r="10" fill="#FFFDF8"/>
+      <circle cx="30" cy="24" r="3" fill="#BDE7EC"/>
+      <circle cx="54" cy="16" r="6.5" fill="#FF8FA3"/>
+      <circle cx="62" cy="33" r="8" fill="#FFFDF8"/>
+      <circle cx="47" cy="36" r="5" fill="#BDE7EC"/>
+      <rect x="29" y="76" width="9" height="11" rx="3.5" fill="#063B4A"/>
+      <rect x="58" y="76" width="9" height="11" rx="3.5" fill="#063B4A"/>
+      <path d="M16 52h64v6a22 22 0 0 1-22 22H38a22 22 0 0 1-22-22z" fill="#FFFDF8"/>
+      <rect x="9" y="45" width="78" height="12" rx="6" fill="#063B4A"/>
+      <rect x="24" y="63" width="6" height="11" rx="3" fill="#BDE7EC"/>
+    </symbol>
+    <symbol id="i-cut" viewBox="0 0 96 96">
+      <g transform="rotate(12 72 48)">
+        <rect x="64" y="12" width="11" height="72" rx="4.5" fill="#063B4A"/>
+        <rect x="74" y="17" width="13" height="4" rx="2" fill="#063B4A"/>
+        <rect x="74" y="25" width="13" height="4" rx="2" fill="#063B4A"/>
+        <rect x="74" y="33" width="13" height="4" rx="2" fill="#063B4A"/>
+        <rect x="74" y="41" width="13" height="4" rx="2" fill="#063B4A"/>
+        <rect x="74" y="49" width="13" height="4" rx="2" fill="#063B4A"/>
+        <rect x="74" y="57" width="13" height="4" rx="2" fill="#063B4A"/>
+        <rect x="74" y="65" width="13" height="4" rx="2" fill="#063B4A"/>
+        <rect x="74" y="73" width="13" height="4" rx="2" fill="#063B4A"/>
+      </g>
+      <g transform="translate(33 46) rotate(25)">
+        <rect x="-2.5" y="3" width="5" height="18" rx="2.5" fill="#063B4A"/>
+        <circle cx="0" cy="29" r="8.5" fill="none" stroke="#063B4A" stroke-width="5"/>
+        <path d="M-5 6L0-36L5 6z" fill="#FFFDF8" stroke="#063B4A" stroke-width="2.5" stroke-linejoin="round"/>
+      </g>
+      <g transform="translate(33 46) rotate(-25)">
+        <rect x="-2.5" y="3" width="5" height="18" rx="2.5" fill="#063B4A"/>
+        <circle cx="0" cy="29" r="8.5" fill="none" stroke="#063B4A" stroke-width="5"/>
+        <path d="M-5 6L0-36L5 6z" fill="#FFFDF8" stroke="#063B4A" stroke-width="2.5" stroke-linejoin="round"/>
+      </g>
+      <circle cx="33" cy="46" r="2.6" fill="#063B4A"/>
+    </symbol>
+    <symbol id="i-drop" viewBox="0 0 96 96">
+      <path d="M48 12C48 12 25 42 25 58a23 23 0 0 0 46 0C71 42 48 12 48 12z" fill="#FFFFFF" stroke="#063B4A" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M37 59a11 11 0 0 0 9 11" fill="none" stroke="#12A5B5" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="76" cy="30" r="6" fill="#FF8FA3" stroke="#063B4A" stroke-width="3"/>
+      <circle cx="20" cy="30" r="4" fill="#7AD0DA" stroke="#063B4A" stroke-width="3"/>
+    </symbol>
+    <symbol id="i-paw" viewBox="0 0 96 96">
+      <ellipse cx="48" cy="62" rx="19" ry="15" fill="#063B4A"/>
+      <ellipse cx="23" cy="44" rx="7.5" ry="9.5" fill="#063B4A"/>
+      <ellipse cx="39" cy="28" rx="7.5" ry="10" fill="#063B4A"/>
+      <ellipse cx="57" cy="28" rx="7.5" ry="10" fill="#063B4A"/>
+      <ellipse cx="73" cy="44" rx="7.5" ry="9.5" fill="#063B4A"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M6.6 2.5h2.7c.5 0 .9.3 1 .8l.8 3.6c.1.4 0 .8-.4 1.1L9 9.4a12 12 0 0 0 5.6 5.6l1.4-1.7c.3-.4.7-.5 1.1-.4l3.6.8c.5.1.8.5.8 1v2.7c0 1.2-1 2.1-2.2 2.1C10.6 19.5 4.5 13.4 4.5 4.7c0-1.2.9-2.2 2.1-2.2z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z" fill="currentColor"/>
+      <circle cx="12" cy="9" r="2.6" fill="#FFFDF8"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M12 4v15M5.5 13l6.5 6.5 6.5-6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-out" viewBox="0 0 24 24">
+      <path d="M8 5h11v11M19 5L5 19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24">
+      <path d="M4 20l1-5L16 4l4 4L9 19z" fill="#12A5B5"/>
+      <path d="M4 20l1-5 4 4z" fill="#063B4A"/>
+    </symbol>
+    <symbol id="i-cam" viewBox="0 0 48 48">
+      <rect x="5" y="13" width="38" height="27" rx="7" fill="#063B4A"/>
+      <rect x="17" y="7" width="14" height="9" rx="3" fill="#063B4A"/>
+      <circle cx="24" cy="26" r="8" fill="#FFFDF8"/>
+      <circle cx="24" cy="26" r="4" fill="#12A5B5"/>
+    </symbol>
+    <symbol id="i-mark" viewBox="0 0 44 44">
+      <circle cx="20" cy="24" r="18" fill="#12A5B5"/>
+      <circle cx="36" cy="8" r="6" fill="#FF8FA3"/>
+      <ellipse cx="20" cy="29" rx="7.5" ry="6" fill="#FFFDF8"/>
+      <circle cx="10.5" cy="22" r="3" fill="#FFFDF8"/>
+      <circle cx="16.5" cy="16" r="3.2" fill="#FFFDF8"/>
+      <circle cx="23.5" cy="16" r="3.2" fill="#FFFDF8"/>
+      <circle cx="29.5" cy="22" r="3" fill="#FFFDF8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="banner" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Psí salón AbbyWash</div>
+
+<header class="head">
+  <div class="wrap head__in">
+    <a class="brand" href="#top" aria-label="AbbyWash, psí salón – na začátek stránky">
+      <svg aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+      <span class="brand__txt">
+        <span class="brand__name">Abby<b>Wash</b></span>
+        <span class="brand__sub">psí salón</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#sluzby">Služby a&nbsp;ceník</a>
+      <a href="#mlecna-lazen">Mléčná lázeň</a>
+      <a href="#mensi-plemena">Menší plemena</a>
+      <a href="#navsteva">Jak to probíhá</a>
+      <a href="#objednani">Kontakt</a>
+    </nav>
+    <a class="head__tel" href="tel:+420603526658">
+      <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+      <span>603 526 658</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h-hero">
+  <svg class="hero__deco" aria-hidden="true" focusable="false" width="100%" height="100%">
+    <circle cx="96%" cy="6%" r="120" fill="#E2F5F7"/>
+    <circle cx="97%" cy="44%" r="22" fill="#FFECEF"/>
+    <circle cx="2%" cy="62%" r="46" fill="#FFECEF"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero__top">
+      <div>
+        <p class="eyebrow"><svg aria-hidden="true" focusable="false" style="color:#12A5B5"><use href="#i-pin"/></svg>Psí salón s&nbsp;myčkou pro psy v&nbsp;Krnově</p>
+        <h1 id="h-hero">Malý pes, <span class="wave">velká koupel</span>.</h1>
+      </div>
+      <div class="hero__side">
+        <p class="hero__lead">Koupel v&nbsp;myčce pro psy, mléčná lázeň nebo celý střih. V&nbsp;Krnově Pod Cvilínem se věnujeme hlavně menším plemenům.</p>
+        <div class="hero__act">
+          <a class="btn" href="#objednani">Objednat termín</a>
+          <p class="hero__or">nebo zavolejte <a href="tel:+420603526658">603 526 658</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cross">
+      <h2 class="cross__q">Co dnes potřebujete?</h2>
+      <div class="cross__grid">
+        <a class="tile tile--wash" href="#koupani">
+          <span class="tile__bub" style="width:150px;height:150px;right:-46px;bottom:-70px;background:#0B7684;opacity:.35" aria-hidden="true"></span>
+          <span class="tile__pic"><svg aria-hidden="true" focusable="false"><use href="#i-tub"/></svg></span>
+          <span class="tile__txt">
+            <span class="tile__title">Jen vykoupat</span>
+            <span class="tile__line">Koupel v&nbsp;myčce pro psy</span>
+            <span class="tile__go"><i><svg aria-hidden="true" focusable="false" style="color:#FFFDF8"><use href="#i-arrow"/></svg></i>Ukázat koupání</span>
+          </span>
+        </a>
+        <a class="tile tile--cut" href="#strihani">
+          <span class="tile__bub" style="width:150px;height:150px;right:-46px;bottom:-70px;background:#FFC7D1;opacity:.6" aria-hidden="true"></span>
+          <span class="tile__pic"><svg aria-hidden="true" focusable="false"><use href="#i-cut"/></svg></span>
+          <span class="tile__txt">
+            <span class="tile__title">Ostříhat a&nbsp;upravit</span>
+            <span class="tile__line">Střih a&nbsp;úprava menších plemen</span>
+            <span class="tile__go"><i><svg aria-hidden="true" focusable="false" style="color:#FFFDF8"><use href="#i-arrow"/></svg></i>Ukázat stříhání</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec svcs" id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap svcs__grid">
+    <div class="sec__head">
+      <h2 id="h-sluzby">Služby a&nbsp;ceník</h2>
+      <p class="sec__lead">Tři služby, které si u&nbsp;nás v&nbsp;Krnově objednáte. Stačí zavolat a&nbsp;říct, o&nbsp;kterou máte zájem.</p>
+      <p class="todo"><svg aria-hidden="true" focusable="false"><use href="#i-pen"/></svg><span>Ceník doplníme podle Vás. Do té doby je u&nbsp;každé služby „Cena na dotaz“.</span></p>
+    </div>
+
+    <div class="sheet">
+      <article class="svc" id="koupani">
+        <span class="svc__ico svc__ico--aqua"><svg aria-hidden="true" focusable="false"><use href="#i-tub"/></svg></span>
+        <div class="svc__body">
+          <h3>Koupání v&nbsp;myčce pro psy</h3>
+          <p>Teplá voda, šampon podle srsti a&nbsp;důkladné vysušení. Koupelna u&nbsp;Vás doma zůstane suchá.</p>
+          <span class="sample">ukázkový text</span>
+        </div>
+        <span class="svc__dots" aria-hidden="true"></span>
+        <p class="svc__price">Cena na dotaz</p>
+      </article>
+
+      <article class="svc" id="lazen">
+        <span class="svc__ico svc__ico--milk"><svg aria-hidden="true" focusable="false"><use href="#i-drop"/></svg></span>
+        <div class="svc__body">
+          <h3>Mléčná lázeň</h3>
+          <p>Koupel navíc pro srst, která má být po vysušení hebká na dotek a&nbsp;příjemně vonět. <a class="svc__more" href="#mlecna-lazen">Více o&nbsp;mléčné lázni</a></p>
+          <span class="sample">ukázkový text</span>
+        </div>
+        <span class="svc__dots" aria-hidden="true"></span>
+        <p class="svc__price">Cena na dotaz</p>
+      </article>
+
+      <article class="svc" id="strihani">
+        <span class="svc__ico svc__ico--pink"><svg aria-hidden="true" focusable="false"><use href="#i-cut"/></svg></span>
+        <div class="svc__body">
+          <h3>Stříhání a&nbsp;úprava menších plemen</h3>
+          <p>Střih podle plemene i&nbsp;Vašeho přání, s&nbsp;úpravou tlapek a&nbsp;srsti kolem očí.</p>
+          <span class="sample">ukázkový text</span>
+        </div>
+        <span class="svc__dots" aria-hidden="true"></span>
+        <p class="svc__price">Cena na dotaz</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="milk" id="mlecna-lazen" aria-labelledby="h-milk">
+  <svg class="milk__foam" aria-hidden="true" focusable="false" width="100%" height="32">
+    <defs>
+      <pattern id="foamP" width="76" height="32" patternUnits="userSpaceOnUse">
+        <circle cx="22" cy="34" r="25" fill="#FFFDF8"/>
+        <circle cx="59" cy="36" r="20" fill="#FFFDF8"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="32" fill="url(#foamP)"/>
+  </svg>
+
+  <svg class="bubblefield" aria-hidden="true" focusable="false" width="100%" height="100%">
+    <svg x="3%" y="84%" style="overflow:visible"><g class="bub" style="--dur:17s;--del:-3s"><circle r="22" fill="#E2F5F7" stroke="#BDE7EC" stroke-width="2"/><circle cx="-8" cy="-8" r="4.5" fill="#FFFFFF"/></g></svg>
+    <svg x="92%" y="72%" style="overflow:visible"><g class="bub" style="--dur:15s;--del:-9s"><circle r="16" fill="#FFECEF" stroke="#FFC7D1" stroke-width="2"/><circle cx="-6" cy="-6" r="3.5" fill="#FFFFFF"/></g></svg>
+    <svg x="80%" y="95%" style="overflow:visible"><g class="bub" style="--dur:19s;--del:-12s"><circle r="28" fill="#E2F5F7" stroke="#BDE7EC" stroke-width="2"/><circle cx="-10" cy="-10" r="5.5" fill="#FFFFFF"/></g></svg>
+    <svg x="12%" y="96%" style="overflow:visible"><g class="bub" style="--dur:21s;--del:-6s"><circle r="13" fill="#FFECEF" stroke="#FFC7D1" stroke-width="2"/><circle cx="-5" cy="-5" r="3" fill="#FFFFFF"/></g></svg>
+    <svg x="58%" y="92%" style="overflow:visible"><g class="bub" style="--dur:18s;--del:-15s"><circle r="11" fill="#E2F5F7" stroke="#BDE7EC" stroke-width="2"/><circle cx="-4" cy="-4" r="2.5" fill="#FFFFFF"/></g></svg>
+    <svg class="d-only" x="54%" y="34%" style="overflow:visible"><g class="bub" style="--dur:20s;--del:-4s"><circle r="18" fill="#FFECEF" stroke="#FFC7D1" stroke-width="2"/><circle cx="-6" cy="-6" r="4" fill="#FFFFFF"/></g></svg>
+    <svg class="d-only" x="96%" y="26%" style="overflow:visible"><g class="bub" style="--dur:16s;--del:-10s"><circle r="24" fill="#E2F5F7" stroke="#BDE7EC" stroke-width="2"/><circle cx="-9" cy="-9" r="5" fill="#FFFFFF"/></g></svg>
+    <svg class="d-only" x="53%" y="90%" style="overflow:visible"><g class="bub" style="--dur:22s;--del:-17s"><circle r="15" fill="#E2F5F7" stroke="#BDE7EC" stroke-width="2"/><circle cx="-5" cy="-5" r="3.5" fill="#FFFFFF"/></g></svg>
+  </svg>
+
+  <div class="wrap milk__grid">
+    <div class="milk__txt">
+      <span class="tag">V naší nabídce</span>
+      <h2 id="h-milk">Mléčná lázeň</h2>
+      <p class="milk__fact">Vedle koupání a&nbsp;stříhání u&nbsp;nás v&nbsp;Krnově objednáte i&nbsp;mléčnou lázeň.</p>
+      <div class="milk__sample">
+        <p>Je to koupel navíc pro pejsky, jejichž srst má být hebká, lesklá a&nbsp;voňavá ještě dlouho po návratu domů. Hodí se před výstavou, před rodinnou oslavou nebo jen tak pro radost.</p>
+        <p>Řekněte si o&nbsp;ni při objednání koupání i&nbsp;stříhání.</p>
+        <span class="sample">ukázkový text</span>
+      </div>
+      <div class="milk__act">
+        <a class="btn btn--pink" href="#objednani">Objednat termín</a>
+        <a href="tel:+420603526658">Zeptat se na 603 526 658</a>
+      </div>
+    </div>
+
+    <div class="milk__art">
+      <svg viewBox="0 0 520 470" role="img" aria-labelledby="t-tub">
+        <title id="t-tub">Malý pes vykukuje z pěny ve vaně, nad ním stoupají bubliny</title>
+        <defs>
+          <g id="foamRow">
+            <circle cx="98" cy="272" r="30"/><circle cx="142" cy="262" r="34"/><circle cx="190" cy="268" r="30"/>
+            <circle cx="234" cy="264" r="32"/><circle cx="282" cy="266" r="34"/><circle cx="330" cy="262" r="32"/>
+            <circle cx="378" cy="266" r="34"/><circle cx="424" cy="274" r="28"/>
+            <circle cx="74" cy="296" r="18"/><circle cx="450" cy="298" r="16"/>
+          </g>
+          <g id="foamCap">
+            <circle cx="240" cy="112" r="20"/><circle cx="266" cy="102" r="25"/><circle cx="292" cy="116" r="17"/>
+          </g>
+        </defs>
+        <circle cx="260" cy="232" r="206" fill="#E2F5F7"/>
+        <circle cx="436" cy="92" r="58" fill="#FFECEF"/>
+        <ellipse cx="260" cy="446" rx="196" ry="13" fill="#BDE7EC"/>
+        <rect x="136" y="402" width="30" height="34" rx="12" fill="#063B4A"/>
+        <rect x="354" y="402" width="30" height="34" rx="12" fill="#063B4A"/>
+        <path d="M82 300h356v38a74 74 0 0 1-74 74H156a74 74 0 0 1-74-74z" fill="#12A5B5"/>
+        <rect x="112" y="322" width="16" height="52" rx="8" fill="#7AD0DA"/>
+        <rect x="112" y="382" width="16" height="16" rx="8" fill="#7AD0DA"/>
+        <rect x="58" y="272" width="404" height="32" rx="16" fill="#063B4A"/>
+        <!-- pes -->
+        <ellipse cx="203" cy="182" rx="24" ry="48" transform="rotate(16 203 182)" fill="#063B4A"/>
+        <ellipse cx="317" cy="182" rx="24" ry="48" transform="rotate(-16 317 182)" fill="#063B4A"/>
+        <circle cx="260" cy="172" r="64" fill="#FFFFFF" stroke="#063B4A" stroke-width="5"/>
+        <circle cx="222" cy="196" r="11" fill="#FFC7D1"/>
+        <circle cx="298" cy="196" r="11" fill="#FFC7D1"/>
+        <circle cx="238" cy="166" r="7.5" fill="#063B4A"/>
+        <circle cx="282" cy="166" r="7.5" fill="#063B4A"/>
+        <circle cx="240.5" cy="163.5" r="2.4" fill="#FFFFFF"/>
+        <circle cx="284.5" cy="163.5" r="2.4" fill="#FFFFFF"/>
+        <path d="M252 206a8 9 0 0 0 16 0z" fill="#FF8FA3" stroke="#063B4A" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M244 200q8 9 16 0q8 9 16 0" fill="none" stroke="#063B4A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <ellipse cx="260" cy="189" rx="11" ry="8" fill="#063B4A"/>
+        <!-- pěna na hlavě -->
+        <use href="#foamCap" fill="#BDE7EC" stroke="#BDE7EC" stroke-width="7"/>
+        <use href="#foamCap" fill="#FFFFFF"/>
+        <!-- pěna ve vaně -->
+        <use href="#foamRow" fill="#BDE7EC" stroke="#BDE7EC" stroke-width="7"/>
+        <use href="#foamRow" fill="#FFFFFF"/>
+        <!-- stoupající bubliny -->
+        <g transform="translate(120 170)"><g class="bub" style="--dur:9s;--del:-2s"><circle r="17" fill="#FFFFFF" stroke="#12A5B5" stroke-width="3"/><circle cx="-6" cy="-6" r="3.5" fill="#BDE7EC"/></g></g>
+        <g transform="translate(156 96)"><g class="bub" style="--dur:11s;--del:-6s"><circle r="11" fill="#FFC7D1" stroke="#FF8FA3" stroke-width="3"/><circle cx="-4" cy="-4" r="2.5" fill="#FFFFFF"/></g></g>
+        <g transform="translate(396 176)"><g class="bub" style="--dur:10s;--del:-4s"><circle r="21" fill="#FFFFFF" stroke="#12A5B5" stroke-width="3"/><circle cx="-7" cy="-7" r="4.5" fill="#BDE7EC"/></g></g>
+        <g transform="translate(366 92)"><g class="bub" style="--dur:12s;--del:-9s"><circle r="13" fill="#BDE7EC" stroke="#12A5B5" stroke-width="3"/><circle cx="-4.5" cy="-4.5" r="3" fill="#FFFFFF"/></g></g>
+        <g transform="translate(86 104)"><g class="bub" style="--dur:13s;--del:-11s"><circle r="8" fill="#BDE7EC" stroke="#12A5B5" stroke-width="3"/></g></g>
+        <g transform="translate(446 232)"><g class="bub" style="--dur:8s;--del:-1s"><circle r="9" fill="#FFC7D1" stroke="#FF8FA3" stroke-width="3"/></g></g>
+        <g transform="translate(300 50)"><g class="bub" style="--dur:14s;--del:-7s"><circle r="7" fill="#FFFFFF" stroke="#FF8FA3" stroke-width="3"/></g></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec small on-dark" id="mensi-plemena" aria-labelledby="h-small">
+  <svg class="small__deco" aria-hidden="true" focusable="false" width="100%" height="100%">
+    <circle cx="100%" cy="100%" r="210" fill="#0D5062"/>
+    <circle cx="4%" cy="8%" r="70" fill="#0D5062"/>
+    <circle cx="55%" cy="12%" r="14" fill="#0D5062"/>
+  </svg>
+  <div class="wrap small__grid">
+    <div class="small__txt">
+      <h2 id="h-small">Malá plemena jsou naše parketa</h2>
+      <p class="small__fact">Specializujeme se na menší plemena.</p>
+      <p>Malý pes má jemnou srst, drobné tlapky a&nbsp;často i&nbsp;velký respekt z&nbsp;fénu. Počítáme s&nbsp;tím: pracujeme v&nbsp;klidu, s&nbsp;nástroji ve správné velikosti a&nbsp;s&nbsp;přestávkou, když je potřeba.</p>
+      <span class="sample">ukázkový text</span>
+    </div>
+    <div class="small__chips">
+      <p class="small__cap">Chodí k&nbsp;nám například <span class="sample">ukázkový text</span></p>
+      <ul class="chips">
+        <li>Yorkšírský teriér</li>
+        <li>Maltézský psík</li>
+        <li>Shih-tzu</li>
+        <li>Bišonek</li>
+        <li>Trpasličí pudl</li>
+        <li>Čivava</li>
+        <li>Pomeranian</li>
+        <li>Havanský psík</li>
+        <li>Westík</li>
+        <li>Jezevčík</li>
+      </ul>
+      <p class="small__call">Své plemeno tu nevidíte? Zavolejte na <a href="tel:+420603526658">603 526 658</a> a&nbsp;domluvíme se.</p>
+      <p class="todo"><svg aria-hidden="true" focusable="false"><use href="#i-pen"/></svg><span>Seznam plemen upravíme podle toho, která k&nbsp;Vám opravdu chodí.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec trust" id="proc-k-nam" aria-labelledby="h-trust">
+  <div class="wrap trust__grid">
+    <div class="trust__side">
+      <h2 id="h-trust">Co u&nbsp;nás najdete</h2>
+      <p class="sec__lead">Tři věci, které k&nbsp;AbbyWash patří.</p>
+      <dl class="facts">
+        <div><dt>Adresa</dt><dd>Opavská 248/20, 794&nbsp;01 Krnov</dd></div>
+        <div><dt>IČO</dt><dd>11917024</dd></div>
+      </dl>
+      <a class="linkout" href="https://www.firmy.cz/detail/13496957-psi-salon-abbywash-krnov-pod-cvilinem.html" target="_blank" rel="noopener">Profil salónu na Firmy.cz<svg aria-hidden="true" focusable="false"><use href="#i-out"/></svg></a>
+    </div>
+    <ul class="trust__list">
+      <li>
+        <span class="trust__ico" style="background:#12A5B5"><svg aria-hidden="true" focusable="false"><use href="#i-tub"/></svg></span>
+        <div><strong>Myčka pro psy přímo v&nbsp;salónu</strong><span class="t">Provozujeme salón s&nbsp;myčkou pro psy.</span></div>
+      </li>
+      <li>
+        <span class="trust__ico" style="background:#FF8FA3"><svg aria-hidden="true" focusable="false"><use href="#i-paw"/></svg></span>
+        <div><strong>Specializace na menší plemena</strong><span class="t">Na malé psy se zaměřujeme.</span></div>
+      </li>
+      <li>
+        <span class="trust__ico" style="background:#BDE7EC"><svg aria-hidden="true" focusable="false"><use href="#i-drop"/></svg></span>
+        <div><strong>Mléčná lázeň</strong><span class="t">V&nbsp;nabídce vedle koupání a&nbsp;stříhání.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec steps" id="navsteva" aria-labelledby="h-steps">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 id="h-steps">Jak probíhá návštěva</h2>
+      <p><span class="sample">ukázkový text</span></p>
+    </div>
+    <ol class="steps__list">
+      <li class="step">
+        <span class="step__n" aria-hidden="true">1</span>
+        <div>
+          <h3>Zavoláte nám</h3>
+          <p>Na čísle 603 526 658 řeknete, jakého máte pejska a&nbsp;co potřebuje. Domluvíme termín, který se Vám hodí.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__n" aria-hidden="true">2</span>
+        <div>
+          <h3>Přijdete do salónu</h3>
+          <p>Najdete nás na Opavské 248/20 v&nbsp;Krnově. Pejska si převezmeme, prohlédneme srst a&nbsp;pustíme se do koupání nebo střihu.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__n" aria-hidden="true">3</span>
+        <div>
+          <h3>Domů jde voňavý pes</h3>
+          <p>Vykoupaný, vysušený a&nbsp;podle přání i&nbsp;ostříhaný. Na místě si můžete rovnou domluvit další termín.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec gal" id="galerie" aria-labelledby="h-gal">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 id="h-gal">Před a&nbsp;po</h2>
+      <p class="todo" style="max-width:34em"><svg aria-hidden="true" focusable="false"><use href="#i-pen"/></svg><span>Sem patří proměny pejsků z&nbsp;Vašeho salónu. Stačí pár fotek z&nbsp;mobilu, zbytek připravíme.</span></p>
+    </div>
+    <div class="gal__grid">
+      <figure class="pair">
+        <div class="spot"><b>Před</b><svg aria-hidden="true" focusable="false"><use href="#i-cam"/></svg><span class="l">Sem přijde Vaše fotka</span></div>
+        <div class="spot spot--after"><b>Po</b><svg aria-hidden="true" focusable="false"><use href="#i-cam"/></svg><span class="l">Sem přijde Vaše fotka</span></div>
+      </figure>
+      <figure class="pair">
+        <div class="spot"><b>Před</b><svg aria-hidden="true" focusable="false"><use href="#i-cam"/></svg><span class="l">Sem přijde Vaše fotka</span></div>
+        <div class="spot spot--after"><b>Po</b><svg aria-hidden="true" focusable="false"><use href="#i-cam"/></svg><span class="l">Sem přijde Vaše fotka</span></div>
+      </figure>
+      <figure class="pair">
+        <div class="spot"><b>Před</b><svg aria-hidden="true" focusable="false"><use href="#i-cam"/></svg><span class="l">Sem přijde Vaše fotka</span></div>
+        <div class="spot spot--after"><b>Po</b><svg aria-hidden="true" focusable="false"><use href="#i-cam"/></svg><span class="l">Sem přijde Vaše fotka</span></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" id="dotazy" aria-labelledby="h-faq">
+  <div class="wrap faq__grid">
+    <div class="faq__side">
+      <h2 id="h-faq">Na co se nás ptáte</h2>
+      <p><span class="sample">ukázkový text</span></p>
+      <p class="sec__lead">Nenašli jste odpověď? Nejrychleji ji dostanete po telefonu.</p>
+      <a class="btn" href="tel:+420603526658"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>603 526 658</a>
+    </div>
+    <div class="faq__list">
+      <details open>
+        <summary>Musím se objednat předem?</summary>
+        <p>Ano, pracujeme na objednání. Zavolejte na 603 526 658 a&nbsp;domluvíme termín, který Vám i&nbsp;pejskovi vyhovuje.</p>
+      </details>
+      <details>
+        <summary>Co je mléčná lázeň a&nbsp;pro koho se hodí?</summary>
+        <p>Je to koupel navíc, po které má být srst hebká a&nbsp;voňavá. Hodí se pro pejsky s&nbsp;delší nebo jemnou srstí a&nbsp;dá se přidat ke koupání i&nbsp;ke stříhání.</p>
+      </details>
+      <details>
+        <summary>Jak často mám malého psa koupat a&nbsp;stříhat?</summary>
+        <p>Záleží na plemeni a&nbsp;typu srsti. Při první návštěvě se na pejska podíváme a&nbsp;poradíme Vám, jaký rozestup mezi návštěvami dává smysl.</p>
+      </details>
+      <details>
+        <summary>Jak dlouho návštěva trvá?</summary>
+        <p>Podle toho, jestli jde jen o&nbsp;koupání, nebo i&nbsp;o&nbsp;střih, a&nbsp;podle stavu srsti. Čas Vám řekneme už při objednání.</p>
+      </details>
+      <details>
+        <summary>Vezmete i&nbsp;většího psa?</summary>
+        <p>Zaměřujeme se na menší plemena. Pokud máte většího pejska, zavolejte a&nbsp;řekneme Vám na rovinu, jestli ho zvládneme.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact on-dark" id="objednani" aria-labelledby="h-contact">
+  <svg class="small__deco" aria-hidden="true" focusable="false" width="100%" height="100%">
+    <circle cx="0%" cy="100%" r="180" fill="#0D5062"/>
+    <circle cx="94%" cy="4%" r="60" fill="#0D5062"/>
+  </svg>
+  <div class="wrap contact__grid">
+    <div class="contact__info">
+      <h2 id="h-contact">Objednejte pejskovi termín</h2>
+      <p class="contact__lead">Nejrychlejší je zavolat. Když se Vám to zrovna nehodí, napište e-mail nebo nechte vzkaz ve formuláři.</p>
+      <a class="bigtel" href="tel:+420603526658"><svg aria-hidden="true" focusable="false" style="color:#7AD0DA"><use href="#i-phone"/></svg>603 526 658</a>
+
+      <dl class="clist">
+        <div><dt>E-mail</dt><dd><a href="mailto:abbywashkrnov@gmail.com">abbywashkrnov@gmail.com</a></dd></div>
+        <div><dt>Adresa</dt><dd>Opavská 248/20, 794&nbsp;01 Krnov (Pod Cvilínem)</dd></div>
+        <div>
+          <dt>Kdy přijít</dt>
+          <dd class="hours">
+            <span class="hours__row"><strong>Termín po telefonické domluvě</strong> <span class="sample">ukázkový text</span></span>
+            <span class="todo"><svg aria-hidden="true" focusable="false"><use href="#i-pen"/></svg><span>Otevírací dobu doplníme podle Vás</span></span>
+          </dd>
+        </div>
+      </dl>
+
+      <a class="social" href="https://www.facebook.com/abbywashkrnov" target="_blank" rel="noopener">
+        <svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="14" cy="14" r="14" fill="#7AD0DA"/><path d="M15.4 22.5v-7h2.3l.4-2.9h-2.7v-1.7c0-.8.3-1.4 1.5-1.4h1.3V7c-.6-.1-1.3-.2-2.1-.2-2.2 0-3.6 1.3-3.6 3.7v2.1H10.2v2.9h2.3v7z" fill="#063B4A"/></svg>
+        AbbyWash na Facebooku
+      </a>
+    </div>
+
+    <div class="mapcard">
+      <svg viewBox="0 0 400 190" role="img" aria-labelledby="t-map" preserveAspectRatio="xMidYMin slice">
+        <title id="t-map">Ilustrační mapka s vyznačeným místem salónu</title>
+        <rect width="400" height="190" fill="#E2F5F7"/>
+        <rect x="18" y="14" width="92" height="52" rx="12" fill="#BDE7EC"/>
+        <rect x="150" y="-8" width="96" height="58" rx="12" fill="#BDE7EC"/>
+        <rect x="290" y="16" width="120" height="44" rx="12" fill="#BDE7EC"/>
+        <rect x="-10" y="128" width="104" height="70" rx="12" fill="#BDE7EC"/>
+        <rect x="296" y="120" width="110" height="80" rx="12" fill="#BDE7EC"/>
+        <circle cx="170" cy="162" r="34" fill="#FFECEF"/>
+        <path d="M-10 108L410 84" fill="none" stroke="#FFFDF8" stroke-width="22" stroke-linecap="round"/>
+        <path d="M124-10L138 200" fill="none" stroke="#FFFDF8" stroke-width="14" stroke-linecap="round"/>
+        <path d="M270-10L262 200" fill="none" stroke="#FFFDF8" stroke-width="14" stroke-linecap="round"/>
+        <path d="M-10 108L410 84" fill="none" stroke="#7AD0DA" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+        <ellipse cx="204" cy="98" rx="17" ry="5" fill="#063B4A" opacity=".25"/>
+        <path d="M204 26a28 28 0 0 1 28 28c0 21-28 44-28 44s-28-23-28-44a28 28 0 0 1 28-28z" fill="#FF8FA3" stroke="#063B4A" stroke-width="4" stroke-linejoin="round"/>
+        <circle cx="204" cy="54" r="10" fill="#063B4A"/>
+      </svg>
+      <div class="mapcard__foot">
+        <span>Opavská 248/20, Krnov<small>Pod Cvilínem</small></span>
+        <a href="https://mapy.cz/zakladni?q=Opavsk%C3%A1%20248%2F20%2C%20794%2001%20Krnov" target="_blank" rel="noopener">Otevřít v&nbsp;Mapy.cz</a>
+      </div>
+    </div>
+
+    <form class="form" id="poptavka" action="#" method="post">
+      <h3>Nechte nám vzkaz</h3>
+      <div class="form__grid">
+        <div class="field">
+          <label for="f-jmeno">Jméno</label>
+          <input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-telefon">Telefon</label>
+          <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="field">
+          <label for="f-mazlicek">Plemeno / mazlíček</label>
+          <input id="f-mazlicek" name="mazlicek" type="text" placeholder="např. Bišonek, 3 roky">
+        </div>
+        <div class="field">
+          <label for="f-sluzba">O co máte zájem</label>
+          <select id="f-sluzba" name="sluzba">
+            <option>Koupání v myčce pro psy</option>
+            <option>Mléčná lázeň</option>
+            <option>Stříhání a úprava</option>
+            <option>Ještě nevím, poraďte mi</option>
+          </select>
+        </div>
+        <div class="field field--full">
+          <label for="f-kdy">Kdy se Vám to hodí</label>
+          <input id="f-kdy" name="kdy" type="text" placeholder="např. příští týden odpoledne">
+        </div>
+        <div class="field field--full">
+          <label for="f-zprava">Zpráva</label>
+          <textarea id="f-zprava" name="zprava" rows="3"></textarea>
+        </div>
+      </div>
+      <button class="btn" id="f-odeslat" type="submit">Odeslat poptávku</button>
+      <p class="form__note" id="f-note" role="status" hidden>Toto je ukázka formuláře. Na hotovém webu Vám poptávka přijde e-mailem.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__col">
+      <span class="brand">
+        <svg aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+        <span class="brand__txt">
+          <span class="brand__name">Abby<b>Wash</b></span>
+          <span class="brand__sub">psí salón</span>
+        </span>
+      </span>
+      <p style="margin-top:10px">Psí salón AbbyWash<br>IČO: 11917024</p>
+    </div>
+    <div class="foot__col">
+      <strong>Kde nás najdete</strong>
+      <p>Opavská 248/20<br>794&nbsp;01 Krnov (Pod Cvilínem)</p>
+    </div>
+    <div class="foot__col">
+      <strong>Kontakt</strong>
+      <p><a href="tel:+420603526658">603 526 658</a><br><a href="mailto:abbywashkrnov@gmail.com">abbywashkrnov@gmail.com</a></p>
+      <p class="foot__credit">Návrh webu připravil Martin Fian</p>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+420603526658"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Zavolat 603 526 658</a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var form=document.getElementById('poptavka');
+  var note=document.getElementById('f-note');
+  if(form&&note){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      note.hidden=false;
+      note.scrollIntoView({block:'nearest'});
+    });
+  }
+})();
+</script>
+</body>
+</html>

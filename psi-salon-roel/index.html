@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Psí salón ROEL</title>
+<meta name="description" content="Psí salón ROEL v Krnově: kompletní úprava psů všech plemen, stříhání, koupání, fénování a rozčesávání dlouhosrstých plemen. Zacuchaná srst odchází rozčesaná a hebká.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@700;900&subset=latin-ext&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Psí salón ROEL",
+  "description": "Provádíme kompletní úpravu psů všech plemen. Zaměřujeme se na stříhání, koupání, fénování, čištění uší a rozčesávání dlouhosrstých plemen. Nabízíme bezplatné poradenství.",
+  "telephone": "+420731443353",
+  "email": "vladimira.strouhalova@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9. května 576/27",
+    "addressLocality": "Krnov",
+    "postalCode": "794 01",
+    "addressCountry": "CZ"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "IČO",
+    "value": "73887285"
+  },
+  "sameAs": "https://www.firmy.cz/detail/1941044-psi-salon-roel-krnov-pod-cvilinem.html"
+}
+</script>
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<style>
+/* Koncept: švestkové plátno s obřím nápisem ROEL přes celou šířku (písmeno O je chlupatá psí hlava), pod ním pásy krémové, broskvové a mandarinkové; celou stránkou prochází motiv pramene srsti, který se z kliček rovná do hladkých linek. */
+:root{
+  --mandarin:#F26A1B;
+  --plum:#2D1B33;
+  --cream:#FFF4E6;
+  --peach:#FFD2AE;
+  --mandarin-deep:#9C3A06;
+  --plum-deep:#21122A;
+  --plum-soft:#43294B;
+  --plum-line:#6A4A74;
+  --cream-soft:#FFFAF2;
+  --ink-soft:#57405E;
+  --f-display:Unbounded,"Arial Black","Segoe UI Black",Impact,sans-serif;
+  --f-body:Manrope,"Segoe UI",system-ui,Arial,sans-serif;
+}
+.page,.page *{box-sizing:border-box}
+.page{font-family:var(--f-body);font-size:17px;line-height:1.6;color:var(--plum);background:var(--cream);color-scheme:light;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+.page p,.page h1,.page h2,.page h3,.page ul,.page ol{margin:0}
+.page ul,.page ol{padding:0;list-style:none}
+.page a{color:inherit}
+.page svg{display:block}
+.page :focus-visible{outline:3px solid var(--mandarin);outline-offset:3px;border-radius:6px}
+.page .on-orange :focus-visible,.page .btn:focus-visible{outline-color:var(--plum)}
+.page .dark .btn:focus-visible,.page .callbar .btn:focus-visible{outline-color:var(--cream)}
+.page .wrap{width:100%;max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+.page section{scroll-margin-top:12px}
+.page .sec{padding-block:clamp(56px,8vw,112px)}
+.page h2{font-family:var(--f-display);font-weight:900;font-size:clamp(1.45rem,1.05rem + 2.1vw,2.7rem);line-height:1.12;letter-spacing:-.01em;text-wrap:balance;overflow-wrap:anywhere;hyphens:auto;hyphenate-limit-chars:12 5 5}
+.page h3{font-size:1.15rem;line-height:1.3;font-weight:800;text-wrap:balance}
+.page .sec-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:18px}
+.page .sec-head h2{min-width:0}
+.page .lead{font-size:1.08rem;max-width:62ch}
+.page .note{font-size:.92rem;color:var(--ink-soft);max-width:62ch}
+.page .dark .note{color:var(--peach)}
+.page .on-orange .note{color:var(--plum)}
+.page .pill{display:inline-block;flex:none;font:700 12px/1 var(--f-body);letter-spacing:.04em;padding:6px 10px 7px;border-radius:999px;background:var(--cream-soft);color:var(--plum);border:1.5px dashed var(--plum);white-space:nowrap;vertical-align:middle}
+.page .eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.page .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border:0;border-radius:999px;background:var(--mandarin);color:var(--plum);font:800 1.05rem/1.2 var(--f-body);text-decoration:none;cursor:pointer;transition:background .15s,transform .15s}
+.page .btn:hover{background:var(--peach);transform:translateY(-1px)}
+.page .btn-plum{background:var(--plum);color:var(--cream)}
+.page .btn-plum:hover{background:var(--plum-soft)}
+
+/* banner */
+.page .banner{background:var(--peach);color:var(--plum);text-align:center;font-size:13px;font-weight:700;line-height:1.35;padding:8px 16px}
+
+/* header */
+.page .head{background:var(--plum);color:var(--cream)}
+.page .head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;max-width:1408px}
+.page .mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.02rem;line-height:1.15;letter-spacing:-.01em;min-width:0}
+.page .mark span{min-width:0}
+.page .mark svg{width:38px;height:38px;flex:none}
+.page .mark b{font-family:var(--f-display);font-weight:900;color:var(--mandarin);font-size:.95em;letter-spacing:.02em}
+.page .nav{display:none}
+.page .head-tel{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;border:2px solid var(--mandarin);border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;white-space:nowrap}
+.page .head-tel:hover{background:var(--mandarin);color:var(--plum)}
+.page .head-tel svg{width:16px;height:16px}
+
+/* hero */
+.page .hero{background:var(--plum);color:var(--cream);position:relative}
+.page .hero .wrap{max-width:1408px;padding-top:10px}
+.page .hero .eyebrow{color:var(--peach);margin-bottom:12px}
+.page .word{width:100%;height:auto;overflow:visible}
+.page .word text{font-family:var(--f-display);font-weight:900;font-size:396px;fill:var(--mandarin)}
+.page .hero-grid{display:grid;gap:18px;margin-top:22px}
+.page .hero-grid>*{min-width:0}
+.page h1{font-weight:800;font-size:clamp(1.62rem,1.1rem + 2.5vw,3.25rem);line-height:1.1;letter-spacing:-.025em;text-wrap:balance}
+.page h1 span{display:block;margin-top:.35em;color:var(--mandarin);font-size:.62em;line-height:1.25;letter-spacing:-.01em}
+.page .hero .lead{color:var(--cream)}
+.page .cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:20px}
+.page .cta-tel{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;text-decoration:none;min-height:44px;border-bottom:2px solid var(--mandarin)}
+.page .cta-tel:hover{color:var(--mandarin)}
+.page .cta-tel svg{width:20px;height:20px}
+.page .facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;margin-top:38px;padding-top:24px;border-top:1px solid var(--plum-line)}
+.page .facts li{min-width:0;font-size:.95rem;line-height:1.4}
+.page .facts strong{display:block;font-size:1.02rem;color:var(--peach)}
+.page .facts a{text-decoration-color:var(--mandarin);text-underline-offset:3px}
+.page .hero-edge{width:100%;height:clamp(44px,7vw,96px);margin-top:clamp(32px,5vw,56px)}
+
+/* services */
+.page .menu{display:grid;gap:14px;margin-top:30px}
+.page .menu>li{min-width:0}
+.page .svc{display:grid;grid-template-columns:48px minmax(0,1fr);gap:4px 16px;align-items:start;padding:20px 0;border-top:2px solid var(--plum)}
+.page .svc .ico{grid-row:span 2;width:48px;height:48px;border-radius:50%;background:var(--peach);display:grid;place-items:center}
+.page .svc .ico svg{width:26px;height:26px}
+.page .svc p{font-size:1rem;color:var(--ink-soft)}
+.page .price{display:inline-block;margin-top:8px;font-weight:800;font-size:.95rem;color:var(--mandarin-deep)}
+.page .svc-wide{display:grid;gap:14px 28px;align-items:center;padding:26px 22px;border-radius:26px}
+.page .svc-wide>*{min-width:0}
+.page .svc-wide h3{font-size:1.4rem}
+.page .svc-wide p{margin-top:6px}
+.page .svc-all{background:var(--plum);color:var(--cream)}
+.page .svc-all .price{color:var(--peach);margin-top:0}
+.page .svc-all .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.page .svc-all .tags li{font-size:.86rem;font-weight:700;padding:4px 11px;border-radius:999px;border:1.5px solid var(--plum-line);color:var(--peach)}
+.page .svc-free{background:var(--mandarin);color:var(--plum)}
+.page .svc-free .price{color:var(--plum);margin-top:0;font-family:var(--f-display);font-weight:900;font-size:1.25rem}
+.page .svc-free a{font-weight:800;text-underline-offset:3px}
+
+/* coat slider */
+.page .coat{background:var(--peach)}
+.page .coat-grid{display:grid;gap:30px 56px}
+.page .coat-grid>*{min-width:0}
+.page .stage{position:relative;border-radius:26px;overflow:hidden;background:var(--cream-soft);border:2px solid var(--plum);touch-action:pan-y;cursor:ew-resize}
+.page .stage svg{width:100%;height:auto}
+.page .sides{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}
+.page .tag{font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:var(--plum);color:var(--cream)}
+.page .tag-r{background:var(--mandarin);color:var(--plum)}
+.page .ctrl{display:grid;gap:4px;margin-top:14px}
+.page .ctrl-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px}
+.page .ctrl label{font-weight:800}
+.page .ctrl output{font-family:var(--f-display);font-weight:700;font-size:.95rem}
+.page input[type=range]{-webkit-appearance:none;appearance:none;display:block;width:100%;height:48px;margin:0;padding:0;background:transparent;cursor:ew-resize;border-radius:999px}
+.page input[type=range]::-webkit-slider-runnable-track{height:10px;border-radius:10px;background:var(--plum)}
+.page input[type=range]::-moz-range-track{height:10px;border-radius:10px;background:var(--plum)}
+.page input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:44px;height:44px;margin-top:-17px;border-radius:50%;background:var(--mandarin);border:4px solid var(--plum);box-shadow:0 0 0 3px var(--cream-soft)}
+.page input[type=range]::-moz-range-thumb{width:36px;height:36px;border-radius:50%;background:var(--mandarin);border:4px solid var(--plum);box-shadow:0 0 0 3px var(--cream-soft)}
+.page input[type=range]:focus-visible{outline:3px solid var(--plum);outline-offset:2px}
+
+/* poradna */
+.page .advice{background:var(--mandarin);color:var(--plum)}
+.page .advice-grid{display:grid;gap:36px 56px}
+.page .advice-grid>*{min-width:0}
+.page .bigtel{display:inline-block;margin-top:22px;font-family:var(--f-display);font-weight:900;font-size:clamp(1.9rem,1.1rem + 2.2vw,3.2rem);line-height:1.05;letter-spacing:-.01em;text-decoration:none;white-space:nowrap;border-bottom:5px solid var(--plum);padding-bottom:6px}
+.page .bigtel:hover{border-bottom-color:var(--cream)}
+.page .advice .lead{margin-top:6px}
+.page .advice .note{margin-top:18px}
+.page .asks-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:22px}
+.page .asks{display:grid;gap:26px 22px;align-items:start}
+.page .asks li{position:relative;min-width:0;background:var(--cream);border-radius:24px;padding:20px 22px;font-size:1.12rem;font-weight:700;line-height:1.35;width:fit-content;max-width:min(100%,30ch)}
+.page .asks li::after{content:"";position:absolute;bottom:-14px;left:30px;width:26px;height:26px;background:var(--cream);clip-path:polygon(0 0,100% 0,0 100%)}
+.page .asks li:nth-child(even){justify-self:end;background:var(--plum);color:var(--cream)}
+.page .asks li:nth-child(even)::after{left:auto;right:30px;background:var(--plum);clip-path:polygon(0 0,100% 0,100% 100%)}
+
+/* steps */
+.page .steps{display:grid;gap:34px 40px;margin-top:34px;counter-reset:s}
+.page .steps li{min-width:0;display:grid;align-content:start;grid-template-columns:64px minmax(0,1fr);gap:8px 18px;align-items:start}
+.page .steps .num{grid-row:span 3;width:64px;height:64px;border-radius:50% 50% 50% 14px;background:var(--mandarin);color:var(--plum);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:1.5rem}
+.page .steps .strand{width:132px;height:30px}
+.page .steps p{color:var(--ink-soft);max-width:38ch}
+
+/* gallery */
+.page .gal{background:var(--plum);color:var(--cream)}
+.page .pairs{display:grid;gap:34px 28px;margin-top:34px}
+.page .pair{min-width:0}
+.page .pair-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.page .spot{position:relative;min-width:0;aspect-ratio:4/5;border:2px dashed var(--peach);border-radius:18px;background:var(--plum-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:34px 10px 14px;text-align:center;font-size:.92rem;font-weight:700;line-height:1.3;color:var(--peach)}
+.page .spot svg{width:38px;height:38px}
+.page .spot em{position:absolute;top:10px;left:10px;font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--cream);color:var(--plum)}
+.page .spot.after em{background:var(--mandarin)}
+.page .pair figcaption,.page .pair .cap{margin-top:12px;font-size:1rem;color:var(--cream)}
+
+/* faq */
+.page .faq-grid{display:grid;gap:30px 64px}
+.page .faq-grid>*{min-width:0}
+.page .faq-side .lead{margin-top:6px}
+.page .faq-side .cta-tel{margin-top:18px;color:var(--plum)}
+.page details{border-top:2px solid var(--plum)}
+.page details:last-child{border-bottom:2px solid var(--plum)}
+.page summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 2px;font-weight:800;font-size:1.1rem;line-height:1.35;cursor:pointer;list-style:none}
+.page summary::-webkit-details-marker{display:none}
+.page summary::after{content:"";flex:none;width:34px;height:34px;border-radius:50%;background:var(--peach) linear-gradient(var(--plum),var(--plum)) center/14px 2.5px no-repeat;transition:transform .2s}
+.page summary .plus{display:none}
+.page details:not([open]) summary::after{background-image:linear-gradient(var(--plum),var(--plum)),linear-gradient(var(--plum),var(--plum));background-size:14px 2.5px,2.5px 14px;background-position:center,center;background-repeat:no-repeat}
+.page summary:hover::after{background-color:var(--mandarin)}
+.page details p{padding:0 50px 20px 2px;color:var(--ink-soft);max-width:62ch}
+
+/* contact */
+.page .contact{background:var(--plum);color:var(--cream)}
+.page .contact-grid{display:grid;gap:36px 64px}
+.page .contact-grid>*{min-width:0}
+.page .contact .bigtel{color:var(--mandarin);border-bottom-color:var(--mandarin);font-size:clamp(1.7rem,1.1rem + 2.6vw,2.9rem)}
+.page .contact .bigtel:hover{border-bottom-color:var(--cream)}
+.page .info{display:grid;gap:18px;margin-top:30px}
+.page .info li{display:grid;gap:2px 16px;padding-top:16px;border-top:1px solid var(--plum-line)}
+.page .info .k{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--peach);padding-top:4px}
+.page .info a{text-decoration-color:var(--mandarin);text-underline-offset:3px;overflow-wrap:anywhere}
+.page .info a:hover{color:var(--mandarin)}
+.page .info .pill{margin-top:6px}
+.page .form{background:var(--cream);color:var(--plum);border-radius:28px;padding:clamp(20px,3.4vw,36px);display:grid;gap:16px}
+.page .form h3{font-size:1.35rem}
+.page .field{display:grid;gap:6px;min-width:0}
+.page .field label{font-weight:800;font-size:.95rem}
+.page .field input,.page .field select,.page .field textarea{width:100%;min-height:50px;padding:12px 14px;border:2px solid var(--plum);border-radius:14px;background:var(--cream-soft);color:var(--plum);font:500 16px/1.4 var(--f-body)}
+.page .field textarea{min-height:104px;resize:vertical}
+.page .field input::placeholder,.page .field textarea::placeholder{color:var(--ink-soft);opacity:1}
+.page .field input:focus-visible,.page .field select:focus-visible,.page .field textarea:focus-visible{outline:3px solid var(--mandarin);outline-offset:1px;border-radius:14px}
+.page .two{display:grid;gap:16px}
+.page .form .btn{width:100%}
+.page .form-note{padding:12px 14px;border-radius:14px;background:var(--peach);font-weight:700;font-size:.98rem;overflow-wrap:anywhere}
+
+/* footer */
+.page .foot{background:var(--plum-deep);color:var(--cream);padding:40px 0 120px;font-size:.98rem}
+.page .foot-grid{display:grid;gap:22px 48px}
+.page .foot-grid>*{min-width:0}
+.page .foot a{text-decoration-color:var(--plum-line);text-underline-offset:3px;overflow-wrap:anywhere}
+.page .foot a:hover{color:var(--mandarin)}
+.page .foot .src{margin-top:26px;padding-top:18px;border-top:1px solid var(--plum-soft);font-size:.9rem;color:var(--peach)}
+
+/* mobile call bar */
+.page .callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--plum-deep);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--plum-line)}
+.page .callbar .btn{width:100%;min-height:52px}
+.page .callbar svg{width:20px;height:20px}
+
+@media (min-width:620px){
+  .page .facts{grid-template-columns:repeat(4,1fr)}
+  .page .menu{grid-template-columns:1fr 1fr;gap:0 48px}
+  .page .menu .span{grid-column:1/-1}
+  .page .menu .span:first-child{margin-bottom:22px}
+  .page .menu .span:last-child{margin-top:22px}
+  .page .svc-wide{grid-template-columns:minmax(0,1fr) auto;padding:30px 34px}
+  .page .asks{grid-template-columns:1fr 1fr}
+  .page .asks li:nth-child(even){margin-top:34px}
+  .page .pairs{grid-template-columns:1fr 1fr}
+  .page .two{grid-template-columns:1fr 1fr}
+  .page .info li{grid-template-columns:150px minmax(0,1fr)}
+  .page .foot-grid{grid-template-columns:repeat(3,auto);justify-content:space-between}
+}
+@media (min-width:900px){
+  .page{font-size:18px}
+  .page .callbar{display:none}
+  .page .foot{padding-bottom:44px}
+  .page .head .wrap{padding-block:18px}
+  .page .hero .wrap{padding-top:18px}
+  .page .hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:end;margin-top:34px}
+  .page .menu{grid-template-columns:repeat(3,1fr)}
+  .page .coat-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr);align-items:center}
+  .page .advice-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}
+  .page .steps{grid-template-columns:repeat(3,1fr)}
+  .page .steps li{grid-template-columns:minmax(0,1fr);gap:12px}
+  .page .steps .num{grid-row:auto}
+  .page .pairs{grid-template-columns:repeat(3,1fr)}
+  .page .faq-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+  .page .faq-side{position:sticky;top:24px;align-self:start}
+  .page .contact-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+}
+@media (min-width:1080px){
+  .page .nav{display:flex;gap:4px;font-weight:700;font-size:.95rem}
+  .page .nav a{text-decoration:none;padding:10px 14px;border-radius:999px;white-space:nowrap}
+  .page .nav a:hover{background:var(--plum-soft);color:var(--peach)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .page{scroll-behavior:smooth}
+}
+@media (prefers-reduced-motion:reduce){
+  .page *{transition:none!important}
+}
+</style>
+<div class="page" lang="cs">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="roel-dog" viewBox="-150 -150 300 300">
+      <path id="roel-ear" fill="#FFD2AE" d="M-80,-88C-130,-88 -151,-30 -149,30C-148,72 -143,100 -134,116A14,14 0 0 0 -107,119A13,13 0 0 0 -82,111C-70,70 -64,0 -68,-56Z"/>
+      <use href="#roel-ear" transform="scale(-1 1)"/>
+      <path fill="#F26A1B" d="M0,-112A27,27 0 0 1 49,-101A27,27 0 0 1 88,-70A27,27 0 0 1 109,-25A27,27 0 0 1 109,25A27,27 0 0 1 88,70A27,27 0 0 1 49,101A27,27 0 0 1 0,112A27,27 0 0 1 -49,101A27,27 0 0 1 -88,70A27,27 0 0 1 -109,25A27,27 0 0 1 -109,-25A27,27 0 0 1 -88,-70A27,27 0 0 1 -49,-101A27,27 0 0 1 0,-112Z"/>
+      <path fill="#FFD2AE" d="M0,-120C-46,-118 -88,-90 -102,-34C-74,-60 -38,-72 0,-56C38,-72 74,-60 102,-34C88,-90 46,-118 0,-120Z"/>
+      <path fill="none" stroke="#F26A1B" stroke-width="5" stroke-linecap="round" d="M0,-112V-64"/>
+      <path fill="#FFF4E6" d="M0,-124L-32,-144Q-40,-124 -32,-104ZM0,-124L32,-144Q40,-124 32,-104Z"/>
+      <circle cx="0" cy="-124" r="9" fill="#FFF4E6"/>
+      <circle cx="-44" cy="-18" r="15" fill="#2D1B33"/><circle cx="44" cy="-18" r="15" fill="#2D1B33"/>
+      <circle cx="-39" cy="-23" r="5" fill="#FFF4E6"/><circle cx="49" cy="-23" r="5" fill="#FFF4E6"/>
+      <path fill="#FFF4E6" d="M0,18C-32,8 -74,26 -82,64C-86,90 -64,112 -38,102C-24,112 -8,106 0,92C8,106 24,112 38,102C64,112 86,90 82,64C74,26 32,8 0,18Z"/>
+      <path fill="#2D1B33" d="M-22,22Q0,8 22,22Q18,46 0,50Q-18,46 -22,22Z"/>
+      <path fill="none" stroke="#2D1B33" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M0,50V64M-20,72Q-8,82 0,64Q8,82 20,72"/>
+    </symbol>
+    <symbol id="roel-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a3 3 0 0 1-3 3C10 21 3 14 3 6a3 3 0 0 1 3-3z"/></symbol>
+    <symbol id="roel-cam" viewBox="0 0 40 40"><path fill="none" stroke="#FFD2AE" stroke-width="2.5" stroke-linejoin="round" d="M5 13h7l3-4h10l3 4h7v19H5z"/><circle cx="20" cy="22" r="6" fill="none" stroke="#FFD2AE" stroke-width="2.5"/></symbol>
+  </defs>
+</svg>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Psí salón ROEL</div>
+
+<header class="head dark">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Psí salón ROEL, na začátek stránky">
+      <svg aria-hidden="true"><use href="#roel-dog"/></svg>
+      <span>Psí salón <b>ROEL</b></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#sluzby">Služby a ceny</a>
+      <a href="#rozcesani">Rozčesání</a>
+      <a href="#poradna">Poradna zdarma</a>
+      <a href="#postup">Jak to probíhá</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="head-tel" href="tel:+420731443353"><svg aria-hidden="true"><use href="#roel-phone"/></svg>731 443 353</a>
+  </div>
+</header>
+
+<main>
+<section class="hero dark" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Psí salón · Krnov, Pod Cvilínem</p>
+    <svg class="word" viewBox="0 0 1280 300" role="img" aria-label="ROEL, písmeno O je hlava dlouhosrstého psa">
+      <text x="0" y="290" textLength="330" lengthAdjust="spacingAndGlyphs">R</text>
+      <use href="#roel-dog" x="352" y="-2" width="304" height="304"/>
+      <text x="682" y="290" textLength="300" lengthAdjust="spacingAndGlyphs">E</text>
+      <text x="1008" y="290" textLength="272" lengthAdjust="spacingAndGlyphs">L</text>
+    </svg>
+    <div class="hero-grid">
+      <h1>Přijde zacuchaný. Odejde rozčesaný a&nbsp;hebký. <span>Psí salón v&nbsp;Krnově pro všechna plemena.</span></h1>
+      <div>
+        <p class="lead">Stříháme, koupeme, fénujeme, čistíme uši, stříháme drápky a&nbsp;rozčesáváme dlouhosrstá plemena. Poradíme Vám zdarma.</p>
+        <div class="cta">
+          <a class="btn" href="#kontakt">Objednat termín</a>
+          <a class="cta-tel" href="tel:+420731443353"><svg aria-hidden="true"><use href="#roel-phone"/></svg>731 443 353</a>
+        </div>
+      </div>
+    </div>
+    <ul class="facts">
+      <li><strong>Všechna plemena</strong>kompletní úprava psů</li>
+      <li><strong>Dlouhá srst</strong>rozčesávání dlouhosrstých plemen</li>
+      <li><strong>Poradenství zdarma</strong>stačí zavolat</li>
+      <li><strong>Hodnocení</strong><a href="https://www.firmy.cz/detail/1941044-psi-salon-roel-krnov-pod-cvilinem.html" target="_blank" rel="noopener">1 hodnocení na Firmy.cz</a></li>
+    </ul>
+  </div>
+  <svg class="hero-edge" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#FFF4E6" d="M0,58C200,104 420,16 720,46C1020,76 1240,22 1440,52V96H0Z"/>
+    <path fill="none" stroke="#F26A1B" stroke-width="3" vector-effect="non-scaling-stroke" d="M0,40C200,86 420,-2 720,28C1020,58 1240,4 1440,34"/>
+    <path fill="none" stroke="#FFD2AE" stroke-width="2" vector-effect="non-scaling-stroke" d="M0,22C200,68 420,-20 720,10C1020,40 1240,-14 1440,16"/>
+  </svg>
+</section>
+
+<section class="sec" id="sluzby">
+  <div class="wrap">
+    <div class="sec-head"><h2>Služby a&nbsp;ceny</h2><span class="pill">ukázkový text</span></div>
+    <p class="note">Názvy služeb jsou z&nbsp;veřejného zápisu salónu. Věty pod nimi jsou ukázkové. Ceník salón nezveřejňuje, proto u&nbsp;každé služby stojí Cena na dotaz.</p>
+    <ul class="menu">
+      <li class="span">
+        <div class="svc-wide svc-all">
+          <div>
+            <h3>Kompletní úprava psů všech plemen</h3>
+            <p>Koupel, fénování, střih, uši i&nbsp;drápky při jedné návštěvě.</p>
+            <ul class="tags" aria-label="Co úprava zahrnuje"><li>stříhání</li><li>koupání</li><li>fénování</li><li>čištění uší</li><li>stříhání drápků</li></ul>
+          </div>
+          <span class="price">Cena na dotaz</span>
+        </div>
+      </li>
+      <li><div class="svc">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#2D1B33" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16 18 3M16 16 6 3"/></g></svg></span>
+        <h3>Stříhání</h3>
+        <div><p>Střih podle plemene a&nbsp;podle toho, jak chcete srst doma udržovat.</p><span class="price">Cena na dotaz</span></div>
+      </div></li>
+      <li><div class="svc">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#2D1B33" stroke-width="2" stroke-linejoin="round" d="M12 3C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-12z"/><path fill="none" stroke="#2D1B33" stroke-width="2" stroke-linecap="round" d="M9 15a3 3 0 0 0 3 3"/></svg></span>
+        <h3>Koupání</h3>
+        <div><p>Důkladné umytí a&nbsp;vypláchnutí srsti až ke kůži.</p><span class="price">Cena na dotaz</span></div>
+      </div></li>
+      <li><div class="svc">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#2D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"/><path d="M14 7l7-2v8l-7-2M8 14l1 7h3l-1-7"/></g></svg></span>
+        <h3>Fénování</h3>
+        <div><p>Vysušení do sucha, aby srst zůstala vzdušná a&nbsp;znovu se neslepila.</p><span class="price">Cena na dotaz</span></div>
+      </div></li>
+      <li><div class="svc">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#2D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4c-3 3-4 9-3 14 1 3 4 3 5 0 1-4 0-10 1-13"/><path d="M11 5c2-1 5 0 6 3M12.5 11h.01"/></g></svg></span>
+        <h3>Čištění uší</h3>
+        <div><p>Šetrné vyčištění boltců, hlavně u&nbsp;plemen s&nbsp;chlupatýma ušima.</p><span class="price">Cena na dotaz</span></div>
+      </div></li>
+      <li><div class="svc">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="#2D1B33"><ellipse cx="12" cy="16" rx="5" ry="4"/><circle cx="5" cy="10.5" r="2.2"/><circle cx="9.5" cy="6" r="2.2"/><circle cx="14.5" cy="6" r="2.2"/><circle cx="19" cy="10.5" r="2.2"/></g></svg></span>
+        <h3>Stříhání drápků</h3>
+        <div><p>Zkrácení drápků, aby pes došlapoval pohodlně.</p><span class="price">Cena na dotaz</span></div>
+      </div></li>
+      <li><div class="svc">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#2D1B33" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="5" rx="2"/><path d="M6 10v9M9 10v9M12 10v9M15 10v9M18 10v9"/></g></svg></span>
+        <h3>Rozčesávání dlouhosrstých plemen</h3>
+        <div><p>Trpělivé rozčesání zacuchané srsti pramen po prameni.</p><span class="price">Cena na dotaz</span></div>
+      </div></li>
+      <li class="span">
+        <div class="svc-wide svc-free on-orange">
+          <div>
+            <h3>Bezplatné poradenství</h3>
+            <p>Zavolejte a&nbsp;zeptejte se na péči o&nbsp;srst mezi návštěvami. <a href="#poradna">S&nbsp;čím můžete volat</a></p>
+          </div>
+          <span class="price">Zdarma</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec coat" id="rozcesani">
+  <div class="wrap coat-grid">
+    <div>
+      <div class="sec-head"><h2>Ze zacuchané do rozčesané</h2><span class="pill">ukázkový text</span></div>
+      <p class="lead">Dlouhá srst se nejvíc cuchá za ušima, v&nbsp;podpaží a&nbsp;na zadních nohách. Vezměte hřeben a&nbsp;projeďte jím pramen sami.</p>
+      <p class="note" style="margin-top:16px">Rozčesávání dlouhosrstých plemen je služba ze zápisu salónu. Ilustrace a&nbsp;popis jsou ukázkové. Rozčesává se od konečků ke kůži, proto hřeben jede zprava doleva.</p>
+    </div>
+    <div class="demo">
+      <div class="sides" aria-hidden="true"><span class="tag tag-l">Zacuchaná</span><span class="tag tag-r">Rozčesaná</span></div>
+      <div class="stage" id="roel-stage">
+        <svg viewBox="0 0 800 380" aria-hidden="true">
+          <defs><clipPath id="roel-clip"><rect id="roel-clip-rect" x="400" y="-20" width="900" height="420"/></clipPath></defs>
+          <rect width="800" height="380" fill="#FFFAF2"/>
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="#2D1B33" stroke-width="5" d="M-30,120c8 2 35 3 42 12c7 10 3 29-5 35c-7 6-27 4-32-5c-5-9-3-29 7-40c11-10 31-8 45-12c15-4 23-2 28-8c5-6 1-19-3-23c-5-4-18-2-21 3c-4 6-2 18 4 26c6 8 15 13 26 14c10 1 21-2 26-8c4-6 1-18-3-21c-5-4-17-3-20 3c-3 5-2 17 4 24c6 8 5 16 27 12c21-4 59-27 80-32c21-5 21 2 26 8c4 6 1 17-3 21c-5 4-17 2-20-3c-3-6-2-17 5-24c6-7 8-22 29-13c21 10 54 50 76 60c23 10 31-2 37-11c7-8 2-25-4-30c-7-5-24-3-28 5c-5 7-3 25 6 34c10 9 17 10 42 11c25 2 60 0 83-3c24-3 30-3 36-11c7-8 2-24-4-29c-6-5-23-4-27 4c-5 8-2 22 6 34c8 11 13 37 34 23c21-14 51-76 72-92c22-17 30 2 36 10c6 8 2 24-4 29c-6 5-23 3-27-4c-5-8-1-24 6-33c7-10 15-10 29-16c14-6 34-3 42-12c7-10 2-29-5-34c-8-6-27-4-32 4c-5 9-2 27 7 40c9 12 24 16 38 23c13 6 24 2 30 9c5 6 1 20-4 24c-5 4-19 3-23-3c-3-7-2-21 5-28c8-8 19-7 35-11c15-5 35-3 42-13c8-9 3-29-5-35c-7-6-27-4-32 5c-5 9-2 27 7 40c10 14 18 26 40 28c21 3 38-22 67-15c30 6 63 38 79 48"/>
+            <path stroke="#F26A1B" stroke-width="4" d="M-30,144c14 4 40 17 69 19c28 3 49-3 73-8c24-5 25-21 47-16c21 5 35 44 61 40c25-4 47-50 67-60c20-11 25 2 30 8c6 7 2 21-3 25c-6 5-20 3-23-3c-4-7-3-20 5-29c8-8 20-9 34-14c14-5 30-3 37-11c6-8 2-25-4-30c-7-6-24-4-29 4c-4 8-2 26 7 35c9 9 23 7 38 11c15 5 31 3 38 11c6 9 2 26-5 31c-6 6-24 4-28-4c-5-8-3-24 6-36c9-11 16-26 39-19c23 6 50 39 77 51c26 12 35 5 55 9c19 4 35 3 42 12c8 10 3 29-5 35c-7 6-27 4-32-5c-5-9-3-27 7-40c10-13 27-17 44-24c17-7 34-3 41-12c8-9 3-28-4-34c-8-6-27-4-32 5c-5 9-3 28 7 39c11 10 24 16 47 13c22-3 44-25 64-29c19-4 28 2 33 10c6 7 2 22-4 27c-5 5-21 3-25-4c-4-7-1-22 6-31c7-10 12-21 30-17c17 3 46 27 57 34"/>
+            <path stroke="#9C3A06" stroke-width="6" d="M-30,168c9-3 37-3 45-13c8-10 3-31-5-37c-8-7-29-5-35 5c-5 10-4 30 8 42c12 13 29 15 53 22c24 6 48 7 67 11c18 3 21 1 26 7c5 6 2 18-3 22c-5 4-17 3-20-3c-3-6-1-14 4-25c6-10 12-24 23-27c12-4 29 2 35 10c6 8 2 24-4 29c-6 4-23 3-27-4c-4-8-2-22 6-33c9-11 24-19 39-21c14-2 30 3 36 11c6 8 2 25-4 30c-7 5-24 3-28-4c-4-8-4-25 6-35c10-9 28-13 43-13c15-1 26 2 32 9c5 7 2 22-4 26c-6 5-21 3-24-4c-4-6-3-21 5-30c9-9 19-25 37-15c18 10 30 51 54 65c25 14 47 2 69 5c22 4 33 3 40 12c7 9 2 27-5 33c-7 6-26 4-30-5c-5-8-4-27 7-37c11-10 30-8 47-12c17-5 31-3 38-11c6-9 2-26-5-31c-6-5-24-4-28 4c-5 8-4 25 6 35c10 11 22 19 44 19c22 1 48-15 67-17c19-1 23 2 28 9c5 6 2 19-3 23c-5 3-18 2-22-4c-3-6-2-15 5-26c7-10 12-26 31-27c19 0 42 18 65 26c22 8 29 15 48 15c18 1 35-3 43-12c8-10 3-30-5-36c-8-6-28-4-33 5c-5 9-4 30 7 41c12 11 28 18 50 12c22-5 49-31 61-38"/>
+            <path stroke="#2D1B33" stroke-width="3" d="M-30,192c7 2 28 2 34 10c5 7 2 23-4 28c-6 4-22 3-26-4c-4-8-4-22 6-32c9-10 16-26 41-20c25 5 58 35 83 47c25 12 33 3 41 12c7 9 2 28-5 34c-7 5-26 3-31-5c-5-9-2-27 7-38c9-11 24-12 37-17c14-5 27-2 32-9c6-8 2-22-4-27c-5-4-20-3-24 4c-4 7-2 21 6 30c8 9 20 10 33 15c14 5 27 2 32 9c6 7 2 22-3 27c-6 4-21 3-25-4c-4-7-3-21 6-30c8-10 23-17 37-19c14-2 27 2 33 10c6 7 2 23-4 27c-6 5-21 3-25-4c-4-7-2-22 5-31c8-9 12-15 32-15c20 0 47 9 67 14c20 5 28 3 35 11c6 7 2 23-5 28c-6 5-22 3-26-4c-4-7-2-21 6-33c9-11 16-24 36-24c21 0 39 21 65 25c27 4 44-9 69-5c25 4 39 24 57 27c19 4 29-2 35-10c6-7 2-23-4-28c-6-5-22-3-26 4c-5 7-2 21 6 32c7 12 11 38 29 26c18-12 38-74 60-86c21-12 23 19 47 25c24 7 50 9 74 8c23-1 37-3 45-13c8-11 3-31-5-38c-8-6-30-4-35 6c-5 9-4 29 8 42c12 13 42 18 53 22"/>
+            <path stroke="#F26A1B" stroke-width="5" d="M-30,216c9 3 37 3 45 13c7 10 2 31-6 37c-8 6-29 4-34-5c-5-10-1-29 8-42c9-14 25-18 38-24c14-7 24-2 29-9c5-6 1-19-4-23c-5-4-18-2-21 3c-4 6-1 17 5 27c6 10 10 27 25 25c15-3 35-28 50-37c15-9 22-2 26-8c5-6 2-18-3-22c-4-3-17-2-20 4c-3 5-2 16 5 25c7 8 16 11 30 16c13 6 31 3 37 11c7 9 2 26-4 31c-7 5-24 4-29-4c-4-8-2-25 7-35c9-11 16-18 37-16c22 1 44 8 72 21c28 14 38 50 68 47c30-3 59-52 82-63c23-10 28 3 34 10c6 8 2 23-4 28c-6 5-22 3-26-4c-4-7-2-20 6-32c8-11 16-36 36-24c20 12 45 66 64 85c19 18 24 2 30 8c5 7 1 20-4 25c-5 4-19 2-22-4c-4-6-2-17 5-28c6-11 7-19 27-27c19-8 48-8 70-13c23-5 34-3 42-12c7-9 2-28-5-34c-7-6-27-4-32 5c-5 8-2 28 8 39c9 10 21 13 38 13c16 0 35-3 43-13c7-9 2-29-6-35c-7-6-27-4-32 5c-5 9-3 27 7 40c11 13 28 17 46 24c18 8 37 4 45 14c8 10 3 30-5 37c-8 6-29 4-35-6c-5-9-2-28 8-42c11-14 20-24 45-26c26-3 65 11 81 14"/>
+            <path stroke="#2D1B33" stroke-width="6" d="M-30,240c9 3 35 3 43 13c7 9 2 29-5 35c-8 6-28 4-33-5c-5-9-1-29 8-40c8-12 15-15 37-20c21-5 46-19 71-8c24 12 34 50 50 65c16 14 25 2 31 9c5 7 1 21-4 25c-5 4-20 3-23-4c-4-6-3-20 5-28c8-9 15-10 35-14c20-4 46-3 65-5c19-3 24-3 29-9c6-7 2-20-3-24c-5-5-19-3-23 3c-3 6-2 19 6 28c7 9 15 15 30 16c16 0 38-3 46-14c8-10 2-30-6-37c-8-6-29-4-34 5c-6 10-4 30 8 43c11 14 33 21 49 25c16 3 25-3 30-9c6-7 2-21-3-25c-6-5-20-3-23 3c-4 7-3 18 5 29c8 10 20 22 34 25c14 3 30-3 37-11c6-8 2-24-5-30c-6-5-23-3-27 5c-5 7-2 23 6 34c8 11 11 43 34 20c24-22 59-104 83-133c23-29 29-2 36-11c6-8 2-24-5-29c-6-5-23-4-27 4c-4 8-3 23 6 34c9 11 23 20 40 21c17 2 37-3 45-13c8-10 2-30-5-36c-8-7-29-5-34 5c-6 9-3 31 7 42c11 11 24 15 44 14c21-1 38-18 59-19c21-2 37 3 45 13c8 10 3 31-5 37c-8 7-29 5-35-5c-5-10-4-30 8-43c12-13 30-24 51-21c21 3 36 32 55 37c18 5 30-3 36-11c7-8 3-25-4-30c-6-6-24-4-28 4c-4 8-4 25 6 35c11 10 36 12 45 15"/>
+            <path stroke="#9C3A06" stroke-width="4" d="M-30,264c6-2 23-2 28-8c5-6 2-19-3-23c-5-4-18-3-22 3c-3 6-3 17 5 26c8 10 14 15 34 20c21 5 42 10 70 7c27-4 38-19 68-22c30-4 55-2 82 6c26 7 32 27 50 31c18 4 32-3 38-12c7-8 3-26-4-31c-7-6-25-4-30 4c-4 8-3 27 7 37c10 9 18 27 42 13c24-15 52-69 78-85c27-15 32-5 56 6c23 11 40 37 61 50c21 12 36 3 44 13c8 10 3 30-5 36c-8 7-29 5-34-5c-5-9-4-31 8-42c12-10 28-1 53-11c25-9 52-27 71-36c19-9 21-2 26-8c4-6 1-17-3-21c-5-4-17-2-20 3c-3 6-2 17 5 24c7 7 11 11 31 11c20 0 44-11 67-11c22 1 37 3 45 14c8 10 2 30-6 37c-7 6-29 4-34-6c-5-9-1-28 8-42c9-14 23-24 39-27c17-3 35 3 43 13c7 9 2 29-5 35c-8 6-28 4-33-5c-5-9-2-28 8-40c9-13 31-17 39-21"/>
+            <path stroke="#F26A1B" stroke-width="5" d="M-30,288c12 2 40 8 58 12c17 4 24 2 30 9c5 7 1 20-4 25c-5 4-19 2-23-4c-3-6-1-20 6-28c6-8 14-13 27-14c14 0 33 3 40 12c7 9 3 28-4 33c-7 6-26 4-31-5c-5-8-4-25 7-37c11-13 29-30 49-23c20 6 29 48 50 56c21 8 37-15 55-16c19-1 30 3 36 11c7 8 2 24-4 29c-6 5-23 4-27-4c-5-7-2-24 6-34c8-9 9-4 32-15c22-11 58-35 82-41c23-6 30 3 36 11c6 8 2 25-4 30c-7 5-24 3-28-4c-4-8-3-23 6-34c10-12 24-21 40-24c16-2 33 3 39 12c7 9 3 27-4 32c-7 6-26 4-30-5c-5-8-3-26 7-36c10-11 27-14 42-16c14-1 26 3 32 10c6 7 2 22-4 27c-6 4-21 3-25-4c-3-7-1-19 6-31c7-11 11-43 28-25c17 17 30 88 57 114c27 25 48 17 80 13c31-3 47-28 77-29c31-1 43 20 74 24c31 5 65-1 82-1"/>
+            <path stroke="#2D1B33" stroke-width="3" d="M-30,312c5 2 22 2 27 8c5 6 1 18-3 22c-5 4-18 3-21-3c-3-6-1-16 5-25c5-10 3-28 23-22c20 6 46 51 76 53c30 2 54-36 74-43c20-7 22 2 27 8c5 6 2 19-3 23c-5 4-18 2-21-3c-3-6-1-18 5-26c5-8 12-15 23-16c11-1 27 2 32 10c6 7 2 22-3 26c-6 5-22 3-25-3c-4-7-3-23 5-31c9-9 24-8 37-13c13-4 24-2 29-8c5-7 2-20-4-24c-5-4-18-3-22 4c-3 6-2 19 6 27c7 7 14 4 33 11c19 8 40 22 61 25c21 2 37-4 45-14c8-10 3-31-5-37c-8-7-29-5-35 5c-5 10-1 29 8 43c10 14 23 22 40 27c18 4 27 7 49-4c22-11 39-54 62-52c22 3 34 50 50 65c15 15 23 2 28 8c5 7 2 20-3 24c-5 4-19 2-22-4c-3-6-2-18 5-26c6-8 17-9 27-13c11-4 22-2 27-8c4-6 1-18-3-21c-5-4-17-3-20 3c-4 5-3 16 4 24c7 9 16 17 29 18c13 1 29-2 35-10c6-8 2-24-4-29c-6-5-23-3-27 4c-4 8-1 26 6 33c8 7 20 0 32 2c12 2 25 2 30 9c6 7 2 21-3 25c-6 4-20 3-24-4c-3-6-1-19 6-28c7-9 16-16 30-17c14-2 32 2 39 11c6 9 2 26-5 32c-7 5-25 3-30-5c-4-8-2-24 7-36c9-13 22-18 39-26c17-8 37-4 45-14c8-10 3-30-5-37c-8-6-30-4-35 6c-5 9-4 29 8 42c12 13 34 17 50 24c17 7 26 2 32 9c5 7 1 21-4 26c-6 4-20 3-24-4c-4-6-2-19 6-29c8-11 27-19 34-23"/>
+            <g stroke="#2D1B33" stroke-width="4"><ellipse cx="160" cy="196" rx="30" ry="15" transform="rotate(24 160 196)"/><ellipse cx="160" cy="196" rx="20" ry="27" transform="rotate(-20 160 196)"/><ellipse cx="162" cy="198" rx="11" ry="8"/></g>
+            <g stroke="#9C3A06" stroke-width="4"><ellipse cx="318" cy="286" rx="26" ry="13" transform="rotate(-28 318 286)"/><ellipse cx="318" cy="286" rx="17" ry="24" transform="rotate(18 318 286)"/><ellipse cx="316" cy="288" rx="9" ry="7"/></g>
+            <g stroke="#F26A1B" stroke-width="4"><ellipse cx="556" cy="168" rx="28" ry="14" transform="rotate(-18 556 168)"/><ellipse cx="556" cy="168" rx="18" ry="25" transform="rotate(26 556 168)"/><ellipse cx="558" cy="166" rx="10" ry="7"/></g>
+            <g stroke="#2D1B33" stroke-width="4"><ellipse cx="692" cy="270" rx="26" ry="13" transform="rotate(20 692 270)"/><ellipse cx="692" cy="270" rx="17" ry="23" transform="rotate(-24 692 270)"/><ellipse cx="690" cy="272" rx="9" ry="7"/></g>
+          </g>
+          <g clip-path="url(#roel-clip)">
+            <rect x="-20" y="-20" width="840" height="420" fill="#FFFAF2"/>
+            <path id="roel-smooth" fill="none" stroke-linecap="round" d="M-20,0C140,-18 300,14 460,2C600,-10 720,-14 820,-4"/>
+            <use href="#roel-smooth" y="120" stroke="#2D1B33" stroke-width="5"/>
+            <use href="#roel-smooth" y="144" stroke="#F26A1B" stroke-width="4"/>
+            <use href="#roel-smooth" y="168" stroke="#9C3A06" stroke-width="6"/>
+            <use href="#roel-smooth" y="192" stroke="#2D1B33" stroke-width="3"/>
+            <use href="#roel-smooth" y="216" stroke="#F26A1B" stroke-width="5"/>
+            <use href="#roel-smooth" y="240" stroke="#2D1B33" stroke-width="6"/>
+            <use href="#roel-smooth" y="264" stroke="#9C3A06" stroke-width="4"/>
+            <use href="#roel-smooth" y="288" stroke="#F26A1B" stroke-width="5"/>
+            <use href="#roel-smooth" y="312" stroke="#2D1B33" stroke-width="3"/>
+            <g fill="#F26A1B"><path d="M640,58l5,13 13,5-13,5-5,13-5-13-13-5 13-5z"/><path d="M560,336l4,10 10,4-10,4-4,10-4-10-10-4 10-4z"/></g>
+          </g>
+          <g id="roel-comb-g" transform="translate(400 0)">
+            <g fill="#2D1B33"><rect x="-72" y="52" width="8" height="262" rx="4"/><rect x="-54" y="52" width="8" height="276" rx="4"/><rect x="-36" y="52" width="8" height="286" rx="4"/><rect x="-18" y="52" width="8" height="292" rx="4"/><rect x="-4" y="52" width="8" height="296" rx="4"/><rect x="10" y="52" width="8" height="292" rx="4"/><rect x="28" y="52" width="8" height="286" rx="4"/><rect x="46" y="52" width="8" height="276" rx="4"/><rect x="64" y="52" width="8" height="262" rx="4"/>
+            <rect x="-82" y="12" width="164" height="58" rx="28"/></g>
+            <circle cx="0" cy="40" r="9" fill="#F26A1B"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ctrl">
+        <div class="ctrl-row">
+          <label for="roel-comb">Posuňte hřeben po prameni</label>
+          <output id="roel-comb-out" for="roel-comb">Rozčesáno 50 %</output>
+        </div>
+        <input type="range" id="roel-comb" min="0" max="100" step="1" value="50" aria-valuetext="Rozčesáno 50 % pramene">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec advice on-orange" id="poradna">
+  <div class="wrap advice-grid">
+    <div>
+      <p class="eyebrow">Bezplatné poradenství</p>
+      <h2 style="margin-top:10px">Poradna zdarma</h2>
+      <p class="lead" style="margin-top:16px">Nevíte si rady se srstí? Zavolejte a&nbsp;zeptejte se. Za radu v&nbsp;Psím salónu ROEL neplatíte.</p>
+      <a class="bigtel" href="tel:+420731443353">731 443 353</a>
+      <p class="note">Bezplatné poradenství je ověřený údaj ze zápisu salónu. Otázky v&nbsp;bublinách jsou ukázkové.</p>
+    </div>
+    <div>
+      <div class="asks-head"><h3>S&nbsp;čím můžete zavolat</h3><span class="pill">ukázkový text</span></div>
+      <ul class="asks">
+        <li>„Jak často mám česat dlouhosrsté plemeno?“</li>
+        <li>„Co dělat se zacuchanou srstí za ušima?“</li>
+        <li>„Kdy přivést štěně poprvé?“</li>
+        <li>„Jaký kartáč mám doma používat?“</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="postup">
+  <div class="wrap">
+    <div class="sec-head"><h2>Jak návštěva probíhá</h2><span class="pill">ukázkový text</span></div>
+    <p class="lead">Tři kroky od prvního telefonátu po hebkou srst.</p>
+    <ol class="steps">
+      <li>
+        <span class="num" aria-hidden="true">1</span>
+        <svg class="strand" viewBox="0 0 132 30" aria-hidden="true"><path fill="none" stroke="#2D1B33" stroke-width="2.5" stroke-linecap="round" d="M2,16c14,-18 22,14 8,6c-10,-8 14,-22 22,-4c8,16 -16,12 -4,0c12,-12 24,10 12,8c-12,-4 6,-24 20,-8c12,14 -14,14 -4,2c10,-12 26,6 16,8c-10,0 4,-22 18,-10c12,10 -6,14 2,4c8,-8 20,-4 30,-2"/></svg>
+        <h3>Zavoláte nebo napíšete</h3>
+        <p>Řeknete plemeno a&nbsp;v&nbsp;jakém stavu je srst. Domluvíme termín a&nbsp;cenu.</p>
+      </li>
+      <li>
+        <span class="num" aria-hidden="true">2</span>
+        <svg class="strand" viewBox="0 0 132 30" aria-hidden="true"><path fill="none" stroke="#2D1B33" stroke-width="2.5" stroke-linecap="round" d="M2,16c14,-18 22,14 8,6c-10,-8 14,-22 22,-4c8,16 -16,12 -4,0c12,-12 22,4 34,-2c20,-8 44,6 66,-2"/><path fill="none" stroke="#F26A1B" stroke-width="2.5" stroke-linecap="round" d="M66,24c22,-6 42,4 64,-2"/></svg>
+        <h3>Přivedete psa do salónu</h3>
+        <p>Na adrese 9.&nbsp;května 576/27 si srst prohlédneme a&nbsp;domluvíme se s&nbsp;Vámi, jak má pes vypadat.</p>
+      </li>
+      <li>
+        <span class="num" aria-hidden="true">3</span>
+        <svg class="strand" viewBox="0 0 132 30" aria-hidden="true"><g fill="none" stroke-width="2.5" stroke-linecap="round"><path stroke="#2D1B33" d="M2,8c40,-8 86,8 128,0"/><path stroke="#F26A1B" d="M2,16c40,-8 86,8 128,0"/><path stroke="#2D1B33" d="M2,24c40,-8 86,8 128,0"/></g></svg>
+        <h3>Odvedete si ho rozčesaného</h3>
+        <p>Vykoupaného, vyfénovaného a&nbsp;hebkého. K&nbsp;tomu dostanete radu, jak srst udržet doma.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec gal dark" id="galerie">
+  <div class="wrap">
+    <div class="sec-head"><h2>Před a&nbsp;po</h2><span class="pill">ukázkový text</span></div>
+    <p class="lead">Dvojice fotek řekne o&nbsp;Vaší práci víc než odstavec textu. Stačí snímky z&nbsp;mobilu, do webu je vložíme za Vás.</p>
+    <div class="pairs">
+      <div class="pair">
+        <div class="pair-row">
+          <div class="spot"><em>Před</em><svg aria-hidden="true"><use href="#roel-cam"/></svg>Sem přijde Vaše fotka</div>
+          <div class="spot after"><em>Po</em><svg aria-hidden="true"><use href="#roel-cam"/></svg>Sem přijde Vaše fotka</div>
+        </div>
+        <p class="cap">Rozčesání dlouhosrstého plemene</p>
+      </div>
+      <div class="pair">
+        <div class="pair-row">
+          <div class="spot"><em>Před</em><svg aria-hidden="true"><use href="#roel-cam"/></svg>Sem přijde Vaše fotka</div>
+          <div class="spot after"><em>Po</em><svg aria-hidden="true"><use href="#roel-cam"/></svg>Sem přijde Vaše fotka</div>
+        </div>
+        <p class="cap">Kompletní úprava se střihem</p>
+      </div>
+      <div class="pair">
+        <div class="pair-row">
+          <div class="spot"><em>Před</em><svg aria-hidden="true"><use href="#roel-cam"/></svg>Sem přijde Vaše fotka</div>
+          <div class="spot after"><em>Po</em><svg aria-hidden="true"><use href="#roel-cam"/></svg>Sem přijde Vaše fotka</div>
+        </div>
+        <p class="cap">Koupání a&nbsp;fénování</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <div class="sec-head"><h2>Na co se lidé ptají</h2><span class="pill">ukázkový text</span></div>
+      <p class="lead">Odpovědi jsou ukázkové, upravíme je podle Vás. Na cokoli dalšího se dá zeptat po telefonu.</p>
+      <a class="cta-tel" href="tel:+420731443353"><svg aria-hidden="true"><use href="#roel-phone"/></svg>731 443 353</a>
+    </div>
+    <div>
+      <details open>
+        <summary>Kolik úprava stojí?</summary>
+        <p>Cena záleží na plemeni, velikosti psa a&nbsp;stavu srsti. Zavolejte na 731&nbsp;443&nbsp;353 a&nbsp;cenu se dozvíte předem.</p>
+      </details>
+      <details>
+        <summary>Vezmete i&nbsp;hodně zacuchaného psa?</summary>
+        <p>Ano, rozčesávání dlouhosrstých plemen patří mezi naše služby. Při objednání popište, jak srst vypadá, ať si na psa vyhradíme dost času.</p>
+      </details>
+      <details>
+        <summary>Jak dlouho úprava trvá?</summary>
+        <p>Záleží na velikosti psa a&nbsp;stavu srsti. Při objednání Vám řekneme, kdy si pro psa přijít.</p>
+      </details>
+      <details>
+        <summary>Mám psa před návštěvou vykoupat?</summary>
+        <p>Nemusíte, koupání a&nbsp;fénování je součást úpravy. Zacuchanou srst doma raději nemočte, voda zacuchaná místa utáhne.</p>
+      </details>
+      <details>
+        <summary>Kdy přivést štěně poprvé?</summary>
+        <p>Zavolejte, poradenství je zdarma. Domluvíme krátkou první návštěvu, aby si štěně na salón zvyklo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact dark" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--peach)">Kontakt</p>
+      <h2 style="margin-top:10px">Objednejte svému psovi termín</h2>
+      <p class="lead" style="margin-top:16px">Nejrychlejší je telefon. Kdo nerad volá, vyplní formulář.</p>
+      <a class="bigtel" href="tel:+420731443353">731 443 353</a>
+      <ul class="info">
+        <li><span class="k">E-mail</span><span><a href="mailto:vladimira.strouhalova@seznam.cz">vladimira.strouhalova@seznam.cz</a></span></li>
+        <li><span class="k">Adresa</span><span>9.&nbsp;května 576/27, 794&nbsp;01 Krnov (Pod Cvilínem)<br><a href="https://mapy.cz/zakladni?q=9.%20kv%C4%9Btna%20576%2F27%2C%20794%2001%20Krnov" target="_blank" rel="noopener">Otevřít v&nbsp;Mapy.cz</a></span></li>
+        <li><span class="k">Otevírací doba</span><span>Otevírací dobu doplníme podle Vás<br><span class="pill">ukázkový text</span></span></li>
+        <li><span class="k">Hodnocení</span><span><a href="https://www.firmy.cz/detail/1941044-psi-salon-roel-krnov-pod-cvilinem.html" target="_blank" rel="noopener">1 hodnocení na Firmy.cz</a></span></li>
+      </ul>
+    </div>
+    <form class="form" id="roel-form" novalidate>
+      <h3>Napište si o&nbsp;termín</h3>
+      <div class="two">
+        <div class="field"><label for="roel-jmeno">Jméno</label><input id="roel-jmeno" name="jmeno" type="text" autocomplete="name"></div>
+        <div class="field"><label for="roel-telefon">Telefon</label><input id="roel-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="roel-plemeno">Plemeno</label><input id="roel-plemeno" name="plemeno" type="text" placeholder="např. jorkšír, kříženec"></div>
+        <div class="field"><label for="roel-srst">Stav srsti</label>
+          <select id="roel-srst" name="srst">
+            <option>běžná údržba</option>
+            <option>delší srst</option>
+            <option>zacuchaná</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="roel-zprava">Zpráva</label><textarea id="roel-zprava" name="zprava" placeholder="Kdy se Vám to hodí a co má pes dostat"></textarea></div>
+      <button class="btn" type="submit">Objednat termín</button>
+      <p class="form-note" id="roel-form-note" role="status" hidden>Toto je ukázka formuláře. V&nbsp;ostré verzi webu přijde zpráva na vladimira.strouhalova@seznam.cz.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot dark">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="mark" href="#top"><svg aria-hidden="true"><use href="#roel-dog"/></svg><span>Psí salón <b>ROEL</b></span></a>
+        <p style="margin-top:12px">Kompletní úprava psů všech plemen v&nbsp;Krnově.</p>
+      </div>
+      <p>9.&nbsp;května 576/27<br>794&nbsp;01 Krnov (Pod Cvilínem)<br>IČO: 73887285</p>
+      <p><a href="tel:+420731443353">731 443 353</a><br><a href="mailto:vladimira.strouhalova@seznam.cz">vladimira.strouhalova@seznam.cz</a></p>
+    </div>
+    <p class="src"><a href="https://www.firmy.cz/detail/1941044-psi-salon-roel-krnov-pod-cvilinem.html" target="_blank" rel="noopener">Údaje z&nbsp;veřejného zápisu firmy na Firmy.cz</a></p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+420731443353"><svg aria-hidden="true"><use href="#roel-phone"/></svg>Zavolat 731 443 353</a>
+</div>
+</div>
+<script>
+(function(){
+  var r=document.getElementById('roel-comb'),clip=document.getElementById('roel-clip-rect'),comb=document.getElementById('roel-comb-g'),out=document.getElementById('roel-comb-out'),stage=document.getElementById('roel-stage');
+  function upd(){
+    var W=r.clientWidth||1,t=44,p=r.value/100,x=Math.round((t/2+p*(W-t))/W*800),c=100-Math.round(r.value);
+    clip.setAttribute('x',x);comb.setAttribute('transform','translate('+x+' 0)');
+    out.textContent='Rozčesáno '+c+' %';r.setAttribute('aria-valuetext','Rozčesáno '+c+' % pramene');
+  }
+  function at(e){var b=stage.getBoundingClientRect();r.value=Math.max(0,Math.min(100,(e.clientX-b.left-22)/(b.width-44)*100));upd()}
+  var drag=false;
+  if(r&&stage){
+    r.addEventListener('input',upd);window.addEventListener('resize',upd);
+    stage.addEventListener('pointerdown',function(e){drag=true;try{stage.setPointerCapture(e.pointerId)}catch(_){}at(e)});
+    stage.addEventListener('pointermove',function(e){if(drag)at(e)});
+    ['pointerup','pointercancel'].forEach(function(n){stage.addEventListener(n,function(){drag=false})});
+    upd();
+  }
+  var f=document.getElementById('roel-form'),n=document.getElementById('roel-form-note');
+  if(f)f.addEventListener('submit',function(e){e.preventDefault();n.hidden=false;n.focus&&n.scrollIntoView({block:'nearest'})});
+})();
+</script>
+</body>
+</html>
