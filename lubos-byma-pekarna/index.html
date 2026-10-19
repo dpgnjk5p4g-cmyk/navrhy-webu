@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Luboš Býma – pekárna | pekárna Hodslavice</title>
+<meta name="description" content="Pekárna Luboš Býma v Hodslavicích u Nového Jičína: tradiční výroba a prodej domácího chleba. Otevřeno po–pá od 6:30, so 6:30–10:00. Tel. 604 702 950.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,500&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Luboš Býma – pekárna","description":"Tradiční výroba a prodej domácího chleba.","telephone":"+420604702950","email":"ekofin.nj@tiscali.cz","address":{"@type":"PostalAddress","streetAddress":"Hodslavice 328","addressLocality":"Hodslavice","postalCode":"742 71","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"11:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"06:30","closes":"10:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"11","bestRating":"5"},"sameAs":["https://www.firmy.cz/detail/2006987-lubos-byma-hodslavice.html"]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: celoplošný „ranní“ hero s pecí a živým stavem, pak týdenní pás Kdy pro chleba (časová osa 6–16 h), řemeslné pásy na moučném podkladu */
+:root{
+  --crust:#7A3E1B; --crust-deep:#5C2C12; --flour:#F8F1E3; --coal:#241C16; --grain:#D9A23A;
+  --muted:#6A5546; --line:#E6D9C2; --card:#FFFCF5; --on-crust:#FBF3E4; --open:#2F7D4F; --closed:#A13D2D;
+  --display:"Alegreya",Georgia,"Times New Roman",serif;
+  --body:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --crust:#C77A45; --crust-deep:#3A1D0C; --flour:#16110D; --coal:#F3E9DA; --grain:#E3B457;
+  --muted:#C6B19F; --line:#332820; --card:#1F1813; --on-crust:#FBF3E4; --open:#5CC48A; --closed:#E07A66; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --crust:#C77A45; --crust-deep:#3A1D0C; --flour:#16110D; --coal:#F3E9DA; --grain:#E3B457;
+  --muted:#C6B19F; --line:#332820; --card:#1F1813; --on-crust:#FBF3E4; --open:#5CC48A; --closed:#E07A66; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--flour);color:var(--coal);font-family:var(--body);font-size:17px;line-height:1.62;padding-bottom:76px}
+h1,h2,h3{font-family:var(--display);line-height:1.04;text-wrap:balance;margin:0}
+h2{font-size:clamp(32px,5vw,52px);font-weight:800}
+h3{font-size:24px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.banner{background:#241C16;color:#F8F1E3;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--crust);border:1px dashed currentColor;border-radius:4px;padding:1px 6px;vertical-align:middle;margin-left:6px;font-family:var(--body);line-height:1.5}
+.top{background:#5C2C12;color:#FBF3E4}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font-family:var(--display);font-weight:800;font-size:24px;text-decoration:none;display:flex;gap:12px;align-items:center;line-height:1.05}
+.logo small{display:block;font-family:var(--body);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;opacity:.8}
+nav{display:flex;gap:24px;font-weight:600;font-size:15px}
+nav a{text-decoration:none;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline}
+.tel{font-weight:700;text-decoration:none;background:#D9A23A;color:#241C16;padding:9px 16px;border-radius:6px;white-space:nowrap}
+@media (max-width:840px){nav{display:none}}
+.hero{background:linear-gradient(180deg,#5C2C12 0%,#7A3E1B 55%,#9A5528 100%);color:#FBF3E4;position:relative;overflow:hidden}
+.hero .wrap{padding-block:40px 0;position:relative;z-index:1}
+.live{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(251,243,228,.35);border-radius:6px;padding:8px 14px;font-weight:600;font-size:15px;background:rgba(0,0,0,.15)}
+.dot{width:10px;height:10px;border-radius:50%;background:#7FD6A0}
+.dot.off{background:#F0907E}
+.hero h1{font-size:clamp(48px,10vw,128px);font-weight:800;letter-spacing:-.015em;margin:22px 0 18px;max-width:11ch}
+.hero h1 i{font-weight:500;color:#F2C46B}
+.hero .lead{font-size:20px;max-width:44ch;opacity:.92}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;border-radius:6px;padding:14px 22px;border:2px solid transparent;font-size:16px;cursor:pointer;font-family:var(--body)}
+.btn-grain{background:#D9A23A;color:#241C16}
+.btn-line{border-color:rgba(251,243,228,.7);color:#FBF3E4}
+.btn-dark{background:var(--crust);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-dark{color:#16110D}}
+:root[data-theme="dark"] .btn-dark{color:#16110D}
+.btn:focus-visible,summary:focus-visible{outline:3px solid #D9A23A;outline-offset:2px}
+.rating{display:flex;align-items:center;gap:14px;margin-top:26px;font-size:15px}
+.rating b{font-family:var(--display);font-size:40px;line-height:1;color:#F2C46B}
+.oven{margin-top:34px}
+.oven svg{width:100%;height:auto;display:block}
+section{padding-block:76px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--crust)}
+.sec-head{display:grid;gap:12px;max-width:680px;margin-bottom:36px}
+.sec-head p{color:var(--muted);font-size:18px}
+.quote{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;max-width:900px}
+.quote blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(28px,4vw,42px);line-height:1.2}
+.quote cite{display:block;margin-top:14px;font-style:normal;font-family:var(--body);font-size:15px;color:var(--muted)}
+.qmark{font-family:var(--display);font-size:120px;line-height:.8;color:var(--grain)}
+.bake{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:20px;margin-top:48px}
+.loaf{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:26px;display:grid;gap:12px;align-content:start}
+.loaf p{color:var(--muted)}
+.loaf.main{background:var(--crust);color:var(--on-crust);border:none}
+.loaf.main p{color:var(--on-crust);opacity:.9}
+.loaf.main .eyebrow{color:#F2C46B}
+.photo{border:2px dashed var(--line);border-radius:4px;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:14px;padding:16px;aspect-ratio:4/3;max-width:100%;background:repeating-linear-gradient(90deg,transparent 0 14px,rgba(122,62,27,.05) 14px 28px)}
+/* týdenní pás */
+.week{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px 24px 18px}
+.wk-row{display:grid;grid-template-columns:96px 1fr 210px;gap:14px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}
+.wk-row:last-child{border-bottom:none}
+.wk-row.today .dname{color:var(--crust);font-weight:800}
+.dname{font-weight:600}
+.track{position:relative;height:22px;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 10%);border-radius:3px;min-width:0}
+.blk{position:absolute;top:2px;bottom:2px;background:var(--grain);border-radius:3px}
+.wk-row.today .blk{background:var(--crust)}
+.now{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--closed)}
+.now::after{content:"teď";position:absolute;top:-16px;left:-8px;font-size:11px;font-weight:700;color:var(--closed)}
+.times{font-variant-numeric:tabular-nums;font-size:15px;color:var(--muted);text-align:right}
+.axis{display:grid;grid-template-columns:96px 1fr 210px;gap:14px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:6px}
+.axis div{display:flex;justify-content:space-between}
+.answer{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:20px;font-size:19px}
+.answer b{font-family:var(--display);font-size:28px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{display:grid;gap:8px;border-left:3px solid var(--grain);padding-left:18px}
+.step span{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--crust)}
+.step p{color:var(--muted)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tr{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px;display:grid;gap:4px}
+.tr b{font-family:var(--display);font-size:28px}
+.tr span{color:var(--muted);font-size:15px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:700;cursor:pointer;font-size:18px}
+details p{color:var(--muted);margin-top:8px}
+.contact{background:#241C16;color:#F8F1E3}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.contact .eyebrow{color:#F2C46B}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:24px 0 0}
+.contact dt{opacity:.7;font-size:14px;padding-top:2px}
+.contact dd{margin:0;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.copy{background:transparent;border:1px solid rgba(255,255,255,.35);color:inherit;border-radius:4px;padding:2px 10px;font-size:13px;margin-left:8px;cursor:pointer}
+.hours table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:#F2C46B;font-weight:700}
+footer{background:#1A140F;color:#D8C8B4;font-size:14px}
+footer .wrap{padding-block:18px 26px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#241C16;display:none;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.callbar a{flex:1}
+@media (max-width:840px){
+  .callbar{display:flex}
+  .bake,.steps,.contact .wrap{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .quote{grid-template-columns:1fr;gap:0}
+  .qmark{font-size:80px}
+  .wk-row,.axis{grid-template-columns:44px 1fr 92px;gap:10px}
+  .times{font-size:13px}
+  .dname .long{display:none}
+  section{padding-block:54px}
+  .hero .wrap{padding-block:26px 0}
+}
+@media (min-width:841px){body{padding-bottom:0}.dname .short{display:none}}
+@media (max-width:840px){.dname .short{display:inline}}
+@media (prefers-reduced-motion:no-preference){.glow{animation:glow 2.8s ease-in-out infinite}@keyframes glow{0%,100%{opacity:.75}50%{opacity:1}}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Luboš Býma – pekárna</div>
+
+<div class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="24" rx="17" ry="11" fill="#D9A23A"/><g stroke="#5C2C12" stroke-width="2.4" stroke-linecap="round"><path d="M11 20l4 6M18 18l4 7M25 18l4 6"/></g></svg><span>Pekárna Býma<small>Hodslavice</small></span></a>
+    <nav aria-label="Hlavní"><a href="#chleba">Náš chleba</a><a href="#kdy">Kdy pro chleba</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="tel" href="tel:+420604702950">604 702 950</a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <span class="live"><span class="dot" id="dot"></span><span id="liveText">Prodejna v Hodslavicích</span></span>
+    <h1>Domácí chleba <i>z Hodslavic</i></h1>
+    <p class="lead">Malá pekárna Luboše Býmy u Nového Jičína. Chleba pečený tradičně a prodávaný přímo tam, kde vzniká – od půl sedmé ráno.</p>
+    <div class="btns">
+      <a class="btn btn-grain" href="tel:+420604702950">Zavolat, než vyrazím</a>
+      <a class="btn btn-line" href="#kdy">Kdy máte otevřeno?</a>
+    </div>
+    <div class="rating"><b>4,9</b><span>z 5 podle 11 hodnocení<br><a href="https://www.firmy.cz/detail/2006987-lubos-byma-hodslavice.html" target="_blank" rel="noopener">na Firmy.cz</a></span></div>
+    <div class="oven" aria-hidden="true">
+      <svg viewBox="0 0 1120 230" preserveAspectRatio="xMidYMax meet">
+        <path d="M120 230 V120 A440 120 0 0 1 1000 120 V230 Z" fill="#3A1D0C"/>
+        <path d="M300 230 V150 A260 90 0 0 1 820 150 V230 Z" fill="#1E0F06"/>
+        <path class="glow" d="M330 230 V170 A230 70 0 0 1 790 170 V230 Z" fill="#E07A2E" opacity=".85"/>
+        <g>
+          <ellipse cx="430" cy="206" rx="78" ry="30" fill="#C98A3E"/><g stroke="#7A3E1B" stroke-width="5" stroke-linecap="round"><path d="M390 196l14 18M420 190l14 22M452 192l14 18"/></g>
+          <ellipse cx="560" cy="200" rx="88" ry="34" fill="#D9A23A"/><g stroke="#7A3E1B" stroke-width="5" stroke-linecap="round"><path d="M515 188l16 22M552 182l16 26M590 186l16 20"/></g>
+          <ellipse cx="690" cy="208" rx="70" ry="26" fill="#B9772F"/><g stroke="#5C2C12" stroke-width="5" stroke-linecap="round"><path d="M660 200l12 16M692 196l12 18"/></g>
+        </g>
+        <g fill="#F8F1E3" opacity=".08"><circle cx="160" cy="40" r="3"/><circle cx="980" cy="60" r="4"/><circle cx="900" cy="20" r="2"/></g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="chleba">
+  <div class="wrap">
+    <div class="quote">
+      <div class="qmark" aria-hidden="true">„</div>
+      <blockquote>Zaměřuji se na tradiční výrobu a prodej domácího chleba.<cite>Luboš Býma, pekař z Hodslavic</cite></blockquote>
+    </div>
+    <div class="bake">
+      <article class="loaf main">
+        <span class="eyebrow">To hlavní</span>
+        <h3 style="font-size:34px">Domácí chleba</h3>
+        <p>Pečený tradičním postupem v malé pekárně. Kupujete ho přímo tam, kde se peče – u pekaře v Hodslavicích.</p>
+      </article>
+      <article class="loaf">
+        <span class="eyebrow">Na objednávku</span>
+        <h3>Chleba si podržet</h3>
+        <p>Jedete z dálky? Zavolejte ráno, kolik bochníků chcete, a nechte si je odložit.<span class="tag">ukázkový text</span></p>
+      </article>
+      <div class="photo">Sem přijde Vaše fotka<br>(bochníky na pultu)</div>
+    </div>
+  </div>
+</section>
+
+<section id="kdy" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Kdy pro chleba</div>
+      <h2>Ať nepřijedete k zavřeným dveřím</h2>
+      <p>Prodejna má přes poledne pauzu a v sobotu otevírá jen dopoledne. Tady vidíte celý týden najednou.</p>
+    </div>
+    <div class="week" id="week">
+      <div class="answer" aria-live="polite"><span class="dot" id="dot2"></span><b id="answer">Dnes</b><span id="answerSub" style="color:var(--muted)"></span></div>
+      <div id="rows"></div>
+      <div class="axis" aria-hidden="true"><span></span><div><span>6</span><span>8</span><span>10</span><span>12</span><span>14</span><span>16</span></div><span></span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Jak to chodí</div><h2>Pro chleba ve třech krocích</h2></div>
+    <div class="steps">
+      <div class="step"><span>Ráno</span><h3>Podívejte se, kdy je otevřeno</h3><p>Po–pá 6:30–11:30 a 13:30–16:00, v sobotu 6:30–10:00.</p></div>
+      <div class="step"><span>Cestou</span><h3>Zavolejte na 604 702 950</h3><p>Hlavně když jedete z dálky nebo chcete víc bochníků najednou.</p></div>
+      <div class="step"><span>V Hodslavicích</span><h3>Odneste si čerstvý chleba</h3><p>Prodejna je přímo u pekárny, Hodslavice 328.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Co o pekárně víte jistě</div><h2>Malá pekárna, velká spokojenost</h2></div>
+    <div class="trust">
+      <div class="tr"><b>4,9 / 5</b><span><a href="https://www.firmy.cz/detail/2006987-lubos-byma-hodslavice.html" target="_blank" rel="noopener">11 hodnocení na Firmy.cz</a></span></div>
+      <div class="tr"><b>6:30</b><span>otevíráme každý všední den i v sobotu</span></div>
+      <div class="tr"><b>Od pekaře</b><span>výroba i prodej na jednom místě</span></div>
+      <div class="tr"><b>IČO</b><span>70317381</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap" style="max-width:820px">
+    <div class="sec-head"><div class="eyebrow">Časté otázky</div><h2>Na co se ptáte</h2></div>
+    <details open><summary>Máte otevřeno i přes poledne?</summary><p>Ne. Ve všední dny je prodejna zavřená mezi 11:30 a 13:30. Odpoledne prodáváme do 16:00.</p></details>
+    <details><summary>Kdy máte otevřeno v sobotu a v neděli?</summary><p>V sobotu 6:30–10:00, v neděli je zavřeno.</p></details>
+    <details><summary>Můžu si chleba odložit?</summary><p>Zavolejte na 604 702 950 a domluvíme se.<span class="tag">ukázkový text</span></p></details>
+    <details><summary>Kde vás najdu?</summary><p>Hodslavice 328, 742 71 – obec mezi Novým Jičínem a Valašským Meziříčím.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Kontakt</div>
+      <h2 style="margin-top:10px">Pekárna v Hodslavicích</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420604702950">604 702 950</a><button class="copy" type="button" data-copy="604 702 950">Kopírovat</button></dd>
+        <dt>E-mail</dt><dd>ekofin.nj@tiscali.cz<button class="copy" type="button" data-copy="ekofin.nj@tiscali.cz">Kopírovat</button></dd>
+        <dt>Adresa</dt><dd>Hodslavice 328, 742 71</dd>
+        <dt>Mapa</dt><dd><a href="https://mapy.com/cs/zakladni?q=Hodslavice%20328" target="_blank" rel="noopener">Otevřít na Mapy.com</a></dd>
+      </dl>
+      <div class="btns"><a class="btn btn-grain" href="tel:+420604702950">Zavolat 604 702 950</a></div>
+    </div>
+    <div class="hours">
+      <h3 style="margin-bottom:12px">Otevírací doba</h3>
+      <table id="hours">
+        <tr data-d="1"><td>Pondělí</td><td>6:30–11:30 · 13:30–16:00</td></tr>
+        <tr data-d="2"><td>Úterý</td><td>6:30–11:30 · 13:30–16:00</td></tr>
+        <tr data-d="3"><td>Středa</td><td>6:30–11:30 · 13:30–16:00</td></tr>
+        <tr data-d="4"><td>Čtvrtek</td><td>6:30–11:30 · 13:30–16:00</td></tr>
+        <tr data-d="5"><td>Pátek</td><td>6:30–11:30 · 13:30–16:00</td></tr>
+        <tr data-d="6"><td>Sobota</td><td>6:30–10:00</td></tr>
+        <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Luboš Býma – pekárna · tradiční výroba a prodej domácího chleba · Hodslavice 328 · IČO 70317381</div></footer>
+
+<div class="callbar"><a class="btn btn-grain" href="tel:+420604702950">Zavolat</a><a class="btn btn-line" href="#kdy">Kdy otevřeno</a></div>
+
+<script>
+(function(){
+  var W=[1,2,3,4,5,6,0], long=["Neděle","Pondělí","Úterý","Středa","Čtvrtek","Pátek","Sobota"], short=["Ne","Po","Út","St","Čt","Pá","So"];
+  var H={0:[],1:[[390,690],[810,960]],2:[[390,690],[810,960]],3:[[390,690],[810,960]],4:[[390,690],[810,960]],5:[[390,690],[810,960]],6:[[390,600]]};
+  var S=360,E=960;
+  function fmt(m){return Math.floor(m/60)+":"+String(m%60).padStart(2,"0")}
+  var now=new Date(), d=now.getDay(), m=now.getHours()*60+now.getMinutes();
+  var rows=document.getElementById("rows"), html="";
+  W.forEach(function(day){
+    var blocks=H[day].map(function(b){return '<span class="blk" style="left:'+((b[0]-S)/(E-S)*100)+'%;width:'+((b[1]-b[0])/(E-S)*100)+'%"></span>'}).join("");
+    var nowM=(day===d&&m>=S&&m<=E)?'<span class="now" style="left:'+((m-S)/(E-S)*100)+'%"></span>':"";
+    var t=H[day].length?H[day].map(function(b){return fmt(b[0])+"–"+fmt(b[1])}).join(" · "):"zavřeno";
+    html+='<div class="wk-row'+(day===d?' today':'')+'"><span class="dname"><span class="long">'+long[day]+'</span><span class="short">'+short[day]+'</span></span><div class="track">'+blocks+nowM+'</div><span class="times">'+t+'</span></div>';
+  });
+  rows.innerHTML=html;
+  var open=H[d].some(function(b){return m>=b[0]&&m<b[1]});
+  var a=document.getElementById("answer"), sub=document.getElementById("answerSub"), lt=document.getElementById("liveText");
+  function next(){
+    var later=H[d].filter(function(b){return b[0]>m});
+    if(later.length) return "dnes v "+fmt(later[0][0]);
+    for(var i=1;i<8;i++){var dd=(d+i)%7;if(H[dd].length) return (i===1?"zítra":long[dd].toLowerCase())+" v "+fmt(H[dd][0][0]);}
+  }
+  if(open){var cur=H[d].filter(function(b){return m>=b[0]&&m<b[1]})[0];a.textContent="Teď je otevřeno";sub.textContent="do "+fmt(cur[1]);lt.textContent="Teď otevřeno – do "+fmt(cur[1]);}
+  else{a.textContent="Teď je zavřeno";sub.textContent="otevíráme "+next();lt.textContent="Zavřeno – otevíráme "+next();document.getElementById("dot").className="dot off";document.getElementById("dot2").className="dot off";}
+  if(open){document.getElementById("dot2").style.background="var(--open)"}else{document.getElementById("dot2").style.background="var(--closed)"}
+  var row=document.querySelector('#hours tr[data-d="'+d+'"]'); if(row) row.className="today";
+  document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){try{navigator.clipboard.writeText(b.dataset.copy).then(function(){b.textContent="Zkopírováno"},function(){})}catch(e){}})});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Psí salon Elut</title>
+<meta name="description" content="Psí salon Elut v Ostravě-Mariánských Horách (Fifejdy): trimování, stříhání, koupání a fénování psů i koček. Ceník podle plemene, objednávky Po–So na tel. 776 572 431.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Psí salon ELUT",
+  "description":"Stříhání, trimování, vyčesávání, koupání a fénování psů a koček.",
+  "url":"https://psi-salon-elut.estranky.cz/",
+  "telephone":"+420776572431",
+  "email":"ivonina@seznam.cz",
+  "taxID":"03846091",
+  "foundingDate":"2015",
+  "founder":{"@type":"Person","name":"Ivona Endlicherová"},
+  "priceRange":"50–750 Kč",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Gen. Hrušky 1233/26",
+    "addressLocality":"Ostrava-Mariánské Hory",
+    "postalCode":"709 00",
+    "addressCountry":"CZ"
+  }
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --wine:#6E1F3B;
+  --wine-deep:#4A1327;
+  --powder:#F2D9DD;
+  --powder-soft:#F8E9EB;
+  --greige:#E9E1DA;
+  --bg:#F7F0EE;
+  --gold:#E7BE64;
+  --gold-text:#8A6418;
+  --ink:#2B1A20;
+  --muted:#5C514C;
+  --white:#FFFFFF;
+  --line:#D8C9C2;
+  --head:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,sans-serif;
+  --gut:clamp(16px,4vw,48px);
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;overflow-x:hidden;padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media(min-width:900px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--head);line-height:1.02;text-wrap:balance;margin:0;color:var(--ink);letter-spacing:-.02em}
+p{margin:0 0 1em}
+a{color:var(--wine)}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--wine);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.demo{display:inline-block;font-family:var(--body);font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ink);color:var(--white);padding:.1em .5em;border-radius:3px;vertical-align:middle;line-height:1.5;margin-left:.3em}
+
+/* banner */
+.proposal{background:var(--ink);color:var(--white);font-size:.875rem;text-align:center;padding:.5rem var(--gut);line-height:1.4}
+
+/* header */
+.top{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.logo{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink)}
+.logo b{font-family:var(--head);font-weight:800;font-size:1.55rem;letter-spacing:-.03em;color:var(--wine)}
+.logo span{font-size:.78rem;color:var(--muted);line-height:1.15}
+.nav{display:none;gap:1.4rem}
+.nav a{color:var(--ink);text-decoration:none;font-size:.95rem}
+.nav a:hover{color:var(--wine);text-decoration:underline}
+.top-tel{font-weight:700;text-decoration:none;color:var(--wine);white-space:nowrap;display:flex;align-items:center;gap:.4rem}
+.top-tel svg{width:18px;height:18px}
+.top .top-cta{display:none}
+@media(min-width:900px){.nav{display:flex}.top .top-cta{display:inline-flex}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--head);font-weight:600;font-size:1.05rem;text-decoration:none;border-radius:999px;padding:.85rem 1.5rem;border:2px solid var(--wine);cursor:pointer;transition:transform .15s,background .15s}
+.btn-main{background:var(--wine);color:var(--white)}
+.btn-main:hover{background:var(--wine-deep);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--wine)}
+.btn-ghost:hover{background:var(--powder)}
+.btn-sm{padding:.55rem 1.1rem;font-size:.95rem}
+
+/* hero */
+.hero{background:var(--powder);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:1.6rem;padding-bottom:2.4rem;position:relative}
+.kicker{font-family:var(--head);font-weight:600;font-size:.95rem;color:var(--wine);display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem}
+.kicker::before{content:"";width:28px;height:3px;background:var(--wine);border-radius:2px}
+.hero h1{font-weight:800;font-size:clamp(2.55rem,10.4vw,9.4rem);line-height:.92;letter-spacing:-.045em;color:var(--wine-deep)}
+.hero h1 em{font-style:normal;color:var(--wine);display:block}
+.hero h1 .thin{font-weight:400;color:var(--ink)}
+.hero-row{display:grid;gap:1.4rem;margin-top:1.3rem;align-items:end}
+.hero-lead{font-size:1.08rem;max-width:36ch;color:var(--ink);margin-bottom:1rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.hero-note{font-size:.9rem;color:var(--muted);margin-top:.8rem}
+.hero-art{display:block;max-width:420px;margin:0 auto}
+@media(min-width:900px){
+  .hero .wrap{padding-top:3rem;padding-bottom:3.5rem}
+  .hero-row{grid-template-columns:1fr 1.15fr;margin-top:2.2rem}
+  .hero-lead{font-size:1.25rem}
+  .hero h1{font-size:clamp(3.6rem,5.8vw,6rem)}
+  .hero-art{display:block}
+}
+.hero-art svg{width:100%;height:auto;display:block}
+.fur-band{display:block;width:100%;height:46px;color:var(--wine)}
+
+/* sections */
+section,#objednat{scroll-margin-top:80px}
+.sec{padding:4rem 0}
+.sec-head{display:grid;gap:.8rem;margin-bottom:2.2rem}
+.sec-num{font-family:var(--head);font-weight:600;color:var(--gold-text);font-size:.95rem;letter-spacing:.06em}
+.sec h2{font-size:clamp(2rem,6.2vw,4rem);font-weight:800}
+.sec-intro{color:var(--muted);max-width:56ch;margin:0}
+@media(min-width:900px){.sec{padding:6rem 0}.sec-head{grid-template-columns:1fr 1fr;align-items:end}}
+
+/* trust strip */
+.trust{background:var(--wine);color:var(--white)}
+.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.trust-item{padding:1.3rem .8rem 1.3rem 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.trust-item b{display:block;font-family:var(--head);font-size:clamp(1.6rem,5vw,2.4rem);color:var(--gold);line-height:1;font-weight:800;margin-bottom:.3rem}
+.trust-item span{font-size:.92rem;color:var(--powder)}
+.trust-item a{color:var(--powder)}
+@media(min-width:900px){.trust .wrap{grid-template-columns:repeat(4,1fr)}.trust-item{border-bottom:0;border-left:1px solid rgba(255,255,255,.18);padding:1.8rem 1.4rem}.trust-item:first-child{border-left:0;padding-left:0}}
+
+/* services */
+.svc-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.svc{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;padding:1.3rem 0;border-bottom:1px solid var(--line);align-items:start}
+.svc-ico{grid-row:span 3;width:44px;height:44px;border-radius:12px;background:var(--powder);display:grid;place-items:center;color:var(--wine)}
+.svc-ico svg{width:26px;height:26px}
+.svc h3{font-size:1.35rem;font-weight:600}
+.svc p{margin:0;color:var(--muted);font-size:1rem}
+.svc .price{font-family:var(--head);font-weight:600;color:var(--wine);font-size:1.05rem;margin-top:.2rem}
+@media(min-width:900px){
+  .svc-list{display:grid;grid-template-columns:1fr 1fr;column-gap:3.5rem}
+  .svc{grid-template-columns:auto 1fr auto}
+  .svc-ico{grid-row:span 2}
+  .svc .price{grid-column:3;grid-row:1;text-align:right;margin:0}
+}
+
+/* price finder */
+.finder-sec{background:var(--greige)}
+.finder{background:var(--white);border:2px solid var(--ink);border-radius:20px;padding:1.2rem;box-shadow:8px 8px 0 var(--wine)}
+@media(min-width:900px){.finder{padding:2rem 2.2rem}}
+.finder label{font-family:var(--head);font-weight:600;font-size:1.15rem;display:block;margin-bottom:.5rem}
+.search{position:relative}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:22px;height:22px;color:var(--wine);pointer-events:none}
+.search input{width:100%;font:inherit;font-size:1.2rem;padding:.9rem 1rem .9rem 46px;border:2px solid var(--wine);border-radius:12px;background:var(--powder-soft);color:var(--ink)}
+.search input::placeholder{color:var(--muted)}
+.search input:focus{outline:3px solid var(--gold);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:.9rem 0 .4rem}
+.chip{font:inherit;font-size:.9rem;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);padding:.35rem .8rem;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:var(--white)}
+.chip:hover{border-color:var(--wine)}
+.count{font-size:.9rem;color:var(--muted);margin:.6rem 0 0}
+.plist{list-style:none;margin:.6rem 0 0;padding:0;max-height:440px;overflow:auto;border-top:1px solid var(--line)}
+.plist li{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.75rem .2rem;border-bottom:1px dashed var(--line)}
+.plist .nm{display:flex;flex-direction:column}
+.plist .nm small{color:var(--muted);font-size:.8rem}
+.plist .pr{font-family:var(--head);font-weight:600;color:var(--wine);white-space:nowrap;font-size:1.1rem}
+.plist mark{background:var(--gold);color:var(--ink);border-radius:2px;padding:0 1px}
+.empty{padding:1rem;background:var(--powder-soft);border-radius:12px;margin-top:.8rem}
+.finder-grid{display:grid;gap:1.6rem}
+@media(min-width:900px){.finder-grid{grid-template-columns:1.45fr 1fr;gap:3rem}}
+.notes{font-size:.98rem}
+.notes h3{font-size:1.3rem;margin-bottom:.8rem}
+.notes ul{padding-left:1.1rem;margin:0}
+.notes li{margin-bottom:.6rem}
+.notes .free{background:var(--wine);color:var(--white);padding:1rem 1.1rem;border-radius:14px;margin-bottom:1.2rem}
+.notes .free b{color:var(--gold)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:1rem;counter-reset:s}
+.step{position:relative;padding:1.4rem 1.2rem 1.3rem;background:var(--white);border-left:6px solid var(--wine);border-radius:0 16px 16px 0}
+.step .n{display:block;font-family:var(--head);font-weight:800;font-size:3rem;color:var(--powder);line-height:.9;margin-bottom:.4rem;-webkit-text-stroke:1.5px var(--wine)}
+.step h3{font-size:1.4rem;margin-bottom:.5rem}
+.step p{margin:0 0 .5rem;color:var(--muted)}
+.step ul{margin:.3rem 0 0;padding-left:1.1rem;color:var(--muted);font-size:.97rem}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:1.4rem}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:620px){.gallery{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.gallery{grid-template-columns:repeat(3,1fr)}}
+.pair{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:.7rem}
+.pair-imgs{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.slot{aspect-ratio:4/5;border-radius:12px;display:flex;flex-direction:column;justify-content:flex-end;padding:.7rem;font-size:.82rem;line-height:1.3;position:relative;overflow:hidden}
+.slot.before{background:var(--greige);color:var(--ink)}
+.slot.after{background:var(--powder);color:var(--wine-deep)}
+.slot svg{position:absolute;inset:0;width:100%;height:60%;opacity:.5}
+.slot b{position:relative;font-family:var(--head);font-size:.95rem}
+.slot span{position:relative}
+.pair figcaption{padding:.7rem .3rem .2rem;font-family:var(--head);font-weight:600}
+
+/* about */
+.about{background:var(--wine-deep);color:var(--white)}
+.about h2{color:var(--white)}
+.about .sec-num{color:var(--gold)}
+.about-grid{display:grid;gap:2rem}
+.about p{color:var(--powder)}
+.about ul{list-style:none;padding:0;margin:0;display:grid;gap:.8rem}
+.about li{padding-left:2rem;position:relative;color:var(--white)}
+.about li::before{content:"";position:absolute;left:0;top:.35em;width:18px;height:10px;border-left:3px solid var(--gold);border-bottom:3px solid var(--gold);transform:rotate(-45deg)}
+.about .src{font-size:.85rem;color:var(--powder)}
+.about .src a{color:var(--gold)}
+@media(min-width:900px){.about-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:0}
+.faq details:first-of-type{border-top:2px solid var(--ink)}
+.faq summary{cursor:pointer;list-style:none;font-family:var(--head);font-weight:600;font-size:1.2rem;padding:1.1rem 2.4rem 1.1rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;border-right:3px solid var(--wine);border-bottom:3px solid var(--wine);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{color:var(--muted);max-width:68ch;padding-bottom:.6rem}
+@media(min-width:900px){.faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:4rem}}
+
+/* booking + contact */
+.book{background:var(--powder)}
+.book-grid{display:grid;gap:2rem}
+@media(min-width:900px){.book-grid{grid-template-columns:1.1fr 1fr;gap:3.5rem}}
+form.bk{background:var(--white);border-radius:20px;padding:1.3rem;border:2px solid var(--ink);display:grid;gap:1rem}
+@media(min-width:620px){form.bk{grid-template-columns:1fr 1fr;padding:1.8rem}}
+.f{display:grid;gap:.35rem}
+.f.full{grid-column:1/-1}
+.f label{font-weight:700;font-size:.95rem}
+.f input,.f select,.f textarea{font:inherit;font-size:1rem;padding:.75rem .85rem;border:1.5px solid var(--muted);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.f textarea{min-height:96px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:3px solid var(--wine);outline-offset:1px;border-color:var(--wine)}
+.form-msg{grid-column:1/-1;background:var(--wine);color:var(--white);padding:.9rem 1rem;border-radius:10px;margin:0}
+.form-msg[hidden]{display:none}
+.contact-card{display:grid;gap:1.2rem}
+.contact-card .big{font-family:var(--head);font-weight:800;font-size:clamp(2rem,7vw,3.2rem);color:var(--wine);text-decoration:none;line-height:1;letter-spacing:-.02em}
+.c-row{display:grid;grid-template-columns:28px 1fr;gap:.7rem;align-items:start}
+.c-row svg{width:24px;height:24px;color:var(--wine);margin-top:2px}
+.c-row b{display:block;font-family:var(--head)}
+.c-row p{margin:0}
+.c-row .muted{color:var(--muted);font-size:.95rem}
+
+footer{background:var(--ink);color:var(--greige);padding:2.4rem 0 2rem;font-size:.92rem}
+footer .wrap{display:grid;gap:1rem}
+footer a{color:var(--gold)}
+footer b{font-family:var(--head);color:var(--white);font-size:1.3rem}
+
+/* sticky mobile bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--wine-deep);display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.55rem 16px calc(.55rem + env(safe-area-inset-bottom,0px))}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:.45rem;padding:.75rem .5rem;border-radius:999px;font-family:var(--head);font-weight:600;text-decoration:none;font-size:.98rem;white-space:nowrap}
+.callbar .c1{background:var(--gold);color:var(--ink)}
+.callbar .c2{background:var(--white);color:var(--wine-deep)}
+.callbar svg{width:18px;height:18px}
+@media(min-width:900px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+
+
+<div class="proposal" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Psí salon Elut</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Psí salon ELUT – úvod">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="3" y="12" width="22" height="10" rx="3" fill="#6E1F3B"/><path d="M25 13h6v8h-6" fill="none" stroke="#6E1F3B" stroke-width="2"/><path d="M27 13v8M29 13v8" stroke="#6E1F3B" stroke-width="1.5"/><path d="M5 9c3-4 7-4 10 0M11 8c3-5 8-5 11 0" fill="none" stroke="#B8862B" stroke-width="2" stroke-linecap="round"/></svg>
+      <span><b>ELUT</b><br>psí salon · Mariánské Hory</span>
+    </a>
+    <nav class="nav" aria-label="Hlavní menu">
+      <a href="#sluzby">Služby</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#navsteva">Návštěva</a>
+      <a href="#galerie">Před a po</a>
+      <a href="#otazky">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="top-tel" href="tel:+420776572431"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>776 572 431</a>
+    <a class="btn btn-main btn-sm top-cta" href="#objednat">Objednat termín</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="kicker">Psí salon ELUT · Ostrava · od roku 2015</p>
+    <h1 id="h1">Trimování <span class="thin">a</span> stříhání <em>v Mariánských Horách</em></h1>
+    <div class="hero-row">
+      <div>
+        <p class="hero-lead">Pejska ani kočku neuvazujeme a nedáváme jim uklidňující prostředky. Můžete zůstat u úpravy celou dobu – na Fifejdách, naproti Baumaxu.</p>
+        <div class="hero-actions">
+          <a class="btn btn-main" href="#objednat">Objednat termín</a>
+          <a class="btn btn-ghost" href="#cenik">Najít cenu plemene</a>
+        </div>
+        <p class="hero-note">Po–So podle objednávek · <a href="tel:+420776572431">776 572 431</a></p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 640 300">
+          <!-- srst -->
+          <g fill="none" stroke="#6E1F3B" stroke-linecap="round" stroke-width="3">
+            <path d="M20 270c40-60 70-120 60-200" opacity=".35"/>
+            <path d="M44 272c36-56 66-110 64-190" opacity=".5"/>
+            <path d="M70 274c30-50 60-100 66-176" opacity=".35"/>
+            <path d="M96 276c26-44 52-90 66-160" opacity=".55"/>
+            <path d="M124 278c22-40 44-80 62-140" opacity=".35"/>
+            <path d="M152 280c20-34 40-70 58-120" opacity=".5"/>
+            <path d="M180 282c16-28 32-58 50-96" opacity=".3"/>
+          </g>
+          <g fill="none" stroke="#B8862B" stroke-linecap="round" stroke-width="2.5">
+            <path d="M210 230c18-10 36-12 54-8" />
+            <path d="M216 250c20-8 40-8 58-2" />
+            <path d="M206 210c16-12 30-18 50-18" />
+          </g>
+          <!-- trimovaci nuz -->
+          <g transform="rotate(-14 440 150)">
+            <rect x="250" y="118" width="190" height="64" rx="26" fill="#6E1F3B"/>
+            <rect x="262" y="128" width="166" height="10" rx="5" fill="#8E3555"/>
+            <circle cx="282" cy="150" r="6" fill="#E7BE64"/>
+            <circle cx="420" cy="150" r="6" fill="#E7BE64"/>
+            <path d="M440 130h40v40h-40z" fill="#4A1327"/>
+            <path d="M480 126h120c8 0 12 4 12 10v28H480z" fill="#D8C9C2" stroke="#2B1A20" stroke-width="2"/>
+            <path d="M480 164h132l-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10-6 10-6-10z" fill="#E9E1DA" stroke="#2B1A20" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M492 140h100" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+          </g>
+          <circle cx="600" cy="60" r="10" fill="#E7BE64"/>
+          <circle cx="572" cy="34" r="5" fill="#6E1F3B" opacity=".5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust" aria-label="Fakta o salonu">
+  <div class="wrap">
+    <div class="trust-item"><b>od 2015</b><span>salon funguje 11 let (<a href="https://psi-salon-elut.estranky.cz/">zdroj</a>)</span></div>
+    <div class="trust-item"><b>bez fixace</b><span>zvířata neuvazujeme, bez sedativ</span></div>
+    <div class="trust-item"><b>trim = trim</b><span>specializace na trimování srsti</span></div>
+    <div class="trust-item"><b>bezbariérový</b><span>salon, parkování přímo u vchodu</span></div>
+  </div>
+</div>
+
+<section class="sec" id="sluzby" aria-labelledby="h-sl">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="sec-num">01 — SLUŽBY</p><h2 id="h-sl">Péče o srst od štěňat po výstavní kruh</h2></div>
+      <p class="sec-intro">Stříháme podle standardu plemene nebo podle Vašeho přání. Maltézáka nevyholíme na kůži a trimovaného teriéra nebudeme stříhat strojkem – trim je vždy trim.</p>
+    </div>
+    <ul class="svc-list">
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="9" width="11" height="6" rx="2"/><path d="M13 9h8v6h-8M15 15l1 2 1-2 1 2 1-2"/></svg></span>
+        <h3>Trimování srsti</h3>
+        <p>Ruční vytrhávání odumřelé srsti u teriérů, kníračů a dalších drsnosrstých plemen. Naše specializace.</p>
+        <p class="price">500 Kč / hod.</p>
+      </li>
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16 19 3M16 16 5 3"/></svg></span>
+        <h3>Stříhání podle plemene</h3>
+        <p>Jorkšír, bišonek, pudl, westík, kokršpaněl i kříženci – cenu Vašeho plemene najdete v ceníku níže.</p>
+        <p class="price">od 350 Kč</p>
+      </li>
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0"/><path d="M14 6v2M17 5v2M20 7v2"/></svg></span>
+        <h3>Koupání a fénování</h3>
+        <p>I samostatně, bez stříhání, včetně kompletní očisty. Kosmetika vhodná i pro alergiky.</p>
+        <p class="price">od 250 Kč</p>
+      </li>
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 20 15 4M9 20 19 4M3 8h6M5 4h4"/></svg></span>
+        <h3>Vyčesávání a rozčesávání dredů</h3>
+        <p>Rozčešeme i zplstnatělou srst dlouhosrstých plemen, šetrně a po částech.</p>
+        <p class="price">120 Kč / 15 min.</p>
+      </li>
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12 2 2.6 6.3L21 9l-5 4.4L17.5 20 12 16.6 6.5 20 8 13.4 3 9l6.4-.7z"/></svg></span>
+        <h3>Výstavní úprava</h3>
+        <p>Příprava srsti na výstavu podle standardu plemene, včetně bělení a balíčkování.</p>
+        <p class="price">cena na dotaz <span class="demo">ukázkový text</span></p>
+      </li>
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="16" rx="5" ry="4"/><circle cx="5" cy="10" r="2"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="6" r="2"/><circle cx="19" cy="10" r="2"/></svg></span>
+        <h3>Drápky, uši, oči, klíšťata</h3>
+        <p>Ke stříhání zdarma. Samostatně: zkrácení drápků, čištění očí a uší, depilace oušek.</p>
+        <p class="price">od 50 Kč</p>
+      </li>
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20c0-5 3-8 8-8s8 3 8 8M6 6l2 4M18 6l-2 4"/><circle cx="12" cy="9" r="3"/></svg></span>
+        <h3>Kočičky</h3>
+        <p>Stříhání i koupání koček – v klidu, bez fixace a bez uklidňujících prostředků.</p>
+        <p class="price">od 200 Kč</p>
+      </li>
+      <li class="svc">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></span>
+        <h3>Poradenství</h3>
+        <p>Jak česat doma, kdy přijít na první úpravu se štěnětem, jak srst připravit na trim.</p>
+        <p class="price">zdarma</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec finder-sec" id="cenik" aria-labelledby="h-c">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="sec-num">02 — CENÍK PODLE PLEMENE</p><h2 id="h-c">Kolik zaplatíte za svého psa?</h2></div>
+      <p class="sec-intro">Napište plemeno a hned uvidíte cenu. Ceny jsou orientační – konečná částka záleží na velikosti, stavu a délce srsti a na tom, jak pejsek spolupracuje.</p>
+    </div>
+    <div class="finder-grid">
+      <div class="finder">
+        <label for="q">Napište plemeno</label>
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg>
+          <input id="q" type="search" placeholder="např. jorkšír, westík, pudl…" autocomplete="off" aria-describedby="cnt">
+        </div>
+        <div class="chips" role="group" aria-label="Filtrovat podle typu služby">
+          <button type="button" class="chip" data-cat="" aria-pressed="true">Vše</button>
+          <button type="button" class="chip" data-cat="strih" aria-pressed="false">Stříhání</button>
+          <button type="button" class="chip" data-cat="koup" aria-pressed="false">Koupání</button>
+          <button type="button" class="chip" data-cat="dalsi" aria-pressed="false">Další služby</button>
+        </div>
+        <p class="count" id="cnt" aria-live="polite"></p>
+        <ul class="plist" id="plist"></ul>
+        <div class="empty" id="empty" hidden>
+          <b>Plemeno v ceníku nemáme samostatně.</b><br>
+          Kříženec do 35 cm vychází na 350–500 Kč, 35–45 cm na 400–550 Kč, nad 45 cm na 450–600 Kč. Přesnou cenu Vám řekneme do telefonu: <a href="tel:+420776572431">776 572 431</a>.
+        </div>
+      </div>
+      <div class="notes">
+        <div class="free"><b>Ke stříhání zdarma:</b> zkrácení drápků, čištění a depilace uší, čištění očí.</div>
+        <h3>Dobré vědět</h3>
+        <ul>
+          <li>Koupání lze objednat i samostatně, bez stříhání, včetně kompletní očisty.</li>
+          <li>U velmi špinavého, zacuchaného nebo zablešeného zvířete účtujeme příplatek 50–100 % ze základní ceny.</li>
+          <li>Plemena, jejichž koupání trvá déle než 2 hodiny, účtujeme 350 Kč za každou započatou hodinu.</li>
+          <li>Poradenský servis je bezplatný.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="navsteva" aria-labelledby="h-n">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="sec-num">03 — JAK PROBÍHÁ NÁVŠTĚVA</p><h2 id="h-n">Tři kroky k upravenému pejskovi</h2></div>
+      <p class="sec-intro">Pracujeme jen na objednávku, takže se Vašemu zvířeti věnujeme naplno a bez čekání v plné čekárně.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="n" aria-hidden="true">1</span>
+        <h3>Domluvíme termín</h3>
+        <p>Zavolejte na 776 572 431 nebo napište. Když hned nezvedám telefon, právě stříhám – vyčkejte, zavolám Vám zpět.</p>
+      </li>
+      <li class="step"><span class="n" aria-hidden="true">2</span>
+        <h3>Připravíte pejska</h3>
+        <ul>
+          <li>Jen stříhání: přiveďte ho okoupaného, vyčesaného a suchého.</li>
+          <li>Na trimování ho 4 týdny předem nekoupejte.</li>
+          <li>Ideálně ho přivezte autem nebo v tašce – nečistoty ve srsti ničí stříhací nástroje.</li>
+        </ul>
+      </li>
+      <li class="step"><span class="n" aria-hidden="true">3</span>
+        <h3>Úprava – klidně s Vámi</h3>
+        <p>Můžete být u toho celou dobu. Zvíře neuvazujeme a nepodáváme mu sedativa. Drápky, uši a oči zkontrolujeme v rámci stříhání.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="galerie" aria-labelledby="h-g" style="background:var(--white)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="sec-num">04 — PŘED A PO</p><h2 id="h-g">Rozdíl poznáte na první pohled</h2></div>
+      <p class="sec-intro">Fotky Vašich pejsků před úpravou a po ní – nejlepší důkaz, jak u nás pracujeme.</p>
+    </div>
+    <div class="gallery">
+      <figure class="pair" style="margin:0">
+        <div class="pair-imgs">
+          <div class="slot before"><svg viewBox="0 0 100 125" aria-hidden="true"><g fill="none" stroke="#6E1F3B" stroke-width="1.5" opacity=".5"><path d="M10 120c10-30 5-60 15-90M25 120c8-28 10-58 20-92M40 120c6-26 12-56 20-90M55 120c6-30 14-58 22-88M70 120c4-28 14-56 26-84"/></g></svg><b>Sem přijde Vaše fotka</b><span>westík před trimováním</span></div>
+          <div class="slot after"><svg viewBox="0 0 100 125" aria-hidden="true"><g fill="none" stroke="#6E1F3B" stroke-width="1.5" opacity=".45"><path d="M10 120V80M22 120V78M34 120V76M46 120V76M58 120V76M70 120V78M82 120V80"/></g></svg><b>Sem přijde Vaše fotka</b><span>westík po trimování</span></div>
+        </div>
+        <figcaption>West highland white teriér · trim</figcaption>
+      </figure>
+      <figure class="pair" style="margin:0">
+        <div class="pair-imgs">
+          <div class="slot before"><svg viewBox="0 0 100 125" aria-hidden="true"><g fill="none" stroke="#6E1F3B" stroke-width="1.5" opacity=".5"><path d="M10 120c10-30 5-60 15-90M25 120c8-28 10-58 20-92M40 120c6-26 12-56 20-90M55 120c6-30 14-58 22-88M70 120c4-28 14-56 26-84"/></g></svg><b>Sem přijde Vaše fotka</b><span>jorkšír před stříháním</span></div>
+          <div class="slot after"><svg viewBox="0 0 100 125" aria-hidden="true"><g fill="none" stroke="#6E1F3B" stroke-width="1.5" opacity=".45"><path d="M10 120V80M22 120V78M34 120V76M46 120V76M58 120V76M70 120V78M82 120V80"/></g></svg><b>Sem přijde Vaše fotka</b><span>jorkšír po stříhání</span></div>
+        </div>
+        <figcaption>Yorkšírský teriér · střih</figcaption>
+      </figure>
+      <figure class="pair" style="margin:0">
+        <div class="pair-imgs">
+          <div class="slot before"><svg viewBox="0 0 100 125" aria-hidden="true"><g fill="none" stroke="#6E1F3B" stroke-width="1.5" opacity=".5"><path d="M10 120c10-30 5-60 15-90M25 120c8-28 10-58 20-92M40 120c6-26 12-56 20-90M55 120c6-30 14-58 22-88M70 120c4-28 14-56 26-84"/></g></svg><b>Sem přijde Vaše fotka</b><span>pudl toy před úpravou</span></div>
+          <div class="slot after"><svg viewBox="0 0 100 125" aria-hidden="true"><g fill="none" stroke="#6E1F3B" stroke-width="1.5" opacity=".45"><path d="M10 120V80M22 120V78M34 120V76M46 120V76M58 120V76M70 120V78M82 120V80"/></g></svg><b>Sem přijde Vaše fotka</b><span>pudl toy po úpravě</span></div>
+        </div>
+        <figcaption>Pudl toy · střih podle plemene</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" aria-labelledby="h-a">
+  <div class="wrap about-grid">
+    <div>
+      <p class="sec-num">05 — KDO VÁM PEJSKA UPRAVÍ</p>
+      <h2 id="h-a" style="font-size:clamp(2rem,6.2vw,4rem);font-weight:800;margin:.8rem 0 1.2rem">Ivona Endlicherová, majitelka a stříhačka</h2>
+      <p>Salon ELUT vedu od roku 2015. Mám školení v oboru i na trimování a zaměřuji se hlavně na pudly, yorkšírské teriéry a anglické kokršpaněly. Praxi mám se psy všech velikostí i s kočkami.</p>
+      <p class="src">Údaje z původního webu salonu: <a href="https://psi-salon-elut.estranky.cz/">psi-salon-elut.estranky.cz</a></p>
+    </div>
+    <ul>
+      <li>Každé zvíře upravuji individuálně, jedno po druhém.</li>
+      <li>Neuvazuji a nepoužívám uklidňující prostředky – ty patří jen do rukou odborníků.</li>
+      <li>Střih respektuje přirozenost plemene.</li>
+      <li>Profesionální kosmetika, vhodná i pro alergiky.</li>
+      <li>Nástroje, vana i salon jsou čisté a sterilizované.</li>
+      <li>Bezbariérový přístup, u salonu dost místa k parkování.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec faq" id="otazky" aria-labelledby="h-f">
+  <div class="wrap faq-grid">
+    <div class="sec-head" style="display:block">
+      <p class="sec-num">06 — ČASTÉ OTÁZKY</p>
+      <h2 id="h-f" style="margin-top:.8rem">Než přijdete</h2>
+    </div>
+    <div>
+      <details>
+        <summary>Můžu u úpravy zůstat se svým pejskem?</summary>
+        <p>Ano, můžete být u toho po celou dobu. Pro nervózní nebo starší psy je to často nejlepší řešení.</p>
+      </details>
+      <details>
+        <summary>Jak pejska připravit na trimování?</summary>
+        <p>Čtyři týdny před trimováním ho nekoupejte – srst se pak lépe trimuje. Trimování účtujeme 500 Kč za hodinu.</p>
+      </details>
+      <details>
+        <summary>Můj pes je kříženec. Kolik zaplatím?</summary>
+        <p>Rozhoduje výška v kohoutku: do 35 cm 350–500 Kč, 35–45 cm 400–550 Kč, nad 45 cm 450–600 Kč. Konečná cena záleží na stavu srsti.</p>
+      </details>
+      <details>
+        <summary>Co když má pes zacuchanou nebo zablešenou srst?</summary>
+        <p>Poradíme si i s dredy. U velmi špinavého, zacuchaného nebo zablešeného zvířete se ale účtuje příplatek 50–100 % ze základní ceny. Rozčesávání dredů stojí 120 Kč za 15 minut.</p>
+      </details>
+      <details>
+        <summary>Jak se k Vám dostanu?</summary>
+        <p>Salon je na sídlišti Fifejdy naproti Baumaxu, v nízké bílošedé budově mezi čtyřmi věžovými domy. Zastávka Jiřího Trnky je asi 70 m (autobusy 35, 37, 39, trolejbusy 102, 108). Parkování je přímo u salonu.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec book" id="kontakt" aria-labelledby="h-k">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="sec-num">07 — OBJEDNÁVKA A KONTAKT</p><h2 id="h-k">Objednejte svého psa na úpravu</h2></div>
+      <p class="sec-intro">Nejrychlejší je telefon. Když jsem zrovna u stříhání, zavolám Vám zpět – nebo nechte zprávu ve formuláři.</p>
+    </div>
+    <div class="book-grid">
+      <form class="bk" id="objednat" novalidate>
+        <div class="f"><label for="f-name">Vaše jméno</label><input id="f-name" name="jmeno" autocomplete="name"></div>
+        <div class="f"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
+        <div class="f"><label for="f-breed">Plemeno a jméno zvířete</label><input id="f-breed" name="plemeno" placeholder="např. westík Ben"></div>
+        <div class="f"><label for="f-svc">Služba</label>
+          <select id="f-svc" name="sluzba">
+            <option>Stříhání</option><option>Trimování</option><option>Koupání a fénování</option><option>Vyčesávání / dredy</option><option>Výstavní úprava</option><option>Drápky, uši, oči</option><option>Kočička</option><option>Nevím, poraďte mi</option>
+          </select></div>
+        <div class="f full"><label for="f-when">Kdy se Vám to hodí?</label><input id="f-when" name="termin" placeholder="např. úterý dopoledne nebo sobota"></div>
+        <div class="f full"><label for="f-msg">Poznámka (nepovinné)</label><textarea id="f-msg" name="zprava" placeholder="Stav srsti, povaha pejska, cokoli dalšího"></textarea></div>
+        <div class="f full"><button class="btn btn-main" type="submit">Objednat termín</button></div>
+        <p class="form-msg" id="form-msg" role="status" hidden>Toto je jen ukázka – v hotovém webu zpráva odejde přímo do Vašeho e-mailu.</p>
+      </form>
+
+      <div class="contact-card">
+        <a class="big" href="tel:+420776572431">776 572 431</a>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><b>E-mail</b><p><a href="mailto:ivonina@seznam.cz">ivonina@seznam.cz</a></p></div></div>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Adresa</b><p>Gen. Hrušky 1233/26<br>709 00 Ostrava-Mariánské Hory</p><p class="muted">Sídliště Fifejdy, naproti Baumaxu</p><p><a href="https://mapy.cz/zakladni?q=Gen.%20Hru%C5%A1ky%201233%2F26%2C%20Ostrava-Mari%C3%A1nsk%C3%A9%20Hory" target="_blank" rel="noopener">Otevřít na Mapy.cz</a></p></div></div>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Kdy</b><p>Pondělí–sobota, jen na objednávku</p><p class="muted">Konkrétní čas domluvíme telefonicky.</p></div></div>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><div><b>Provozovatel</b><p>Ivona Endlicherová · IČO 03846091</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>ELUT — psí salon nejen pro pejsky</b>
+    <p style="margin:0">Gen. Hrušky 1233/26, Ostrava-Mariánské Hory · <a href="tel:+420776572431">776 572 431</a> · <a href="mailto:ivonina@seznam.cz">ivonina@seznam.cz</a></p>
+    <p style="margin:0">Nezávazný návrh webu. Údaje převzaty z <a href="https://psi-salon-elut.estranky.cz/">původního webu salonu</a> a z <a href="https://www.firmy.cz/detail/12925543-psi-salon-elut-ostrava-marianske-hory.html">Firmy.cz</a>.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420776572431"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>776 572 431</a>
+  <a class="c2" href="#objednat">Objednat termín</a>
+</nav>
+
+<script>
+(function(){
+  var D=[
+    ["strih","Yorkšírský teriér (jorkšír)","350–450 Kč","jorksir york yorkie jorkšír"],
+    ["strih","Bišonek","400–500 Kč","bichon frise bisonek"],
+    ["strih","Boloňský psík","400–500 Kč","bolonka bolonsky bolognese"],
+    ["strih","Maltézský psík","400 Kč","maltezak maltezacek maltese"],
+    ["strih","Shih-tzu","450 Kč","shi tzu sitzu"],
+    ["strih","Pudl toy, trpasličí","350–500 Kč","pudl toy trpaslici poodle"],
+    ["strih","Pudl střední","450–550 Kč","pudl stredni poodle"],
+    ["strih","Pudl velký","700 Kč","pudl velky kralovsky poodle"],
+    ["strih","Knírač malý","400–550 Kč","knirac zwergschnauzer schnauzer kniracek"],
+    ["strih","Knírač střední","450–600 Kč","knirac schnauzer"],
+    ["strih","Knírač velký","500–700 Kč","knirac riesenschnauzer schnauzer obrovsky"],
+    ["strih","Teriér malý","400–500 Kč","terier jack cairn"],
+    ["strih","Teriér střední","500–600 Kč","terier"],
+    ["strih","Teriér velký","600–750 Kč","terier airedale"],
+    ["strih","Foxteriér","400–550 Kč","foxterier fox terier"],
+    ["strih","West highland white teriér (westík)","400–600 Kč","westik west westie terier"],
+    ["strih","Americký kokršpaněl","500–650 Kč","kokr kokrspanel cocker spaniel americky"],
+    ["strih","Anglický kokršpaněl","500–650 Kč","kokr kokrspanel cocker spaniel anglicky"],
+    ["strih","Kříženec do 35 cm","350–500 Kč","krizenec voric mix maly"],
+    ["strih","Kříženec 35–45 cm","400–550 Kč","krizenec voric mix stredni"],
+    ["strih","Kříženec nad 45 cm","450–600 Kč","krizenec voric mix velky"],
+    ["strih","Kočička – stříhání","400–600 Kč","kocka kocicka cat perska"],
+    ["strih","Trimování srsti","500 Kč / hod.","trim trimovani"],
+    ["koup","Koupání – malý pes do 35 cm","250–350 Kč","koupani fenovani maly"],
+    ["koup","Koupání – střední pes 35–45 cm","350–450 Kč","koupani fenovani stredni"],
+    ["koup","Koupání – velký pes nad 45 cm","450–550 Kč","koupani fenovani velky"],
+    ["koup","Koupání – kočička","200–350 Kč","koupani kocka kocicka cat"],
+    ["dalsi","Bělení srsti","300 Kč","beleni bily vystava"],
+    ["dalsi","Balíčkování (olejování)","350 Kč / hod.","balickovani olejovani vystava"],
+    ["dalsi","Stříhání čumáčku, oušek, tlapek a ocásku","200 Kč","cumak usi tlapky ocasek"],
+    ["dalsi","Zkrácení drápků","50 Kč","drapky drapy"],
+    ["dalsi","Depilace oušek","100 Kč","depilace usi"],
+    ["dalsi","Čištění očí, uší","100 Kč","cisteni oci usi"],
+    ["dalsi","Odstranění klíštěte","60 Kč","klistě kliste"],
+    ["dalsi","Rozčesávání splstnatělé srsti (dredy)","120 Kč / 15 min.","dredy plsti rozcesavani vycesavani"],
+    ["dalsi","Odblešení","200–1 300 Kč","blechy odblešeni"],
+    ["dalsi","Poradenský servis","zdarma","poradenstvi stene stenata rada"]
+  ];
+  var LAB={strih:"Stříhání",koup:"Koupání a fénování",dalsi:"Další služby"};
+  function n(s){return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");}
+  var q=document.getElementById("q"),ul=document.getElementById("plist"),cnt=document.getElementById("cnt"),emp=document.getElementById("empty"),cat="";
+  function esc(s){return s.replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c];});}
+  function hl(name,term){
+    if(!term)return esc(name);
+    var nn=n(name),i=nn.indexOf(term);
+    if(i<0)return esc(name);
+    return esc(name.slice(0,i))+"<mark>"+esc(name.slice(i,i+term.length))+"</mark>"+esc(name.slice(i+term.length));
+  }
+  function render(){
+    var t=n(q.value.trim()),words=t.split(/\s+/).filter(Boolean),out=[];
+    D.forEach(function(r){
+      if(cat&&r[0]!==cat)return;
+      var hay=n(r[1]+" "+r[3]);
+      if(words.every(function(w){return hay.indexOf(w)>-1;}))out.push(r);
+    });
+    ul.innerHTML=out.map(function(r){
+      return '<li><span class="nm">'+hl(r[1],words[0]||"")+'<small>'+LAB[r[0]]+'</small></span><span class="pr">'+r[2]+'</span></li>';
+    }).join("");
+    emp.hidden=out.length>0;
+    cnt.textContent=out.length?("Nalezeno položek: "+out.length):"Nic nenalezeno";
+  }
+  q.addEventListener("input",render);
+  document.querySelectorAll(".chip").forEach(function(b){
+    b.addEventListener("click",function(){
+      cat=b.getAttribute("data-cat");
+      document.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false");});
+      render();
+    });
+  });
+  render();
+  var f=document.getElementById("objednat"),m=document.getElementById("form-msg");
+  f.addEventListener("submit",function(e){e.preventDefault();m.hidden=false;m.focus&&m.setAttribute("tabindex","-1");m.focus();});
+})();
+</script>
+</body>
+</html>

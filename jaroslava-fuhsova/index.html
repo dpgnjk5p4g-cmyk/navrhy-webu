@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Jaroslava Fuhsová</title>
+<meta name="description" content="Stříhání psů v Kozmicích u Opavy – Jaroslava Fuhsová. Rozčesávání, stříhání, koupání a fénování pudlů, kokršpanělů, kníračů, jorkšírů i kříženců. Termín dle telefonické domluvy.">
+<meta name="theme-color" content="#FBF3E4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jaroslava Fuhsová – stříhání psů",
+  "description": "Salon pro psy zaměřený na plemena pudl, kokršpaněl, knírač, lvíček, bišonek, jorkšírský teriér a jiná plemena včetně kříženců.",
+  "telephone": "+420604180505",
+  "email": "jaroslava.fuhsova@seznam.cz",
+  "taxID": "73067997",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "K Točně 424/27a",
+    "postalCode": "747 11",
+    "addressLocality": "Kozmice",
+    "addressCountry": "CZ"
+  },
+  "sameAs": ["https://www.firmy.cz/detail/411616-jaroslava-fuhsova-kozmice.html"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --cream:#FBF3E4;
+  --cream-2:#F5E8D0;
+  --paper:#FFFBF3;
+  --terra:#C0623B;
+  --terra-text:#9A4A2A;
+  --terra-soft:#F2D6C4;
+  --olive:#6B7F3A;
+  --olive-text:#4F5E2A;
+  --olive-soft:#E3E7CF;
+  --cocoa:#3B2A20;
+  --cocoa-2:#5C4636;
+  --line:#E6D5B8;
+  --radius:22px;
+  --shadow:0 18px 40px -22px rgba(59,42,32,.45);
+  --font-h:"Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --font-b:"Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--cocoa);font-family:var(--font-b);font-size:1.0625rem;line-height:1.65;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--terra-text)}
+h1,h2,h3{font-family:var(--font-h);font-weight:600;line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.05rem,6.4vw,3.9rem)}
+h2{font-size:clamp(1.75rem,4.4vw,2.7rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.demo{display:inline-block;font-family:var(--font-b);font-size:.68rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--cocoa);background:#FFE7A3;border:1px dashed #B58A1E;border-radius:6px;padding:1px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+
+/* top banner */
+.banner{background:var(--cocoa);color:#FBF3E4;font-size:.84rem;text-align:center;padding:8px 16px;line-height:1.4}
+.banner strong{color:#FFD9C4}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:rgba(251,243,228,.92);backdrop-filter:saturate(1.3) blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cocoa)}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{font-family:var(--font-h);font-weight:600;font-size:1.15rem;line-height:1.05;display:block}
+.logo small{display:block;font-size:.78rem;color:var(--cocoa-2);font-weight:700}
+nav.menu{display:none;gap:26px}
+nav.menu a{color:var(--cocoa);text-decoration:none;font-weight:700;font-size:.97rem}
+nav.menu a:hover{color:var(--terra-text)}
+.tel-head{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-decoration:none;color:var(--cocoa);background:var(--paper);border:2px solid var(--terra);padding:7px 14px;border-radius:999px;font-size:.98rem;white-space:nowrap}
+.tel-head svg{width:18px;height:18px}
+.tel-head .num{display:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-b);font-weight:800;font-size:1.15rem;text-decoration:none;border-radius:999px;padding:14px 26px;border:2px solid transparent;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;line-height:1.2}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:0 10px 22px -10px rgba(154,74,42,.8)}
+.btn-primary:hover{background:var(--terra-text);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--cocoa);border-color:var(--cocoa)}
+.btn-ghost:hover{background:var(--cocoa);color:var(--cream)}
+.btn:focus-visible,.size-btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--olive);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;padding:28px 0 40px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -40% 40%;height:520px;background:radial-gradient(closest-side,#F4DCC0,rgba(244,220,192,0));z-index:0}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;color:var(--olive-text);margin-bottom:12px}
+.eyebrow::before{content:"";width:26px;height:3px;border-radius:3px;background:var(--olive)}
+.hero h1 em{font-style:normal;color:var(--terra-text);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.2em;background:var(--terra-soft);z-index:-1;border-radius:6px}
+.lead{font-size:1.12rem;color:var(--cocoa-2);max-width:34em;margin-bottom:20px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:9px 14px;font-size:.93rem;font-weight:700}
+.status .dot{width:10px;height:10px;border-radius:50%;background:var(--olive);box-shadow:0 0 0 4px var(--olive-soft);flex:none}
+.status.closed .dot{background:#9C8B7C;box-shadow:0 0 0 4px #EAE0D3}
+.status small{display:block;font-weight:600;color:var(--cocoa-2);font-size:.8rem}
+
+.stage{position:relative;background:linear-gradient(160deg,#FFF8EC,#F7E6CB);border-radius:32px;border:1px solid var(--line);box-shadow:var(--shadow);padding:14px 14px 18px}
+.stage-tiles{position:absolute;inset:14px 14px auto 14px;height:58%;border-radius:22px;opacity:.55;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:34px 34px}
+.stage svg.tub{position:relative;width:100%;height:auto}
+.size-switch{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px;margin-top:4px}
+.size-switch .label{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-size:.82rem;font-weight:800;color:var(--cocoa-2);white-space:nowrap}
+.size-btn{appearance:none;border:0;background:transparent;font-family:var(--font-h);font-weight:600;font-size:1.05rem;color:var(--cocoa);padding:10px 6px;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:background .25s,color .25s}
+.size-btn svg{width:18px;height:18px}
+.size-btn[aria-pressed="true"]{background:var(--cocoa);color:var(--cream)}
+
+/* svg animation */
+#dog{transform-box:fill-box;transform-origin:50% 100%;transition:transform .7s cubic-bezier(.34,1.56,.64,1)}
+.bub{animation:rise 6s ease-in infinite;transform-box:fill-box;transform-origin:center}
+.bub.b2{animation-delay:1.3s;animation-duration:7s}
+.bub.b3{animation-delay:2.6s;animation-duration:5.5s}
+.bub.b4{animation-delay:3.4s;animation-duration:6.5s}
+.bub.b5{animation-delay:.6s;animation-duration:8s}
+.bub.b6{animation-delay:4.2s}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}12%{opacity:.95}80%{opacity:.8}100%{transform:translateY(-190px) scale(1.15);opacity:0}}
+.tail{transform-box:fill-box;transform-origin:10% 90%;animation:wag 1.6s ease-in-out infinite}
+@keyframes wag{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(14deg)}}
+.ear{transform-box:fill-box;transform-origin:50% 8%;animation:ear 4s ease-in-out infinite}
+@keyframes ear{0%,100%{transform:rotate(0)}50%{transform:rotate(4deg)}}
+.blink{animation:blink 5s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.foam{animation:foam 3.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+@keyframes foam{0%,100%{transform:scale(1)}50%{transform:scale(1.04,1.07)}}
+
+/* sections */
+section{padding:64px 0}
+.sec-head{max-width:700px;margin-bottom:34px}
+.sec-head p{color:var(--cocoa-2);font-size:1.08rem}
+.kicker{font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;color:var(--olive-text);margin-bottom:8px;display:block}
+
+/* size panel */
+.sizepanel{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{display:grid;gap:22px;align-items:start}
+.panel-card{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden}
+.panel-card::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--terra-soft);opacity:.55}
+.panel-card > *{position:relative;z-index:1}
+.breeds{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px;padding:0;list-style:none}
+.breeds li{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-weight:700;font-size:.92rem}
+.steps-mini{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:10px}
+.steps-mini li{display:flex;gap:12px;align-items:flex-start}
+.steps-mini li svg{width:24px;height:24px;flex:none;margin-top:2px}
+.tip{background:var(--olive-soft);border-radius:16px;padding:14px 16px;font-size:.98rem;margin-bottom:18px}
+.tip b{color:var(--olive-text)}
+.price-line{display:flex;flex-wrap:wrap;align-items:center;gap:12px;border-top:1px dashed var(--line);padding-top:18px}
+.price-line p{margin:0;font-weight:800;font-family:var(--font-h);font-size:1.2rem}
+.panel-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.panel-tabs .size-btn{border:2px solid var(--cocoa);padding:9px 18px}
+.fade{animation:fadeIn .45s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* services */
+.svc-grid{display:grid;gap:16px}
+.svc{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px;display:flex;gap:16px;align-items:flex-start;transition:transform .25s, box-shadow .25s}
+.svc:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.svc .ico{width:56px;height:56px;border-radius:18px;background:var(--terra-soft);display:grid;place-items:center;flex:none}
+.svc .ico svg{width:32px;height:32px}
+.svc h3{margin-bottom:4px}
+.svc p{margin:0;color:var(--cocoa-2);font-size:1rem}
+.price-note{margin-top:26px;background:var(--cocoa);color:var(--cream);border-radius:var(--radius);padding:22px 24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.price-note p{margin:0;font-family:var(--font-h);font-size:1.35rem;font-weight:600}
+.price-note span{display:block;font-family:var(--font-b);font-size:.98rem;font-weight:600;color:#EADBC6}
+
+/* steps */
+.steps{display:grid;gap:18px;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px 22px}
+.steps .n{font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:#fff;background:var(--olive-text);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px}
+.steps p{margin:0;color:var(--cocoa-2)}
+.paws{height:28px;margin:6px 0 0;opacity:.5}
+
+/* gallery */
+.gallery{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+.ba-grid{display:grid;gap:22px}
+.ba{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}
+.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ph{position:relative;aspect-ratio:4/5;border-radius:14px;display:grid;place-items:center;text-align:center;padding:12px;font-weight:800;font-size:.9rem;color:var(--cocoa-2);overflow:hidden}
+.ph.before{background:repeating-linear-gradient(45deg,#EFE2CB 0 10px,#F6EBD7 10px 20px)}
+.ph.after{background:radial-gradient(circle at 30% 20%,#FFFFFF,#F7E6D0 70%)}
+.ph svg{width:44px;height:44px;margin:0 auto 6px;opacity:.75}
+.ph .tag{position:absolute;top:8px;left:8px;background:var(--cocoa);color:var(--cream);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 10px}
+.ph.after .tag{background:var(--terra-text)}
+.ba figcaption{padding:12px 6px 4px;font-weight:700}
+
+/* trust */
+.trust{display:grid;gap:16px}
+.fact{border-left:4px solid var(--terra);padding:6px 0 6px 18px}
+.fact b{display:block;font-family:var(--font-h);font-size:1.25rem;font-weight:600;margin-bottom:2px}
+.fact span{color:var(--cocoa-2)}
+.fact a{font-weight:700}
+
+/* faq */
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:18px;margin-bottom:12px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;font-family:var(--font-h);font-weight:600;font-size:1.17rem;padding:18px 34px 18px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--terra-text);transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{color:var(--cocoa-2);padding-bottom:6px}
+
+/* contact */
+.contact{background:var(--cocoa);color:var(--cream)}
+.contact h2,.contact h3{color:#fff}
+.contact .kicker{color:#D7E0B5}
+.contact a{color:#FFD9C4}
+.c-grid{display:grid;gap:28px}
+.c-list{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:16px}
+.c-list li{display:flex;gap:14px;align-items:flex-start}
+.c-list svg{width:24px;height:24px;flex:none;margin-top:3px}
+.c-list b{display:block;font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;color:#E2CDB4}
+.c-list .big{font-family:var(--font-h);font-size:1.45rem;font-weight:600;text-decoration:none;color:#fff}
+.hours{width:100%;border-collapse:collapse;font-size:.98rem;margin-bottom:6px}
+.hours td{padding:7px 0;border-bottom:1px solid rgba(251,243,228,.16)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:#FFD9C4}
+.small-note{font-size:.86rem;color:#E2CDB4}
+.form{background:var(--paper);color:var(--cocoa);border-radius:28px;padding:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.form h3{color:var(--cocoa)}
+.field{margin-bottom:14px}
+.field label,.field legend{display:block;font-weight:800;font-size:.93rem;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:var(--cocoa);background:#fff;border:2px solid var(--line);border-radius:14px;padding:11px 14px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--olive)}
+.two{display:grid;gap:12px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.seg{position:relative}
+.seg input{position:absolute;left:0;top:0;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}
+.seg label{margin:0;text-align:center;border:2px solid var(--line);border-radius:12px;padding:10px 4px;cursor:pointer;font-family:var(--font-h);font-weight:600;font-size:1rem;background:#fff}
+.seg input:checked + label{background:var(--cocoa);border-color:var(--cocoa);color:var(--cream)}
+.seg input:focus-visible + label{outline:3px solid var(--olive);outline-offset:2px}
+fieldset{border:0;margin:0 0 14px;padding:0}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{display:inline-flex;align-items:center;gap:7px;border:2px solid var(--line);border-radius:999px;padding:6px 13px;font-weight:700;font-size:.93rem;cursor:pointer;background:#fff;margin:0}
+.checks input{accent-color:var(--terra-text);width:16px;height:16px}
+.form .btn{width:100%}
+.form-note{font-size:.85rem;color:var(--cocoa-2);margin:10px 0 0}
+.map-link{display:inline-flex;align-items:center;gap:8px;font-weight:800}
+
+footer{background:#2C1F17;color:#E2CDB4;font-size:.88rem;padding:26px 0 110px}
+footer a{color:#FFD9C4}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1.25fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(251,243,228,.96);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+.mbar .btn{font-size:1.05rem;padding:12px 10px}
+
+@media (min-width:640px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .two{grid-template-columns:1fr 1fr}
+  .ba-grid{grid-template-columns:repeat(2,1fr)}
+  .tel-head .num{display:inline}
+  .tel-head .txt{display:none}
+}
+@media (min-width:960px){
+  body{font-size:1.09rem}
+  nav.menu{display:flex}
+  .hero{padding:56px 0 76px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+  section{padding:96px 0}
+  .panel{grid-template-columns:.8fr 1.2fr;gap:48px}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .ba-grid{grid-template-columns:repeat(3,1fr)}
+  .trust{grid-template-columns:repeat(3,1fr);gap:32px}
+  .c-grid{grid-template-columns:1fr 1.05fr;gap:56px}
+  .form{padding:34px}
+  .mbar{display:none}
+  footer{padding-bottom:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<div class="banner" role="note"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Jaroslava Fuhsová</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Jaroslava Fuhsová – stříhání psů, úvod">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#C0623B"/><g fill="#FBF3E4"><ellipse cx="20" cy="25" rx="7" ry="5.6"/><ellipse cx="11.5" cy="17" rx="3" ry="3.8"/><ellipse cx="17" cy="12" rx="3" ry="3.8"/><ellipse cx="23" cy="12" rx="3" ry="3.8"/><ellipse cx="28.5" cy="17" rx="3" ry="3.8"/></g></svg>
+      <span><b>Jaroslava Fuhsová</b><small>stříhání psů · Kozmice</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní menu">
+      <a href="#sluzby">Služby</a>
+      <a href="#navsteva">Jak probíhá návštěva</a>
+      <a href="#galerie">Před a po</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-head" href="tel:+420604180505"><svg viewBox="0 0 24 24" fill="none" stroke="#9A4A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="num">604 180 505</span><span class="txt">Zavolat</span></a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Psí salon · Kozmice u Opavy</span>
+      <h1 id="h1">Stříhání psů v Kozmicích – <em>s péčí jako doma</em></h1>
+      <p class="lead">Rozčešu, vykoupu, vyfénuji a ostříhám Vašeho pudla, kokršpaněla, knírače, jorkšíra, bišonka, lvíčka i křížence. Termín se domlouvá po telefonu.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#objednat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Objednat termín</a>
+        <a class="btn btn-ghost" href="tel:+420604180505"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Zavolat</a>
+      </div>
+      <div class="status" id="status"><span class="dot" aria-hidden="true"></span><span><span id="status-text">Po–Pá: dle telefonické domluvy</span><small>So–Ne zavřeno · ve svátky se může lišit</small></span></div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-tiles" aria-hidden="true"></div>
+      <svg class="tub" id="tubsvg" viewBox="0 0 520 420" role="img" aria-labelledby="svgt">
+        <title id="svgt">Ilustrace: chlupatý pejsek ve vaničce plné pěny a mýdlových bublin</title>
+        <defs>
+          <radialGradient id="bubG" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".6" stop-color="#F7EEF6" stop-opacity=".35"/><stop offset="1" stop-color="#C9D8E8" stop-opacity=".55"/></radialGradient>
+          <linearGradient id="tubG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2724A"/><stop offset="1" stop-color="#A8512E"/></linearGradient>
+          <linearGradient id="furG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6E6"/><stop offset="1" stop-color="#F1D9B8"/></linearGradient>
+        </defs>
+        <!-- floor shadow -->
+        <ellipse cx="260" cy="392" rx="190" ry="14" fill="#3B2A20" opacity=".12"/>
+        <!-- towel on hook -->
+        <g opacity=".95">
+          <circle cx="452" cy="56" r="6" fill="#6B7F3A"/>
+          <path d="M432 60 h40 v86 q-20 10 -40 0z" fill="#6B7F3A"/>
+          <path d="M432 128 h40" stroke="#E3E7CF" stroke-width="4"/><path d="M432 136 h40" stroke="#E3E7CF" stroke-width="2"/>
+        </g>
+        <!-- dog group -->
+        <g id="dog">
+          <!-- tail -->
+          <g class="tail"><path d="M366 236 q30 -40 18 -78" stroke="#EBCFA8" stroke-width="12" fill="none" stroke-linecap="round"/><circle cx="384" cy="152" r="20" fill="url(#furG)"/><circle cx="374" cy="164" r="13" fill="#FFF6E6"/></g>
+          <!-- body fluff -->
+          <g fill="url(#furG)">
+            <circle cx="210" cy="236" r="44"/><circle cx="262" cy="222" r="48"/><circle cx="314" cy="232" r="46"/><circle cx="350" cy="246" r="34"/>
+          </g>
+          <!-- head -->
+          <g>
+            <!-- ears -->
+            <g class="ear"><circle cx="150" cy="168" r="26" fill="#EBCFA8"/><circle cx="146" cy="196" r="24" fill="#EBCFA8"/><circle cx="152" cy="220" r="19" fill="#E2C095"/></g>
+            <g class="ear" style="animation-delay:-2s"><circle cx="262" cy="168" r="26" fill="#EBCFA8"/><circle cx="266" cy="196" r="24" fill="#EBCFA8"/><circle cx="260" cy="220" r="19" fill="#E2C095"/></g>
+            <circle cx="206" cy="166" r="52" fill="url(#furG)"/>
+            <!-- topknot pompom -->
+            <circle cx="186" cy="112" r="22" fill="#FFF6E6"/><circle cx="210" cy="104" r="24" fill="#FFF6E6"/><circle cx="232" cy="114" r="20" fill="#FFF6E6"/>
+            <!-- bow -->
+            <path d="M196 124 l-14 -8 v18z M220 124 l14 -8 v18z" fill="#C0623B"/><circle cx="208" cy="124" r="6" fill="#9A4A2A"/>
+            <!-- muzzle -->
+            <ellipse cx="206" cy="196" rx="30" ry="22" fill="#FFF8EC"/>
+            <ellipse cx="206" cy="184" rx="10" ry="7" fill="#3B2A20"/>
+            <path d="M206 191 v8 M206 199 q-9 8 -16 2 M206 199 q9 8 16 2" stroke="#3B2A20" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M200 206 q6 10 12 0" fill="#E07A6A"/>
+            <!-- eyes -->
+            <g class="blink"><circle cx="186" cy="160" r="6.5" fill="#3B2A20"/><circle cx="226" cy="160" r="6.5" fill="#3B2A20"/><circle cx="188" cy="158" r="2" fill="#fff"/><circle cx="228" cy="158" r="2" fill="#fff"/></g>
+            <!-- cheeks -->
+            <circle cx="170" cy="184" r="7" fill="#F2B7A0" opacity=".7"/><circle cx="242" cy="184" r="7" fill="#F2B7A0" opacity=".7"/>
+          </g>
+          <!-- paws on rim -->
+          <g fill="#FFF6E6"><ellipse cx="170" cy="262" rx="20" ry="13"/><ellipse cx="236" cy="264" rx="20" ry="13"/></g>
+          <g stroke="#E2C095" stroke-width="2.5" stroke-linecap="round"><path d="M164 266 v-6 M172 267 v-6 M230 268 v-6 M238 268 v-6"/></g>
+        </g>
+        <!-- foam front -->
+        <g class="foam" fill="#FFFFFF">
+          <circle cx="110" cy="276" r="24"/><circle cx="146" cy="268" r="20"/><circle cx="290" cy="270" r="22"/><circle cx="330" cy="264" r="26"/><circle cx="372" cy="272" r="22"/><circle cx="406" cy="278" r="18"/><circle cx="270" cy="282" r="16"/>
+        </g>
+        <!-- tub -->
+        <path d="M78 276 h364 q8 0 7 8 l-14 54 q-10 34 -48 34 h-254 q-38 0 -48 -34 l-14 -54 q-1 -8 7 -8z" fill="url(#tubG)"/>
+        <rect x="70" y="268" width="380" height="18" rx="9" fill="#9A4A2A"/>
+        <path d="M110 302 q150 16 300 0" stroke="#FBF3E4" stroke-opacity=".25" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- feet -->
+        <path d="M124 368 q-6 18 -20 20 h28 q4 -10 4 -20z M396 368 q6 18 20 20 h-28 q-4 -10 -4 -20z" fill="#6B7F3A"/>
+        <!-- tap -->
+        <path d="M60 268 v-70 q0 -22 22 -22 h18" stroke="#8C7A6B" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <circle cx="60" cy="214" r="9" fill="#6B7F3A"/>
+        <!-- soap bar -->
+        <g transform="translate(398 252) rotate(-8)"><rect width="40" height="18" rx="8" fill="#E3E7CF"/><rect x="6" y="4" width="28" height="4" rx="2" fill="#fff" opacity=".8"/></g>
+        <!-- bubbles -->
+        <g>
+          <circle class="bub" cx="120" cy="250" r="14" fill="url(#bubG)" stroke="#fff" stroke-width="1.5"/>
+          <circle class="bub b2" cx="300" cy="240" r="10" fill="url(#bubG)" stroke="#fff" stroke-width="1.5"/>
+          <circle class="bub b3" cx="380" cy="248" r="16" fill="url(#bubG)" stroke="#fff" stroke-width="1.5"/>
+          <circle class="bub b4" cx="160" cy="246" r="8" fill="url(#bubG)" stroke="#fff" stroke-width="1.5"/>
+          <circle class="bub b5" cx="420" cy="240" r="11" fill="url(#bubG)" stroke="#fff" stroke-width="1.5"/>
+          <circle class="bub b6" cx="250" cy="250" r="12" fill="url(#bubG)" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="96" cy="140" r="9" fill="url(#bubG)" stroke="#fff" stroke-width="1.5" opacity=".8"/>
+          <circle cx="330" cy="120" r="13" fill="url(#bubG)" stroke="#fff" stroke-width="1.5" opacity=".8"/>
+          <circle cx="352" cy="92" r="6" fill="url(#bubG)" stroke="#fff" stroke-width="1.5" opacity=".8"/>
+        </g>
+      </svg>
+      <div class="size-switch" role="group" aria-label="Přepínač velikosti psa">
+        <button class="size-btn" type="button" data-size="maly" aria-pressed="false">Malý</button>
+        <button class="size-btn" type="button" data-size="stredni" aria-pressed="true">Střední</button>
+        <button class="size-btn" type="button" data-size="velky" aria-pressed="false">Velký</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIZE PANEL (standout) -->
+<section class="sizepanel" id="velikost" aria-labelledby="h-size">
+  <div class="wrap panel">
+    <div>
+      <span class="kicker">Přepínač velikosti psa</span>
+      <h2 id="h-size">Jak velký je Váš pejsek?</h2>
+      <p style="color:var(--cocoa-2)">Vyberte velikost a uvidíte, co návštěva v salonu obnáší. Jedním klikem si pak rovnou připravíte objednávku.</p>
+      <div class="panel-tabs" role="group" aria-label="Velikost psa">
+        <button class="size-btn" type="button" data-size="maly" aria-pressed="false">Malý</button>
+        <button class="size-btn" type="button" data-size="stredni" aria-pressed="true">Střední</button>
+        <button class="size-btn" type="button" data-size="velky" aria-pressed="false">Velký</button>
+      </div>
+    </div>
+    <div class="panel-card" id="panel" aria-live="polite">
+      <!-- filled by JS; default content for no-JS -->
+      <h3 id="p-title">Střední pes</h3>
+      <p style="margin-bottom:4px;font-weight:700">Například:</p>
+      <ul class="breeds" id="p-breeds"><li>kokršpaněl</li><li>knírač</li><li>pudl</li><li>kříženec</li></ul>
+      <ul class="steps-mini" id="p-steps"></ul>
+      <div class="tip" id="p-tip"></div>
+      <div class="price-line">
+        <p>Cenu Vám řekneme předem.</p>
+        <a class="btn btn-ghost" href="tel:+420604180505" style="padding:10px 20px;font-size:1.02rem">Zavolat</a>
+        <a class="btn btn-primary" href="#objednat" id="p-order" style="padding:10px 20px;font-size:1.05rem">Objednat středního psa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="sluzby" aria-labelledby="h-svc">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Služby</span>
+      <h2 id="h-svc">Celá péče o srst na jednom místě</h2>
+      <p>Salon je zaměřený na plemena pudl, kokršpaněl, knírač, lvíček, bišonek, jorkšírský teriér a jiná plemena včetně kříženců.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#9A4A2A" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="6" width="22" height="8" rx="3"/><path d="M8 14v12M12 14v10M16 14v12M20 14v10M24 14v12"/></svg></div><div><h3>Rozčesávání</h3><p>Pročesání srsti až ke kůži a rozčesání zacuchaných míst, aby se srst dala dobře umýt i ostříhat.</p></div></article>
+      <article class="svc"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#9A4A2A" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="23" r="4"/><circle cx="9" cy="9" r="4"/><path d="M12 11l16 12M12 21L28 9"/></svg></div><div><h3>Stříhání</h3><p>Úprava srsti nůžkami a strojkem podle plemene a podle toho, jak to Vašemu psovi vyhovuje.</p></div></article>
+      <article class="svc"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#9A4A2A" stroke-width="2.2" stroke-linecap="round"><path d="M4 16h24l-2 7a5 5 0 0 1-5 4H11a5 5 0 0 1-5-4z"/><path d="M8 16V8a3 3 0 0 1 6 0"/><circle cx="20" cy="9" r="2.5"/><circle cx="25" cy="5" r="1.6"/></svg></div><div><h3>Koupání</h3><p>Vykoupání a důkladné propláchnutí srsti, aby byl pes čistý a voňavý.</p></div></article>
+      <article class="svc"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#9A4A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12a6 6 0 0 1 0 12H6z"/><path d="M12 20l-2 8h5l2-8"/><path d="M24 11h5M24 14h6M24 17h5"/></svg></div><div><h3>Fénování</h3><p>Vysušení a vyfoukání srsti fénem, aby šla po stříhání krásně načechraná.</p></div></article>
+      <article class="svc"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#9A4A2A" stroke-width="2.2" stroke-linecap="round"><path d="M10 6c8 0 12 6 12 12s-4 9-8 9c-3 0-4-2-4-4 0-3 4-3 4-7s-4-4-4-10z"/></svg></div><div><h3>Depilace ušních chloupků</h3><p>Šetrné odstranění chloupků ze zvukovodu, které se u řady plemen hromadí.</p></div></article>
+      <article class="svc"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#9A4A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l10 4v7c0 7-5 11-10 13C11 26 6 22 6 15V8z"/><path d="M12 16l3 3 5-6"/></svg></div><div><h3>Ošetření análních žlázek</h3><p>Vyprázdnění análních žlázek, které psovi uleví, když se „sáňkuje“ po zemi.</p></div></article>
+    </div>
+    <div class="price-note">
+      <p>Cenu Vám řekneme předem.<span>Záleží na velikosti psa a stavu srsti – stačí zavolat a domluvíme se.</span></p>
+      <a class="btn btn-primary" href="tel:+420604180505"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Zavolat 604 180 505</a>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="navsteva" style="background:var(--cream-2)" aria-labelledby="h-steps">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Jak probíhá návštěva</span>
+      <h2 id="h-steps">Tři kroky k upravenému pejskovi</h2>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Zavoláte a domluvíme termín</h3><p>Řeknete mi plemeno, velikost a co pejsek potřebuje. Domluvíme den, čas i cenu předem.</p></li>
+      <li><span class="n">2</span><h3>Přivedete psa do salonu</h3><p>Salon najdete v Kozmicích na adrese K Točně 424/27a. Rozčešu, vykoupu, vyfénuji a ostříhám.</p></li>
+      <li><span class="n">3</span><h3>Odvedete si ho upraveného</h3><p>Čistý, voňavý a načechraný. Na další termín se můžeme domluvit rovnou při vyzvednutí.</p></li>
+    </ol>
+    <svg class="paws" viewBox="0 0 400 28" aria-hidden="true"><g fill="#9A4A2A"><g transform="translate(10 6)"><ellipse cx="8" cy="12" rx="5" ry="4"/><circle cx="3" cy="5" r="2"/><circle cx="8" cy="2.5" r="2"/><circle cx="13" cy="5" r="2"/></g><g transform="translate(70 0)"><ellipse cx="8" cy="12" rx="5" ry="4"/><circle cx="3" cy="5" r="2"/><circle cx="8" cy="2.5" r="2"/><circle cx="13" cy="5" r="2"/></g><g transform="translate(130 6)"><ellipse cx="8" cy="12" rx="5" ry="4"/><circle cx="3" cy="5" r="2"/><circle cx="8" cy="2.5" r="2"/><circle cx="13" cy="5" r="2"/></g><g transform="translate(190 0)"><ellipse cx="8" cy="12" rx="5" ry="4"/><circle cx="3" cy="5" r="2"/><circle cx="8" cy="2.5" r="2"/><circle cx="13" cy="5" r="2"/></g></g></svg>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="galerie" aria-labelledby="h-gal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Galerie před a po</span>
+      <h2 id="h-gal">Ten rozdíl je vidět</h2>
+      <p>Sem patří fotky Vašich psích klientů – vždy dvojice před úpravou a po ní. Fotky doplníme z Vašeho archivu.</p>
+    </div>
+    <div class="ba-grid">
+      <figure class="ba" style="margin:0">
+        <div class="ba-pair">
+          <div class="ph before"><span class="tag">Před</span><div><svg viewBox="0 0 48 48" fill="none" stroke="#5C4636" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="12" width="36" height="28" rx="5"/><circle cx="24" cy="26" r="7"/><path d="M17 12l3-5h8l3 5"/></svg>Sem přijde Vaše fotka</div></div>
+          <div class="ph after"><span class="tag">Po</span><div><svg viewBox="0 0 48 48" fill="none" stroke="#5C4636" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="12" width="36" height="28" rx="5"/><circle cx="24" cy="26" r="7"/><path d="M17 12l3-5h8l3 5"/></svg>Sem přijde Vaše fotka</div></div>
+        </div>
+        <figcaption>Pudl <span class="demo">ukázkový text</span></figcaption>
+      </figure>
+      <figure class="ba" style="margin:0">
+        <div class="ba-pair">
+          <div class="ph before"><span class="tag">Před</span><div><svg viewBox="0 0 48 48" fill="none" stroke="#5C4636" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="12" width="36" height="28" rx="5"/><circle cx="24" cy="26" r="7"/><path d="M17 12l3-5h8l3 5"/></svg>Sem přijde Vaše fotka</div></div>
+          <div class="ph after"><span class="tag">Po</span><div><svg viewBox="0 0 48 48" fill="none" stroke="#5C4636" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="12" width="36" height="28" rx="5"/><circle cx="24" cy="26" r="7"/><path d="M17 12l3-5h8l3 5"/></svg>Sem přijde Vaše fotka</div></div>
+        </div>
+        <figcaption>Kokršpaněl <span class="demo">ukázkový text</span></figcaption>
+      </figure>
+      <figure class="ba" style="margin:0">
+        <div class="ba-pair">
+          <div class="ph before"><span class="tag">Před</span><div><svg viewBox="0 0 48 48" fill="none" stroke="#5C4636" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="12" width="36" height="28" rx="5"/><circle cx="24" cy="26" r="7"/><path d="M17 12l3-5h8l3 5"/></svg>Sem přijde Vaše fotka</div></div>
+          <div class="ph after"><span class="tag">Po</span><div><svg viewBox="0 0 48 48" fill="none" stroke="#5C4636" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="12" width="36" height="28" rx="5"/><circle cx="24" cy="26" r="7"/><path d="M17 12l3-5h8l3 5"/></svg>Sem přijde Vaše fotka</div></div>
+        </div>
+        <figcaption>Jorkšírský teriér <span class="demo">ukázkový text</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section aria-labelledby="h-trust" style="padding-top:72px;padding-bottom:72px">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Proč k nám</span><h2 id="h-trust">Malý salon, velká pečlivost</h2></div>
+    <div class="trust">
+      <div class="fact"><b>Zaměření na „chlupatá“ plemena</b><span>Pudl, kokršpaněl, knírač, lvíček, bišonek, jorkšírský teriér – a samozřejmě i kříženci.</span></div>
+      <div class="fact"><b>Kompletní péče na jednom místě</b><span>Od rozčesání a koupání přes stříhání a fénování až po uši a anální žlázky.</span></div>
+      <div class="fact"><b>Termín vždy po domluvě</b><span>V pracovní dny si čas domluvíme telefonicky. Údaje dle <a href="https://www.firmy.cz/detail/411616-jaroslava-fuhsova-kozmice.html" target="_blank" rel="noopener">profilu na Firmy.cz</a>.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" style="background:var(--cream-2)" aria-labelledby="h-faq">
+  <div class="wrap" style="max-width:860px">
+    <div class="sec-head"><span class="kicker">Časté otázky</span><h2 id="h-faq">Na co se nejčastěji ptáte</h2></div>
+    <details><summary>Kolik stříhání stojí?</summary><p>Cena záleží hlavně na velikosti psa, délce a stavu srsti a na tom, o jaké úkony máte zájem. Cenu Vám proto řekneme předem po telefonu na čísle <a href="tel:+420604180505">604 180 505</a>.</p></details>
+    <details><summary>Stříháte i křížence?</summary><p>Ano. Salon je zaměřený na pudly, kokršpaněly, kníračky, lvíčky, bišonky a jorkšíry, ale i na jiná plemena včetně kříženců.</p></details>
+    <details><summary>Kdy je otevřeno?</summary><p>V pracovní dny podle telefonické domluvy, o víkendu je zavřeno. Ve státní svátky se může otevírací doba lišit – nejjistější je zavolat.</p></details>
+    <details><summary>Jak často je dobré psa stříhat?</summary><p>U plemen s dlouhou nebo kudrnatou srstí (pudl, bišonek, jorkšír) se obvykle doporučuje úprava zhruba jednou za 6–10 týdnů, mezi tím pomáhá pravidelné vyčesávání doma. Přesný interval se odvíjí od střihu a srsti – rádi poradíme.</p></details>
+    <details><summary>Mám psa připravit nějak předem?</summary><p>Stačí ho před návštěvou vyvenčit. Pokud má srst hodně zacuchanou, řekněte to prosím při objednání, ať s tím počítáme v čase i ceně.</p></details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt" aria-labelledby="h-contact">
+  <div class="wrap c-grid">
+    <div>
+      <span class="kicker">Kontakt</span>
+      <h2 id="h-contact">Domluvme termín pro Vašeho pejska</h2>
+      <ul class="c-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FFD9C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><b>Telefon</b><a class="big" href="tel:+420604180505">604 180 505</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FFD9C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 7 10-7"/></svg><div><b>E-mail</b><a href="mailto:jaroslava.fuhsova@seznam.cz">jaroslava.fuhsova@seznam.cz</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FFD9C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><div><b>Adresa salonu</b>K Točně 424/27a, 747 11 Kozmice<br><a class="map-link" href="https://mapy.cz/zakladni?q=K%20To%C4%8Dn%C4%9B%20424%2F27a%2C%20747%2011%20Kozmice" target="_blank" rel="noopener">Ukázat na Mapy.cz →</a></div></li>
+      </ul>
+      <h3 style="font-size:1.15rem">Otevírací doba</h3>
+      <table class="hours" id="hours">
+        <tr data-d="1"><td>Pondělí</td><td>dle telefonické domluvy</td></tr>
+        <tr data-d="2"><td>Úterý</td><td>dle telefonické domluvy</td></tr>
+        <tr data-d="3"><td>Středa</td><td>dle telefonické domluvy</td></tr>
+        <tr data-d="4"><td>Čtvrtek</td><td>dle telefonické domluvy</td></tr>
+        <tr data-d="5"><td>Pátek</td><td>dle telefonické domluvy</td></tr>
+        <tr data-d="6"><td>Sobota</td><td>zavřeno</td></tr>
+        <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+      </table>
+      <p class="small-note">Ve státní svátky se otevírací doba může lišit. IČO 73067997.</p>
+    </div>
+
+    <form class="form" id="objednat" novalidate>
+      <h3>Objednávka termínu</h3>
+      <p style="color:var(--cocoa-2);font-size:.97rem">Vyplňte pár údajů, otevře se Vám e-mail s předvyplněnou zprávou. Ozvu se s návrhem termínu a ceny.</p>
+      <fieldset class="field">
+        <legend>Velikost psa</legend>
+        <div class="seg">
+          <input type="radio" name="size" id="s-m" value="Malý"><label for="s-m">Malý</label>
+          <input type="radio" name="size" id="s-s" value="Střední" checked><label for="s-s">Střední</label>
+          <input type="radio" name="size" id="s-v" value="Velký"><label for="s-v">Velký</label>
+        </div>
+      </fieldset>
+      <div class="two">
+        <div class="field"><label for="f-breed">Plemeno</label><input id="f-breed" name="breed" placeholder="např. kokršpaněl"></div>
+        <div class="field"><label for="f-dog">Jméno pejska</label><input id="f-dog" name="dog" placeholder="např. Bára"></div>
+      </div>
+      <fieldset class="field">
+        <legend>O co máte zájem</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="svc" value="rozčesání">rozčesání</label>
+          <label><input type="checkbox" name="svc" value="stříhání" checked>stříhání</label>
+          <label><input type="checkbox" name="svc" value="koupání" checked>koupání</label>
+          <label><input type="checkbox" name="svc" value="fénování">fénování</label>
+          <label><input type="checkbox" name="svc" value="depilace ušních chloupků">uši</label>
+          <label><input type="checkbox" name="svc" value="ošetření análních žlázek">anální žlázky</label>
+        </div>
+      </fieldset>
+      <div class="two">
+        <div class="field"><label for="f-name">Vaše jméno</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="field"><label for="f-when">Kdy by se Vám to hodilo?</label><input id="f-when" name="when" placeholder="např. úterý odpoledne"></div>
+      <div class="field"><label for="f-note">Poznámka</label><textarea id="f-note" name="note" rows="3" placeholder="např. srst je hodně zacuchaná, pes se bojí fénu…"></textarea></div>
+      <button class="btn btn-primary" type="submit">Odeslat objednávku</button>
+      <p class="form-note">Raději voláte? <a href="tel:+420604180505" style="color:var(--terra-text);font-weight:800">604 180 505</a></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 6px">Jaroslava Fuhsová – stříhání psů · K Točně 424/27a, 747 11 Kozmice · <a href="tel:+420604180505">604 180 505</a></p>
+    <p style="margin:0">Nezávazný návrh webu. Údaje převzaty z veřejného profilu na <a href="https://www.firmy.cz/detail/411616-jaroslava-fuhsova-kozmice.html" target="_blank" rel="noopener">Firmy.cz</a>.</p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+420604180505">Zavolat</a>
+  <a class="btn btn-primary" href="#objednat">Objednat termín</a>
+</div>
+
+<script>
+(function(){
+  var check='<svg viewBox="0 0 24 24" fill="none" stroke="#6B7F3A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#E3E7CF" stroke="none"/><path d="M7 12.5l3.2 3L17 9"/></svg>';
+  var DATA={
+    maly:{scale:.8,title:'Malý pes',label:'Malý',order:'Objednat malého psa',
+      breeds:['jorkšírský teriér','bišonek','lvíček','malý pudl','kříženec'],
+      breedPh:'např. jorkšírský teriér',
+      steps:['Rozčesání jemné srsti až ke kůži, i za ušima a v podpaží','Koupání a fénování do načechrané srsti','Stříhání podle plemene a Vašeho přání','Podle potřeby depilace ušních chloupků a ošetření análních žlázek'],
+      tip:'<b>Dobré vědět:</b> jemná a dlouhá srst malých plemen se snadno zacuchá. Pravidelné vyčesávání doma mezi návštěvami šetří psovi kůži i nervy.'},
+    stredni:{scale:1,title:'Střední pes',label:'Střední',order:'Objednat středního psa',
+      breeds:['kokršpaněl','knírač','pudl','kříženec'],
+      breedPh:'např. kokršpaněl',
+      steps:['Rozčesání srsti, zvlášť na uších, tlapkách a břiše','Koupání a důkladné vyfénování','Stříhání podle plemene a Vašeho přání','Podle potřeby depilace ušních chloupků a ošetření análních žlázek'],
+      tip:'<b>Dobré vědět:</b> plemena s dlouhýma ušima, jako je kokršpaněl, ocení čisté a provzdušněné ucho – proto je součástí péče i depilace ušních chloupků.'},
+    velky:{scale:1.17,title:'Velký pes',label:'Velký',order:'Objednat velkého psa',
+      breeds:['velký pudl','velký knírač','kříženec'],
+      breedPh:'např. velký pudl',
+      steps:['Rozčesání husté srsti po celém těle','Koupání a fénování – u velkého psa to chce víc času','Stříhání podle plemene a Vašeho přání','Podle potřeby depilace ušních chloupků a ošetření análních žlázek'],
+      tip:'<b>Dobré vědět:</b> u velkého psa prosím při objednání řekněte plemeno a přibližnou váhu, ať si na něj vyhradíme dostatek času.'}
+  };
+  var dog=document.getElementById('dog');
+  var btns=document.querySelectorAll('.size-btn');
+  var current='stredni';
+  function render(size,anim){
+    var d=DATA[size];current=size;
+    dog.style.transform='scale('+d.scale+')';
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.size===size?'true':'false')});
+    document.getElementById('p-title').textContent=d.title;
+    document.getElementById('p-breeds').innerHTML=d.breeds.map(function(x){return '<li>'+x+'</li>'}).join('');
+    document.getElementById('p-steps').innerHTML=d.steps.map(function(x){return '<li>'+check+'<span>'+x+'</span></li>'}).join('');
+    document.getElementById('p-tip').innerHTML=d.tip;
+    document.getElementById('p-order').textContent=d.order;
+    var card=document.getElementById('panel');
+    if(anim){card.classList.remove('fade');void card.offsetWidth;card.classList.add('fade');}
+    // prefill form
+    var r=document.querySelector('input[name="size"][value="'+d.label+'"]'); if(r) r.checked=true;
+    document.getElementById('f-breed').placeholder=d.breedPh;
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){render(b.dataset.size,true)})});
+  document.querySelectorAll('input[name="size"]').forEach(function(r){r.addEventListener('change',function(){
+    var map={'Malý':'maly','Střední':'stredni','Velký':'velky'};render(map[r.value],false);
+  })});
+  document.getElementById('p-order').addEventListener('click',function(){
+    setTimeout(function(){document.getElementById('f-breed').focus({preventScroll:true})},450);
+  });
+  render('stredni',false);
+
+  // today's opening info (verified data only)
+  var day=new Date().getDay();
+  var row=document.querySelector('#hours tr[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var st=document.getElementById('status'), stt=document.getElementById('status-text');
+  if(day===0||day===6){st.classList.add('closed');stt.textContent='Dnes zavřeno – v pracovní dny dle domluvy';}
+  else{stt.textContent='Dnes: dle telefonické domluvy';}
+
+  // form -> mailto
+  document.getElementById('objednat').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target;
+    var size=(f.querySelector('input[name="size"]:checked')||{}).value||'';
+    var svc=[].slice.call(f.querySelectorAll('input[name="svc"]:checked')).map(function(x){return x.value}).join(', ');
+    var body='Dobrý den,\n\nrád(a) bych objednal(a) psa do salonu.\n\n'+
+      'Velikost psa: '+size+'\n'+
+      'Plemeno: '+(f.breed.value||'-')+'\n'+
+      'Jméno pejska: '+(f.dog.value||'-')+'\n'+
+      'Služby: '+(svc||'-')+'\n'+
+      'Kdy by se mi to hodilo: '+(f.when.value||'-')+'\n'+
+      'Poznámka: '+(f.note.value||'-')+'\n\n'+
+      'Jméno: '+(f.name.value||'-')+'\n'+
+      'Telefon: '+(f.tel.value||'-')+'\n';
+    var subj='Objednávka – '+size+' pes'+(f.breed.value?' ('+f.breed.value+')':'');
+    window.location.href='mailto:jaroslava.fuhsova@seznam.cz?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>

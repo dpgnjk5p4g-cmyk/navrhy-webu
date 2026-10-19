@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Pánské kadeřnictví Jana Kašáková | pánské kadeřnictví Ostrava-Vítkovice</title>
+<meta name="description" content="Pánské kadeřnictví Jana Kašáková – pánské stříhání ve Vítkovicích, Mírová 163/29, Ostrava. Střih 300 Kč, s objednáním i bez. Tel. 604 250 434.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,400;0,600;0,800;1,400&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Pánské kadeřnictví Jana Kašáková","telephone":"+420604250434","address":{"@type":"PostalAddress","streetAddress":"Mírová 163/29","addressLocality":"Ostrava-Vítkovice","postalCode":"703 00","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"07:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"12:30","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"06:00","closes":"10:00"}],"makesOffer":[{"@type":"Offer","name":"Pánské stříhání","price":"300","priceCurrency":"CZK"},{"@type":"Offer","name":"Pánské speciální střihy","price":"350","priceCurrency":"CZK"},{"@type":"Offer","name":"Zástřih vlasů","price":"100","priceCurrency":"CZK"}]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  /* Layout: mobil první, jeden sloupec do 860 px, pak hero 2 sloupce; vědomě jen jeden (světlý „betonový“) vzhled s explicitními barvami. */
+  --beton:#E4E2DC; --beton-2:#D3D0C8; --papir:#FBFAF5; --oliva:#4E5631; --oliva-tm:#3A4024; --khaki:#8C8A5E;
+  --oranz:#EA5B0C; --oranz-text:#B23F00; --antracit:#26282A; --sede:#55585B; --bila:#FFFFFF;
+  --f-nadpis:"Bebas Neue","Oswald","Arial Narrow","Roboto Condensed","DejaVu Sans Condensed",Impact,sans-serif;
+  --f-text:"Chivo","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --gut:16px; --max:1160px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--beton);color:var(--antracit);font-family:var(--f-text);font-size:17px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+@media (min-width:860px){body{padding-bottom:0}}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--oranz);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+@media (min-width:600px){:root{--gut:28px}}
+h1,h2,h3{font-family:var(--f-nadpis);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95;margin:0}
+h2{font-size:clamp(44px,9vw,76px)}
+h3{font-size:30px}
+p{margin:0 0 1em}
+.ukazka{display:inline-block;font:600 11px/1 var(--f-text);text-transform:uppercase;letter-spacing:.06em;background:#FFE9B8;color:#5A3B00;border:1px solid #D9A93A;padding:3px 6px;border-radius:3px;vertical-align:middle;margin-left:6px}
+.stitek{font:800 12px/1 var(--f-text);text-transform:uppercase;letter-spacing:.14em;color:var(--oliva);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.stitek::before{content:"";width:22px;height:4px;background:var(--oranz)}
+
+/* Pruh návrhu */
+.navrh{background:var(--antracit);color:#F3F1EA;font-size:13px;line-height:1.35;text-align:center;padding:8px var(--gut)}
+.navrh strong{color:#FFB98A}
+
+/* Hlavička */
+.hlava{background:var(--beton);border-bottom:2px solid var(--antracit)}
+.hlava .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none}
+.znacka svg{flex:none}
+.znacka b{font:400 25px/0.9 var(--f-nadpis);letter-spacing:.02em;display:block}
+.znacka small{font:600 11px/1.2 var(--f-text);text-transform:uppercase;letter-spacing:.1em;color:var(--sede)}
+.menu{display:none;gap:22px;font-weight:600;font-size:15px}
+.menu a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover{border-color:var(--oranz)}
+@media (min-width:960px){.menu{display:flex}}
+.tel-hlava{display:inline-flex;align-items:center;gap:8px;background:var(--antracit);color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:10px 14px;border-radius:4px;white-space:nowrap}
+.tel-hlava svg{flex:none}
+@media (max-width:400px){.znacka b{font-size:21px}.znacka small{font-size:10px}.tel-hlava{padding:10px 10px;font-size:14px}.znacka svg{width:32px;height:32px}}
+
+/* Hero */
+.hero{padding:26px 0 44px;background:
+  linear-gradient(var(--beton),var(--beton)) padding-box,
+  var(--beton);position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:30px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:860px){.hero{padding:56px 0 72px}.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}}
+.hero h1{font-size:clamp(58px,16vw,128px);line-height:.88}
+.hero h1 .vit{color:var(--oliva)}
+.hero h1 .tecka{color:var(--oranz)}
+.hero .uvod{font-size:18px;max-width:34em;margin:16px 0 20px}
+.hero .uvod b{font-weight:800}
+.tlacitka{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 22px;border-radius:4px;font:800 17px/1 var(--f-text);text-decoration:none;border:2px solid var(--antracit)}
+.btn-hl{background:var(--oranz);color:var(--antracit);border-color:var(--oranz);box-shadow:4px 4px 0 var(--antracit)}
+.btn-hl:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--antracit)}
+.btn-2{background:transparent;color:var(--antracit)}
+.btn-2:hover{background:var(--antracit);color:#fff}
+.hero .fakta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-size:15px;color:var(--sede);font-weight:600}
+.hero .fakta span{display:inline-flex;align-items:center;gap:6px}
+.hero .fakta i{width:8px;height:8px;background:var(--oliva);display:inline-block;border-radius:50%}
+.stav{display:inline-flex;align-items:center;gap:8px;background:var(--bila);border:2px solid var(--antracit);padding:6px 12px;border-radius:40px;font-size:14px;font-weight:800;margin-bottom:16px}
+.stav i{width:10px;height:10px;border-radius:50%;background:var(--sede)}
+.stav.otevreno i{background:#2F8A3B;box-shadow:0 0 0 3px rgba(47,138,59,.2)}
+.stav.zavreno i{background:var(--oranz-text)}
+
+/* Účtenka */
+.uctenka-obal{position:relative;justify-self:center;width:100%;max-width:380px;transform:rotate(1.6deg);filter:drop-shadow(0 14px 18px rgba(38,40,42,.22))}
+.uctenka{background:var(--papir);padding:26px 24px 30px;position:relative;font-family:var(--f-text);font-variant-numeric:tabular-nums;color:var(--antracit)}
+.uctenka::before,.uctenka::after{content:"";position:absolute;left:0;right:0;height:12px;background-size:16px 12px;background-repeat:repeat-x}
+.uctenka::before{top:-12px;background-image:linear-gradient(135deg,transparent 50%,var(--papir) 50%),linear-gradient(225deg,transparent 50%,var(--papir) 50%);background-position:0 0,0 0;background-image:conic-gradient(from 135deg at 50% 0,var(--papir) 90deg,transparent 0)}
+.uctenka::after{bottom:-12px;background-image:conic-gradient(from -45deg at 50% 100%,var(--papir) 90deg,transparent 0)}
+.u-hlava{text-align:center;border-bottom:2px dashed #9A978C;padding-bottom:14px;margin-bottom:12px}
+.u-hlava b{display:block;font:400 30px/1 var(--f-nadpis);letter-spacing:.04em}
+.u-hlava span{display:block;font-size:13px;color:var(--sede);line-height:1.4}
+.u-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--sede);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.u-polozky{list-style:none;margin:0;padding:0}
+.u-polozky li{display:flex;align-items:baseline;gap:8px;padding:9px 0;font-size:17px;font-weight:600}
+.u-polozky li::after{content:"";order:2;flex:1;border-bottom:2px dotted #A9A69B;transform:translateY(-4px)}
+.u-polozky li span:last-child{order:3;font-weight:800;white-space:nowrap}
+.u-soucet{border-top:2px dashed #9A978C;margin-top:10px;padding-top:12px;font-size:14px;line-height:1.45}
+.u-soucet strong{display:block;font:400 26px/1 var(--f-nadpis);letter-spacing:.04em;color:var(--oliva);margin-bottom:4px}
+.u-kod-radek{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.u-kod{display:flex;flex-direction:column;align-items:flex-start;gap:4px;font-size:12px;letter-spacing:.2em;color:var(--sede)}
+.razitko{flex:none;transform:rotate(-10deg);border:3px solid var(--oranz-text);color:var(--oranz-text);font:400 22px/1 var(--f-nadpis);letter-spacing:.06em;padding:6px 10px;border-radius:6px;background:rgba(251,250,245,.6);text-align:center}
+.razitko small{display:block;font:800 10px/1.2 var(--f-text);letter-spacing:.08em}
+.u-kod svg{width:150px;height:auto}
+
+/* Sekce */
+section{padding:64px 0}
+@media (min-width:860px){section{padding:96px 0}}
+.sekce-hlava{display:grid;gap:14px;margin-bottom:34px}
+@media (min-width:860px){.sekce-hlava{grid-template-columns:1fr 1fr;align-items:end;gap:40px}}
+.sekce-hlava p{margin:0;font-size:18px;color:#3A3C3E}
+
+/* Ceník */
+.cenik{background:var(--bila)}
+.cenik-grid{display:grid;gap:14px}
+@media (min-width:700px){.cenik-grid{grid-template-columns:repeat(3,1fr)}}
+.strih{border:2px solid var(--antracit);padding:22px 20px;border-radius:4px;display:flex;flex-direction:column;gap:8px;background:var(--papir)}
+.strih .cena{font:400 58px/1 var(--f-nadpis);color:var(--antracit)}
+.strih .cena small{font-size:26px;color:var(--sede)}
+.strih p{margin:0;color:#3A3C3E;font-size:16px}
+.strih.hl{background:var(--oliva);color:#fff;border-color:var(--oliva)}
+.strih.hl .cena,.strih.hl p{color:#fff}
+.strih.hl .cena small{color:#E3E5D3}
+.doplnky{margin-top:26px;display:grid;gap:0;border-top:2px solid var(--antracit)}
+@media (min-width:700px){.doplnky{grid-template-columns:1fr 1fr;column-gap:40px}}
+.doplnky div{display:flex;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid var(--beton-2);font-weight:600}
+.doplnky div b{font-weight:800;white-space:nowrap}
+.platnost{margin-top:18px;font-size:14px;color:var(--sede)}
+
+/* Holička */
+.holicka .wrap{display:grid;gap:30px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:860px){.holicka .wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}}
+.fotomisto{aspect-ratio:4/5;background:
+  repeating-linear-gradient(-45deg,transparent 0 14px,rgba(78,86,49,.10) 14px 16px),var(--beton-2);
+  border:2px dashed var(--oliva);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--oliva-tm);font-weight:800;text-align:center;padding:20px}
+.fotomisto.siroke{aspect-ratio:16/10}
+.holicka blockquote{margin:0 0 20px;font:400 clamp(34px,6vw,50px)/1 var(--f-nadpis);color:var(--antracit)}
+.holicka blockquote span{color:var(--oliva)}
+.atm{display:grid;gap:12px;margin-top:22px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.atm .fotomisto{font-size:14px;padding:10px}
+
+/* Rozvrh */
+.rozvrh{background:var(--antracit);color:#F1EFE8}
+.rozvrh .stitek{color:#C9CBA6}
+.rozvrh .sekce-hlava p{color:#D6D4CC}
+.mrizka{display:grid;grid-template-columns:38px repeat(5,1fr);gap:0 6px;position:relative}
+@media (min-width:700px){.mrizka{grid-template-columns:56px repeat(5,1fr);gap:0 12px}}
+.dny{display:contents}
+.den-h{font:400 26px/1 var(--f-nadpis);text-align:center;padding:10px 0;border-radius:4px 4px 0 0;letter-spacing:.04em;color:#F1EFE8}
+.den-h small{display:block;font:600 10px/1.3 var(--f-text);letter-spacing:.06em;text-transform:uppercase;color:#B9B7AF}
+.cas{position:relative;height:calc(var(--h) * 10)}
+.mrizka{--h:34px}
+@media (min-width:700px){.mrizka{--h:44px}}
+.osa{position:relative;height:calc(var(--h) * 10)}
+.osa span{position:absolute;right:6px;transform:translateY(-50%);font-size:12px;font-weight:600;color:#B9B7AF;font-variant-numeric:tabular-nums}
+.sloupec{position:relative;height:calc(var(--h) * 10);background:repeating-linear-gradient(to bottom,rgba(255,255,255,.09) 0 1px,transparent 1px var(--h));border-radius:0 0 4px 4px}
+.blok{position:absolute;left:0;right:0;background:var(--khaki);color:var(--antracit);border-radius:3px;padding:4px 5px;font-size:11px;font-weight:800;line-height:1.15;overflow:hidden}
+@media (min-width:700px){.blok{font-size:14px;padding:8px 10px}}
+.blok.rano{background:var(--oranz);color:var(--antracit)}
+.blok .bt{display:block;font:400 18px/1 var(--f-nadpis);letter-spacing:.03em}
+@media (min-width:700px){.blok .bt{font-size:24px}}
+.pauza{position:absolute;left:0;right:0;font-size:9px;text-align:center;color:#C9C7BF;letter-spacing:.04em;text-transform:uppercase;line-height:1;display:flex;align-items:center;justify-content:center}
+@media (min-width:700px){.pauza{font-size:11px}}
+.dnes .den-h{background:var(--oranz);color:var(--antracit)}
+.dnes .den-h small{color:var(--antracit)}
+.dnes.sloupec{outline:2px solid var(--oranz);outline-offset:2px}
+.ted{position:absolute;left:-4px;right:-4px;height:0;border-top:3px solid #fff;z-index:2}
+.ted::before{content:"";position:absolute;left:-3px;top:-7px;width:11px;height:11px;border-radius:50%;background:#fff}
+.legenda{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-size:14px;color:#D6D4CC}
+.legenda span{display:inline-flex;align-items:center;gap:8px}
+.legenda i{width:18px;height:12px;border-radius:2px;display:inline-block}
+.vikend{margin-top:8px;font-size:14px;color:#B9B7AF}
+.dnes-text{margin-top:22px;font-size:18px;font-weight:600;color:#fff}
+.dnes-text b{color:#FFB98A}
+
+/* Kroky */
+.kroky{display:grid;gap:14px;counter-reset:k}
+@media (min-width:760px){.kroky{grid-template-columns:repeat(3,1fr)}}
+.krok{background:var(--bila);border-left:6px solid var(--oliva);padding:22px 20px;border-radius:0 4px 4px 0}
+.krok::before{counter-increment:k;content:"0" counter(k);display:block;font:400 54px/1 var(--f-nadpis);color:var(--oranz-text);margin-bottom:6px}
+.krok h3{margin-bottom:8px}
+.krok p{margin:0;font-size:16px}
+
+/* Důvěra */
+.duvera{background:var(--oliva);color:#fff;padding:48px 0}
+.duvera .wrap{display:grid;gap:24px}
+@media (min-width:860px){.duvera .wrap{grid-template-columns:auto 1fr 1fr;align-items:center;gap:48px}}
+.skore{display:flex;align-items:baseline;gap:10px}
+.skore b{font:400 96px/0.85 var(--f-nadpis)}
+.skore span{font-size:16px;line-height:1.3}
+.duvera p{margin:0;font-size:17px;color:#F1F2E8}
+.duvera a{color:#fff;font-weight:800}
+
+/* Cesta + kontakt */
+.kontakt .wrap{display:grid;gap:30px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:860px){.kontakt .wrap{grid-template-columns:1fr 1fr;gap:56px}}
+.mapka{background:var(--papir);border:2px solid var(--antracit);border-radius:4px;padding:10px}
+.mapka svg{display:block;width:100%;height:auto}
+.mapka figcaption{font-size:13px;color:var(--sede);padding:8px 4px 2px}
+.k-radek{display:grid;grid-template-columns:110px 1fr;gap:8px;padding:14px 0;border-bottom:1px solid var(--beton-2)}
+.k-radek dt{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--oliva-tm);padding-top:3px}
+.k-radek dd{margin:0}
+.k-radek a{font-weight:800}
+.velke-tel{font:400 46px/1 var(--f-nadpis);letter-spacing:.03em;text-decoration:none;display:inline-block;margin:6px 0 4px}
+dl{margin:0 0 22px}
+
+/* FAQ */
+.faq{background:var(--bila)}
+details{border-bottom:2px solid var(--antracit);padding:4px 0}
+details:first-of-type{border-top:2px solid var(--antracit)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-weight:800;font-size:18px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 34px/1 var(--f-nadpis);color:var(--oranz-text);flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 18px;max-width:60em}
+
+/* Pata */
+.pata{background:var(--antracit);color:#D6D4CC;padding:40px 0 34px;font-size:14px}
+.pata .wrap{display:grid;gap:14px}
+.pata b{color:#fff;font:400 28px/1 var(--f-nadpis);letter-spacing:.03em}
+.pata a{color:#fff}
+
+/* Mobilní lišta */
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--antracit);padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center;border-top:3px solid var(--oranz)}
+.lista a{flex:1;min-height:52px;font-size:17px}
+.lista .btn-hl{box-shadow:none}
+.lista .mapa-mini{flex:0 0 auto;background:transparent;color:#fff;border-color:#8A8C8E;padding:0 16px}
+@media (min-width:860px){.lista{display:none}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+
+
+<div class="navrh"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Pánské kadeřnictví Jana Kašáková</div>
+
+<header class="hlava">
+  <div class="wrap">
+    <a class="znacka" href="#top" aria-label="Pánské kadeřnictví Jana – nahoru">
+      <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="4" fill="#4E5631"/><circle cx="12" cy="27" r="4.5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="26" cy="27" r="4.5" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M15 23.5 27 7M23 23.5 11 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="19" cy="17.5" r="1.6" fill="#EA5B0C"/></svg>
+      <span><b>Kadeřnictví Jana</b><small>pánské · Vítkovice</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní">
+      <a href="#cenik">Ceník</a><a href="#holicka">Holička</a><a href="#kdy">Kdy stříhám</a><a href="#cesta">Jak nás najdete</a><a href="#otazky">Otázky</a>
+    </nav>
+    <a class="tel-hlava" href="tel:+420604250434" aria-label="Zavolat 604 250 434">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA5B0C" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+      <span class="cislo">604 250 434</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <div class="stav" id="stav" role="status"><i></i><span>Po, Út, Čt, Pá 7–16 · St 6–10</span></div>
+      <h1 id="h1">Pánské stříhání <span class="vit">ve Vítkovicích</span><span class="tecka">.</span></h1>
+      <p class="uvod">Stříhám muže každého věku – <b>na objednávku i bez objednání</b>. Mírová 163/29, vchod z Mírové za Vítkovickou nemocnicí. Pánský střih <b>300 Kč</b>.</p>
+      <div class="tlacitka">
+        <a class="btn btn-hl" href="tel:+420604250434">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+          Zavolat a objednat</a>
+        <a class="btn btn-2" href="#kdy">Kdy stříhám</a>
+      </div>
+      <div class="fakta">
+        <span><i></i>Tel. 604 250 434</span>
+        <span><i></i>St už od 6:00</span>
+        <span><i></i>4,9 z 5 na Firmy.cz (9 hodnocení)</span>
+      </div>
+    </div>
+
+    <div class="uctenka-obal" aria-label="Ceník jako účtenka">
+      <div class="uctenka">
+        <div class="u-hlava">
+          <b>Pánské kadeřnictví Jana</b>
+          <span>Jana Kašáková · Mírová 163/29<br>Ostrava-Vítkovice · tel. 604 250 434</span>
+        </div>
+        <div class="u-meta"><span id="u-den">Ceník</span><span>platí od 3. 1. 2022</span></div>
+        <ul class="u-polozky">
+          <li><span>Pánský střih</span><span>300 Kč</span></li>
+          <li><span>Speciální střih</span><span>350 Kč</span></li>
+          <li><span>Zástřih</span><span>100 Kč</span></li>
+        </ul>
+        <div class="u-soucet">
+          <strong>Objednání: nepovinné</strong>
+          Přijďte rovnou, nebo si předem zavolejte čas.
+        </div>
+        <div class="u-kod-radek"><div class="u-kod" aria-hidden="true">
+          <svg width="200" height="34" viewBox="0 0 200 34"><g fill="#26282A"><rect x="0" width="3" height="34"/><rect x="6" width="1.5" height="34"/><rect x="10" width="4" height="34"/><rect x="17" width="1.5" height="34"/><rect x="21" width="2.5" height="34"/><rect x="27" width="4" height="34"/><rect x="34" width="1.5" height="34"/><rect x="38" width="3" height="34"/><rect x="44" width="1.5" height="34"/><rect x="48" width="5" height="34"/><rect x="56" width="1.5" height="34"/><rect x="60" width="2.5" height="34"/><rect x="66" width="4" height="34"/><rect x="73" width="1.5" height="34"/><rect x="77" width="3" height="34"/><rect x="83" width="1.5" height="34"/><rect x="87" width="4" height="34"/><rect x="94" width="2.5" height="34"/><rect x="100" width="1.5" height="34"/><rect x="104" width="5" height="34"/><rect x="112" width="1.5" height="34"/><rect x="116" width="3" height="34"/><rect x="122" width="1.5" height="34"/><rect x="126" width="4" height="34"/><rect x="133" width="2.5" height="34"/><rect x="139" width="1.5" height="34"/><rect x="143" width="4" height="34"/><rect x="150" width="1.5" height="34"/><rect x="154" width="3" height="34"/><rect x="160" width="5" height="34"/><rect x="168" width="1.5" height="34"/><rect x="172" width="2.5" height="34"/><rect x="178" width="4" height="34"/><rect x="185" width="1.5" height="34"/><rect x="189" width="3" height="34"/><rect x="196" width="4" height="34"/></g></svg>
+          <span>604 250 434</span>
+        </div>
+        <div class="razitko">Bez objednání<small>i na objednávku</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cenik" id="cenik" aria-labelledby="h-cenik">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <div><div class="stitek">Ceník</div><h2 id="h-cenik">Střihy a ceny. Bez překvapení.</h2></div>
+      <p>Ceny jsou smluvní a platí od 3. 1. 2022. Co je v ceníku, to zaplatíte.</p>
+    </div>
+    <div class="cenik-grid">
+      <article class="strih hl">
+        <h3>Pánské stříhání</h3>
+        <div class="cena">300 <small>Kč</small></div>
+        <p>Střih přesně podle Vašich požadavků – Váš tradiční účes, nebo úplně nový vzhled.</p>
+      </article>
+      <article class="strih">
+        <h3>Pánské speciální střihy</h3>
+        <div class="cena">350 <small>Kč</small></div>
+        <p>Moderní pánské účesy podle aktuálních trendů.</p>
+      </article>
+      <article class="strih">
+        <h3>Zástřih vlasů</h3>
+        <div class="cena">100 <small>Kč</small></div>
+        <p>Když stačí zarovnat a srovnat to, co už máte.</p>
+      </article>
+    </div>
+    <div class="doplnky" aria-label="Další služby">
+      <div><span>Zástřih knírů</span><b>40 Kč</b></div>
+      <div><span>Úprava bradky</span><b>70 Kč</b></div>
+      <div><span>Úprava vousu</span><b>90 Kč</b></div>
+      <div><span>Vlasová výživa</span><b>50 Kč</b></div>
+    </div>
+    <p class="platnost">Ceník převzatý z dosavadního webu kadeřnictví, platný od 3. 1. 2022. Délku jednotlivých střihů Vám řeknu do telefonu.</p>
+  </div>
+</section>
+
+<section class="holicka" id="holicka" aria-labelledby="h-holicka">
+  <div class="wrap">
+    <div class="fotomisto" role="img" aria-label="Místo pro fotografii">
+      <svg width="54" height="54" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#3A4024" stroke-width="1.6" d="M4 7h3l2-2.5h6L17 7h3v12H4z"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="#3A4024" stroke-width="1.6"/></svg>
+      Sem přijde Vaše fotka<br><small style="font-weight:600">Jana u křesla</small>
+    </div>
+    <div>
+      <div class="stitek">Holička</div>
+      <h2 id="h-holicka" style="margin-bottom:22px">Jana Kašáková</h2>
+      <blockquote>Kvalitní střih, se kterým <span>nemáte ráno práci.</span></blockquote>
+      <p>Na objednávku i bez objednání stříhám muže každého věku. Ostříhám Vás přesně podle Vašich požadavků, vytvořím Váš tradiční účes, nebo Vám navrhnu úplně nový vzhled.</p>
+      <p>Při tvorbě pánských účesů se držím aktuálních módních trendů. Kvalitní střih Vám zaručí nízkou náročnost na údržbu – s minimálním úsilím vypadáte dobře celý den.</p>
+      <div class="atm">
+        <div class="fotomisto siroke" role="img" aria-label="Místo pro fotografii">Sem přijde Vaše fotka<br><small style="font-weight:600">kadeřnictví zevnitř</small></div>
+        <div class="fotomisto siroke" role="img" aria-label="Místo pro fotografii">Sem přijde Vaše fotka<br><small style="font-weight:600">hotový střih</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rozvrh" id="kdy" aria-labelledby="h-kdy">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <div><div class="stitek">Pracovní doba</div><h2 id="h-kdy">Kdy stříhám</h2></div>
+      <p>Pracuji podle objednávek. Ve středu otevírám už v 6:00 – kdo jde na ranní, stihne střih před šichtou.</p>
+    </div>
+
+    <div class="mrizka" id="mrizka" aria-label="Týdenní rozvrh otevírací doby">
+      <div></div>
+      <div class="den-h" data-d="1">Po<small>pondělí</small></div>
+      <div class="den-h" data-d="2">Út<small>úterý</small></div>
+      <div class="den-h" data-d="3">St<small>středa</small></div>
+      <div class="den-h" data-d="4">Čt<small>čtvrtek</small></div>
+      <div class="den-h" data-d="5">Pá<small>pátek</small></div>
+
+      <div class="osa" aria-hidden="true">
+        <span style="top:0">6:00</span><span style="top:10%">7:00</span><span style="top:20%">8:00</span><span style="top:30%">9:00</span><span style="top:40%">10:00</span><span style="top:50%">11:00</span><span style="top:60%">12:00</span><span style="top:70%">13:00</span><span style="top:80%">14:00</span><span style="top:90%">15:00</span><span style="top:100%">16:00</span>
+      </div>
+      <!-- 6:00 = 0 %, každá hodina 10 % -->
+      <div class="sloupec" data-d="1"><div class="blok" style="top:10%;height:50%"><span class="bt">7–12</span></div><div class="pauza" style="top:60%;height:5%">pauza</div><div class="blok" style="top:65%;height:35%"><span class="bt">12:30–16</span></div></div>
+      <div class="sloupec" data-d="2"><div class="blok" style="top:10%;height:50%"><span class="bt">7–12</span></div><div class="pauza" style="top:60%;height:5%">pauza</div><div class="blok" style="top:65%;height:35%"><span class="bt">12:30–16</span></div></div>
+      <div class="sloupec" data-d="3"><div class="blok rano" style="top:0;height:40%"><span class="bt">6–10</span>nejdřív ráno</div></div>
+      <div class="sloupec" data-d="4"><div class="blok" style="top:10%;height:50%"><span class="bt">7–12</span></div><div class="pauza" style="top:60%;height:5%">pauza</div><div class="blok" style="top:65%;height:35%"><span class="bt">12:30–16</span></div></div>
+      <div class="sloupec" data-d="5"><div class="blok" style="top:10%;height:50%"><span class="bt">7–12</span></div><div class="pauza" style="top:60%;height:5%">pauza</div><div class="blok" style="top:65%;height:35%"><span class="bt">12:30–16</span></div></div>
+    </div>
+
+    <div class="legenda">
+      <span><i style="background:var(--khaki)"></i>stříhám</span>
+      <span><i style="background:var(--oranz)"></i>středa – nejdřív ráno</span>
+      <span><i style="background:#F1EFE8;height:3px"></i>teď (čas v Praze)</span>
+    </div>
+    <p class="vikend">Sobota a neděle zavřeno. Polední pauza 12:00–12:30.</p>
+    <p class="dnes-text" id="dnes-text">Po, Út, Čt, Pá 7:00–12:00 a 12:30–16:00 · St 6:00–10:00</p>
+  </div>
+</section>
+
+<section aria-labelledby="h-jak">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <div><div class="stitek">Jak to probíhá</div><h2 id="h-jak">Tři kroky. Žádná věda.</h2></div>
+      <p>Bez rezervačních systémů a registrací. Telefon, křeslo, hotovo.</p>
+    </div>
+    <div class="kroky">
+      <div class="krok"><h3>Zavolejte, nebo přijďte</h3><p>Na čas se domluvíme na čísle <a href="tel:+420604250434"><b>604 250 434</b></a>. Bez objednání můžete přijít kdykoli v pracovní době.</p></div>
+      <div class="krok"><h3>Řekněte, co chcete</h3><p>Váš obvyklý střih, nebo něco nového. Když nevíte, poradím střih, se kterým nebudete mít ráno práci.</p></div>
+      <div class="krok"><h3>Zaplatíte podle ceníku</h3><p>Pánský střih 300 Kč, speciální 350 Kč, zástřih 100 Kč. Cena je předem jasná.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="duvera" aria-label="Hodnocení">
+  <div class="wrap">
+    <div class="skore"><b>4,9</b><span>z 5<br><strong>„Fantastické“</strong></span></div>
+    <p>Hodnocení zákazníků na Firmy.cz z 9 hodnocení. <a href="https://www.firmy.cz/detail/2443961-panske-kadernictvi-jana-kasakova-ostrava-vitkovice.html" rel="noopener">Přečíst hodnocení na Firmy.cz</a></p>
+    <p>Stříhám muže všech věkových kategorií, s objednáním i bez. Ceny se drží: aktuální ceník platí od 3. 1. 2022.</p>
+  </div>
+</div>
+
+<section class="kontakt" id="cesta" aria-labelledby="h-cesta">
+  <div class="wrap">
+    <div>
+      <div class="stitek">Jak nás najdete</div>
+      <h2 id="h-cesta" style="margin-bottom:20px">Vchod z Mírové, za nemocnicí</h2>
+      <figure class="mapka" style="margin:0">
+        <svg viewBox="0 0 420 300" role="img" aria-labelledby="mapa-t">
+          <title id="mapa-t">Orientační schéma: vchod je z ulice Mírová, za Vítkovickou nemocnicí</title>
+          <rect width="420" height="300" fill="#FBFAF5"/>
+          <g stroke="#D3D0C8" stroke-width="1"><path d="M0 50H420M0 100H420M0 150H420M0 200H420M0 250H420M70 0V300M140 0V300M210 0V300M280 0V300M350 0V300"/></g>
+          <rect x="0" y="206" width="420" height="44" fill="#26282A"/>
+          <path d="M0 228H420" stroke="#E4E2DC" stroke-width="2" stroke-dasharray="14 12"/>
+          <text x="18" y="276" font-family="Chivo,Arial,sans-serif" font-weight="800" font-size="15" fill="#26282A" letter-spacing="1.5">ULICE MÍROVÁ</text>
+          <rect x="34" y="34" width="190" height="140" fill="#D3D0C8" stroke="#55585B" stroke-width="2"/>
+          <path d="M120 82h18v-18h14v18h18v14h-18v18h-14v-18h-18z" fill="#55585B"/>
+          <text x="129" y="150" text-anchor="middle" font-family="Chivo,Arial,sans-serif" font-weight="800" font-size="14" fill="#26282A">Vítkovická</text>
+          <text x="129" y="166" text-anchor="middle" font-family="Chivo,Arial,sans-serif" font-weight="800" font-size="14" fill="#26282A">nemocnice</text>
+          <rect x="280" y="96" width="104" height="78" fill="#4E5631"/>
+          <text x="332" y="130" text-anchor="middle" font-family="Chivo,Arial,sans-serif" font-weight="800" font-size="12" fill="#fff">KADEŘNICTVÍ</text>
+          <text x="332" y="148" text-anchor="middle" font-family="Chivo,Arial,sans-serif" font-size="12" fill="#fff">Mírová 163/29</text>
+          <path d="M60 228 H300 Q332 228 332 196 V182" fill="none" stroke="#EA5B0C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M318 188 L332 170 L346 188 Z" fill="#EA5B0C"/>
+          <circle cx="332" cy="174" r="0" />
+          <rect x="300" y="176" width="64" height="20" rx="3" fill="#EA5B0C"/>
+          <text x="332" y="190" text-anchor="middle" font-family="Chivo,Arial,sans-serif" font-weight="800" font-size="12" fill="#26282A">VCHOD</text>
+        </svg>
+        <figcaption>Orientační schéma, není v měřítku. Přesnou polohu ukáže <a href="https://mapy.cz/zakladni?q=M%C3%ADrov%C3%A1%20163%2F29%2C%20Ostrava-V%C3%ADtkovice">Mapy.cz</a>.</figcaption>
+      </figure>
+    </div>
+    <div>
+      <div class="stitek">Kontakt</div>
+      <h2 style="margin-bottom:10px">Zavolejte</h2>
+      <a class="velke-tel" href="tel:+420604250434">604 250 434</a>
+      <p style="color:var(--sede);font-size:15px">Nejrychlejší cesta k termínu. E-mail kadeřnictví neuvádí.</p>
+      <dl>
+        <div class="k-radek"><dt>Adresa</dt><dd>Mírová 163/29<br>703 00 Ostrava-Vítkovice<br>Vchod z ulice Mírová za Vítkovickou nemocnicí.<br><a href="https://mapy.cz/zakladni?q=M%C3%ADrov%C3%A1%20163%2F29%2C%20Ostrava-V%C3%ADtkovice">Otevřít v Mapy.cz</a></dd></div>
+        <div class="k-radek"><dt>Otevřeno</dt><dd>Po, Út, Čt, Pá 7:00–12:00 a 12:30–16:00<br>St 6:00–10:00<br>So, Ne zavřeno</dd></div>
+        <div class="k-radek"><dt>Provozuje</dt><dd>Jana Kašáková, IČO 48417157</dd></div>
+      </dl>
+      <div class="tlacitka">
+        <a class="btn btn-hl" href="tel:+420604250434">Zavolat a objednat</a>
+        <a class="btn btn-2" href="https://mapy.cz/zakladni?q=M%C3%ADrov%C3%A1%20163%2F29%2C%20Ostrava-V%C3%ADtkovice">Navigovat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="otazky" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <div><div class="stitek">Časté otázky</div><h2 id="h-faq">Než zavoláte</h2></div>
+      <p>Krátké odpovědi na to, na co se ptáte nejčastěji.</p>
+    </div>
+    <details open><summary>Musím se objednat?</summary><p>Nemusíte. Stříhám na objednávku i bez objednání. Když si zavoláte na 604 250 434, máte jistotu, že na Vás nebudete čekat.</p></details>
+    <details><summary>Kolik stojí pánský střih?</summary><p>Pánské stříhání 300 Kč, pánské speciální střihy 350 Kč, zástřih vlasů 100 Kč. Ceník platí od 3. 1. 2022.</p></details>
+    <details><summary>Kdy můžu přijít nejdřív ráno?</summary><p>Ve středu od 6:00 (do 10:00). Ostatní pracovní dny od 7:00. V poledne je pauza 12:00–12:30.</p></details>
+    <details><summary>Jak najdu vchod?</summary><p>Adresa je Mírová 163/29, Ostrava-Vítkovice. Vchod je z ulice Mírová, za Vítkovickou nemocnicí.</p></details>
+    <details><summary>Stříháte i starší pány?</summary><p>Ano, stříhám muže každého věku – klasiku i moderní střihy podle aktuálních trendů.</p></details>
+  </div>
+</section>
+</main>
+
+<footer class="pata">
+  <div class="wrap">
+    <b>Pánské kadeřnictví Jana</b>
+    <span>Jana Kašáková · IČO 48417157 · Mírová 163/29, 703 00 Ostrava-Vítkovice · <a href="tel:+420604250434">604 250 434</a></span>
+    <span>Nezávazný návrh webu. Bez reklam a bez počítadla návštěv.</span>
+  </div>
+</footer>
+
+<nav class="lista" aria-label="Rychlý kontakt">
+  <a class="btn btn-hl" href="tel:+420604250434">
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+    Zavolat 604 250 434</a>
+  <a class="btn mapa-mini" href="https://mapy.cz/zakladni?q=M%C3%ADrov%C3%A1%20163%2F29%2C%20Ostrava-V%C3%ADtkovice" aria-label="Mapa">Mapa</a>
+</nav>
+
+<script>
+(function(){
+  try{
+    var p={};new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false,day:'numeric',month:'numeric'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+    var map={Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:0};
+    var d=map[p.weekday], h=parseInt(p.hour,10)%24, m=parseInt(p.minute,10), t=h+m/60;
+    var nazvy=['neděle','pondělí','úterý','středa','čtvrtek','pátek','sobota'];
+    var useky={1:[[7,12],[12.5,16]],2:[[7,12],[12.5,16]],3:[[6,10]],4:[[7,12],[12.5,16]],5:[[7,12],[12.5,16]]};
+    function f(x){var hh=Math.floor(x),mm=Math.round((x-hh)*60);return hh+':'+(mm<10?'0':'')+mm}
+    var u=useky[d]||[], open=null, next=null;
+    u.forEach(function(s){if(t>=s[0]&&t<s[1])open=s; if(!next&&t<s[0])next=s});
+    document.querySelectorAll('[data-d="'+d+'"]').forEach(function(el){el.classList.add('dnes')});
+    if(d>=1&&d<=5&&t>=6&&t<=16){
+      var col=document.querySelector('.sloupec[data-d="'+d+'"]');
+      if(col){var l=document.createElement('div');l.className='ted';l.style.top=((t-6)*10)+'%';col.appendChild(l)}
+    }
+    var stav=document.getElementById('stav'), st=stav.querySelector('span'), dt=document.getElementById('dnes-text');
+    var den=document.getElementById('u-den'); if(den) den.textContent='Dnes: '+nazvy[d]+' '+p.day+'. '+p.month+'.';
+    if(open){stav.className='stav otevreno';st.textContent='Teď otevřeno · do '+f(open[1]);dt.innerHTML='Dnes je <b>'+nazvy[d]+'</b> a mám otevřeno do <b>'+f(open[1])+'</b>. Klidně přijďte.'}
+    else{
+      stav.className='stav zavreno';
+      var txt;
+      if(next){txt='Dnes ještě od '+f(next[0]);dt.innerHTML='Dnes je <b>'+nazvy[d]+'</b>. Otevírám v <b>'+f(next[0])+'</b>.'}
+      else{var n=d,i=0;do{n=(n+1)%7;i++}while(!useky[n]&&i<8);
+        txt='Teď zavřeno · '+(i===1?'zítra':nazvy[n])+' od '+f(useky[n][0][0]);
+        dt.innerHTML='Teď je zavřeno. Nejbližší otevření: <b>'+(i===1?'zítra ('+nazvy[n]+')':nazvy[n])+' v '+f(useky[n][0][0])+'</b>.'}
+      st.textContent=txt;
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

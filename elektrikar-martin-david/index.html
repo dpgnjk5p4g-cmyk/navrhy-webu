@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Elektrikář Martin David</title>
+<meta name="description" content="Elektrikář v Novém Jičíně a okolí do 150 km: drobné elektro instalace, opravy a výměny, LED osvětlení, zásuvky, elektro do garáže a zahradního domku, zvuková technika.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Elektrikář Martin David",
+  "alternateName": "Elektro MD",
+  "url": "https://elektrikar-novy-jicin.webnode.cz/",
+  "telephone": "+420606842872",
+  "email": "novy.jicin@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hřbitovní 1040/27",
+    "addressLocality": "Nový Jičín",
+    "postalCode": "741 01",
+    "addressCountry": "CZ"
+  },
+  "areaServed": "Nový Jičín a okolí do 150 km"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --navy:#14213D; --navy-2:#1d2e52; --yellow:#FCA311; --cream:#F4F1EA; --white:#FFFFFF;
+  --ink:#14213D; --muted:#4a5468; --line:#e2dccf;
+  --r:18px; --shadow:0 18px 40px -22px rgba(20,33,61,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 "Karla",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.f-out{font-family:"Outfit",system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.tag{display:inline-block;font:700 11px/1 "Karla",sans-serif;text-transform:uppercase;letter-spacing:.06em;background:#fff3d6;color:#6b4300;border:1px dashed #c98300;border-radius:99px;padding:4px 8px;vertical-align:middle;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:14px;font:700 17px/1 "Outfit",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-y{background:var(--yellow);color:var(--navy);box-shadow:0 10px 24px -12px rgba(252,163,17,.9)}
+.btn-o{border-color:currentColor;background:transparent}
+.btn svg{width:20px;height:20px;flex:none}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+/* banner + header */
+.demo{background:var(--yellow);color:var(--navy);text-align:center;font:600 13px/1.4 "Karla",sans-serif;padding:8px 16px}
+header{position:sticky;top:0;z-index:20;background:rgba(20,33,61,.97);color:#fff;backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 21px/1 "Outfit",sans-serif}
+.logo b{color:var(--yellow)}
+.logo svg{width:30px;height:30px}
+nav{display:none;gap:26px;font-weight:500}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{opacity:1;color:var(--yellow)}
+.htel{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 "Outfit",sans-serif;text-decoration:none;color:var(--navy);background:var(--yellow);padding:10px 14px;border-radius:12px}
+.htel svg{width:18px;height:18px}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:30px 0 56px}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.2px,transparent 1.2px);background-size:22px 22px;pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:18px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:700 14px/1.3 "Karla",sans-serif;color:var(--yellow);letter-spacing:.02em}
+.kicker::before{content:"";width:22px;height:2px;background:var(--yellow)}
+.hero h1{font-size:clamp(40px,11vw,92px);font-weight:800;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--yellow);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:0;bottom:-.12em;width:100%;height:.28em}
+.hero .lead{font-size:18px;max-width:34em;color:#dfe4ee;margin:0}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .ctas .btn{flex:1 1 200px}
+.hero .ctas .btn-o{color:#fff}
+.bulb{position:absolute;right:10px;top:84px;width:66px;overflow:visible}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding:0;list-style:none}
+.chips li{border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:6px 12px;font-size:14px;color:#e6eaf2}
+.filament{stroke:var(--yellow);animation:glow 2.8s ease-in-out infinite}
+.halo{fill:var(--yellow);opacity:.18;animation:halo 2.8s ease-in-out infinite;transform-origin:60px 52px}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 2px #FCA311)}50%{filter:drop-shadow(0 0 9px #FCA311)}}
+@keyframes halo{0%,100%{opacity:.12;transform:scale(.92)}50%{opacity:.3;transform:scale(1.06)}}
+
+/* sections */
+section{padding:72px 0}
+.eyebrow{font:700 13px/1 "Karla",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8a5a00;margin:0 0 12px}
+.dark .eyebrow{color:var(--yellow)}
+h2{font-size:clamp(32px,7vw,54px);font-weight:700;margin-bottom:16px}
+.sub{font-size:18px;color:var(--muted);max-width:40em;margin:0 0 36px}
+.dark{background:var(--navy);color:#fff}
+.dark .sub{color:#cfd6e4}
+.white{background:#fff}
+
+/* services */
+.svc{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:#fff;border-radius:var(--r);padding:24px;border:1px solid var(--line);position:relative;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .ic{width:52px;height:52px;border-radius:14px;background:var(--cream);display:grid;place-items:center;margin-bottom:16px}
+.card .ic svg{width:30px;height:30px}
+.card h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.card p{margin:0;color:var(--muted)}
+.card .src{display:block;margin-top:12px;font-size:13px;color:#6b6250}
+.price{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;background:var(--navy);color:#fff;border-radius:var(--r);padding:22px 24px}
+.price p{margin:0;font:600 20px/1.3 "Outfit",sans-serif;flex:1 1 260px}
+
+/* builder */
+.builder{display:grid;gap:24px}
+.jobs{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.job{position:relative}
+.job input{position:absolute;opacity:0;pointer-events:none}
+.job label{display:flex;align-items:center;gap:14px;background:var(--navy-2);border:2px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 16px;cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.job label:hover{border-color:rgba(252,163,17,.6)}
+.job .box{width:28px;height:28px;border-radius:9px;border:2px solid rgba(255,255,255,.5);flex:none;display:grid;place-items:center;transition:.2s}
+.job .box svg{width:18px;height:18px;opacity:0;transform:scale(.4);transition:.2s}
+.job .t{font:600 18px/1.2 "Outfit",sans-serif;display:block}
+.job .d{font-size:14px;color:#c4ccdb;display:block;margin-top:2px}
+.job input:checked + label{background:var(--yellow);border-color:var(--yellow);color:var(--navy)}
+.job input:checked + label .d{color:#3b2a00}
+.job input:checked + label .box{background:var(--navy);border-color:var(--navy)}
+.job input:checked + label .box svg{opacity:1;transform:scale(1)}
+.job input:focus-visible + label{outline:3px solid #fff;outline-offset:2px}
+.extra{display:grid;gap:10px;margin-top:16px}
+.extra label{font-weight:700;font-size:15px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:600 15px/1 "Karla",sans-serif;padding:10px 14px;border-radius:99px;border:2px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--navy);border-color:#fff}
+.ticket{background:var(--cream);color:var(--ink);border-radius:22px;padding:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);position:relative}
+.ticket::before{content:"";position:absolute;left:24px;right:24px;top:-8px;height:16px;background:radial-gradient(circle at 8px 8px,var(--navy) 6px,transparent 6.5px) 0 0/22px 16px repeat-x}
+.ticket h3{font-size:24px;margin-bottom:4px}
+.count{font-size:14px;color:var(--muted);margin:0 0 14px}
+.count b{color:var(--ink)}
+form{display:grid;gap:12px}
+.field label{display:block;font-weight:700;font-size:14px;margin-bottom:4px}
+.field input,.field textarea{width:100%;font:400 16px/1.5 "Karla",sans-serif;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px}
+.field textarea{min-height:190px;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--navy);outline:none}
+.row2{display:grid;gap:12px}
+.form-note{font-size:13px;color:var(--muted);margin:0}
+.pulse{animation:pulse .6s ease}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(252,163,17,.8)}100%{box-shadow:0 0 0 14px rgba(252,163,17,0)}}
+
+/* map */
+.mapgrid{display:grid;gap:28px;align-items:center}
+.mapcard{background:#fff;border-radius:24px;border:1px solid var(--line);padding:14px;box-shadow:var(--shadow)}
+.mapcard svg{display:block;width:100%;height:auto}
+.mapcap{font-size:13px;color:var(--muted);text-align:center;margin:6px 0 2px}
+.ring{animation:ring 4s ease-out infinite;transform-origin:220px 220px}
+@keyframes ring{0%{transform:scale(.15);opacity:.7}100%{transform:scale(1);opacity:0}}
+.facts{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.facts li{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:16px;padding:16px 18px;border:1px solid var(--line)}
+.facts .n{font:800 30px/1 "Outfit",sans-serif;color:var(--navy);min-width:84px}
+.facts .n small{font-size:16px}
+.facts p{margin:0;color:var(--muted)}
+.facts strong{color:var(--ink)}
+
+/* trust */
+.trust{display:grid;gap:18px}
+.quote{background:var(--navy);color:#fff;border-radius:24px;padding:30px;position:relative;overflow:hidden}
+.quote q{display:block;font:700 clamp(28px,6vw,44px)/1.1 "Outfit",sans-serif;quotes:"„" "“";color:#fff}
+.quote q::first-letter{color:var(--yellow)}
+.quote p{color:#cfd6e4;margin:14px 0 0;font-size:15px}
+.photo{border-radius:24px;min-height:240px;display:grid;place-items:center;text-align:center;background:repeating-linear-gradient(135deg,#ebe5d8 0 14px,#f4f1ea 14px 28px);border:2px dashed #c9bfa9;color:#5b5240;font:600 18px/1.3 "Outfit",sans-serif;padding:20px}
+.photo svg{width:56px;height:56px;display:block;margin:0 auto 10px}
+.tlist{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.tlist li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.tlist b{display:block;font:700 18px/1.25 "Outfit",sans-serif;margin-bottom:4px}
+.tlist span{color:var(--muted);font-size:15px}
+.tlist a{font-size:13px;color:#6b6250}
+
+/* steps */
+.steps{display:grid;gap:16px;counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{background:var(--navy-2);border-radius:20px;padding:26px 24px;position:relative;border:1px solid rgba(255,255,255,.08)}
+.steps li::before{counter-increment:s;content:counter(s);font:800 54px/1 "Outfit",sans-serif;color:var(--yellow);display:block;margin-bottom:10px}
+.steps h3{font-size:22px;margin-bottom:6px}
+.steps p{margin:0;color:#cfd6e4}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:820px}
+details{background:#fff;border-radius:16px;border:1px solid var(--line);padding:0 20px}
+summary{cursor:pointer;list-style:none;font:700 19px/1.3 "Outfit",sans-serif;padding:18px 34px 18px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font-size:28px;color:#8a5a00;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 18px;color:var(--muted)}
+
+/* contact */
+.contact{display:grid;gap:18px}
+.cbox{background:#fff;border-radius:22px;border:1px solid var(--line);padding:26px}
+.cbig{font:800 clamp(30px,8vw,46px)/1 "Outfit",sans-serif;text-decoration:none;display:inline-block;margin:6px 0 4px}
+.cbig:hover{color:#8a5a00}
+.clist{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}
+.clist li{display:flex;gap:12px;align-items:flex-start}
+.clist svg{width:22px;height:22px;flex:none;margin-top:3px}
+.clist small{display:block;color:var(--muted)}
+footer{background:#0e182d;color:#c9d1df;padding:36px 0 110px;font-size:14px}
+footer .wrap{display:grid;gap:10px}
+footer b{color:#fff}
+
+/* sticky bar */
+.sbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,33,61,.97);box-shadow:0 -10px 30px -10px rgba(0,0,0,.4)}
+.sbar .btn{min-height:50px;padding:0 10px;font-size:16px}
+.sbar .btn-o{color:#fff}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:700px){
+  .svc{grid-template-columns:1fr 1fr}
+  .row2{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .jobs{grid-template-columns:1fr 1fr}
+}
+@media (min-width:980px){
+  body{font-size:18px}
+  nav{display:flex}
+  .hero{padding:70px 0 96px}
+  .hero .wrap{grid-template-columns:1.5fr .7fr;align-items:center;column-gap:40px}
+  .hero .txt{grid-column:1}
+  .bulb{position:static;grid-column:2;grid-row:1;width:100%;max-width:280px;justify-self:center;margin:0}
+  .hero .ctas .btn{flex:0 0 auto}
+  .svc{grid-template-columns:repeat(3,1fr)}
+  .builder{grid-template-columns:1.1fr .9fr;align-items:start}
+  .ticket{position:sticky;top:90px}
+  .mapgrid{grid-template-columns:1.1fr .9fr}
+  .trust{grid-template-columns:1.1fr .9fr}
+  .contact{grid-template-columns:1fr 1fr}
+  section{padding:100px 0}
+  .sbar{display:none}
+  footer{padding-bottom:36px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+<div class="demo" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Elektrikář Martin David</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Elektro MD – úvod">
+      <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="9" fill="#FCA311"/><path d="M17 4 8 17h6l-2 9 9-13h-6z" fill="#14213D"/></svg>
+      <span>Elektro <b>MD</b></span>
+    </a>
+    <nav aria-label="Hlavní menu">
+      <a href="#sluzby">Služby</a>
+      <a href="#zakazka">Poskládat zakázku</a>
+      <a href="#dojezd">Dojezd</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="htel" href="tel:+420606842872">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      606 842 872
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="txt">
+      <p class="kicker">Elektrikář v Novém Jičíně a okolí do 150 km</p>
+      <h1 id="h1" style="margin:12px 0 18px">Malá elektro zakázka? <em>Přesně pro mě.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14c40-9 90-11 194-6" fill="none" stroke="#FCA311" stroke-width="4" stroke-linecap="round" opacity=".55"/></svg></em></h1>
+      <p class="lead">Drobné elektro instalace, opravy, výměny. Světla, zásuvky, LED pásky, garáže a zahradní domky – i zvuková technika.</p>
+      <div class="ctas" style="margin-top:22px">
+        <a class="btn btn-y" href="#zakazka">Poptat práci
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="tel:+420606842872">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          Zavolat 606 842 872</a>
+      </div>
+      <ul class="chips" aria-label="Nejčastější práce">
+        <li>Výměna svítidel</li><li>Zásuvky a vypínače</li><li>LED a RGB pásky</li><li>Opravy kabelů</li><li>Zvuková technika</li>
+      </ul>
+    </div>
+    <svg class="bulb" viewBox="0 0 120 150" aria-hidden="true">
+      <circle class="halo" cx="60" cy="52" r="50"/>
+      <path d="M60 10C37 10 22 27 22 48c0 14 7 23 14 31 5 6 8 11 8 18v6h32v-6c0-7 3-12 8-18 7-8 14-17 14-31 0-21-15-38-38-38Z" fill="rgba(255,255,255,.06)" stroke="#fff" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" style="stroke-dasharray:1 0"/>
+      <path d="M47 103c0 0 4-30 4-38m22 38c0 0-4-30-4-38" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+      <path class="filament" d="M50 66c3-8 5 8 8 0s5 8 8 0 4 6 5 0" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M44 106h32M45 114h30M47 122h26" stroke="#FCA311" stroke-width="5" stroke-linecap="round"/>
+      <path d="M53 130h14" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M8 40l-6-3M14 18 9 13M112 40l6-3M106 18l5-5M60 2v-6" stroke="#FCA311" stroke-width="3" stroke-linecap="round"/>
+      <path d="M33 38c2-8 8-14 16-16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
+    </svg>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <p class="eyebrow">Co udělám</p>
+    <h2 id="h-sluzby">Elektro spolehlivě a kvalitně</h2>
+    <p class="sub">Žádná zakázka není moc malá. Tady je, s čím Vám rád pomůžu – v bytě, v rodinném domě, v garáži i na chatě.</p>
+    <div class="svc">
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#14213D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4a8 8 0 0 0-5 14c1 1 2 2 2 4h6c0-2 1-3 2-4A8 8 0 0 0 16 4z"/><path d="M13 26h6M14 29h4"/><path d="M16 10v5" stroke="#FCA311"/></svg></div>
+        <h3>Světla</h3>
+        <p>Instalace světel, výměna žárovek i celých svítidel, LED osvětlení, LED pásky i RGB.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#14213D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="20" height="20" rx="5"/><circle cx="16" cy="16" r="6"/><path d="M14 15v2M18 15v2" stroke="#FCA311" stroke-width="2.6"/></svg></div>
+        <h3>Výměna zásuvek</h3>
+        <p>Výměna zásuvek, vypínačů, osvětlení – i když jde jen o jeden kus.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#14213D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15 16 5l12 10"/><path d="M7 13v14h18V13"/><path d="M17 15l-4 6h5l-3 5" stroke="#FCA311"/></svg></div>
+        <h3>Elektroinstalace</h3>
+        <p>Byty, rodinné domy, garáže, pergoly, zahradní domky – nová elektroinstalace, opravy i rekonstrukce.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#14213D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22c5 0 5-12 11-12s6 12 11 12"/><rect x="2" y="19" width="6" height="7" rx="2"/><path d="M25 19h4v7h-4z" stroke="#FCA311"/></svg></div>
+        <h3>Kabely a spotřebiče</h3>
+        <p>Opravy prodlužovaček, kabelů k různým spotřebičům a zapojení a nastavení spotřebičů.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#14213D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="16" height="26" rx="3"/><circle cx="16" cy="19" r="5"/><circle cx="16" cy="9" r="2" stroke="#FCA311"/></svg></div>
+        <h3>Zvuková technika</h3>
+        <p>Návrh a instalace zvukové techniky – reproboxy, zesilovače, mikrofony, mixážní pulty (hobby i profi série).</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#14213D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 5a6 6 0 0 0-6 8L5 22a2.8 2.8 0 0 0 4 4l9-9a6 6 0 0 0 8-6l-4 1-2-2 1-4z"/><path d="M7 24l0 0" stroke="#FCA311" stroke-width="3"/></svg></div>
+        <h3>Opravy a údržba</h3>
+        <p>Servis elektroinstalace, elektroniky, světelné a zvukové techniky. Také LED osvětlení včetně profi RGB, RGBW LED pásků řízených DMX.</p>
+      </article>
+    </div>
+    <div class="price reveal">
+      <p>Ceny na webu nevisí – každá drobnost je jiná. Zavolejte, popište, co potřebujete, a cenu se dozvíte předem. <span class="tag">ukázkový text</span></p>
+      <a class="btn btn-y" href="tel:+420606842872">Zavolat 606 842 872</a>
+    </div>
+  </div>
+</section>
+
+<section id="zakazka" class="dark" aria-labelledby="h-zak">
+  <div class="wrap">
+    <p class="eyebrow">Poptávka za 30 vteřin</p>
+    <h2 id="h-zak">Poskládejte si zakázku</h2>
+    <p class="sub">Zaškrtněte, co je potřeba udělat. Poptávku Vám napíšeme sami – stačí doplnit jméno a odeslat.</p>
+    <div class="builder">
+      <div>
+        <ul class="jobs" id="jobs">
+          <li class="job"><input type="checkbox" id="j1" value="výměna svítidla"><label for="j1"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#FCA311" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg></span><span><span class="t">Výměna svítidla</span><span class="d">lustr, stropní světlo, žárovky</span></span></label></li>
+          <li class="job"><input type="checkbox" id="j2" value="nová nebo vyměněná zásuvka / vypínač"><label for="j2"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#FCA311" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg></span><span><span class="t">Nová zásuvka</span><span class="d">nebo výměna zásuvky či vypínače</span></span></label></li>
+          <li class="job"><input type="checkbox" id="j3" value="LED pásek / LED osvětlení"><label for="j3"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#FCA311" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg></span><span><span class="t">LED pásek</span><span class="d">LED osvětlení, RGB i RGBW</span></span></label></li>
+          <li class="job"><input type="checkbox" id="j4" value="zapojení spotřebiče"><label for="j4"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#FCA311" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg></span><span><span class="t">Zapojení spotřebiče</span><span class="d">zapojení a nastavení, oprava kabelu</span></span></label></li>
+          <li class="job"><input type="checkbox" id="j5" value="elektroinstalace do garáže / zahradního domku"><label for="j5"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#FCA311" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg></span><span><span class="t">Elektro do garáže / domku</span><span class="d">garáž, pergola, zahradní domek</span></span></label></li>
+          <li class="job"><input type="checkbox" id="j6" value="zvuková technika (návrh / instalace)"><label for="j6"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#FCA311" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg></span><span><span class="t">Zvuková technika</span><span class="d">reproboxy, zesilovače, mixážní pulty</span></span></label></li>
+        </ul>
+        <div class="extra">
+          <label id="l-kde">Kde to bude?</label>
+          <div class="seg" role="group" aria-labelledby="l-kde" data-key="kde">
+            <button type="button" aria-pressed="false" data-v="v bytě">Byt</button>
+            <button type="button" aria-pressed="false" data-v="v rodinném domě">Rodinný dům</button>
+            <button type="button" aria-pressed="false" data-v="na chatě / zahradě">Chata / zahrada</button>
+            <button type="button" aria-pressed="false" data-v="ve firmě / provozovně">Firma</button>
+          </div>
+          <label id="l-kdy" style="margin-top:6px">Jak to spěchá?</label>
+          <div class="seg" role="group" aria-labelledby="l-kdy" data-key="kdy">
+            <button type="button" aria-pressed="false" data-v="co nejdřív">Co nejdřív</button>
+            <button type="button" aria-pressed="false" data-v="během pár týdnů">Během pár týdnů</button>
+            <button type="button" aria-pressed="false" data-v="nespěchá, termín domluvíme">Nespěchá</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket" id="ticket">
+        <h3>Vaše poptávka</h3>
+        <p class="count" id="count">Zatím nic nezaškrtnuto – můžete ale rovnou napsat vlastními slovy.</p>
+        <form id="form" novalidate>
+          <div class="field"><label for="msg">Text poptávky</label><textarea id="msg" name="msg"></textarea></div>
+          <div class="row2">
+            <div class="field"><label for="name">Jméno</label><input id="name" name="name" autocomplete="name"></div>
+            <div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="town">Obec</label><input id="town" name="town" placeholder="např. Nový Jičín, Kopřivnice…"></div>
+          <button class="btn btn-y" type="submit">Odeslat poptávku e-mailem</button>
+          <p class="form-note">Otevře se Váš e-mailový program s předvyplněnou zprávou na novy.jicin@seznam.cz. Raději voláte? <a href="tel:+420606842872"><b>606 842 872</b></a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dojezd" aria-labelledby="h-doj">
+  <div class="wrap mapgrid">
+    <div class="mapcard reveal">
+      <svg viewBox="0 0 440 440" role="img" aria-labelledby="mapt">
+        <title id="mapt">Orientační mapa: kruh 150 km kolem Nového Jičína s městy Ostrava, Olomouc, Frýdek-Místek, Zlín, Opava a Brno</title>
+        <defs>
+          <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0v22" fill="none" stroke="#ece6d8" stroke-width="1"/></pattern>
+          <radialGradient id="rg"><stop offset="0" stop-color="#FCA311" stop-opacity=".28"/><stop offset="1" stop-color="#FCA311" stop-opacity=".06"/></radialGradient>
+        </defs>
+        <rect width="440" height="440" rx="16" fill="#F4F1EA"/>
+        <rect width="440" height="440" rx="16" fill="url(#grid)"/>
+        <circle cx="220" cy="220" r="180" fill="url(#rg)" stroke="#FCA311" stroke-width="3" stroke-dasharray="8 7"/>
+        <circle class="ring" cx="220" cy="220" r="180" fill="none" stroke="#FCA311" stroke-width="2"/>
+        <circle cx="220" cy="220" r="60" fill="none" stroke="#14213D" stroke-opacity=".18" stroke-dasharray="3 5"/>
+        <circle cx="220" cy="220" r="120" fill="none" stroke="#14213D" stroke-opacity=".18" stroke-dasharray="3 5"/>
+        <g font-family="Karla,sans-serif" font-size="14" fill="#5b5240">
+          <text x="226" y="155">50 km</text><text x="226" y="95">100 km</text><text x="226" y="33">150 km</text>
+        </g>
+        <!-- towns: approx. positions, 1.2 px = 1 km -->
+        <g font-family="Outfit,sans-serif" font-weight="600" font-size="18" fill="#14213D">
+          <circle cx="244" cy="188" r="5" fill="#14213D"/><text x="253" y="181">Ostrava</text>
+          <circle cx="249" cy="208" r="5" fill="#14213D"/><text x="258" y="220">Frýdek-Místek</text>
+          <circle cx="210" cy="173" r="5" fill="#14213D"/><text x="203" y="160" text-anchor="end">Opava</text>
+          <circle cx="154" cy="220" r="5" fill="#14213D"/><text x="146" y="214" text-anchor="end">Olomouc</text>
+          <circle cx="191" cy="269" r="5" fill="#14213D"/><text x="200" y="290">Zlín</text>
+          <circle cx="99" cy="272" r="5" fill="#14213D"/><text x="99" y="298" text-anchor="middle">Brno</text>
+        </g>
+        <g>
+          <circle cx="220" cy="220" r="11" fill="#FCA311" stroke="#14213D" stroke-width="3"/>
+          <path d="M221 213l-5 8h4l-1 6 5-8h-4z" fill="#14213D"/>
+          <rect x="146" y="236" width="112" height="28" rx="14" fill="#14213D"/>
+          <text x="202" y="255" text-anchor="middle" font-family="Outfit,sans-serif" font-weight="700" font-size="16" fill="#fff">Nový Jičín</text>
+        </g>
+      </svg>
+      <p class="mapcap">Orientační mapa – polohy měst a vzdálenosti jsou přibližné (vzdušnou čarou).</p>
+    </div>
+    <div>
+      <p class="eyebrow">Kam přijedu</p>
+      <h2 id="h-doj">Nový Jičín a okolí do 150 km</h2>
+      <p class="sub" style="margin-bottom:24px">Nejste přímo z Nového Jičína? Nevadí. Za drobnou prací vyrazím i do Ostravy, Olomouce, Zlína nebo na chatu v Beskydech.</p>
+      <ul class="facts">
+        <li><span class="n">150<small> km</small></span><p><strong>Dojezd z Nového Jičína.</strong> Podle starého webu: „Elektrikář v Novém Jičíně a okolí do 150 km“.</p></li>
+        <li><span class="n">1×</span><p><strong>I jedna zásuvka je zakázka.</strong> Specialita jsou drobné elektro instalace, opravy a výměny.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="white" aria-labelledby="h-duv">
+  <div class="wrap">
+    <p class="eyebrow">Proč zrovna Elektro MD</p>
+    <h2 id="h-duv">Elektrikář, který nepohrdne maličkostí</h2>
+    <div class="trust" style="margin-top:28px">
+      <div class="quote reveal">
+        <q>Drobné elektro instalace, opravy, výměny</q>
+        <p>Martin David – elektrikář z Nového Jičína. Text z jeho dosavadního webu.</p>
+        <ul class="tlist" style="margin-top:22px">
+          <li style="background:var(--navy-2);border-color:rgba(255,255,255,.1)"><b style="color:#fff">Zvuková technika – hobby i profi</b><span style="color:#cfd6e4">Reproboxy, zesilovače, mikrofony, mixážní pulty.</span></li>
+          <li style="background:var(--navy-2);border-color:rgba(255,255,255,.1)"><b style="color:#fff">LED i profi RGB, RGBW řízené DMX</b><span style="color:#cfd6e4">Od jednoho pásku pod linku po řízené světelné scény.</span></li>
+          <li style="background:var(--navy-2);border-color:rgba(255,255,255,.1)"><b style="color:#fff">Nedovoláte se? Napište.</b><span style="color:#cfd6e4">„Pokud se nedovoláte, napište e-mail :)“ – novy.jicin@seznam.cz</span></li>
+        </ul>
+      </div>
+      <div class="photo reveal"><div><svg viewBox="0 0 56 56" fill="none" stroke="#5b5240" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="44" height="32" rx="6"/><circle cx="28" cy="30" r="9"/><path d="M20 14l3-6h10l3 6"/></svg>Sem přijde Vaše fotka<br><span style="font:500 14px Karla,sans-serif">např. Vy při práci nebo hotová LED instalace</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" aria-labelledby="h-jak">
+  <div class="wrap">
+    <p class="eyebrow">Jak to probíhá</p>
+    <h2 id="h-jak">Tři kroky a svítí to</h2>
+    <p class="sub">Bez složitých formulářů – jednoduše a lidsky.</p>
+    <ol class="steps">
+      <li class="reveal"><h3>Zavolejte nebo pošlete poptávku</h3><p>Stačí pár zaškrtnutí nebo krátký popis. Klidně přiložte do e-mailu fotku.</p></li>
+      <li class="reveal"><h3>Domluvíme termín a cenu</h3><p>Řekneme si, co přesně je potřeba, kdy přijedu a kolik to zhruba bude stát.</p></li>
+      <li class="reveal"><h3>Přijedu a udělám to</h3><p>Práci udělám, vyzkoušíme, že všechno funguje, a je hotovo.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section aria-labelledby="h-faq">
+  <div class="wrap">
+    <p class="eyebrow">Časté otázky</p>
+    <h2 id="h-faq">Na co se lidé ptají</h2>
+    <div class="faq" style="margin-top:28px">
+      <details><summary>Vyplatí se volat elektrikáře kvůli jedné zásuvce?</summary><p>Ano. Drobné elektro instalace, opravy a výměny jsou přesně to, čemu se Martin David věnuje. Pokud máte víc drobností, sepište je v „Poskládejte si zakázku“ – vyřídí se při jedné návštěvě.</p></details>
+      <details><summary>Kolik to bude stát?</summary><p>Ceny nejsou zveřejněné, protože každá práce je jiná. Zavolejte na 606 842 872 nebo pošlete poptávku a cenu si domluvíte předem.</p></details>
+      <details><summary>Přijedete i mimo Nový Jičín?</summary><p>Ano, dojezd je do 150 km od Nového Jičína – tedy třeba Ostrava, Opava, Olomouc, Zlín nebo Frýdek-Místek.</p></details>
+      <details><summary>Zapojíte mi nový spotřebič nebo světlo, které už mám koupené?</summary><p>Ano, zapojení a nastavení spotřebičů i výměna svítidel patří mezi nabízené služby. Do poptávky napište, o jaký spotřebič nebo svítidlo jde.</p></details>
+      <details><summary>Co když se nedovolám?</summary><p>Při práci to občas nejde zvednout. Napište e-mail na novy.jicin@seznam.cz nebo pošlete poptávku přes formulář výše.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="white" aria-labelledby="h-kon">
+  <div class="wrap">
+    <p class="eyebrow">Kontakt</p>
+    <h2 id="h-kon">Zavolejte, domluvíme se</h2>
+    <div class="contact" style="margin-top:28px">
+      <div class="cbox">
+        <p style="margin:0;color:var(--muted)">Martin David · Elektro MD</p>
+        <a class="cbig" href="tel:+420606842872">606 842 872</a>
+        <ul class="clist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span><a href="mailto:novy.jicin@seznam.cz">novy.jicin@seznam.cz</a><small>Pokud se nedovoláte, napište e-mail.</small></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Hřbitovní 1040/27, 741 01 Nový Jičín<small><a href="https://mapy.cz/zakladni?q=H%C5%99bitovn%C3%AD%201040%2F27%2C%20741%2001%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Ukázat na Mapy.cz</a></small></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Termín po telefonické domluvě<small>Otevírací doba není zveřejněná – termín si domluvíme.</small></span></li>
+        </ul>
+      </div>
+      <div class="cbox" style="background:var(--yellow);border-color:var(--yellow)">
+        <h3 style="font-size:28px;margin-bottom:10px">Máte víc drobností najednou?</h3>
+        <p style="margin:0 0 20px">Zaškrtejte je v poptávce. Ušetříte si vysvětlování a vše se stihne při jedné návštěvě.</p>
+        <a class="btn" style="background:var(--navy);color:#fff" href="#zakazka">Poskládat zakázku</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Elektro MD</b> – Martin David, elektrikář · Hřbitovní 1040/27, Nový Jičín · <a href="tel:+420606842872">606 842 872</a> · <a href="mailto:novy.jicin@seznam.cz">novy.jicin@seznam.cz</a></div>
+    <div>Nezávazný návrh webu. Texty o službách převzaty z webu <a href="https://elektrikar-novy-jicin.webnode.cz/" rel="noopener">elektrikar-novy-jicin.webnode.cz</a> a z <a href="https://www.firmy.cz/detail/13248609-elektrikar-martin-david-novy-jicin.html" rel="noopener">Firmy.cz</a>.</div>
+  </div>
+</footer>
+
+<div class="sbar">
+  <a class="btn btn-o" href="tel:+420606842872">Zavolat</a>
+  <a class="btn btn-y" href="#zakazka">Poptat práci</a>
+</div>
+
+<script>
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('#jobs input'));
+  var msg=document.getElementById('msg'), count=document.getElementById('count'), ticket=document.getElementById('ticket');
+  var state={kde:'',kdy:''}, touched=false, lastAuto='';
+  function build(){
+    var sel=boxes.filter(function(b){return b.checked}).map(function(b){return b.value});
+    var t='Dobrý den,\n\n';
+    if(sel.length){t+='potřeboval/a bych'+(state.kde?' '+state.kde:'')+':\n'+sel.map(function(s){return '– '+s}).join('\n')+'\n';}
+    else{t+='potřeboval/a bych'+(state.kde?' '+state.kde:'')+' elektrikáře na: \n';}
+    t+='\nTermín: '+(state.kdy||'domluvíme')+'.\n';
+    t+='Prosím o zavolání a cenu předem.\n\nDěkuji';
+    return {t:t,n:sel.length};
+  }
+  function update(pulse){
+    var r=build();
+    count.innerHTML=r.n?('Vybráno: <b>'+r.n+' '+(r.n==1?'práce':(r.n<5?'práce':'prací'))+'</b> – text je připravený, klidně ho upravte.'):'Zatím nic nezaškrtnuto – můžete ale rovnou napsat vlastními slovy.';
+    if(!touched||msg.value===lastAuto){msg.value=r.t;lastAuto=r.t;touched=false;}
+    if(pulse){ticket.classList.remove('pulse');void ticket.offsetWidth;ticket.classList.add('pulse');}
+  }
+  boxes.forEach(function(b){b.addEventListener('change',function(){update(true)})});
+  [].forEach.call(document.querySelectorAll('.seg'),function(g){
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b)return;
+      var on=b.getAttribute('aria-pressed')!=='true';
+      [].forEach.call(g.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed','false')});
+      if(on)b.setAttribute('aria-pressed','true');
+      state[g.dataset.key]=on?b.dataset.v:''; update(true);
+    });
+  });
+  msg.addEventListener('input',function(){touched=true});
+  update(false);
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target, body=f.msg.value+'\n\n'+(f.name.value?'Jméno: '+f.name.value+'\n':'')+(f.phone.value?'Telefon: '+f.phone.value+'\n':'')+(f.town.value?'Obec: '+f.town.value+'\n':'');
+    location.href='mailto:novy.jicin@seznam.cz?subject='+encodeURIComponent('Poptávka z webu – elektro práce')+'&body='+encodeURIComponent(body);
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+    [].forEach.call(document.querySelectorAll('.reveal'),function(el){io.observe(el)});
+  } else {[].forEach.call(document.querySelectorAll('.reveal'),function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>

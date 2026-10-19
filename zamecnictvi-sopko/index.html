@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Zámečnictví Sopko | zámečník Ostrava-Poruba</title>
+<meta name="description" content="Nezávazný návrh webu pro Zámečnictví Sopko – zámečník v Ostravě-Porubě: výroba klíčů, opravy vložek, nouzové otevírání dveří, kování a broušení.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:wght@400;500;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Locksmith",
+  "name":"Zámečnictví Sopko",
+  "telephone":["+420777798010","+420777798012"],
+  "email":"jansopko@seznam.cz",
+  "address":{"@type":"PostalAddress","streetAddress":"Porubská 1013/21","addressLocality":"Ostrava-Poruba","postalCode":"708 00","addressCountry":"CZ"},
+  "openingHours":"Mo-Fr 09:00-16:00"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: dílenský arch – obří nápis a klíč přes celou šířku, pak střídání papírových a kovářsky černých pásů; výrazný prvek = černý pás s řezem vložkou */
+:root{
+  --kov:#1A1A1A;          /* kovářská černá */
+  --kov-2:#262523;        /* plocha na černém pásu */
+  --kov-3:#33312D;
+  --mosaz:#C9962B;        /* mosaz – plochy, text jen na černé */
+  --mosaz-text:#8A6414;   /* mosaz pro text na světlém */
+  --ocel:#8C96A0;         /* ocel – jen dekor */
+  --papir:#F7F4EE;        /* papírová */
+  --papir-2:#EFEAE0;
+  --karta:#FFFDF9;
+  --text-2:#4A4540;
+  --na-kovu:#F7F4EE;
+  --na-kovu-2:#C4BDB2;
+  --linka:rgba(26,26,26,.14);
+  --linka-kov:rgba(247,244,238,.14);
+  --f-display:"Alfa Slab One","Rockwell","Roboto Slab",Georgia,serif;
+  --f-text:"Karla","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r:6px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papir);color:var(--kov);font-family:var(--f-text);font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+:focus-visible{outline:3px solid var(--mosaz);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:700px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+
+/* štítek ukázkový text */
+.demo{display:inline-block;vertical-align:middle;font-family:var(--f-text);font-size:11px;font-weight:700;line-height:1;letter-spacing:.08em;text-transform:uppercase;font-variant:small-caps;padding:3px 6px 4px;border:1px solid currentColor;border-radius:3px;color:var(--text-2);opacity:.9;white-space:nowrap}
+.dark .demo{color:var(--na-kovu-2)}
+.dark .verdict .demo{color:var(--text-2)}
+
+/* banner */
+.notice{background:var(--kov);color:var(--na-kovu);font-size:.8125rem;text-align:center}
+.notice .wrap{padding-block:8px}
+.notice strong{color:var(--mosaz)}
+
+/* hlavička */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(247,244,238,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--linka)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0}
+.brand svg{flex:none}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem;letter-spacing:.02em;line-height:1}
+.brand small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);font-weight:700;line-height:1.2;margin-top:3px}
+.nav{display:none;gap:22px;font-weight:700;font-size:.95rem}
+.nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--mosaz)}
+@media(min-width:960px){.nav{display:flex}}
+.tel-top{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;background:var(--kov);color:var(--na-kovu);padding:9px 14px;border-radius:var(--r);font-variant-numeric:tabular-nums;white-space:nowrap;transition:background .2s}
+.tel-top:hover{background:var(--kov-3)}
+.tel-top svg{color:var(--mosaz)}
+@media(max-width:420px){.tel-top .num{display:none}}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-text);font-weight:800;font-size:1.05rem;text-decoration:none;border-radius:var(--r);padding:15px 22px;border:2px solid transparent;cursor:pointer;line-height:1.15;transition:transform .15s ease,background .2s,box-shadow .2s}
+.btn:active{transform:translateY(1px)}
+.btn-call{background:var(--mosaz);color:var(--kov);box-shadow:0 3px 0 var(--kov)}
+.btn-call:hover{box-shadow:0 5px 0 var(--kov);transform:translateY(-2px)}
+.btn-call .num{font-variant-numeric:tabular-nums}
+.btn-line{border-color:var(--kov);color:var(--kov);background:transparent}
+.btn-line:hover{background:var(--kov);color:var(--na-kovu)}
+.dark .btn-line{border-color:var(--na-kovu);color:var(--na-kovu)}
+.dark .btn-line:hover{background:var(--na-kovu);color:var(--kov)}
+
+/* hero */
+.hero .wrap{padding-block:clamp(22px,4vw,56px) clamp(36px,5vw,72px)}
+.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.35rem,7.6vw,7rem);line-height:.98;letter-spacing:-.005em}
+.hero h1 em{font-style:normal;color:var(--mosaz-text)}
+.keyart{display:block;width:100%;height:auto;margin-top:clamp(10px,2vw,22px)}
+.hero-row{display:grid;gap:22px;margin-top:clamp(12px,2.4vw,28px)}
+@media(min-width:900px){.hero-row{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:end}}
+.lede{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:38em;color:var(--text-2)}
+.lede strong{color:var(--kov)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}
+.cta-note{font-size:.95rem;color:var(--text-2);margin-top:10px}
+.facts{display:grid;gap:0;border:2px solid var(--kov);border-radius:var(--r);background:var(--karta)}
+.fact{display:flex;align-items:center;gap:14px;padding:14px 18px;min-width:0}
+.fact + .fact{border-top:1px solid var(--linka)}
+.score{font-family:var(--f-display);font-size:2.4rem;line-height:1;font-variant-numeric:tabular-nums}
+.stars{color:var(--mosaz-text);letter-spacing:2px;font-size:1.05rem;line-height:1}
+.fact a{font-weight:700;color:var(--mosaz-text)}
+.fact small{display:block;color:var(--text-2);font-size:.9rem}
+.status{display:inline-flex;align-items:center;gap:9px;font-weight:800}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--ocel);flex:none;box-shadow:0 0 0 4px rgba(140,150,160,.25)}
+.is-open .dot{background:#2F7D3A;box-shadow:0 0 0 4px rgba(47,125,58,.2);animation:pulse 2.4s ease-in-out infinite}
+.is-closed .dot{background:#A23B2A;box-shadow:0 0 0 4px rgba(162,59,42,.18)}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(47,125,58,.06)}}
+
+/* klíč – frézování */
+.cut{transform-box:fill-box;transform-origin:50% 0;animation:mill .42s cubic-bezier(.25,.8,.3,1) both;animation-delay:calc(.55s + var(--i) * .2s)}
+@keyframes mill{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.cutter{animation:travel 1.75s cubic-bezier(.45,0,.55,1) .45s both}
+.cutter .teeth{transform-box:fill-box;transform-origin:center;animation:spin .35s linear infinite}
+@keyframes travel{0%{transform:translateX(340px);opacity:0}8%{opacity:1}88%{opacity:1}100%{transform:translateX(1040px);opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.chip{animation:chip 1.2s ease-out both;animation-delay:calc(.6s + var(--i) * .2s)}
+@keyframes chip{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),-34px) rotate(140deg)}}
+
+/* sekce */
+section{scroll-margin-top:70px}
+.sec .wrap{padding-block:clamp(56px,8vw,104px)}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mosaz-text);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.dark .eyebrow{color:var(--mosaz)}
+.h2{font-family:var(--f-display);font-weight:400;font-size:clamp(2rem,4.6vw,3.6rem);line-height:1.02}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px)}
+@media(min-width:900px){.sec-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:48px}}
+.sec-head p{color:var(--text-2);max-width:36em}
+.dark .sec-head p{color:var(--na-kovu-2)}
+
+/* výrazný prvek */
+.dark{background:var(--kov);color:var(--na-kovu)}
+.dark h2{color:var(--na-kovu)}
+.lockgrid{display:grid;gap:20px}
+@media(min-width:960px){.lockgrid{grid-template-columns:300px minmax(0,1fr);gap:36px;align-items:start}}
+.choices{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+@media(min-width:960px){.choices{flex-direction:column;gap:10px}}
+.choice{font:inherit;font-weight:700;font-size:.98rem;text-align:left;cursor:pointer;color:var(--na-kovu);background:var(--kov-2);border:1.5px solid var(--linka-kov);border-radius:var(--r);padding:11px 14px;display:flex;align-items:center;gap:10px;width:100%;transition:border-color .2s,background .2s,color .2s}
+@media(max-width:959px){.choices li{flex:1 1 auto}}
+.choice:hover{border-color:var(--mosaz)}
+.choice[aria-pressed="true"]{background:var(--mosaz);color:var(--kov);border-color:var(--mosaz)}
+.choice .n{font-family:var(--f-display);font-weight:400;font-size:.85rem;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:1.5px solid currentColor;flex:none;line-height:1}
+.stage{background:var(--kov-2);border:1px solid var(--linka-kov);border-radius:var(--r);padding:clamp(12px,2vw,22px);min-width:0}
+.lock{display:block;width:100%;height:auto}
+.lock .key{transition:transform .8s cubic-bezier(.3,.7,.2,1)}
+.lock .pin{transition:transform .38s cubic-bezier(.3,1.4,.5,1)}
+.lock .spring{transform-box:fill-box;transform-origin:50% 0;transition:transform .38s cubic-bezier(.3,1.4,.5,1)}
+.lock .shear{transition:stroke .3s}
+.lock.open .shear{stroke:var(--mosaz)}
+.stage-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:12px;font-size:.85rem;color:var(--na-kovu-2)}
+.state{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--na-kovu);font-size:.95rem;margin-right:auto}
+.state svg{flex:none}
+.front .plug{transform-box:fill-box;transform-origin:center;transition:transform .5s cubic-bezier(.3,1.3,.5,1)}
+.lock-open .front .plug{transform:rotate(90deg)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;margin:0;padding:0}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.verdict{margin-top:18px;background:var(--papir);color:var(--kov);border-radius:var(--r);padding:clamp(18px,3vw,30px);display:grid;gap:14px;transition:opacity .25s,transform .25s}
+.verdict.swap{opacity:0;transform:translateY(6px)}
+.verdict h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.6vw,2rem);line-height:1.08}
+.verdict .lead{color:var(--text-2);max-width:42em}
+.verdict ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+@media(min-width:700px){.verdict ul{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.verdict li{display:flex;gap:10px;align-items:flex-start;font-weight:700;line-height:1.35;border-top:2px solid var(--kov);padding-top:10px}
+.verdict li svg{flex:none;margin-top:1px;color:var(--mosaz-text)}
+.verdict .tip{font-size:.95rem;color:var(--text-2);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.verdict .tip b{color:var(--kov)}
+.verdict .acts{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.brands{border-top:1px solid var(--linka-kov);margin-top:clamp(36px,5vw,60px);padding-top:22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 26px}
+.brands span{flex-basis:100%;font-size:.8rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--na-kovu-2)}
+.brands b{font-family:var(--f-display);font-weight:400;font-size:clamp(1.9rem,5vw,3.6rem);line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--mosaz);letter-spacing:.04em;transition:color .25s}
+.brands b:hover{color:var(--mosaz)}
+.brands i{color:var(--ocel);font-style:normal;font-size:1.4rem}
+
+/* služby */
+.svc{display:grid;gap:1px;background:var(--linka);border:1px solid var(--linka);border-radius:var(--r);overflow:hidden}
+@media(min-width:620px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1060px){.svc{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.svc article{background:var(--karta);padding:24px 22px 20px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:background .2s}
+.svc article:hover{background:#FFF9EC}
+.svc article:hover .ico{transform:rotate(-8deg)}
+.ico{width:46px;height:46px;color:var(--kov);transition:transform .25s}
+.svc h3{font-size:1.15rem;font-weight:800;line-height:1.25}
+.svc p{color:var(--text-2);font-size:.98rem;flex:1}
+.price{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--linka);padding-top:10px;font-size:.88rem;font-weight:700}
+.price span:last-child{color:var(--mosaz-text)}
+.pricenote{margin-top:14px;font-size:.92rem;color:var(--text-2);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* proč my */
+.why{display:grid;gap:22px}
+@media(min-width:900px){.why{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:start}}
+.big-score{border:2px solid var(--kov);border-radius:var(--r);padding:clamp(22px,3vw,36px);display:grid;gap:8px;background:var(--karta)}
+.big-score .score{font-size:clamp(4.5rem,11vw,8rem)}
+.big-score .stars{font-size:1.5rem}
+.big-score a{font-weight:800;color:var(--mosaz-text)}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.points li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--linka)}
+.points li:first-child{border-top:1px solid var(--linka)}
+.points b{display:block;font-size:1.1rem;line-height:1.3}
+.points p{color:var(--text-2)}
+.photo{position:relative;border:2px dashed rgba(26,26,26,.35);border-radius:var(--r);background:repeating-linear-gradient(135deg,var(--papir-2) 0 14px,var(--papir) 14px 28px);min-height:220px;display:grid;place-items:center;text-align:center;padding:24px;max-width:100%}
+.photo div{display:grid;justify-items:center;gap:8px;background:var(--karta);padding:16px 20px;border-radius:var(--r);border:1px solid var(--linka)}
+.photo b{font-size:1rem}
+.photo small{color:var(--text-2);font-size:.85rem}
+.why-side{display:grid;gap:22px}
+
+/* postup */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;counter-reset:s}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:0}}
+.steps li{position:relative;padding:26px 24px 26px 0;border-top:3px solid var(--kov)}
+@media(min-width:860px){.steps li{padding-right:36px}}
+.steps .num{font-family:var(--f-display);font-size:3.2rem;line-height:1;color:var(--mosaz-text);display:block;margin-bottom:10px}
+.steps b{display:block;font-size:1.2rem;margin-bottom:6px}
+.steps p{color:var(--text-2)}
+.steps a{font-weight:800;color:var(--kov)}
+
+/* kontakt */
+.contact{display:grid;gap:26px}
+@media(min-width:960px){.contact{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px}}
+.card-k{background:var(--karta);border:2px solid var(--kov);border-radius:var(--r);padding:clamp(20px,3vw,32px);display:grid;gap:18px;min-width:0}
+.kv{display:grid;grid-template-columns:110px minmax(0,1fr);gap:4px 16px;align-items:baseline}
+.kv dt{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2)}
+.kv dd{margin:0;font-weight:700;overflow-wrap:anywhere}
+.kv dd a{text-decoration-color:var(--mosaz)}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:7px 0;border-bottom:1px solid var(--linka)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{font-weight:800}
+.hours tr.today td:first-child::after{content:"dnes";margin-left:8px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--kov);color:var(--na-kovu);padding:2px 6px;border-radius:3px;vertical-align:2px}
+.form{display:grid;gap:14px}
+.form .row{display:grid;gap:14px}
+@media(min-width:620px){.form .row{grid-template-columns:1fr 1fr}}
+.form label{display:grid;gap:6px;font-weight:700;font-size:.92rem}
+.form input,.form select,.form textarea{font:inherit;font-size:1rem;color:var(--kov);background:var(--papir);border:1.5px solid rgba(26,26,26,.4);border-radius:var(--r);padding:12px 12px;width:100%;min-width:0}
+.form textarea{min-height:110px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--kov);box-shadow:0 0 0 3px rgba(201,150,43,.45)}
+.form-msg{background:var(--kov);color:var(--na-kovu);border-radius:var(--r);padding:16px 18px}
+.form-msg a{color:var(--mosaz);font-weight:800}
+
+/* FAQ */
+.faq{display:grid;gap:0;max-width:900px}
+.faq details{border-bottom:1px solid var(--linka)}
+.faq details:first-child{border-top:1px solid var(--linka)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 44px 20px 0;font-weight:800;font-size:1.12rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-10px;border-right:3px solid var(--kov);border-bottom:3px solid var(--kov);transform:rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(225deg);margin-top:-3px}
+.faq .a{padding:0 0 20px;color:var(--text-2);max-width:44em;display:grid;gap:8px}
+
+/* patička + spodní lišta */
+.foot{background:var(--kov);color:var(--na-kovu-2);font-size:.9rem}
+.foot .wrap{padding-block:36px 40px;display:grid;gap:10px}
+.foot b{color:var(--na-kovu)}
+.foot a{color:var(--mosaz)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--kov);border-top:2px solid var(--mosaz);display:flex;gap:8px;padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;border-radius:var(--r);padding:13px 10px;font-size:1rem}
+.callbar .c1{background:var(--mosaz);color:var(--kov);flex:1.3}
+.callbar .c2{border:1.5px solid var(--na-kovu);color:var(--na-kovu)}
+@media(min-width:900px){.callbar{display:none}}
+@media(max-width:899px){body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .cutter,.chip{display:none}
+}
+</style>
+
+<div class="notice"><div class="wrap"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Zámečnictví Sopko</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Zámečnictví Sopko – nahoru">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="#1A1A1A"/><circle cx="17" cy="13.5" r="4.6" fill="#C9962B"/><path d="M14.6 16.5h4.8l1.4 9h-7.6z" fill="#C9962B"/></svg>
+      <span><b>SOPKO</b><small>Zámečnictví · Poruba</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#co-se-stalo">Co se stalo?</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#postup">Jak to probíhá</a>
+      <a href="#kontakt">Kde nás najdete</a>
+    </nav>
+    <a class="tel-top" href="tel:+420777798010" aria-label="Zavolat 777 798 010">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span>Zavolat</span><span class="num">777 798 010</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <h1 id="h1">Klíče, zámky a <em>otevřené dveře</em> v&nbsp;Porubě.</h1>
+
+    <svg class="keyart" viewBox="0 0 1200 230" role="img" aria-label="Profil klíče, do kterého fréza vyřezává zuby">
+      <defs>
+        <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C9962B"/><stop offset=".55" stop-color="#C9962B"/><stop offset="1" stop-color="#8A6414"/>
+        </linearGradient>
+      </defs>
+      <!-- hlava klíče -->
+      <g stroke="#1A1A1A" stroke-width="4" stroke-linejoin="round">
+        <path d="M196 86 L270 86 L270 144 L196 144 Z" fill="url(#brass)"/>
+        <circle cx="112" cy="115" r="100" fill="url(#brass)"/>
+        <circle cx="112" cy="115" r="78" fill="none" stroke="#8A6414" stroke-width="2"/>
+        <circle cx="78" cy="115" r="24" fill="#F7F4EE"/>
+        <!-- planžeta -->
+        <path d="M262 50 L288 50 L288 72 L1120 72 L1174 112 L1152 152 L288 152 L288 174 L262 174 Z" fill="url(#brass)"/>
+      </g>
+      <g stroke="#8C96A0" stroke-width="3" stroke-linecap="round" fill="none">
+        <path d="M300 104 H1110"/><path d="M300 126 H1120"/>
+      </g>
+      <text x="150" y="122" font-family="Alfa Slab One, Georgia, serif" font-size="22" fill="#1A1A1A" text-anchor="middle" opacity=".8">S</text>
+      <!-- vroubky (frézují se) -->
+      <g id="cuts"></g>
+      <!-- fréza -->
+      <g class="cutter" aria-hidden="true">
+        <g transform="translate(0 30)">
+          <circle class="teeth" cx="0" cy="0" r="26" fill="#8C96A0" stroke="#1A1A1A" stroke-width="3" stroke-dasharray="6 5"/>
+          <circle cx="0" cy="0" r="7" fill="#1A1A1A"/>
+        </g>
+      </g>
+      <g id="chips" aria-hidden="true"></g>
+    </svg>
+
+    <div class="hero-row">
+      <div>
+        <p class="lede"><strong>Zámečnictví Sopko, Porubská 1013/21.</strong> Výroba klíčů, prodej zámků a kování, opravy vložek, zámků a dveří, montáž mříží, nouzové otevírání dveří i broušení nožů a řetězů.</p>
+        <div class="cta-row">
+          <a class="btn btn-call" href="tel:+420777798010">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+            Zavolat <span class="num">777 798 010</span>
+          </a>
+          <a class="btn btn-line" href="#co-se-stalo">Co se stalo?</a>
+        </div>
+        <p class="cta-note">Zabouchli jste si dveře? Zavolejte, domluvíme se.</p>
+      </div>
+      <div class="facts">
+        <div class="fact">
+          <span class="score">4,9</span>
+          <div><div class="stars" aria-hidden="true">★★★★★</div><small>z 18 hodnocení na <a href="https://www.firmy.cz/detail/2104847-zamecnictvi-sopko-ostrava-poruba.html" target="_blank" rel="noopener">Firmy.cz</a></small></div>
+        </div>
+        <div class="fact" id="statusbox">
+          <div>
+            <span class="status"><span class="dot"></span><span id="status-text">Po–Pá 9:00–16:00</span></span>
+            <small>Provozovna Porubská 1013/21 · Po–Pá 9–16</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="co-se-stalo" class="dark sec" aria-labelledby="h-co">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Řez cylindrickou vložkou</div>
+        <h2 class="h2" id="h-co">Co se stalo?</h2>
+      </div>
+      <p>Vyberte, co Vás trápí. Klíč zasune stavítka na dělicí rovinu, vložka se odemkne a pod ní uvidíte, co pro Vás Zámečnictví Sopko udělá.</p>
+    </div>
+
+    <div class="lockgrid">
+      <ul class="choices" role="list" id="choices">
+        <li><button class="choice" type="button" data-i="0" aria-pressed="true"><span class="n">1</span>Zabouchnuté dveře</button></li>
+        <li><button class="choice" type="button" data-i="1" aria-pressed="false"><span class="n">2</span>Ztracený klíč</button></li>
+        <li><button class="choice" type="button" data-i="2" aria-pressed="false"><span class="n">3</span>Zaseklá nebo poškozená vložka</button></li>
+        <li><button class="choice" type="button" data-i="3" aria-pressed="false"><span class="n">4</span>Chci bezpečnější vložku</button></li>
+        <li><button class="choice" type="button" data-i="4" aria-pressed="false"><span class="n">5</span>Broušení nožů a řetězů</button></li>
+      </ul>
+
+      <div style="min-width:0">
+        <div class="stage">
+          <svg class="lock" id="lock" viewBox="-70 0 720 290" role="img" aria-label="Řez cylindrickou vložkou s pěti stavítky">
+            <defs>
+              <clipPath id="lockclip"><rect x="-70" y="0" width="720" height="290"/></clipPath>
+              <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#33312D"/><rect width="3" height="8" fill="#3D3B36"/></pattern>
+            </defs>
+            <!-- těleso vložky -->
+            <rect x="40" y="22" width="540" height="250" rx="16" fill="url(#hatch)" stroke="#8C96A0" stroke-width="2"/>
+            <!-- rotor (válec) -->
+            <rect x="40" y="150" width="540" height="104" fill="#262523" stroke="#8C96A0" stroke-width="1.5"/>
+            <!-- profil klíčového kanálu -->
+            <rect x="40" y="200" width="512" height="50" fill="#1A1A1A"/>
+            <g id="chambers"></g>
+            <g id="springs"></g>
+            <g id="pins"></g>
+            <g clip-path="url(#lockclip)">
+              <g class="key" id="key" style="transform:translateX(-640px)"></g>
+            </g>
+            <line class="shear" x1="28" y1="150" x2="592" y2="150" stroke="#C4BDB2" stroke-width="2" stroke-dasharray="7 6"/>
+          </svg>
+          <div class="stage-foot">
+            <div class="state" id="state">
+              <svg class="front" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+                <circle cx="22" cy="22" r="20" fill="#33312D" stroke="#8C96A0" stroke-width="2"/>
+                <g class="plug"><circle cx="22" cy="22" r="13" fill="#C9962B"/><rect x="20" y="11" width="4" height="22" rx="1" fill="#1A1A1A"/></g>
+              </svg>
+              <span id="state-text">Zamčeno</span>
+            </div>
+            <ul class="legend" aria-label="Legenda">
+              <li><i style="background:#8C96A0"></i>horní stavítko a pružina</li>
+              <li><i style="background:#C9962B"></i>spodní stavítko</li>
+              <li><i style="background:transparent;border-top:2px dashed #C4BDB2;height:0;border-radius:0;vertical-align:3px"></i>dělicí rovina</li>
+            </ul>
+          </div>
+        </div>
+
+        <article class="verdict" id="verdict" aria-live="polite">
+          <h3 id="v-title">Zabouchnuté dveře</h3>
+          <p class="lead" id="v-lead"></p>
+          <ul id="v-list"></ul>
+          <p class="tip"><span class="demo">ukázkový text</span><span id="v-tip"></span></p>
+          <div class="acts">
+            <a class="btn btn-call" href="tel:+420777798010"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat <span class="num">777 798 010</span></a>
+            <a class="btn btn-line" id="v-second" href="#kontakt">Kde nás najdete</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="brands" aria-label="Opravujeme vložky značek FAB, Evva, Abus a Tokoz">
+      <span>Opravujeme vložky</span>
+      <b>FAB</b><i aria-hidden="true">◆</i><b>EVVA</b><i aria-hidden="true">◆</i><b>ABUS</b><i aria-hidden="true">◆</i><b>TOKOZ</b>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" class="sec" aria-labelledby="h-sl">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Služby a ceník</div>
+        <h2 class="h2" id="h-sl">Od kopie klíče po mříže na okně.</h2>
+      </div>
+      <p>Vše, co Zámečnictví Sopko nabízí, na jednom místě v Porubě. S klíčem, nožem nebo vložkou přijďte do provozovny, kvůli otevření dveří nebo montáži zavolejte.</p>
+    </div>
+
+    <div class="svc">
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="24" r="8"/><circle cx="11" cy="24" r="2.5" fill="#C9962B" stroke="none"/><path d="M21 21h22l3 3-3 3h-4l-2-3-2 3-2-3-2 3h-3v0H21"/></svg>
+        <h3>Výroba klíčů</h3>
+        <p>Podle klíče, který Vám zůstal, vyrobíme kopii pro rodinu, sousedy nebo správce domu.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M10 42V6h20v36"/><path d="M30 8l8 3v31H30" /><circle cx="25" cy="25" r="1.8" fill="currentColor"/><path d="M4 42h40"/><path d="M36 22l6-6M42 16h-5M42 16v5" stroke="#8A6414"/></svg>
+        <h3>Nouzové otevírání dveří</h3>
+        <p>Zabouchnuté nebo zamčené dveře bez klíče. Zavolejte, popište dveře a domluvíme se.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M8 18a8 8 0 0 1 16 0v4h16v12H24v4a8 8 0 0 1-16 0z"/><circle cx="16" cy="18" r="3" fill="#C9962B" stroke="none"/><path d="M29 28h7" /></svg>
+        <h3>Opravy vložek</h3>
+        <p>Opravujeme cylindrické vložky značek FAB, Evva, Abus a Tokoz, které drhnou nebo nejdou otočit.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="12" y="6" width="16" height="36" rx="2"/><circle cx="20" cy="30" r="2.4" fill="currentColor"/><path d="M20 33v4"/><path d="M28 16h8a3 3 0 0 1 0 6h-8" stroke="#8A6414"/></svg>
+        <h3>Opravy zámků a dveří</h3>
+        <p>Zámek, který se zasekává, nebo dveře, které nedovírají, opravíme přímo u Vás.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M15 20v-6a9 9 0 0 1 18 0v6"/><rect x="10" y="20" width="28" height="22" rx="3"/><circle cx="24" cy="30" r="3" fill="#C9962B" stroke="none"/><path d="M24 33v4"/></svg>
+        <h3>Zámky, kování, visací zámky</h3>
+        <p>Prodáváme zámky, kování a visací zámky na dveře, sklep, garáž i zahradní branku.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M15 6v36M24 6v36M33 6v36M6 24h36"/><circle cx="15" cy="24" r="2" fill="#C9962B" stroke="none"/><circle cx="33" cy="24" r="2" fill="#C9962B" stroke="none"/></svg>
+        <h3>Montáž kování a mříží</h3>
+        <p>Namontujeme bezpečnostní kování na vstupní dveře a mříže na okna nebo do sklepa.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10" stroke="#8A6414"/></svg>
+        <h3>Zabezpečení objektů</h3>
+        <p>Byt, dům, provozovna nebo společné prostory domu: navrhneme zámky, kování a mříže.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 34L34 8c4 4 4 10 0 14L18 38"/><path d="M6 34l4 4 8 0"/><path d="M30 34h12M33 40h9" stroke="#8A6414"/></svg>
+        <h3>Broušení</h3>
+        <p>Nabrousíme nože, nůžky a řetězy motorových pil. Přineste je do provozovny Po–Pá 9–16.</p>
+        <div class="price"><span>Cena</span><span>na dotaz</span></div>
+      </article>
+    </div>
+    <p class="pricenote"><span class="demo">ukázkový text</span> Ceník zatím není zveřejněný. Sem doplníte své ceny; do té doby je cena na dotaz na 777 798 010.</p>
+  </div>
+</section>
+
+<section id="proc" class="sec" style="background:var(--papir-2)" aria-labelledby="h-pr">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Proč Sopko</div>
+        <h2 class="h2" id="h-pr">Soused, který rozumí zámkům.</h2>
+      </div>
+      <p>Hodnocení zákazníků a nabídka služeb přesně podle veřejného profilu firmy.</p>
+    </div>
+    <div class="why">
+      <div class="big-score">
+        <span class="score">4,9</span>
+        <span class="stars" aria-label="Hodnocení 4,9 z 5">★★★★★</span>
+        <p style="font-size:1.15rem;font-weight:700">Průměr z 18 hodnocení zákazníků</p>
+        <p><a href="https://www.firmy.cz/detail/2104847-zamecnictvi-sopko-ostrava-poruba.html" target="_blank" rel="noopener">Přečtěte si hodnocení na Firmy.cz →</a></p>
+      </div>
+      <div class="why-side">
+        <ul class="points">
+          <li>
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="4" fill="#1A1A1A"/><circle cx="14" cy="20" r="6" fill="none" stroke="#C9962B" stroke-width="2.5"/><path d="M20 20h13M28 20v4M32 20v3" stroke="#C9962B" stroke-width="2.5"/></svg>
+            <div><b>Klíč, zámek i nůž na jednom místě</b><p>Kopie klíčů, zámky, kování, opravy vložek i broušení. Nemusíte obcházet tři dílny.</p></div>
+          </li>
+          <li>
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="4" fill="#1A1A1A"/><path d="M13 30V10h12v20M25 12l5 2v16" fill="none" stroke="#C9962B" stroke-width="2.5" stroke-linejoin="round"/><path d="M9 30h22" stroke="#C9962B" stroke-width="2.5"/></svg>
+            <div><b>Pomůžeme i se zabouchnutými dveřmi</b><p>Nouzové otevírání dveří patří k nabídce. Zavolejte na 777 798 010 a domluvíme se.</p></div>
+          </li>
+          <li>
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="4" fill="#1A1A1A"/><path d="M20 8c-5 0-8 3.6-8 8 0 6 8 15 8 15s8-9 8-15c0-4.4-3-8-8-8z" fill="none" stroke="#C9962B" stroke-width="2.5"/><circle cx="20" cy="16" r="2.6" fill="#C9962B"/></svg>
+            <div><b>Provozovna přímo v Porubě</b><p>Porubská 1013/21, otevřeno pondělí až pátek od 9 do 16 hodin.</p></div>
+          </li>
+        </ul>
+        <div class="photo" style="min-height:200px">
+          <div>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h6l3-4h10l3 4h6v18H4z"/><circle cx="18" cy="19" r="6"/><circle cx="18" cy="19" r="2" fill="#C9962B" stroke="none"/></svg>
+            <b>Sem přijde Vaše fotka</b>
+            <small>Pan Sopko u frézky na klíče nebo pult s vložkami</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="postup" class="sec" aria-labelledby="h-po">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Jak to probíhá</div>
+        <h2 class="h2" id="h-po">Tři kroky od telefonu k fungujícímu zámku.</h2>
+      </div>
+      <p>Ať jde o zabouchnuté dveře, nebo o tupé nože, začíná to stejně: krátkým telefonátem nebo cestou na Porubskou.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="num" aria-hidden="true">1</span><b>Zavoláte</b><p>Na <a href="tel:+420777798010">777 798 010</a> popíšete, co se stalo: jaké dveře, jaká vložka, kde jste.</p></li>
+      <li><span class="num" aria-hidden="true">2</span><b>Domluvíme se</b><p>Řekneme si, jestli přijdete do provozovny na Porubské, nebo kdy a kam přijedeme za Vámi.</p></li>
+      <li><span class="num" aria-hidden="true">3</span><b>Hotovo</b><p>Odcházíte s novým klíčem, opraveným zámkem, bezpečnější vložkou nebo nabroušeným nožem.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="kontakt" class="sec" style="background:var(--papir-2)" aria-labelledby="h-ko">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Kde nás najdete</div>
+        <h2 class="h2" id="h-ko">Porubská 1013/21, Ostrava-Poruba.</h2>
+      </div>
+      <p>Pro klíče, zámky a broušení přijďte do provozovny. Kvůli otevření dveří nebo montáži nejdřív zavolejte.</p>
+    </div>
+    <div class="contact">
+      <div class="card-k">
+        <dl class="kv">
+          <dt>Telefon</dt><dd><a href="tel:+420777798010">777 798 010</a><br><a href="tel:+420777798012">777 798 012</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:jansopko@seznam.cz">jansopko@seznam.cz</a></dd>
+          <dt>Adresa</dt><dd>Porubská 1013/21<br>708 00 Ostrava-Poruba</dd>
+        </dl>
+        <table class="hours" aria-label="Otevírací doba">
+          <tbody id="hours">
+            <tr data-d="1"><td>Pondělí</td><td>9:00–16:00</td></tr>
+            <tr data-d="2"><td>Úterý</td><td>9:00–16:00</td></tr>
+            <tr data-d="3"><td>Středa</td><td>9:00–16:00</td></tr>
+            <tr data-d="4"><td>Čtvrtek</td><td>9:00–16:00</td></tr>
+            <tr data-d="5"><td>Pátek</td><td>9:00–16:00</td></tr>
+            <tr data-d="6"><td>Sobota</td><td>zavřeno</td></tr>
+            <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+          </tbody>
+        </table>
+        <div class="cta-row" style="margin-top:0">
+          <a class="btn btn-call" href="tel:+420777798010">Zavolat <span class="num">777 798 010</span></a>
+          <a class="btn btn-line" href="https://mapy.cz/zakladni?q=Porubsk%C3%A1%201013%2F21%2C%20Ostrava-Poruba" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+        </div>
+        <div class="photo" style="min-height:170px">
+          <div>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h6l3-4h10l3 4h6v18H4z"/><circle cx="18" cy="19" r="6"/><circle cx="18" cy="19" r="2" fill="#C9962B" stroke="none"/></svg>
+            <b>Sem přijde Vaše fotka</b>
+            <small>Vchod do provozovny z ulice, aby ji lidé snadno našli</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-k">
+        <div>
+          <h3 style="font-family:var(--f-display);font-weight:400;font-size:1.6rem;line-height:1.1">Napište, co potřebujete</h3>
+          <p style="color:var(--text-2);margin-top:6px">Ozveme se Vám zpět. Když spěcháte, raději zavolejte.</p>
+        </div>
+        <form class="form" id="form" novalidate>
+          <div class="row">
+            <label for="f-jmeno">Jméno<input id="f-jmeno" name="jmeno" autocomplete="name" value="Jana Nováková"></label>
+            <label for="f-tel">Telefon<input id="f-tel" name="tel" type="tel" autocomplete="tel" value="603 000 000"></label>
+          </div>
+          <label for="f-co">Co potřebujete
+            <select id="f-co" name="co">
+              <option>Výroba klíčů</option>
+              <option selected>Výměna nebo oprava vložky</option>
+              <option>Oprava zámku nebo dveří</option>
+              <option>Kování, mříže, zabezpečení</option>
+              <option>Broušení nožů, nůžek, řetězů</option>
+              <option>Jiné</option>
+            </select>
+          </label>
+          <label for="f-zprava">Zpráva<textarea id="f-zprava" name="zprava">Vložka FAB na vstupních dveřích drhne a klíč jde těžko otočit. Šla by opravit, nebo je lepší nová?</textarea></label>
+          <button class="btn btn-call" type="submit" style="justify-self:start">Odeslat poptávku</button>
+          <div class="form-msg" id="form-msg" hidden role="status">Toto je jen návrh webu, formulář zatím nic neodesílá. Zámečnictví Sopko zastihnete na <a href="tel:+420777798010">777 798 010</a>.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sec" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Časté otázky</div>
+        <h2 class="h2" id="h-faq">Na co se lidé ptají.</h2>
+      </div>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Otevřete mi zabouchnuté dveře?</summary>
+        <div class="a"><p>Ano, nouzové otevírání dveří Zámečnictví Sopko nabízí. Zavolejte na 777 798 010, popište, jaké máte dveře a kde jste, a domluvíme se.</p></div>
+      </details>
+      <details>
+        <summary>Kolik stojí kopie klíče nebo otevření dveří?</summary>
+        <div class="a"><p>Ceny zatím nejsou zveřejněné. Zeptejte se po telefonu na 777 798 010 nebo přímo v provozovně na Porubské 1013/21.</p></div>
+      </details>
+      <details>
+        <summary>Opravíte vložku FAB nebo Evva?</summary>
+        <div class="a"><p>Ano. Opravujeme vložky značek FAB, Evva, Abus a Tokoz a také zámky a dveře.</p></div>
+      </details>
+      <details>
+        <summary>Ztratil jsem klíče. Mám měnit vložku?</summary>
+        <div class="a"><p><span class="demo">ukázkový text</span></p><p>Pokud jste klíče ztratili spolu s něčím, z čeho jde poznat Vaše adresa, výměna vložky je rozumná. Když klíč prostě zapadl, často stačí vyrobit kopii podle druhého klíče.</p></div>
+      </details>
+      <details>
+        <summary>Nabrousíte i řetěz z motorové pily?</summary>
+        <div class="a"><p>Ano, brousíme nože, nůžky i řetězy pil. Přineste je do provozovny v pondělí až pátek mezi 9. a 16. hodinou.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Zámečnictví Sopko</b> · Porubská 1013/21, 708 00 Ostrava-Poruba · IČO 73183776</p>
+    <p>Tel. 777 798 010, 777 798 012 · jansopko@seznam.cz · Po–Pá 9:00–16:00</p>
+    <p>Nezávazný návrh webu – není to oficiální stránka firmy Zámečnictví Sopko. Údaje pocházejí z veřejného profilu na <a href="https://www.firmy.cz/detail/2104847-zamecnictvi-sopko-ostrava-poruba.html" target="_blank" rel="noopener">Firmy.cz</a>.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420777798010"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat</a>
+  <a class="c2" href="#co-se-stalo">Co se stalo?</a>
+</nav>
+
+
+
+<script>
+(function(){
+  var NS="http://www.w3.org/2000/svg";
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- hero: vroubky klíče ---- */
+  var cuts=document.getElementById("cuts"),chips=document.getElementById("chips");
+  var cx=[360,470,580,690,800,910,1020],dep=[30,52,22,44,34,56,26];
+  cx.forEach(function(x,i){
+    var g=el("g",{"class":"cut",style:"--i:"+i},cuts);
+    el("polygon",{points:(x-50)+",62 "+(x-42)+",71 "+x+","+(72+dep[i])+" "+(x+42)+",71 "+(x+50)+",62",fill:"#F7F4EE"},g);
+    el("polyline",{points:(x-42)+",72 "+x+","+(72+dep[i])+" "+(x+42)+",72",fill:"none",stroke:"#1A1A1A","stroke-width":4,"stroke-linejoin":"round"},g);
+    if(!reduce){for(var j=0;j<3;j++){el("rect",{"class":"chip",x:x-3+j*4,y:66,width:5,height:3,fill:j%2?"#8A6414":"#C9962B",style:"--i:"+i+";--dx:"+((j-1)*22)+"px"},chips);}}
+  });
+
+  /* ---- otevřeno / zavřeno (Europe/Prague) ---- */
+  function prague(){
+    try{
+      var p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+      var o={};p.forEach(function(x){o[x.type]=x.value});
+      var d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+      return {d:d,m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+    }catch(e){return null}
+  }
+  var now=prague();
+  if(now){
+    var box=document.getElementById("statusbox"),t=document.getElementById("status-text");
+    var work=function(d){return d>=1&&d<=5};
+    var open=work(now.d)&&now.m>=540&&now.m<960;
+    var names=["v neděli","v pondělí","v úterý","ve středu","ve čtvrtek","v pátek","v sobotu"];
+    if(open){box.classList.add("is-open");t.textContent="Teď otevřeno · do 16:00";}
+    else{
+      box.classList.add("is-closed");
+      var when;
+      if(work(now.d)&&now.m<540) when="dnes v 9:00";
+      else{var n=(now.d+1)%7,k=1;while(!work(n)){n=(n+1)%7;k++}when=(k===1?"zítra":names[n])+" v 9:00";}
+      t.textContent="Teď zavřeno · otevíráme "+when;
+    }
+    var row=document.querySelector('#hours tr[data-d="'+now.d+'"]');if(row)row.classList.add("today");
+  }
+
+  /* ---- řez vložkou ---- */
+  var PX=[150,230,310,390,470],L=[38,52,30,46,26],DRV=45,SEAT=215,SHEAR=150,TOPY=32;
+  var ch=document.getElementById("chambers"),sp=document.getElementById("springs"),pn=document.getElementById("pins"),key=document.getElementById("key");
+  var pins=[],springs=[];
+  PX.forEach(function(x,i){
+    el("rect",{x:x-16,y:TOPY,width:32,height:SEAT-TOPY+2,fill:"#141414"},ch);
+    var drvTop=SEAT-L[i]-DRV,len=drvTop-TOPY;
+    var d="M"+x+","+TOPY;var turns=7;for(var s=1;s<=turns*2;s++){d+=" L"+(x+(s%2?-10:10))+","+(TOPY+len*s/(turns*2+1));}d+=" L"+x+","+drvTop;
+    var spr=el("path",{d:d,fill:"none",stroke:"#8C96A0","stroke-width":2.6,"stroke-linejoin":"round","class":"spring"},sp);
+    springs.push({e:spr,len:len});
+    var g=el("g",{"class":"pin"},pn);
+    el("rect",{x:x-13,y:drvTop,width:26,height:DRV,rx:3,fill:"#8C96A0",stroke:"#1A1A1A","stroke-width":1.5},g);
+    var kt=SEAT-L[i];
+    el("path",{d:"M"+(x-13)+","+(kt+2)+" Q"+(x-13)+","+kt+" "+(x-11)+","+kt+" H"+(x+11)+" Q"+(x+13)+","+kt+" "+(x+13)+","+(kt+2)+" V"+(SEAT-8)+" L"+x+","+SEAT+" L"+(x-13)+","+(SEAT-8)+" Z",fill:"#C9962B",stroke:"#1A1A1A","stroke-width":1.5},g);
+    pins.push(g);
+  });
+  // klíč: horní profil podle stavítek
+  var kp="M-70,214 L28,214 L28,"+(SHEAR+60);
+  var prev=28;
+  PX.forEach(function(x,i){var y=SHEAR+L[i];kp+=" L"+(x-24)+",176 L"+(x-6)+","+y+" L"+(x+6)+","+y+" L"+(x+24)+",176";});
+  kp+=" L520,176 L548,206 L548,240 L28,240 L28,250 L-70,250 Z";
+  // hlava klíče vlevo
+  el("rect",{x:-70,y:196,width:60,height:66,rx:8,fill:"#C9962B",stroke:"#1A1A1A","stroke-width":2},key);
+  el("path",{d:kp,fill:"#C9962B",stroke:"#1A1A1A","stroke-width":2,"stroke-linejoin":"round"},key);
+  el("path",{d:"M40,226 H520",stroke:"#8A6414","stroke-width":3,fill:"none"},key);
+
+  var lock=document.getElementById("lock"),state=document.getElementById("state"),stateT=document.getElementById("state-text");
+  var timers=[],inserted=false;
+  function clear(){timers.forEach(clearTimeout);timers=[]}
+  function later(fn,ms){timers.push(setTimeout(fn,reduce?0:ms))}
+  function setPins(up){
+    pins.forEach(function(g,i){
+      var dy=up?-(SEAT-(SHEAR+L[i])):0;
+      g.style.transitionDelay=(up&&!reduce?i*70:0)+"ms";
+      g.style.transform="translateY("+dy+"px)";
+      var s=springs[i];var sc=up?(s.len+dy)/s.len:1;
+      s.e.style.transitionDelay=g.style.transitionDelay;
+      s.e.style.transform="scaleY("+sc+")";
+    });
+  }
+  function setLocked(locked){
+    lock.classList.toggle("open",!locked);
+    state.parentNode.parentNode.classList.toggle("lock-open",!locked);
+    stateT.textContent=locked?"Zamčeno – horní stavítka přes dělicí rovinu":"Odemčeno – stavítka na dělicí rovině";
+  }
+  function run(){
+    clear();
+    setLocked(true);
+    var out=inserted?650:0;
+    if(inserted){setPins(false);key.style.transform="translateX(-640px)";}
+    later(function(){key.style.transform="translateX(0)";},out+60);
+    later(function(){setPins(true)},out+760);
+    later(function(){setLocked(false)},out+1220);
+    inserted=true;
+  }
+
+  var DATA=[
+    {t:"Zabouchnuté dveře",l:"Nouzové otevírání dveří je jednou ze služeb Zámečnictví Sopko. Zavolejte, řekněte, kde jste a jaké máte dveře, a domluvíme se, jak a kdy to vyřešíme.",
+     li:["Nouzové otevírání dveří","Oprava nebo výměna vložky, když je potřeba","Oprava zámku a dveří"],
+     tip:"Při otevírání bytu počítejte s tím, že Vás požádáme o doklad, že v bytě bydlíte.",s:["Kde nás najdete","#kontakt"]},
+    {t:"Ztracený klíč",l:"Máte doma druhý klíč? Podle něj vyrobíme kopii. Pokud se klíč ztratil i s adresou, zvažte novou vložku. Prodáváme ji a vyměníme.",
+     li:["Výroba klíčů","Prodej a výměna vložek a zámků","Nouzové otevírání, když se nedostanete domů"],
+     tip:"Ke kopii přineste klíč, který Vám zůstal. Kopie se vyrábí podle něj.",s:["Kde nás najdete","#kontakt"]},
+    {t:"Zaseklá nebo poškozená vložka",l:"Vložka drhne, klíč nejde otočit nebo vložka po pokusu o vloupání nedrží? Opravujeme vložky FAB, Evva, Abus a Tokoz, zámky i samotné dveře.",
+     li:["Oprava vložek FAB, Evva, Abus, Tokoz","Oprava zámků a dveří","Montáž kování"],
+     tip:"Klíč v zaseklé vložce nepáčte silou. Zlomený klíč opravu zkomplikuje.",s:["Služby","#sluzby"]},
+    {t:"Chci bezpečnější vložku",l:"Pomůžeme Vám vybrat vložku, zámek a kování a postaráme se o zabezpečení bytu, domu nebo provozovny, včetně mříží.",
+     li:["Prodej zámků, kování a visacích zámků","Montáž kování a mříží","Zabezpečení objektů"],
+     tip:"K bezpečnostní vložce patří i bezpečnostní kování, které ji chrání zvenku.",s:["Služby","#sluzby"]},
+    {t:"Broušení nožů a řetězů",l:"Přineste nože, nůžky nebo řetěz z pily do provozovny na Porubské 1013/21. Otevřeno je pondělí až pátek od 9 do 16 hodin.",
+     li:["Broušení nožů","Broušení nůžek","Broušení řetězů pil"],
+     tip:"Řetěz přineste sundaný z pily, ať se s ním dobře manipuluje.",s:["Otevírací doba","#kontakt"]}
+  ];
+  var tick='<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var v=document.getElementById("verdict");
+  function fill(i){
+    var d=DATA[i];
+    document.getElementById("v-title").textContent=d.t;
+    document.getElementById("v-lead").textContent=d.l;
+    document.getElementById("v-list").innerHTML=d.li.map(function(x){return "<li>"+tick+"<span>"+x+"</span></li>"}).join("");
+    document.getElementById("v-tip").textContent=d.tip;
+    var s=document.getElementById("v-second");s.textContent=d.s[0];s.setAttribute("href",d.s[1]);
+  }
+  var btns=[].slice.call(document.querySelectorAll(".choice"));
+  btns.forEach(function(b){
+    b.addEventListener("click",function(){
+      var i=+b.getAttribute("data-i");
+      btns.forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+      v.classList.add("swap");
+      setTimeout(function(){fill(i);v.classList.remove("swap")},reduce?0:220);
+      run();
+    });
+  });
+  fill(0);
+  setTimeout(run,reduce?0:500);
+
+  /* ---- formulář ---- */
+  var f=document.getElementById("form");
+  f.addEventListener("submit",function(e){e.preventDefault();var m=document.getElementById("form-msg");m.hidden=false;m.scrollIntoView({block:"nearest",behavior:reduce?"auto":"smooth"});});
+})();
+</script>
+</body>
+</html>

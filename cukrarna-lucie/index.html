@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Cukrárna Lucie | cukrárna Kozlovice</title>
+<meta name="description" content="Cukrárna a pekařství v Kozlovicích: zákusky, dorty na objednávku, kozlovický lopaťák a valašský frgál. Otevřeno 7 dní v týdnu. Tel. 728 427 165.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Cukrárna Lucie","description":"Pekařství a cukrářství: zákusky, cukrovinky, dorty, sladké pečivo, tradiční kozlovický lopaťák a valašský frgál, posezení.","telephone":"+420728427165","email":"Marcelafred@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Kozlovice 328","addressLocality":"Kozlovice","postalCode":"739 47","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday","Sunday"],"opens":"09:00","closes":"18:00"}],"paymentAccepted":"Cash","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","reviewCount":"31","bestRating":"5"},"sameAs":["https://www.firmy.cz/detail/13119078-cukrarna-lucie-kozlovice.html"]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: typografický hero s živou cedulkou otevřeno, nabídka jako vitrína s cenovkami-štítky, konfigurátor dortu jako objednací lístek */
+:root{
+  --raspberry:#9E2B47; --raspberry-ink:#7E1F37; --butter:#F6E6BF; --cream:#FFFAF2; --choco:#3A231D;
+  --mint:#CFE8DC; --muted:#6B5048; --line:#EADCC6; --card:#FFFFFF; --on-dark:#FFF6E8;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --raspberry:#E2738E; --raspberry-ink:#F08AA3; --butter:#3B2A1E; --cream:#1A1311; --choco:#F7EBDD;
+  --mint:#20342C; --muted:#CDB7AC; --line:#3A2B25; --card:#231915; --on-dark:#FFF6E8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --raspberry:#E2738E; --raspberry-ink:#F08AA3; --butter:#3B2A1E; --cream:#1A1311; --choco:#F7EBDD;
+  --mint:#20342C; --muted:#CDB7AC; --line:#3A2B25; --card:#231915; --on-dark:#FFF6E8; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--cream);color:var(--choco);font-family:var(--body);font-size:17px;line-height:1.6;padding-bottom:76px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0;font-optical-sizing:auto}
+h2{font-size:clamp(32px,5vw,50px);font-weight:700}
+h3{font-size:23px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.banner{background:#3A231D;color:#FFF6E8;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--raspberry);border:1px dashed currentColor;border-radius:4px;padding:1px 6px;vertical-align:middle;margin-left:6px;font-family:var(--body);line-height:1.5}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;border-bottom:1px solid var(--line)}
+.logo{font-family:var(--display);font-weight:900;font-size:26px;text-decoration:none;display:flex;gap:10px;align-items:center}
+.logo>span{white-space:nowrap}
+@media (max-width:420px){.logo{font-size:21px}.tel{padding:7px 12px;font-size:15px}}
+.logo small{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;line-height:1}
+nav{display:flex;gap:24px;font-weight:600;font-size:15px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--raspberry)}
+.tel{font-weight:700;text-decoration:none;border:2px solid var(--raspberry);color:var(--raspberry);padding:8px 16px;border-radius:999px;white-space:nowrap}
+@media (max-width:860px){nav{display:none}}
+.hero{position:relative;overflow:hidden}
+.hero .wrap{padding-block:48px 56px;display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:end}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--mint);border-radius:999px;padding:7px 14px;font-weight:600;font-size:15px}
+.dot{width:10px;height:10px;border-radius:50%;background:#2E8B57;box-shadow:0 0 0 4px rgba(46,139,87,.18)}
+.dot.off{background:#B24A4A;box-shadow:0 0 0 4px rgba(178,74,74,.18)}
+.hero h1{font-size:clamp(46px,9vw,112px);font-weight:900;letter-spacing:-.02em;margin:20px 0 18px}
+.hero h1 .r{color:var(--raspberry);font-style:italic;font-weight:700}
+.lead{font-size:20px;color:var(--muted);max-width:40ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;border-radius:999px;padding:14px 24px;border:2px solid transparent;font-size:16px;cursor:pointer;font-family:var(--body)}
+.btn-main{background:var(--raspberry);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-main{color:#1A1311}}
+:root[data-theme="dark"] .btn-main{color:#1A1311}
+.btn-ghost{border-color:var(--choco);color:var(--choco)}
+.btn:focus-visible,.pill:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--raspberry);outline-offset:2px}
+.frgal{width:100%;max-width:320px;justify-self:end}
+.frgal svg{width:100%;height:auto;display:block}
+.strip{background:var(--raspberry);color:#fff;overflow:hidden}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .strip{background:#7E1F37}}
+:root[data-theme="dark"] .strip{background:#7E1F37}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;padding-block:14px;font-weight:600;font-size:15px;justify-content:center}
+section{padding-block:76px}
+.sec-head{display:grid;gap:12px;max-width:660px;margin-bottom:38px}
+.sec-head p{color:var(--muted);font-size:18px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--raspberry)}
+.vitrina{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:6px 6px 22px 22px;padding:0 0 22px;display:grid;gap:10px;align-content:start;overflow:hidden}
+.item .pic{height:130px;background:var(--butter);display:grid;place-items:center}
+.item h3,.item p,.item .lbl{padding-inline:22px}
+.item p{color:var(--muted);font-size:16px}
+.lbl{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--raspberry)}
+.item.star{grid-column:span 2;grid-template-columns:1fr 1fr;padding:0;border-radius:6px 6px 22px 22px}
+.item.star .pic{height:auto;min-height:220px;align-self:stretch}
+.item.star{align-content:stretch}
+.item.star .txt{display:grid;gap:10px;padding:26px 26px 26px 0;align-content:center}
+.item.star .txt h3,.item.star .txt p,.item.star .txt .lbl{padding:0}
+.item.star h3{font-size:34px}
+.cake{background:var(--butter)}
+.cake .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}
+.ticket{background:var(--card);border-radius:20px;padding:28px;border:1px solid var(--line);display:grid;gap:20px;position:relative}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:-1px;height:10px;background:radial-gradient(circle at 10px -2px,var(--butter) 8px,transparent 9px) 0 0/20px 10px repeat-x}
+.field{display:grid;gap:8px}
+.field > label,.field > span{font-weight:700;font-size:15px}
+input[type=date],input[type=text]{font:inherit;padding:11px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--cream);color:var(--choco);width:100%;max-width:100%}
+input[type=range]{width:100%;accent-color:var(--raspberry)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font:inherit;font-size:15px;font-weight:600;border:1.5px solid var(--line);background:var(--cream);color:var(--choco);border-radius:999px;padding:8px 14px;cursor:pointer}
+.pill[aria-pressed="true"]{background:var(--raspberry);border-color:var(--raspberry);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pill[aria-pressed="true"]{color:#1A1311}}
+:root[data-theme="dark"] .pill[aria-pressed="true"]{color:#1A1311}
+.out{font-family:var(--display);font-size:20px;line-height:1.35;background:var(--cream);border:1px dashed var(--line);border-radius:14px;padding:16px;white-space:pre-line}
+.portions{font-variant-numeric:tabular-nums;font-weight:700;color:var(--raspberry)}
+.cake-svg svg{width:100%;max-width:340px;height:auto;display:block;margin-top:26px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.step{display:grid;gap:8px}
+.step b{font-family:var(--display);font-size:46px;color:var(--raspberry);line-height:1}
+.step p{color:var(--muted)}
+.sit{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.photo{border:2px dashed var(--line);border-radius:18px;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:14px;padding:16px;aspect-ratio:4/3;max-width:100%;background:repeating-linear-gradient(-45deg,transparent 0 12px,rgba(158,43,71,.05) 12px 24px)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{background:var(--mint);border-radius:999px;padding:7px 14px;font-weight:600;font-size:15px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tr{border-top:3px solid var(--choco);padding-top:14px;display:grid;gap:4px}
+.tr b{font-family:var(--display);font-size:30px;font-weight:900}
+.tr span{color:var(--muted);font-size:15px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:700;cursor:pointer;font-size:18px;font-family:var(--display)}
+details p{color:var(--muted);margin-top:8px}
+.contact{background:#3A231D;color:#FFF6E8}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:24px 0 0}
+.contact dt{opacity:.7;font-size:14px;padding-top:2px}
+.contact dd{margin:0;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.contact .eyebrow{color:#F5A9BB}
+.copy{background:transparent;border:1px solid rgba(255,255,255,.35);color:inherit;border-radius:999px;padding:2px 10px;font-size:13px;margin-left:8px;cursor:pointer}
+.hours table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:#F5C46B;font-weight:700}
+footer{background:#2A1813;color:#E9D8C8;font-size:14px}
+footer .wrap{padding-block:18px 26px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#3A231D;display:none;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.callbar a{flex:1}
+.callbar .btn-ghost{border-color:#FFF6E8;color:#FFF6E8}
+@media (max-width:860px){
+  .callbar{display:flex}
+  .hero .wrap{grid-template-columns:1fr;padding-block:28px 40px}
+  .frgal{display:none}
+  .vitrina,.steps{grid-template-columns:1fr}
+  .item.star{grid-column:auto;grid-template-columns:1fr}
+  .item.star .pic{min-height:160px}
+  .item.star .txt{padding:0 22px 4px}
+  .cake .wrap,.sit,.contact .wrap{grid-template-columns:1fr}
+  .cake-svg svg{display:none}
+  .trust{grid-template-columns:1fr 1fr}
+  section{padding-block:54px}
+}
+@media (min-width:861px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){.steam{animation:rise 3s ease-in-out infinite}.steam:nth-child(2){animation-delay:.8s}@keyframes rise{0%{opacity:0;transform:translateY(6px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-14px)}}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Cukrárna Lucie</div>
+
+<div class="hdr" role="banner">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="18" fill="#9E2B47"/><circle cx="19" cy="19" r="12" fill="#F6E6BF"/><g fill="#9E2B47"><circle cx="19" cy="13" r="2"/><circle cx="24" cy="18" r="2"/><circle cx="21" cy="24" r="2"/><circle cx="15" cy="23" r="2"/><circle cx="14" cy="17" r="2"/></g></svg><span>Cukrárna Lucie<small>Kozlovice</small></span></a>
+    <nav aria-label="Hlavní"><a href="#vitrina">Vitrína</a><a href="#dorty">Dorty na objednávku</a><a href="#posezeni">Posezení</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="tel" href="tel:+420728427165">728 427 165</a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="status" id="status"><span class="dot" id="dot"></span><span id="statusText">Otevřeno každý den</span></span>
+      <h1>Lopaťák, frgál <span class="r">a dorty</span> z&nbsp;Kozlovic</h1>
+      <p class="lead">Zákusky, sladké pečivo a valašské speciality s posezením a zahrádkou. Otevřeno sedm dní v týdnu, dort Vám upečeme na objednávku.</p>
+      <div class="btns">
+        <a class="btn btn-main" href="#dorty">Objednat dort</a>
+        <a class="btn btn-ghost" href="#vitrina">Co máme ve vitríně</a>
+      </div>
+    </div>
+    <div class="frgal" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <circle cx="150" cy="160" r="130" fill="#E9C27E"/>
+        <circle cx="150" cy="160" r="114" fill="#F3D9A0"/>
+        <g fill="#9E2B47" opacity=".9"><circle cx="150" cy="100" r="16"/><circle cx="205" cy="135" r="16"/><circle cx="190" cy="205" r="16"/><circle cx="112" cy="210" r="16"/><circle cx="95" cy="140" r="16"/></g>
+        <g fill="#FFFAF2"><circle cx="150" cy="160" r="22"/><circle cx="128" cy="120" r="5"/><circle cx="178" cy="172" r="5"/><circle cx="160" cy="215" r="5"/><circle cx="120" cy="175" r="5"/></g>
+        <path class="steam" d="M120 20 q10 12 0 24 q-10 12 0 24" stroke="#C9A27E" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path class="steam" d="M170 14 q10 12 0 24 q-10 12 0 24" stroke="#C9A27E" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="strip"><div class="wrap"><span>Po–čt 10–18</span><span>Pá–ne 9–18</span><span>Káva s sebou</span><span>Zahrádka a Wi-Fi</span><span>Platba hotově</span></div></div>
+
+<section id="vitrina">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Ve vitríně</div>
+      <h2>Co si u nás dáte</h2>
+      <p>Pekařství a cukrářství v jednom. Ceny najdete přímo ve vitríně; na dort se zeptejte telefonem.</p>
+    </div>
+    <div class="vitrina">
+      <article class="item star">
+        <div class="pic" aria-hidden="true"><svg width="200" height="140" viewBox="0 0 200 140"><rect x="20" y="40" width="160" height="70" rx="10" fill="#E9C27E"/><rect x="20" y="40" width="160" height="22" rx="10" fill="#9E2B47"/><g stroke="#FFFAF2" stroke-width="3"><path d="M60 40v70M100 40v70M140 40v70"/></g><rect x="150" y="104" width="44" height="12" rx="6" fill="#3A231D" transform="rotate(-18 172 110)"/></svg></div>
+        <div class="txt">
+          <span class="lbl">Kozlovická specialita</span>
+          <h3>Kozlovický lopaťák</h3>
+          <p>Tradiční kozlovická dobrota, kterou tu pečeme. Ochutnejte ji ke kávě na zahrádce, nebo si ji vezměte domů.</p>
+        </div>
+      </article>
+      <article class="item">
+        <div class="pic" aria-hidden="true"><svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="46" fill="#E9C27E"/><circle cx="55" cy="55" r="38" fill="#F3D9A0"/><g fill="#9E2B47"><circle cx="55" cy="35" r="7"/><circle cx="74" cy="52" r="7"/><circle cx="64" cy="74" r="7"/><circle cx="42" cy="73" r="7"/><circle cx="36" cy="50" r="7"/></g></svg></div>
+        <span class="lbl">Z Valašska</span>
+        <h3>Valašský frgál</h3>
+        <p>Velký kulatý koláč, bez kterého se na Valašsku neobejde žádná oslava.</p>
+      </article>
+      <article class="item">
+        <div class="pic" aria-hidden="true"><svg width="120" height="100" viewBox="0 0 120 100"><path d="M20 80 L60 20 L100 80 Z" fill="#F3D9A0"/><path d="M20 80 L60 20 L100 80" fill="none" stroke="#9E2B47" stroke-width="6"/><rect x="20" y="62" width="80" height="8" fill="#FFFAF2"/><circle cx="60" cy="22" r="9" fill="#9E2B47"/></svg></div>
+        <span class="lbl">Každý den</span>
+        <h3>Zákusky</h3>
+        <p>Řezy, věnečky a další zákusky do vitríny i s sebou v krabičce.<span class="tag">ukázkový text</span></p>
+      </article>
+      <article class="item">
+        <div class="pic" aria-hidden="true"><svg width="120" height="100" viewBox="0 0 120 100"><ellipse cx="60" cy="62" rx="44" ry="22" fill="#E9C27E"/><path d="M24 56 q36 -40 72 0" fill="#F3D9A0"/><g stroke="#C08A4A" stroke-width="3" fill="none"><path d="M40 52 q8 -10 16 0M62 50 q8 -10 16 0"/></g></svg></div>
+        <span class="lbl">Ráno i odpoledne</span>
+        <h3>Sladké pečivo</h3>
+        <p>Koláče a sladké pečivo k snídani nebo na cestu do Beskyd.</p>
+      </article>
+      <article class="item">
+        <div class="pic" aria-hidden="true"><svg width="120" height="100" viewBox="0 0 120 100"><g fill="#9E2B47"><rect x="22" y="40" width="20" height="20" rx="4"/><rect x="50" y="34" width="20" height="26" rx="10"/></g><g fill="#3A231D"><rect x="78" y="40" width="20" height="20" rx="4"/></g><rect x="14" y="60" width="92" height="8" rx="4" fill="#E9C27E"/></svg></div>
+        <span class="lbl">Pro radost</span>
+        <h3>Cukrovinky</h3>
+        <p>Drobné sladkosti jako dárek nebo jen tak pro sebe.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cake" id="dorty">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Dorty na objednávku</div>
+      <h2 style="margin:10px 0 16px">Dort na oslavu, jak si ho vymyslíte</h2>
+      <p style="color:var(--muted);font-size:18px">Vyplňte lístek vpravo – datum, počet porcí, příležitost a nápis. Text pak zkopírujete do zprávy nebo nám ho přečtete do telefonu. Cenu a příchuť doladíme spolu.</p>
+      <div class="steps" style="grid-template-columns:1fr;gap:16px;margin-top:28px">
+        <div class="step"><b>1</b><p><strong>Vyplníte lístek</strong> a zkopírujete text.</p></div>
+        <div class="step"><b>2</b><p><strong>Zavoláte na 728 427 165</strong> nebo napíšete e-mail. Domluvíme příchuť a cenu.</p></div>
+        <div class="step"><b>3</b><p><strong>Vyzvednete dort</strong> v Kozlovicích v domluvený den.</p></div>
+      </div>
+      <div class="cake-svg" aria-hidden="true"><svg viewBox="0 0 340 200"><rect x="70" y="110" width="200" height="70" rx="10" fill="#9E2B47"/><rect x="95" y="60" width="150" height="56" rx="10" fill="#F3D9A0"/><path d="M95 72 q18 14 37 0 q18 14 37 0 q18 14 37 0 q18 14 39 0" fill="none" stroke="#FFFAF2" stroke-width="6"/><rect x="166" y="26" width="8" height="34" rx="3" fill="#3A231D"/><path d="M170 10 q8 10 0 16 q-8 -6 0 -16" fill="#E9A23A"/><rect x="50" y="180" width="240" height="10" rx="5" fill="#E9C27E"/></svg></div>
+    </div>
+    <form class="ticket" id="cakeForm" autocomplete="off">
+      <div class="eyebrow">Objednací lístek</div>
+      <div class="field"><label for="datum">Na kdy dort potřebujete?</label><input type="date" id="datum"></div>
+      <div class="field"><label for="porce">Počet porcí: <span class="portions" id="porceVal">16</span></label><input type="range" id="porce" min="8" max="40" step="2" value="16"></div>
+      <div class="field"><span>Příležitost</span>
+        <div class="pills" id="occ">
+          <button type="button" class="pill" id="o1" aria-pressed="true">Narozeniny</button>
+          <button type="button" class="pill" id="o2" aria-pressed="false">Svatba</button>
+          <button type="button" class="pill" id="o3" aria-pressed="false">Křtiny</button>
+          <button type="button" class="pill" id="o4" aria-pressed="false">Výročí</button>
+          <button type="button" class="pill" id="o5" aria-pressed="false">Jen tak</button>
+        </div>
+      </div>
+      <div class="field"><label for="napis">Nápis na dort (nepovinné)</label><input type="text" id="napis" maxlength="40" value="Všechno nejlepší, Aničko!"></div>
+      <div class="out" id="out" aria-live="polite"></div>
+      <div class="btns" style="margin-top:0">
+        <button class="btn btn-main" type="submit" id="copyBtn">Zkopírovat lístek</button>
+        <a class="btn btn-ghost" href="tel:+420728427165">Zavolat 728 427 165</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="posezeni">
+  <div class="wrap sit">
+    <div>
+      <div class="eyebrow">Posezení</div>
+      <h2 style="margin:10px 0 16px">Zastavte se na kávu a oběd</h2>
+      <p style="color:var(--muted);font-size:18px">U nás si můžete sednout uvnitř i na zahrádce. Vaříme obědová menu a nabízíme občerstvení, kávu si můžete vzít s sebou.</p>
+      <div class="chips"><span>Obědová menu</span><span>Káva s sebou</span><span>Zahrádka</span><span>Wi-Fi</span><span>Platba jen hotově</span></div>
+      <p style="margin-top:20px;color:var(--muted)">Dnešní menu: sem budeme psát aktuální nabídku obědů.<span class="tag">ukázkový text</span></p>
+    </div>
+    <div class="photo">Sem přijde Vaše fotka<br>(zahrádka nebo vitrína)</div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Proč k nám</div><h2>Co o nás víte jistě</h2></div>
+    <div class="trust">
+      <div class="tr"><b>7 dní</b><span>v týdnu otevřeno, i o víkendu</span></div>
+      <div class="tr"><b>4,2 / 5</b><span><a href="https://www.firmy.cz/detail/13119078-cukrarna-lucie-kozlovice.html" target="_blank" rel="noopener">31 hodnocení na Firmy.cz</a></span></div>
+      <div class="tr"><b>2 v 1</b><span>pekařství i cukrářství</span></div>
+      <div class="tr"><b>IČO</b><span>70610711</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap" style="max-width:820px">
+    <div class="sec-head"><div class="eyebrow">Časté otázky</div><h2>Než přijedete</h2></div>
+    <details open><summary>Kdy máte otevřeno?</summary><p>Pondělí až čtvrtek 10–18 hodin, pátek až neděle 9–18 hodin.</p></details>
+    <details><summary>Můžu platit kartou?</summary><p>Zatím se u nás platí jen hotově.</p></details>
+    <details><summary>Jak dlouho dopředu objednat dort?</summary><p>Ideálně týden předem, u svatebních dortů dřív. Zavolejte a domluvíme se.<span class="tag">ukázkový text</span></p></details>
+    <details><summary>Dá se u Vás sednout s dětmi nebo po výletě?</summary><p>Ano, máme posezení uvnitř i zahrádku. Wi-Fi je zdarma pro hosty.<span class="tag">ukázkový text</span></p></details>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Kontakt</div>
+      <h2 style="margin-top:10px">Najdete nás v Kozlovicích</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420728427165">728 427 165</a><button class="copy" type="button" data-copy="728 427 165">Kopírovat</button></dd>
+        <dt>E-mail</dt><dd>Marcelafred@seznam.cz<button class="copy" type="button" data-copy="Marcelafred@seznam.cz">Kopírovat</button></dd>
+        <dt>Adresa</dt><dd>Kozlovice 328, 739 47</dd>
+        <dt>Mapa</dt><dd><a href="https://mapy.com/cs/zakladni?q=Cukr%C3%A1rna%20Lucie%20Kozlovice%20328" target="_blank" rel="noopener">Otevřít na Mapy.com</a></dd>
+      </dl>
+      <div class="btns"><a class="btn btn-main" href="tel:+420728427165">Zavolat a objednat</a></div>
+    </div>
+    <div class="hours">
+      <h3 style="margin-bottom:12px">Otevírací doba</h3>
+      <table id="hours">
+        <tr data-d="1"><td>Pondělí</td><td>10:00–18:00</td></tr>
+        <tr data-d="2"><td>Úterý</td><td>10:00–18:00</td></tr>
+        <tr data-d="3"><td>Středa</td><td>10:00–18:00</td></tr>
+        <tr data-d="4"><td>Čtvrtek</td><td>10:00–18:00</td></tr>
+        <tr data-d="5"><td>Pátek</td><td>9:00–18:00</td></tr>
+        <tr data-d="6"><td>Sobota</td><td>9:00–18:00</td></tr>
+        <tr data-d="0"><td>Neděle</td><td>9:00–18:00</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Cukrárna Lucie · pekařství a cukrářství · Kozlovice 328 · IČO 70610711</div></footer>
+
+<div class="callbar"><a class="btn btn-main" href="tel:+420728427165">Zavolat</a><a class="btn btn-ghost" href="#dorty">Objednat dort</a></div>
+
+<script>
+(function(){
+  // otevírací doba: [den]=[otevírá, zavírá] v minutách
+  var H={0:[540,1080],1:[600,1080],2:[600,1080],3:[600,1080],4:[600,1080],5:[540,1080],6:[540,1080]};
+  var names=["v neděli","v pondělí","v úterý","ve středu","ve čtvrtek","v pátek","v sobotu"];
+  function fmt(m){return Math.floor(m/60)+":"+String(m%60).padStart(2,"0")}
+  var now=new Date(), d=now.getDay(), m=now.getHours()*60+now.getMinutes(), h=H[d], t=document.getElementById("statusText"), dot=document.getElementById("dot");
+  if(m>=h[0]&&m<h[1]){t.textContent="Teď otevřeno – do "+fmt(h[1])}
+  else if(m<h[0]){t.textContent="Dnes otevíráme v "+fmt(h[0]);dot.className="dot off"}
+  else{var n=(d+1)%7;t.textContent="Zavřeno – zítra od "+fmt(H[n][0]);dot.className="dot off"}
+  var row=document.querySelector('#hours tr[data-d="'+d+'"]'); if(row) row.className="today";
+
+  var datum=document.getElementById("datum"), porce=document.getElementById("porce"), pv=document.getElementById("porceVal"), napis=document.getElementById("napis"), out=document.getElementById("out"), occ="Narozeniny";
+  var dt=new Date(now.getTime()+10*864e5); datum.value=dt.toISOString().slice(0,10);
+  function render(){
+    pv.textContent=porce.value;
+    var dd=datum.value?new Date(datum.value+"T12:00"):null;
+    var ds=dd?(names[dd.getDay()]+" "+dd.getDate()+". "+(dd.getMonth()+1)+". "+dd.getFullYear()):"(datum doplním)";
+    out.textContent="Dobrý den, chtěl(a) bych objednat dort.\nPříležitost: "+occ+"\nNa kdy: "+ds+"\nPočet porcí: "+porce.value+(napis.value.trim()?"\nNápis: „"+napis.value.trim()+"“":"")+"\nProsím o návrh příchutě a cenu. Děkuji.";
+  }
+  document.querySelectorAll("#occ .pill").forEach(function(p){p.addEventListener("click",function(){document.querySelectorAll("#occ .pill").forEach(function(x){x.setAttribute("aria-pressed","false")});p.setAttribute("aria-pressed","true");occ=p.textContent;render();});});
+  [datum,porce,napis].forEach(function(el){el.addEventListener("input",render)});
+  document.getElementById("cakeForm").addEventListener("submit",function(e){e.preventDefault();var b=document.getElementById("copyBtn");
+    function sel(){var r=document.createRange();r.selectNodeContents(out);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Označeno – zkopírujte";}
+    try{navigator.clipboard.writeText(out.textContent).then(function(){b.textContent="Zkopírováno";setTimeout(function(){b.textContent="Zkopírovat lístek"},1600)},sel)}catch(err){sel()}});
+  document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){try{navigator.clipboard.writeText(b.dataset.copy).then(function(){b.textContent="Zkopírováno"},function(){})}catch(e){}})});
+  render();
+})();
+</script>
+</body>
+</html>

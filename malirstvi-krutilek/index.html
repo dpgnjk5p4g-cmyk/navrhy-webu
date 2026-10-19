@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Malíř pokojů a výtvarné malby Starý Jičín | Malířství Krutílek – návrh webu</title>
+<meta name="description" content="Malířství Krutílek, Janovice 39, Starý Jičín – výtvarné malby na zdi a fasády, dětské pokoje, školy a školky, historické budovy, běžné malířské a natěračské práce a tapetování. Hlavně Vsetínsko, Novojičínsko a Hranicko, v případě potřeby celá ČR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "name": "Malířství Krutílek",
+  "founder": {"@type": "Person", "name": "Martin Krutílek"},
+  "telephone": "+420737028066",
+  "email": "sisoland@seznam.cz",
+  "taxID": "03892832",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Janovice 39",
+    "addressLocality": "Starý Jičín",
+    "postalCode": "741 01",
+    "addressCountry": "CZ"
+  },
+  "areaServed": ["Vsetínsko", "Novojičínsko", "Hranicko", {"@type": "Country", "name": "Česká republika"}],
+  "openingHours": "Mo-Su 00:00-23:59"
+}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+:root{
+  --teal:#138A86;          /* plochy, velký text */
+  --teal-ink:#0F716D;      /* text a tlačítka s bílým písmem (kontrast 5,6:1) */
+  --teal-light:#1BA5A0;
+  --teal-wash:#E3F5F4;
+  --coral:#FF6F59;
+  --coral-ink:#C2412D;     /* korálová pro text na bílé */
+  --sun:#FFD166;
+  --sun-wash:#FFF4D6;
+  --ink:#22223B;
+  --ink-soft:#4A4A63;
+  --white:#FFFFFF;
+  --line:#22223B;
+  --radius-hand:255px 18px 225px 18px / 18px 225px 18px 255px;
+  --font-head:"Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+  --font-body:"Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--font-head);line-height:1.08;margin:0;text-wrap:balance;color:var(--ink)}
+h2{font-size:clamp(2rem,6vw,3.1rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--teal-ink)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.sample{display:inline-block;font:700 .7rem/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;background:var(--sun);color:var(--ink);padding:.15em .5em;border-radius:3px;vertical-align:middle;white-space:nowrap}
+.kicker{font:700 .85rem/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--coral-ink);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.kicker::before{content:"";width:28px;height:10px;background:var(--coral);border-radius:50% 40% 60% 30%/60% 50% 40% 50%;transform:rotate(-6deg)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* banner + header */
+.proposal{background:var(--ink);color:var(--white);font-size:.85rem;text-align:center;padding:.45rem var(--gut-r) .45rem var(--gut-l)}
+.proposal strong{color:var(--sun)}
+.top{position:sticky;top:0;z-index:30;background:var(--white);border-bottom:3px solid var(--ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:62px}
+.brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink)}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font:800 1.35rem/1 var(--font-head);display:block}
+.brand small{display:block;white-space:nowrap;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.nav{display:none;gap:1.4rem}
+.nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
+.nav a:hover{color:var(--coral-ink)}
+.toptel{display:flex;align-items:center;gap:.45rem;text-decoration:none;font-weight:700;color:var(--white);background:var(--teal-ink);padding:.5rem .85rem;border-radius:999px;white-space:nowrap;font-size:.95rem}
+.toptel svg{width:18px;height:18px}
+.toptel .num{display:none}
+@media (min-width:420px){.toptel .num{display:inline}.toptel .lbl{display:none}}
+@media (min-width:940px){.nav{display:flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:800 1.1rem/1 var(--font-head);text-decoration:none;padding:.95rem 1.35rem .85rem;border:3px solid var(--ink);border-radius:var(--radius-hand);cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;min-height:52px}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-coral{background:var(--coral);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn-teal{background:var(--teal-ink);color:var(--white);box-shadow:4px 4px 0 var(--ink)}
+.btn-ghost{background:var(--white);color:var(--ink)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn-ghost:hover{box-shadow:4px 4px 0 var(--ink)}
+
+/* hero mural */
+.hero{position:relative;overflow:hidden;background:#BFE8E5;min-height:calc(100svh - 100px);max-height:none;display:flex;align-items:flex-start}
+.hero-mural{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:22px;padding-bottom:230px}
+.board{position:relative;max-width:640px;background:var(--white);border:4px solid var(--ink);border-radius:14px 22px 10px 26px/22px 12px 26px 14px;padding:1.3rem 1.25rem 1.35rem;transform:rotate(-1.2deg);box-shadow:7px 8px 0 rgba(34,34,59,.9)}
+.board::before,.board::after{content:"";position:absolute;bottom:-150px;width:16px;height:150px;background:#8A5A3C;border:3px solid var(--ink);border-top:0;z-index:-1}
+.board::before{left:16%}.board::after{right:16%}
+.board .nail{position:absolute;top:10px;width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.board .nail.l{left:12px}.board .nail.r{right:12px}
+.board .eyebrow{font:700 .8rem/1.2 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--teal-ink);margin:0 0 .55rem}
+.board h1{font-size:clamp(2.05rem,8.6vw,3.9rem);font-weight:800;letter-spacing:-.015em}
+.brush{position:relative;white-space:nowrap;z-index:0}
+.brush::after{content:"";position:absolute;left:-4px;right:-6px;bottom:.06em;height:.42em;background:var(--sun);border-radius:40% 60% 45% 55%/60% 40% 60% 40%;z-index:-1;transform:rotate(-1.5deg)}
+.board .lead{margin:.75rem 0 1.05rem;font-size:1.02rem;color:var(--ink-soft);max-width:34em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.hero-cta .btn{flex:1 1 auto}
+.hero-note{margin:.9rem 0 0;font-size:.88rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:.3rem 1rem}
+.hero-note span{display:inline-flex;align-items:center;gap:.35rem}
+.hero-note i{width:9px;height:9px;border-radius:50%;background:var(--coral);display:inline-block}
+@media (min-width:760px){
+  .hero{min-height:640px}
+  .hero .wrap{padding-top:56px;padding-bottom:250px}
+  .board{padding:2rem 2.1rem 2rem}
+  .hero-cta .btn{flex:0 0 auto}
+}
+.drip{display:block;width:100%;height:34px;margin-top:-1px}
+
+/* sections */
+section{scroll-margin-top:70px}
+.band{padding:4.2rem 0}
+.band-teal{background:var(--teal);color:var(--white)}
+.band-teal h2,.band-teal h3{color:var(--white)}
+.band-wash{background:var(--teal-wash)}
+.band-sun{background:var(--sun-wash)}
+.band-ink{background:var(--ink);color:var(--white)}
+.band-ink h2,.band-ink h3{color:var(--white)}
+.intro{max-width:680px;margin-bottom:2.2rem}
+.intro p{font-size:1.1rem;color:var(--ink-soft)}
+
+/* quote strip */
+.claim{display:grid;gap:1.6rem;align-items:center}
+.claim blockquote{margin:0;font:700 clamp(1.45rem,4.4vw,2.2rem)/1.2 var(--font-head);color:var(--white);text-wrap:balance}
+.claim blockquote em{font-style:normal;color:var(--sun)}
+.claim cite{display:block;margin-top:.8rem;font:400 .9rem/1.4 var(--font-body);color:#E6F7F6;font-style:normal}
+.claim cite a{color:var(--white)}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
+.facts li{display:flex;gap:.8rem;align-items:flex-start;padding:.85rem 1rem;border:2px solid rgba(255,255,255,.55);border-radius:12px 20px 14px 22px}
+.facts b{display:block;font-family:var(--font-head);font-size:1.1rem}
+.facts span{font-size:.95rem;color:#EAF8F7}
+.facts svg{width:30px;height:30px;flex:none;margin-top:2px}
+@media(min-width:860px){.claim{grid-template-columns:1.25fr 1fr;gap:3rem}}
+
+/* services */
+.services{display:grid;gap:0;border-top:3px solid var(--ink)}
+.svc{display:grid;grid-template-columns:64px 1fr;gap:1rem;padding:1.3rem 0;border-bottom:2px dashed rgba(34,34,59,.35);align-items:start}
+.svc .ico{width:64px;height:64px}
+.svc h3{margin-bottom:.3rem}
+.svc p{margin:0;color:var(--ink-soft)}
+.svc .tag{display:inline-block;margin-top:.5rem;font-size:.8rem;font-weight:700;color:var(--teal-ink)}
+@media(min-width:760px){
+  .services{grid-template-columns:1fr 1fr;column-gap:3rem}
+  .svc{padding:1.6rem 0}
+}
+.price-line{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;padding:1.2rem 1.3rem;background:var(--sun);border:3px solid var(--ink);border-radius:var(--radius-hand)}
+.price-line p{margin:0;flex:1 1 280px}
+.price-line small{display:block;color:var(--ink-soft);font-size:.85rem;margin-top:.2rem}
+
+/* motif configurator */
+.lab{display:grid;gap:1.8rem;align-items:start}
+@media(min-width:900px){.lab{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:3rem}}
+.stage{background:var(--white);border:4px solid var(--ink);border-radius:18px 26px 14px 30px/26px 14px 30px 18px;padding:10px;box-shadow:8px 8px 0 var(--coral)}
+.stage svg{width:100%;height:auto;border-radius:10px}
+.stage figcaption{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;padding:.7rem .3rem .2rem;font-weight:700;font-size:.95rem}
+.stage figcaption span:last-child{color:var(--ink-soft);font-weight:400}
+.picker fieldset{border:0;margin:0 0 1.4rem;padding:0}
+.picker legend{font:800 1.15rem/1.2 var(--font-head);margin-bottom:.7rem;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip label{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border:3px solid var(--ink);border-radius:999px;font-weight:700;background:var(--white);cursor:pointer;min-height:48px}
+.chip label i{width:16px;height:16px;border-radius:50%;border:2px solid var(--ink);display:inline-block}
+.chip input:checked + label{background:var(--ink);color:var(--white)}
+.chip input:focus-visible + label{outline:3px solid var(--coral);outline-offset:3px}
+.chip input:hover + label{transform:rotate(-2deg)}
+.lab-note{font-size:.92rem;color:var(--ink-soft);margin-top:1rem}
+#motifSvg .m,#motifSvg .w{transition:opacity .35s ease}
+
+/* portfolio */
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ph{position:relative;margin:0;background:repeating-linear-gradient(-45deg,#F3FAF9 0 12px,#E3F5F4 12px 24px);border:3px solid var(--ink);display:flex;flex-direction:column;justify-content:flex-end;min-height:170px;overflow:hidden}
+.ph:nth-child(3n+1){border-radius:14px 26px 10px 22px}
+.ph:nth-child(3n+2){border-radius:24px 10px 26px 12px;transform:rotate(.6deg)}
+.ph:nth-child(3n){border-radius:10px 20px 18px 28px;transform:rotate(-.6deg)}
+.ph .empty{position:relative;flex:1;display:grid;place-items:center;text-align:center;padding:1rem;color:var(--teal-ink);font-weight:700;font-size:.95rem}
+.ph .empty svg{width:40px;height:40px;margin:0 auto .35rem}
+.ph figcaption{position:relative;background:var(--white);border-top:3px solid var(--ink);padding:.55rem .75rem;font-size:.88rem;line-height:1.3}
+.ph figcaption b{display:block;font-family:var(--font-head);font-size:1.02rem}
+.ph.big{grid-column:span 2;min-height:230px}
+@media(min-width:760px){
+  .gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+  .ph{min-height:220px}
+  .ph.big{grid-column:span 2;grid-row:span 2;min-height:458px}
+  .ph.wide{grid-column:span 2}
+}
+.tape{position:absolute;top:-6px;left:50%;width:70px;height:20px;background:rgba(255,209,102,.85);transform:translateX(-50%) rotate(-4deg);z-index:2}
+.aside-note{margin-top:1.4rem;font-size:.92rem;color:var(--ink-soft);border-left:5px solid var(--coral);padding:.3rem 0 .3rem .9rem;max-width:720px}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:1.4rem;counter-reset:s}
+.step{position:relative;padding:1.2rem 1.2rem 1.2rem 4.6rem;background:var(--white);border:3px solid var(--ink);border-radius:var(--radius-hand)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:1rem;top:1rem;width:2.7rem;height:2.7rem;display:grid;place-items:center;font:800 1.5rem/1 var(--font-head);background:var(--coral);border:3px solid var(--ink);border-radius:50% 45% 55% 48%/52% 55% 45% 50%}
+.step:nth-child(2)::before{background:var(--sun)}
+.step:nth-child(3)::before{background:var(--teal-light)}
+.step h3{margin-bottom:.3rem}
+.step p{margin:0;color:var(--ink-soft)}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}.step:nth-child(2){transform:translateY(22px)}.step:nth-child(3){transform:translateY(44px)}}
+
+/* area */
+.area{display:grid;gap:2rem;align-items:center}
+@media(min-width:860px){.area{grid-template-columns:1fr 1fr;gap:3rem}}
+.regions{list-style:none;margin:1.2rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.regions li{padding:.5rem 1rem;border:3px solid var(--white);border-radius:999px;font-weight:700}
+.regions li.all{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.area-svg{width:100%;max-width:520px;margin:0 auto}
+.band-ink .muted{color:#D6D6E4}
+
+/* faq */
+.faq{max-width:820px}
+.faq details{border-bottom:2px dashed rgba(34,34,59,.35)}
+.faq summary{cursor:pointer;list-style:none;padding:1.1rem 2.6rem 1.1rem 0;position:relative;font:700 1.18rem/1.3 var(--font-head)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.2rem;top:.85rem;width:30px;height:30px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;font-size:1.2rem;background:var(--sun)}
+.faq details[open] summary::after{content:"–";background:var(--coral)}
+.faq details p{color:var(--ink-soft);padding-right:1rem}
+
+/* form + contact */
+.contact-grid{display:grid;gap:2.2rem}
+@media(min-width:940px){.contact-grid{grid-template-columns:1.25fr .9fr;gap:3.2rem;align-items:start}}
+form.poptavka{background:var(--white);border:4px solid var(--ink);border-radius:16px 24px 14px 28px/24px 14px 28px 16px;padding:1.3rem;box-shadow:8px 8px 0 var(--teal)}
+.row{display:grid;gap:1rem}
+@media(min-width:600px){.row.two{grid-template-columns:1fr 1fr}}
+.fld{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.fld label{font-weight:700;font-size:.95rem}
+.fld label small{font-weight:400;color:var(--ink-soft)}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--white);border:2px solid var(--ink);border-radius:10px;padding:.7rem .8rem;min-height:48px;width:100%}
+.fld textarea{min-height:120px;resize:vertical}
+.fld input:focus-visible,.fld select:focus-visible,.fld textarea:focus-visible{outline:3px solid var(--coral);outline-offset:1px}
+.form-foot{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.form-foot p{margin:0;font-size:.85rem;color:var(--ink-soft);flex:1 1 220px}
+.result{margin-top:1.3rem;border:3px dashed var(--teal-ink);border-radius:12px;padding:1rem;background:var(--teal-wash)}
+.result[hidden]{display:none}
+.result h3{font-size:1.15rem;margin-bottom:.4rem}
+.result pre{white-space:pre-wrap;word-break:break-word;font:inherit;font-size:.95rem;background:var(--white);border:2px solid var(--ink);border-radius:8px;padding:.8rem;margin:.6rem 0 .9rem}
+.result .acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.result .acts .btn{font-size:1rem;min-height:46px;padding:.75rem 1rem .65rem}
+.copy-state{font-size:.9rem;font-weight:700;color:var(--teal-ink);min-height:1.4em;margin:.5rem 0 0}
+.card-c{padding:0}
+.card-c dl{margin:0;display:grid;gap:1rem}
+.card-c dt{font:700 .78rem/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--coral-ink);margin-bottom:.25rem}
+.card-c dd{margin:0;font-size:1.08rem}
+.card-c dd a{font-weight:700}
+.bigtel{font:800 clamp(1.8rem,6vw,2.4rem)/1 var(--font-head);color:var(--ink)!important;text-decoration:none}
+.bigtel:hover{color:var(--coral-ink)!important}
+
+/* footer */
+footer{background:var(--ink);color:#E4E4EE;padding:2.2rem 0 6.5rem;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-between}
+footer b{color:var(--white);font-family:var(--font-head);font-size:1.15rem}
+footer a{color:var(--white)}
+@media(min-width:760px){footer{padding-bottom:2.2rem}}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.1fr 1fr;gap:8px;background:var(--white);border-top:3px solid var(--ink);padding:8px max(10px, env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px, env(safe-area-inset-left,0px))}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:.45rem;min-height:50px;border-radius:12px;font:800 1rem/1.05 var(--font-head);text-decoration:none;border:3px solid var(--ink);text-align:center}
+.callbar a svg{width:20px;height:20px;flex:none}
+.callbar .c1{background:var(--teal-ink);color:var(--white)}
+.callbar .c2{background:var(--coral);color:var(--ink)}
+.callbar small{display:block;font:700 .78rem/1 var(--font-body)}
+@media(min-width:760px){.callbar{display:none}}
+
+/* hero mural motion */
+.cloud{animation:drift 26s ease-in-out infinite alternate}
+.bird{animation:flap 3.2s ease-in-out infinite}
+.sunrays{transform-origin:1080px 150px;animation:spin 60s linear infinite}
+@keyframes drift{to{transform:translateX(60px)}}
+@keyframes flap{50%{transform:translateY(-6px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<div class="proposal" role="note">Nezávazný návrh webu – <strong>není to oficiální stránka firmy Malířství Krutílek</strong></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#uvod" aria-label="Malířství Krutílek – úvod">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 30c4-1 6-5 9-6 3-1 4 2 2 4-3 3-8 4-11 2z" fill="#FF6F59" stroke="#22223B" stroke-width="2"/><path d="M19 23 31 7c1-2 4 0 3 2L22 26z" fill="#FFD166" stroke="#22223B" stroke-width="2" stroke-linejoin="round"/><circle cx="31" cy="30" r="4" fill="#1BA5A0" stroke="#22223B" stroke-width="2"/></svg>
+      <span><b>Krutílek</b><small>malířství · výtvarné malby</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#sluzby">Co malujeme</a>
+      <a href="#motiv">Vyzkoušejte motiv</a>
+      <a href="#prace">Ukázky</a>
+      <a href="#postup">Jak to probíhá</a>
+      <a href="#poptavka">Poptávka</a>
+    </nav>
+    <a class="toptel" href="tel:+420737028066" aria-label="Zavolat na 737 028 066">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+      <span class="num">737 028 066</span><span class="lbl">Zavolat</span>
+    </a>
+  </div>
+</header>
+
+<main id="uvod">
+<section class="hero" aria-labelledby="hero-h">
+  <svg class="hero-mural" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <rect width="1440" height="720" fill="#BFE8E5"/>
+    <g class="sunrays" opacity=".55"><g fill="#FFD166">
+      <path d="M1080 150 1060 20h40z"/><path d="M1080 150 1060 20h40z" transform="rotate(45 1080 150)"/><path d="M1080 150 1060 20h40z" transform="rotate(90 1080 150)"/><path d="M1080 150 1060 20h40z" transform="rotate(135 1080 150)"/><path d="M1080 150 1060 20h40z" transform="rotate(180 1080 150)"/><path d="M1080 150 1060 20h40z" transform="rotate(225 1080 150)"/><path d="M1080 150 1060 20h40z" transform="rotate(270 1080 150)"/><path d="M1080 150 1060 20h40z" transform="rotate(315 1080 150)"/>
+    </g></g>
+    <circle cx="1080" cy="150" r="70" fill="#FFD166" stroke="#22223B" stroke-width="5"/>
+    <path d="M1055 160q25 22 50 0" fill="none" stroke="#22223B" stroke-width="5" stroke-linecap="round"/><circle cx="1058" cy="138" r="6" fill="#22223B"/><circle cx="1102" cy="138" r="6" fill="#22223B"/>
+    <g class="cloud"><path d="M140 140q10-40 55-30 20-35 65-15 45-5 45 40 25 20-5 40H150q-40-5-10-35z" fill="#fff" stroke="#22223B" stroke-width="4"/></g>
+    <g class="cloud" style="animation-duration:34s"><path d="M760 90q8-30 45-24 18-28 55-10 38-2 36 32 20 16-6 32H770q-32-4-10-30z" fill="#fff" stroke="#22223B" stroke-width="4"/></g>
+    <g class="bird"><path d="M640 200q14-14 28 0 14-14 28 0" fill="none" stroke="#22223B" stroke-width="5" stroke-linecap="round"/></g>
+    <g class="bird" style="animation-delay:.8s"><path d="M720 240q10-10 20 0 10-10 20 0" fill="none" stroke="#22223B" stroke-width="4" stroke-linecap="round"/></g>
+    <path d="M0 470q240-150 520-60t480-40q240-90 440 10v340H0z" fill="#1BA5A0" stroke="#22223B" stroke-width="5"/>
+    <path d="M0 560q300-110 640-20 300 70 520-30 160-60 280-20v230H0z" fill="#138A86" stroke="#22223B" stroke-width="5"/>
+    <g stroke="#22223B" stroke-width="5" stroke-linejoin="round">
+      <rect x="282" y="430" width="16" height="90" fill="#8A5A3C"/><circle cx="290" cy="400" r="58" fill="#FFD166"/>
+      <rect x="1252" y="420" width="16" height="100" fill="#8A5A3C"/><path d="M1260 290 1320 440H1200z" fill="#FF6F59"/>
+      <rect x="452" y="470" width="14" height="70" fill="#8A5A3C"/><path d="M459 360 508 485H410z" fill="#22223B"/>
+      <rect x="985" y="470" width="14" height="80" fill="#8A5A3C"/><circle cx="992" cy="440" r="46" fill="#FF6F59"/>
+    </g>
+    <!-- fox -->
+    <g stroke="#22223B" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M800 610q-70-10-80-60 40 10 70 40z" fill="#FF6F59"/>
+      <path d="M720 550q-8 18 8 26" fill="none"/>
+      <ellipse cx="840" cy="600" rx="60" ry="34" fill="#FF6F59"/>
+      <path d="M880 560l12-40 18 30 22-28 6 42q10 30-25 44-35 6-40-20z" fill="#FF6F59"/>
+      <path d="M905 590q12 10 26 0" fill="#fff"/>
+      <circle cx="905" cy="572" r="4" fill="#22223B" stroke="none"/><circle cx="925" cy="570" r="4" fill="#22223B" stroke="none"/>
+      <path d="M815 630v22M860 630v22"/>
+    </g>
+    <!-- hedgehog -->
+    <g stroke="#22223B" stroke-width="5" stroke-linejoin="round">
+      <path d="M560 650q10-50 60-55 50 5 58 55z" fill="#FFD166"/>
+      <path d="M572 620l-10-12M592 604l-4-16M616 598v-16M640 602l6-15M662 616l10-10" fill="none" stroke-linecap="round"/>
+      <circle cx="672" cy="640" r="4" fill="#22223B" stroke="none"/>
+    </g>
+    <!-- flowers -->
+    <g stroke="#22223B" stroke-width="4">
+      <circle cx="160" cy="640" r="12" fill="#FFD166"/><circle cx="210" cy="665" r="10" fill="#fff"/><circle cx="1150" cy="640" r="12" fill="#FFD166"/><circle cx="1200" cy="670" r="10" fill="#FF6F59"/><circle cx="1370" cy="630" r="11" fill="#fff"/>
+    </g>
+    <!-- brush strokes as signature -->
+    <path d="M1300 700q40-20 80-6" fill="none" stroke="#FFD166" stroke-width="10" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap">
+    <div class="board">
+      <span class="nail l" aria-hidden="true"></span><span class="nail r" aria-hidden="true"></span>
+      <p class="eyebrow">Malíř pokojů a výtvarné malby · Starý Jičín</p>
+      <h1 id="hero-h">Namalujeme Vám <span class="brush">les, moře</span> i&nbsp;vesmír – přímo na zeď</h1>
+      <p class="lead">Výzdoby vnitřních i vnějších prostorů po celé ČR, od dětských motivů po velkoplošné malby na fasády. A když potřebujete jen vymalovat, umíme i to.</p>
+      <div class="hero-cta">
+        <a class="btn btn-coral" href="#poptavka">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c3 0 5-2 5-4s-2-3-3-1-2 5-2 5z"/><path d="m9 15 10-11 2 2-11 10"/></svg>
+          Poptat malbu</a>
+        <a class="btn btn-ghost" href="tel:+420737028066">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+          Zavolat 737 028 066</a>
+      </div>
+      <p class="hero-note"><span><i></i>Školy, školky, nemocnice</span><span><i style="background:#1BA5A0"></i>Dětské pokojíčky</span><span><i style="background:#FFD166"></i>Fasády a historické budovy</span></p>
+    </div>
+  </div>
+</section>
+<svg class="drip" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true" style="background:#138A86"><path d="M0 0h1440v10q-30 0-34 10t-18 0q-10-10-60 0-40 6-60 0-30-8-40 6-6 14-16 0-14-14-80-6-60 0-120-6t-130 8q-10 18-22 0-20-12-90-6-70 2-110-4t-60 10q-12 16-22 0-12-10-90-6t-140-2q-40 0-50 8-8 14-18 0-12-12-70-6-60 4-110-2t-80 6q-10 12-20 0-12-8-70-6Q60 16 0 10z" fill="#FFD166"/></svg>
+
+<!-- claim / trust -->
+<section class="band band-teal" aria-labelledby="claim-h" style="padding-top:2.6rem">
+  <div class="wrap claim">
+    <div>
+      <p class="kicker" style="color:#FFE7A8">Čím se liší</p>
+      <h2 id="claim-h" class="sr">Čím se Malířství Krutílek liší</h2>
+      <blockquote>„Specializujeme se hlavně na <em>umělecké malířství</em> jako je tvorba log na fasády, designové řešení dětských pokojíčků, zábavních center, školy, školky atd. včetně historických staveb.“
+        <cite>Martin Krutílek, text ze stávajícího webu <a href="https://malirstvi-krutilek.webnode.cz/" rel="noopener">malirstvi-krutilek.webnode.cz</a></cite>
+      </blockquote>
+    </div>
+    <ul class="facts">
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="#FFD166" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 26c5 0 8-3 8-6s-3-4-5-2-3 8-3 8z"/><path d="m13 19 13-14"/></svg><div><b>Od návrhu až po úklid</b><span>Od konzultace návrhu až po samotnou realizaci včetně úklidu – na míru.</span></div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="#FFD166" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 28V12l12-8 12 8v16z"/><path d="M12 28v-8h8v8"/></svg><div><b>Malé pokojíčky i velké fasády</b><span>Od dětských motivů po velkoplošné malby na fasády, i u historických budov.</span></div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="#FFD166" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="14" r="5"/><path d="M16 29s-10-8-10-15a10 10 0 0 1 20 0c0 7-10 15-10 15z"/></svg><div><b>Celá Česká republika</b><span>Hlavně Vsetínsko, Novojičínsko a Hranicko, v případě potřeby kdekoliv v ČR.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- services -->
+<section class="band" id="sluzby" aria-labelledby="sluzby-h">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Co malujeme</p>
+      <h2 id="sluzby-h">Od pohádky na zdi po čistě vymalovaný byt</h2>
+      <p>Malířství Krutílek dělá dvě věci: umělecké malby, které z obyčejné zdi udělají místo, kam se děti těší, a poctivé malířské a natěračské řemeslo.</p>
+    </div>
+    <div class="services">
+      <article class="svc">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="10" width="52" height="40" rx="6" fill="#E3F5F4" stroke="#22223B" stroke-width="3"/><path d="M6 40l14-12 10 8 10-12 18 16v4a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="#1BA5A0" stroke="#22223B" stroke-width="3" stroke-linejoin="round"/><circle cx="44" cy="20" r="5" fill="#FFD166" stroke="#22223B" stroke-width="3"/></svg>
+        <div><h3>Výtvarné malby v interiéru</h3><p>Nástěnné malby na míru – motiv navrhneme podle prostoru, barev a toho, kdo v místnosti bude trávit čas.</p></div>
+      </article>
+      <article class="svc">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 28 32 8l24 20v28H8z" fill="#FFD166" stroke="#22223B" stroke-width="3" stroke-linejoin="round"/><path d="M14 44q8-10 18-4t18-6" fill="none" stroke="#FF6F59" stroke-width="4" stroke-linecap="round"/><rect x="26" y="40" width="12" height="16" fill="#fff" stroke="#22223B" stroke-width="3"/></svg>
+        <div><h3>Malby na fasády a loga</h3><p>Velkoplošné malby na fasády i tvorba log přímo na stěnu budovy – reklama, která vydrží a je vidět z ulice.</p></div>
+      </article>
+      <article class="svc">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="36" width="48" height="14" rx="4" fill="#FF6F59" stroke="#22223B" stroke-width="3"/><path d="M8 36V24h14a6 6 0 0 1 6 6v6" fill="#fff" stroke="#22223B" stroke-width="3"/><path d="M12 50v6M52 50v6" stroke="#22223B" stroke-width="3"/><path d="M38 12l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z" fill="#FFD166" stroke="#22223B" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <div><h3>Dětské pokojíčky</h3><p>Designové řešení dětského pokoje – oblíbená zvířata, les, moře nebo vesmír rovnou na zdi místo nálepek.</p></div>
+      </article>
+      <article class="svc">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 24 32 10l22 14v32H10z" fill="#E3F5F4" stroke="#22223B" stroke-width="3" stroke-linejoin="round"/><rect x="18" y="30" width="10" height="10" fill="#FFD166" stroke="#22223B" stroke-width="3"/><rect x="36" y="30" width="10" height="10" fill="#FF6F59" stroke="#22223B" stroke-width="3"/><path d="M28 56V46h8v10" fill="#1BA5A0" stroke="#22223B" stroke-width="3"/></svg>
+        <div><h3>Školy, školky a veřejné prostory</h3><p>Výzdoby tříd, chodeb, nemocnic, zábavních center a dalších veřejných prostor, kde má zeď i něco vyprávět.</p></div>
+      </article>
+      <article class="svc">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="10" width="32" height="16" rx="4" fill="#1BA5A0" stroke="#22223B" stroke-width="3"/><path d="M42 18h8v12H28v8" fill="none" stroke="#22223B" stroke-width="3" stroke-linejoin="round"/><rect x="24" y="38" width="8" height="18" rx="2" fill="#FF6F59" stroke="#22223B" stroke-width="3"/></svg>
+        <div><h3>Běžné malování a nátěry</h3><p>Malířské a natěračské práce včetně drobných oprav – byty, domy i provozovny.</p></div>
+      </article>
+      <article class="svc">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 56V26h48v30" fill="#FFD166" stroke="#22223B" stroke-width="3"/><path d="M4 26 32 8l28 18z" fill="#FF6F59" stroke="#22223B" stroke-width="3" stroke-linejoin="round"/><path d="M16 56V36M26 56V36M38 56V36M48 56V36" stroke="#22223B" stroke-width="3"/><path d="M4 56h56" stroke="#22223B" stroke-width="3"/></svg>
+        <div><h3>Historické budovy</h3><p>Malby, malířské i natěračské práce také u historických staveb, kde se pracuje s citem k původnímu vzhledu.</p></div>
+      </article>
+      <article class="svc">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="8" width="26" height="48" fill="#E3F5F4" stroke="#22223B" stroke-width="3"/><path d="M12 20h26M12 32h26M12 44h26" stroke="#1BA5A0" stroke-width="3"/><rect x="38" y="8" width="14" height="48" rx="7" fill="#FF6F59" stroke="#22223B" stroke-width="3"/></svg>
+        <div><h3>Tapetování</h3><p>Tapetářské práce jako doplněk k malování a nátěrům – nová tapeta tam, kde se hodí víc než barva.</p></div>
+      </article>
+    </div>
+    <div class="price-line">
+      <p><b>Cenu Vám řekneme předem.</b> Běžná malířská a natěračská práce se počítá od metru podle náročnosti zakázky, výtvarná malba po konzultaci dohodou.<small>Způsob výpočtu převzat ze stávajícího webu firmy.</small></p>
+      <a class="btn btn-teal" href="tel:+420737028066">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+        Zavolat</a>
+    </div>
+  </div>
+</section>
+
+<!-- motif configurator -->
+<section class="band band-sun" id="motiv" aria-labelledby="motiv-h">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Vyzkoušejte si motiv</p>
+      <h2 id="motiv-h">Jak by to u Vás mohlo vypadat?</h2>
+      <p>Vyberte zeď a motiv. Náhled je jen hravá skica – skutečný návrh vznikne na míru Vašemu prostoru.</p>
+    </div>
+    <div class="lab">
+      <figure class="stage" style="margin:0">
+        <svg id="motifSvg" viewBox="0 0 600 380" role="img" aria-labelledby="motifTitle">
+          <title id="motifTitle">Náhled: dětský pokoj, motiv les</title>
+          <defs>
+            <clipPath id="clip-pokoj"><rect x="0" y="0" width="600" height="300"/></clipPath>
+            <clipPath id="clip-skolka"><rect x="0" y="0" width="600" height="290"/></clipPath>
+            <clipPath id="clip-fasada"><rect x="110" y="150" width="380" height="200"/></clipPath>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BDEBEE"/><stop offset="1" stop-color="#1BA5A0"/></linearGradient>
+          </defs>
+          <!-- outdoor backdrop for facade -->
+          <g class="w" data-wall="fasada">
+            <rect width="600" height="380" fill="#D7F1EF"/>
+            <circle cx="530" cy="60" r="28" fill="#FFD166" stroke="#22223B" stroke-width="3"/>
+            <path d="M0 350h600v30H0z" fill="#138A86"/>
+          </g>
+          <!-- painted motifs -->
+          <g id="motifLayer" clip-path="url(#clip-pokoj)"><g id="motifInner">
+            <g class="m" data-motif="les">
+              <rect width="600" height="380" fill="#E3F5F4"/>
+              <circle cx="470" cy="80" r="34" fill="#FFD166" stroke="#22223B" stroke-width="3"/>
+              <path d="M0 230q150-90 300-20t300-30v200H0z" fill="#1BA5A0" stroke="#22223B" stroke-width="3"/>
+              <path d="M0 280q170-60 330 0t270-10v110H0z" fill="#138A86" stroke="#22223B" stroke-width="3"/>
+              <g stroke="#22223B" stroke-width="3" stroke-linejoin="round">
+                <path d="M90 120l40 100H50z" fill="#22223B"/><path d="M200 150l34 80h-68z" fill="#FF6F59"/><circle cx="380" cy="170" r="34" fill="#FFD166"/><path d="M380 204v40" /><path d="M520 140l36 90h-72z" fill="#22223B"/>
+                <ellipse cx="300" cy="265" rx="30" ry="17" fill="#FF6F59"/><path d="M322 248l6-18 9 14 10-13 3 20q4 14-12 20-16 2-18-10z" fill="#FF6F59"/><path d="M272 262q-34-4-38-28 20 6 36 18z" fill="#FF6F59"/>
+              </g>
+              <path d="M150 70q8-8 16 0 8-8 16 0" fill="none" stroke="#22223B" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <g class="m" data-motif="more" style="display:none">
+              <rect width="600" height="380" fill="url(#sea)"/>
+              <path d="M0 70q50-20 100 0t100 0 100 0 100 0 100 0 100 0v20H0z" fill="#fff" opacity=".8"/>
+              <path d="M0 250q60-30 120 0t120 0 120 0 120 0 120 0v130H0z" fill="#138A86" stroke="#22223B" stroke-width="3"/>
+              <g stroke="#22223B" stroke-width="3" stroke-linejoin="round">
+                <path d="M150 160q40-40 110-10 20 10 0 20-70 30-110-10z" fill="#22223B"/><path d="M150 160l-30-20v40z" fill="#22223B"/><circle cx="240" cy="155" r="4" fill="#fff" stroke="none"/>
+                <path d="M380 120q25-22 55 0-30 22-55 0z" fill="#FF6F59"/><path d="M380 120l-16-12v24z" fill="#FF6F59"/>
+                <path d="M440 200q22-18 46 0-24 18-46 0z" fill="#FFD166"/><path d="M440 200l-14-10v20z" fill="#FFD166"/>
+                <path d="M90 300q20-40 20-70M110 300q-10-30 10-60" fill="none" stroke="#FFD166" stroke-width="6" stroke-linecap="round"/>
+                <path d="M470 300l10-30 10 30 26-4-22 16 10 24-24-14-24 14 10-24-22-16z" fill="#FF6F59"/>
+              </g>
+              <g fill="#fff" stroke="#22223B" stroke-width="2"><circle cx="300" cy="120" r="7"/><circle cx="312" cy="96" r="5"/><circle cx="322" cy="76" r="4"/></g>
+            </g>
+            <g class="m" data-motif="vesmir" style="display:none">
+              <rect width="600" height="380" fill="#22223B"/>
+              <g fill="#fff"><circle cx="40" cy="40" r="2.5"/><circle cx="120" cy="90" r="2"/><circle cx="210" cy="30" r="3"/><circle cx="330" cy="70" r="2"/><circle cx="420" cy="30" r="2.5"/><circle cx="560" cy="110" r="2"/><circle cx="70" cy="200" r="2"/><circle cx="260" cy="230" r="2.5"/><circle cx="520" cy="250" r="2"/><circle cx="160" cy="270" r="2"/><circle cx="380" cy="270" r="3"/></g>
+              <g stroke="#fff" stroke-width="3" stroke-linejoin="round">
+                <circle cx="160" cy="150" r="48" fill="#FF6F59"/><ellipse cx="160" cy="150" rx="82" ry="16" fill="none" stroke="#FFD166" stroke-width="6" transform="rotate(-18 160 150)"/>
+                <circle cx="480" cy="80" r="30" fill="#FFD166"/><circle cx="470" cy="72" r="6" fill="#22223B" stroke="none" opacity=".35"/>
+                <path d="M350 220q0-70 30-110 30 40 30 110z" fill="#fff" stroke="#22223B"/><circle cx="380" cy="160" r="10" fill="#1BA5A0" stroke="#22223B"/><path d="M350 200l-18 30h18zM410 200l18 30h-18z" fill="#FF6F59" stroke="#22223B"/><path d="M366 222q14 30 28 0" fill="#FFD166" stroke="#22223B"/>
+              </g>
+              <path d="M0 330q150-40 300 0t300 0v50H0z" fill="#1BA5A0"/>
+            </g>
+          </g></g>
+          <!-- room foreground -->
+          <g class="w" data-wall="pokoj">
+            <rect y="300" width="600" height="80" fill="#C99568" stroke="#22223B" stroke-width="3"/>
+            <path d="M0 330h600M0 355h600" stroke="#22223B" stroke-width="1.5" opacity=".4"/>
+            <rect x="360" y="250" width="210" height="60" rx="8" fill="#fff" stroke="#22223B" stroke-width="3"/>
+            <rect x="360" y="225" width="22" height="95" rx="4" fill="#FF6F59" stroke="#22223B" stroke-width="3"/>
+            <rect x="392" y="236" width="56" height="22" rx="10" fill="#FFD166" stroke="#22223B" stroke-width="3"/>
+            <rect x="40" y="250" width="80" height="60" fill="#1BA5A0" stroke="#22223B" stroke-width="3"/>
+            <circle cx="80" cy="245" r="10" fill="#FFD166" stroke="#22223B" stroke-width="3"/>
+          </g>
+          <!-- kindergarten foreground -->
+          <g class="w" data-wall="skolka" style="display:none">
+            <rect y="290" width="600" height="90" fill="#9FD9D5" stroke="#22223B" stroke-width="3"/>
+            <path d="M40 40h520" stroke="#22223B" stroke-width="3"/>
+            <g fill="#FFD166" stroke="#22223B" stroke-width="2"><path d="M70 40l14 18 14-18z"/><path d="M150 40l14 18 14-18z" fill="#FF6F59"/><path d="M230 40l14 18 14-18z" fill="#fff"/><path d="M310 40l14 18 14-18z"/><path d="M390 40l14 18 14-18z" fill="#FF6F59"/><path d="M470 40l14 18 14-18z" fill="#fff"/></g>
+            <g stroke="#22223B" stroke-width="3">
+              <rect x="80" y="280" width="140" height="14" rx="4" fill="#FF6F59"/><path d="M92 294v40M208 294v40"/>
+              <rect x="360" y="280" width="140" height="14" rx="4" fill="#FFD166"/><path d="M372 294v40M488 294v40"/>
+              <rect x="236" y="300" width="40" height="10" rx="3" fill="#1BA5A0"/><path d="M240 310v26M272 310v26M240 300v-28"/>
+              <rect x="516" y="300" width="40" height="10" rx="3" fill="#1BA5A0"/><path d="M520 310v26M552 310v26M552 300v-28"/>
+            </g>
+          </g>
+          <!-- facade foreground -->
+          <g class="w" data-wall="fasada" style="display:none">
+            <path d="M90 152 300 40l210 112z" fill="#FF6F59" stroke="#22223B" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="110" y="150" width="380" height="200" fill="none" stroke="#22223B" stroke-width="3"/>
+            <g fill="#fff" stroke="#22223B" stroke-width="3"><rect x="126" y="166" width="44" height="38"/><rect x="430" y="166" width="44" height="38"/></g>
+            <path d="M148 166v38M126 185h44M452 166v38M430 185h44" stroke="#22223B" stroke-width="2"/>
+            <rect x="272" y="270" width="56" height="80" fill="#22223B"/><circle cx="318" cy="312" r="3" fill="#FFD166"/>
+          </g>
+        </svg>
+        <figcaption><span id="motifLabel">Dětský pokoj · Les</span><span>skica, ne hotový návrh</span></figcaption>
+      </figure>
+      <div class="picker">
+        <fieldset>
+          <legend>1. Kterou zeď?</legend>
+          <div class="chips" role="radiogroup">
+            <div class="chip"><input type="radio" name="wall" id="w-pokoj" value="pokoj" checked><label for="w-pokoj">Dětský pokoj</label></div>
+            <div class="chip"><input type="radio" name="wall" id="w-skolka" value="skolka"><label for="w-skolka">Třída ve školce</label></div>
+            <div class="chip"><input type="radio" name="wall" id="w-fasada" value="fasada"><label for="w-fasada">Fasáda</label></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2. Jaký motiv?</legend>
+          <div class="chips">
+            <div class="chip"><input type="radio" name="motif" id="m-les" value="les" checked><label for="m-les"><i style="background:#1BA5A0"></i>Les</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m-more" value="more"><label for="m-more"><i style="background:#BDEBEE"></i>Moře</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m-vesmir" value="vesmir"><label for="m-vesmir"><i style="background:#22223B"></i>Vesmír</label></div>
+          </div>
+        </fieldset>
+        <button type="button" class="btn btn-coral" id="useMotif">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Chci tenhle motiv – do poptávky</button>
+        <p class="lab-note">Máte vlastní nápad – oblíbenou pohádku, logo školky nebo znak obce? Napište ho do poptávky, motiv se navrhne na míru.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- portfolio -->
+<section class="band" id="prace" aria-labelledby="prace-h">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Ukázky práce</p>
+      <h2 id="prace-h">Zdi, které už mají svůj příběh</h2>
+      <p>Každá fotka dostane název, místo a typ prostoru – aby rodiče, ředitelky školek i starostové hned viděli, co je možné.</p>
+    </div>
+    <div class="gallery">
+      <figure class="ph big"><span class="tape" aria-hidden="true"></span><div class="empty"><div><svg viewBox="0 0 40 40" fill="none" stroke="#0F716D" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="24" rx="4"/><circle cx="20" cy="21" r="6"/><path d="M14 9l2-4h8l2 4"/></svg>Sem přijde Vaše fotka</div></div><figcaption><b>Velkoplošná malba na fasádu</b>název stavby · obec</figcaption></figure>
+      <figure class="ph"><div class="empty"><div><svg viewBox="0 0 40 40" fill="none" stroke="#0F716D" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="24" rx="4"/><circle cx="20" cy="21" r="6"/><path d="M14 9l2-4h8l2 4"/></svg>Sem přijde Vaše fotka</div></div><figcaption><b>Dětský pokojíček</b>motiv · obec</figcaption></figure>
+      <figure class="ph"><div class="empty"><div><svg viewBox="0 0 40 40" fill="none" stroke="#0F716D" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="24" rx="4"/><circle cx="20" cy="21" r="6"/><path d="M14 9l2-4h8l2 4"/></svg>Sem přijde Vaše fotka</div></div><figcaption><b>Třída ve školce</b>mateřská škola · obec</figcaption></figure>
+      <figure class="ph"><div class="empty"><div><svg viewBox="0 0 40 40" fill="none" stroke="#0F716D" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="24" rx="4"/><circle cx="20" cy="21" r="6"/><path d="M14 9l2-4h8l2 4"/></svg>Sem přijde Vaše fotka</div></div><figcaption><b>Logo na fasádě</b>firma · obec</figcaption></figure>
+      <figure class="ph"><div class="empty"><div><svg viewBox="0 0 40 40" fill="none" stroke="#0F716D" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="24" rx="4"/><circle cx="20" cy="21" r="6"/><path d="M14 9l2-4h8l2 4"/></svg>Sem přijde Vaše fotka</div></div><figcaption><b>Historická budova</b>stavba · obec</figcaption></figure>
+      <figure class="ph"><div class="empty"><div><svg viewBox="0 0 40 40" fill="none" stroke="#0F716D" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="24" rx="4"/><circle cx="20" cy="21" r="6"/><path d="M14 9l2-4h8l2 4"/></svg>Sem přijde Vaše fotka</div></div><figcaption><b>Chodba ve škole</b>škola · obec</figcaption></figure>
+      <figure class="ph wide"><div class="empty"><div><svg viewBox="0 0 40 40" fill="none" stroke="#0F716D" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="24" rx="4"/><circle cx="20" cy="21" r="6"/><path d="M14 9l2-4h8l2 4"/></svg>Sem přijde Vaše fotka</div></div><figcaption><b>Vymalovaný interiér</b>byt · obec</figcaption></figure>
+    </div>
+    <p class="aside-note"><b>Poznámka k návrhu:</b> na stávajícím webu je 19 fotek bez jediného popisku. Tady se z nich stane portfolio rozdělené podle typu prostoru – pro školku je nejpřesvědčivější fotka jiné školky.</p>
+  </div>
+</section>
+
+<!-- steps -->
+<section class="band band-wash" id="postup" aria-labelledby="postup-h">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Jak probíhá zakázka</p>
+      <h2 id="postup-h">Od první skici po uklizenou místnost</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Návrh motivu</h3><p>Zavoláte nebo pošlete poptávku. Probereme prostor, rozměry a Vaši představu – a připraví se návrh motivu na míru.</p></li>
+      <li class="step"><h3>Schválení</h3><p>Návrh si v klidu prohlédnete, upravíme barvy nebo detaily a domluvíme cenu i termín. Malovat se začne až po Vašem souhlasu.</p></li>
+      <li class="step"><h3>Malba a úklid</h3><p>Zeď nebo fasáda se namaluje podle schváleného návrhu. Po práci se uklidí – předáváte hotovou místnost, ne staveniště.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- area -->
+<section class="band band-ink" id="kde" aria-labelledby="kde-h" style="padding-top:5.6rem">
+  <div class="wrap area">
+    <div>
+      <p class="kicker" style="color:#FFD166">Kde pracujeme</p>
+      <h2 id="kde-h">Ze Starého Jičína klidně po celém Česku</h2>
+      <p class="muted" style="margin-top:1rem">Dílna sídlí v Janovicích u Starého Jičína. Nejčastěji se maluje na Vsetínsku, Novojičínsku a Hranicku. Pro školu, obec nebo velkou fasádu se dá vyrazit kamkoliv v ČR.</p>
+      <ul class="regions">
+        <li>Novojičínsko</li><li>Vsetínsko</li><li>Hranicko</li><li class="all">celá ČR</li>
+      </ul>
+    </div>
+    <svg class="area-svg" viewBox="0 0 520 300" aria-hidden="true">
+      <path d="M40 150q20-70 90-90 60-30 120-10 70-20 140 10 70 20 100 70 10 50-40 90-60 40-150 30-80 20-150-10-70-20-60-90z" fill="none" stroke="#1BA5A0" stroke-width="4" stroke-dasharray="10 10"/>
+      <circle cx="380" cy="160" r="60" fill="#FF6F59" opacity=".25"/>
+      <circle cx="380" cy="160" r="34" fill="#FF6F59" opacity=".45"/>
+      <g stroke="#fff" stroke-width="3"><circle cx="380" cy="160" r="12" fill="#FFD166"/></g>
+      <text x="380" y="80" text-anchor="middle" fill="#fff" font-family="Karla, sans-serif" font-weight="700" font-size="24">Starý Jičín</text>
+      <g fill="#fff" font-family="Karla, sans-serif" font-size="20" font-weight="700">
+        <circle cx="420" cy="225" r="7" fill="#1BA5A0"/><text x="420" y="262" text-anchor="middle">Vsetínsko</text>
+        <circle cx="318" cy="198" r="7" fill="#1BA5A0"/><text x="300" y="205" text-anchor="end">Hranicko</text>
+      </g>
+      <g fill="#FFD166"><circle cx="130" cy="120" r="5"/><circle cx="280" cy="100" r="5"/></g>
+      <path d="M130 120q60-40 150-20" fill="none" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="4 7" stroke-linecap="round"/>
+      <text x="40" y="294" fill="#D6D6E4" font-family="Karla, sans-serif" font-size="17">schematická mapa, ne v měřítku</text>
+    </svg>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="band" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Časté otázky</p>
+      <h2 id="faq-h">Na co se lidé ptají před malbou</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Musím mít hotový nápad, co se má namalovat?</summary><p>Nemusíte. Stačí říct, pro koho je prostor a co má rád – zvířata, auta, pohádky, moře. Návrh motivu je první krok každé zakázky a přizpůsobí se rozměrům i barvám místnosti.</p></details>
+      <details><summary>Kolik stojí malba na zeď nebo fasádu?</summary><p>Záleží na ploše a náročnosti motivu. Běžné malování se počítá od metru podle náročnosti, výtvarná malba po konzultaci dohodou. Cenu Vám řekneme předem, ještě než se začne malovat.</p></details>
+      <details><summary>Dá se malba v dětském pokoji nebo ve školce umývat?</summary><p>Záleží na zvolené barvě a povrchové úpravě. Pokud má být stěna omyvatelná, je dobré to říct hned při návrhu – podle toho se volí materiál.</p></details>
+      <details><summary>Malujete i na historických budovách?</summary><p>Ano. Výtvarné, malířské i natěračské práce se dělají i u historických budov. U památkově chráněných objektů je vhodné předem ověřit podmínky u památkářů.</p></details>
+      <details><summary>Jezdíte i mimo Novojičínsko?</summary><p>Ano. Nejčastěji se pracuje na Vsetínsku, Novojičínsku a Hranicku, v případě potřeby kdekoliv v České republice.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- contact + form -->
+<section class="band band-wash" id="poptavka" aria-labelledby="pop-h">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Poptávka</p>
+      <h2 id="pop-h">Popište zeď, motiv navrhneme na míru</h2>
+      <p>Vyplňte pár údajů. Z formuláře se složí hotová zpráva, kterou pošlete SMS nebo e-mailem – nebo rovnou zavolejte.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="poptavka" id="popForm" novalidate>
+        <div class="row two">
+          <div class="fld"><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" autocomplete="name" required></div>
+          <div class="fld"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div class="row two">
+          <div class="fld"><label for="f-prostor">Co chcete malovat</label>
+            <select id="f-prostor" name="prostor">
+              <option value="Dětský pokoj">Dětský pokoj</option>
+              <option value="Třída ve školce / škole">Třída ve školce / škole</option>
+              <option value="Fasáda">Fasáda</option>
+              <option value="Logo na fasádu">Logo na fasádu</option>
+              <option value="Veřejný prostor (chodba, nemocnice, centrum)">Veřejný prostor</option>
+              <option value="Historická budova">Historická budova</option>
+              <option value="Běžné malování / nátěry">Běžné malování / nátěry</option>
+              <option value="Tapetování">Tapetování</option>
+            </select></div>
+          <div class="fld"><label for="f-motiv">Motiv <small>(nepovinné)</small></label><input id="f-motiv" name="motiv" placeholder="např. les s liškou"></div>
+        </div>
+        <div class="row two">
+          <div class="fld"><label for="f-obec">Obec</label><input id="f-obec" name="obec" autocomplete="address-level2"></div>
+          <div class="fld"><label for="f-plocha">Přibližná plocha <small>(m², nepovinné)</small></label><input id="f-plocha" name="plocha" inputmode="decimal"></div>
+        </div>
+        <div class="fld"><label for="f-zprava">Vaše představa</label><textarea id="f-zprava" name="zprava" placeholder="Pro koho je prostor, jaké barvy máte rádi, kdy by se mělo malovat…"></textarea></div>
+        <div class="form-foot">
+          <button class="btn btn-coral" type="submit">Složit poptávku</button>
+          <p>Nic se automaticky neodesílá – zprávu pošlete sami SMS nebo e-mailem.</p>
+        </div>
+        <p id="formErr" class="copy-state" style="color:#C2412D" role="alert"></p>
+        <div class="result" id="result" hidden>
+          <h3>Vaše poptávka je připravená</h3>
+          <p style="margin:0">Pošlete ji SMS na <b>737 028 066</b>, e-mailem na <b>sisoland@seznam.cz</b>, nebo zavolejte.</p>
+          <pre id="resText"></pre>
+          <div class="acts">
+            <button type="button" class="btn btn-teal" id="copyBtn">Zkopírovat text</button>
+            <a class="btn btn-ghost" id="smsLink" href="sms:+420737028066">Poslat SMS</a>
+            <a class="btn btn-ghost" id="mailLink" href="mailto:sisoland@seznam.cz">E-mail</a>
+            <a class="btn btn-ghost" href="tel:+420737028066">Zavolat</a>
+          </div>
+          <p class="copy-state" id="copyState" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <aside class="card-c" aria-labelledby="kontakt-h">
+        <h3 id="kontakt-h" style="font-size:1.6rem;margin-bottom:1.1rem">Kontakt</h3>
+        <dl>
+          <div><dt>Telefon</dt><dd><a class="bigtel" href="tel:+420737028066">737 028 066</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:sisoland@seznam.cz">sisoland@seznam.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Malířství Krutílek – Martin Krutílek<br>Janovice 39, 741 01 Starý Jičín<br><a href="https://mapy.cz/zakladni?q=Janovice%2039%2C%20Star%C3%BD%20Ji%C4%8D%C3%ADn" rel="noopener" target="_blank">Ukázat na Mapy.cz</a></dd></div>
+          <div><dt>Otevírací doba</dt><dd>Nonstop <small style="color:#4A4A63">(údaj z Firmy.cz a stávajícího webu)</small></dd></div>
+          <div><dt>IČO</dt><dd>03892832</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Malířství Krutílek</b><br>Martin Krutílek · IČO 03892832<br>Janovice 39, 741 01 Starý Jičín</div>
+    <div><a href="tel:+420737028066">737 028 066</a><br><a href="mailto:sisoland@seznam.cz">sisoland@seznam.cz</a><br><small>Nezávazný návrh webu</small></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420737028066"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>Zavolat<small>737 028 066</small></span></a>
+  <a class="c2" href="#poptavka">Poptat malbu</a>
+</nav>
+
+<script>
+(function(){
+  var svg=document.getElementById('motifSvg');
+  var layer=document.getElementById('motifLayer');
+  var label=document.getElementById('motifLabel');
+  var title=document.getElementById('motifTitle');
+  var wallNames={pokoj:'Dětský pokoj',skolka:'Třída ve školce',fasada:'Fasáda'};
+  var motifNames={les:'Les',more:'Moře',vesmir:'Vesmír'};
+  var formWall={pokoj:'Dětský pokoj',skolka:'Třída ve školce / škole',fasada:'Fasáda'};
+  function val(name){var el=document.querySelector('input[name="'+name+'"]:checked');return el?el.value:null;}
+  function render(){
+    var w=val('wall')||'pokoj', m=val('motif')||'les';
+    svg.querySelectorAll('[data-wall]').forEach(function(g){g.style.display=g.getAttribute('data-wall')===w?'':'none';});
+    svg.querySelectorAll('[data-motif]').forEach(function(g){g.style.display=g.getAttribute('data-motif')===m?'':'none';});
+    layer.setAttribute('clip-path','url(#clip-'+w+')');
+    document.getElementById('motifInner').setAttribute('transform', w==='fasada'?'translate(110 150) scale(.6334)':'');
+    var t=wallNames[w]+' · '+motifNames[m];
+    label.textContent=t; title.textContent='Náhled: '+wallNames[w].toLowerCase()+', motiv '+motifNames[m].toLowerCase();
+  }
+  document.querySelectorAll('input[name="wall"],input[name="motif"]').forEach(function(i){i.addEventListener('change',render);});
+  render();
+
+  document.getElementById('useMotif').addEventListener('click',function(){
+    var w=val('wall'), m=val('motif');
+    document.getElementById('f-prostor').value=formWall[w];
+    document.getElementById('f-motiv').value=motifNames[m]+' (vybráno v náhledu na webu)';
+    var target=document.getElementById('poptavka');
+    target.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    setTimeout(function(){document.getElementById('f-jmeno').focus({preventScroll:true});},450);
+  });
+
+  var form=document.getElementById('popForm');
+  var res=document.getElementById('result');
+  var resText=document.getElementById('resText');
+  var err=document.getElementById('formErr');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=function(id){return (document.getElementById(id).value||'').trim();};
+    if(!f('f-jmeno')||!f('f-tel')){err.textContent='Vyplňte prosím jméno a telefon, ať se Vám může pan Krutílek ozvat.';(f('f-jmeno')?document.getElementById('f-tel'):document.getElementById('f-jmeno')).focus();return;}
+    err.textContent='';
+    var lines=['Dobrý den, mám zájem o malbu.','Co: '+f('f-prostor')];
+    if(f('f-motiv'))lines.push('Motiv: '+f('f-motiv'));
+    if(f('f-obec'))lines.push('Obec: '+f('f-obec'));
+    if(f('f-plocha'))lines.push('Plocha: cca '+f('f-plocha')+' m²');
+    if(f('f-zprava'))lines.push('Představa: '+f('f-zprava'));
+    lines.push('Jméno: '+f('f-jmeno'),'Telefon: '+f('f-tel'));
+    var text=lines.join('\n');
+    resText.textContent=text;
+    document.getElementById('smsLink').href='sms:+420737028066?body='+encodeURIComponent(text);
+    document.getElementById('mailLink').href='mailto:sisoland@seznam.cz?subject='+encodeURIComponent('Poptávka malby – '+f('f-prostor'))+'&body='+encodeURIComponent(text);
+    document.getElementById('copyState').textContent='';
+    res.hidden=false;
+    res.scrollIntoView({block:'nearest'});
+  });
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var st=document.getElementById('copyState');
+    var text=resText.textContent;
+    try{
+      if(!navigator.clipboard||!navigator.clipboard.writeText)throw new Error('no clipboard');
+      navigator.clipboard.writeText(text).then(function(){st.textContent='Zkopírováno. Vložte text do SMS nebo e-mailu.';}).catch(function(){st.textContent='Kopírování se nepovedlo – označte text výše a zkopírujte ho ručně.';});
+    }catch(ex){st.textContent='Kopírování se nepovedlo – označte text výše a zkopírujte ho ručně.';}
+  });
+})();
+</script>
+</body>
+</html>

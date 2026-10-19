@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Autoservis a pneuservis Ostrava – DJ Autoservis | návrh webu</title>
+<meta name="description" content="Autoservis a pneuservis v centru Ostravy, Zborovská 381/7: opravy a diagnostika všech značek, přezouvání, autoskla a pomoc při nehodě s odtahem a servisním vozidlem. Nezávazný návrh webu.">
+<meta name="theme-color" content="#0B1426">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Sora:wght@500;600;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "DJ Autoservis",
+  "telephone": "+420732360676",
+  "email": "djautoservis@email.cz",
+  "url": "https://djautoservis.webnode.cz/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zborovská 381/7",
+    "addressLocality": "Ostrava-Moravská Ostrava",
+    "postalCode": "702 00",
+    "addressCountry": "CZ"
+  }
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+
+<style>
+/* Layout: městský pruh – půlnoční hero dělený na nadpis a schéma ulic, světlé pracovní sekce, limetka jen pro akce */
+:root{
+  --night:#0B1426;
+  --night-2:#13213A;
+  --night-line:#22365A;
+  --azure:#2EA8FF;
+  --azure-ink:#0B6FB8;
+  --paper:#F2F5F9;
+  --white:#FFFFFF;
+  --lime:#C6F432;
+  --ink:#0B1426;
+  --muted:#46526A;
+  --muted-night:#A9B6CC;
+  --rule:#D5DCE6;
+  --display:"Sora","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --r:14px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
+h1,h2,h3{font-family:var(--display);line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.65rem,1.2rem + 2vw,2.5rem);font-weight:700}
+h3{font-size:1.12rem;font-weight:600;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--azure-ink)}
+:focus-visible{outline:3px solid var(--azure);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font:600 .78rem/1.2 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--azure-ink)}
+.tag{display:inline-block;font:600 .68rem/1.2 var(--body);letter-spacing:.04em;text-transform:uppercase;background:#FFF4C2;color:#5A4500;border:1px solid #E6CF6A;border-radius:999px;padding:3px 8px;vertical-align:middle;white-space:nowrap}
+.section{padding-block:clamp(56px,8vw,96px)}
+.lead{color:var(--muted);max-width:60ch;font-size:1.05rem}
+
+/* banner */
+.demo{background:var(--lime);color:var(--ink);font:600 .85rem/1.35 var(--body);text-align:center}
+.demo .wrap{padding-block:8px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--night);color:var(--white);border-bottom:1px solid var(--night-line)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font:800 1.1rem/1 var(--display);letter-spacing:-.02em}
+.brand svg{flex:none}
+.brand small{display:block;font:500 .7rem/1.2 var(--body);color:var(--muted-night);letter-spacing:.02em;margin-top:3px}
+.nav{display:none;gap:22px;margin-left:auto}
+.nav a{color:var(--muted-night);text-decoration:none;font-weight:500;font-size:.95rem}
+.nav a:hover{color:var(--white)}
+.top-tel{margin-left:auto;display:inline-flex;align-items:center;gap:8px;color:var(--white);text-decoration:none;font:700 1rem/1 var(--display);padding:10px 14px;border:1px solid var(--night-line);border-radius:999px;white-space:nowrap}
+.top-tel:hover{border-color:var(--azure)}
+.top-tel svg{color:var(--azure)}
+@media (min-width:960px){.nav{display:flex}.top-tel{margin-left:8px}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:12px;font:700 1rem/1 var(--display);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-ghost{background:transparent;color:var(--white);border-color:#3A5480}
+.btn-ghost:hover{border-color:var(--azure)}
+.btn-dark{background:var(--night);color:var(--white)}
+.btn-line{background:var(--white);color:var(--ink);border-color:var(--rule)}
+.btn-line:hover{border-color:var(--azure-ink)}
+
+/* hero */
+.hero{background:var(--night);color:var(--white);overflow:hidden}
+.hero .wrap{display:grid;gap:28px;padding-block:28px 40px}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font:600 .8rem/1.2 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--azure)}
+.hero-kicker i{width:8px;height:8px;border-radius:50%;background:var(--lime);display:inline-block}
+.hero h1{font-size:clamp(2.05rem,1.3rem + 3.6vw,3.9rem);font-weight:800;margin-top:12px}
+.hero h1 em{font-style:normal;color:var(--azure)}
+.hero-sub{color:var(--muted-night);margin-top:14px;max-width:52ch;font-size:1.04rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero-cta .btn{flex:1 1 200px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:22px 0 0;padding:0;list-style:none;color:var(--white);font-size:.92rem}
+.hero-facts li{display:flex;align-items:center;gap:8px}
+.hero-facts svg{color:var(--lime);flex:none}
+.map-card{position:relative;border-radius:20px;background:var(--night-2);border:1px solid var(--night-line);overflow:hidden}
+.map-card svg{display:block;width:100%;height:auto}
+.map-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--night-line);font-size:.85rem;color:var(--muted-night)}
+.map-foot a{color:var(--azure);font-weight:600;text-decoration:none}
+.pulse{transform-origin:300px 214px;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.4);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;padding-block:56px 64px;gap:48px}}
+
+/* guide */
+.guide{background:var(--white);border-bottom:1px solid var(--rule)}
+.guide-head{display:grid;gap:10px;margin-bottom:28px}
+.sit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sit button{display:flex;flex-direction:column;align-items:flex-start;gap:10px;text-align:left;padding:16px;border-radius:var(--r);border:2px solid var(--rule);background:var(--paper);color:var(--ink);font:600 1rem/1.25 var(--display);cursor:pointer;transition:border-color .15s ease,background .15s ease;min-width:0}
+.sit button span{font:400 .85rem/1.35 var(--body);color:var(--muted)}
+.sit button svg{color:var(--azure-ink)}
+.sit button:hover{border-color:var(--azure-ink)}
+.sit button[aria-pressed="true"]{background:var(--night);border-color:var(--night);color:var(--white)}
+.sit button[aria-pressed="true"] span{color:var(--muted-night)}
+.sit button[aria-pressed="true"] svg{color:var(--lime)}
+@media (min-width:760px){.sit{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.answer{margin-top:16px;display:grid;gap:0;border-radius:18px;overflow:hidden;border:2px solid var(--night)}
+.answer-main{padding:22px;background:var(--night);color:var(--white);display:grid;gap:14px;align-content:start}
+.answer-main h3{font-size:1.35rem}
+.answer-main ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.answer-main li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:#E3E9F3}
+.answer-main li svg{color:var(--lime);margin-top:4px}
+.answer-note{font-size:.88rem;color:var(--muted-night);border-top:1px solid var(--night-line);padding-top:12px}
+.answer-act{padding:22px;background:var(--paper);display:grid;gap:12px;align-content:start;min-width:0}
+.answer-act label{font:600 .85rem/1.2 var(--display)}
+.answer-act textarea{width:100%;min-height:150px;resize:vertical;font:400 .98rem/1.5 var(--body);color:var(--ink);background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:12px}
+.answer-act .row{display:flex;flex-wrap:wrap;gap:10px}
+.answer-act .row .btn{flex:1 1 180px}
+.small{font-size:.85rem;color:var(--muted)}
+.copy{background:none;border:0;color:var(--azure-ink);font:600 .85rem/1 var(--body);cursor:pointer;padding:4px 0;text-decoration:underline;text-underline-offset:3px}
+@media (min-width:860px){.answer{grid-template-columns:1.1fr .9fr}}
+
+/* services */
+.svc-grid{display:grid;gap:14px;margin-top:32px}
+@media (min-width:640px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.svc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.svc{background:var(--white);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--night);color:var(--azure);display:grid;place-items:center}
+.svc p{color:var(--muted);margin-top:6px;font-size:.98rem}
+.svc-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px}
+
+/* price list */
+.prices{background:var(--white);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.price-grid{display:grid;gap:32px;margin-top:8px}
+@media (min-width:900px){.price-grid{grid-template-columns:.85fr 1.15fr;align-items:start}}
+.ptable{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ptable th,.ptable td{padding:14px 0;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+.ptable td:last-child{text-align:right;font:700 1.05rem/1.3 var(--display);white-space:nowrap;padding-left:16px}
+.ptable caption{text-align:left;padding-bottom:10px}
+.ptable small{display:block;color:var(--muted);font-size:.85rem}
+
+/* tyres */
+.tyres{background:var(--night);color:var(--white)}
+.tyres .lead{color:var(--muted-night)}
+.tyres .eyebrow{color:var(--azure)}
+.ty-grid{display:grid;gap:16px;margin-top:32px}
+@media (min-width:900px){.ty-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.law{border-radius:var(--r);padding:22px;background:var(--night-2);border:1px solid var(--night-line);display:grid;gap:8px;align-content:start}
+.law b{font:800 2.4rem/1 var(--display);color:var(--azure);letter-spacing:-.03em}
+.law p{color:#D8E0EC}
+.law.lime{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.law.lime b{color:var(--ink)}
+.law.lime p{color:var(--ink)}
+.law.lime .btn{margin-top:8px;justify-self:start}
+.brands{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.brands span{border:1px solid #3A5480;border-radius:999px;padding:4px 12px;font:600 .85rem/1.4 var(--display);color:var(--white)}
+
+/* trust + steps */
+.trust{display:grid;gap:14px;margin-top:28px}
+@media (min-width:760px){.trust{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.trust div{border-top:3px solid var(--night);padding-top:14px}
+.trust b{display:block;font:700 1.05rem/1.25 var(--display)}
+.trust p{color:var(--muted);font-size:.95rem;margin-top:6px}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.steps li{counter-increment:s;background:var(--white);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:grid;gap:8px}
+.steps li::before{content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;font:800 1rem/1 var(--display)}
+.steps p{color:var(--muted)}
+
+/* order form */
+.order{background:var(--white);border-top:1px solid var(--rule)}
+.order-grid{display:grid;gap:28px}
+@media (min-width:900px){.order-grid{grid-template-columns:.8fr 1.2fr;align-items:start}}
+form{display:grid;gap:14px;background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:22px}
+.f2{display:grid;gap:14px}
+@media (min-width:600px){.f2{grid-template-columns:1fr 1fr}}
+.field{display:grid;gap:6px;min-width:0}
+.field label{font:600 .85rem/1.2 var(--display)}
+.field input,.field select,.field textarea{width:100%;font:400 1rem/1.4 var(--body);color:var(--ink);background:var(--white);border:1px solid #B9C4D3;border-radius:10px;padding:12px;min-height:48px}
+.field textarea{min-height:96px;resize:vertical}
+.form-actions{display:flex;flex-wrap:wrap;gap:10px}
+.form-actions .btn{flex:1 1 200px}
+.call-box{background:var(--night);color:var(--white);border-radius:18px;padding:22px;display:grid;gap:10px;margin-top:20px}
+.call-box a{color:var(--white);font:800 1.7rem/1.1 var(--display);text-decoration:none;letter-spacing:-.02em}
+
+/* contact */
+.contact-grid{display:grid;gap:16px;margin-top:28px}
+@media (min-width:860px){.contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cbox{background:var(--white);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:grid;gap:8px;align-content:start;min-width:0}
+.cbox h3{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--azure-ink)}
+.cbox p,.cbox a{font-size:1.05rem;overflow-wrap:anywhere}
+.cbox .big{font:800 1.5rem/1.15 var(--display);color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+
+/* faq */
+.faq{display:grid;gap:10px;margin-top:28px;max-width:860px}
+details{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:0 20px}
+summary{cursor:pointer;list-style:none;padding:18px 0;font:600 1.05rem/1.35 var(--display);display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:600 1.4rem/1 var(--display);color:var(--azure-ink)}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:18px;color:var(--muted)}
+
+/* footer + sticky */
+footer{background:var(--night);color:var(--muted-night);font-size:.9rem}
+footer .wrap{padding-block:32px 40px;display:grid;gap:8px}
+footer b{color:var(--white);font-family:var(--display)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--night);border-top:1px solid var(--night-line);display:flex;gap:8px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1;min-height:50px;font-size:.95rem;padding:0 10px;white-space:nowrap}
+.sticky .btn:first-child{flex:1.7}
+footer .wrap{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){.sticky{display:none}footer .wrap{padding-bottom:40px}}
+</style>
+</head>
+<body>
+
+<div class="demo"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy DJ Autoservis</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="DJ Autoservis – úvod">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#2EA8FF"/><path d="M8 21.5h18M10 21.5l2.2-6.2c.3-.8 1-1.3 1.9-1.3h5.8c.9 0 1.6.5 1.9 1.3l2.2 6.2" stroke="#0B1426" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12.5" cy="23.5" r="2.2" fill="#0B1426"/><circle cx="21.5" cy="23.5" r="2.2" fill="#0B1426"/></svg>
+      <span>DJ Autoservis<small>Zborovská 7 · Ostrava</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#co-se-stalo">Co se stalo?</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#prezouvani">Přezouvání</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="top-tel" href="tel:+420732360676" aria-label="Zavolat 732 360 676">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      732 360 676
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-kicker"><i></i>Autoservis a pneuservis · Moravská Ostrava</span>
+      <h1>Autoservis v <em>centru Ostravy</em>. Opravy, pneu i sklo na jedné adrese.</h1>
+      <p class="hero-sub">Opravy osobních i užitkových vozů všech typů a značek, diagnostika počítačem, pneuservis, autoskla a pomoc při nehodě – od odtahu po jednání s pojišťovnou.</p>
+      <div class="hero-cta">
+        <a class="btn btn-lime" href="#objednat">Objednat servis</a>
+        <a class="btn btn-ghost" href="tel:+420732360676">Zavolat 732 360 676</a>
+      </div>
+      <ul class="hero-facts">
+        <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Všechny typy a značky</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Náhradní servisní vozidlo</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Ceník základních úkonů</li>
+      </ul>
+    </div>
+
+    <figure class="map-card" style="margin:0">
+      <svg viewBox="0 0 600 420" role="img" aria-label="Schéma ulic centra Ostravy s označeným servisem na Zborovské 381/7">
+        <rect width="600" height="420" fill="#13213A"/>
+        <!-- bloky domů -->
+        <g fill="#182A48">
+          <rect x="24" y="24" width="120" height="70" rx="6"/><rect x="164" y="24" width="96" height="70" rx="6"/><rect x="330" y="24" width="110" height="60" rx="6"/><rect x="462" y="24" width="114" height="80" rx="6"/>
+          <rect x="24" y="116" width="120" height="78" rx="6"/><rect x="164" y="116" width="96" height="78" rx="6"/><rect x="340" y="104" width="100" height="66" rx="6"/><rect x="462" y="126" width="114" height="74" rx="6"/>
+          <rect x="24" y="250" width="86" height="64" rx="6"/><rect x="130" y="250" width="130" height="64" rx="6"/><rect x="350" y="248" width="90" height="70" rx="6"/><rect x="462" y="226" width="114" height="92" rx="6"/>
+          <rect x="24" y="336" width="236" height="60" rx="6"/><rect x="350" y="340" width="226" height="56" rx="6"/>
+        </g>
+        <!-- řeka (abstrakce) -->
+        <path d="M600 300 C 540 320, 520 380, 470 420 L 520 420 C 560 390, 575 345, 600 335 Z" fill="#1B4E86" opacity=".55"/>
+        <!-- ulice -->
+        <g stroke="#2C4670" stroke-linecap="round" fill="none">
+          <path d="M0 105 H600" stroke-width="12"/>
+          <path d="M0 232 H600" stroke-width="20"/>
+          <path d="M0 326 H340" stroke-width="12"/>
+          <path d="M152 0 V420" stroke-width="12"/>
+          <path d="M300 0 V420" stroke-width="22"/>
+          <path d="M451 0 V340" stroke-width="12"/>
+          <path d="M270 0 L 330 90" stroke-width="8"/>
+          <path d="M120 232 L 0 300" stroke-width="8"/>
+        </g>
+        <!-- trasa k servisu -->
+        <path d="M0 232 H 300 V 214" stroke="#2EA8FF" stroke-width="5" fill="none" stroke-dasharray="2 12" stroke-linecap="round"/>
+        <!-- pin -->
+        <circle class="pulse" cx="300" cy="214" r="34" fill="#C6F432" opacity=".5"/>
+        <path d="M300 222 c-16-18-24-30-24-42a24 24 0 0 1 48 0c0 12-8 24-24 42z" fill="#C6F432" transform="translate(0 -6)"/>
+        <circle cx="300" cy="174" r="9" fill="#0B1426"/>
+        <!-- štítek -->
+        <g transform="translate(318 130)">
+          <rect width="200" height="58" rx="10" fill="#0B1426" stroke="#2EA8FF" stroke-width="1.5"/>
+          <text x="14" y="25" fill="#FFFFFF" font-family="Sora, sans-serif" font-size="16" font-weight="700">DJ Autoservis</text>
+          <text x="14" y="45" fill="#A9B6CC" font-family="DM Sans, sans-serif" font-size="13">Zborovská 381/7</text>
+        </g>
+        <text x="24" y="222" fill="#7F93B3" font-family="DM Sans, sans-serif" font-size="12" letter-spacing="2">CENTRUM</text>
+        <g transform="translate(556 386)"><circle r="16" fill="#0B1426" stroke="#2C4670"/><path d="M0 -10 L5 4 L0 1 L-5 4Z" fill="#2EA8FF"/></g>
+      </svg>
+      <figcaption class="map-foot"><span>Schéma, ne přesná mapa</span><a href="https://mapy.cz/zakladni?q=Zborovsk%C3%A1%20381%2F7%2C%20Ostrava" target="_blank" rel="noopener">Navigovat v Mapy.cz →</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PRŮVODCE -->
+<section class="guide section" id="co-se-stalo">
+  <div class="wrap">
+    <div class="guide-head">
+      <span class="eyebrow">Průvodce</span>
+      <h2>Co se stalo? Vyberte situaci.</h2>
+      <p class="lead">Ukážeme, co pro Vás uděláme, a připravíme zprávu, kterou nám jedním tlačítkem pošlete jako SMS. Stačí doplnit vůz.</p>
+    </div>
+    <div class="sit" role="group" aria-label="Situace">
+      <button type="button" data-k="porucha" aria-pressed="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+        Porucha nebo kontrolka<span>Auto zlobí, něco klepe, svítí kontrolka</span>
+      </button>
+      <button type="button" data-k="pneu" aria-pressed="false">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="2"/></svg>
+        Pneumatiky<span>Přezutí na zimu, nové pneu</span>
+      </button>
+      <button type="button" data-k="sklo" aria-pressed="false">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l2-9c.3-1.2 1.3-2 2.5-2h9c1.2 0 2.2.8 2.5 2l2 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 7l-2 4 3 1-2 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Prasklé sklo<span>Kamínek, prasklina, rozbité okno</span>
+      </button>
+      <button type="button" data-k="nehoda" aria-pressed="false">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v5M12 17.5v.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Nehoda, odtah<span>Nabourali Vás, auto nepojede</span>
+      </button>
+    </div>
+
+    <div class="answer" aria-live="polite">
+      <div class="answer-main">
+        <h3 id="a-title">Najdeme závadu a opravíme ji</h3>
+        <ul id="a-list"></ul>
+        <p class="answer-note" id="a-note"></p>
+      </div>
+      <div class="answer-act">
+        <label for="a-msg">Zpráva pro servis (upravte podle sebe)</label>
+        <textarea id="a-msg"></textarea>
+        <div class="row">
+          <a class="btn btn-dark" id="a-sms" href="sms:+420732360676">Poslat SMS</a>
+          <a class="btn btn-lime" href="tel:+420732360676">Zavolat</a>
+        </div>
+        <p class="small">Číslo servisu: <b>732 360 676</b> · <button type="button" class="copy" id="a-copy">Zkopírovat zprávu</button> <span id="a-copied" class="small" hidden>Zkopírováno</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY -->
+<section class="section" id="sluzby">
+  <div class="wrap">
+    <span class="eyebrow">Služby</span>
+    <h2>Co u nás na Zborovské uděláte</h2>
+    <p class="lead" style="margin-top:12px">Kompletní servis osobních a užitkových vozů všech typů a značek. Vše na jedné adrese v centru.</p>
+    <div class="svc-grid">
+      <article class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><div><h3>Opravy a diagnostika</h3><p>Závadu najdeme diagnostikou počítačem a opravíme osobní i užitkový vůz jakékoli značky.</p></div></article>
+      <article class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><div><h3>Pneuservis</h3><p>Pneumatiky vyměníme, kola vyvážíme a dohustíme; nové pneu Vám rovnou prodáme.</p></div></article>
+      <article class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l2-9c.3-1.2 1.3-2 2.5-2h9c1.2 0 2.2.8 2.5 2l2 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><div><h3>Autoskla</h3><p>Prasklé čelní sklo nebo rozbité okno Vám vyměníme.</p></div></article>
+      <article class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16h13V7H2zM15 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="currentColor"/><circle cx="18" cy="18" r="2" fill="currentColor"/></svg></div><div><h3>Pomoc při nehodách</h3><p>Zajistíme odtah, zapůjčíme náhradní servisní vozidlo a vyřídíme veškerý kontakt s pojišťovnou.</p></div></article>
+      <article class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Příprava a zajištění STK</h3><p>Vůz na technickou připravíme a STK Vám zajistíme a vyřídíme.</p></div></article>
+      <article class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><div><h3>Náhradní díly</h3><p>Náhradní díly pro opravu Vám obstaráme a prodáme.</p></div></article>
+    </div>
+    <div class="svc-foot">
+      <a class="btn btn-dark" href="#objednat">Objednat servis</a>
+      <span class="small">Cenu dalších oprav Vám řekneme předem po telefonu.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CENÍK -->
+<section class="prices section" id="cenik">
+  <div class="wrap price-grid">
+    <div>
+      <span class="eyebrow">Ceník základních úkonů</span>
+      <h2 style="margin-top:8px">Víte dopředu, kolik zaplatíte</h2>
+      <p class="lead" style="margin-top:12px">Příklady cen základních úkonů. U ostatních oprav, dílů a pneumatik Vám cenu řekneme předem.</p>
+      <p class="small" style="margin-top:14px"><span class="tag">ukázkový text</span> Ceny převzaty ze stávajícího webu firmy – před spuštěním ověřit aktuálnost.</p>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="ptable">
+        <tbody>
+          <tr><td>Diagnostika závad</td><td>250 Kč</td></tr>
+          <tr><td>Výměna oleje 10W40<small>5 l oleje, olejový filtr, práce</small></td><td>1 500 Kč</td></tr>
+          <tr><td>Výměna oleje 5W40<small>5 l oleje, olejový filtr, práce</small></td><td>2 000 Kč</td></tr>
+          <tr><td>Kompletní přezutí pneumatik<small>včetně vyvážení</small></td><td>500 Kč</td></tr>
+          <tr><td>Výměna kol na discích</td><td>300 Kč</td></tr>
+          <tr><td>Nástřik podvozku<small>včetně dutin</small></td><td>1 800 Kč</td></tr>
+          <tr><td>STK – příprava a vyřízení<small>dle stávajícího ceníku: „STK, emise, příprava, vyřízení“</small></td><td>3 000 Kč</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PŘEZOUVÁNÍ -->
+<section class="tyres section" id="prezouvani">
+  <div class="wrap">
+    <span class="eyebrow">Přezouvání · sezóna 2026</span>
+    <h2 style="margin-top:8px">Zimní pneu nasadíme dřív, než napadne sníh</h2>
+    <p class="lead" style="margin-top:12px">Doporučíme Vám nejvhodnější pneumatiky pro Váš vůz, vyměníme je, kola vyvážíme a dohustíme. Prodáváme letní, zimní i celoroční dezény.</p>
+    <div class="brands" aria-label="Značky pneumatik"><span>Barum</span><span>Continental</span><span>Goodride</span></div>
+    <div class="ty-grid">
+      <div class="law"><b>1. 11. – 31. 3.</b><p>V tomto období jsou zimní pneumatiky povinné, když je na silnici sníh, led nebo námraza.</p></div>
+      <div class="law"><b>4 mm</b><p>Minimální hloubka dezénu zimních pneumatik u osobních aut. Méně už zákon nepočítá jako zimní pneu.</p></div>
+      <div class="law lime"><b>500 Kč</b><p>Kompletní přezutí včetně vyvážení. Pro věrné zákazníky 450 Kč. <span class="tag">ukázkový text</span></p><a class="btn btn-dark" href="#objednat" data-pick="Přezutí pneumatik">Objednat přezutí</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- DŮVĚRA + JAK TO PROBÍHÁ -->
+<section class="section" id="jak">
+  <div class="wrap">
+    <span class="eyebrow">Proč DJ Autoservis</span>
+    <h2 style="margin-top:8px">Jedna adresa pro opravu, pneu, sklo i nehodu</h2>
+    <div class="trust">
+      <div><b>Přímo v centru Ostravy</b><p>Zborovská 381/7, Moravská Ostrava – snadno dostupné z celého centra.</p></div>
+      <div><b>Dlouholeté zkušenosti</b><p>Nabízíme Vám dlouholeté zkušenosti se servisem a údržbou vozidel.</p></div>
+      <div><b>Bez auta nezůstanete</b><p>Při nehodě Vám zapůjčíme náhradní servisní vozidlo.</p></div>
+      <div><b>Pojišťovnu vyřídíme</b><p>Veškerý kontakt s pojišťovnou po nehodě převezmeme za Vás.</p></div>
+    </div>
+
+    <h2 style="margin-top:64px">Jak to probíhá</h2>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo pošlete SMS</h3><p>Popíšete, co se děje, a domluvíme termín, kdy auto přistavíte.</p></li>
+      <li><h3>Řekneme Vám cenu předem</h3><p>Po diagnostice víte, co je potřeba opravit a kolik to bude stát.</p></li>
+      <li><h3>Vyzvednete hotové auto</h3><p>Opravený vůz si vyzvednete u nás na Zborovské 381/7.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- OBJEDNAT -->
+<section class="order section" id="objednat">
+  <div class="wrap order-grid">
+    <div>
+      <span class="eyebrow">Objednat servis</span>
+      <h2 style="margin-top:8px">Napište, co potřebujete. Ozveme se s termínem.</h2>
+      <p class="lead" style="margin-top:12px">Formulář nic neodesílá na server – připraví SMS nebo e-mail, který odešlete ze svého telefonu.</p>
+      <div class="call-box">
+        <span class="small" style="color:var(--muted-night)">Rychlejší je zavolat</span>
+        <a href="tel:+420732360676">732 360 676</a>
+      </div>
+    </div>
+    <form id="order" novalidate>
+      <div class="f2">
+        <div class="field"><label for="o-name">Jméno</label><input id="o-name" autocomplete="name" placeholder="Jan Novák"></div>
+        <div class="field"><label for="o-phone">Telefon</label><input id="o-phone" type="tel" autocomplete="tel" placeholder="777 123 456"></div>
+      </div>
+      <div class="f2">
+        <div class="field"><label for="o-car">Vůz</label><input id="o-car" placeholder="Škoda Octavia, 2015"></div>
+        <div class="field"><label for="o-what">Co potřebujete</label>
+          <select id="o-what">
+            <option>Oprava / porucha</option><option>Diagnostika závad</option><option>Přezutí pneumatik</option><option>Výměna oleje</option><option>Autosklo</option><option>Příprava a zajištění STK</option><option>Pomoc po nehodě</option><option>Jiné</option>
+          </select></div>
+      </div>
+      <div class="field"><label for="o-when">Kdy by se Vám hodilo</label><input id="o-when" placeholder="např. úterý dopoledne"></div>
+      <div class="field"><label for="o-note">Poznámka</label><textarea id="o-note" placeholder="Co se s autem děje, rozměr pneumatik…"></textarea></div>
+      <div class="form-actions">
+        <a class="btn btn-lime" id="o-sms" href="sms:+420732360676">Odeslat jako SMS</a>
+        <a class="btn btn-line" id="o-mail" href="mailto:djautoservis@email.cz">Odeslat e-mailem</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section" id="kontakt">
+  <div class="wrap">
+    <span class="eyebrow">Kontakt</span>
+    <h2 style="margin-top:8px">Zborovská 381/7, Ostrava</h2>
+    <div class="contact-grid">
+      <div class="cbox"><h3>Telefon a e-mail</h3><a class="big" href="tel:+420732360676">732 360 676</a><a href="mailto:djautoservis@email.cz">djautoservis@email.cz</a></div>
+      <div class="cbox"><h3>Adresa</h3><p>DJ Autoservis<br>Zborovská 381/7<br>702 00 Ostrava-Moravská Ostrava</p><a href="https://mapy.cz/zakladni?q=Zborovsk%C3%A1%20381%2F7%2C%20Ostrava" target="_blank" rel="noopener">Otevřít v Mapy.cz →</a></div>
+      <div class="cbox"><h3>Servisní příjem</h3><p><b>Po–Pá 8–16</b> <span class="tag">ukázkový text – ověřit</span></p><p class="small">Zdroje uvádějí různé časy, před spuštěním potvrdit s majitelem.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Časté otázky</span>
+    <h2 style="margin-top:8px">Na co se řidiči ptají</h2>
+    <div class="faq">
+      <details><summary>Kdy musím mít zimní pneumatiky?</summary><p>Od 1. listopadu do 31. března, pokud je na silnici sníh, led nebo námraza. Přezutí je dobré domluvit s předstihem, než začne sezóna.</p></details>
+      <details><summary>Jak hluboký musí být dezén zimních pneumatik?</summary><p>U osobních aut nejméně 4 mm. Pneumatiku s mělčím dezénem zákon za zimní nepovažuje.</p></details>
+      <details><summary>Nabourali mě. Co mám udělat?</summary><p>Zavolejte na 732 360 676. Vyplňte se druhým řidičem jeden Záznam o dopravní nehodě, přesně označte místo střetu, nakreslete nákres a oba ho podepište. Odtah, náhradní vůz a jednání s pojišťovnou zajistíme my.</p></details>
+      <details><summary>Můžu si na opravu přivézt vlastní díl?</summary><p>Díly zakoupené jinde nemontujeme, protože u nich nemůžeme zaručit správnou funkci. Potřebný díl Vám obstaráme sami.</p></details>
+      <details><summary>Kolik stojí oprava?</summary><p>Záleží na závadě. Po diagnostice Vám cenu řekneme předem, ještě než začneme pracovat.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>DJ Autoservis</b>
+    <span>Zborovská 381/7, 702 00 Ostrava-Moravská Ostrava · 732 360 676 · djautoservis@email.cz</span>
+    <span>Nezávazný návrh webu. Není to oficiální stránka firmy DJ Autoservis.</span>
+  </div>
+</footer>
+
+<nav class="sticky" aria-label="Rychlý kontakt">
+  <a class="btn btn-lime" href="tel:+420732360676">Zavolat 732 360 676</a>
+  <a class="btn btn-ghost" href="#objednat">Objednat</a>
+</nav>
+
+<script>
+(function(){
+  var TEL='+420732360676';
+  var ck='<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var data={
+    porucha:{t:'Najdeme závadu a opravíme ji',
+      l:['Diagnostika závad počítačem','Opravy osobních i užitkových vozů všech typů a značek','Díly obstaráme sami, aby oprava fungovala'],
+      n:'Diagnostika závad 250 Kč podle stávajícího ceníku (ověřit). Cenu opravy řekneme předem.',
+      m:'Dobrý den, mám problém s autem (značka, model): \nProjevuje se to takto: \nKdy můžu přijet na diagnostiku? Děkuji.'},
+    pneu:{t:'Přezujeme, vyvážíme, dohustíme',
+      l:['Doporučíme nejvhodnější pneumatiky pro Váš vůz','Letní, zimní i celoroční dezény Barum, Continental, Goodride','Kompletní přezutí včetně vyvážení'],
+      n:'Zimní pneu jsou povinné od 1. 11. do 31. 3. při zimních podmínkách na silnici. Minimální dezén 4 mm.',
+      m:'Dobrý den, chci přezout na zimní pneumatiky. Vůz: \nRozměr pneu: \nMám vlastní kola na discích: ano/ne. Kdy máte volný termín? Děkuji.'},
+    sklo:{t:'Vyměníme poškozené autosklo',
+      l:['Výměna čelního skla i oken','Domluvíme termín, kdy auto přistavíte na Zborovskou'],
+      n:'Pošlete typ vozu a které sklo je poškozené, ozveme se s termínem.',
+      m:'Dobrý den, potřebuji vyměnit autosklo (čelní / boční / zadní). Vůz: \nKdy by to šlo? Děkuji.'},
+    nehoda:{t:'Po nehodě se postaráme o všechno',
+      l:['Zajistíme odtah Vašeho vozidla','Zapůjčíme náhradní servisní vozidlo','Zajistíme veškerý kontakt s pojišťovnou'],
+      n:'Spěcháte? Raději rovnou volejte 732 360 676. Se druhým řidičem vyplňte a podepište Záznam o dopravní nehodě.',
+      m:'Dobrý den, měl(a) jsem nehodu. Místo: \nVůz: \nPotřebuji: odtah / náhradní vozidlo / opravu. Prosím o zavolání.'}
+  };
+  var btns=document.querySelectorAll('.sit button'),
+      ti=document.getElementById('a-title'),li=document.getElementById('a-list'),no=document.getElementById('a-note'),
+      msg=document.getElementById('a-msg'),sms=document.getElementById('a-sms');
+  function smsHref(t){return 'sms:'+TEL+'?&body='+encodeURIComponent(t)}
+  function show(k){
+    var d=data[k];
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.k===k?'true':'false')});
+    ti.textContent=d.t;
+    li.innerHTML=d.l.map(function(x){return '<li>'+ck+'<span>'+x+'</span></li>'}).join('');
+    no.textContent=d.n;msg.value=d.m;sms.href=smsHref(d.m);
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.k)})});
+  msg.addEventListener('input',function(){sms.href=smsHref(msg.value)});
+  document.getElementById('a-copy').addEventListener('click',function(){
+    var ok=document.getElementById('a-copied');
+    function done(){ok.hidden=false;setTimeout(function(){ok.hidden=true},1800)}
+    try{navigator.clipboard.writeText(msg.value).then(done,function(){msg.select()})}catch(e){msg.select()}
+  });
+  show('porucha');
+
+  // objednávka
+  var ids=['o-name','o-phone','o-car','o-what','o-when','o-note'],f={};
+  ids.forEach(function(i){f[i]=document.getElementById(i)});
+  function text(){
+    return 'Dobrý den, chci objednat: '+f['o-what'].value+
+      (f['o-car'].value?'\nVůz: '+f['o-car'].value:'')+
+      (f['o-when'].value?'\nTermín: '+f['o-when'].value:'')+
+      (f['o-note'].value?'\nPoznámka: '+f['o-note'].value:'')+
+      '\n'+(f['o-name'].value||'')+(f['o-phone'].value?', tel. '+f['o-phone'].value:'');
+  }
+  function upd(){
+    var t=text();
+    document.getElementById('o-sms').href=smsHref(t);
+    document.getElementById('o-mail').href='mailto:djautoservis@email.cz?subject='+encodeURIComponent('Objednávka servisu – '+f['o-what'].value)+'&body='+encodeURIComponent(t);
+  }
+  ids.forEach(function(i){f[i].addEventListener('input',upd);f[i].addEventListener('change',upd)});
+  document.getElementById('order').addEventListener('submit',function(e){e.preventDefault()});
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){f['o-what'].value=a.dataset.pick;upd()})});
+  upd();
+})();
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Koupelny Gryč</title>
+<meta name="description" content="Rekonstrukce koupelen a bytových jader v Třinci a na Těšínsku od roku 2000. Koupelny Gryč – obklady, sádrokartony, rekonstrukce bytů a domů, vzorková prodejna v Třinci-Oldřichovicích.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Libre+Bodoni:ital,wght@0,500;0,700;1,500&display=swap&subset=latin-ext">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Koupelny Gryč",
+  "description": "Rekonstrukce koupelen a bytových jader, rekonstrukce bytů a rodinných domů, obklady, sádrokartony, strojní omítky, kuchyně a skříně na míru.",
+  "telephone": "+420605786074",
+  "email": "radimgryc@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "66164559"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lužní 74",
+    "addressLocality": "Třinec-Lyžbice",
+    "postalCode": "739 61",
+    "addressCountry": "CZ"
+  },
+  "sameAs": ["https://www.facebook.com/Koupelny-Gry%C4%8D-T%C5%99inec-1784210631840471/"],
+  "department": {
+    "@type": "Store",
+    "name": "Koupelny Gryč – vzorková prodejna",
+    "telephone": "+420608735323",
+    "email": "koupelny@sikotrinec.cz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Oldřichovice 934",
+      "addressLocality": "Třinec",
+      "postalCode": "739 61",
+      "addressCountry": "CZ"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+    ]
+  }
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/*
+  Koncept rozložení: „spárořez“.
+  Hero = tmavá břidlicová spára s rastrem obkladaček a obřím nápisem přes celou šířku.
+  Pak pískovcové pásy (světlé) střídané s jedním mořsky zeleným a jedním břidlicovým.
+  Výrazný prvek: posuvník Před / Po (panelové jádro → obložená koupelna) s volbou typu jádra A / F / T.
+  Mosaz jen jako akcent (linky, tlačítka, čísla kroků). Jeden vzhled, bez tmavého režimu.
+*/
+:root{
+  --slate:#2B3437;
+  --slate-2:#33403F;
+  --slate-3:#3A4846;
+  --sea:#5E8C7E;
+  --sea-deep:#3D6659;
+  --sea-pale:#D7E3DD;
+  --sand:#EFE8DC;
+  --sand-2:#F7F2E9;
+  --sand-3:#E4DACA;
+  --brass:#B98A2E;
+  --brass-btn:#C9A24F;
+  --brass-text:#7A5A17;
+  --brass-light:#D9B76A;
+  --ink:#2B3437;
+  --ink-soft:#4A5558;
+  --on-dark:#EFE8DC;
+  --on-dark-soft:#C9D9D2;
+  --white:#FFFFFF;
+  --line:#CFC4B2;
+  --focus:#C9A24F;
+  --radius:14px;
+  --serif:"Libre Bodoni","Bodoni Moda","Didot","Bodoni 72",Georgia,"Times New Roman",serif;
+  --sans:"Be Vietnam Pro","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+.page{overflow-x:clip;background:var(--sand);color:var(--ink);padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media (min-width:860px){.page{padding-bottom:0}}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,5.4vw,3.4rem);letter-spacing:-.01em}
+h3{font-size:1.35rem}
+p{margin:0 0 1em;max-width:65ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(56px,9vw,112px)}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-text);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--brass)}
+.lead{font-size:1.1rem;color:var(--ink-soft)}
+.ukazka{display:inline-block;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1;padding:4px 6px;border-radius:4px;background:var(--sand-3);color:var(--brass-text);border:1px dashed var(--brass-text);vertical-align:middle;margin-left:6px;white-space:nowrap;font-style:normal}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:999px;font:600 1rem/1.2 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background-color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-brass{background:var(--brass-btn);color:var(--slate)}
+.btn-brass:hover{background:var(--brass-light)}
+.btn-ghost{background:transparent;color:var(--on-dark);border-color:var(--on-dark-soft)}
+.btn-sea{background:var(--sea-deep);color:var(--white)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* Banner + hlavička */
+.notice{background:var(--slate);color:var(--on-dark);font-size:.82rem;text-align:center;padding-block:8px;border-bottom:1px solid var(--slate-3)}
+.notice strong{color:var(--brass-light);font-weight:600}
+.head{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--sand-2);border-bottom:1px solid var(--line)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--serif);font-weight:700;font-size:1.3rem;line-height:1}
+.brand small{display:block;font-size:.72rem;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+.nav{display:none;gap:22px;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--ink-soft)}
+.nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.head-tel{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;color:var(--white);background:var(--sea-deep);padding:9px 14px;border-radius:999px;font-size:.95rem;white-space:nowrap}
+.head-tel svg{width:18px;height:18px}
+@media (min-width:980px){.nav{display:flex}}
+
+/* Hero */
+.hero{position:relative;background:var(--slate);color:var(--on-dark);overflow:hidden}
+.hero-tiles{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .wrap{position:relative;padding-block:28px 34px}
+.hero-top{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.85rem;color:var(--on-dark-soft);margin-bottom:14px}
+.hero-top span{display:inline-flex;align-items:center;gap:8px}
+.hero-top span::before{content:"";width:8px;height:8px;background:var(--brass-light);transform:rotate(45deg)}
+.hero h1{font-size:clamp(2.55rem,10.6vw,8.2rem);line-height:.98;letter-spacing:-.025em;color:var(--sand);max-width:13ch}
+.hero h1 em{font-style:italic;color:var(--brass-light)}
+.hero-sub{margin:18px 0 0;font-size:clamp(1.02rem,2.4vw,1.3rem);color:var(--on-dark);max-width:44ch}
+.hero-sub b{color:var(--brass-light);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.hero-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--slate-3);border:1px solid var(--slate-3);border-radius:var(--radius);overflow:hidden}
+.hero-facts div{background:rgba(43,52,55,.88);padding:14px 16px}
+.hero-facts b{display:block;font-family:var(--serif);font-size:clamp(1.5rem,4vw,2.4rem);line-height:1;color:var(--brass-light);font-weight:500}
+.hero-facts span{font-size:.82rem;color:var(--on-dark-soft);line-height:1.35;display:block;margin-top:6px}
+@media (min-width:980px){.hero h1{max-width:none;font-size:clamp(5rem,8.6vw,8.4rem)}}
+@media (max-width:520px){
+  .hero .wrap{padding-block:20px 26px}
+  .hero-facts{grid-template-columns:1fr 1fr 1fr;margin-top:22px}
+  .hero-facts div{padding:10px 10px}
+  .hero-facts span{font-size:.72rem}
+  .hero-cta .btn{flex:1 1 auto;padding-inline:16px}
+}
+
+/* Před / Po */
+.compare-grid{display:grid;gap:32px;align-items:start}
+@media (min-width:980px){.compare-grid{grid-template-columns:1.35fr 1fr;gap:56px}}
+.ba{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--slate);box-shadow:0 18px 40px -24px rgba(43,52,55,.6);aspect-ratio:8/5;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.ba svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;margin-left:-1.5px;background:var(--brass-light);pointer-events:none}
+.ba-knob{position:absolute;top:50%;left:var(--pos,50%);width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:var(--brass-btn);border:3px solid var(--sand);display:grid;place-items:center;pointer-events:none;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.ba-knob svg{position:static;width:26px;height:26px}
+.ba{cursor:ew-resize}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;pointer-events:none}
+.ba:focus-within .ba-knob{outline:3px solid var(--sand);outline-offset:3px;box-shadow:0 0 0 7px var(--slate)}
+.ba-tag{position:absolute;top:12px;padding:5px 10px;border-radius:6px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;pointer-events:none}
+.ba-tag.l{left:12px;background:var(--sand);color:var(--slate)}
+.ba-tag.r{right:12px;background:var(--slate);color:var(--sand)}
+.ba-help{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-top:12px;font-size:.88rem;color:var(--ink-soft)}
+.ba-btns{display:flex;gap:6px}
+.chip{border:1px solid var(--line);background:var(--sand-2);color:var(--ink);border-radius:999px;padding:7px 14px;font:500 .88rem var(--sans);cursor:pointer;min-height:40px}
+.chip[aria-pressed="true"],.chip[aria-selected="true"]{background:var(--slate);color:var(--sand);border-color:var(--slate)}
+.types{background:var(--sand-2);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.types-tabs{display:flex;gap:8px;margin:12px 0 18px;flex-wrap:wrap}
+.types-tabs .chip{font-family:var(--serif);font-size:1.05rem;min-width:84px}
+.dim{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.dim b{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,2.7rem);color:var(--sea-deep);line-height:1}
+.dim span{font-size:.85rem;color:var(--ink-soft)}
+.types p{font-size:.98rem}
+.types .src{font-size:.78rem;color:var(--ink-soft);margin:0}
+
+/* Služby */
+.services{background:var(--sand-2);border-block:1px solid var(--line)}
+.svc-grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:36px}
+@media (min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{background:var(--sand-2);padding:26px 22px;display:flex;flex-direction:column;gap:10px}
+.svc svg{width:46px;height:46px}
+.svc h3{font-size:1.3rem}
+.svc p{font-size:.96rem;color:var(--ink-soft);margin:0;flex:1}
+.price{font-size:.85rem;font-weight:600;color:var(--sea-deep);border-top:1px dashed var(--line);padding-top:10px}
+
+/* Proč my */
+.why{background:var(--sea-deep);color:var(--white)}
+.why .eyebrow{color:var(--brass-light)}
+.why .eyebrow::before{background:var(--brass-light)}
+.why-grid{display:grid;gap:40px}
+@media (min-width:900px){.why-grid{grid-template-columns:1fr 1.2fr;gap:64px}}
+.why-h{color:var(--sand);font-size:clamp(1.6rem,4vw,2.2rem)}
+.year{display:block;font-size:clamp(5rem,20vw,11rem);line-height:.85;letter-spacing:-.04em;margin-top:8px}
+.year-note{color:var(--sea-pale);margin-top:18px}
+.why-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.why-list li{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 0;border-top:1px solid rgba(239,232,220,.25)}
+.why-list li:last-child{border-bottom:1px solid rgba(239,232,220,.25)}
+.why-list svg{width:34px;height:34px}
+.why-list b{display:block;font-size:1.05rem;margin-bottom:2px}
+.why-list span{color:var(--sea-pale);font-size:.95rem}
+.why blockquote{margin:28px 0 0;padding:0 0 0 18px;border-left:3px solid var(--brass-light);font-family:var(--serif);font-style:italic;font-size:1.3rem;line-height:1.35;color:var(--sand)}
+.why blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.8rem;color:var(--sea-pale);margin-top:8px}
+
+/* Realizace */
+.gal{display:grid;gap:14px;margin-top:34px;grid-template-columns:1fr 1fr}
+@media (min-width:900px){.gal{grid-template-columns:repeat(3,1fr)}.gal .ph{min-height:220px}}
+.ph{position:relative;border-radius:12px;overflow:hidden;background:var(--sand-3);border:2px dashed var(--line);min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;padding:12px}
+.ph svg{position:absolute;inset:0;width:100%;height:100%}
+.ph .cap{position:relative;background:var(--sand-2);border-radius:8px;padding:8px 10px;font-size:.82rem;line-height:1.35}
+.ph .cap b{display:block;font-size:.88rem}
+.ph .cap i{font-style:normal;color:var(--brass-text);font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+
+/* Postup */
+.steps{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:18px;counter-reset:s}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:22px}}
+.steps li{background:var(--sand-2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;position:relative}
+.steps .n{font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--brass-text);display:block;margin-bottom:10px}
+.steps h3{margin-bottom:8px}
+.steps p{font-size:.96rem;color:var(--ink-soft);margin:0}
+
+/* Prodejna */
+.store{background:var(--slate);color:var(--on-dark);position:relative;overflow:hidden}
+.store .eyebrow{color:var(--brass-light)}
+.store .eyebrow::before{background:var(--brass-light)}
+.store h2{color:var(--sand)}
+.store-grid{display:grid;gap:36px;position:relative}
+@media (min-width:940px){.store-grid{grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}}
+.store p{color:var(--on-dark-soft)}
+.kojes{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin:22px 0 8px;max-width:420px}
+.kojes i{aspect-ratio:1;border-radius:2px;background:var(--slate-3);border:1px solid #4d5d5b}
+.kojes i:nth-child(3n){background:var(--sea)}
+.kojes i:nth-child(7n){background:var(--brass)}
+.kojes i:nth-child(5n+1){background:#6f8f86}
+.kojes-cap{font-size:.82rem;color:var(--on-dark-soft)}
+.hours{background:var(--sand-2);color:var(--ink);border-radius:var(--radius);padding:24px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;padding:6px 12px;border-radius:999px;background:var(--sand-3);margin-bottom:14px}
+.status::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ink-soft)}
+.status.open{background:var(--sea-pale);color:var(--sea-deep)}
+.status.open::before{background:var(--sea-deep)}
+.hours table{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours th,.hours td{text-align:left;padding:9px 0;border-bottom:1px solid var(--line)}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today th,.hours tr.today td{font-weight:700;color:var(--sea-deep)}
+.hours p{color:var(--ink)}
+.hours .addr{margin:16px 0;font-size:.95rem}
+.hours .btns{display:flex;flex-wrap:wrap;gap:10px}
+.hours .note{font-size:.8rem;color:var(--ink-soft);margin:12px 0 0}
+.hours a{color:var(--sea-deep);font-weight:600}
+.hours .btn{color:var(--white)}
+.hours .btn-brass{color:var(--slate)}
+
+/* Kde pracujeme */
+.area-grid{display:grid;gap:30px;align-items:center}
+@media (min-width:900px){.area-grid{grid-template-columns:1fr 1fr;gap:60px}}
+.places{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.places li{border:1px solid var(--line);background:var(--sand-2);padding:7px 14px;border-radius:999px;font-size:.92rem}
+.places li.main{background:var(--slate);color:var(--sand);border-color:var(--slate)}
+.area-svg{width:100%;height:auto;display:block}
+
+/* Formulář */
+.form-band{background:var(--sand-2);border-top:1px solid var(--line)}
+.form-grid{display:grid;gap:36px}
+@media (min-width:940px){.form-grid{grid-template-columns:1fr 1.25fr;gap:60px}}
+form{display:grid;gap:16px;background:var(--sand);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+@media (min-width:640px){form .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
+form .row2{display:grid;gap:16px}
+label{display:block;font-size:.9rem;font-weight:600;margin-bottom:6px}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;font:400 1rem var(--sans);color:var(--ink);background:var(--white);border:1.5px solid #9C9384;border-radius:10px;padding:12px 14px;min-height:50px}
+textarea{min-height:110px;resize:vertical}
+fieldset{border:0;padding:0;margin:0}
+legend{font-size:.9rem;font-weight:600;margin-bottom:8px;padding:0}
+.radios{display:flex;flex-wrap:wrap;gap:8px}
+.radios label{font-weight:500;margin:0;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--white);border-radius:999px;padding:8px 14px;cursor:pointer;min-height:42px}
+.radios input{accent-color:var(--sea-deep);width:18px;height:18px;margin:0}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.88rem;color:var(--ink-soft)}
+.check input{width:20px;height:20px;accent-color:var(--sea-deep);margin-top:2px;flex:none}
+.form-msg{display:none;background:var(--sea-pale);color:var(--slate);border-left:4px solid var(--sea-deep);padding:12px 14px;border-radius:8px;font-size:.95rem}
+.form-msg.show{display:block}
+.contact-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px}
+.contact-list li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.contact-list svg{width:24px;height:24px;margin-top:2px}
+.contact-list a{font-weight:600;text-decoration-color:var(--brass);text-underline-offset:4px}
+.contact-list small{display:block;color:var(--ink-soft);font-size:.85rem}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--line);padding:4px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;font-weight:600;font-size:1.05rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--serif);font-size:1.8rem;line-height:1;color:var(--brass-text);flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--ink-soft);padding-bottom:12px}
+
+/* Patička + spodní pruh */
+.foot{background:var(--slate);color:var(--on-dark-soft);font-size:.88rem}
+.foot .wrap{padding-block:36px;display:grid;gap:14px}
+.foot b{color:var(--sand)}
+.foot a{color:var(--sand)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--slate);border-top:2px solid var(--brass);padding:10px max(12px,env(safe-area-inset-left,0px)) 10px max(12px,env(safe-area-inset-right,0px));padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px}
+.callbar a{flex:1;min-height:50px;font-size:.95rem;padding:10px 12px;white-space:nowrap}
+.callbar a:first-child{flex:1.7}
+@media (min-width:860px){.callbar{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="page">
+  <div class="notice"><div class="wrap"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Koupelny Gryč</div></div>
+
+  <header class="head">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Koupelny Gryč – na začátek stránky">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="6" fill="#2B3437"/><g fill="#5E8C7E"><rect x="4" y="4" width="12" height="12" rx="1"/><rect x="18" y="18" width="12" height="12" rx="1"/></g><rect x="18" y="4" width="12" height="12" rx="1" fill="#EFE8DC"/><rect x="4" y="18" width="12" height="12" rx="1" fill="#B98A2E"/></svg>
+        <span><b>Koupelny Gryč</b><small>Třinec · od roku 2000</small></span>
+      </a>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#pred-po">Před / Po</a>
+        <a href="#sluzby">Služby</a>
+        <a href="#postup">Postup</a>
+        <a href="#prodejna">Prodejna</a>
+        <a href="#poptavka">Poptávka</a>
+      </nav>
+      <a class="head-tel" href="tel:+420605786074" aria-label="Zavolat 605 786 074">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+        605 786 074
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-h">
+      <svg class="hero-tiles" aria-hidden="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 900">
+        <defs>
+          <pattern id="spara" width="120" height="60" patternUnits="userSpaceOnUse">
+            <rect width="120" height="60" fill="#2B3437"/>
+            <rect x="3" y="3" width="114" height="54" rx="2" fill="#33403F"/>
+          </pattern>
+          <linearGradient id="fade" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2B3437" stop-opacity=".92"/>
+            <stop offset=".55" stop-color="#2B3437" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#2B3437" stop-opacity=".1"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="900" fill="url(#spara)"/>
+        <g fill="#5E8C7E" opacity=".55">
+          <rect x="963" y="63" width="114" height="54" rx="2"/><rect x="1203" y="123" width="114" height="54" rx="2"/>
+          <rect x="1083" y="243" width="114" height="54" rx="2"/><rect x="1323" y="303" width="114" height="54" rx="2"/>
+          <rect x="843" y="363" width="114" height="54" rx="2"/><rect x="1203" y="483" width="114" height="54" rx="2"/>
+          <rect x="963" y="603" width="114" height="54" rx="2"/><rect x="1323" y="663" width="114" height="54" rx="2"/>
+          <rect x="1083" y="783" width="114" height="54" rx="2"/><rect x="603" y="723" width="114" height="54" rx="2"/>
+        </g>
+        <g fill="#B98A2E" opacity=".7">
+          <rect x="1203" y="363" width="114" height="54" rx="2"/><rect x="963" y="783" width="114" height="54" rx="2"/>
+        </g>
+        <g fill="#EFE8DC" opacity=".14">
+          <rect x="1323" y="63" width="114" height="54" rx="2"/><rect x="1083" y="543" width="114" height="54" rx="2"/><rect x="723" y="183" width="114" height="54" rx="2"/>
+        </g>
+        <rect width="1440" height="900" fill="url(#fade)"/>
+      </svg>
+      <div class="wrap">
+        <p class="hero-top"><span>Třinec-Lyžbice</span><span>Třinecko a Těšínsko</span></p>
+        <h1 id="hero-h">Nová koupelna místo <em>umakartového</em> jádra.</h1>
+        <p class="hero-sub">Koupelny a bytová jádra děláme <b>od roku 2000</b> – od bourání po obklady, rozvody i finální úklid.</p>
+        <div class="hero-cta">
+          <a class="btn btn-brass" href="#poptavka">Domluvit prohlídku</a>
+          <a class="btn btn-ghost" href="tel:+420605786074">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+            605 786 074
+          </a>
+        </div>
+        <div class="hero-facts">
+          <div><b>2000</b><span>od tohoto roku děláme koupelny</span></div>
+          <div><b>40</b><span>vzorových koupelen v prodejně</span></div>
+          <div><b>A · F · T</b><span>jádra typu A, F i T známe do milimetru</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="pred-po" aria-labelledby="ba-h">
+      <div class="wrap">
+        <p class="eyebrow">Před / Po</p>
+        <h2 id="ba-h">Posuňte táhlem a podívejte se, co z jádra uděláme.</h2>
+        <p class="lead" style="margin-top:14px">Vlevo původní panelové jádro, vpravo obložená koupelna se sprchovým koutem a závěsným WC. Ilustrace – fotky Vašich realizací sem doplníme.</p>
+        <div class="compare-grid" style="margin-top:30px">
+          <div>
+            <div class="ba" id="ba" style="--pos:50%">
+              <svg viewBox="0 0 800 500" aria-hidden="true">
+                <!-- PŘED: umakartové jádro -->
+                <rect width="800" height="500" fill="#D8C8A2"/>
+                <g stroke="#B5A27A" stroke-width="4">
+                  <line x1="100" y1="0" x2="100" y2="380"/><line x1="220" y1="0" x2="220" y2="380"/><line x1="340" y1="0" x2="340" y2="380"/><line x1="460" y1="0" x2="460" y2="380"/><line x1="580" y1="0" x2="580" y2="380"/><line x1="700" y1="0" x2="700" y2="380"/>
+                </g>
+                <rect y="150" width="800" height="26" fill="#9E7B4F"/>
+                <g fill="#8A6A42"><circle cx="40" cy="163" r="5"/><circle cx="160" cy="163" r="5"/><circle cx="280" cy="163" r="5"/><circle cx="400" cy="163" r="5"/><circle cx="520" cy="163" r="5"/><circle cx="640" cy="163" r="5"/><circle cx="760" cy="163" r="5"/></g>
+                <rect x="330" y="10" width="140" height="22" rx="4" fill="#F2EEDC" stroke="#A39270" stroke-width="3"/>
+                <rect y="380" width="800" height="120" fill="#8E6C4A"/>
+                <g fill="#7B5B3C"><rect x="0" y="380" width="60" height="60"/><rect x="120" y="380" width="60" height="60"/><rect x="240" y="380" width="60" height="60"/><rect x="360" y="380" width="60" height="60"/><rect x="480" y="380" width="60" height="60"/><rect x="600" y="380" width="60" height="60"/><rect x="720" y="380" width="60" height="60"/><rect x="60" y="440" width="60" height="60"/><rect x="180" y="440" width="60" height="60"/><rect x="300" y="440" width="60" height="60"/><rect x="420" y="440" width="60" height="60"/><rect x="540" y="440" width="60" height="60"/><rect x="660" y="440" width="60" height="60"/></g>
+                <path d="M40 300h360v70a30 30 0 0 1-30 30H70a30 30 0 0 1-30-30z" fill="#F1EEE6" stroke="#B8B2A2" stroke-width="4"/>
+                <rect x="30" y="290" width="380" height="18" rx="6" fill="#E6E1D3" stroke="#B8B2A2" stroke-width="3"/>
+                <path d="M370 290v-80h30" fill="none" stroke="#9A9A92" stroke-width="7" stroke-linecap="round"/>
+                <path d="M390 210h40v-18" fill="none" stroke="#9A9A92" stroke-width="6" stroke-linecap="round"/>
+                <rect x="520" y="230" width="120" height="50" rx="10" fill="#F1EEE6" stroke="#B8B2A2" stroke-width="4"/>
+                <rect x="540" y="208" width="10" height="26" fill="#9A9A92"/>
+                <rect x="572" y="280" width="16" height="100" fill="#9A9A92"/>
+                <rect x="530" y="70" width="100" height="80" rx="4" fill="#C9D3D3" stroke="#9E7B4F" stroke-width="6"/>
+                <path d="M700 380V200m20 180V200" stroke="#7E7D76" stroke-width="7"/>
+                <rect x="680" y="250" width="70" height="24" rx="4" fill="#A9A79E"/>
+                <path d="M120 120c12-8 22 6 34-2" fill="none" stroke="#A39270" stroke-width="3"/>
+              </svg>
+              <svg class="after" viewBox="0 0 800 500" aria-hidden="true">
+                <!-- PO: obložená koupelna -->
+                <rect width="800" height="500" fill="#5E8C7E"/>
+                <defs>
+                  <pattern id="obklad" width="100" height="50" patternUnits="userSpaceOnUse"><rect width="100" height="50" fill="#EAE4D8"/><rect x="1.5" y="1.5" width="97" height="47" fill="#5E8C7E"/></pattern>
+                  <pattern id="dlazba" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="#C9BFAE"/><rect x="2" y="2" width="96" height="96" fill="#E9E1D2"/></pattern>
+                  <linearGradient id="sklo" x1="0" x2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".35"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".08"/></linearGradient>
+                </defs>
+                <rect width="800" height="390" fill="url(#obklad)"/>
+                <rect x="0" y="0" width="300" height="390" fill="#EFE8DC"/>
+                <g stroke="#DCD3C3" stroke-width="2"><line x1="0" y1="130" x2="300" y2="130"/><line x1="0" y1="260" x2="300" y2="260"/><line x1="150" y1="0" x2="150" y2="390"/></g>
+                <rect y="390" width="800" height="110" fill="url(#dlazba)"/>
+                <rect x="40" y="0" width="230" height="390" fill="url(#sklo)" stroke="#B98A2E" stroke-width="4"/>
+                <rect x="40" y="380" width="230" height="10" fill="#B98A2E"/>
+                <path d="M210 40v60" stroke="#B98A2E" stroke-width="6"/>
+                <rect x="165" y="34" width="90" height="12" rx="6" fill="#B98A2E"/>
+                <g stroke="#D7E3DD" stroke-width="2" stroke-linecap="round" opacity=".8"><line x1="180" y1="56" x2="176" y2="90"/><line x1="200" y1="56" x2="198" y2="96"/><line x1="220" y1="56" x2="222" y2="92"/><line x1="240" y1="56" x2="244" y2="88"/></g>
+                <rect x="380" y="200" width="70" height="110" rx="4" fill="#F7F2E9"/>
+                <rect x="400" y="215" width="30" height="20" rx="3" fill="#B98A2E"/>
+                <path d="M360 290h110v20a40 40 0 0 1-40 40h-40a30 30 0 0 1-30-30z" fill="#FFFFFF" stroke="#D9D2C4" stroke-width="3"/>
+                <rect x="520" y="230" width="230" height="80" rx="4" fill="#8A6A48"/>
+                <rect x="520" y="230" width="230" height="10" fill="#FFFFFF"/>
+                <rect x="560" y="218" width="150" height="16" rx="8" fill="#FFFFFF" stroke="#D9D2C4" stroke-width="2"/>
+                <path d="M635 218v-26h18" fill="none" stroke="#B98A2E" stroke-width="6" stroke-linecap="round"/>
+                <line x1="630" y1="270" x2="630" y2="300" stroke="#C9A24F" stroke-width="4"/>
+                <ellipse cx="635" cy="120" rx="70" ry="70" fill="#C9D9D2" stroke="#B98A2E" stroke-width="5"/>
+                <path d="M600 90c10-12 30-18 44-12" fill="none" stroke="#FFFFFF" stroke-width="4" opacity=".6"/>
+                <rect x="520" y="316" width="230" height="4" fill="#E9D7A8" opacity=".9"/>
+              </svg>
+              <span class="ba-tag l">Před</span>
+              <span class="ba-tag r">Po</span>
+              <span class="ba-line" aria-hidden="true"></span>
+              <span class="ba-knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#2B3437" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+              <input type="range" id="ba-range" min="0" max="100" value="50" step="1" aria-label="Porovnání před a po: posuňte doleva pro novou koupelnu, doprava pro původní jádro" aria-valuetext="50 % nové koupelny">
+            </div>
+            <div class="ba-help">
+              <span>Táhněte myší, prstem nebo šipkami na klávesnici.</span>
+              <span class="ba-btns">
+                <button type="button" class="chip" data-pos="100" aria-pressed="false">Před</button>
+                <button type="button" class="chip" data-pos="50" aria-pressed="true">Půl na půl</button>
+                <button type="button" class="chip" data-pos="0" aria-pressed="false">Po</button>
+              </span>
+            </div>
+          </div>
+
+          <div class="types">
+            <p class="eyebrow">Jaké jádro máte doma?</p>
+            <h3>Panelová jádra známe do milimetru</h3>
+            <div class="types-tabs" role="tablist" aria-label="Typ bytového jádra">
+              <button type="button" class="chip" role="tab" id="tab-a" aria-selected="true" aria-controls="type-panel" data-type="a">Typ A</button>
+              <button type="button" class="chip" role="tab" id="tab-f" aria-selected="false" aria-controls="type-panel" data-type="f" tabindex="-1">Typ F</button>
+              <button type="button" class="chip" role="tab" id="tab-t" aria-selected="false" aria-controls="type-panel" data-type="t" tabindex="-1">Typ T</button>
+            </div>
+            <div id="type-panel" role="tabpanel" aria-labelledby="tab-a" aria-live="polite">
+              <div class="dim"><b id="type-dim">1600 × 1850</b><span id="type-dim-note">mm – původní koupelna</span></div>
+              <p id="type-text">Jádro typu A tvoří pouze jedna panelová příčka, zbytek je vyzděn z ytongových tvárnic. Tato velikost dovoluje bez problému umístit sprchový kout 900 × 900 nebo půlrohovou vanu 1050 × 1600.</p>
+            </div>
+            <p class="src">Do všech typů jader je možné nainstalovat závěsné WC pomocí tzv. jádromodulu. Texty a rozměry převzaty z webu bytovajadra.net.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band services" id="sluzby" aria-labelledby="svc-h">
+      <div class="wrap">
+        <p class="eyebrow">Co děláme</p>
+        <h2 id="svc-h">Celou koupelnu jedním týmem – od bourání po silikon.</h2>
+        <div class="svc-grid">
+          <article class="svc">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#3D6659" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="38" height="38" rx="2"/><path d="M5 24h38M24 5v38"/><path d="M11 33h8M29 13h8" stroke="#B98A2E"/></svg>
+            <h3>Bytová jádra, koupelny a WC</h3>
+            <p>Instalatérské práce – voda, odpad, elektřina, plyn – a k tomu dlažby, obklady, vana nebo sprchový kout, WC, umyvadla, skříňky i topná tělesa.</p>
+            <span class="price">Cena na dotaz</span>
+          </article>
+          <article class="svc">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#3D6659" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 22 24 7l18 15"/><path d="M10 19v22h28V19"/><rect x="20" y="28" width="8" height="13" stroke="#B98A2E"/></svg>
+            <h3>Byty a rodinné domy na klíč</h3>
+            <p>Od projektové dokumentace nebo návrhu architekta přes všechny řemeslné práce až po finální úklid, připravené k nastěhování.</p>
+            <span class="price">Cena na dotaz</span>
+          </article>
+          <article class="svc">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#3D6659" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="20" width="38" height="22" rx="1"/><path d="M5 30h38M18 20v22M31 20v22"/><rect x="8" y="6" width="32" height="9" rx="1"/><path d="M14 25h2M27 25h2M38 25h0" stroke="#B98A2E"/></svg>
+            <h3>Kuchyně a vestavěné skříně na míru</h3>
+            <p>Kuchyň není jen linka – patří k ní i podlahy, obklady, malba a osvětlení. Navrhneme ji tak, aby cena zůstala příznivá.</p>
+            <span class="price">Cena na dotaz</span>
+          </article>
+          <article class="svc">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#3D6659" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h17v17H6zM25 6h17v17H25zM6 25h17v17H6z"/><path d="M25 25h17v17H25z" fill="#B98A2E" fill-opacity=".25" stroke="#B98A2E"/></svg>
+            <h3>Obklady a dlažby</h3>
+            <p>Obkladačské práce v koupelnách, na WC i v kuchyních. Materiál si vyberete u nás ve vzorkové prodejně.</p>
+            <span class="price">Cena na dotaz</span>
+          </article>
+          <article class="svc">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#3D6659" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V8h20v32"/><path d="M8 18h20M8 29h20"/><path d="M33 40V14l8 4v22" stroke="#B98A2E"/></svg>
+            <h3>Sádrokartony a strojní omítky</h3>
+            <p>Sádrokartonářské práce a strojní omítky – při rekonstrukci bytu nebo domu je uděláme v návaznosti na ostatní řemesla.</p>
+            <span class="price">Cena na dotaz</span>
+          </article>
+          <article class="svc">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#3D6659" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="26" height="12" rx="2"/><path d="M34 12h6v10H22v6"/><rect x="19" y="28" width="6" height="14" rx="1" stroke="#B98A2E"/></svg>
+            <h3>Malířské, lakýrnické a bourací práce</h3>
+            <p>Vybourání starého jádra, malby a nátěry. Návaznost řemesel hlídáme sami, nemusíte nikoho shánět.</p>
+            <span class="price">Cena na dotaz</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band why" aria-labelledby="why-h">
+      <div class="wrap why-grid">
+        <div>
+          <p class="eyebrow">Proč Koupelny Gryč</p>
+          <h2 id="why-h" class="why-h">Koupelny děláme od roku <span class="year">2000</span></h2>
+          <p class="year-note">Rekonstrukcemi koupelen a bytových jader se zabýváme od roku 2000. Oficiální vznik firmy (osamostatnění) 1. června 2005.</p>
+        </div>
+        <div>
+          <ul class="why-list">
+            <li>
+              <svg viewBox="0 0 34 34" fill="none" stroke="#D9B76A" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="5"/><circle cx="23" cy="11" r="5"/><path d="M3 30c0-6 4-10 8-10s8 4 8 10M15 30c0-6 4-10 8-10s8 4 8 10"/></svg>
+              <div><b>Ustálený kolektiv řemeslníků</b><span>Profesionální a trvalý tým. Samozřejmostí je návaznost řemeslných prací.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 34 34" fill="none" stroke="#D9B76A" stroke-width="2" aria-hidden="true"><path d="M17 3v10M10 13h14l-2 6H12z"/><path d="M17 19v6M8 31h18"/></svg>
+              <div><b>Voda, odpad, elektřina, plyn</b><span>Instalatérské práce i obklady zajišťuje stejný stálý tým řemeslníků.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 34 34" fill="none" stroke="#D9B76A" stroke-width="2" aria-hidden="true"><path d="M4 14 17 4l13 10v16H4z"/><path d="M10 30V18h14v12"/></svg>
+              <div><b>Vlastní vzorková prodejna</b><span>40 vzorových koupelnových kójí v Třinci-Oldřichovicích. Vyberete naživo, ne z katalogu.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 34 34" fill="none" stroke="#D9B76A" stroke-width="2" aria-hidden="true"><path d="M5 10 17 4l12 6v14l-12 6-12-6z"/><path d="M5 10l12 6 12-6M17 16v14"/></svg>
+              <div><b>3D návrh koupelny</b><span>Než se začne bourat, uvidíte, jak bude nová koupelna vypadat.</span></div>
+            </li>
+          </ul>
+          <blockquote>„Při rekonstrukci bytového jádra se snažíme respektovat každé přání našeho zákazníka a současně zajistit proveditelnost přestavby bytového jádra po technické stránce.“<cite>– z dosavadního webu firmy</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="realizace" aria-labelledby="real-h">
+      <div class="wrap">
+        <p class="eyebrow">Realizace</p>
+        <h2 id="real-h">Jádra a koupelny z Třinecka a okolí</h2>
+        <p class="lead" style="margin-top:14px">Názvy zakázek jsou z dosavadního webu. Fotky do nového webu dodáte Vy – nejlépe vždy dvojici před a po.</p>
+        <div class="gal">
+          <figure class="ph" style="margin:0">
+            <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="ph1" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#CFC4B2"/><rect x="1" y="1" width="38" height="18" fill="#E4DACA"/></pattern></defs><rect width="200" height="150" fill="url(#ph1)"/></svg>
+            <figcaption class="cap"><i>Sem přijde Vaše fotka</i><b>Rekonstrukce bytového jádra, Třinec</b>hotová koupelna po předání</figcaption>
+          </figure>
+          <figure class="ph" style="margin:0">
+            <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="150" fill="#E4DACA"/></svg>
+            <figcaption class="cap"><i>Sem přijde Vaše fotka</i><b>Koupelna, Hrádek 2015</b></figcaption>
+          </figure>
+          <figure class="ph" style="margin:0">
+            <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="150" fill="#D7E3DD"/></svg>
+            <figcaption class="cap"><i>Sem přijde Vaše fotka</i><b>Bytové jádro, Český Těšín 2013</b></figcaption>
+          </figure>
+          <figure class="ph" style="margin:0">
+            <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="150" fill="#D7E3DD"/></svg>
+            <figcaption class="cap"><i>Sem přijde Vaše fotka</i><b>Koupelna, Guty 2013</b></figcaption>
+          </figure>
+          <figure class="ph" style="margin:0">
+            <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="150" fill="#E4DACA"/></svg>
+            <figcaption class="cap"><i>Sem přijde Vaše fotka</i><b>Rekonstrukce bytu, Třinec 2016</b></figcaption>
+          </figure>
+          <figure class="ph" style="margin:0">
+            <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="150" fill="#D7E3DD"/></svg>
+            <figcaption class="cap"><i>Sem přijde Vaše fotka</i><b>Rekonstrukce bytu, Frýdek</b></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="band services" id="postup" aria-labelledby="steps-h">
+      <div class="wrap">
+        <p class="eyebrow">Jak probíhá zakázka</p>
+        <h2 id="steps-h">Tři kroky od telefonu k hotové koupelně</h2>
+        <ol class="steps">
+          <li>
+            <span class="n">01</span>
+            <h3>Zavoláte nebo přijdete do prodejny</h3>
+            <p>V Oldřichovicích si projdete 40 vzorových koupelen a vyberete obklady, dlažby, vanu nebo sprchový kout, baterie i nábytek.</p>
+          </li>
+          <li>
+            <span class="n">02</span>
+            <h3>Prohlídka a návrh řešení <span class="ukazka">ukázkový text</span></h3>
+            <p>Podíváme se na Vaše jádro nebo koupelnu, poradíme s dispozicí a kombinací materiálů a připravíme 3D návrh. U jader vybíráte ze čtyř variant, které upravíme podle Vašich představ.</p>
+          </li>
+          <li>
+            <span class="n">03</span>
+            <h3>Realizace jedním týmem</h3>
+            <p>Bourání, rozvody vody, odpadu a elektřiny, obklady, montáž zařizovacích předmětů a na závěr úklid – předáme hotové k užívání.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band store" id="prodejna" aria-labelledby="store-h">
+      <div class="wrap store-grid">
+        <div>
+          <p class="eyebrow">Vzorková prodejna</p>
+          <h2 id="store-h">Vzorková prodejna v Oldřichovicích – 40 koupelen naživo</h2>
+          <p style="margin-top:16px">Přijďte se inspirovat do prodejny v Třinci-Oldřichovicích: na ukázku je 40 vzorových koupelnových kójí a k tomu obklady, dlažby, vany, sprchové kouty, keramika, baterie a koupelnový nábytek na míru. Na místě Vám připravíme i 3D návrh koupelny.</p>
+          <div class="kojes" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <p class="kojes-cap">Každý čtvereček = jedna vzorová koupelna v expozici.</p>
+        </div>
+        <div class="hours">
+          <span class="status" id="store-status">Otevírací doba prodejny</span>
+          <table aria-label="Otevírací doba prodejny Oldřichovice">
+            <tbody>
+              <tr data-days="1,2,3,4,5"><th scope="row">Pondělí – pátek</th><td>8:00 – 17:00</td></tr>
+              <tr data-days="6"><th scope="row">Sobota</th><td>8:00 – 12:00</td></tr>
+              <tr data-days="0"><th scope="row">Neděle</th><td>zavřeno</td></tr>
+            </tbody>
+          </table>
+          <p class="addr"><b>Oldřichovice 934, 739 61 Třinec</b><br>Prodejna: <a href="tel:+420608735323">608 735 323</a></p>
+          <div class="btns">
+            <a class="btn btn-sea" href="https://mapy.cz/zakladni?q=Old%C5%99ichovice%20934%2C%20T%C5%99inec" target="_blank" rel="noopener">Ukázat na Mapy.cz</a>
+            <a class="btn btn-brass" href="tel:+420608735323">Zavolat do prodejny</a>
+          </div>
+          <p class="note">Ve svátky doporučujeme otevírací dobu ověřit telefonem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="oblast" aria-labelledby="area-h">
+      <div class="wrap area-grid">
+        <div>
+          <p class="eyebrow">Kde pracujeme</p>
+          <h2 id="area-h">Třinecko, Těšínsko a Jablunkovsko</h2>
+          <p class="lead" style="margin-top:14px">Panelové byty i rodinné domy. Kromě Třince jsme dělali například v Českém Těšíně, Hrádku, Gutech nebo ve Frýdku-Místku.</p>
+          <ul class="places">
+            <li class="main">Třinec</li><li>Český Těšín</li><li>Jablunkov</li><li>Hrádek</li><li>Guty</li><li>Havířov</li><li>Frýdek-Místek</li>
+          </ul>
+        </div>
+        <svg class="area-svg" viewBox="0 0 520 360" role="img" aria-label="Schéma oblasti: Třinec uprostřed, okolní obce Český Těšín, Hrádek, Guty, Jablunkov, Frýdek-Místek a Havířov">
+          <rect width="520" height="360" rx="16" fill="#F7F2E9" stroke="#CFC4B2"/>
+          <g stroke="#E4DACA" stroke-width="1"><path d="M0 60h520M0 120h520M0 180h520M0 240h520M0 300h520M65 0v360M130 0v360M195 0v360M260 0v360M325 0v360M390 0v360M455 0v360"/></g>
+          <path d="M440 350C400 300 330 250 280 195S240 110 250 20" fill="none" stroke="#5E8C7E" stroke-width="10" stroke-linecap="round" opacity=".35"/>
+          <circle cx="280" cy="195" r="90" fill="#5E8C7E" opacity=".12"/>
+          <g font-family="Be Vietnam Pro, Segoe UI, Arial, sans-serif" font-size="19" fill="#2B3437">
+            <circle cx="120" cy="55" r="6" fill="#3D6659"/><text x="132" y="60">Havířov</text>
+            <circle cx="250" cy="80" r="6" fill="#3D6659"/><text x="262" y="85">Český Těšín</text>
+            <circle cx="215" cy="145" r="5" fill="#3D6659"/><text x="160" y="132">Guty</text>
+            <circle cx="70" cy="190" r="6" fill="#3D6659"/><text x="24" y="222">Frýdek-Místek</text>
+            <circle cx="350" cy="255" r="5" fill="#3D6659"/><text x="362" y="260">Hrádek</text>
+            <circle cx="405" cy="310" r="6" fill="#3D6659"/><text x="340" y="342">Jablunkov</text>
+            <circle cx="280" cy="195" r="11" fill="#2B3437"/><circle cx="280" cy="195" r="4" fill="#D9B76A"/>
+            <text x="298" y="200" font-weight="700" font-size="23">Třinec</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="band form-band" id="poptavka" aria-labelledby="form-h">
+      <div class="wrap form-grid">
+        <div>
+          <p class="eyebrow">Poptávka a kontakt</p>
+          <h2 id="form-h">Domluvte si prohlídku Vaší koupelny</h2>
+          <p class="lead" style="margin-top:14px">Napište pár řádků, nebo rovnou zavolejte. Hodí se vědět typ jádra a obec.</p>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D6659" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+              <div><a href="tel:+420605786074">605 786 074</a><small>Radim Gryč – rekonstrukce</small></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D6659" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+              <div><a href="tel:+420608735323">608 735 323</a><small>Vzorková prodejna Oldřichovice</small></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D6659" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <div><a href="mailto:radimgryc@seznam.cz">radimgryc@seznam.cz</a><small>prodejna: <a href="mailto:koupelny@sikotrinec.cz">koupelny@sikotrinec.cz</a></small></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D6659" stroke-width="2" aria-hidden="true"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <div><a href="https://mapy.cz/zakladni?q=Lu%C5%BEn%C3%AD%2074%2C%20T%C5%99inec" target="_blank" rel="noopener">Lužní 74, 739 61 Třinec-Lyžbice</a><small>sídlo firmy, schůzky po telefonické domluvě · IČO 66164559</small></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D6659" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M15 8h-2a2 2 0 0 0-2 2v11M9 13h6"/></svg>
+              <div><a href="https://www.facebook.com/Koupelny-Gry%C4%8D-T%C5%99inec-1784210631840471/" target="_blank" rel="noopener">Koupelny Gryč na Facebooku</a></div>
+            </li>
+          </ul>
+        </div>
+        <form id="poptavka-form" novalidate>
+          <div class="row2">
+            <div><label for="f-jmeno">Jméno a příjmení</label><input type="text" id="f-jmeno" name="jmeno" autocomplete="name" required></div>
+            <div><label for="f-tel">Telefon</label><input type="tel" id="f-tel" name="telefon" autocomplete="tel" inputmode="tel" required></div>
+          </div>
+          <div class="row2">
+            <div><label for="f-obec">Obec</label><input type="text" id="f-obec" name="obec" placeholder="např. Třinec-Lyžbice"></div>
+            <div>
+              <label for="f-prace">Co plánujete</label>
+              <select id="f-prace" name="prace">
+                <option value="jadro">Rekonstrukce bytového jádra</option>
+                <option value="koupelna">Rekonstrukce koupelny / WC</option>
+                <option value="byt">Rekonstrukce bytu nebo domu</option>
+                <option value="kuchyne">Kuchyň nebo skříně na míru</option>
+                <option value="jine">Obklady, sádrokarton, malování</option>
+              </select>
+            </div>
+          </div>
+          <fieldset>
+            <legend>Typ bytového jádra</legend>
+            <div class="radios">
+              <label for="f-typ-a"><input type="radio" id="f-typ-a" name="typ" value="A">A</label>
+              <label for="f-typ-f"><input type="radio" id="f-typ-f" name="typ" value="F">F</label>
+              <label for="f-typ-t"><input type="radio" id="f-typ-t" name="typ" value="T">T</label>
+              <label for="f-typ-x"><input type="radio" id="f-typ-x" name="typ" value="nevim" checked>Nevím / rodinný dům</label>
+            </div>
+          </fieldset>
+          <div><label for="f-zprava">Zpráva</label><textarea id="f-zprava" name="zprava" placeholder="Co chcete změnit, kdy by se mohlo začít…"></textarea></div>
+          <label class="check" for="f-souhlas"><input type="checkbox" id="f-souhlas" name="souhlas">Souhlasím se zpracováním údajů pro vyřízení poptávky.</label>
+          <button type="submit" class="btn btn-sea" id="f-odeslat">Domluvit prohlídku</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="band" id="faq" aria-labelledby="faq-h">
+      <div class="wrap">
+        <p class="eyebrow">Časté otázky</p>
+        <h2 id="faq-h" style="margin-bottom:24px">Než zavoláte</h2>
+        <div class="faq">
+          <details>
+            <summary>Dá se v panelovém jádře udělat závěsné WC?</summary>
+            <p>Ano. Do všech typů bytových jader je možné nainstalovat závěsné WC pomocí tzv. jádromodulu.</p>
+          </details>
+          <details>
+            <summary>Půjde koupelnu zvětšit?</summary>
+            <p>Záleží na typu jádra. U typu F lze koupelnu prodloužit o průchod do kuchyně – z původních 1500 × 1400 mm vznikne koupelna 2400 × 1400 mm s lepším rozmístěním zařízení. Co jde u Vás, řekneme po prohlídce.</p>
+          </details>
+          <details>
+            <summary>Vejde se mi místo vany sprchový kout?</summary>
+            <p>U jader typu A a T (původní koupelna 1600 × 1850 mm) se bez problému vejde sprchový kout 900 × 900 nebo půlrohová vana 1050 × 1600.</p>
+          </details>
+          <details>
+            <summary>Kde si vyberu obklady a vybavení?</summary>
+            <p>Ve vzorkové prodejně v Třinci-Oldřichovicích (Oldřichovice 934), Po–Pá 8–17, So 8–12. Je tam 40 vzorových koupelnových kójí, obklady, dlažby, vany, sprchové kouty, baterie i nábytek.</p>
+          </details>
+          <details>
+            <summary>Musím rekonstrukci hlásit správě domu?</summary>
+            <p>Obvykle ano – výměna jádra zasahuje do společných rozvodů, proto ji v panelovém domě většinou oznamujete správci nebo SVJ. Konkrétní pravidla má každý dům jiná, ověřte je prosím u své správy.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div><b>Koupelny Gryč</b> · Radim Gryč · Lužní 74, 739 61 Třinec-Lyžbice · IČO 66164559</div>
+      <div>Prodejna: Oldřichovice 934, Třinec · <a href="tel:+420605786074">605 786 074</a> · <a href="tel:+420608735323">608 735 323</a> · <a href="mailto:radimgryc@seznam.cz">radimgryc@seznam.cz</a></div>
+      <div>Nezávazný návrh webu – není to oficiální stránka firmy Koupelny Gryč. Ilustrace jsou vlastní, fotky zatím nejsou použity.</div>
+    </div>
+  </footer>
+
+  <div class="callbar">
+    <a class="btn btn-brass" href="tel:+420605786074">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+      Zavolat 605 786 074
+    </a>
+    <a class="btn btn-ghost" href="#poptavka">Prohlídka</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* Posuvník Před / Po */
+  var ba=document.getElementById('ba');
+  var range=document.getElementById('ba-range');
+  var presets=document.querySelectorAll('.ba-btns .chip');
+  function setPos(v){
+    v=Math.max(0,Math.min(100,Number(v)));
+    ba.style.setProperty('--pos',v+'%');
+    range.value=v;
+    range.setAttribute('aria-valuetext',Math.round(100-v)+' % nové koupelny');
+    presets.forEach(function(b){b.setAttribute('aria-pressed',String(Number(b.dataset.pos)===v));});
+  }
+  range.addEventListener('input',function(){setPos(range.value);});
+  var drag=false;
+  function fromEvent(e){var r=ba.getBoundingClientRect();setPos(Math.round((e.clientX-r.left)/r.width*100));}
+  ba.addEventListener('pointerdown',function(e){drag=true;try{ba.setPointerCapture(e.pointerId);}catch(err){}fromEvent(e);range.focus({preventScroll:true});});
+  ba.addEventListener('pointermove',function(e){if(drag)fromEvent(e);});
+  ['pointerup','pointercancel','lostpointercapture'].forEach(function(t){ba.addEventListener(t,function(){drag=false;});});
+  presets.forEach(function(b){b.addEventListener('click',function(){setPos(b.dataset.pos);});});
+
+  /* Typy jader – texty z webu bytovajadra.net */
+  var types={
+    a:{dim:'1600 × 1850',note:'mm – původní koupelna',text:'Jádro typu A tvoří pouze jedna panelová příčka, zbytek je vyzděn z ytongových tvárnic. Tato velikost dovoluje bez problému umístit sprchový kout 900 × 900 nebo půlrohovou vanu 1050 × 1600.'},
+    f:{dim:'1500 × 1400',note:'mm → po prodloužení 2400 × 1400 mm',text:'Jádro typu F tvoří dvě pevné stěny – vstup do koupelny a WC a boční stěna WC. Vyzdít je nutné příčku ze strany kuchyně a dvě boční příčky. Lepší dispozice získáte, když koupelnu prodloužíme o průchod do kuchyně.'},
+    t:{dim:'1600 × 1850',note:'mm – původní koupelna',text:'U jádra typu T je ze tří stran panel. Vyzdívá se vstup do koupelny a WC a příčka mezi nimi. Vejde se sprchový kout 900 × 900 nebo půlrohová vana 1050 × 1600; vstup osadíme železnými, nebo na závěr obložkovými zárubněmi.'}
+  };
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.types-tabs [role=tab]'));
+  var panel=document.getElementById('type-panel');
+  function selectTab(t,focus){
+    tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1;});
+    var d=types[t.dataset.type];
+    document.getElementById('type-dim').textContent=d.dim;
+    document.getElementById('type-dim-note').textContent=d.note;
+    document.getElementById('type-text').textContent=d.text;
+    panel.setAttribute('aria-labelledby',t.id);
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t);});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+        e.preventDefault();
+        var n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+        selectTab(tabs[n],true);
+      }
+    });
+  });
+
+  /* Otevřeno / zavřeno – ověřená otevírací doba prodejny (Po–Pá 8–17, So 8–12) */
+  var hours={1:[8,17],2:[8,17],3:[8,17],4:[8,17],5:[8,17],6:[8,12]};
+  var names=['v neděli','v pondělí','v úterý','ve středu','ve čtvrtek','v pátek','v sobotu'];
+  try{
+    var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var map={};parts.forEach(function(p){map[p.type]=p.value;});
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(map.weekday);
+    var h=Number(map.hour)%24+Number(map.minute)/60;
+    var st=document.getElementById('store-status');
+    var today=hours[day];
+    document.querySelectorAll('.hours tr').forEach(function(r){if(r.dataset.days.split(',').indexOf(String(day))>-1)r.classList.add('today');});
+    if(today&&h>=today[0]&&h<today[1]){
+      st.textContent='Prodejna má teď otevřeno, do '+today[1]+':00';
+      st.classList.add('open');
+    }else{
+      var nd=day,add=0;
+      do{nd=(nd+1)%7;add++;}while(!hours[nd]);
+      if(today&&h<today[0]){nd=day;}
+      st.textContent='Prodejna má teď zavřeno · otevíráme '+(nd===day?'dnes':names[nd])+' v 8:00';
+    }
+  }catch(e){}
+
+  /* Formulář – pouze ukázka */
+  var form=document.getElementById('poptavka-form');
+  var msg=document.getElementById('form-msg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.textContent='Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Na hotovém webu by poptávka přišla na e-mail firmy.';
+    msg.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

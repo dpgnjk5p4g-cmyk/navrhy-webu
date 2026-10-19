@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – PET CARE Nový Jičín</title>
+<meta name="description" content="PET CARE Nový Jičín – psí SPA, dentální hygiena psů bez narkózy, fyzioterapie a stříhání psů. Dobrovského 35/1, objednání na tel. 734 440 064.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"PET CARE",
+  "description":"Psí SPA, preventivní dentální hygiena psů bez narkózy, fyzioterapie a rehabilitace, stříhání a úprava psů v Novém Jičíně.",
+  "telephone":"+420734440064",
+  "email":"petcaresimona@gmail.com",
+  "taxID":"21402728",
+  "address":{"@type":"PostalAddress","streetAddress":"Dobrovského 35/1","addressLocality":"Nový Jičín","postalCode":"741 01","addressCountry":"CZ"},
+  "sameAs":["https://www.facebook.com/people/PET-CARE/61558975247114/","https://www.firmy.cz/detail/13662362-pet-care-novy-jicin.html"],
+  "areaServed":"Nový Jičín"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --navy:#13324B;
+  --navy-2:#1C4463;
+  --aqua:#3FB8B0;
+  --aqua-soft:#D3EFEC;
+  --aqua-ink:#0B6661;
+  --aqua-light:#93E2DA;
+  --pearl:#F6F9F9;
+  --pearl-2:#EAF2F2;
+  --white:#FFFFFF;
+  --peach:#F7C8AC;
+  --peach-soft:#FCE9DD;
+  --peach-ink:#8A3E19;
+  --ink:#13324B;
+  --muted:#46606F;
+  --line:#C9DCDD;
+  --radius:18px;
+  --gutter:clamp(16px,4vw,40px);
+  --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--pearl);color:var(--ink);font-family:"Outfit",system-ui,sans-serif;font-size:17px;line-height:1.6;font-weight:400;margin:0;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.08;color:var(--navy);text-wrap:balance;margin:0}
+p{margin:0 0 1em}
+a{color:var(--aqua-ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--aqua-ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.demo{display:inline-block;font:500 11px/1.4 "Outfit",sans-serif;letter-spacing:.04em;text-transform:uppercase;background:var(--peach-soft);color:var(--peach-ink);border:1px dashed var(--peach-ink);padding:1px 7px;border-radius:999px;vertical-align:middle;white-space:nowrap}
+.eyebrow{font:600 13px/1.3 "Outfit",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua-ink);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--aqua);display:inline-block}
+
+/* banner + header */
+.proposal{background:var(--navy);color:var(--pearl);font-size:13px;line-height:1.4;text-align:center;padding:7px 16px}
+.proposal strong{color:var(--aqua-light);font-weight:600}
+header.site{position:sticky;top:0;z-index:20;background:rgba(246,249,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.logo b{font:700 24px/1 "Cormorant Garamond",serif;letter-spacing:.06em}
+.logo small{display:block;font:500 11px/1.2 "Outfit",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:none;gap:26px}
+nav.main a{color:var(--navy);text-decoration:none;font-size:15px;font-weight:500}
+nav.main a:hover{color:var(--aqua-ink)}
+.tel-head{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--navy);font-weight:600;font-size:15px;border:1.5px solid var(--navy);padding:8px 14px;border-radius:999px;white-space:nowrap}
+.tel-head:hover{background:var(--navy);color:var(--pearl)}
+.tel-head svg{flex:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 16px/1 "Outfit",sans-serif;text-decoration:none;padding:16px 26px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s ease,background .2s ease}
+.btn-primary{background:var(--navy);color:var(--pearl)}
+.btn-primary:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-ghost:hover{background:var(--white)}
+.btn-peach{background:var(--peach);color:var(--navy)}
+.btn-peach:hover{background:#F4B893;transform:translateY(-2px)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--pearl) 0%,var(--pearl-2) 100%)}
+.hero-grid{display:grid;gap:8px;padding-top:22px;padding-bottom:30px;align-items:center}
+.hero h1{font-size:clamp(38px,9.6vw,78px);font-weight:600;letter-spacing:-.01em;margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--aqua-ink);font-weight:600}
+.hero .lead{font-size:17px;color:var(--muted);max-width:34em;margin-bottom:20px}
+.hero .lead strong{color:var(--navy);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.hero-meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px;font-size:14px;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
+.hero-meta i{width:7px;height:7px;border-radius:50%;background:var(--aqua);display:inline-block}
+.hero-art{position:relative;max-width:520px;margin:0 auto;width:100%}
+.hero-art svg{width:100%;height:auto;display:block}
+.bubble{animation:float 7s ease-in-out infinite}
+.bubble.b2{animation-delay:-2s;animation-duration:9s}
+.bubble.b3{animation-delay:-4s;animation-duration:8s}
+.spark{transform-origin:center;transform-box:fill-box;animation:twinkle 3.2s ease-in-out infinite}
+.spark.s2{animation-delay:-1.4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes twinkle{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.6);opacity:.55}}
+
+/* trust strip */
+.facts{background:var(--navy);color:var(--pearl)}
+.facts ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:1fr;gap:14px}
+.facts li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.45}
+.facts li svg{flex:none;margin-top:2px}
+.facts b{color:var(--aqua-light);font-weight:600}
+.facts .src{font-size:12.5px;color:#C4D6DF;padding-bottom:18px;margin:0}
+.facts .src a{color:var(--aqua-light)}
+
+/* sections */
+section{padding:72px 0}
+.sec-head{max-width:720px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(34px,6.4vw,54px);margin-bottom:12px}
+.sec-head p{color:var(--muted);font-size:17px;margin:0}
+.sec-head p.eyebrow{color:var(--aqua-ink);font-size:13px;margin:0 0 14px}
+
+/* care switcher */
+.care{background:var(--pearl)}
+.tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:0}
+.tab{font:600 15px/1.2 "Outfit",sans-serif;color:var(--navy);background:var(--white);border:1.5px solid var(--line);padding:14px 12px;border-radius:14px;cursor:pointer;display:flex;align-items:center;gap:10px;text-align:left;transition:background .2s,border-color .2s}
+.tab svg{flex:none}
+.tab small{display:block;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:2px}
+.tab[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:var(--pearl)}
+.tab[aria-selected="true"] small{color:#C4D6DF}
+.tab[aria-selected="true"] svg *{stroke:var(--aqua-light)}
+.panel{margin-top:14px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:grid}
+.panel[hidden]{display:none}
+.panel-body{padding:26px 22px}
+.panel h3{font-size:clamp(30px,5.4vw,42px);margin-bottom:10px}
+.panel .intro{color:var(--muted);margin-bottom:18px}
+.panel ul.does{list-style:none;padding:0;margin:0 0 6px;display:grid;gap:9px}
+.panel ul.does li{position:relative;padding-left:26px;font-size:15.5px}
+.panel ul.does li::before{content:"";position:absolute;left:0;top:7px;width:13px;height:13px;border-radius:50%;border:2px solid var(--aqua);background:var(--aqua-soft)}
+.panel .note{font-size:14px;color:var(--muted);border-left:3px solid var(--peach);padding:8px 0 8px 14px;margin:18px 0 0;background:transparent}
+.prices{background:var(--aqua-soft);padding:24px 22px;display:flex;flex-direction:column;gap:2px}
+.prices h4{font:600 13px/1.3 "Outfit",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua-ink);margin:0 0 10px}
+.prow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;border-bottom:1px solid rgba(19,50,75,.16)}
+.prow:last-of-type{border-bottom:0}
+.prow span{font-size:15px}
+.prow span small{display:block;color:var(--muted);font-size:13px}
+.prow b{font:700 24px/1 "Cormorant Garamond",serif;white-space:nowrap;color:var(--navy)}
+.prices .btn{margin-top:16px;align-self:flex-start}
+
+/* full price list */
+.pricelist{margin-top:56px;display:grid;gap:30px}
+.pl-col h3{font-size:28px;margin-bottom:8px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+.pl-row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.pl-row p{grid-column:1/-1;margin:0;font-size:14px;color:var(--muted)}
+.pl-row span{font-weight:500}
+.pl-row b{font-weight:600;white-space:nowrap}
+.pl-foot{font-size:13.5px;color:var(--muted);margin-top:12px}
+
+/* process */
+.process{background:var(--white);position:relative}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:0;counter-reset:s}
+.step{position:relative;padding:0 0 34px 72px;counter-increment:s}
+.step::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:-6px;font:600 46px/1 "Cormorant Garamond",serif;color:var(--aqua-ink)}
+.step::after{content:"";position:absolute;left:24px;top:52px;bottom:6px;width:2px;background:repeating-linear-gradient(var(--aqua) 0 6px,transparent 6px 12px)}
+.step:last-child::after{display:none}
+.step h3{font-size:28px;margin-bottom:8px}
+.step p{color:var(--muted);margin:0}
+.dental{margin-top:26px;background:var(--navy);color:var(--pearl);border-radius:var(--radius);padding:28px 22px;display:grid;gap:22px}
+.dental h3{color:var(--pearl);font-size:clamp(28px,5vw,38px);margin-bottom:10px}
+.dental p{color:#D4E2E8}
+.dental ol{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.dental ol li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:15.5px;color:#E6EFF2}
+.dental ol li b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--aqua-light);color:var(--navy);font-weight:600}
+.dental .warn{font-size:14px;border-top:1px solid rgba(255,255,255,.18);padding-top:14px;margin:0;color:#D4E2E8}
+.dental .warn strong{color:var(--peach)}
+
+/* puppy yoga */
+.yoga{background:var(--peach-soft);position:relative;overflow:hidden}
+.yoga-grid{display:grid;gap:30px;align-items:start}
+.yoga h2{font-size:clamp(36px,7vw,60px);margin-bottom:12px}
+.yoga .lead{color:#3C5363;font-size:17px}
+.dates{display:grid;gap:12px;margin:22px 0}
+.ticket{display:grid;grid-template-columns:auto 1fr;background:var(--white);border-radius:14px;overflow:hidden;border:1px solid #EFCDB8}
+.ticket .d{background:var(--navy);color:var(--pearl);padding:12px 16px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-width:92px}
+.ticket .d b{font:700 34px/1 "Cormorant Garamond",serif;color:var(--pearl)}
+.ticket .d small{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua-light)}
+.ticket .t{padding:12px 16px;font-size:15px}
+.ticket .t strong{display:block;font-size:16px;font-weight:600}
+.yoga-facts{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:8px}
+.yoga-facts li{background:var(--white);border:1px solid #EFCDB8;border-radius:999px;padding:6px 14px;font-size:14px}
+.price-big{font:700 54px/1 "Cormorant Garamond",serif;color:var(--navy);margin:0 0 4px}
+.price-big small{font:400 16px/1 "Outfit",sans-serif;color:#3C5363}
+.yoga .small{font-size:14px;color:#3C5363}
+
+/* photos */
+.photos{background:var(--pearl)}
+.ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ph{position:relative;border-radius:16px;overflow:hidden;min-height:170px;display:flex;align-items:flex-end;padding:14px;color:var(--navy);background:var(--aqua-soft)}
+.ph svg.pat{position:absolute;inset:0;width:100%;height:100%}
+.ph div{position:relative;background:rgba(255,255,255,.92);border-radius:10px;padding:8px 11px;font-size:13.5px;line-height:1.35}
+.ph div b{display:block;font-size:14.5px}
+.ph.big{grid-column:1/-1;min-height:230px;background:var(--navy);}
+.ph.peach{background:var(--peach)}
+.ph.pearl{background:var(--pearl-2)}
+
+/* team */
+.team{background:var(--white)}
+.team-grid{display:grid;gap:0;border-top:2px solid var(--navy)}
+.person{padding:20px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.person h3{font-size:28px}
+.person .role{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua-ink);font-weight:600}
+.person p{margin:4px 0 0;color:var(--muted);font-size:15.5px}
+.person a{font-weight:600}
+
+/* faq */
+.faq{background:var(--pearl-2)}
+.faq-list{display:grid;gap:10px;max-width:860px}
+details{background:var(--white);border-radius:14px;border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 54px 18px 20px;font-weight:600;font-size:17px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:20px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--aqua-soft) no-repeat center/12px 12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 1v10M1 6h10' stroke='%2313324B' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details .a{padding:0 20px 18px;color:var(--muted);font-size:15.5px}
+details .a p:last-child{margin:0}
+
+/* contact */
+.contact{background:var(--navy);color:var(--pearl)}
+.contact .eyebrow{color:var(--aqua-light)}
+.contact .eyebrow::before{background:var(--aqua-light)}
+.contact h2{color:var(--pearl);font-size:clamp(36px,7vw,60px);margin-bottom:14px}
+.contact-grid{display:grid;gap:34px}
+.c-lines{display:grid;gap:18px;margin:24px 0}
+.c-line{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.c-line small{display:block;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua-light);font-weight:600}
+.c-line a,.c-line span{color:var(--pearl);font-size:17px;text-decoration:none}
+.c-line a:hover{text-decoration:underline}
+.c-line a.big{font:600 30px/1.1 "Cormorant Garamond",serif;color:var(--pearl)}
+.c-links{display:flex;flex-wrap:wrap;gap:10px}
+.c-links a{color:var(--navy);background:var(--aqua-light);text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:600;font-size:15px}
+.c-links a.alt{background:transparent;color:var(--pearl);border:1.5px solid var(--aqua-light)}
+form.req{background:var(--pearl);color:var(--ink);border-radius:var(--radius);padding:24px 20px;display:grid;gap:14px}
+form.req h3{font-size:30px}
+form.req label{display:grid;gap:6px;font-size:14px;font-weight:500}
+form.req input,form.req select,form.req textarea{font:400 16px/1.4 "Outfit",sans-serif;color:var(--ink);background:var(--white);border:1.5px solid var(--line);border-radius:10px;padding:12px 12px;width:100%}
+form.req textarea{min-height:90px;resize:vertical}
+form.req .msg{display:none;background:var(--aqua-soft);border-radius:10px;padding:12px 14px;font-size:14.5px;margin:0}
+form.req .msg.show{display:block}
+form.req .hint{font-size:13px;color:var(--muted);margin:0}
+
+footer{background:#0D2436;color:#C4D6DF;font-size:13.5px;padding:26px 0 calc(96px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{color:var(--aqua-light)}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--navy);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;box-shadow:0 -6px 22px rgba(19,50,75,.25)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:999px;padding:13px 10px;font-weight:600;font-size:15.5px}
+.callbar .c1{background:var(--peach);color:var(--navy)}
+.callbar .c2{flex:0 0 auto;background:transparent;color:var(--pearl);border:1.5px solid var(--aqua-light);padding:13px 16px}
+
+@media (max-width:420px){
+  .tel-head .num{display:none}
+}
+@media (min-width:600px){
+  .facts ul{grid-template-columns:repeat(2,1fr)}
+  .ph-grid{grid-template-columns:repeat(3,1fr)}
+  .ph.big{grid-column:span 2;grid-row:span 2;min-height:auto}
+}
+@media (min-width:760px){
+  .tabs{grid-template-columns:repeat(4,1fr)}
+  .panel{grid-template-columns:1.35fr 1fr}
+  .panel-body{padding:38px 40px}
+  .prices{padding:38px 34px}
+  .pricelist{grid-template-columns:1fr 1fr;gap:48px}
+  .dental{grid-template-columns:1fr 1fr;padding:40px;gap:40px}
+  .team-grid{grid-template-columns:repeat(3,1fr);gap:0 30px}
+  form.req{padding:32px}
+}
+@media (min-width:960px){
+  nav.main{display:flex}
+  .hero-grid{grid-template-columns:1.05fr 1fr;gap:40px;padding-top:56px;padding-bottom:70px;min-height:600px}
+  .hero .lead{font-size:19px}
+  section{padding:104px 0}
+  .facts ul{grid-template-columns:repeat(4,1fr);gap:26px}
+  .steps{grid-template-columns:repeat(3,1fr);gap:36px}
+  .step{padding:62px 0 0 0}
+  .step::before{top:0}
+  .step::after{left:66px;right:-26px;top:22px;bottom:auto;width:auto;height:2px;background:repeating-linear-gradient(90deg,var(--aqua) 0 6px,transparent 6px 12px)}
+  .yoga-grid{grid-template-columns:1.1fr 1fr;gap:56px}
+  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .callbar{display:none}
+  footer{padding-bottom:26px}
+  .ph-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px}
+  .ph{min-height:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+
+<div class="proposal">Nezávazný návrh webu – <strong>není to oficiální stránka firmy PET CARE</strong></div>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="PET CARE – úvod">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#D3EFEC"/><path d="M11 23c2.5 4 15.5 4 18 0" fill="none" stroke="#13324B" stroke-width="2.4" stroke-linecap="round"/><path d="M15 23.6v2.2M20 24.6v2.4M25 23.6v2.2" stroke="#13324B" stroke-width="1.6" stroke-linecap="round"/><circle cx="14.5" cy="15.5" r="2" fill="#13324B"/><circle cx="25.5" cy="15.5" r="2" fill="#13324B"/><path d="M31 8l1 2.4L34.4 11 32 12l-1 2.4L30 12l-2.4-1L30 10z" fill="#3FB8B0"/></svg>
+      <span><b>PET CARE</b><small>Nový Jičín</small></span>
+    </a>
+    <nav class="main" aria-label="Hlavní menu">
+      <a href="#pece">Péče a ceny</a>
+      <a href="#prubeh">Jak to probíhá</a>
+      <a href="#yoga">Puppy Yoga</a>
+      <a href="#faq">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-head" href="tel:+420734440064" aria-label="Zavolat 734 440 064">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="currentColor"/></svg>
+      <span class="num">734 440 064</span><span class="lbl" aria-hidden="true"></span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Psí SPA · Nový Jičín</p>
+      <h1>Zdravé zuby, lehký pohyb a <em>srst, která voní</em></h1>
+      <p class="lead">Dentální hygiena psů <strong>bez narkózy</strong>, fyzioterapie, ozonové lázně a stříhání – pod jednou střechou v centru Nového Jičína, Dobrovského 35/1.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+420734440064">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M3.5 9h17M5 4h14a1.5 1.5 0 011.5 1.5v13A1.5 1.5 0 0119 20H5a1.5 1.5 0 01-1.5-1.5v-13A1.5 1.5 0 015 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Objednat termín
+        </a>
+        <a class="btn btn-ghost" href="#pece">Péče a ceny</a>
+      </div>
+      <div class="hero-meta">
+        <span><i></i>Tel. <a href="tel:+420734440064">734 440 064</a></span>
+        <span><i></i>Můžete zůstat se psem</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 470" role="img">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#D3EFEC"/><stop offset="1" stop-color="#A9E0DA"/></radialGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EAF2F2"/></linearGradient>
+        </defs>
+        <path d="M262 22c104 0 214 62 226 172 13 118-78 248-224 254C112 454 28 362 30 238 32 112 150 22 262 22z" fill="url(#g1)"/>
+        <path d="M60 330c60 30 120 36 200 20s150-10 220 20" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".7"/>
+        <path d="M70 360c60 26 130 30 200 16s140-6 200 16" fill="none" stroke="#FFFFFF" stroke-width="2" opacity=".5"/>
+        <!-- ears -->
+        <path d="M168 128c-38 6-62 64-50 128 6 32 40 40 54 16 16-30 22-96 20-128-1-12-12-18-24-16z" fill="#F7C8AC" stroke="#13324B" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M352 128c38 6 62 64 50 128-6 32-40 40-54 16-16-30-22-96-20-128 1-12 12-18 24-16z" fill="#F7C8AC" stroke="#13324B" stroke-width="5" stroke-linejoin="round"/>
+        <!-- head -->
+        <path d="M260 104c70 0 112 50 112 120 0 82-52 142-112 142s-112-60-112-142c0-70 42-120 112-120z" fill="url(#g2)" stroke="#13324B" stroke-width="5"/>
+        <!-- muzzle -->
+        <ellipse cx="260" cy="282" rx="70" ry="56" fill="#FFFFFF" stroke="#13324B" stroke-width="4"/>
+        <!-- eyes -->
+        <path d="M204 214c8-10 22-10 30 0" fill="none" stroke="#13324B" stroke-width="6" stroke-linecap="round"/>
+        <path d="M286 214c8-10 22-10 30 0" fill="none" stroke="#13324B" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="196" cy="246" rx="15" ry="8" fill="#F7C8AC" opacity=".8"/>
+        <ellipse cx="324" cy="246" rx="15" ry="8" fill="#F7C8AC" opacity=".8"/>
+        <!-- nose -->
+        <path d="M243 252c0-9 34-9 34 0 0 9-10 16-17 16s-17-7-17-16z" fill="#13324B"/>
+        <path d="M252 254c3-2 8-2 10 0" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M260 268v10" stroke="#13324B" stroke-width="4" stroke-linecap="round"/>
+        <!-- smile with teeth -->
+        <path d="M214 286c14 32 78 32 92 0" fill="#13324B" stroke="#13324B" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M220 289c14 14 66 14 80 0v4c-14 12-66 12-80 0z" fill="#FFFFFF"/>
+        <path d="M233 295v6M247 298v7M260 299v7M273 298v7M287 295v6" stroke="#C9DCDD" stroke-width="1.6"/>
+        <path d="M244 309c6 10 26 10 32 0-4-4-28-4-32 0z" fill="#F29A86"/>
+        <!-- sparkles near teeth -->
+        <path class="spark" d="M336 272l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#FFFFFF" stroke="#13324B" stroke-width="2.5" stroke-linejoin="round"/>
+        <path class="spark s2" d="M182 300l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#3FB8B0"/>
+        <path class="spark" d="M402 92l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="#F7C8AC" stroke="#13324B" stroke-width="2" stroke-linejoin="round"/>
+        <!-- collar -->
+        <path d="M196 352c40 22 88 22 128 0" fill="none" stroke="#3FB8B0" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="260" cy="376" r="13" fill="#F7C8AC" stroke="#13324B" stroke-width="4"/>
+        <path d="M255 375l4 4 7-8" fill="none" stroke="#13324B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- bubbles + drops -->
+        <g class="bubble"><circle cx="96" cy="120" r="26" fill="#FFFFFF" opacity=".75" stroke="#13324B" stroke-width="2.5"/><path d="M84 110a14 14 0 018-6" stroke="#3FB8B0" stroke-width="3" stroke-linecap="round" fill="none"/></g>
+        <g class="bubble b2"><circle cx="446" cy="250" r="18" fill="#FFFFFF" opacity=".8" stroke="#13324B" stroke-width="2.5"/></g>
+        <g class="bubble b3"><circle cx="124" cy="196" r="10" fill="#FFFFFF" stroke="#13324B" stroke-width="2"/><circle cx="420" cy="170" r="8" fill="#FFFFFF" stroke="#13324B" stroke-width="2"/></g>
+        <path d="M70 262c0 0-16 20-16 30a16 16 0 0032 0c0-10-16-30-16-30z" fill="#3FB8B0" stroke="#13324B" stroke-width="2.5"/>
+        <path d="M466 330c0 0-12 15-12 23a12 12 0 0024 0c0-8-12-23-12-23z" fill="#F7C8AC" stroke="#13324B" stroke-width="2.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="none" stroke="#93E2DA" stroke-width="2"/><circle cx="12" cy="9" r="2.5" fill="#93E2DA"/></svg><span><b>Salon v centru města</b> – zatímco pečujeme, můžete si v klidu nakoupit.</span></li>
+      <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h13v5a5 5 0 01-5 5H9a5 5 0 01-5-5zM17 11h1.5a2.5 2.5 0 010 5H17M8 3c0 2 2 2 2 4M12 3c0 2 2 2 2 4" fill="none" stroke="#93E2DA" stroke-width="2" stroke-linecap="round"/></svg><span><b>Můžete být u toho</b> – po celou dobu procedury, s dobrou kávou.</span></li>
+      <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16V8h11v8M14 11h4l3 3v2h-7M6.5 18.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM17.5 18.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="none" stroke="#93E2DA" stroke-width="2" stroke-linejoin="round"/></svg><span><b>Odvoz a dovoz psa zdarma</b> v Novém Jičíně u balíčků, pokud nemůžete přijet ze zdravotních důvodů.</span></li>
+      <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" fill="none" stroke="#93E2DA" stroke-width="2" stroke-linejoin="round"/></svg><span><b>Profesionální kosmetika</b> Iv San Bernard a Pomeranian Beauty – i na doma.</span></li>
+    </ul>
+    <p class="src">Údaje převzaty ze stávajícího webu salonu (<a href="https://dentalni-hygiena-pet-care.webnode.cz/o-nas/">O mně</a>, <a href="https://dentalni-hygiena-pet-care.webnode.cz/cenik/">Ceník</a>, <a href="https://dentalni-hygiena-pet-care.webnode.cz/sluzby-wellness/">Služby wellness</a>).</p>
+  </div>
+</div>
+
+<section class="care" id="pece">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Péče podle potřeby</p>
+      <h2>Co Vašeho psa právě trápí?</h2>
+      <p>Vyberte oblast a hned uvidíte, co péče obnáší a kolik stojí. Ceny jsou z aktuálního ceníku salonu.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Péče podle potřeby">
+      <button class="tab" role="tab" id="t-zuby" aria-controls="p-zuby" aria-selected="true">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M10 5c-4 0-6 3-6 7 0 5 2 7 3 11 1 4 2 5 3 5 2 0 2-6 6-6s4 6 6 6c1 0 2-1 3-5s3-6 3-11c0-4-2-7-6-7-3 0-4 1.5-6 1.5S13 5 10 5z" fill="none" stroke="#0B6661" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <span>Zuby<small>dentální hygiena</small></span>
+      </button>
+      <button class="tab" role="tab" id="t-pohyb" aria-controls="p-pohyb" aria-selected="false" tabindex="-1">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 24c4-1 6-6 9-11s6-7 10-6M20 4l3 3-3 3M8 28h16" fill="none" stroke="#0B6661" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Pohyb<small>fyzioterapie</small></span>
+      </button>
+      <button class="tab" role="tab" id="t-srst" aria-controls="p-srst" aria-selected="false" tabindex="-1">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26c2-8 4-14 10-20M12 26c1-6 3-11 8-16M18 26c1-4 3-8 8-12" fill="none" stroke="#0B6661" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <span>Srst a kůže<small>zábaly, stříhání</small></span>
+      </button>
+      <button class="tab" role="tab" id="t-spa" aria-controls="p-spa" aria-selected="false" tabindex="-1">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 18h24v2a8 8 0 01-8 8h-8a8 8 0 01-8-8zM10 13a3 3 0 100-6M17 11a2 2 0 100-4M23 13a3 3 0 100-6" fill="none" stroke="#0B6661" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <span>SPA<small>ozon, lázeň, balíčky</small></span>
+      </button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-zuby" aria-labelledby="t-zuby">
+      <div class="panel-body">
+        <h3>Preventivní dentální hygiena bez narkózy</h3>
+        <p class="intro">Odstraníme povlak a případně zubní kámen – šetrně ultrazvukem nebo mechanicky, bez rizika anestezie.</p>
+        <ul class="does">
+          <li>Ultrazvuk čistí i tam, kam štětiny kartáčku nedosáhnou.</li>
+          <li>Snižuje podráždění dásní a zpomaluje tvorbu nového plaku a kamene.</li>
+          <li>Zápach z tlamy výrazně sníží – úplně ho ale neodstraní, to je mýtus.</li>
+          <li>Ošetřujeme psy. Kočkám zuby nečistíme.</li>
+        </ul>
+        <p class="note">Ošetření nenahrazuje veterinární péči. Pokud chrup vykazuje známky parodontózy, doporučíme Vám návštěvu veterináře.</p>
+      </div>
+      <div class="prices">
+        <h4>Ceník – dentální hygiena</h4>
+        <div class="prow"><span>První návštěva</span><b>1 500 Kč</b></div>
+        <div class="prow"><span>Opakovaná návštěva<small>zhruba po 3 měsících, individuálně</small></span><b>1 000 Kč</b></div>
+        <div class="prow"><span>VIP balíček<small>kompletní SPA + dentální hygiena, S / M / L</small></span><b>1 250–1 750 Kč</b></div>
+        <a class="btn btn-primary" href="tel:+420734440064">Objednat dentální hygienu</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-pohyb" aria-labelledby="t-pohyb">
+      <div class="panel-body">
+        <h3>Fyzioterapie a rehabilitace</h3>
+        <p class="intro">Pro seniory, psy po úrazu i aktivní sportovce. Vede ji fyzioterapeutka Ing. Kateřina Řehořová, CertCAAPR.</p>
+        <ul class="does">
+          <li>Vstupní konzultace – zjistíme, kde je problém, a navrhneme plán.</li>
+          <li>Komplexní ošetření v délce 30 nebo 60 minut.</li>
+          <li>Doplňkově ozonová lázeň – u starších psů s omezeným pohybem nebo po úrazu.</li>
+          <li>Perličková lázeň s tlakovou vodní masáží uvolňuje páteř a pohybový aparát.</li>
+        </ul>
+        <p class="note">Na fyzioterapii se můžete objednat i přímo: 739 308 376.</p>
+      </div>
+      <div class="prices">
+        <h4>Ceník – fyzioterapie</h4>
+        <div class="prow"><span>Vstupní konzultace<small>60 minut</small></span><b>1 100 Kč</b></div>
+        <div class="prow"><span>Komplexní ošetření<small>60 minut</small></span><b>800 Kč</b></div>
+        <div class="prow"><span>Komplexní ošetření<small>30 minut</small></span><b>450 Kč</b></div>
+        <a class="btn btn-primary" href="tel:+420739308376">Objednat fyzioterapii</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-srst" aria-labelledby="t-srst">
+      <div class="panel-body">
+        <h3>Srst, kůže a profesionální střih</h3>
+        <p class="intro">Lupy, línání, olizované tlapky nebo jen střih podle standardu plemene – vybereme péči podle stavu srsti.</p>
+        <ul class="does">
+          <li><strong>Bahenní zábal</strong> z červeného jílu a oleje z ginkga – při suché kůži, lupech a nadměrném línání.</li>
+          <li><strong>Tlapkový zábal</strong> – při olizování tlapek a zčervenalé kůži mezi polštářky, připravíme ho i na doma.</li>
+          <li><strong>Stříhání a trimování</strong> – koupání, fénování, střih, drápky, uši, oči, kontrola análních žláz dle potřeby.</li>
+          <li>Pomeraniány neholíme – zastřihneme ouška, tlapky a siluetu, aby srst zůstala zdravá.</li>
+        </ul>
+        <p class="note">Před trimováním psa minimálně 14 dní nekoupejte.</p>
+      </div>
+      <div class="prices">
+        <h4>Ceník – srst a kůže</h4>
+        <div class="prow"><span>Bahenní zábal<small>podle velikosti</small></span><b>250–500 Kč</b></div>
+        <div class="prow"><span>Stříhání – malý pes<small>do 10 kg</small></span><b>700–1 100 Kč</b></div>
+        <div class="prow"><span>Stříhání – střední pes<small>10–25 kg</small></span><b>1 100–1 500 Kč</b></div>
+        <div class="prow"><span>Stříhání – velký pes<small>25–40 kg</small></span><b>1 700–2 200 Kč</b></div>
+        <a class="btn btn-primary" href="tel:+420734440064">Objednat termín</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-spa" aria-labelledby="t-spa">
+      <div class="panel-body">
+        <h3>SPA balíčky s ozonem nebo perličkovou lázní</h3>
+        <p class="intro">Kompletní péče pro psy i kočky, o které je doma pečováno: lázeň, mytí, sušení, vyčesání a úprava, drápky, oči a uši.</p>
+        <ul class="does">
+          <li><strong>Ozon O3</strong> čistí kožní póry do hloubky – pomáhá při kožních potížích a výměně srsti.</li>
+          <li><strong>Perličková lázeň</strong> s oleji, minerály nebo květy – masáž celého těla a zklidnění.</li>
+          <li>Šampon vmasírujeme do srsti, balzám necháme působit 10 minut.</li>
+          <li>VIP balíček navíc zahrnuje preventivní čištění zubů u klientů na pravidelné péči.</li>
+        </ul>
+        <p class="note">Zablešená zvířata nepřijímáme. Velmi velké psy po předchozí domluvě.</p>
+      </div>
+      <div class="prices">
+        <h4>Ceník – SPA</h4>
+        <div class="prow"><span>Základní balíček<small>S do 10 kg · M do 20 kg · L nad 20 kg</small></span><b>900–1 500 Kč</b></div>
+        <div class="prow"><span>VIP balíček<small>základní balíček + dentální hygiena</small></span><b>1 250–1 750 Kč</b></div>
+        <div class="prow"><span>Samostatné úkony<small>uši, oči, drápky</small></span><b>100 Kč</b></div>
+        <a class="btn btn-primary" href="tel:+420734440064">Objednat SPA</a>
+      </div>
+    </div>
+
+    <div class="pricelist" aria-label="Kompletní ceník">
+      <div class="pl-col">
+        <h3>Doplňky a příplatky</h3>
+        <div class="pl-row"><span>Tlapkový zábal</span><b>+ 150–250 Kč</b></div>
+        <div class="pl-row"><span>Vykoupání bez procedur</span><b>450–1 200 Kč</b><p>Kvalitní kosmetikou, podle velikosti psa.</p></div>
+        <div class="pl-row"><span>Vyčesání dredů a podsady</span><b>+ 350 Kč / 30 min</b><p>U neudržovaného zvířete.</p></div>
+        <div class="pl-row"><span>Znečištěné zvíře – trojité mytí</span><b>+ 250 Kč</b></div>
+        <div class="pl-row"><span>Odvoz a dovoz psa (Nový Jičín)</span><b>zdarma</b><p>Jen k balíčkům, pro majitele, kteří ze zdravotních důvodů nemohou přijet.</p></div>
+      </div>
+      <div class="pl-col">
+        <h3>Stříhání – podle velikosti</h3>
+        <div class="pl-row"><span>Malý pes</span><b>700–1 100 Kč</b><p>Do 10 kg, do 30 cm.</p></div>
+        <div class="pl-row"><span>Střední pes</span><b>1 100–1 500 Kč</b><p>10–25 kg, 35–50 cm.</p></div>
+        <div class="pl-row"><span>Velký pes</span><b>1 700–2 200 Kč</b><p>25–40 kg, 50–65 cm.</p></div>
+        <div class="pl-row"><span>Nadměrný pes</span><b>3 000–5 000 Kč</b><p>Nad 40 kg, nad 65 cm.</p></div>
+        <div class="pl-row"><span>Zadredování mírné / střední</span><b>+ 150–500 Kč</b><p>Silné zadredování ceníme individuálně.</p></div>
+        <p class="pl-foot">Ceny jsou orientační, konečná cena se odvíjí od stavu srsti. Zdroj: <a href="https://dentalni-hygiena-pet-care.webnode.cz/cenik/">ceník salonu</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="prubeh">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Jak probíhá návštěva</p>
+      <h2>Od telefonátu k čistým zubům ve třech krocích</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Zavoláte a domluvíme termín</h3><p>Ve všední dny podle objednaných klientů, o víkendu po předchozí domluvě. Řekněte nám plemeno, váhu a co psa trápí.</p></li>
+      <li class="step"><h3>Péče v klidu, s Vámi u toho</h3><p>Můžete zůstat celou dobu se psem a dát si kávu, nebo si mezitím zajít nakoupit do centra.</p></li>
+      <li class="step"><h3>Odcházíte s plánem na doma</h3><p>Doporučíme další termín (u zubů zhruba za 3 měsíce) a kosmetiku či zábal, které můžete používat doma.</p></li>
+    </ol>
+
+    <div class="dental">
+      <div>
+        <p class="eyebrow" style="color:#93E2DA">Zuby bez narkózy</p>
+        <h3>Jak probíhá dentální hygiena bez anestezie</h3>
+        <p>Jde o preventivní čištění zubů u psa při vědomí, bez narkózy. Pracujeme v klidu a tempo přizpůsobujeme tomu, jak pes spolupracuje.</p>
+      </div>
+      <ol>
+        <li><b>1</b><span>Prohlédneme chrup a dásně. Když něco vypadá mimo normál, řekneme Vám to rovnou.</span></li>
+        <li><b>2</b><span>Ultrazvukem nebo mechanicky šetrně odstraníme povlak a zubní kámen z povrchu zubů.</span></li>
+        <li><b>3</b><span>Domluvíme pravidelnost – čím dříve se s péčí začne, tím lépe.</span></li>
+        <li style="grid-template-columns:1fr"><p class="warn"><strong>Důležité:</strong> čištění nenahrazuje veterinární ošetření. Při známkách parodontózy Vás pošleme k veterináři.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="yoga" id="yoga">
+  <div class="wrap yoga-grid">
+    <div>
+      <p class="eyebrow">Akce v salonu · říjen 2026</p>
+      <h2>Puppy Yoga se štěňaty bílého švýcarského ovčáka</h2>
+      <p class="lead">Jemná lekce jógy v pomalém tempu, zatímco se štěňata volně pohybují kolem Vás, lehají si na podložku a nechají se hladit. Pro dospělé i starší děti, začátečníky i pokročilé.</p>
+      <ul class="yoga-facts">
+        <li>cca 60 minut</li><li>8–12 účastníků</li><li>10 podložek k zapůjčení</li><li>závěr: mazlení a focení</li>
+      </ul>
+      <p class="small">Přijďte 10–15 minut předem v čistém, pohodlném a spíš starším oblečení. Zrušení bez poplatku nejpozději 24 hodin před lekcí.</p>
+    </div>
+    <div>
+      <div class="dates">
+        <div class="ticket"><div class="d"><b>22</b><small>října</small></div><div class="t"><strong>Čtvrtek 22. 10. 2026</strong>lekce v 16:30 a v 17:45</div></div>
+        <div class="ticket"><div class="d"><b>23</b><small>října</small></div><div class="t"><strong>Pátek 23. 10. 2026</strong>lekce v 16:30 a v 17:45</div></div>
+      </div>
+      <p class="price-big">550 Kč <small>/ osoba</small></p>
+      <p class="small">Rezervace zatím jen telefonicky. Po potvrzení Vám pošleme QR kód k platbě – zaplacením máte místo jisté.</p>
+      <a class="btn btn-primary" href="tel:+420734440064">Rezervovat místo na Puppy Yogu</a>
+    </div>
+  </div>
+</section>
+
+<section class="photos" aria-labelledby="h-foto">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Ze salonu</p>
+      <h2 id="h-foto">Jak to u nás vypadá</h2>
+    </div>
+    <div class="ph-grid">
+      <div class="ph big">
+        <svg class="pat" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#3FB8B0" stroke-width="1.5" opacity=".5"><circle cx="320" cy="70" r="40"/><circle cx="350" cy="140" r="18"/><circle cx="60" cy="60" r="24"/><circle cx="270" cy="220" r="60"/></g></svg>
+        <div><b>Sem přijde Vaše fotka</b>Před a po: pes po kompletní SPA péči</div>
+      </div>
+      <div class="ph peach">
+        <svg class="pat" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#13324B" stroke-width="1.2" opacity=".25"><path d="M0 40q50-30 100 0t100 0M0 80q50-30 100 0t100 0M0 120q50-30 100 0t100 0"/></g></svg>
+        <div><b>Sem přijde Vaše fotka</b>Ozonová nebo perličková lázeň</div>
+      </div>
+      <div class="ph">
+        <svg class="pat" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#FFFFFF" opacity=".6"><circle cx="40" cy="40" r="10"/><circle cx="150" cy="30" r="16"/><circle cx="120" cy="90" r="6"/></g></svg>
+        <div><b>Sem přijde Vaše fotka</b>Čisté zuby po dentální hygieně</div>
+      </div>
+      <div class="ph pearl">
+        <svg class="pat" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#3FB8B0" stroke-width="1.2" opacity=".5"><path d="M20 20h40v40H20zM120 30l30 30-30 30-30-30z"/></g></svg>
+        <div><b>Sem přijde Vaše fotka</b>Odpočinkový koutek s kávou</div>
+      </div>
+      <div class="ph peach">
+        <svg class="pat" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#FFFFFF" opacity=".55"><circle cx="160" cy="40" r="22"/><circle cx="40" cy="70" r="9"/></g></svg>
+        <div><b>Sem přijde Vaše fotka</b>Puppy Yoga se štěňaty</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" aria-labelledby="h-team">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Kdo o Vašeho psa pečuje</p>
+      <h2 id="h-team">Tři odbornice, jedna adresa</h2>
+    </div>
+    <div class="team-grid">
+      <div class="person"><span class="role">SPA, dentální hygiena, kosmetika</span><h3>Simona Žáčková</h3><p>SPA péče a dentální hygiena psů, distributorka kosmetiky Pomeranian Beauty, poradenství v péči o kůži a srst.</p><a href="tel:+420734440064">734 440 064</a></div>
+      <div class="person"><span class="role">Fyzioterapie a rehabilitace</span><h3>Ing. Kateřina Řehořová</h3><p>CertCAAPR. Vstupní konzultace a komplexní ošetření 30 nebo 60 minut.</p><a href="tel:+420739308376">739 308 376</a></div>
+      <div class="person"><span class="role">Groomerka – stříhání a trimování</span><h3>Petra Gruchalová</h3><p>Střih nebo trimování podle standardu plemene i Vašeho přání.</p><a href="tel:+420739831213">739 831 213</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Časté otázky</p>
+      <h2>Na co se nás majitelé ptají</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Jak probíhá dentální hygiena bez narkózy?</summary>
+        <div class="a"><p>Pes je při vědomí a čištění probíhá v klidu, tempem podle toho, jak spolupracuje. Povlak a případně zubní kámen odstraňujeme šetrně ultrazvukem nebo mechanicky. Jde o preventivní péči – nenahrazuje veterinární ošetření, a pokud uvidíme známky parodontózy, doporučíme Vám veterináře.</p></div>
+      </details>
+      <details>
+        <summary>Jak často má pes na dentální hygienu chodit?</summary>
+        <div class="a"><p>Opakovaná návštěva bývá zhruba po 3 měsících, ale je to individuální. Platí, že čím dříve se s péčí o zuby začne, tím lépe. První návštěva stojí 1 500 Kč, opakovaná 1 000 Kč.</p></div>
+      </details>
+      <details>
+        <summary>Můžu zůstat u svého psa?</summary>
+        <div class="a"><p>Ano. Pokud psa nechcete opustit, můžete být u celé procedury a dát si u nás kávu. Nebo si mezitím v klidu nakoupíte – salon je v centru Nového Jičína.</p></div>
+      </details>
+      <details>
+        <summary>Nemůžu do salonu přijet. Dá se to vyřešit?</summary>
+        <div class="a"><p>Pokud se ze zdravotních důvodů nemůžete dostavit osobně, psa si v rámci Nového Jičína vyzvedneme a zase přivezeme – zdarma, u SPA balíčků.</p></div>
+      </details>
+      <details>
+        <summary>Čistíte zuby i kočkám?</summary>
+        <div class="a"><p>Ne, dentální hygienu nabízíme jen psům. Kočky k nám ale můžete přivést na úpravu a SPA péči.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Kontakt a objednání</p>
+      <h2>Zavolejte, termín domluvíme hned</h2>
+      <div class="c-lines">
+        <div class="c-line"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="#93E2DA"/></svg><div><small>Telefon – objednávky</small><a class="big" href="tel:+420734440064">734 440 064</a></div></div>
+        <div class="c-line"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 6l9 7 9-7" fill="none" stroke="#93E2DA" stroke-width="2" stroke-linejoin="round"/></svg><div><small>E-mail</small><a href="mailto:petcaresimona@gmail.com">petcaresimona@gmail.com</a></div></div>
+        <div class="c-line"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="none" stroke="#93E2DA" stroke-width="2"/><circle cx="12" cy="9" r="2.5" fill="#93E2DA"/></svg><div><small>Adresa</small><span>Dobrovského 35/1, 741 01 Nový Jičín</span></div></div>
+        <div class="c-line"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#93E2DA" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="#93E2DA" stroke-width="2" stroke-linecap="round"/></svg><div><small>Otevírací doba</small><span>Po–Pá: podle objednaných klientů<br>So–Ne: po předchozí domluvě</span></div></div>
+      </div>
+      <div class="c-links">
+        <a href="https://mapy.cz/zakladni?q=Dobrovsk%C3%A9ho%2035%2F1%2C%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Navigovat na Mapy.cz</a>
+        <a class="alt" href="https://www.facebook.com/people/PET-CARE/61558975247114/" target="_blank" rel="noopener">Facebook – fotky před a po</a>
+      </div>
+      <p style="font-size:13px;color:#C4D6DF;margin-top:18px">IČ 21402728 · Simona Žáčková</p>
+    </div>
+    <form class="req" id="req" novalidate>
+      <h3>Nebo nám nechte vzkaz</h3>
+      <label>Jméno a příjmení<input name="jmeno" autocomplete="name" required></label>
+      <label>Telefon<input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
+      <label>O jakou péči máte zájem?
+        <select name="pece">
+          <option>Dentální hygiena</option><option>Fyzioterapie</option><option>SPA balíček</option><option>Stříhání a úprava</option><option>Puppy Yoga</option>
+        </select>
+      </label>
+      <label>Plemeno, váha a co psa trápí<textarea name="zprava"></textarea></label>
+      <button class="btn btn-peach" type="submit">Odeslat a čekat na zavolání</button>
+      <p class="msg" role="status" aria-live="polite">Toto je jen ukázka – v hotovém webu zpráva odejde přímo do Vašeho e-mailu.</p>
+      <p class="hint">Ozveme se Vám telefonicky a termín potvrdíme.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© PET CARE – psí SPA, dentální hygiena, fyzioterapie a stříhání · Nový Jičín</span>
+    <span>Nezávazný návrh webu · zdroj údajů: <a href="https://dentalni-hygiena-pet-care.webnode.cz/">stávající web</a> a <a href="https://www.firmy.cz/detail/13662362-pet-care-novy-jicin.html">Firmy.cz</a></span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+420734440064">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="currentColor"/></svg>
+    Objednat · 734 440 064
+  </a>
+  <a class="c2" href="#pece">Ceník</a>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function sel(t,focus){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on?'true':'false');
+      x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){sel(t)});
+    t.addEventListener('keydown',function(e){
+      var k=e.key,n=null;
+      if(k==='ArrowRight'||k==='ArrowDown')n=tabs[(i+1)%tabs.length];
+      if(k==='ArrowLeft'||k==='ArrowUp')n=tabs[(i-1+tabs.length)%tabs.length];
+      if(k==='Home')n=tabs[0];if(k==='End')n=tabs[tabs.length-1];
+      if(n){e.preventDefault();sel(n,true)}
+    });
+  });
+  sel(tabs[0]);
+  var f=document.getElementById('req');
+  f.addEventListener('submit',function(e){e.preventDefault();f.querySelector('.msg').classList.add('show')});
+})();
+</script>
+</body>
+</html>

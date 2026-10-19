@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Holičství KARIN | holičství a kadeřnictví Ostrava</title>
+<meta name="description" content="Holičství KARIN – pánské, dámské i dětské stříhání bez objednání. Holičství a kadeřnictví v Ostravě-Mariánských Horách, 1. máje 70/12a. Po–Pá 8:15–16:30.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Rethink+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Holičství KARIN",
+  "description":"Pánské, dámské i dětské stříhání bez objednání.",
+  "telephone":"+420604378542",
+  "email":"karin.80@seznam.cz",
+  "taxID":"66944040",
+  "address":{"@type":"PostalAddress","streetAddress":"1. máje 70/12a","addressLocality":"Ostrava-Mariánské Hory","postalCode":"709 00","addressCountry":"CZ"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:15","closes":"16:30"}]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+/* Layout: jeden vědomý světlý vzhled – námořnická výloha nahoře, bílé „dlaždice“ dole; mobil první, max. šířka 1180 px */
+:root{
+  --navy:#12233f;
+  --navy-2:#1b3157;
+  --red:#c8102e;
+  --red-dark:#a00d24;
+  --tile:#f6f5f1;
+  --white:#ffffff;
+  --steel:#5a6474;
+  --steel-light:#c9ced6;
+  --ink:#12233f;
+  --line:#dcdfe4;
+  --f-display:"Big Shoulders Display","Oswald","Roboto Condensed","Arial Narrow","Liberation Sans Narrow",Impact,sans-serif;
+  --f-text:"Rethink Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --wrap:1180px;
+  --gut:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--tile);color:var(--ink);font-family:var(--f-text);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:var(--red-dark)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-family:var(--f-display);line-height:.95;margin:0;letter-spacing:.01em}
+h2{font-size:clamp(44px,8vw,84px);font-weight:900;text-transform:uppercase}
+.ukazka{display:inline-block;font:500 11px/1.3 var(--f-text);letter-spacing:.04em;text-transform:uppercase;background:#fff3c4;color:#5c4400;border:1px solid #e0c766;border-radius:3px;padding:1px 6px;vertical-align:middle;white-space:nowrap}
+.kicker{font:700 13px/1 var(--f-text);letter-spacing:.16em;text-transform:uppercase;color:var(--red-dark);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.kicker::before{content:"";width:28px;height:3px;background:var(--red)}
+
+/* banner návrhu */
+.demo{background:#fff3c4;color:#3d2e00;font-size:13px;line-height:1.35;text-align:center;padding:8px 16px;border-bottom:1px solid #e0c766}
+
+/* hlavička */
+.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--red)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px}
+.logo{font-family:var(--f-display);font-weight:900;font-size:26px;letter-spacing:.06em;color:#fff;text-decoration:none;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.logo small{font-family:var(--f-text);font-weight:500;font-size:11px;letter-spacing:.14em;color:var(--steel-light);display:none}
+@media (min-width:560px){.logo small{display:inline}}
+.top nav{display:none;gap:22px}
+.top nav a{color:#fff;text-decoration:none;font-size:15px;font-weight:500}
+.top nav a:hover{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:5px;text-decoration-thickness:2px}
+@media (min-width:900px){.top nav{display:flex}}
+.tel-top{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:9px 14px;border-radius:999px;white-space:nowrap}
+.tel-top:hover{background:var(--red-dark)}
+.tel-top svg{width:16px;height:16px}
+
+/* HERO – výloha */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:22px 0 30px}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:14px;background:repeating-linear-gradient(90deg,var(--red) 0 28px,#fff 28px 56px,var(--navy-2) 56px 84px)}
+.hero-grid{display:grid;grid-template-columns:1fr 64px;gap:12px;align-items:start}
+@media (min-width:900px){.hero-grid{grid-template-columns:1fr 150px;gap:40px}.hero{padding:48px 0 64px}}
+.addr-line{font-size:14px;color:var(--steel-light);margin:0 0 10px;display:flex;flex-wrap:wrap;gap:4px 12px}
+.addr-line strong{color:#fff;font-weight:700}
+.window{font-family:var(--f-display);text-transform:uppercase;font-weight:900;margin:0;line-height:.86}
+.window .big{display:block;font-size:clamp(56px,16.5vw,184px);color:#fff;letter-spacing:-.005em}
+.window .big span{color:var(--red);-webkit-text-stroke:0}
+.window .sub{display:block;font-size:clamp(30px,8.4vw,92px);font-weight:800;color:var(--steel-light);margin-top:.12em;letter-spacing:.01em}
+.window .sub em{font-style:normal;color:#fff;border-bottom:.08em solid var(--red)}
+.hero-lead{max-width:640px;font-size:17px;color:#e3e7ee;margin:16px 0 18px}
+.hero-lead b{color:#fff}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:999px;font:700 17px/1.1 var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-ghost{background:transparent;color:#fff;border-color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-line{background:#fff;color:var(--navy);border-color:var(--navy)}
+.hero .tel-text{margin:12px 0 0;font-size:15px;color:var(--steel-light)}
+.hero .tel-text a{color:#fff;font-weight:700}
+
+/* holičský sloup */
+.pole{width:100%;height:auto;display:block}
+.pole .stripes{animation:poleSpin 2.4s linear infinite}
+@keyframes poleSpin{from{transform:translateY(0)}to{transform:translateY(-48px)}}
+@media (prefers-reduced-motion:reduce){.pole .stripes{animation:none}}
+
+/* lístek z pořadníku */
+.ticket-sec{padding:0 0 8px;margin-top:-6px;position:relative;z-index:2}
+.ticket-zone{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:center;padding-top:30px}
+@media (min-width:900px){.ticket-zone{grid-template-columns:420px minmax(0,1fr);gap:56px;padding-top:56px}}
+.ticket{position:relative;background:#fff;color:var(--navy);border-radius:6px;padding:22px 22px 18px;box-shadow:0 1px 0 var(--line),0 14px 30px -18px rgba(18,35,63,.45);
+  -webkit-mask:radial-gradient(circle 11px at 0 50%,#0000 98%,#000) 0 0/51% 100% no-repeat,radial-gradient(circle 11px at 100% 50%,#0000 98%,#000) 100% 0/51% 100% no-repeat;
+  mask:radial-gradient(circle 11px at 0 50%,#0000 98%,#000) 0 0/51% 100% no-repeat,radial-gradient(circle 11px at 100% 50%,#0000 98%,#000) 100% 0/51% 100% no-repeat;
+  transform:rotate(-1.2deg)}
+@media (prefers-reduced-motion:reduce){.ticket{transform:none}}
+.ticket::before{content:"";position:absolute;left:18px;right:18px;top:50%;border-top:2px dashed var(--line)}
+.t-head{display:flex;justify-content:space-between;align-items:baseline;font:700 12px/1 var(--f-text);letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+.t-num{font-family:var(--f-display);font-weight:900;font-size:96px;line-height:.9;color:var(--red);margin:6px 0 4px;letter-spacing:.02em}
+.t-num small{font-size:28px;color:var(--navy);margin-right:6px}
+.t-state{display:inline-flex;align-items:center;gap:8px;font:700 15px/1 var(--f-text);text-transform:uppercase;letter-spacing:.08em;padding:7px 12px;border-radius:999px;background:#e7f3ec;color:#14532d}
+.t-state i{width:9px;height:9px;border-radius:50%;background:#15803d}
+.t-state.closed{background:#fbe6e9;color:#8a0b1f}
+.t-state.closed i{background:var(--red)}
+.t-body{padding-top:32px;display:grid;gap:10px}
+.t-row{display:flex;justify-content:space-between;gap:12px;font-size:15px;border-bottom:1px dotted var(--line);padding-bottom:8px}
+.t-row span{color:var(--steel)}
+.t-row b{text-align:right}
+.t-foot{font-size:12.5px;color:var(--steel);margin:4px 0 0;line-height:1.4}
+.hours h2{font-size:clamp(40px,7vw,72px)}
+.hours-list{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;max-width:640px}
+.hours-list li{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:14px}
+.hours-list li b{display:block;font-family:var(--f-display);font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.hours-list li.off{background:transparent;color:var(--steel)}
+.hours-list li.today{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
+
+/* sekce */
+section{scroll-margin-top:70px}
+.sec{padding:64px 0}
+@media (min-width:900px){.sec{padding:96px 0}}
+.sec-head{display:grid;gap:14px;margin-bottom:32px}
+@media (min-width:900px){.sec-head{grid-template-columns:1fr 1fr;align-items:end;gap:40px}}
+.sec-head p{margin:0;color:var(--steel);max-width:520px}
+
+/* služby – ceník jako cedule */
+.board{background:var(--navy);color:#fff;border-radius:10px;padding:8px 20px;border:6px solid var(--navy-2);box-shadow:0 0 0 2px var(--steel-light) inset}
+.svc{display:grid;grid-template-columns:minmax(0,1fr);justify-items:start;gap:4px 16px;padding:20px 0;border-bottom:1px dashed rgba(255,255,255,.25)}
+.svc:last-child{border-bottom:0}
+@media (min-width:640px){.svc{grid-template-columns:minmax(0,1fr) auto;justify-items:stretch}.svc .price{justify-self:end}}
+.svc h3{font-size:clamp(32px,6vw,48px);font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.svc .price{justify-self:start;font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--red);padding:6px 12px;border-radius:4px;align-self:center;white-space:nowrap}
+.svc p{grid-column:1/-1;margin:0;color:#d5dbe5;font-size:16px;max-width:620px}
+.svc p .ukazka{margin-left:4px}
+.board-note{margin:18px 0 0;font-size:15px;color:var(--steel)}
+
+/* Karin */
+.karin{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.karin-grid{display:grid;gap:32px}
+@media (min-width:900px){.karin-grid .photo{aspect-ratio:4/5}.karin-grid{grid-template-columns:5fr 6fr;gap:64px;align-items:center}}
+.photo{aspect-ratio:4/3;border-radius:8px;background:
+  repeating-linear-gradient(135deg,rgba(18,35,63,.06) 0 14px,transparent 14px 28px),var(--tile);
+  border:2px dashed var(--steel-light);display:grid;place-items:center;text-align:center;color:var(--steel);font-weight:500;padding:20px}
+.photo svg{width:56px;height:56px;margin:0 auto 10px;display:block;color:var(--steel)}
+blockquote{margin:0;font-size:clamp(20px,2.6vw,26px);line-height:1.45;font-weight:400}
+.qmark{display:block;width:44px;height:34px;color:var(--red);margin-bottom:14px}
+.sign{margin-top:18px;font-family:var(--f-display);font-weight:800;font-size:34px;text-transform:uppercase;letter-spacing:.06em}
+.sign small{display:block;font-family:var(--f-text);font-size:14px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--steel)}
+
+/* důvěra */
+.trust{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+@media (min-width:760px){.trust{grid-template-columns:repeat(3,1fr)}}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;border-top:5px solid var(--navy)}
+.tcard.r{border-top-color:var(--red)}
+.tcard .val{font-family:var(--f-display);font-weight:900;font-size:clamp(40px,11vw,52px);line-height:1;text-transform:uppercase;color:var(--navy)}
+.tcard .val.r{color:var(--red-dark)}
+.tcard p{margin:8px 0 0;color:var(--steel);font-size:15px}
+.tcard a{font-weight:700}
+
+/* galerie */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+@media (min-width:760px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal .photo{aspect-ratio:1;font-size:14px}
+.gal .photo svg{width:34px;height:34px}
+
+/* postup */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{position:relative;background:var(--navy);color:#fff;border-radius:8px;padding:26px 22px 24px;counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--f-display);font-weight:900;font-size:76px;line-height:.8;color:var(--red);display:block;margin-bottom:12px}
+.steps h3{font-size:34px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px}
+.steps p{margin:0;color:#d5dbe5;font-size:16px}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:#fff;border:1px solid var(--line);border-radius:8px}
+summary{cursor:pointer;list-style:none;padding:18px 54px 18px 20px;font-weight:700;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:var(--f-display);font-weight:900;font-size:34px;color:var(--red)}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 20px 20px;color:#2f3a4d}
+
+/* kontakt */
+.contact{background:var(--navy);color:#fff}
+.contact h2{color:#fff}
+.contact .kicker{color:#ff9aa8}
+.contact .kicker::before{background:#ff9aa8}
+.c-grid{display:grid;gap:28px}
+@media (min-width:900px){.c-grid{grid-template-columns:1.1fr 1fr;gap:64px}}
+.c-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.c-list li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.c-list span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-light);padding-top:3px}
+.c-list b,.c-list a{color:#fff;font-size:18px}
+.c-list .phone{font-family:var(--f-display);font-weight:900;font-size:40px;line-height:1;text-decoration:none;letter-spacing:.02em}
+.c-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.map-card{background:var(--navy-2);border-radius:8px;padding:20px;border:1px solid rgba(255,255,255,.14)}
+.map-card svg{width:100%;height:auto;display:block;border-radius:4px}
+.map-card p{margin:14px 0 0;color:#d5dbe5;font-size:15px}
+
+footer{background:#0b1830;color:var(--steel-light);font-size:14px;padding:26px 0 calc(100px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){footer{padding-bottom:26px}}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{color:#fff}
+
+/* mobilní lišta */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--navy);border-top:3px solid var(--red);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:1.4fr 1fr;gap:8px}
+.mbar .btn{min-height:50px;font-size:16px;padding:10px 12px}
+@media (min-width:900px){.mbar{display:none}}
+</style>
+
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Holičství KARIN</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#uvod" aria-label="Holičství KARIN – úvod">Karin <small>Holičství · Mariánské Hory</small></a>
+    <nav aria-label="Hlavní menu">
+      <a href="#oteviraci-doba">Otevřeno</a>
+      <a href="#sluzby">Střihy</a>
+      <a href="#karin">Karin</a>
+      <a href="#otazky">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-top" href="tel:+420604378542"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>604 378 542</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="uvod" aria-labelledby="hero-h">
+  <div class="wrap">
+    <p class="addr-line"><strong>Holičství a kadeřnictví</strong> <span>1. máje 70/12a · Ostrava-Mariánské Hory</span></p>
+    <div class="hero-grid">
+      <h1 class="window" id="hero-h">
+        <span class="big">Bez objed&shy;nání<span>.</span></span>
+        <span class="sub">Přijďte, počkejte, <em>odejdete ostříhaní.</em></span>
+      </h1>
+      <svg class="pole" viewBox="0 0 80 300" role="img" aria-label="Kreslený holičský sloup">
+        <defs>
+          <clipPath id="glass"><rect x="22" y="58" width="36" height="184" rx="4"/></clipPath>
+          <linearGradient id="shine" x1="0" x2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".0"/>
+            <stop offset=".28" stop-color="#fff" stop-opacity=".45"/>
+            <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="1" stop-color="#000" stop-opacity=".25"/>
+          </linearGradient>
+          <linearGradient id="chrome" x1="0" x2="1">
+            <stop offset="0" stop-color="#8d96a4"/><stop offset=".35" stop-color="#eef1f5"/><stop offset="1" stop-color="#5a6474"/>
+          </linearGradient>
+        </defs>
+        <circle cx="40" cy="22" r="18" fill="url(#chrome)"/>
+        <rect x="16" y="38" width="48" height="20" rx="4" fill="url(#chrome)"/>
+        <g clip-path="url(#glass)">
+          <rect x="22" y="58" width="36" height="184" fill="#fff"/>
+          <g class="stripes">
+            <g transform="skewY(-34)" >
+              <rect x="0" y="40" width="90" height="12" fill="#c8102e"/>
+              <rect x="0" y="64" width="90" height="12" fill="#1b3157"/>
+              <rect x="0" y="88" width="90" height="12" fill="#c8102e"/>
+              <rect x="0" y="112" width="90" height="12" fill="#1b3157"/>
+              <rect x="0" y="136" width="90" height="12" fill="#c8102e"/>
+              <rect x="0" y="160" width="90" height="12" fill="#1b3157"/>
+              <rect x="0" y="184" width="90" height="12" fill="#c8102e"/>
+              <rect x="0" y="208" width="90" height="12" fill="#1b3157"/>
+              <rect x="0" y="232" width="90" height="12" fill="#c8102e"/>
+              <rect x="0" y="256" width="90" height="12" fill="#1b3157"/>
+              <rect x="0" y="280" width="90" height="12" fill="#c8102e"/>
+              <rect x="0" y="304" width="90" height="12" fill="#1b3157"/>
+              <rect x="0" y="328" width="90" height="12" fill="#c8102e"/>
+              <rect x="0" y="352" width="90" height="12" fill="#1b3157"/>
+            </g>
+          </g>
+          <rect x="22" y="58" width="36" height="184" fill="url(#shine)"/>
+        </g>
+        <rect x="22" y="58" width="36" height="184" rx="4" fill="none" stroke="#c9ced6" stroke-width="2"/>
+        <rect x="16" y="242" width="48" height="20" rx="4" fill="url(#chrome)"/>
+        <path d="M30 262h20l-4 22H34z" fill="url(#chrome)"/>
+        <circle cx="40" cy="290" r="7" fill="url(#chrome)"/>
+      </svg>
+    </div>
+    <p class="hero-lead">Pánské, dámské i dětské stříhání v Mariánských Horách. <b>Nikoho neobjednáváme</b> – jednoduše přijdete, chvíli počkáte a jdete. Po–Pá 8:15–16:30.</p>
+    <div class="cta-row">
+      <a class="btn btn-red" href="tel:+420604378542"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zavolat</a>
+      <a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=1.%20m%C3%A1je%2070%2F12a%2C%20709%2000%20Ostrava-Mari%C3%A1nsk%C3%A9%20Hory" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Jak k nám přijít</a>
+    </div>
+    <p class="tel-text">Telefon: <a href="tel:+420604378542">604 378 542</a></p>
+  </div>
+</section>
+
+<section class="ticket-sec" id="oteviraci-doba" aria-labelledby="hours-h">
+  <div class="wrap ticket-zone">
+    <div class="ticket" role="status" aria-live="polite">
+      <div class="t-head"><span>Pořadník · Holičství Karin</span><span id="t-date">Po–Pá</span></div>
+      <div class="t-num" id="t-num"><small>Č.</small>KARIN</div>
+      <span class="t-state" id="t-state"><i></i><span id="t-state-text">Po–Pá 8:15–16:30</span></span>
+      <div class="t-body">
+        <div class="t-row"><span>Teď v Ostravě</span><b id="t-now">—</b></div>
+        <div class="t-row"><span id="t-left-l">Do zavření</span><b id="t-left">—</b></div>
+        <div class="t-row"><span>Nejpozději přijďte</span><b id="t-last">kolem 16:00</b></div>
+        <p class="t-foot">Lístek se počítá podle pražského času. „Nejpozději přijďte“ je orientační rada – půl hodiny před zavřením. <span class="ukazka">ukázkový text</span></p>
+      </div>
+    </div>
+    <div class="hours">
+      <div class="kicker">Otevírací doba</div>
+      <h2 id="hours-h">Pět dní v&nbsp;týdnu, celý den</h2>
+      <p style="color:var(--steel);max-width:520px;margin:14px 0 0">Neobjednáváme – kdo dřív přijde, ten dřív sedí v křesle. Když si nejste jistí, jestli je zrovna volno, zavolejte na <a href="tel:+420604378542">604 378 542</a>.</p>
+      <ul class="hours-list" id="hours-list">
+        <li data-d="1"><b>Pondělí</b>8:15–16:30</li>
+        <li data-d="2"><b>Úterý</b>8:15–16:30</li>
+        <li data-d="3"><b>Středa</b>8:15–16:30</li>
+        <li data-d="4"><b>Čtvrtek</b>8:15–16:30</li>
+        <li data-d="5"><b>Pátek</b>8:15–16:30</li>
+        <li data-d="6" class="off"><b>Sobota</b>zavřeno</li>
+        <li data-d="0" class="off"><b>Neděle</b>zavřeno</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sluzby" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="kicker">Co stříháme</div><h2 id="svc-h">Pánské, dámské, dětské</h2></div>
+      <p>Pánské holičství, kde Karin bez problému ostříhá i ženy a děti. Ceny se teprve doplní – do té doby se klidně zeptejte po telefonu.</p>
+    </div>
+    <div class="board">
+      <div class="svc">
+        <h3>Pánský střih</h3><span class="price">Cena na dotaz</span>
+        <p>Klasika i krátké střihy strojkem, upravené tak, abyste nemuseli ráno nic řešit. <span class="ukazka">ukázkový text</span></p>
+      </div>
+      <div class="svc">
+        <h3>Dámský střih</h3><span class="price">Cena na dotaz</span>
+        <p>Zastřihnutí, osvěžení tvaru i kratší dámské účesy – bez objednání, stejně jako u pánů. <span class="ukazka">ukázkový text</span></p>
+      </div>
+      <div class="svc">
+        <h3>Dětský střih</h3><span class="price">Cena na dotaz</span>
+        <p>Rychle a v klidu, aby to bavilo i nejmenší zákazníky. <span class="ukazka">ukázkový text</span></p>
+      </div>
+    </div>
+    <p class="board-note">Ceník na webu zatím chybí – sem patří Vaše skutečné ceny „od“. <span class="ukazka">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="sec karin" id="karin" aria-labelledby="karin-h">
+  <div class="wrap karin-grid">
+    <div class="photo" role="img" aria-label="Místo pro fotografii holičky">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.5-2h5L16 6"/></svg>Sem přijde Vaše fotka<br><small>Karin u křesla</small></div>
+    </div>
+    <div>
+      <div class="kicker">Vaše holička</div>
+      <h2 id="karin-h" style="margin-bottom:22px">Poctivě a&nbsp;s&nbsp;láskou</h2>
+      <svg class="qmark" viewBox="0 0 44 34" fill="currentColor" aria-hidden="true"><path d="M0 34V20C0 8 6 1 17 0l2 5c-6 2-9 6-9 11h8v18zM25 34V20c0-12 6-19 17-20l2 5c-6 2-9 6-9 11h8v18z"/></svg>
+      <blockquote>Svou práci dělám poctivě a s láskou, mým výsledkem je má stálá klientela, ale ráda přivítám nové tváře. Ručím Vám za to, že se u mě budete cítit dobře.</blockquote>
+      <div class="sign">Karin<small>slova z jejího původního webu</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="duvera" aria-labelledby="trust-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="kicker">Proč sem lidé chodí</div><h2 id="trust-h">Stálí zákazníci mluví za nás</h2></div>
+      <p>Hodnocení a pořadí pocházejí z katalogu Firmy.cz (stav k říjnu 2026).</p>
+    </div>
+    <div class="trust">
+      <div class="tcard r">
+        <div class="val r">Fantastické</div>
+        <p>Hodnocení z <b>28 recenzí</b> na Firmy.cz. <a href="https://www.firmy.cz/detail/12911620-holicstvi-karin-ostrava-marianske-hory.html#hodnoceni" target="_blank" rel="noopener">Přečíst hodnocení</a></p>
+      </div>
+      <div class="tcard">
+        <div class="val">6. místo</div>
+        <p>v celostátním žebříčku Firmy.cz v kategorii Pánská kadeřnictví a holičství. <a href="https://www.firmy.cz/nejlepsi/Remesla-a-sluzby/Sluzby-pece-o-telo/Kadernictvi/Panska-kadernictvi-a-holicstvi" target="_blank" rel="noopener">Zobrazit žebříček</a></p>
+      </div>
+      <div class="tcard">
+        <div class="val">0 min</div>
+        <p>strávíte domlouváním termínu. Holičství funguje bez objednání – přijdete, až se Vám to hodí.</p>
+      </div>
+    </div>
+    <div class="gal" aria-label="Galerie – místa pro fotografie">
+      <div class="photo" role="img" aria-label="Místo pro fotku"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<br><small>výloha</small></div></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<br><small>křeslo</small></div></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<br><small>pánský střih</small></div></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<br><small>dámský střih</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="postup" aria-labelledby="steps-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="kicker">Jak to u nás chodí</div><h2 id="steps-h">Tři kroky, žádný kalendář</h2></div>
+    </div>
+    <ol class="steps">
+      <li><h3>Přijdete</h3><p>Kdykoli v pondělí až pátek mezi 8:15 a 16:30. Nemusíte volat ani psát předem.</p></li>
+      <li><h3>Počkáte</h3><p>Sednete si a chvíli počkáte, až na Vás přijde řada. Kdo dřív přijde, ten dřív sedí v křesle.</p></li>
+      <li><h3>Odcházíte</h3><p>Ostříhaní, jak jste chtěli. A příště už víte, kam jít.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="otazky" aria-labelledby="faq-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="kicker">Časté otázky</div><h2 id="faq-h">Než vyrazíte</h2></div></div>
+    <div class="faq">
+      <details open><summary>Musím se objednat?</summary><p>Ne. Holičství KARIN zákazníky neobjednává – jednoduše přijdete v otevírací době a počkáte, až budete na řadě.</p></details>
+      <details><summary>Stříháte i ženy a děti?</summary><p>Ano. Kromě pánských střihů tu ostříhají i dámy a děti, také bez objednání.</p></details>
+      <details><summary>Kolik střih stojí?</summary><p>Ceny zatím nejsou zveřejněné. Zeptejte se po telefonu na <a href="tel:+420604378542">604 378 542</a> nebo přímo na místě.</p></details>
+      <details><summary>Kdy je otevřeno?</summary><p>Pondělí až pátek od 8:15 do 16:30. V sobotu a v neděli je zavřeno.</p></details>
+      <details><summary>Kde přesně Vás najdu?</summary><p>Na adrese 1. máje 70/12a v Ostravě-Mariánských Horách. <a href="https://mapy.cz/zakladni?q=1.%20m%C3%A1je%2070%2F12a%2C%20709%2000%20Ostrava-Mari%C3%A1nsk%C3%A9%20Hory" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt" aria-labelledby="contact-h">
+  <div class="wrap c-grid">
+    <div>
+      <div class="kicker">Kontakt</div>
+      <h2 id="contact-h" style="margin-bottom:20px">Zastavte se</h2>
+      <ul class="c-list">
+        <li><span>Telefon</span><a class="phone" href="tel:+420604378542">604 378 542</a></li>
+        <li><span>E-mail</span><a href="mailto:karin.80@seznam.cz">karin.80@seznam.cz</a></li>
+        <li><span>Adresa</span><b>1. máje 70/12a<br>709 00 Ostrava-Mariánské Hory</b></li>
+        <li><span>Otevřeno</span><b>Po–Pá 8:15–16:30<br>So–Ne zavřeno</b></li>
+      </ul>
+      <div class="c-cta">
+        <a class="btn btn-red" href="tel:+420604378542">Zavolat 604 378 542</a>
+        <a class="btn btn-ghost" href="mailto:karin.80@seznam.cz">Napsat e-mail</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <svg viewBox="0 0 400 260" role="img" aria-label="Schematická mapka – ulice 1. máje">
+        <rect width="400" height="260" fill="#e9ecf1"/>
+        <g fill="#d7dce4"><rect x="20" y="20" width="110" height="70" rx="4"/><rect x="160" y="20" width="90" height="70" rx="4"/><rect x="280" y="20" width="100" height="70" rx="4"/><rect x="20" y="170" width="110" height="70" rx="4"/><rect x="160" y="170" width="90" height="70" rx="4"/><rect x="280" y="170" width="100" height="70" rx="4"/></g>
+        <rect x="0" y="108" width="400" height="44" fill="#fff"/>
+        <rect x="140" y="0" width="12" height="260" fill="#fff"/>
+        <rect x="262" y="0" width="12" height="260" fill="#fff"/>
+        <text x="24" y="135" font-family="Rethink Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#5a6474">ul. 1. máje</text>
+        <g transform="translate(206 70)">
+          <path d="M0 40C-18 18-22 8-22 0a22 22 0 0 1 44 0c0 8-4 18-22 40z" fill="#c8102e"/>
+          <circle cy="0" r="8" fill="#fff"/>
+        </g>
+      </svg>
+      <p>Ilustrační mapka. Přesnou trasu Vám ukáže <a style="color:#fff;font-weight:700" href="https://mapy.cz/zakladni?q=1.%20m%C3%A1je%2070%2F12a%2C%20709%2000%20Ostrava-Mari%C3%A1nsk%C3%A9%20Hory" target="_blank" rel="noopener">Mapy.cz</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Holičství KARIN · IČO 66944040 · 1. máje 70/12a, Ostrava-Mariánské Hory</span>
+    <span><a href="https://www.firmy.cz/detail/12911620-holicstvi-karin-ostrava-marianske-hory.html" target="_blank" rel="noopener">Profil na Firmy.cz</a></span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-red" href="tel:+420604378542"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>604 378 542</a>
+  <a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=1.%20m%C3%A1je%2070%2F12a%2C%20709%2000%20Ostrava-Mari%C3%A1nsk%C3%A9%20Hory" target="_blank" rel="noopener">Jak přijít</a>
+</div>
+
+<script>
+(function(){
+  var OPEN=8*60+15, CLOSE=16*60+30, LAST=CLOSE-30;
+  var DAYS=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  function prague(){
+    try{
+      var parts=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false,day:"numeric",month:"numeric"}).formatToParts(new Date());
+      var o={};parts.forEach(function(p){o[p.type]=p.value});
+      var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+      return {d:wd,h:+o.hour%24,m:+o.minute,day:o.day,month:o.month};
+    }catch(e){var n=new Date();return {d:n.getDay(),h:n.getHours(),m:n.getMinutes(),day:n.getDate(),month:n.getMonth()+1};}
+  }
+  function hm(min){var h=Math.floor(min/60),m=min%60;return h+":"+(m<10?"0":"")+m;}
+  function dur(min){var h=Math.floor(min/60),m=min%60;return (h?h+" h ":"")+m+" min";}
+  function nextOpen(d,t){
+    if(d>=1&&d<=5&&t<OPEN) return "dnes v 8:15";
+    var nd=d,i=0;do{nd=(nd+1)%7;i++;}while(nd===0||nd===6);
+    return (i===1?"zítra":"v "+DAYS[nd]) + " v 8:15";
+  }
+  function upd(){
+    var p=prague(),t=p.h*60+p.m,work=p.d>=1&&p.d<=5,open=work&&t>=OPEN&&t<CLOSE;
+    var $=function(id){return document.getElementById(id)};
+    $("t-date").textContent=DAYS[p.d]+" "+p.day+". "+p.month+".";
+    $("t-num").innerHTML="<small>Č.</small>"+(p.h<10?"0":"")+p.h+(p.m<10?"0":"")+p.m;
+    $("t-now").textContent=DAYS[p.d]+" "+hm(t);
+    var st=$("t-state");
+    if(open){
+      st.className="t-state";$("t-state-text").textContent="Teď otevřeno";
+      $("t-left-l").textContent="Do zavření";$("t-left").textContent=dur(CLOSE-t)+" (16:30)";
+      $("t-last").textContent = t<LAST ? "dnes kolem 16:00" : "spíš zavolejte";
+    }else{
+      st.className="t-state closed";$("t-state-text").textContent="Teď zavřeno";
+      $("t-left-l").textContent="Otevíráme";$("t-left").textContent=nextOpen(p.d,t);
+      $("t-last").textContent="kolem 16:00";
+    }
+    var lis=document.querySelectorAll("#hours-list li");
+    for(var i=0;i<lis.length;i++){lis[i].classList.toggle("today",+lis[i].getAttribute("data-d")===p.d);}
+  }
+  upd();setInterval(upd,30000);
+})();
+</script>
+</body>
+</html>

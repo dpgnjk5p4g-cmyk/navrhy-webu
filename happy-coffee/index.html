@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Happy Coffee</title>
+<meta name="description" content="Happy Coffee – kavárna s výběrovou kávou, raw a veganskými dezerty a zahradou v Karviné-Fryštátě. Otevírací doba, nabídka a kontakt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Happy Coffee",
+  "description": "Kavárna s výběrovou kávou, dezerty, raw i veganskými dezerty. K dispozici je zahrada.",
+  "telephone": "+420737142256",
+  "email": "happycoffeekarvina@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Karola Śliwky 622/3",
+    "addressLocality": "Karviná-Fryštát",
+    "postalCode": "733 01",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "18:00"}
+  ],
+  "sameAs": [
+    "https://www.facebook.com/happycoffeekarvina/",
+    "https://www.instagram.com/happy_coffee_karvina"
+  ]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --oat:#F4EEE3;
+  --oat-light:#FBF7F0;
+  --cocoa:#3E2A1E;
+  --cocoa-soft:#5A4234;
+  --cocoa-muted:#6B5446;
+  --matcha:#6E8F5C;       /* jen dekor / plochy (3,2:1 na ovesné) */
+  --matcha-ink:#4B6A3D;   /* text a tlačítka (5,3:1 na ovesné, bílá na ní 6,1:1) */
+  --linen:#E9B8A4;
+  --linen-soft:#F3D9CC;
+  --white:#FFFFFF;
+  --line:rgba(62,42,30,.16);
+  --f-head:"Caprasimo","Cooper Black","Georgia",serif;
+  --f-body:"Outfit","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4vw,48px);
+  --max:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--oat);color:var(--cocoa);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--matcha-ink)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--matcha-ink);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-head);font-weight:400;line-height:1.12;margin:0 0 .5em;color:var(--cocoa);letter-spacing:.005em}
+h2{font-size:clamp(30px,5vw,46px)}
+h3{font-size:22px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.demo{display:inline-block;font-family:var(--f-body);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.4;padding:1px 7px;border:1px dashed var(--cocoa-soft);border-radius:4px;color:var(--cocoa-soft);background:var(--oat-light);vertical-align:middle;white-space:nowrap}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--matcha-ink);margin:0 0 12px}
+
+/* pruh */
+.notice{background:var(--cocoa);color:var(--oat);font-size:13px;text-align:center;padding:7px var(--gut);line-height:1.4}
+
+/* hlavička */
+.head{background:var(--oat);border-bottom:1px solid var(--line)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cocoa);font-family:var(--f-head);font-size:22px;white-space:nowrap}
+.brand svg{width:34px;height:34px}
+.nav{display:none;gap:26px}
+.nav a{color:var(--cocoa);text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{color:var(--matcha-ink)}
+.head-tel{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--cocoa);font-weight:600;font-size:15px;white-space:nowrap}
+.head-tel svg{width:18px;height:18px}
+@media (min-width:900px){.nav{display:flex}}
+
+/* hero */
+.hero{padding:22px 0 0;position:relative}
+.hero-grid{display:grid;gap:20px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;background:var(--oat-light);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 10px;margin-bottom:14px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--cocoa-muted);flex:none}
+.status.open .dot{background:var(--matcha-ink);box-shadow:0 0 0 3px rgba(110,143,92,.28)}
+.status.closed .dot{background:#9A5B45}
+.hero h1{font-size:clamp(36px,9.4vw,72px);margin-bottom:12px}
+.hero h1 em{font-style:normal;color:var(--matcha-ink)}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--cocoa-soft);max-width:34em;margin-bottom:18px}
+.actions{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-body);font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer;border-radius:999px;padding:14px 26px;min-height:50px;transition:transform .15s ease,background .15s ease}
+.btn-main{background:var(--matcha-ink);color:var(--white)}
+.btn-main:hover{background:#3F5A33;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--cocoa);padding:12px 4px;border-bottom:2px solid var(--linen);border-radius:0;min-height:0}
+.hours-mini{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 10px;font-size:15px}
+.hours-mini span{background:var(--linen-soft);padding:4px 10px;border-radius:6px}
+.hours-mini b{font-weight:600}
+.hero-art{position:relative;background:var(--linen);border-radius:28px 28px 28px 120px;overflow:hidden;aspect-ratio:5/4}
+.hero-art svg{width:100%;height:100%}
+.steam path{animation:steam 4s ease-in-out infinite;transform-origin:center}
+.steam path:nth-child(2){animation-delay:1.3s}
+.steam path:nth-child(3){animation-delay:2.6s}
+@keyframes steam{0%,100%{opacity:.25;transform:translateY(4px)}50%{opacity:.85;transform:translateY(-4px)}}
+@media (max-width:899px){.hero-art{max-width:520px;aspect-ratio:16/10;border-radius:22px 22px 22px 80px}}
+@media (min-width:900px){
+  .hero{padding:56px 0 24px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}
+}
+
+/* otevírací doba – pás */
+.hours-band{margin-top:40px;background:var(--cocoa);color:var(--oat)}
+.hours-band .wrap{display:grid;gap:14px;padding-top:22px;padding-bottom:22px}
+.hours-band h2{color:var(--oat);font-size:24px;margin:0}
+.hb-days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.hb-day{border:1px solid rgba(244,238,227,.25);border-radius:12px;padding:10px 12px}
+.hb-day small{display:block;font-size:13px;opacity:.85}
+.hb-day strong{font-size:16px;font-weight:600;white-space:nowrap}
+@media (min-width:600px){.hb-day strong{font-size:18px}}
+.hb-day.today{background:var(--oat);color:var(--cocoa);border-color:var(--oat)}
+@media (min-width:900px){.hours-band .wrap{grid-template-columns:auto 1fr;align-items:center;gap:40px}.hb-days{max-width:640px;margin-left:auto;width:100%}}
+
+section{padding:72px 0}
+.sec-head{max-width:640px;margin-bottom:32px}
+.sec-head p{color:var(--cocoa-soft)}
+
+/* vitrína */
+.vitrina{background:var(--oat-light)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.filters button{font-family:var(--f-body);font-size:15px;font-weight:600;padding:10px 15px;border-radius:999px;border:2px solid var(--cocoa);background:transparent;color:var(--cocoa);cursor:pointer;min-height:46px}
+.filters button[aria-pressed="true"]{background:var(--cocoa);color:var(--oat)}
+.case{position:relative;background:var(--linen-soft);border:2px solid var(--cocoa);border-radius:22px 22px 10px 10px;padding:18px 14px 0;overflow:hidden}
+.case::before{content:"";position:absolute;inset:0 0 auto 0;height:10px;background:repeating-linear-gradient(90deg,var(--linen) 0 22px,var(--oat-light) 22px 44px)}
+.case-glass{position:absolute;top:10px;left:0;right:0;height:60px;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0));pointer-events:none}
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:14px;padding:14px 0 22px;position:relative}
+.shelf-edge{height:14px;background:var(--cocoa);margin:0 -14px;border-radius:0 0 8px 8px}
+.item{background:var(--white);border-radius:16px;padding:16px;display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start;transition:opacity .25s ease,transform .25s ease}
+.item[hidden]{display:none}
+.item svg{width:72px;height:72px}
+.item h3{font-family:var(--f-body);font-weight:600;font-size:18px;margin:0 0 4px;line-height:1.3}
+.item p{font-size:15px;color:var(--cocoa-soft);margin:0 0 8px}
+.tag{font-size:12px;font-weight:600;color:var(--matcha-ink);text-transform:uppercase;letter-spacing:.08em}
+.price{font-size:14px;font-weight:600;color:var(--cocoa);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.case-note{font-size:14px;color:var(--cocoa-soft);margin-top:14px}
+
+/* zahrada */
+.garden-grid{display:grid;gap:28px;align-items:center}
+.photo{position:relative;border-radius:20px;border:2px dashed var(--cocoa-muted);background:repeating-linear-gradient(135deg,var(--oat-light) 0 14px,var(--oat) 14px 28px);min-height:260px;display:flex;align-items:flex-end;padding:18px}
+.photo span{background:var(--white);border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.4;max-width:300px}
+.photo span b{display:block}
+.photo-pair{display:grid;gap:12px;grid-template-columns:1.3fr 1fr}
+.photo-pair .photo{min-height:220px}
+.perks{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.perks li{display:flex;gap:10px;align-items:center;font-weight:500;background:var(--oat-light);border-radius:12px;padding:10px 12px;font-size:15px}
+.perks svg{width:24px;height:24px;flex:none}
+.src{font-size:13px;color:var(--cocoa-muted)}
+@media (min-width:900px){.garden-grid{grid-template-columns:1fr 1fr;gap:56px}}
+@media (max-width:520px){.photo-pair{grid-template-columns:1fr}}
+
+/* důvěra */
+.trust{background:var(--linen)}
+.trust-grid{display:grid;gap:24px;align-items:center}
+.score{font-family:var(--f-head);font-size:clamp(64px,14vw,110px);line-height:1;color:var(--cocoa)}
+.score small{font-family:var(--f-body);font-size:20px;font-weight:600;margin-left:6px}
+.trust p{color:var(--cocoa)}
+.trust a{color:var(--cocoa);font-weight:600}
+.stars{display:flex;gap:4px;margin:8px 0 12px}
+.stars svg{width:24px;height:24px}
+@media (min-width:900px){.trust-grid{grid-template-columns:auto 1fr;gap:64px}}
+
+/* kroky */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--oat-light);border-radius:18px;padding:22px 20px 20px;border-left:6px solid var(--matcha)}
+.steps li::before{content:counter(s);font-family:var(--f-head);font-size:34px;color:var(--matcha-ink);display:block;line-height:1;margin-bottom:8px}
+.steps h3{font-family:var(--f-body);font-weight:600;font-size:19px;margin-bottom:6px}
+.steps p{margin:0;color:var(--cocoa-soft);font-size:16px}
+@media (min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* kontakt */
+.contact{background:var(--oat-light)}
+.contact-grid{display:grid;gap:28px}
+.cinfo{display:grid;gap:18px}
+.crow small{display:block;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--cocoa-muted)}
+.crow a,.crow span{font-size:19px;font-weight:600;color:var(--cocoa);text-decoration:none;overflow-wrap:anywhere}
+.crow a:hover{color:var(--matcha-ink);text-decoration:underline}
+.hours-table{border-collapse:collapse;width:100%;max-width:360px;font-size:16px}
+.hours-table td{padding:6px 0;border-bottom:1px solid var(--line)}
+.hours-table td:last-child{text-align:right;font-weight:600}
+.hours-table tr.today td{color:var(--matcha-ink)}
+.social{display:flex;gap:10px;flex-wrap:wrap}
+.social a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:2px solid var(--cocoa);color:var(--cocoa);text-decoration:none;font-weight:600;font-size:15px}
+.social svg{width:18px;height:18px}
+.map{position:relative;border-radius:22px;overflow:hidden;background:var(--linen-soft);min-height:300px;border:2px solid var(--cocoa);display:block;text-decoration:none;color:var(--cocoa)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map-label{position:absolute;left:16px;right:16px;bottom:16px;background:var(--white);border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:600;font-size:15px}
+.map-label b{color:var(--matcha-ink);white-space:nowrap}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1.1fr;gap:56px}.map{min-height:460px}}
+
+/* FAQ */
+.faq-list{max-width:820px}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;list-style:none;font-weight:600;font-size:18px;padding:16px 40px 16px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--cocoa);border-bottom:2.5px solid var(--cocoa);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{color:var(--cocoa-soft);margin:0 0 18px;max-width:62ch}
+
+/* patička */
+.foot{background:var(--cocoa);color:var(--oat);padding:40px 0 110px;font-size:15px}
+.foot a{color:var(--oat)}
+.foot .wrap{display:grid;gap:12px}
+.foot .brand{color:var(--oat)}
+@media (min-width:900px){.foot{padding-bottom:40px}}
+
+/* mobilní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(244,238,227,.96);border-top:1px solid var(--line);backdrop-filter:blur(6px)}
+.callbar a{flex:1;min-height:50px;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;text-decoration:none;font-size:16px}
+.callbar .c1{background:var(--matcha-ink);color:var(--white)}
+.callbar .c2{border:2px solid var(--cocoa);color:var(--cocoa)}
+.callbar svg{width:18px;height:18px}
+@media (min-width:900px){.callbar{display:none}}
+</style>
+
+<div class="notice" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Happy Coffee</div>
+
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Happy Coffee – úvod">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E9B8A4"/><path d="M11 17h16v6a8 8 0 0 1-16 0z" fill="#3E2A1E"/><path d="M27 19h2.5a3 3 0 0 1 0 6H26" fill="none" stroke="#3E2A1E" stroke-width="2.2"/><path d="M15.5 21.5c1.5 2 5.5 2 7 0" fill="none" stroke="#F4EEE3" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Happy Coffee
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#nabidka">Vitrína</a>
+      <a href="#zahrada">Zahrada</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#otazky">Otázky</a>
+    </nav>
+    <a class="head-tel" href="tel:+420737142256">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="#4B6A3D"/></svg>
+      737 142 256
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="status" id="status" aria-live="polite"><span class="dot"></span><span id="status-text">Po–Pá 8–18 · Ne 9–18</span></div>
+      <h1>Výběrová káva a&nbsp;<em>raw dezerty</em> ve Fryštátě</h1>
+      <p class="lead">Happy Coffee v Karviné nabízí výběrovou kávu, dezerty i raw a veganské dezerty. A když je hezky, sednete si s šálkem na zahradu.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="#nabidka">Zobrazit nabídku
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="#kontakt">Kde nás najdete</a>
+      </div>
+      <div class="hours-mini" aria-label="Otevírací doba"><span><b>Po–Pá</b> 8:00–18:00</span><span><b>So</b> zavřeno</span><span><b>Ne</b> 9:00–18:00</span></div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <rect width="500" height="400" fill="#E9B8A4"/>
+        <!-- zahrada v pozadí -->
+        <circle cx="70" cy="120" r="80" fill="#6E8F5C" opacity=".55"/>
+        <circle cx="150" cy="70" r="62" fill="#6E8F5C" opacity=".4"/>
+        <circle cx="440" cy="100" r="90" fill="#6E8F5C" opacity=".5"/>
+        <circle cx="380" cy="40" r="50" fill="#6E8F5C" opacity=".35"/>
+        <path d="M0 230 Q120 200 250 222 T500 214 V400 H0z" fill="#8FAA7E" opacity=".55"/>
+        <!-- světýlka -->
+        <path d="M-10 30 Q130 90 260 50 T520 60" fill="none" stroke="#3E2A1E" stroke-width="1.5" opacity=".6"/>
+        <g fill="#FBF7F0"><circle cx="40" cy="48" r="5"/><circle cx="100" cy="66" r="5"/><circle cx="165" cy="70" r="5"/><circle cx="230" cy="58" r="5"/><circle cx="300" cy="42" r="5"/><circle cx="370" cy="44" r="5"/><circle cx="440" cy="54" r="5"/></g>
+        <!-- stolek -->
+        <ellipse cx="250" cy="300" rx="210" ry="56" fill="#3E2A1E"/>
+        <ellipse cx="250" cy="292" rx="210" ry="56" fill="#F4EEE3"/>
+        <path d="M60 292 Q250 330 440 292" fill="none" stroke="#E9B8A4" stroke-width="3" opacity=".7"/>
+        <!-- talířek s dezertem -->
+        <ellipse cx="385" cy="282" rx="52" ry="15" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="2.5"/>
+        <path d="M357 278 L413 278 L405 252 L365 252 Z" fill="#E9B8A4" stroke="#3E2A1E" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M365 252 L405 252 L401 242 L369 242 Z" fill="#6E8F5C" stroke="#3E2A1E" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="385" cy="236" r="6" fill="#B5504A" stroke="#3E2A1E" stroke-width="2"/>
+        <!-- šálek -->
+        <ellipse cx="232" cy="294" rx="98" ry="24" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="3"/>
+        <path d="M160 222 Q164 290 232 292 Q300 290 304 222 Z" fill="#6E8F5C" stroke="#3E2A1E" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M302 236 q36 -4 34 22 q-2 22 -40 20" fill="none" stroke="#3E2A1E" stroke-width="3.5"/>
+        <ellipse cx="232" cy="222" rx="72" ry="20" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="3.5"/>
+        <ellipse cx="232" cy="223" rx="64" ry="16" fill="#9C6B4A"/>
+        <!-- latte art: srdce/tulipán -->
+        <path d="M232 236 C214 230 204 220 212 213 C218 208 228 211 232 218 C236 211 246 208 252 213 C260 220 250 230 232 236Z" fill="#FBF7F0"/>
+        <path d="M232 236 L232 240" stroke="#FBF7F0" stroke-width="3" stroke-linecap="round"/>
+        <g class="steam" fill="none" stroke="#FBF7F0" stroke-width="4" stroke-linecap="round">
+          <path d="M208 190 q-10 -18 0 -34 q10 -16 0 -32"/>
+          <path d="M234 184 q-10 -18 0 -34 q10 -16 0 -32"/>
+          <path d="M260 190 q-10 -18 0 -34 q10 -16 0 -32"/>
+        </g>
+        <!-- lístek -->
+        <path d="M95 292 q30 -40 70 -20 q-30 36 -70 20z" fill="#6E8F5C" stroke="#3E2A1E" stroke-width="2.5"/>
+        <path d="M100 290 q30 -12 58 -18" stroke="#3E2A1E" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hours-band" id="doba">
+    <div class="wrap">
+      <h2>Otevírací doba</h2>
+      <div class="hb-days">
+        <div class="hb-day" data-days="1,2,3,4,5"><small>Pondělí–pátek</small><strong>8:00–18:00</strong></div>
+        <div class="hb-day" data-days="6"><small>Sobota</small><strong>zavřeno</strong></div>
+        <div class="hb-day" data-days="0"><small>Neděle</small><strong>9:00–18:00</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vitrina" id="nabidka">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Dezertní vitrína</p>
+      <h2>Co dnes najdete za sklem</h2>
+      <p>Výběrová káva, raw dezerty a veganské dobroty. Vyberte, na co máte chuť – vitrína Vám ukáže, co do té kategorie patří. Ceny se dozvíte přímo na baru.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filtr vitríny">
+      <button type="button" data-f="vse" aria-pressed="true">Vše</button>
+      <button type="button" data-f="raw" aria-pressed="false">Raw</button>
+      <button type="button" data-f="vegan" aria-pressed="false">Veganské</button>
+      <button type="button" data-f="kava" aria-pressed="false">Káva</button>
+    </div>
+
+    <div class="case">
+      <div class="case-glass"></div>
+      <div class="shelf" id="shelf">
+        <article class="item" data-cat="raw vegan">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#F3D9CC"/><path d="M16 50 L56 50 L52 30 L20 30Z" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 30 L52 30 L50 24 L22 24Z" fill="#E9B8A4" stroke="#3E2A1E" stroke-width="2.5" stroke-linejoin="round"/><circle cx="30" cy="20" r="4" fill="#B5504A" stroke="#3E2A1E" stroke-width="1.8"/><circle cx="41" cy="20" r="4" fill="#B5504A" stroke="#3E2A1E" stroke-width="1.8"/><path d="M17 44h38" stroke="#9C6B4A" stroke-width="5"/></svg>
+          <div>
+            <span class="tag">Raw · veganské</span>
+            <h3>Raw dort s ovocem <span class="demo">ukázkový text</span></h3>
+            <p>Nepečený dort z ořechů a datlí, který chutná sladce i bez bílého cukru.</p>
+            <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+          </div>
+        </article>
+        <article class="item" data-cat="raw vegan">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#F3D9CC"/><circle cx="26" cy="40" r="10" fill="#9C6B4A" stroke="#3E2A1E" stroke-width="2.5"/><circle cx="46" cy="40" r="10" fill="#6E8F5C" stroke="#3E2A1E" stroke-width="2.5"/><circle cx="36" cy="26" r="10" fill="#E9B8A4" stroke="#3E2A1E" stroke-width="2.5"/></svg>
+          <div>
+            <span class="tag">Raw · veganské</span>
+            <h3>Raw kuličky a tyčinky <span class="demo">ukázkový text</span></h3>
+            <p>Malá sladká tečka ke kávě, když nechcete celý kus dortu.</p>
+            <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+          </div>
+        </article>
+        <article class="item" data-cat="vegan">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#F3D9CC"/><path d="M14 46 L58 46 L58 34 Q36 26 14 34Z" fill="#9C6B4A" stroke="#3E2A1E" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 34 Q36 26 58 34 Q58 28 52 24 Q36 18 20 24 Q14 28 14 34Z" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="2.5"/><path d="M14 46h44v6H14z" fill="#3E2A1E"/></svg>
+          <div>
+            <span class="tag">Veganské</span>
+            <h3>Veganský dort <span class="demo">ukázkový text</span></h3>
+            <p>Klasický kus dortu bez živočišných surovin – pro vegany i pro ty, kdo jen mají chuť.</p>
+            <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+          </div>
+        </article>
+        <article class="item" data-cat="vegan">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#F3D9CC"/><circle cx="30" cy="38" r="15" fill="#C99A6B" stroke="#3E2A1E" stroke-width="2.5"/><circle cx="25" cy="34" r="2.5" fill="#3E2A1E"/><circle cx="33" cy="42" r="2.5" fill="#3E2A1E"/><circle cx="34" cy="31" r="2" fill="#3E2A1E"/><circle cx="48" cy="44" r="10" fill="#C99A6B" stroke="#3E2A1E" stroke-width="2.5"/><circle cx="48" cy="44" r="2" fill="#3E2A1E"/></svg>
+          <div>
+            <span class="tag">Veganské</span>
+            <h3>Veganské pečivo ke kávě <span class="demo">ukázkový text</span></h3>
+            <p>Sušenka nebo buchta, kterou si můžete dát k šálku i odnést s sebou.</p>
+            <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+          </div>
+        </article>
+        <article class="item" data-cat="kava">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#F3D9CC"/><path d="M22 30h24v8a12 12 0 0 1-24 0z" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="2.5"/><path d="M46 32h4a4 4 0 0 1 0 8h-5" fill="none" stroke="#3E2A1E" stroke-width="2.5"/><ellipse cx="34" cy="30" rx="12" ry="3" fill="#9C6B4A" stroke="#3E2A1E" stroke-width="2"/><path d="M16 52h36" stroke="#3E2A1E" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div>
+            <span class="tag">Káva</span>
+            <h3>Espresso z výběrové kávy <span class="demo">ukázkový text</span></h3>
+            <p>Základ všeho na baru: krátká, hutná káva z výběrových zrn.</p>
+            <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+          </div>
+        </article>
+        <article class="item" data-cat="kava">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#F3D9CC"/><path d="M20 26h30l-3 26H23z" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="2.5" stroke-linejoin="round"/><ellipse cx="35" cy="26" rx="15" ry="4" fill="#C99A6B" stroke="#3E2A1E" stroke-width="2"/><path d="M35 29c-3-1-5-2-4-3s3 0 4 1c1-1 3-2 4-1s-1 2-4 3z" fill="#FBF7F0"/></svg>
+          <div>
+            <span class="tag">Káva</span>
+            <h3>Cappuccino a latte <span class="demo">ukázkový text</span></h3>
+            <p>Mléčná klasika s latte artem – na přání i s rostlinným mlékem.</p>
+            <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+          </div>
+        </article>
+        <article class="item" data-cat="kava">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#F3D9CC"/><path d="M24 18h24l-8 14h-8z" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="2.5" stroke-linejoin="round"/><path d="M26 36h20v14a4 4 0 0 1-4 4H30a4 4 0 0 1-4-4z" fill="#FBF7F0" stroke="#3E2A1E" stroke-width="2.5"/><path d="M27 44h18v6a3 3 0 0 1-3 3H30a3 3 0 0 1-3-3z" fill="#9C6B4A"/><path d="M36 32v4" stroke="#9C6B4A" stroke-width="2.5"/></svg>
+          <div>
+            <span class="tag">Káva</span>
+            <h3>Filtrovaná káva <span class="demo">ukázkový text</span></h3>
+            <p>Pomalejší příprava, při které vyniknou ovocné a čokoládové tóny zrna.</p>
+            <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="shelf-edge"></div>
+    </div>
+    <p class="case-note">Ověřeno z popisu kavárny: výběrová káva, dezerty, raw i veganské dezerty. Konkrétní názvy položek jsou ukázkové – skutečná nabídka ve vitríně se mění.</p>
+  </div>
+</section>
+
+<section id="zahrada">
+  <div class="wrap garden-grid">
+    <div class="photo-pair">
+      <div class="photo" style="min-height:300px"><span><b>Sem přijde Vaše fotka</b>zahrada se stolky, ideálně v odpoledním světle</span></div>
+      <div class="photo" style="background:repeating-linear-gradient(135deg,#F3D9CC 0 14px,#F4EEE3 14px 28px)"><span><b>Sem přijde Vaše fotka</b>detail kávy a dezertu na stole</span></div>
+    </div>
+    <div>
+      <p class="eyebrow">Zahrada</p>
+      <h2>Káva pod širým nebem, přímo ve Fryštátě</h2>
+      <p>K Happy Coffee patří zahrada. Vezměte si šálek ven, dejte si k němu raw dezert a nechte čas chvíli plynout pomaleji.</p>
+      <ul class="perks">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16a5 5 0 0 1 6 0" fill="none" stroke="#4B6A3D" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="19.5" r="1.6" fill="#4B6A3D"/></svg>Wi-Fi</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="8" r="2.2" fill="#4B6A3D"/><circle cx="17" cy="8" r="2.2" fill="#4B6A3D"/><circle cx="4" cy="13" r="2" fill="#4B6A3D"/><circle cx="20" cy="13" r="2" fill="#4B6A3D"/><path d="M12 12c-3 0-6 4.5-6 6.5S8 21 12 19.5 18 21 18 18.5 15 12 12 12z" fill="#4B6A3D"/></svg>Pejsci vítáni</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V11l8-6 8 6v10" fill="none" stroke="#4B6A3D" stroke-width="2.2" stroke-linejoin="round"/><circle cx="12" cy="14" r="2.5" fill="#4B6A3D"/></svg>Dětský koutek</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16" r="3.5" fill="none" stroke="#4B6A3D" stroke-width="2"/><circle cx="18.5" cy="16" r="3.5" fill="none" stroke="#4B6A3D" stroke-width="2"/><path d="M5.5 16 9 9h7l2.5 7M9 9l3.5 7H5.5M14 6h3" fill="none" stroke="#4B6A3D" stroke-width="2" stroke-linejoin="round"/></svg>Cyklisté vítáni</li>
+      </ul>
+      <p class="src" style="margin-top:12px">Vybavení podle údajů na <a href="https://www.firmy.cz/detail/13686233-happy-coffee-karvina-frystat.html" rel="noopener" target="_blank">Firmy.cz</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="hodnoceni">
+  <div class="wrap trust-grid">
+    <div>
+      <div class="score">4,9<small>/ 5</small></div>
+      <div class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z" fill="#3E2A1E"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z" fill="#3E2A1E"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z" fill="#3E2A1E"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z" fill="#3E2A1E"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z" fill="#3E2A1E"/></svg>
+      </div>
+    </div>
+    <div>
+      <h2 style="font-size:clamp(26px,4vw,38px)">Hosté dávají 4,9 z 5</h2>
+      <p>Průměr z 15 hodnocení na portálu Firmy.cz. Nejnovější hodnocení přibylo 2. října 2026.</p>
+      <p><a href="https://www.firmy.cz/detail/13686233-happy-coffee-karvina-frystat.html" target="_blank" rel="noopener">Přečíst hodnocení na Firmy.cz</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="jak">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Jak to u nás chodí</p>
+      <h2>Tři kroky k dobrému odpoledni</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Mrkněte do vitríny</h3><p>U baru vyberete kávu a dezert – raw, veganský nebo klasický.</p></li>
+      <li><h3>Usaďte se uvnitř nebo na zahradě</h3><p>Podle počasí a nálady. Wi-Fi je k dispozici, pejsek může s Vámi.</p></li>
+      <li><h3>Dezert i domů <span class="demo">ukázkový text</span></h3><p>Chcete dezert s sebou nebo celý dort? Zavolejte na 737 142 256 a domluvte se.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Kontakt</p>
+      <h2>Najdete nás ve Fryštátě</h2>
+      <div class="cinfo">
+        <div class="crow"><small>Adresa</small><span>Karola Śliwky 622/3, 733 01 Karviná-Fryštát</span></div>
+        <div class="crow"><small>Telefon</small><a href="tel:+420737142256">737 142 256</a></div>
+        <div class="crow"><small>E-mail</small><a href="mailto:happycoffeekarvina@seznam.cz">happycoffeekarvina@seznam.cz</a></div>
+        <div class="crow"><small>Otevírací doba</small>
+          <table class="hours-table" id="hours-table">
+            <tr data-days="1,2,3,4,5"><td>Pondělí–pátek</td><td>8:00–18:00</td></tr>
+            <tr data-days="6"><td>Sobota</td><td>zavřeno</td></tr>
+            <tr data-days="0"><td>Neděle</td><td>9:00–18:00</td></tr>
+          </table>
+        </div>
+        <div class="crow"><small>Sledujte nás</small>
+          <div class="social" style="margin-top:6px">
+            <a href="https://www.facebook.com/happycoffeekarvina/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z" fill="#3E2A1E"/></svg>Facebook</a>
+            <a href="https://www.instagram.com/happy_coffee_karvina" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#3E2A1E" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="#3E2A1E" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="#3E2A1E"/></svg>Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="map" href="https://mapy.cz/zakladni?q=Karola%20%C5%9Aliwky%20622%2F3%2C%20Karvin%C3%A1" target="_blank" rel="noopener" aria-label="Otevřít adresu na Mapy.cz">
+      <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="600" height="460" fill="#F3D9CC"/>
+        <g fill="#FBF7F0" stroke="#E9B8A4" stroke-width="2">
+          <rect x="30" y="30" width="150" height="110" rx="10"/><rect x="220" y="30" width="170" height="110" rx="10"/><rect x="430" y="30" width="150" height="110" rx="10"/>
+          <rect x="30" y="180" width="150" height="120" rx="10"/><rect x="430" y="180" width="150" height="120" rx="10"/>
+          <rect x="30" y="340" width="150" height="110" rx="10"/><rect x="220" y="340" width="170" height="110" rx="10"/><rect x="430" y="340" width="150" height="110" rx="10"/>
+        </g>
+        <rect x="220" y="180" width="170" height="120" rx="10" fill="#6E8F5C" opacity=".55"/>
+        <g fill="#6E8F5C" opacity=".8"><circle cx="250" cy="210" r="14"/><circle cx="360" cy="270" r="18"/><circle cx="300" cy="280" r="10"/></g>
+        <path d="M0 160h600M0 320h600M200 0v460M410 0v460" stroke="#FBF7F0" stroke-width="16"/>
+        <g transform="translate(305 175)"><path d="M0 0c-22-30-34-46-34-62a34 34 0 0 1 68 0c0 16-12 32-34 62z" fill="#3E2A1E"/><circle cx="0" cy="-62" r="13" fill="#F4EEE3"/></g>
+      </svg>
+      <span class="map-label">Karola Śliwky 622/3 <b>Otevřít v Mapy.cz →</b></span>
+    </a>
+  </div>
+</section>
+
+<section id="otazky">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Časté otázky</p>
+      <h2>Než se zastavíte</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Máte veganské a bezlepkové dezerty?</summary>
+        <p>Veganské i raw dezerty patří ke stálé nabídce kavárny. Bezlepkové varianty se mění podle toho, co je zrovna ve vitríně – nejlépe se zeptejte přímo na baru nebo zavolejte na 737 142 256. <span class="demo">ukázkový text</span></p>
+      </details>
+      <details>
+        <summary>Lze objednat dort nebo dezerty s sebou?</summary>
+        <p>Dezerty z vitríny si můžete odnést domů a dort na oslavu je možné domluvit předem po telefonu. <span class="demo">ukázkový text</span></p>
+      </details>
+      <details>
+        <summary>Je zahrada otevřená celoročně?</summary>
+        <p>Zahrada je otevřená v teplých měsících, v chladnějším období Vás rádi usadíme uvnitř. <span class="demo">ukázkový text</span></p>
+      </details>
+      <details>
+        <summary>Můžu přijít se psem nebo s dětmi?</summary>
+        <p>Ano. Podle údajů na Firmy.cz je vstup se psem povolen a pro děti je k dispozici dětský koutek.</p>
+      </details>
+      <details>
+        <summary>Kdy máte otevřeno?</summary>
+        <p>Pondělí až pátek 8:00–18:00, v neděli 9:00–18:00. V sobotu je zavřeno.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="brand">Happy Coffee</span>
+    <p style="margin:0">Karola Śliwky 622/3, Karviná-Fryštát · <a href="tel:+420737142256">737 142 256</a> · <a href="https://www.facebook.com/happycoffeekarvina/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/happy_coffee_karvina" target="_blank" rel="noopener">Instagram</a></p>
+    <p style="margin:0;opacity:.85">Nezávazný návrh webu – není to oficiální stránka firmy Happy Coffee. Texty označené „ukázkový text“ nejsou ověřené.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+420737142256"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="#fff"/></svg>737 142 256</a>
+  <a class="c2" href="#nabidka">Nabídka</a>
+</div>
+
+<script>
+(function(){
+  // Vitrína – filtr
+  var btns=document.querySelectorAll('.filters button');
+  var items=document.querySelectorAll('#shelf .item');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=b.getAttribute('data-f');
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      items.forEach(function(it){
+        var cats=it.getAttribute('data-cat').split(' ');
+        it.hidden=!(f==='vse'||cats.indexOf(f)>-1);
+      });
+    });
+  });
+
+  // Otevřeno / zavřeno – jen podle ověřené otevírací doby, čas Europe/Prague
+  var HOURS={0:[9,18],1:[8,18],2:[8,18],3:[8,18],4:[8,18],5:[8,18],6:null};
+  var NAMES=['v neděli','v pondělí','v úterý','ve středu','ve čtvrtek','v pátek','v sobotu'];
+  function pragueNow(){
+    try{
+      var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+      var o={};p.forEach(function(x){o[x.type]=x.value});
+      var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday);
+      return {d:d,m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+    }catch(e){return null}
+  }
+  function update(){
+    var n=pragueNow(); if(!n||n.d<0) return;
+    var el=document.getElementById('status'), t=document.getElementById('status-text');
+    var h=HOURS[n.d], open=h&&n.m>=h[0]*60&&n.m<h[1]*60;
+    el.classList.remove('open','closed');
+    if(open){el.classList.add('open');t.textContent='Teď otevřeno · do '+h[1]+':00';}
+    else{
+      el.classList.add('closed');
+      var msg;
+      if(h&&n.m<h[0]*60){msg='Teď zavřeno · otevíráme dnes v '+h[0]+':00';}
+      else{
+        for(var i=1;i<=7;i++){var dd=(n.d+i)%7;if(HOURS[dd]){msg='Teď zavřeno · otevíráme '+(i===1?'zítra':NAMES[dd])+' v '+HOURS[dd][0]+':00';break;}}
+      }
+      t.textContent=msg;
+    }
+    document.querySelectorAll('[data-days]').forEach(function(r){
+      var ds=r.getAttribute('data-days').split(',');
+      r.classList.toggle('today',ds.indexOf(String(n.d))>-1);
+    });
+  }
+  update(); setInterval(update,60000);
+})();
+</script>
+</body>
+</html>

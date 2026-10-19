@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Martin Vincenec | antény, alarmy a kamery Havířov</title>
+<meta name="description" content="Antény, satelity, alarmy, kamerové systémy a rozvody STA v Havířově-Prostřední Suché. Martin Vincenec – elektro, antény, zabezpečení. Po–Pá 8–18, o víkendu poruchová služba STA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Electrician",
+  "name":"Martin Vincenec – elektro, antény, zabezpečení",
+  "telephone":"+420604386384",
+  "email":"martin.vincenec@seznam.cz",
+  "taxID":"02635305",
+  "address":{"@type":"PostalAddress","streetAddress":"Budovatelů 808/36","addressLocality":"Havířov-Prostřední Suchá","addressCountry":"CZ"},
+  "openingHours":"Mo-Fr 08:00-18:00",
+  "areaServed":"Havířov"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: noční hero s živou scénou domu (signálový přepínač) → světlé technické sekce na stříbrné, rytmus bílá/stříbrná, akcent jen tyrkys, červená jen pro alarm/poruchu */
+:root{
+  --noc:#0F1E3D;          /* noční obloha */
+  --noc-2:#172B55;
+  --noc-3:#22396B;
+  --signal:#19C3B1;       /* signálová tyrkysová (na tmavém) */
+  --signal-ink:#0B7A6F;   /* tyrkysová pro text na světlém */
+  --stribro:#E6EAF0;      /* satelitní stříbrná */
+  --stribro-2:#F4F6F9;
+  --alarm:#E5383B;        /* jen akcent */
+  --bila:#FFFFFF;
+  --ink:#0F1E3D;
+  --ink-2:#3B4A68;        /* sekundární text na světlém, 8.6:1 */
+  --linka:#C9D1DD;
+  --na-tmave:#C3CCDB;     /* sekundární text na tmavém */
+  --f-display:"Space Grotesk","Segoe UI",system-ui,sans-serif;
+  --f-text:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r:10px;
+  --max:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bila);color:var(--ink);font-family:var(--f-text);font-size:17px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--f-display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+
+/* štítek ukázkový text */
+.uk{display:inline-block;vertical-align:middle;font:600 11px/1 var(--f-text);text-transform:uppercase;letter-spacing:.08em;padding:4px 6px 3px;border:1px solid currentColor;border-radius:4px;color:var(--ink-2);white-space:nowrap;margin-left:6px}
+.dark .uk{color:var(--na-tmave)}
+
+/* banner návrhu */
+.navrh{background:var(--stribro);color:var(--ink);font-size:13.5px;line-height:1.35;text-align:center}
+.navrh .wrap{padding-block:8px}
+.navrh b{font-weight:600}
+
+/* hlavička */
+.hlava{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(15,30,61,.96);backdrop-filter:blur(8px);color:var(--bila);border-bottom:1px solid rgba(230,234,240,.12)}
+.hlava .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.znacka svg{flex:none}
+.znacka strong{font-family:var(--f-display);font-size:18px;font-weight:700;letter-spacing:-.01em;display:block;line-height:1.1}
+.znacka small{display:block;font-size:12px;color:var(--na-tmave);letter-spacing:.04em;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu{display:none;gap:22px;font-size:15px}
+.menu a{text-decoration:none;color:var(--na-tmave)}
+.menu a:hover{color:var(--bila)}
+@media (min-width:1000px){.menu{display:flex}}
+.tel-hlava{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--noc);background:var(--signal);padding:9px 14px;border-radius:999px;white-space:nowrap;flex:none}
+.tel-hlava:hover{background:#3FD6C6}
+@media (max-width:419px){.tel-hlava .cislo{display:none}.znacka small{max-width:190px}}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 17px/1.1 var(--f-display);text-decoration:none;border-radius:999px;padding:15px 22px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease,border-color .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primar{background:var(--signal);color:var(--noc)}
+.btn-primar:hover{background:#3FD6C6}
+.btn-obrys{border-color:rgba(230,234,240,.45);color:var(--bila);background:transparent}
+.btn-obrys:hover{border-color:var(--signal)}
+.btn-tmave{background:var(--noc);color:var(--bila)}
+.btn-tmave:hover{background:var(--noc-3)}
+.btn-svetle-obrys{border-color:var(--noc);color:var(--noc);background:transparent}
+.btn svg{flex:none}
+
+/* HERO */
+.hero{background:radial-gradient(1200px 600px at 85% 10%,#1C3466 0%,transparent 60%),var(--noc);color:var(--bila);overflow:hidden}
+.hero .wrap{display:grid;gap:28px;padding-block:28px 40px}
+@media (min-width:980px){.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;padding-block:56px 64px;align-items:center}}
+.hero-text{min-width:0}
+.oblast{display:inline-flex;align-items:center;gap:8px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);font-weight:600;margin-bottom:14px}
+.oblast i{width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(25,195,177,.6);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(25,195,177,.55)}80%,100%{box-shadow:0 0 0 10px rgba(25,195,177,0)}}
+.hero h1{font-size:clamp(31px,5.2vw,54px);font-weight:700}
+.hero h1 span{color:var(--signal);display:block;margin-top:.18em;font-size:.72em;font-weight:600;letter-spacing:-.015em}
+.hero .lead{margin-top:16px;color:var(--na-tmave);font-size:17px;max-width:34em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero-cta .btn-obrys{font-variant-numeric:tabular-nums}
+.duvera{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.odznak{display:inline-flex;align-items:center;gap:10px;padding:9px 14px 9px 10px;border:1px solid rgba(230,234,240,.22);border-radius:12px;text-decoration:none;font-size:14px;line-height:1.25;color:var(--na-tmave);background:rgba(255,255,255,.03);transition:border-color .15s}
+.odznak:hover{border-color:var(--signal)}
+.odznak b{display:block;color:var(--bila);font-family:var(--f-display);font-size:17px;font-weight:600}
+.odznak .hv{color:#FFC94A;letter-spacing:1px}
+.fakta{margin-top:22px;display:grid;gap:8px;font-size:15px;color:var(--na-tmave)}
+.fakta div{display:flex;gap:10px;align-items:baseline}
+.fakta dt{min-width:0}
+.fakta strong{color:var(--bila);font-weight:500}
+.stav{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--bila);margin-top:16px}
+.stav i{width:9px;height:9px;border-radius:50%;background:var(--na-tmave)}
+.stav.otevreno i{background:var(--signal)}
+.stav.porucha i{background:var(--alarm)}
+
+/* scéna + přepínač */
+.pult{min-width:0}
+.scena-ram{position:relative;border-radius:16px;overflow:hidden;background:#0B1730;border:1px solid rgba(230,234,240,.12)}
+.scena{display:block;width:100%;height:auto}
+.prepinac{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:12px;padding:6px;background:var(--noc-2);border-radius:14px;border:1px solid rgba(230,234,240,.1)}
+@media (min-width:560px){.prepinac{grid-template-columns:1.15fr .8fr .85fr 1.5fr}}
+.prepinac button{appearance:none;border:0;background:transparent;color:var(--na-tmave);font:600 14px/1.2 var(--f-display);padding:10px 8px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:8px;justify-content:center;text-align:left;transition:background .2s,color .2s}
+.prepinac button svg{flex:none;opacity:.8}
+.prepinac button:hover{color:var(--bila);background:rgba(255,255,255,.05)}
+.prepinac button[aria-selected="true"]{background:var(--signal);color:var(--noc)}
+.prepinac button[aria-selected="true"] svg{opacity:1}
+.karta{margin-top:12px;background:var(--bila);color:var(--ink);border-radius:14px;padding:20px;display:grid;gap:12px;position:relative}
+.karta::before{content:"";position:absolute;left:24px;top:-7px;width:14px;height:14px;background:var(--bila);transform:rotate(45deg);border-radius:2px;transition:left .3s ease}
+.karta[data-z="alarm"]::before{left:calc(27% + 30px)}
+.karta[data-z="kamery"]::before{left:calc(46% + 30px)}
+.karta[data-z="sta"]::before{left:calc(70% + 50px)}
+@media (max-width:559px){.karta::before{display:none}}
+.karta .kde{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--signal-ink);font-weight:600;display:flex;align-items:center;gap:8px}
+.karta .kde i{width:8px;height:8px;border-radius:50%;background:var(--signal-ink)}
+.karta h3{font-size:24px}
+.karta p{color:var(--ink-2);font-size:16px}
+.karta .pro{display:flex;flex-wrap:wrap;gap:6px}
+.karta .pro span{font-size:13.5px;background:var(--stribro);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.karta .akce{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.karta .btn{padding:12px 18px;font-size:16px}
+.karta.zmena{animation:karta .35s ease}
+@keyframes karta{from{opacity:.3;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* SVG scéna – zóny */
+.scena .zona{opacity:.5;transition:opacity .35s ease;cursor:pointer}
+.scena .zona .svit{opacity:0;transition:opacity .35s}
+.scena[data-aktivni="anteny"] .z-anteny,
+.scena[data-aktivni="alarm"] .z-alarm,
+.scena[data-aktivni="kamery"] .z-kamery,
+.scena[data-aktivni="sta"] .z-sta{opacity:1}
+.scena[data-aktivni="anteny"] .z-anteny .svit,
+.scena[data-aktivni="alarm"] .z-alarm .svit,
+.scena[data-aktivni="kamery"] .z-kamery .svit,
+.scena[data-aktivni="sta"] .z-sta .svit{opacity:1}
+.scena .vlna{fill:none;stroke:#19C3B1;stroke-width:3;stroke-linecap:round;opacity:0;animation:vlna 2.6s ease-out infinite}
+.scena .vlna.d2{animation-delay:.65s}.scena .vlna.d3{animation-delay:1.3s}
+@keyframes vlna{0%{opacity:0}20%{opacity:.95}100%{opacity:0}}
+.scena .kuzel{animation:kuzel 6s ease-in-out infinite;transform-origin:318px 330px;transform-box:view-box}
+@keyframes kuzel{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg)}}
+.scena .led{animation:led 1.2s steps(2,start) infinite}
+@keyframes led{to{opacity:.15}}
+.scena .tok{stroke-dasharray:6 10;animation:tok 1.2s linear infinite}
+@keyframes tok{to{stroke-dashoffset:-32}}
+.scena .hvezda{animation:tremor 4s ease-in-out infinite}
+.scena .hvezda:nth-child(3n){animation-delay:1.3s}.scena .hvezda:nth-child(4n){animation-delay:2.4s}
+@keyframes tremor{50%{opacity:.25}}
+.scena .terc{opacity:0;transition:opacity .3s}
+.scena[data-aktivni="anteny"] .t-anteny,.scena[data-aktivni="alarm"] .t-alarm,.scena[data-aktivni="kamery"] .t-kamery,.scena[data-aktivni="sta"] .t-sta{opacity:1}
+.scena .terc circle.pulz{fill:none;stroke:#19C3B1;stroke-width:2;animation:pulz 1.8s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pulz{from{transform:scale(.4);opacity:1}to{transform:scale(1.6);opacity:0}}
+.scena .stitek-t{font:600 15px var(--f-display);fill:#0F1E3D}
+
+/* pás poruchová služba */
+.porucha-pas{background:var(--noc-2);color:var(--bila);border-top:1px solid rgba(230,234,240,.08)}
+.porucha-pas .wrap{display:grid;gap:18px;padding-block:26px;align-items:center}
+@media (min-width:860px){.porucha-pas .wrap{grid-template-columns:auto minmax(0,1fr) auto;gap:28px}}
+.maj{display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:14px;background:rgba(229,56,59,.12);border:1px solid rgba(229,56,59,.5)}
+.maj .led{animation:led 1.2s steps(2,start) infinite}
+.porucha-pas h2{font-size:clamp(22px,3vw,30px)}
+.porucha-pas h2 em{font-style:normal;color:var(--signal)}
+.porucha-pas p{color:var(--na-tmave);margin-top:6px;max-width:44em}
+.porucha-pas .vlevo{display:flex;gap:18px;align-items:center}
+
+/* sekce obecně */
+.sekce{padding-block:64px}
+@media (min-width:860px){.sekce{padding-block:96px}}
+.sekce.stribro{background:var(--stribro)}
+.sekce.dark{background:var(--noc);color:var(--bila)}
+.nadtitul{font:600 13px/1 var(--f-text);text-transform:uppercase;letter-spacing:.12em;color:var(--signal-ink);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.nadtitul::before{content:"";width:22px;height:2px;background:currentColor}
+.dark .nadtitul{color:var(--signal)}
+.sekce h2{font-size:clamp(30px,4.4vw,46px)}
+.uvod{margin-top:14px;color:var(--ink-2);max-width:40em}
+.dark .uvod{color:var(--na-tmave)}
+.hlava-sekce{display:grid;gap:12px;margin-bottom:40px}
+@media (min-width:860px){.hlava-sekce.dvoj{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:48px}}
+
+/* služby */
+.sluzby{display:grid;gap:14px}
+@media (min-width:640px){.sluzby{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.sluzby{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.sluzba{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:22px;display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;min-width:0;transition:border-color .2s,transform .2s}
+.sluzba:hover{border-color:var(--signal-ink);transform:translateY(-2px)}
+.ikona{width:48px;height:48px;border-radius:12px;background:var(--noc);display:flex;align-items:center;justify-content:center}
+.sluzba h3{font-size:21px;margin-top:6px}
+.sluzba p{color:var(--ink-2);font-size:16px}
+.cena{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px dashed var(--linka);padding-top:12px;margin-top:4px;font-size:15px}
+.cena b{font-family:var(--f-display);font-weight:600}
+.cena a{color:var(--signal-ink);font-weight:600;text-decoration:none;font-size:14.5px;white-space:nowrap}
+.cena a:hover{text-decoration:underline}
+.cenik-pozn{margin-top:18px;font-size:14.5px;color:var(--ink-2);display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+
+/* proč */
+.proc{display:grid;gap:14px}
+@media (min-width:860px){.proc{grid-template-columns:1.1fr 1fr 1fr}}
+.proc-hlavni{background:var(--noc);color:var(--bila);border-radius:var(--r);padding:28px;display:grid;gap:14px;align-content:start}
+.skore{font:700 76px/0.9 var(--f-display);letter-spacing:-.04em;display:flex;align-items:baseline;gap:12px}
+.skore small{font-size:20px;font-weight:500;color:var(--na-tmave);letter-spacing:0}
+.proc-hlavni .hv{color:#FFC94A;font-size:22px;letter-spacing:3px}
+.proc-hlavni p{color:var(--na-tmave)}
+.proc-hlavni a{color:var(--signal);font-weight:600}
+.proc-bod{border:1px solid var(--linka);border-radius:var(--r);padding:24px;display:grid;gap:10px;align-content:start;background:var(--bila)}
+.proc-bod h3{font-size:20px}
+.proc-bod p{color:var(--ink-2);font-size:16px}
+.proc-bod .cislo{font:700 30px/1 var(--f-display);color:var(--signal-ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+
+/* realizace / fotomísta */
+.foto-mriz{display:grid;gap:14px}
+@media (min-width:760px){.foto-mriz{grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr}.foto-mriz .foto:first-child{grid-row:span 2}}
+.foto{position:relative;border-radius:var(--r);min-height:220px;background:
+ repeating-linear-gradient(135deg,rgba(15,30,61,.04) 0 12px,transparent 12px 24px),var(--stribro-2);border:2px dashed #9AA6BA;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;color:var(--ink-2)}
+.foto-mriz .foto:first-child{min-height:300px}
+.foto strong{font-family:var(--f-display);font-size:18px;color:var(--ink)}
+.foto span{font-size:14.5px;max-width:26em}
+.foto .roh{position:absolute;width:18px;height:18px;border-color:var(--signal-ink);border-style:solid}
+.foto .r1{top:10px;left:10px;border-width:2px 0 0 2px}.foto .r2{top:10px;right:10px;border-width:2px 2px 0 0}.foto .r3{bottom:10px;left:10px;border-width:0 0 2px 2px}.foto .r4{bottom:10px;right:10px;border-width:0 2px 2px 0}
+.foto .rec{position:absolute;top:14px;left:36px;font:600 11px/1 var(--f-text);letter-spacing:.1em;color:var(--alarm);display:flex;gap:6px;align-items:center}
+.foto .rec i{width:7px;height:7px;border-radius:50%;background:var(--alarm)}
+
+/* postup */
+.kroky{display:grid;gap:14px;counter-reset:k}
+@media (min-width:860px){.kroky{grid-template-columns:repeat(3,minmax(0,1fr));gap:0}}
+.krok{position:relative;padding:26px 24px;border:1px solid rgba(230,234,240,.16);border-radius:var(--r);background:rgba(255,255,255,.02)}
+@media (min-width:860px){.krok{border-radius:0;border-right-width:0}.krok:first-child{border-radius:var(--r) 0 0 var(--r)}.krok:last-child{border-radius:0 var(--r) var(--r) 0;border-right-width:1px}}
+.krok .n{font:700 15px/1 var(--f-display);color:var(--noc);background:var(--signal);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.krok h3{font-size:22px;margin-bottom:8px}
+.krok p{color:var(--na-tmave);font-size:16px}
+.krok .sig{position:absolute;top:28px;right:22px;display:flex;gap:3px;align-items:flex-end}
+.krok .sig i{width:5px;background:rgba(230,234,240,.25);border-radius:1px}
+.krok .sig i.on{background:var(--signal)}
+
+/* obce */
+.obce{display:grid;gap:32px;align-items:center}
+@media (min-width:860px){.obce{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.radar{width:100%;max-width:460px;height:auto;margin:0 auto;display:block}
+.radar .sweep{transform-origin:230px 230px;animation:sweep 6s linear infinite}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.chipy{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chipy span{background:var(--bila);border:1px solid var(--linka);border-radius:999px;padding:7px 14px;font-size:15px}
+.chipy span.hl{background:var(--noc);color:var(--bila);border-color:var(--noc)}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:860px}
+.faq details{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:0 20px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font:600 18px/1.3 var(--f-display);display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--signal-ink);border-bottom:2px solid var(--signal-ink);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq .odp{padding-bottom:18px;color:var(--ink-2);font-size:16px;max-width:62ch}
+
+/* poptávka + kontakt */
+.kontakt-mriz{display:grid;gap:24px}
+@media (min-width:960px){.kontakt-mriz{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:start}}
+form.poptavka{background:var(--bila);border:1px solid var(--linka);border-radius:14px;padding:24px;display:grid;gap:16px;min-width:0}
+@media (min-width:640px){form.poptavka{padding:32px;grid-template-columns:1fr 1fr}.cela{grid-column:1/-1}}
+.pole{display:grid;gap:6px;min-width:0}
+.pole label{font-weight:600;font-size:15px}
+.pole input,.pole select,.pole textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--stribro-2);border:1px solid #AEB8C8;border-radius:8px;padding:12px 14px;width:100%;min-width:0}
+.pole textarea{min-height:120px;resize:vertical}
+.pole input:focus,.pole select:focus,.pole textarea:focus{outline:none;border-color:var(--signal-ink);box-shadow:0 0 0 3px rgba(25,195,177,.3);background:var(--bila)}
+.pole input.pre,.pole select.pre{animation:pre 1.2s ease}
+@keyframes pre{0%{box-shadow:0 0 0 0 rgba(25,195,177,.7)}100%{box-shadow:0 0 0 10px rgba(25,195,177,0)}}
+.odeslat-rad{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.odeslat-rad small{color:var(--ink-2);font-size:14px}
+.hlaska{border-radius:10px;background:var(--noc);color:var(--bila);padding:18px 20px;display:grid;gap:10px}
+.hlaska a{color:var(--signal);font-weight:600}
+.kontakt-karta{background:var(--noc);color:var(--bila);border-radius:14px;padding:28px;display:grid;gap:20px}
+.kontakt-karta h3{font-size:24px}
+.kontakt-karta dl{margin:0;display:grid;gap:14px}
+.kontakt-karta dt{font-size:12.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--na-tmave)}
+.kontakt-karta dd{margin:2px 0 0;font-size:17px;overflow-wrap:anywhere}
+.kontakt-karta dd a{color:var(--bila);text-decoration-color:rgba(25,195,177,.6);text-underline-offset:3px}
+.kontakt-karta .velke{font:700 28px/1.1 var(--f-display);text-decoration:none!important;font-variant-numeric:tabular-nums}
+.kopir{appearance:none;border:1px solid rgba(230,234,240,.3);background:transparent;color:var(--na-tmave);font:500 13px var(--f-text);border-radius:6px;padding:4px 8px;margin-left:8px;cursor:pointer;vertical-align:middle}
+.kopir:hover{color:var(--bila);border-color:var(--signal)}
+.hodiny{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-variant-numeric:tabular-nums}
+.mapa-odkaz{display:inline-flex;align-items:center;gap:8px;color:var(--signal)!important;font-weight:600;text-decoration:none;margin-top:6px}
+
+/* patička */
+.pata{background:#0A1630;color:var(--na-tmave);font-size:14px}
+.pata .wrap{padding-block:28px 32px;display:grid;gap:8px}
+.pata a{color:var(--bila)}
+
+/* mobilní lišta */
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--noc);border-top:1px solid rgba(230,234,240,.15);display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista .btn{padding:13px 10px;font-size:16px}
+@media (min-width:860px){.lista{display:none}}
+@media (max-width:859px){body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}}
+</style>
+
+<div class="navrh"><div class="wrap"><b>Nezávazný návrh webu</b> – není to oficiální stránka firmy Martin Vincenec – elektro, antény, zabezpečení</div></div>
+
+<header class="hlava">
+  <div class="wrap">
+    <a class="znacka" href="#top" aria-label="Martin Vincenec – úvod">
+      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" fill="#19C3B1"/><path d="M18 27V14" stroke="#0F1E3D" stroke-width="2.6" stroke-linecap="round"/><path d="M11 14h14M13 10h10M15 18.5h6" stroke="#0F1E3D" stroke-width="2.4" stroke-linecap="round"/><path d="M26.5 6.5a7 7 0 0 1 3 4.5" stroke="#0F1E3D" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <span><strong>Martin Vincenec</strong><small>elektro · antény · zabezpečení</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní">
+      <a href="#sluzby">Služby</a><a href="#proc">Proč Martin</a><a href="#postup">Jak to probíhá</a><a href="#obce">Kde pracujeme</a><a href="#poptavka">Poptávka</a>
+    </nav>
+    <a class="tel-hlava" href="tel:+420604386384" aria-label="Zavolat 604 386 384">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0F1E3D" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span class="cislo">604 386 384</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero dark" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="oblast"><i aria-hidden="true"></i>Havířov-Prostřední Suchá a okolí</div>
+      <h1 id="h1">Antény, alarmy a kamery v Havířově. <span>Jeden technik na všechno, co hlídá a vysílá.</span></h1>
+      <p class="lead">Martin Vincenec prodává, montuje a servisuje antény, satelity, alarmy a kamerové systémy. Pro rodinné domy i paneláky, včetně rekonstrukcí rozvodů STA.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primar" href="#poptavka">Zavolat nebo poptat
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0F1E3D" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-obrys" href="tel:+420604386384">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#19C3B1" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          604 386 384</a>
+      </div>
+      <div class="duvera">
+        <a class="odznak" href="https://www.firmy.cz/detail/12859276-martin-vincenec-havirov-prostredni-sucha.html" target="_blank" rel="noopener">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#FFC94A" opacity=".15"/><path d="M17 7l3 6.2 6.8.9-5 4.7 1.3 6.7L17 22.2l-6.1 3.3 1.3-6.7-5-4.7 6.8-.9z" fill="#FFC94A"/></svg>
+          <span><b>5,0 <span class="hv" aria-hidden="true">★★★★★</span></b>ze 46 hodnocení na Firmy.cz</span>
+        </a>
+        <a class="odznak" href="https://www.firmy.cz/detail/12859276-martin-vincenec-havirov-prostredni-sucha.html" target="_blank" rel="noopener">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="14" r="9" fill="none" stroke="#19C3B1" stroke-width="2.2"/><path d="M12 21.5 10 31l7-3.5 7 3.5-2-9.5" fill="none" stroke="#19C3B1" stroke-width="2.2" stroke-linejoin="round"/><path d="m13.5 14 2.5 2.4 4.5-4.8" stroke="#19C3B1" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><b>TOP FIRMA 2025</b>odznak na Firmy.cz</span>
+        </a>
+      </div>
+      <div class="stav" id="stav" aria-live="polite"><i aria-hidden="true"></i><span>Po–Pá 8–18 · o víkendu poruchová služba STA</span></div>
+    </div>
+
+    <div class="pult" id="prepinac">
+      <div class="scena-ram">
+        <svg class="scena" id="scena" data-aktivni="anteny" viewBox="0 0 640 520" role="img" aria-labelledby="scena-t">
+          <title id="scena-t">Noční ilustrace: rodinný dům a za ním panelový dům. Na střeše anténa a satelit, na rohu kamera, u dveří alarm, na paneláku společná anténa s rozvodem.</title>
+          <defs>
+            <linearGradient id="nebe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1730"/><stop offset="1" stop-color="#1A2F5E"/></linearGradient>
+            <linearGradient id="kuzel-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19C3B1" stop-opacity=".55"/><stop offset="1" stop-color="#19C3B1" stop-opacity=".04"/></linearGradient>
+            <pattern id="okna" width="38" height="34" patternUnits="userSpaceOnUse" x="346" y="176"><rect x="0" y="0" width="22" height="16" rx="2" fill="#2C4478"/></pattern>
+            <filter id="zar" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect width="640" height="520" fill="url(#nebe)"/>
+          <g fill="#E6EAF0">
+            <circle class="hvezda" cx="40" cy="40" r="1.6"/><circle class="hvezda" cx="120" cy="90" r="1.2"/><circle class="hvezda" cx="210" cy="30" r="1.8"/><circle class="hvezda" cx="330" cy="120" r="1.1"/><circle class="hvezda" cx="80" cy="150" r="1.3"/><circle class="hvezda" cx="400" cy="40" r="1.4"/><circle class="hvezda" cx="470" cy="100" r="1.1"/><circle class="hvezda" cx="610" cy="140" r="1.5"/><circle class="hvezda" cx="25" cy="230" r="1.1"/><circle class="hvezda" cx="160" cy="180" r="1"/><circle class="hvezda" cx="350" cy="70" r="1"/>
+          </g>
+          <!-- měsíc -->
+          <circle cx="300" cy="64" r="22" fill="#E6EAF0" opacity=".92"/><circle cx="310" cy="57" r="20" fill="#0C1832"/>
+          <!-- družice -->
+          <g transform="translate(470 52) rotate(-20)" opacity=".95">
+            <rect x="-6" y="-6" width="12" height="12" fill="#E6EAF0"/>
+            <rect x="-30" y="-4" width="20" height="8" fill="#19C3B1" opacity=".75"/><rect x="10" y="-4" width="20" height="8" fill="#19C3B1" opacity=".75"/>
+            <line x1="-10" y1="0" x2="-6" y2="0" stroke="#E6EAF0" stroke-width="2"/><line x1="6" y1="0" x2="10" y2="0" stroke="#E6EAF0" stroke-width="2"/>
+          </g>
+
+          <!-- PANELÁK -->
+          <rect x="330" y="160" width="280" height="310" fill="#1A2D58"/>
+          <rect x="330" y="160" width="280" height="310" fill="url(#okna)"/>
+          <rect x="324" y="152" width="292" height="10" fill="#22396B"/>
+          <g fill="#E6EAF0">
+            <rect x="384" y="210" width="22" height="16" rx="2" opacity=".85"/><rect x="498" y="176" width="22" height="16" rx="2" opacity=".7"/><rect x="536" y="278" width="22" height="16" rx="2" opacity=".85"/><rect x="460" y="346" width="22" height="16" rx="2" opacity=".6"/><rect x="574" y="380" width="22" height="16" rx="2" opacity=".8"/><rect x="422" y="278" width="22" height="16" rx="2" opacity=".5"/>
+          </g>
+          <rect x="452" y="420" width="40" height="50" fill="#0E1B38"/><rect x="446" y="414" width="52" height="6" fill="#2C4478"/>
+
+          <!-- ZÓNA STA: společná anténa a rozvod v paneláku -->
+          <g class="zona z-sta" data-z="sta">
+            <g class="svit">
+              <path class="tok" d="M560 152 V470" stroke="#19C3B1" stroke-width="3" fill="none"/>
+              <path d="M560 194 H520 M560 228 H596 M560 262 H520 M560 296 H596 M560 330 H520 M560 364 H596 M560 398 H520" stroke="#19C3B1" stroke-width="2" fill="none" opacity=".8"/>
+              <g fill="#19C3B1"><rect x="553" y="190" width="14" height="9" rx="2"/><rect x="553" y="224" width="14" height="9" rx="2"/><rect x="553" y="258" width="14" height="9" rx="2"/><rect x="553" y="292" width="14" height="9" rx="2"/><rect x="553" y="326" width="14" height="9" rx="2"/><rect x="553" y="360" width="14" height="9" rx="2"/><rect x="553" y="394" width="14" height="9" rx="2"/></g>
+              <path class="vlna" d="M532 82 a26 26 0 0 1 56 0"/><path class="vlna d2" d="M520 72 a40 40 0 0 1 80 0"/><path class="vlna d3" d="M508 62 a54 54 0 0 1 104 0"/>
+            </g>
+            <g stroke="#E6EAF0" stroke-width="3" stroke-linecap="round">
+              <line x1="560" y1="152" x2="560" y2="88"/>
+              <line x1="538" y1="96" x2="582" y2="96"/><line x1="542" y1="106" x2="578" y2="106"/><line x1="546" y1="116" x2="574" y2="116"/><line x1="550" y1="126" x2="570" y2="126"/>
+              <line x1="420" y1="152" x2="420" y2="112"/><line x1="404" y1="118" x2="436" y2="118"/><line x1="408" y1="128" x2="432" y2="128"/>
+            </g>
+            <rect x="548" y="140" width="24" height="12" rx="2" fill="#2C4478" stroke="#E6EAF0" stroke-width="1.5"/>
+          </g>
+
+          <!-- RODINNÝ DŮM -->
+          <rect x="268" y="214" width="22" height="46" fill="#22396B"/>
+          <rect x="70" y="300" width="256" height="170" fill="#2A3F6E"/>
+          <polygon points="50,306 198,198 346,306" fill="#132650"/>
+          <polygon points="50,306 198,198 346,306" fill="none" stroke="#3A5390" stroke-width="3" stroke-linejoin="round"/>
+          <!-- okna RD -->
+          <rect x="96" y="336" width="54" height="44" rx="3" fill="#E6EAF0" opacity=".9"/><path d="M123 336v44M96 358h54" stroke="#2A3F6E" stroke-width="3"/>
+          <rect x="248" y="336" width="54" height="44" rx="3" fill="#2C4478"/><path d="M275 336v44M248 358h54" stroke="#2A3F6E" stroke-width="3"/>
+          <circle cx="198" cy="268" r="14" fill="#E6EAF0" opacity=".7"/>
+          <!-- dveře -->
+          <rect x="176" y="392" width="44" height="78" rx="3" fill="#0E1B38"/><circle cx="212" cy="434" r="2.5" fill="#E6EAF0"/>
+          <rect x="166" y="386" width="64" height="6" fill="#3A5390"/>
+          <!-- země -->
+          <rect x="0" y="470" width="640" height="50" fill="#0A1630"/>
+          <path d="M150 520 L176 470 H220 L250 520Z" fill="#14244A"/>
+          <g fill="#13305A"><ellipse cx="40" cy="468" rx="34" ry="18"/><ellipse cx="350" cy="470" rx="22" ry="12"/></g>
+
+          <!-- ZÓNA ANTÉNY + SATELIT na střeše RD -->
+          <g class="zona z-anteny" data-z="anteny">
+            <g class="svit">
+              <path class="vlna" d="M126 146 a24 24 0 0 1 48 0"/><path class="vlna d2" d="M114 136 a36 36 0 0 1 72 0"/><path class="vlna d3" d="M102 126 a48 48 0 0 1 96 0"/>
+              <path class="vlna" d="M262 200 l16 -18" style="stroke-width:3"/>
+              <path class="vlna" d="M268 196 a26 26 0 0 0 28 -26"/><path class="vlna d2" d="M276 204 a40 40 0 0 0 40 -38"/><path class="vlna d3" d="M284 212 a54 54 0 0 0 52 -50"/>
+            </g>
+            <g stroke="#E6EAF0" stroke-width="3" stroke-linecap="round">
+              <line x1="150" y1="234" x2="150" y2="156"/>
+              <line x1="126" y1="164" x2="174" y2="164"/><line x1="130" y1="174" x2="170" y2="174"/><line x1="134" y1="184" x2="166" y2="184"/><line x1="138" y1="194" x2="162" y2="194"/>
+            </g>
+            <!-- parabola -->
+            <line x1="246" y1="232" x2="246" y2="214" stroke="#E6EAF0" stroke-width="3"/>
+            <ellipse cx="252" cy="206" rx="22" ry="11" transform="rotate(-40 252 206)" fill="#E6EAF0"/>
+            <ellipse cx="253" cy="205" rx="17" ry="7" transform="rotate(-40 253 205)" fill="#C3CCDB"/>
+            <line x1="252" y1="208" x2="268" y2="196" stroke="#E6EAF0" stroke-width="2.5"/><circle cx="269" cy="195" r="3.5" fill="#19C3B1"/>
+          </g>
+
+          <!-- ZÓNA KAMERY na rohu RD -->
+          <g class="zona z-kamery" data-z="kamery">
+            <g class="svit"><polygon class="kuzel" points="318,330 168,470 296,470" fill="url(#kuzel-g)"/></g>
+            <rect x="320" y="318" width="10" height="18" rx="2" fill="#C3CCDB"/>
+            <g transform="rotate(30 318 328)"><rect x="292" y="320" width="30" height="14" rx="4" fill="#E6EAF0"/><rect x="286" y="322" width="8" height="10" rx="2" fill="#0E1B38"/><circle cx="314" cy="327" r="2" fill="#E5383B" class="led"/></g>
+          </g>
+
+          <!-- ZÓNA ALARM u dveří + siréna -->
+          <g class="zona z-alarm" data-z="alarm">
+            <g class="svit">
+              <circle cx="100" cy="316" r="20" fill="#E5383B" opacity=".25" filter="url(#zar)"/>
+              <path class="vlna" d="M78 302 a26 26 0 0 0 0 28" style="stroke:#E5383B"/><path class="vlna d2" d="M70 296 a36 36 0 0 0 0 40" style="stroke:#E5383B"/>
+              <path class="vlna" d="M122 302 a26 26 0 0 1 0 28" style="stroke:#E5383B"/><path class="vlna d2" d="M130 296 a36 36 0 0 1 0 40" style="stroke:#E5383B"/>
+            </g>
+            <rect x="88" y="306" width="24" height="22" rx="4" fill="#E6EAF0"/><circle class="led" cx="100" cy="317" r="5" fill="#E5383B"/>
+            <rect x="232" y="408" width="20" height="28" rx="3" fill="#E6EAF0"/>
+            <g fill="#2A3F6E"><rect x="236" y="418" width="4" height="3"/><rect x="244" y="418" width="4" height="3"/><rect x="236" y="424" width="4" height="3"/><rect x="244" y="424" width="4" height="3"/><rect x="236" y="430" width="4" height="3"/><rect x="244" y="430" width="4" height="3"/></g>
+            <circle class="led" cx="242" cy="413" r="2" fill="#E5383B"/>
+          </g>
+
+          <!-- terče s popisky -->
+          <g class="terc t-anteny" aria-hidden="true"><circle class="pulz" cx="198" cy="200" r="40"/><rect x="22" y="236" width="104" height="30" rx="15" fill="#19C3B1"/><text class="stitek-t" x="74" y="256" text-anchor="middle">Střecha RD</text></g>
+          <g class="terc t-alarm" aria-hidden="true"><circle class="pulz" cx="242" cy="420" r="30"/><circle class="pulz" cx="100" cy="317" r="26"/><rect x="22" y="400" width="124" height="30" rx="15" fill="#19C3B1"/><text class="stitek-t" x="84" y="420" text-anchor="middle">Dveře a fasáda</text></g>
+          <g class="terc t-kamery" aria-hidden="true"><circle class="pulz" cx="312" cy="330" r="28"/><rect x="190" y="282" width="112" height="30" rx="15" fill="#19C3B1"/><text class="stitek-t" x="246" y="302" text-anchor="middle">Roh domu</text></g>
+          <g class="terc t-sta" aria-hidden="true"><circle class="pulz" cx="560" cy="110" r="40"/><rect x="396" y="226" width="136" height="30" rx="15" fill="#19C3B1"/><text class="stitek-t" x="464" y="246" text-anchor="middle">Celý panelák</text></g>
+        </svg>
+      </div>
+
+      <div class="prepinac" role="tablist" aria-label="Signálový přepínač – vyberte, co řešíte">
+        <button role="tab" id="tab-anteny" aria-controls="karta" aria-selected="true" data-z="anteny" tabindex="0">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V8M6 8h12M8 4h8M9 12h6"/></svg>Antény a satelit</button>
+        <button role="tab" id="tab-alarm" aria-controls="karta" aria-selected="false" data-z="alarm" tabindex="-1">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><circle cx="12" cy="11" r="2" fill="currentColor"/></svg>Alarm</button>
+        <button role="tab" id="tab-kamery" aria-controls="karta" aria-selected="false" data-z="kamery" tabindex="-1">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="7" width="13" height="8" rx="2"/><path d="m16 10 5-2v6l-5-2M7 15v5"/></svg>Kamery</button>
+        <button role="tab" id="tab-sta" aria-controls="karta" aria-selected="false" data-z="sta" tabindex="-1">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="5" y="8" width="14" height="14"/><path d="M9 12h2M13 12h2M9 16h2M13 16h2M12 8V2M9 4h6"/></svg>Rozvody STA pro paneláky</button>
+      </div>
+
+      <div class="karta" id="karta" role="tabpanel" aria-labelledby="tab-anteny" data-z="anteny" aria-live="polite">
+        <div class="kde"><i aria-hidden="true"></i><span data-k="kde">Na obrázku: střecha rodinného domu</span></div>
+        <h3 data-k="titul">Antény a satelitní technika</h3>
+        <p data-k="text">Prodej, montáž a servis antén i satelitů. Když obraz kostičkuje nebo program zmizí, Martin dohledá, kde se signál ztrácí, a opraví to.</p>
+        <div class="pro" data-k="pro"><span>Rodinné domy</span><span>Panelové domy</span></div>
+        <div class="akce">
+          <a class="btn btn-tmave" href="tel:+420604386384">Zavolat 604 386 384</a>
+          <a class="btn btn-svetle-obrys" href="#poptavka" data-poptat="Antény a satelit">Poptat</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="porucha-pas dark" aria-labelledby="porucha-t">
+  <div class="wrap">
+    <div class="maj" aria-hidden="true">
+      <svg width="34" height="34" viewBox="0 0 34 34"><rect x="9" y="12" width="16" height="16" fill="none" stroke="#E6EAF0" stroke-width="2"/><path d="M17 12V4M12 6h10" stroke="#E6EAF0" stroke-width="2" stroke-linecap="round"/><circle class="led" cx="26" cy="8" r="4" fill="#E5383B"/></svg>
+    </div>
+    <div>
+      <h2 id="porucha-t">Víkendová poruchová služba <em>STA</em></h2>
+      <p>V sobotu nebo v neděli přestala celému domu jít televize ze společné antény? O víkendu Martin drží poruchovou službu pro rozvody STA. Volejte rovnou.</p>
+    </div>
+    <a class="btn btn-primar" href="tel:+420604386384">Nahlásit poruchu: 604 386 384</a>
+  </div>
+</section>
+
+<section class="sekce stribro" id="sluzby" aria-labelledby="sluzby-t">
+  <div class="wrap">
+    <div class="hlava-sekce dvoj">
+      <div><div class="nadtitul">Služby</div><h2 id="sluzby-t">Co Martin na Vašem domě zapojí, nastaví a opraví</h2></div>
+      <p class="uvod">Od antény na střeše po kameru u vrat. Prodej, montáž i pozdější servis dělá jeden člověk, takže víte, komu zavolat.</p>
+    </div>
+    <div class="sluzby">
+      <article class="sluzba">
+        <div class="ikona"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#19C3B1" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22V8M6 8h12M8 4h8M9 12h6"/></svg></div>
+        <h3>Antény a satelity</h3>
+        <p>Prodej, montáž a servis pozemních antén i satelitní techniky včetně nastavení příjmu.</p>
+        <div class="cena"><b>Cena na dotaz</b><a href="#poptavka" data-poptat="Antény a satelit">Poptat →</a></div>
+      </article>
+      <article class="sluzba">
+        <div class="ikona"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#19C3B1" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><circle cx="12" cy="11" r="2" fill="#E5383B" stroke="none"/></svg></div>
+        <h3>Alarmy a zabezpečení</h3>
+        <p>Prodej a servis alarmů a zabezpečovací techniky pro rodinné i panelové domy.</p>
+        <div class="cena"><b>Cena na dotaz</b><a href="#poptavka" data-poptat="Alarm">Poptat →</a></div>
+      </article>
+      <article class="sluzba">
+        <div class="ikona"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#19C3B1" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="13" height="8" rx="2"/><path d="m16 10 5-2v6l-5-2M7 15v5"/></svg></div>
+        <h3>Kamerové systémy</h3>
+        <p>Kamery na dům, dvůr nebo vchod paneláku – prodej, zapojení i servis kamerových systémů.</p>
+        <div class="cena"><b>Cena na dotaz</b><a href="#poptavka" data-poptat="Kamery">Poptat →</a></div>
+      </article>
+      <article class="sluzba">
+        <div class="ikona"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#19C3B1" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="14" height="14"/><path d="M9 12h2M13 12h2M9 16h2M13 16h2M12 8V2M9 4h6"/></svg></div>
+        <h3>Rozvody STA pro paneláky</h3>
+        <p>Rekonstrukce a opravy společných televizních antén a rozvodů pro panelové domy a SVJ.</p>
+        <div class="cena"><b>Cena na dotaz</b><a href="#poptavka" data-poptat="Rozvody STA pro paneláky">Poptat →</a></div>
+      </article>
+      <article class="sluzba">
+        <div class="ikona"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#19C3B1" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10"/><path d="M12 13v7M9 16h6"/></svg></div>
+        <h3>Rozvody v rodinném domě</h3>
+        <p>Rekonstrukce a opravy rozvodů v rodinných domech, když stávající vedení už nestačí nebo nefunguje.</p>
+        <div class="cena"><b>Cena na dotaz</b><a href="#poptavka" data-poptat="Rozvody v rodinném domě">Poptat →</a></div>
+      </article>
+      <article class="sluzba">
+        <div class="ikona"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#19C3B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 5 13h6l-1 9 8-11h-6z"/></svg></div>
+        <h3>Elektromontážní práce</h3>
+        <p>Elektromontáže, které souvisejí s anténami, zabezpečením a rozvody, vyřeší stejný technik.</p>
+        <div class="cena"><b>Cena na dotaz</b><a href="#poptavka" data-poptat="Elektromontáž">Poptat →</a></div>
+      </article>
+    </div>
+    <p class="cenik-pozn">Ceník: konkrétní ceny Martin sdělí po popisu zakázky nebo po prohlídce. <span class="uk">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="sekce" id="proc" aria-labelledby="proc-t">
+  <div class="wrap">
+    <div class="hlava-sekce"><div class="nadtitul">Proč Martin</div><h2 id="proc-t">Hodnocení, které mluví za Martina</h2></div>
+    <div class="proc">
+      <div class="proc-hlavni dark">
+        <div class="skore">5,0 <small>z 5</small></div>
+        <div class="hv" aria-label="5 hvězdiček z 5">★★★★★</div>
+        <p>Průměr ze 46 hodnocení zákazníků na Firmy.cz a odznak <strong style="color:#fff">TOP FIRMA 2025</strong>.</p>
+        <a href="https://www.firmy.cz/detail/12859276-martin-vincenec-havirov-prostredni-sucha.html" target="_blank" rel="noopener">Přečíst hodnocení na Firmy.cz ↗</a>
+      </div>
+      <div class="proc-bod">
+        <div class="cislo">4 v 1</div>
+        <h3>Antény, alarm, kamery i rozvody</h3>
+        <p>Nemusíte shánět zvlášť anténáře a zvlášť firmu na zabezpečení. Všechno, co na domě hlídá a vysílá, má na starosti jeden technik.</p>
+      </div>
+      <div class="proc-bod">
+        <div class="cislo">Po–Pá 8–18</div>
+        <h3>A o víkendu poruchy STA</h3>
+        <p>Ve všední dny celý pracovní den. Když o víkendu vypadne společná anténa, funguje poruchová služba.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sekce stribro" id="realizace" aria-labelledby="real-t">
+  <div class="wrap">
+    <div class="hlava-sekce dvoj">
+      <div><div class="nadtitul">Realizace</div><h2 id="real-t">Hotové zakázky z Havířova a okolí</h2></div>
+      <p class="uvod">Fotky střech, rozvaděčů a kamer z dokončených zakázek ukážou víc než popis. Sem patří Martinovy vlastní snímky.</p>
+    </div>
+    <div class="foto-mriz">
+      <div class="foto"><i class="roh r1"></i><i class="roh r2"></i><i class="roh r3"></i><i class="roh r4"></i><span class="rec"><i></i>REC</span>
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0B7A6F" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <strong>Sem přijde Vaše fotka</strong><span>Například nová společná anténa na střeše paneláku</span></div>
+      <div class="foto"><i class="roh r1"></i><i class="roh r2"></i><i class="roh r3"></i><i class="roh r4"></i>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0B7A6F" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <strong>Sem přijde Vaše fotka</strong><span>Kamera na rohu rodinného domu</span></div>
+      <div class="foto"><i class="roh r1"></i><i class="roh r2"></i><i class="roh r3"></i><i class="roh r4"></i>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0B7A6F" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <strong>Sem přijde Vaše fotka</strong><span>Ústředna alarmu nebo zrekonstruovaný rozvod</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sekce dark" id="postup" aria-labelledby="postup-t">
+  <div class="wrap">
+    <div class="hlava-sekce dvoj">
+      <div><div class="nadtitul">Jak to probíhá</div><h2 id="postup-t">Od telefonátu k čistému signálu ve třech krocích</h2></div>
+      <p class="uvod">Postup se liší podle zakázky; takhle vypadá typický průběh. <span class="uk">ukázkový text</span></p>
+    </div>
+    <ol class="kroky" style="list-style:none;margin:0;padding:0">
+      <li class="krok"><span class="sig" aria-hidden="true"><i style="height:6px" class="on"></i><i style="height:10px"></i><i style="height:14px"></i></span><div class="n">1</div><h3>Zavoláte nebo pošlete poptávku</h3><p>Popíšete, co nefunguje nebo co chcete hlídat, a jestli jde o rodinný dům, nebo panelák.</p></li>
+      <li class="krok"><span class="sig" aria-hidden="true"><i style="height:6px" class="on"></i><i style="height:10px" class="on"></i><i style="height:14px"></i></span><div class="n">2</div><h3>Martin se přijede podívat</h3><p>Změří signál, projde rozvody nebo místa pro kamery a čidla a řekne Vám, co navrhuje a za kolik.</p></li>
+      <li class="krok"><span class="sig" aria-hidden="true"><i style="height:6px" class="on"></i><i style="height:10px" class="on"></i><i style="height:14px" class="on"></i></span><div class="n">3</div><h3>Montáž a předání</h3><p>Po dohodě vše zapojí, nastaví a ukáže Vám, jak alarm, kamery nebo příjem ovládat.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce" id="obce" aria-labelledby="obce-t">
+  <div class="wrap obce">
+    <svg class="radar" viewBox="0 0 460 460" role="img" aria-label="Schematický radar s Havířovem-Prostřední Suchou uprostřed a okolními obcemi">
+      <defs><radialGradient id="rg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#19C3B1" stop-opacity=".18"/><stop offset="1" stop-color="#19C3B1" stop-opacity="0"/></radialGradient>
+        <linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#19C3B1" stop-opacity="0"/><stop offset="1" stop-color="#19C3B1" stop-opacity=".35"/></linearGradient></defs>
+      <circle cx="230" cy="230" r="220" fill="#0F1E3D"/>
+      <circle cx="230" cy="230" r="220" fill="url(#rg)"/>
+      <g fill="none" stroke="#19C3B1" stroke-opacity=".3"><circle cx="230" cy="230" r="70"/><circle cx="230" cy="230" r="140"/><circle cx="230" cy="230" r="210"/><path d="M230 10v440M10 230h440"/></g>
+      <path class="sweep" d="M230 230 L230 10 A220 220 0 0 1 385.6 74.4 Z" fill="url(#sw)"/>
+      <g font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#E6EAF0">
+        <circle cx="230" cy="230" r="8" fill="#19C3B1"/><text x="230" y="262" text-anchor="middle" font-weight="600" font-size="15">Prostřední Suchá</text>
+        <circle cx="300" cy="160" r="5" fill="#E6EAF0"/><text x="312" y="156">Havířov</text>
+        <circle cx="150" cy="190" r="4" fill="#E6EAF0"/><text x="140" y="180" text-anchor="end">Horní Suchá</text>
+        <circle cx="330" cy="300" r="4" fill="#E6EAF0"/><text x="340" y="318">Těrlicko</text>
+        <circle cx="120" cy="320" r="4" fill="#E6EAF0"/><text x="110" y="340" text-anchor="end">Albrechtice</text>
+        <circle cx="260" cy="90" r="4" fill="#E6EAF0"/><text x="270" y="82">Šenov</text>
+        <circle cx="120" cy="100" r="4" fill="#E6EAF0"/><text x="132" y="92">Stonava</text>
+      </g>
+    </svg>
+    <div>
+      <div class="nadtitul">Kde pracujeme</div>
+      <h2 id="obce-t">Havířov a okolí, v dosahu jednoho telefonátu</h2>
+      <p class="uvod">Základna je v Prostřední Suché, Budovatelů 808/36. Zakázky v Havířově a okolních obcích. Nevidíte svou obec? Zavolejte a domluvíte se.</p>
+      <div class="chipy">
+        <span class="hl">Havířov</span><span>Prostřední Suchá</span><span>Horní Suchá</span><span>Šenov</span><span>Těrlicko</span><span>Albrechtice</span><span>Stonava</span>
+      </div>
+      <p style="margin-top:12px;font-size:14.5px;color:var(--ink-2)">Seznam obcí kromě Havířova <span class="uk">ukázkový text</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sekce stribro" id="faq" aria-labelledby="faq-t">
+  <div class="wrap">
+    <div class="hlava-sekce"><div class="nadtitul">Časté otázky</div><h2 id="faq-t">Na co se lidé ptají před zakázkou</h2></div>
+    <div class="faq">
+      <details open><summary>Nejde nám televize v celém paneláku a je sobota. Co s tím?</summary>
+        <div class="odp">Volejte 604 386 384. O víkendu Martin drží poruchovou službu pro rozvody společných televizních antén (STA).</div></details>
+      <details><summary>Děláte i pro SVJ a správce panelových domů?</summary>
+        <div class="odp">Ano. Rekonstrukce a opravy rozvodů STA a zabezpečení pro panelové domy patří mezi hlavní služby. Pro výbor SVJ nebo správce připraví nabídku po prohlídce domu. <span class="uk">ukázkový text</span></div></details>
+      <details><summary>Kolik stojí kamery nebo alarm na rodinný dům?</summary>
+        <div class="odp">Ceny nejsou zveřejněné, protože záleží na počtu kamer či čidel, délce kabeláže a typu zařízení. Popište Martinovi dům a co chcete hlídat, cenu sdělí na dotaz.</div></details>
+      <details><summary>Obraz z antény kostičkuje. Je chyba v anténě, nebo v televizi?</summary>
+        <div class="odp">Častou příčinou bývá slabý signál, posunutá anténa nebo poškozený svod. Martin na místě změří signál a najde, kde se ztrácí. <span class="uk">ukázkový text</span></div></details>
+      <details><summary>Postaráte se i o servis zařízení, které jste nemontoval?</summary>
+        <div class="odp">Servis antén, satelitů, alarmů a kamer nabízí; zda jde převzít konkrétní cizí zařízení, záleží na typu. Řekněte značku a stáří a domluvíte se. <span class="uk">ukázkový text</span></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sekce" id="poptavka" aria-labelledby="pop-t">
+  <div class="wrap">
+    <div class="hlava-sekce dvoj">
+      <div><div class="nadtitul">Poptávka</div><h2 id="pop-t">Napište, co má Váš dům hlídat nebo chytat</h2></div>
+      <p class="uvod">Rychlejší je zavolat na 604 386 384. Když se nedovoláte, nechte tu zprávu a Martin se Vám ozve.</p>
+    </div>
+    <div class="kontakt-mriz">
+      <form class="poptavka" id="form" novalidate>
+        <div class="pole"><label for="f-co">Co řešíte</label>
+          <select id="f-co" name="co">
+            <option>Antény a satelit</option><option>Alarm</option><option>Kamery</option><option>Rozvody STA pro paneláky</option><option>Rozvody v rodinném domě</option><option>Elektromontáž</option><option>Porucha</option><option>Něco jiného</option>
+          </select></div>
+        <div class="pole"><label for="f-objekt">Typ objektu</label>
+          <select id="f-objekt" name="objekt"><option>Rodinný dům</option><option>Byt v paneláku</option><option>Panelový dům / SVJ</option><option>Jiné</option></select></div>
+        <div class="pole"><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" autocomplete="name" placeholder="Jana Nováková"></div>
+        <div class="pole"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="777 123 456"></div>
+        <div class="pole cela"><label for="f-obec">Obec / část obce</label><input id="f-obec" name="obec" placeholder="Havířov-Šumbark"></div>
+        <div class="pole cela"><label for="f-zprava">Popis</label><textarea id="f-zprava" name="zprava" placeholder="Např. chceme 3 kamery na dvůr a vjezd, dům je jednopatrový."></textarea></div>
+        <div class="cela odeslat-rad"><button class="btn btn-tmave" type="submit">Odeslat poptávku</button><small>Odpověď obvykle telefonem.</small></div>
+        <div class="cela hlaska" id="hlaska" hidden role="status">
+          <strong>Tohle je jen návrh webu, poptávka se nikam neodeslala.</strong>
+          <span>Na skutečném webu by zpráva dorazila Martinovi. Teď mu prosím zavolejte na <a href="tel:+420604386384">604 386 384</a> nebo napište na martin.vincenec@seznam.cz.</span>
+        </div>
+      </form>
+
+      <aside class="kontakt-karta" aria-labelledby="kont-t">
+        <h3 id="kont-t">Kontakt</h3>
+        <dl>
+          <div><dt>Telefon</dt><dd><a class="velke" href="tel:+420604386384">604 386 384</a><button class="kopir" type="button" data-kopir="604 386 384">Kopírovat</button></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:martin.vincenec@seznam.cz">martin.vincenec@seznam.cz</a><button class="kopir" type="button" data-kopir="martin.vincenec@seznam.cz">Kopírovat</button></dd></div>
+          <div><dt>Adresa</dt><dd>Budovatelů 808/36<br>Havířov-Prostřední Suchá<br><a class="mapa-odkaz" href="https://mapy.cz/zakladni?q=Budovatel%C5%AF%20808%2F36%2C%20Hav%C3%AD%C5%99ov-Prost%C5%99edn%C3%AD%20Such%C3%A1" target="_blank" rel="noopener">Ukázat na Mapy.cz ↗</a></dd></div>
+          <div><dt>Otevírací doba</dt><dd><div class="hodiny"><span>Po–Pá</span><span>8:00–18:00</span><span>So–Ne</span><span>poruchová služba STA</span></div></dd></div>
+          <div><dt>IČO</dt><dd>02635305</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pata">
+  <div class="wrap">
+    <div><a href="tel:+420604386384">604 386 384</a> · martin.vincenec@seznam.cz · Budovatelů 808/36, Havířov-Prostřední Suchá · IČO 02635305</div>
+    <div>Nezávazný návrh webu. Hodnocení a odznak podle <a href="https://www.firmy.cz/detail/12859276-martin-vincenec-havirov-prostredni-sucha.html" target="_blank" rel="noopener">profilu na Firmy.cz</a>. Texty označené „ukázkový text“ je potřeba ověřit.</div>
+  </div>
+</footer>
+
+<div class="lista" aria-label="Rychlý kontakt">
+  <a class="btn btn-primar" href="tel:+420604386384">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0F1E3D" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat</a>
+  <a class="btn btn-obrys" href="#poptavka">Poptat</a>
+</div>
+
+
+
+<script>
+(function(){
+  var DATA={
+    anteny:{kde:"Na obrázku: střecha rodinného domu",titul:"Antény a satelitní technika",text:"Prodej, montáž a servis antén i satelitů. Když obraz kostičkuje nebo program zmizí, Martin dohledá, kde se signál ztrácí, a opraví to.",pro:["Rodinné domy","Panelové domy"],poptat:"Antény a satelit"},
+    alarm:{kde:"Na obrázku: dveře a siréna na fasádě",titul:"Alarm a zabezpečovací technika",text:"Prodej a servis alarmů a zabezpečovací techniky. Ovládání u dveří, čidla v domě a siréna na fasádě.",pro:["Rodinné domy","Panelové domy"],poptat:"Alarm"},
+    kamery:{kde:"Na obrázku: kamera na rohu domu",titul:"Kamerové systémy",text:"Prodej a servis kamerových systémů. Kamera pohlídá vjezd, dvůr nebo vchod a záznam si prohlédnete, když potřebujete.",pro:["Rodinné domy","Vchody paneláků","SVJ"],poptat:"Kamery"},
+    sta:{kde:"Na obrázku: celý panelák, od střechy po byty",titul:"Rozvody STA pro paneláky",text:"Rekonstrukce a opravy společných televizních antén a rozvodů v panelových domech. O víkendu běží poruchová služba STA.",pro:["Panelové domy","SVJ","Správci domů"],poptat:"Rozvody STA pro paneláky"}
+  };
+  var scena=document.getElementById('scena');
+  var karta=document.getElementById('karta');
+  var tabs=[].slice.call(document.querySelectorAll('.prepinac [role=tab]'));
+  var auto=null;
+  function nastav(z,fokus){
+    var d=DATA[z]; if(!d) return;
+    scena.setAttribute('data-aktivni',z);
+    karta.setAttribute('data-z',z);
+    tabs.forEach(function(t){var on=t.dataset.z===z;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;if(on){karta.setAttribute('aria-labelledby',t.id);if(fokus)t.focus();}});
+    karta.querySelector('[data-k=kde]').textContent=d.kde;
+    karta.querySelector('[data-k=titul]').textContent=d.titul;
+    karta.querySelector('[data-k=text]').textContent=d.text;
+    karta.querySelector('[data-k=pro]').innerHTML=d.pro.map(function(p){return '<span>'+p+'</span>';}).join('');
+    karta.querySelector('[data-poptat]').setAttribute('data-poptat',d.poptat);
+    karta.classList.remove('zmena');void karta.offsetWidth;karta.classList.add('zmena');
+  }
+  function stopAuto(){if(auto){clearInterval(auto);auto=null;}}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){stopAuto();nastav(t.dataset.z);});
+    t.addEventListener('keydown',function(e){
+      var n=null;
+      if(e.key==='ArrowRight'||e.key==='ArrowDown')n=(i+1)%tabs.length;
+      if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=(i-1+tabs.length)%tabs.length;
+      if(e.key==='Home')n=0; if(e.key==='End')n=tabs.length-1;
+      if(n!==null){e.preventDefault();stopAuto();nastav(tabs[n].dataset.z,true);}
+    });
+  });
+  [].forEach.call(scena.querySelectorAll('.zona'),function(g){g.addEventListener('click',function(){stopAuto();nastav(g.dataset.z);});});
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    var poradi=['anteny','alarm','kamery','sta'],idx=0;
+    auto=setInterval(function(){idx=(idx+1)%poradi.length;nastav(poradi[idx]);},5000);
+    var pult=document.getElementById('prepinac');
+    pult.addEventListener('pointerdown',stopAuto);pult.addEventListener('focusin',stopAuto);
+  }
+
+  // Poptat – předvyplnění formuláře
+  var sel=document.getElementById('f-co');
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-poptat]'); if(!a) return;
+    e.preventDefault(); stopAuto();
+    var v=a.getAttribute('data-poptat');
+    for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===v){sel.selectedIndex=i;break;}}
+    var obj=document.getElementById('f-objekt');
+    if(v==='Rozvody STA pro paneláky'){obj.selectedIndex=2;}
+    sel.classList.remove('pre');void sel.offsetWidth;sel.classList.add('pre');
+    document.getElementById('poptavka').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    setTimeout(function(){document.getElementById('f-zprava').focus({preventScroll:true});},reduce?0:600);
+  });
+
+  // Formulář – nic neodesílá
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var h=document.getElementById('hlaska'); h.hidden=false; h.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+  });
+
+  // Kopírování
+  [].forEach.call(document.querySelectorAll('[data-kopir]'),function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-kopir');
+      function ok(){b.textContent='Zkopírováno';setTimeout(function(){b.textContent='Kopírovat';},1600);}
+      function vyber(){var a=b.previousElementSibling;var r=document.createRange();r.selectNodeContents(a);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+      try{navigator.clipboard.writeText(t).then(ok,vyber);}catch(err){vyber();}
+    });
+  });
+
+  // Otevřeno / zavřeno – jen ověřená doba Po–Pá 8–18, pražský čas
+  try{
+    var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var p={};parts.forEach(function(x){p[x.type]=x.value;});
+    var den=p.weekday, min=(parseInt(p.hour,10)%24)*60+parseInt(p.minute,10);
+    var vsedni=['Mon','Tue','Wed','Thu','Fri'].indexOf(den)>-1;
+    var stav=document.getElementById('stav'), s=stav.querySelector('span');
+    if(vsedni&&min>=480&&min<1080){stav.className='stav otevreno';s.textContent='Teď otevřeno · Po–Pá 8–18';}
+    else if(!vsedni){stav.className='stav porucha';s.textContent='Víkend · poruchová služba STA na 604 386 384';}
+    else{stav.className='stav';s.textContent=(min<480?'Teď zavřeno · otevíráme dnes v 8:00':(den==='Fri'?'Teď zavřeno · o víkendu poruchová služba STA':'Teď zavřeno · otevíráme zítra v 8:00'));}
+  }catch(err){}
+})();
+</script>
+</body>
+</html>

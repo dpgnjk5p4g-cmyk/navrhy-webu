@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Elektroslužby Morava</title>
+<meta name="description" content="Elektrikář a revize v Havířově (Šumbark): opravy a rekonstrukce domovních i průmyslových elektroinstalací, revize elektrických zařízení, hromosvody, nonstop pohotovost. Tel. 777 182 407.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;600;700&amp;family=Inclusive+Sans:wght@400;600;700&amp;display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Elektroslužby Morava",
+  "telephone": "+420777182407",
+  "email": "jaroslavduzi@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "01312707"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Nákupní 465/20",
+    "addressLocality": "Havířov-Šumbark",
+    "postalCode": "736 01",
+    "addressCountry": "CZ"
+  },
+  "areaServed": "Havířov a okolí"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/*
+  KONCEPT ROZLOŽENÍ – „revizní protokol na rozvaděči“
+  1) Banner návrhu → 2) lepkavá grafitová hlavička s telefonem
+  3) Hero: grafitová plocha s jemným vzorem el. schématu, přes ni světlá karta ve stylu revizního štítku
+  4) Průvodce „Co se u Vás děje?“ (výrazný prvek, JS) → 5) Služby s ikonami (papír)
+  6) Proč my (grafit, ověřené texty firmy) → 7) Realizace (místa na fotky) → 8) Jak probíhá zakázka (3 kroky)
+  9) Kde pracujeme → 10) Časté otázky → 11) Poptávka + kontakt (grafit) → patička; na mobilu pruh „Zavolat“ dole
+*/
+:root{
+  --graphite:#161B26;
+  --graphite-2:#1F2634;
+  --graphite-3:#2A3242;
+  --yellow:#FFCC1F;
+  --yellow-soft:#FFE68A;
+  --green:#1F7A4D;
+  --green-dark:#176040;
+  --green-tint:#E1EEE6;
+  --paper:#F4F2EA;
+  --paper-2:#EAE7DB;
+  --white:#FFFDF7;
+  --ink:#161B26;
+  --muted:#4A5262;
+  --on-dark:#F4F2EA;
+  --on-dark-muted:#BCC1CB;
+  --line:#D3CFC0;
+  --line-dark:#363F51;
+  --alert:#A3261C;
+  --alert-tint:#F8E4DF;
+  --trace:#2E3748;
+  --shadow:0 18px 40px -18px rgba(0,0,0,.55);
+  --f-head:"Antonio","Oswald","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --f-text:"Inclusive Sans","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --radius:6px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-text);font-size:17px;line-height:1.6}
+.page{overflow-x:clip;background:var(--graphite);color:var(--ink);padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){.page{padding-bottom:0}}
+h1,h2,h3{font-family:var(--f-head);font-weight:700;line-height:1.05;letter-spacing:.01em;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,6vw,3.2rem);text-transform:uppercase}
+h3{font-size:1.45rem;font-weight:600}
+p{margin:0 0 1em;max-width:65ch}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:3px}
+.light :focus-visible{outline-color:var(--green)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:72px}
+.dark{background:var(--graphite);color:var(--on-dark)}
+.light{background:var(--paper);color:var(--ink)}
+.alt{background:var(--paper-2);color:var(--ink)}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-head);font-weight:600;font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.dark .kicker{color:var(--yellow)}
+.kicker::before{content:"";width:22px;height:3px;background:currentColor}
+.lead{font-size:1.1rem;color:var(--muted);margin-top:14px}
+.dark .lead{color:var(--on-dark-muted)}
+.ukazka{display:inline-block;font-family:var(--f-text);font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.2;padding:2px 6px;border-radius:3px;background:var(--yellow-soft);color:var(--ink);vertical-align:middle;margin-left:4px;white-space:nowrap}
+
+/* banner */
+.demo{background:var(--yellow);color:var(--ink);font-size:.86rem;font-weight:600;text-align:center}
+.demo .wrap{padding-block:7px}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--graphite);color:var(--on-dark);border-bottom:1px solid var(--line-dark)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{flex:none}
+.brand span{min-width:0}
+.brand b{display:block;overflow:hidden;text-overflow:ellipsis;font-family:var(--f-head);font-size:1.3rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.brand small{display:block;font-size:.72rem;color:var(--on-dark-muted);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.nav{display:none;gap:22px;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--on-dark-muted)}
+.nav a:hover{color:var(--on-dark)}
+.hdr-tel{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--yellow);color:var(--ink);font-weight:700;padding:9px 12px;border-radius:var(--radius);white-space:nowrap;font-size:.95rem}
+.hdr-tel .t-full{display:none}
+@media (min-width:420px){.hdr-tel .t-full{display:inline}.hdr-tel .t-short{display:none}}
+@media (min-width:980px){.nav{display:flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:var(--radius);font-family:var(--f-text);font-weight:700;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.2}
+.btn-call{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
+.btn-call:hover{background:var(--yellow-soft)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--paper-2)}
+.dark .btn-ghost{color:var(--on-dark);border-color:var(--on-dark-muted)}
+.dark .btn-ghost:hover{background:var(--graphite-3)}
+.btn-green{background:var(--green);color:var(--white)}
+.btn-green:hover{background:var(--green-dark)}
+
+/* hero */
+.hero{position:relative;background:var(--graphite);color:var(--on-dark);isolation:isolate}
+.hero .schema{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero .wrap{padding-block:22px 34px;display:grid;gap:26px;align-items:center}
+.tag{background:var(--paper);color:var(--ink);border-radius:8px;box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid var(--line)}
+.tag-top{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--green);color:var(--white);padding:7px 16px;font-family:var(--f-head);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem}
+.tag-top .hole{width:14px;height:14px;border-radius:50%;background:var(--graphite);box-shadow:inset 0 0 0 3px var(--green-dark)}
+.tag-body{padding:18px 16px 18px}
+.tag h1{padding-right:78px;font-size:clamp(2.2rem,9.6vw,4.4rem);text-transform:uppercase;color:var(--ink)}
+.tag h1 span{display:block;color:var(--green)}
+.tag .sub{margin:12px 0 0;color:var(--muted);font-size:1rem}
+.fields{margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;border-top:1px dashed var(--line);font-size:.9rem}
+.fields div{padding:7px 0;border-bottom:1px dashed var(--line)}
+.fields div:nth-child(odd){padding-right:10px}
+.fields dt{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fields dd{margin:0;font-weight:600}
+.tag-phone{display:flex;align-items:baseline;gap:10px;margin-top:14px;font-family:var(--f-head);font-weight:700;font-size:2rem;letter-spacing:.03em;text-decoration:none;color:var(--ink)}
+.tag-phone small{font-family:var(--f-text);font-size:.78rem;font-weight:600;color:var(--green);letter-spacing:.06em;text-transform:uppercase}
+.tag-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.tag-actions .btn{flex:1 1 150px}
+.stamp{position:absolute;right:12px;top:48px;width:92px;height:92px;transform:rotate(-12deg);color:var(--green);opacity:.9;pointer-events:none}
+.hero-side{display:none}
+.hero-side h2{font-size:1.5rem;color:var(--yellow);text-transform:uppercase;margin-bottom:12px}
+.hero-side ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.hero-side li{display:flex;gap:12px;align-items:flex-start;background:rgba(22,27,38,.82);border:1px solid var(--line-dark);border-radius:var(--radius);padding:12px 14px;color:var(--on-dark)}
+.hero-side li svg{flex:none;color:var(--yellow)}
+@media (max-width:420px){.brand b{font-size:1.1rem}.brand small{display:none}.stamp{width:70px;height:70px;top:46px;right:10px}.tag-phone{font-size:1.8rem}}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);padding-block:64px 72px;gap:48px}
+  .tag-body{padding:30px 32px 30px}
+  .hero-side{display:block}
+  .stamp{width:130px;height:130px;right:28px;top:62px}
+  .tag h1{padding-right:140px}
+  .tag-phone{font-size:2.6rem}
+}
+
+/* wizard */
+.wiz{display:grid;gap:22px;margin-top:30px}
+.symptoms{align-self:start;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sym{display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;background:var(--white);color:var(--ink);border:2px solid var(--line);border-radius:var(--radius);padding:12px;font:inherit;font-size:.95rem;font-weight:600;line-height:1.25;cursor:pointer;min-height:96px}
+.sym svg{color:var(--green)}
+.sym:hover{border-color:var(--ink)}
+.sym[aria-pressed="true"]{background:var(--graphite);color:var(--on-dark);border-color:var(--graphite)}
+.sym[aria-pressed="true"] svg{color:var(--yellow)}
+.answer{background:var(--white);border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+.answer-head{background:var(--graphite);color:var(--on-dark);padding:14px 18px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.answer-head h3{color:var(--yellow);font-size:1.6rem;text-transform:uppercase}
+.answer-head span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted)}
+.answer-body{padding:18px;display:grid;gap:18px}
+.answer h4{margin:0 0 8px;font-family:var(--f-head);font-weight:600;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase}
+.now{background:var(--alert-tint);border-left:5px solid var(--alert);padding:12px 14px 12px 16px;border-radius:0 var(--radius) var(--radius) 0}
+.now h4{color:var(--alert)}
+.now ol{margin:0;padding-left:20px}
+.now li{margin-bottom:6px}
+.who{border-left:5px solid var(--green);padding:4px 0 4px 16px}
+.who h4{color:var(--green)}
+.who p{margin-bottom:.6em}
+.answer .tag-actions{margin-top:4px}
+.disclaimer{font-size:.85rem;color:var(--muted);margin:0}
+@media (min-width:900px){
+  .wiz{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}
+  .answer-body{grid-template-columns:1fr 1fr}
+  .answer-body .full{grid-column:1/-1}
+}
+
+/* services */
+.svc-grid{display:grid;gap:14px;margin-top:30px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:22px 20px;display:flex;flex-direction:column;gap:10px}
+.svc .ico{width:52px;height:52px;border-radius:var(--radius);background:var(--graphite);color:var(--yellow);display:grid;place-items:center}
+.svc p{margin:0;color:var(--muted)}
+.svc .price{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);font-weight:700;font-size:.92rem;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+.svc .price a{color:var(--green);font-weight:700}
+.svc.hl{border:2px solid var(--green)}
+.svc .badge{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--green);color:var(--white);padding:3px 8px;border-radius:3px}
+@media (min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* why */
+.why-grid{display:grid;gap:30px;margin-top:10px}
+.quote{margin:26px 0 0;border-left:4px solid var(--yellow);padding:4px 0 4px 18px;font-size:1.15rem;color:var(--on-dark)}
+.quote footer{font-size:.85rem;color:var(--on-dark-muted);margin-top:8px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.checks li{display:grid;grid-template-columns:34px 1fr;gap:12px;background:var(--graphite-2);border:1px solid var(--line-dark);border-radius:var(--radius);padding:14px}
+.checks b{display:block;color:var(--on-dark);font-size:1.02rem}
+.checks span{color:var(--on-dark-muted);font-size:.95rem}
+.checks svg{color:var(--yellow)}
+@media (min-width:900px){.why-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start}}
+
+/* gallery */
+.gal{display:grid;gap:12px;margin-top:28px;grid-template-columns:1fr 1fr}
+.ph{position:relative;aspect-ratio:4/3;border:2px dashed var(--muted);border-radius:8px;background:repeating-linear-gradient(135deg,var(--paper-2) 0 14px,var(--paper) 14px 28px);display:flex;flex-direction:column;justify-content:flex-end;padding:12px;gap:4px}
+.ph svg{position:absolute;top:10px;left:10px;width:24px;height:24px;color:var(--muted)}
+.ph b{font-size:.9rem}
+.ph span{font-size:.8rem;color:var(--muted);line-height:1.3}
+.ph.big{grid-column:1/-1;aspect-ratio:16/8}
+@media (min-width:900px){.gal{grid-template-columns:repeat(4,1fr)}.ph.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}}
+
+/* steps */
+.steps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{position:relative;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:20px 20px 20px 84px;min-height:96px}
+.steps li::before{counter-increment:s;content:"0" counter(s);position:absolute;left:18px;top:16px;font-family:var(--f-head);font-weight:700;font-size:2.6rem;line-height:1;color:var(--green)}
+.steps h3{margin-bottom:6px}
+.steps p{margin:0;color:var(--muted)}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* area */
+.area{display:grid;gap:24px;align-items:center}
+.area-map{background:var(--graphite);border-radius:8px;padding:18px;color:var(--on-dark)}
+.area-map figcaption{font-size:.85rem;color:var(--on-dark-muted);margin-top:8px}
+@media (min-width:900px){.area{grid-template-columns:1.1fr .9fr;gap:56px}}
+
+/* faq */
+.faq{margin-top:26px;display:grid;gap:10px;max-width:860px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--radius)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 48px 16px 18px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:var(--f-head);font-size:1.6rem;color:var(--green)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 16px;margin:0;color:var(--muted)}
+
+/* contact + form */
+.contact-grid{display:grid;gap:30px;margin-top:26px}
+.form{background:var(--paper);color:var(--ink);border-radius:8px;padding:22px 18px;display:grid;gap:14px}
+.form .row{display:grid;gap:14px}
+.form label{display:block;font-weight:700;font-size:.92rem;margin-bottom:5px}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--white);border:2px solid var(--line);border-radius:var(--radius);padding:11px 12px;min-height:48px}
+.form textarea{min-height:110px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--green);outline:3px solid var(--green);outline-offset:1px}
+.form .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.9rem}
+.form .chk input{width:22px;min-height:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--green)}
+.form-msg{display:none;background:var(--green-tint);border-left:5px solid var(--green);padding:12px 14px;border-radius:0 var(--radius) var(--radius) 0;font-weight:600}
+.form-msg.show{display:block}
+.cinfo{display:grid;gap:12px;align-content:start}
+.cinfo .ci{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;border-bottom:1px solid var(--line-dark);padding-bottom:12px}
+.cinfo .ci svg{color:var(--yellow);margin-top:2px}
+.cinfo dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted)}
+.cinfo dd{margin:0;font-size:1.05rem;font-weight:600;overflow-wrap:anywhere}
+.cinfo a{color:var(--on-dark)}
+.big-tel{font-family:var(--f-head);font-size:2.4rem;font-weight:700;color:var(--yellow)!important;text-decoration:none;letter-spacing:.03em}
+@media (min-width:640px){.form .row{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.contact-grid{grid-template-columns:.85fr 1.15fr;gap:56px}.form{padding:30px}}
+
+/* footer */
+.foot{background:var(--graphite);color:var(--on-dark-muted);font-size:.88rem;border-top:1px solid var(--line-dark)}
+.foot .wrap{padding-block:26px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--graphite);border-top:2px solid var(--yellow);padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1.5fr 1fr;gap:8px}
+.callbar .btn{min-height:50px;padding:8px 10px;font-size:.98rem}
+@media (min-width:900px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:no-preference){.answer-body{animation:fadeup .25s ease-out}@keyframes fadeup{from{transform:translateY(6px)}to{transform:none}}}
+</style>
+
+<div class="page">
+
+<div class="demo"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Elektroslužby Morava</div></div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Elektroslužby Morava – na začátek stránky">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="6" fill="#FFCC1F"/><path d="M19 4 9 19h7l-2 11 11-16h-7l1-10z" fill="#161B26"/></svg>
+      <span><b>Elektroslužby Morava</b><small>Elektrikář · revize · hromosvody</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#pruvodce">Co se děje?</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#proc">Proč my</a>
+      <a href="#postup">Jak to probíhá</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="hdr-tel" href="tel:+420777182407" aria-label="Zavolat 777&nbsp;182&nbsp;407">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span class="t-full">777&nbsp;182&nbsp;407</span><span class="t-short">Zavolat</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <svg class="schema" aria-hidden="true">
+    <defs>
+      <pattern id="sch" width="120" height="90" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="#2E3748" stroke-width="1.2">
+          <path d="M0 20h30m10 0h40m10 0h30M30 20v-6h10v12H30zM80 20l5-6 5 12 5-6"/>
+          <path d="M20 20v40h25m10 0h25v-40"/>
+          <path d="M45 52v16M55 52v16"/>
+          <path d="M80 60v20h40M0 80h20"/>
+          <circle cx="100" cy="80" r="5"/>
+          <path d="M97 77l6 6M103 77l-6 6"/>
+        </g>
+        <g fill="#3A4459"><circle cx="20" cy="20" r="2"/><circle cx="80" cy="60" r="2"/><circle cx="20" cy="60" r="2"/></g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#sch)"/>
+  </svg>
+  <div class="wrap">
+    <article class="tag light">
+      <div class="tag-top"><span>Elektroslužby Morava</span><span class="hole" aria-hidden="true"></span></div>
+      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="55" fill="none" stroke="currentColor" stroke-width="4"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path id="arc" d="M60 60m-49 0a49 49 0 1 1 98 0a49 49 0 1 1-98 0" fill="none"/>
+        <text font-family="Antonio, Arial Narrow, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.2" fill="currentColor"><textPath href="#arc">NONSTOP POHOTOVOST · HAVÍŘOV ·</textPath></text>
+        <path d="M64 34 48 62h11l-4 24 18-30H62l2-22z" fill="currentColor"/>
+      </svg>
+      <div class="tag-body">
+        <h1 id="hero-h">Elektrikář a revize <span>v Havířově</span></h1>
+        <p class="sub">Opravy a rekonstrukce domovních i průmyslových elektroinstalací, revize elektrických zařízení a hromosvody – od jednoho elektrikáře, i v nonstop pohotovosti.</p>
+        <dl class="fields">
+          <div><dt>Sídlo</dt><dd>Havířov-Šumbark</dd></div>
+          <div><dt>Pohotovost</dt><dd>Nonstop</dd></div>
+          <div><dt>Pro</dt><dd>Byty, domy, výrobu</dd></div>
+          <div><dt>Navíc</dt><dd>Revize i hromosvody</dd></div>
+        </dl>
+        <a class="tag-phone" href="tel:+420777182407">777&nbsp;182&nbsp;407 <small>volejte</small></a>
+        <div class="tag-actions">
+          <a class="btn btn-call" href="tel:+420777182407">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+            Zavolat elektrikáři</a>
+          <a class="btn btn-ghost" href="#pruvodce">Co se u Vás děje?</a>
+        </div>
+      </div>
+    </article>
+    <aside class="hero-side" aria-label="Rychlý přehled">
+      <h2>Volají nám, když…</h2>
+      <ul>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg><span>padá jistič nebo je půlka bytu bez proudu</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 4h10l4 4v12H5zM9 12l2 2 4-4"/></svg><span>prodáváte nebo pronajímáte a potřebujete revizi</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 21h16M7 21V10l5-5 5 5v11M12 5V2"/></svg><span>je potřeba hromosvod – nový, opravený nebo zkontrolovaný</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 20h18M5 20V9h6v11M13 20V5h6v15"/></svg><span>ve výrobě stojí stroj, čerpadlo nebo vypadla elektřina</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- PRŮVODCE -->
+<section class="band light" id="pruvodce" aria-labelledby="wiz-h">
+  <div class="wrap">
+    <span class="kicker">Rychlá orientace</span>
+    <h2 id="wiz-h">Co se u Vás děje?</h2>
+    <p class="lead">Vyberte, co právě řešíte. Ukážeme Vám, co udělat hned pro Vaši bezpečnost a která z našich služeb to vyřeší.</p>
+    <div class="wiz">
+      <div class="symptoms" role="group" aria-label="Vyberte situaci">
+        <button type="button" class="sym" id="sym-jistic" data-k="jistic" aria-pressed="true" aria-controls="wiz-answer">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 3h10v18H7zM12 7v5M10 15h4"/></svg>Padá jistič</button>
+        <button type="button" class="sym" id="sym-zasuvka" data-k="zasuvka" aria-pressed="false" aria-controls="wiz-answer">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 10v3M14.5 10v3M18 3l2-2M21 7h2M20 4l2-1" stroke="currentColor" stroke-width="2"/></svg>Jiskří nebo hřeje zásuvka</button>
+        <button type="button" class="sym" id="sym-revize" data-k="revize" aria-pressed="false" aria-controls="wiz-answer">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 3h10l4 4v14H5zM9 13l2 2 4-4"/></svg>Potřebuji revizi (prodej, pronájem)</button>
+        <button type="button" class="sym" id="sym-hromosvod" data-k="hromosvod" aria-pressed="false" aria-controls="wiz-answer">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 21h16M7 21V10l5-5 5 5v11M12 5V1"/></svg>Hromosvod po bouřce / kontrola</button>
+        <button type="button" class="sym" id="sym-rekonstrukce" data-k="rekonstrukce" aria-pressed="false" aria-controls="wiz-answer">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 11 12 4l9 7M6 9v11h12V9M10 20v-6h4v6"/></svg>Rekonstrukce bytu či domu</button>
+        <button type="button" class="sym" id="sym-vyroba" data-k="vyroba" aria-pressed="false" aria-controls="wiz-answer">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>Stojí stroj ve výrobě</button>
+      </div>
+      <div class="answer" id="wiz-answer" aria-live="polite">
+        <div class="answer-head"><h3 id="ans-title">Padá jistič</h3><span>Průvodce</span></div>
+        <div class="answer-body" id="ans-body"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY -->
+<section class="band alt" id="sluzby" aria-labelledby="svc-h">
+  <div class="wrap">
+    <span class="kicker">Služby</span>
+    <h2 id="svc-h">Elektro od zásuvky po hromosvod</h2>
+    <p class="lead">Elektroinstalace, elektrotechnika a ochrana před bleskem – pro domácnosti i pro průmysl a výrobu.</p>
+    <div class="svc-grid">
+      <article class="svc hl">
+        <span class="badge">Nonstop</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <h3>Poruchy a drobné opravy</h3>
+        <p>Domovní či bytová elektroinstalace – nefunkční zásuvky, osvětlení, padající jističe. V nonstop pohotovosti.</p>
+        <div class="price">Cena na dotaz <a href="tel:+420777182407">Zavolat</a></div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 11 12 4l9 7M6 9v11h12V9M10 20v-6h4v6"/></svg></div>
+        <h3>Rekonstrukce a novostavby</h3>
+        <p>Kompletní rekonstrukce, přestavba i novostavba – nebo napojení nové kuchyně či koupelny na stávající rozvody, pokud je to bezpečné.</p>
+        <div class="price">Cena na dotaz <a href="#poptavka">Poptat</a></div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 3h10l4 4v14H5zM9 13l2 2 4-4"/></svg></div>
+        <h3>Revize elektrických zařízení</h3>
+        <p>Revizní zpráva k elektroinstalaci a elektrickým zařízením – a když revize najde závady, rovnou je opravíme.</p>
+        <div class="price">Cena na dotaz <a href="#poptavka">Poptat</a></div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 21h16M7 21V10l5-5 5 5v11M12 5V1"/><path fill="currentColor" d="M13 9l-3 5h2l-1 4 3-5h-2z"/></svg></div>
+        <h3>Hromosvody a ochrana před bleskem</h3>
+        <p>Výroba a montáž hromosvodů a ochrana před bleskem – v jedné firmě s revizemi elektrických zařízení.</p>
+        <div class="price">Cena na dotaz <a href="#poptavka">Poptat</a></div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Průmysl a výroba</h3>
+        <p>Poruchy strojů, čerpadel a zařízení, náhlý výpadek elektřiny, rozběh výkonných elektromotorů.</p>
+        <div class="price">Cena na dotaz <a href="tel:+420777182407">Zavolat</a></div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 3h16v18H4zM8 7h8M8 11h3M13 11h3M8 15h3M13 15h3"/></svg></div>
+        <h3>Rozvaděče a elektrifikace hal</h3>
+        <p>Výroba a montáž rozvaděčů, celé elektrifikace výrobních hal a návrh i realizace projektu podle potřeb zákazníka.</p>
+        <div class="price">Cena na dotaz <a href="#poptavka">Poptat</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROČ MY -->
+<section class="band dark" id="proc" aria-labelledby="why-h">
+  <div class="wrap why-grid">
+    <div>
+      <span class="kicker">Proč my</span>
+      <h2 id="why-h">Odborně, nebo vůbec</h2>
+      <p class="lead">Práci, která by odporovala platné legislativě ČR a technickým normám, odmítáme. Chráníme tím nejen sebe, ale především Vás, Vaše zdraví a majetek.</p>
+      <blockquote class="quote">
+        „Lidé nám často volají, že by rádi rekonstruovali jen část domu či bytu, nejčastěji kuchyň nebo koupelnu. Pokud je to možné, rádi vyhovíme. Je-li situace nebezpečná, navrhneme komplexní řešení včetně revizní zprávy.“
+        <footer>— z původního webu Elektroslužby Morava</footer>
+      </blockquote>
+    </div>
+    <ul class="checks">
+      <li><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 12l5 5L20 6"/></svg><div><b>Revize i hromosvody pod jednou střechou</b><span>Opravu, revizi i opravu porevizních závad zajistí jeden dodavatel – nemusíte shánět dalšího.</span></div></li>
+      <li><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 12l5 5L20 6"/></svg><div><b>Nonstop pohotovost</b><span>Když jde o bezpečnost nebo stojí provoz, zavolejte na 777&nbsp;182&nbsp;407.</span></div></li>
+      <li><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 12l5 5L20 6"/></svg><div><b>Kvalifikace doložená papírem</b><span>Práci vykonává kvalifikovaná osoba s platným osvědčením; firma uvádí oprávnění technické inspekce ČR. Doklady na přání předložíme.</span></div></li>
+      <li><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 12l5 5L20 6"/></svg><div><b>Zkušenosti z výrobních podniků</b><span>Z mnoha výrobních a dalších podniků v severomoravském kraji – od poruch strojů po elektrifikace hal.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- REALIZACE -->
+<section class="band light" id="realizace" aria-labelledby="gal-h">
+  <div class="wrap">
+    <span class="kicker">Realizace</span>
+    <h2 id="gal-h">Ukázky naší práce</h2>
+    <p class="lead">Zde budou Vaše vlastní fotky z akcí – nic nepřesvědčí lépe než čistě zapojený rozvaděč.</p>
+    <div class="gal">
+      <div class="ph big"><svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Sem přijde Vaše fotka</b><span>Hotový domovní rozvaděč po rekonstrukci</span></div>
+      <div class="ph"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Sem přijde Vaše fotka</b><span>Hromosvod na rodinném domě</span></div>
+      <div class="ph"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Sem přijde Vaše fotka</b><span>Průmyslový rozvaděč nebo výrobní hala</span></div>
+      <div class="ph"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Sem přijde Vaše fotka</b><span>Nová elektroinstalace v kuchyni či koupelně</span></div>
+      <div class="ph"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Sem přijde Vaše fotka</b><span>Měření při revizi (přístroj v akci)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTUP -->
+<section class="band alt" id="postup" aria-labelledby="steps-h">
+  <div class="wrap">
+    <span class="kicker">Jak probíhá zakázka</span>
+    <h2 id="steps-h">Od telefonu k revizní zprávě</h2>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo napíšete</h3><p>Popíšete, co se děje – u poruchy telefonicky na 777&nbsp;182&nbsp;407, u rekonstrukce či revize klidně formulářem nebo e-mailem.</p></li>
+      <li><h3>Prohlídka a návrh řešení</h3><p>Posoudíme stav instalace. Je-li napojení na stávající rozvody bezpečné, rádi vyhovíme; pokud ne, navrhneme komplexní řešení.</p></li>
+      <li><h3>Práce a doklad</h3><p>Provedeme opravu, montáž nebo rekonstrukci podle norem a tam, kde je potřeba, ji doložíme revizní zprávou.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- OBLAST -->
+<section class="band light" id="oblast" aria-labelledby="area-h">
+  <div class="wrap area">
+    <div>
+      <span class="kicker">Kde pracujeme</span>
+      <h2 id="area-h">Havířov a okolí</h2>
+      <p class="lead">Sídlíme na Šumbarku, v ulici Nákupní. Jezdíme do domácností v Havířově a okolí a za průmyslovými zákazníky v severomoravském kraji. <span class="ukazka">ukázkový text</span></p>
+      <p>Nejste si jistí, jestli k Vám dojedeme? Stačí zavolat na <a href="tel:+420777182407"><b>777&nbsp;182&nbsp;407</b></a>.</p>
+      <a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=N%C3%A1kupn%C3%AD%20465%2F20%2C%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Sídlo na Mapy.cz</a>
+    </div>
+    <figure class="area-map" style="margin:0">
+      <svg viewBox="0 0 320 220" role="img" aria-label="Schematická mapka: Havířov-Šumbark a okolí">
+        <rect width="320" height="220" fill="#1F2634" rx="6"/>
+        <g fill="none" stroke="#363F51" stroke-width="1"><path d="M0 40h320M0 90h320M0 140h320M0 190h320M50 0v220M110 0v220M170 0v220M230 0v220M290 0v220"/></g>
+        <circle cx="160" cy="112" r="84" fill="none" stroke="#FFCC1F" stroke-width="1.5" stroke-dasharray="5 6"/>
+        <circle cx="160" cy="112" r="44" fill="rgba(255,204,31,.12)" stroke="#FFCC1F" stroke-width="2"/>
+        <path d="M160 92c-8 0-14 6-14 14 0 11 14 24 14 24s14-13 14-24c0-8-6-14-14-14z" fill="#FFCC1F"/>
+        <circle cx="160" cy="106" r="5" fill="#161B26"/>
+        <rect x="96" y="166" width="128" height="22" rx="4" fill="#161B26"/><text x="160" y="182" text-anchor="middle" fill="#F4F2EA" font-family="Inclusive Sans, Arial, sans-serif" font-size="13" font-weight="700">Havířov-Šumbark</text>
+        <text x="160" y="212" text-anchor="middle" fill="#BCC1CB" font-family="Inclusive Sans, Arial, sans-serif" font-size="11">a okolí</text>
+      </svg>
+      <figcaption>Schéma, nikoli přesná mapa – přesné místo najdete na Mapy.cz.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="band alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <span class="kicker">Časté otázky</span>
+    <h2 id="faq-h">Na co se lidé ptají</h2>
+    <div class="faq">
+      <details open>
+        <summary>Kolik bude stát oprava nebo revize?</summary>
+        <p>Záleží na rozsahu a stavu instalace, proto ceny paušálně neuvádíme. Zavolejte nebo vyplňte poptávku – po popisu situace nebo prohlídce Vám řekneme konkrétní částku.</p>
+      </details>
+      <details>
+        <summary>Potřebuji revizi při prodeji nebo pronájmu bytu?</summary>
+        <p>Revizní zprávu elektroinstalace kupující, nájemci, banky i pojišťovny často požadují a dokládá bezpečný stav. Pokud revize najde závady, můžeme je rovnou opravit a stav doložit.</p>
+      </details>
+      <details>
+        <summary>Napojíte jen novou kuchyň nebo koupelnu na staré rozvody?</summary>
+        <p>Pokud je to možné, rádi vyhovíme. Když stávající elektroinstalace už nevyhovuje a napojení by bylo nebezpečné, navrhneme částečnou nebo komplexní rekonstrukci včetně revizní zprávy.</p>
+      </details>
+      <details>
+        <summary>Můžu si drobnou opravu udělat sám?</summary>
+        <p>Práce na elektroinstalaci smí podle českých předpisů provádět jen osoba s odpovídající elektrotechnickou kvalifikací. Výměnu žárovky zvládnete, zásah do zásuvky, vypínače nebo rozvaděče přenechte elektrikáři.</p>
+      </details>
+      <details>
+        <summary>Děláte i pro firmy a výrobu?</summary>
+        <p>Ano. Řešíme poruchy strojů, čerpadel a zařízení, náhlé výpadky elektřiny, výrobu a montáž rozvaděčů i celé elektrifikace výrobních hal.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="band dark" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap">
+    <span class="kicker">Kontakt a poptávka</span>
+    <h2 id="kontakt-h">Zavolejte, nebo nám napište</h2>
+    <div class="contact-grid">
+      <dl class="cinfo">
+        <div class="ci"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><div><dt>Telefon – nonstop pohotovost</dt><dd><a class="big-tel" href="tel:+420777182407">777&nbsp;182&nbsp;407</a></dd></div></div>
+        <div class="ci"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg><div><dt>E-mail</dt><dd><a href="mailto:jaroslavduzi@seznam.cz">jaroslavduzi@seznam.cz</a></dd></div></div>
+        <div class="ci"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5" fill="currentColor"/></svg><div><dt>Adresa</dt><dd>Nákupní 465/20, 736 01 Havířov-Šumbark<br><a href="https://mapy.cz/zakladni?q=N%C3%A1kupn%C3%AD%20465%2F20%2C%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Otevřít na Mapy.cz</a></dd></div></div>
+        <div class="ci"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2"/></svg><div><dt>Kdy</dt><dd>Nonstop pohotovost na telefonu, ostatní práce po telefonické domluvě</dd></div></div>
+        <div class="ci"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 3h14v18H5zM9 8h6M9 12h6M9 16h3"/></svg><div><dt>Provozovatel</dt><dd>Jaroslav Duží · IČO 01312707</dd></div></div>
+      </dl>
+
+      <form class="form" id="poptavka" novalidate>
+        <h3>Poptávka</h3>
+        <div class="row">
+          <div><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required></div>
+          <div><label for="f-telefon">Telefon</label><input id="f-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div class="row">
+          <div><label for="f-obec">Obec / místo zakázky</label><input id="f-obec" name="obec" type="text" placeholder="např. Havířov-Podlesí"></div>
+          <div><label for="f-typ">Co potřebujete</label>
+            <select id="f-typ" name="typ">
+              <option value="porucha">Porucha, oprava</option>
+              <option value="revize">Revize elektroinstalace</option>
+              <option value="hromosvod">Hromosvod</option>
+              <option value="rekonstrukce">Rekonstrukce / novostavba</option>
+              <option value="prumysl">Průmysl a výroba</option>
+              <option value="jine">Něco jiného</option>
+            </select></div>
+        </div>
+        <div><label for="f-zprava">Popis situace</label><textarea id="f-zprava" name="zprava" placeholder="Co se děje, jak velký je byt / dům / provoz, kdy se Vám to hodí…"></textarea></div>
+        <label class="chk" for="f-souhlas"><input id="f-souhlas" name="souhlas" type="checkbox" required> Souhlasím se zpracováním údajů pro vyřízení poptávky.</label>
+        <button class="btn btn-green" id="f-odeslat" type="submit">Odeslat poptávku</button>
+        <p class="form-msg" id="f-msg" role="status" aria-live="polite"></p>
+        <p class="disclaimer">Spěchá to? Volejte rovnou <a href="tel:+420777182407">777&nbsp;182&nbsp;407</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Elektroslužby Morava · Jaroslav Duží · IČO 01312707 · Nákupní 465/20, Havířov-Šumbark</span>
+    <span>Nezávazný návrh webu, 2026</span>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Rychlý kontakt">
+  <a class="btn btn-call" href="tel:+420777182407"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 777&nbsp;182&nbsp;407</a>
+  <a class="btn btn-ghost" href="#poptavka" style="background:var(--paper)">Poptat</a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var DATA={
+    jistic:{t:"Padá jistič",
+      now:["Jistič opakovaně nenahazujte silou – vypíná, protože ho k tomu něco nutí.","Vytáhněte ze zásuvek spotřebiče na daném okruhu a zkuste jistič zapnout bez nich.","Pokud padá i bez spotřebičů, nebo vypíná proudový chránič, nechte okruh vypnutý a zavolejte elektrikáře."],
+      who:"Poruchy a drobné opravy domovní elektroinstalace",
+      txt:"Najdeme příčinu – vadný spotřebič, poškozený kabel, přetížený okruh nebo vlhkost – a opravíme ji. Pokud je instalace už nevyhovující, navrhneme částečnou rekonstrukci."},
+    zasuvka:{t:"Jiskří nebo hřeje zásuvka",
+      now:["Na zásuvku ani zapojený spotřebič nesahejte.","Vypněte příslušný jistič, případně hlavní vypínač v rozvaděči.","Je-li cítit spálenina nebo jde kouř, odejděte do bezpečí a volejte hasiče 150 (nebo 112). Elektřinu pod proudem nikdy nehaste vodou."],
+      who:"Nonstop pohotovost a opravy elektroinstalace",
+      txt:"Přehřátá nebo jiskřící zásuvka je častým zdrojem požáru. Vyměníme ji, zkontrolujeme spoje i přívod a posoudíme, zda je okruh dimenzovaný na to, co do něj zapojujete."},
+    revize:{t:"Potřebuji revizi",
+      now:["Připravte, co máte: předchozí revizní zprávu, případně projekt elektroinstalace.","Zajistěte přístup k rozvaděči a ke všem místnostem.","Domluvte termín s předstihem před podpisem smlouvy či předáním bytu."],
+      who:"Revize elektrických zařízení a opravy porevizních závad",
+      txt:"Vystavíme revizní zprávu. Když revize najde závady, opravíme je rovnou – nemusíte shánět dalšího elektrikáře."},
+    hromosvod:{t:"Hromosvod po bouřce",
+      now:["Za bouřky se svodů hromosvodu nedotýkejte a nestůjte u nich.","Po bouřce zkontrolujte jen ze země, zda nejsou svody utržené, ohnuté nebo uvolněné. Na střechu nelezte.","Pokud po bouřce nefunguje část elektroinstalace nebo je cítit spálenina, vypněte hlavní vypínač a zavolejte."],
+      who:"Hromosvody a ochrana před bleskem",
+      txt:"Vyrábíme a montujeme hromosvody a provádíme revize elektrických zařízení. Kontrolu domluvíte jedním telefonátem."},
+    rekonstrukce:{t:"Rekonstrukce bytu či domu",
+      now:["Elektriku řešte na začátku – dřív, než se začne bourat a obkládat.","Do zdí nevrtejte naslepo; vedení kabelů bývá i mimo svislé a vodorovné linky.","Sepište si, kde chcete zásuvky, světla a spotřebiče (indukce, trouba, pračka)."],
+      who:"Rekonstrukce, přestavby a novostavby",
+      txt:"Nová kuchyň nebo koupelna? Pokud je to bezpečné, napojíme ji na stávající rozvody. Když je stará instalace nevyhovující, navrhneme komplexní řešení včetně revizní zprávy."},
+    vyroba:{t:"Stojí stroj ve výrobě",
+      now:["Stroj či zařízení odpojte od napájení a zajistěte proti nechtěnému zapnutí.","Do rozvaděče nesahejte, pokud k tomu nemáte kvalifikaci.","Poznamenejte si, co se stalo těsně před poruchou (hlášení, zvuk, zápach) – zrychlí to diagnostiku."],
+      who:"Průmysl a výroba",
+      txt:"Pomůžeme při náhlém výpadku elektrické energie, poruše stroje, čerpadla či jiného zařízení. Řešíme i rozvaděče, elektrifikace hal a rozběh výkonných elektromotorů."}
+  };
+  var btns=document.querySelectorAll(".sym");
+  var title=document.getElementById("ans-title");
+  var body=document.getElementById("ans-body");
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+  function show(k){
+    var d=DATA[k]; if(!d) return;
+    for(var i=0;i<btns.length;i++){btns[i].setAttribute("aria-pressed",btns[i].getAttribute("data-k")===k?"true":"false")}
+    title.textContent=d.t;
+    var li=d.now.map(function(x){return "<li>"+esc(x)+"</li>"}).join("");
+    body.innerHTML='<div class="now"><h4>Co udělat hned</h4><ol>'+li+'</ol></div>'+
+      '<div class="who"><h4>Kdo to vyřeší</h4><p><b>'+esc(d.who)+'</b></p><p>'+esc(d.txt)+'</p></div>'+
+      '<div class="full"><div class="tag-actions"><a class="btn btn-call" href="tel:+420777182407">Zavolat 777&nbsp;182&nbsp;407</a><a class="btn btn-ghost" href="#poptavka" data-typ="'+k+'">Poptat písemně</a></div>'+
+      '<p class="disclaimer" style="margin-top:10px">Obecné bezpečnostní rady, nenahrazují posouzení elektrikářem. Při ohrožení života volejte 112.</p></div>';
+    var link=body.querySelector("[data-typ]");
+    link.addEventListener("click",function(){
+      var map={jistic:"porucha",zasuvka:"porucha",revize:"revize",hromosvod:"hromosvod",rekonstrukce:"rekonstrukce",vyroba:"prumysl"};
+      var sel=document.getElementById("f-typ"); if(sel) sel.value=map[k]||"jine";
+    });
+  }
+  for(var i=0;i<btns.length;i++){btns[i].addEventListener("click",function(){show(this.getAttribute("data-k"))})}
+  show("jistic");
+
+  var form=document.getElementById("poptavka");
+  var msg=document.getElementById("f-msg");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var ok=document.getElementById("f-jmeno").value.trim()&&document.getElementById("f-telefon").value.trim()&&document.getElementById("f-souhlas").checked;
+    msg.textContent=ok?"Děkujeme! Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Na hotovém webu by poptávka dorazila e-mailem panu Dužímu.":"Vyplňte prosím jméno, telefon a souhlas. (Jde o ukázku formuláře v návrhu – nic se neodesílá.)";
+    msg.classList.add("show");
+  });
+})();
+</script>
+</body>
+</html>

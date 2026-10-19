@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Elektrikář Havířov a Těrlicko – Roman Unucka – elektro | návrh webu</title>
+<meta name="description" content="Elektrikář pro Havířov, Těrlicko, Karvinou, Frýdek-Místek a Ostravu: elektro pohotovost 24/7, elektroinstalace, hromosvody, kamerové a zvonkové systémy. Roman Unucka – elektro. Návrh webu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Albert+Sans:wght@400;500;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Roman Unucka – elektro",
+  "founder": {"@type": "Person", "name": "Roman Unucka"},
+  "telephone": "+420735120323",
+  "email": "romanunucka@gmail.com",
+  "taxID": "08031916",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Májová 401/34",
+    "addressLocality": "Horní Těrlicko",
+    "postalCode": "735 42",
+    "addressCountry": "CZ"
+  },
+  "openingHours": "Mo-Su 08:00-22:00",
+  "areaServed": ["Havířov", "Těrlicko", "Karviná", "Frýdek-Místek", "Ostrava", "Český Těšín", "Orlová", "Bohumín", "Třinec", "Petřvald"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Layout: technické schéma – noční indigová hero plocha s vodičem, světlé pracovní sekce, jantar jen na výzvy k akci; centrem je mapa oblasti s přepínačem */
+:root{
+  --night:#1E1B3A;
+  --night-2:#2A2650;
+  --volt:#3D5AFE;
+  --volt-soft:#9AA8FF;
+  --paper:#F5F6FB;
+  --amber:#FFB300;
+  --ink:#16142B;
+  --muted:#4E4B66;
+  --rule:#D9DBEA;
+  --white:#FFFFFF;
+  --on-night:#E7E8F6;
+  --on-night-muted:#B9BAD6;
+  --display:"Unbounded", "Arial Black", system-ui, sans-serif;
+  --sans:"Albert Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r:10px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);-webkit-text-size-adjust:100%}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3.6vw,2.6rem);line-height:1.12;font-weight:700}
+h3{font-size:1.02rem;line-height:1.3;font-weight:700;letter-spacing:-.005em}
+p{margin:0}
+a{color:var(--volt)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.eyebrow{font:700 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--volt)}
+.tag{display:inline-block;font:700 .66rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px dashed currentColor;border-radius:3px;padding:.3em .45em;vertical-align:middle;margin-left:.35em;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:.8em 1.3em;border-radius:var(--r);font:800 1.02rem/1.1 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{box-shadow:0 6px 20px rgba(255,179,0,.35)}
+.btn-volt{background:var(--volt);color:var(--white)}
+.btn-line{background:transparent;color:var(--on-night);border-color:rgba(231,232,246,.5)}
+.btn-line-dark{background:transparent;color:var(--ink);border-color:var(--ink)}
+
+.demo{background:var(--amber);color:var(--ink);font:600 .82rem/1.35 var(--sans);text-align:center;padding-block:.5em}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--night);border-bottom:1px solid rgba(255,255,255,.08)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none}
+.logo svg{width:30px;height:30px;flex:none}
+.logo b{display:block;font:700 .95rem/1.1 var(--display);letter-spacing:-.01em}
+.logo small{display:block;font:500 .72rem/1.2 var(--sans);color:var(--on-night-muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+.top nav{display:none;gap:22px}
+.top nav a{color:var(--on-night);text-decoration:none;font-weight:500;font-size:.95rem}
+.top nav a:hover{color:var(--amber)}
+.tel-top{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--ink);font:800 1rem/1 var(--sans);padding:.72em .9em;border-radius:var(--r);text-decoration:none;white-space:nowrap}
+.tel-top svg{width:18px;height:18px}
+@media (min-width:960px){.top nav{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--night);color:var(--on-night);padding-block:26px 40px}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(154,168,255,.16) 1px,transparent 1.2px);background-size:22px 22px;pointer-events:none}
+.wire{position:absolute;right:-40px;top:0;width:620px;height:100%;pointer-events:none;z-index:1}
+.hero .wrap{position:relative;z-index:2}
+.who{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .9rem/1.3 var(--sans);color:var(--on-night-muted);margin-bottom:14px}
+.who b{color:var(--white)}
+.hero h1{font-size:clamp(2.3rem,9.4vw,6.2rem);line-height:.98;font-weight:800;color:var(--white);max-width:11ch}
+.hero h1 .v{color:var(--amber)}
+.bolt{display:none;width:.55em;height:.8em;margin-left:.15em;vertical-align:-.05em}
+@media (max-width:520px){.bolt{display:inline-block}}
+.hero .area-line{margin-top:14px;font:600 clamp(1.02rem,2.4vw,1.35rem)/1.35 var(--sans);color:var(--on-night)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font:600 .92rem/1.35 var(--sans);color:var(--on-night)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(255,179,0,.2);flex:none}
+.hero-facts{display:grid;gap:10px;margin-top:28px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:860px}
+.hero-facts div{border-left:3px solid var(--volt);padding:4px 0 4px 12px}
+.hero-facts b{display:block;font:700 1.15rem/1.2 var(--display);color:var(--white)}
+.hero-facts span{font-size:.9rem;color:var(--on-night-muted)}
+@media (max-width:520px){.hero .ctas{display:grid}.hero .ctas .btn{width:100%}.wire{display:none}}
+@media (min-width:960px){.hero{padding-block:64px 72px}}
+
+section{padding-block:64px}
+.sec-head{display:grid;gap:12px;margin-bottom:30px;max-width:760px}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+
+/* mapa + přepínač */
+.mapsec{background:var(--white);border-bottom:1px solid var(--rule)}
+.map-grid{display:grid;gap:26px}
+@media (min-width:940px){.map-grid{grid-template-columns:1.05fr 1fr;gap:48px;align-items:start}}
+.mapbox{background:var(--night);border-radius:14px;padding:10px;position:relative;overflow:hidden}
+.mapbox svg{display:block;width:100%;height:auto}
+.maplegend{display:flex;flex-wrap:wrap;gap:6px 16px;padding:6px 8px 4px;font:500 .82rem/1.3 var(--sans);color:var(--on-night-muted)}
+.maplegend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.need-q{font:700 1.15rem/1.3 var(--display);margin-bottom:12px}
+.needs{display:flex;flex-wrap:wrap;gap:8px}
+.needs button{min-height:46px;padding:.55em 1em;border-radius:40px;border:1.5px solid var(--night);background:var(--white);color:var(--ink);font:700 .95rem/1.1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.needs button svg{width:18px;height:18px}
+.needs button[aria-pressed=true]{background:var(--night);color:var(--white)}
+.needs button.sos[aria-pressed=true]{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.answer{margin-top:20px;border-radius:14px;background:var(--paper);border:1px solid var(--rule);padding:22px;display:grid;gap:14px}
+.answer .lbl{font:700 .74rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--volt)}
+.answer p{font:500 1.18rem/1.45 var(--sans);color:var(--ink)}
+.answer .price{font:700 .95rem/1.4 var(--sans);color:var(--muted)}
+.answer .num{font-size:.9rem;color:var(--muted)}
+.answer .num b{color:var(--ink);user-select:all}
+@keyframes flow{to{stroke-dashoffset:-40}}
+.link{stroke-dasharray:6 8;animation:flow 1.6s linear infinite}
+
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.svc article{background:var(--white);border:1px solid var(--rule);border-radius:var(--r);padding:20px;display:grid;grid-template-columns:42px 1fr;gap:6px 14px;align-content:start}
+.svc .ic{grid-row:span 2;width:42px;height:42px;border-radius:9px;background:var(--night);display:grid;place-items:center}
+.svc .ic svg{width:24px;height:24px;color:var(--amber)}
+.svc p{color:var(--muted);font-size:.97rem}
+.more{margin-top:18px;color:var(--muted);font-size:.97rem;max-width:80ch}
+.more b{color:var(--ink)}
+
+/* ceník */
+.pricesec{background:var(--night);color:var(--on-night)}
+.pricesec h2{color:var(--white)}
+.pricesec .eyebrow{color:var(--amber)}
+.pricesec .sec-head p{color:var(--on-night-muted)}
+.ptable{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ptable th,.ptable td{text-align:left;padding:14px 0;border-bottom:1px solid rgba(231,232,246,.16);vertical-align:top}
+.ptable td:last-child{text-align:right;font:700 1.05rem/1.3 var(--sans);color:var(--white);white-space:nowrap;padding-left:14px}
+.ptable small{display:block;color:var(--on-night-muted);font-size:.85rem}
+.ptable tr.hl td:last-child{color:var(--amber)}
+.pnotes{margin-top:18px;display:grid;gap:6px;color:var(--on-night-muted);font-size:.93rem}
+.ptwo{display:grid;gap:30px}
+@media (min-width:900px){.ptwo{grid-template-columns:1fr 1fr;gap:56px}}
+.amberbox{background:var(--amber);color:var(--ink);border-radius:14px;padding:24px;display:grid;gap:12px;align-content:start}
+.amberbox h3{font-size:1.25rem}
+.amberbox .big{font:800 clamp(2.2rem,6vw,3.2rem)/1 var(--display);letter-spacing:-.03em}
+.amberbox p{font-size:1rem}
+.amberbox .btn{background:var(--night);color:var(--white)}
+
+/* postup */
+.how{margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+@media (min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
+.how li{list-style:none;background:var(--white);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:grid;gap:8px;align-content:start}
+.how li::before{counter-increment:s;content:counter(s);font:800 1.4rem/1 var(--display);color:var(--volt)}
+.how p{color:var(--muted)}
+
+/* obce */
+.towns{display:flex;flex-wrap:wrap;gap:8px}
+.towns span{background:var(--white);border:1px solid var(--rule);border-radius:40px;padding:.45em 1em;font-weight:600}
+.towns span.home{background:var(--night);color:var(--white);border-color:var(--night)}
+
+/* faq */
+.faq{border-top:2px solid var(--ink);max-width:860px}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;position:relative;font:700 1.05rem/1.35 var(--sans)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:12px;font:700 1.6rem/1 var(--display);color:var(--volt)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 18px;color:var(--muted);max-width:68ch}
+
+/* kontakt */
+.contact{background:var(--white);border-top:1px solid var(--rule)}
+.c-grid{display:grid;gap:32px}
+@media (min-width:900px){.c-grid{grid-template-columns:1fr 1fr;gap:56px}}
+.c-list{margin:22px 0 0;border-top:2px solid var(--ink)}
+.c-list div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.c-list dt{font:700 .8rem/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding-top:2px}
+.c-list dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.c-list a{font-weight:700}
+form.ask{display:grid;gap:14px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:22px}
+form.ask label{display:grid;gap:6px;font-weight:700;font-size:.92rem}
+form.ask input,form.ask select,form.ask textarea{font:400 1rem/1.4 var(--sans);color:var(--ink);background:var(--white);border:1px solid #BFC2D9;border-radius:8px;padding:12px;width:100%}
+form.ask textarea{min-height:100px;resize:vertical}
+form.ask .hint{font-size:.85rem;color:var(--muted);font-weight:400}
+
+footer{background:var(--night);color:var(--on-night-muted);padding-block:30px 110px;font-size:.9rem}
+footer .wrap{display:grid;gap:6px}
+footer b{color:var(--white)}
+@media (min-width:960px){footer{padding-block:30px}}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.35fr 1fr;gap:8px;background:var(--night);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));box-shadow:0 -6px 18px rgba(0,0,0,.25)}
+.sticky .btn{min-height:50px;padding:.6em .5em}
+@media (min-width:960px){.sticky{display:none}}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap">Nezávazný návrh webu – <strong>není to oficiální stránka firmy Roman Unucka – elektro</strong></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Roman Unucka – elektro, úvod">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#3D5AFE"/><path d="M18 4 9 18h6l-2 10 10-15h-6z" fill="#FFB300"/></svg>
+      <span><b>Unucka elektro</b><small>Roman Unucka · Těrlicko</small></span>
+    </a>
+    <nav aria-label="Hlavní">
+      <a href="#oblast">Co potřebujete?</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-top" href="tel:+420735120323"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>735 120 323</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <svg class="wire" viewBox="0 0 620 560" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+    <path d="M620 70 H470 Q440 70 440 100 V230 Q440 260 410 260 H330" fill="none" stroke="#3D5AFE" stroke-width="3"/>
+    <path d="M620 110 H500 Q480 110 480 130 V300 Q480 320 460 320 H330" fill="none" stroke="#9AA8FF" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M620 150 H530 Q515 150 515 165 V380 Q515 395 500 395 H330" fill="none" stroke="#FFB300" stroke-opacity=".6" stroke-width="2"/>
+    <circle cx="330" cy="260" r="6" fill="#3D5AFE"/><circle cx="330" cy="320" r="5" fill="#9AA8FF" fill-opacity=".6"/><circle cx="330" cy="395" r="5" fill="#FFB300" fill-opacity=".7"/>
+    <g transform="translate(250 150)">
+      <path d="M58 0 18 70h28L30 140l58-88H58L78 0z" fill="#FFB300"/>
+      <g stroke="#FFB300" stroke-width="3" stroke-linecap="round"><path d="M100 30l18-10M104 66h22M96 100l16 12M8 30-8 20M2 104l-16 10"/></g>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="who"><span><b>Roman Unucka</b> – elektrikář</span><span>Horní Těrlicko</span></div>
+    <h1 id="h1">Elektro pohotovost <span class="v">24/7.</span><svg class="bolt" viewBox="0 0 40 60" aria-hidden="true"><path d="M26 0 4 34h14L12 60 36 22H22L30 0z" fill="#FFB300"/></svg></h1>
+    <p class="area-line">Havířovsko, Karvinsko, Frýdek-Místek a Ostrava.</p>
+    <div class="ctas">
+      <a class="btn btn-amber" href="tel:+420735120323"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Zavolat 735 120 323</a>
+      <a class="btn btn-line" href="#oblast">Co potřebujete?</a>
+    </div>
+    <p class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="statusTxt">Pohotovost 24/7 · běžné zakázky Po–Ne 8:00–22:00</span></p>
+    <div class="hero-facts">
+      <div><b>1 000 Kč</b><span>první hodina pohotovosti, bez DPH</span></div>
+      <div><b>10+ let</b><span>„Elektřině se věnuji více než 10 let.“</span></div>
+      <div><b>Po–Ne</b><span>8:00–22:00 běžné zakázky, i o víkendu</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="mapsec" id="oblast" aria-labelledby="h-map">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Kam přijedu</span>
+      <h2 id="h-map">Z Těrlicka je to kousek do Havířova, Karviné, Frýdku-Místku i Ostravy</h2>
+    </div>
+    <div class="map-grid">
+      <div class="mapbox">
+        <svg id="map" viewBox="0 0 600 500" role="img" aria-label="Stylizovaná mapa oblasti: Těrlicko uprostřed, spojené s Havířovem, Karvinou, Frýdkem-Místkem a Ostravou">
+          <defs>
+            <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#2A2650" stroke-width="1"/></pattern>
+          </defs>
+          <rect width="600" height="500" fill="#1E1B3A"/>
+          <rect width="600" height="500" fill="url(#grid)"/>
+          <ellipse cx="350" cy="372" rx="34" ry="14" fill="#3D5AFE" fill-opacity=".22"/>
+          <text x="352" y="400" text-anchor="middle" font-family="Albert Sans,sans-serif" font-size="14" fill="#9AA8FF">Těrlická přehrada</text>
+          <g id="links" fill="none" stroke-width="2.5"></g>
+          <g id="towns"></g>
+          <g transform="translate(325 343)">
+            <circle r="30" fill="#FFB300" fill-opacity=".16"><animate attributeName="r" values="18;34;18" dur="2.6s" repeatCount="indefinite"/></circle>
+            <circle r="13" fill="#FFB300"/>
+            <path d="M2-8-5 2h4l-2 7 7-10H0l2-7z" fill="#1E1B3A"/>
+            <text x="0" y="-22" text-anchor="middle" font-family="Unbounded,sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Těrlicko</text>
+          </g>
+        </svg>
+        <div class="maplegend"><span><i style="background:#FFB300"></i>Těrlicko – základna</span><span><i style="background:#9AA8FF"></i>hlavní oblast</span><span><i style="background:#5D5A86"></i>další obce z dosavadního webu</span></div>
+      </div>
+      <div>
+        <p class="need-q" id="needQ">Co potřebujete?</p>
+        <div class="needs" id="needs" role="group" aria-labelledby="needQ"></div>
+        <div class="answer" aria-live="polite">
+          <span class="lbl" id="ansLbl">Elektro pohotovost</span>
+          <p id="ansTxt"></p>
+          <span class="price" id="ansPrice"></span>
+          <div><a class="btn btn-amber" href="tel:+420735120323"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Zavolat 735 120 323</a></div>
+          <span class="num">Číslo k opsání: <b>735 120 323</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="h-svc">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Služby</span>
+      <h2 id="h-svc">Kompletní elektro pro byt, dům i komerční prostory</h2>
+      <p>„Děláme v elektroinstalaci opravdu téměř vše.“ Specializace: chytrá domácnost a moderní osvětlení.</p>
+    </div>
+    <div class="svc">
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v5M17 3v5M5 8h14v4a7 7 0 0 1-14 0zM12 19v3"/></svg></span><h3>Elektroinstalace</h3><p>Kompletní elektroinstalace bytů, rodinných domů, kanceláří i dřevostaveb.</p></article>
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7v9H3z"/><circle cx="12" cy="14" r="2.5"/><path d="M8 14a4 4 0 0 1 8 0"/></svg></span><h3>Chytrá elektroinstalace</h3><p>Rozvody pro chytrou domácnost v bytě, rodinném domě i dřevostavbě.</p></article>
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/></svg></span><h3>Montáž světel a LED</h3><p>Světla v halách, LED pásky ve skříni nebo obrazce z LED pásku v pokoji.</p></article>
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="13" height="9" rx="2"/><path d="m16 10 5-3v10l-5-3M7 16v4"/></svg></span><h3>Kamerové systémy</h3><p>Montáž kamerových a zabezpečovacích systémů pro Váš dům, byt nebo firmu.</p></article>
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="2"/><path d="M9 15h6M9 18h6"/></svg></span><h3>Zvonky a vstupní systémy</h3><p>Montáž vstupních a zvonkových systémů a domácích telefonů.</p></article>
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M8 8h8l-4 14zM13 11l-3 5h3l-2 4"/></svg></span><h3>Hromosvody a jištění</h3><p>Montáž hromosvodů a jištění. „Nevadí nám práce ve výškách.“</p></article>
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6v4H9zM6 5H4v16h16V5h-2"/><path d="m8 14 3 3 5-6"/></svg></span><h3>Elektro revize</h3><p>Revize elektroinstalace bytu nebo rodinného domu, cena podle rozsahu v ceníku níže.</p></article>
+      <article><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><h3>Opravy elektrozařízení</h3><p>Opravy elektrozařízení a připojení jednofázových i třífázových spotřebičů.</p></article>
+    </div>
+    <p class="more"><b>Dále podle dosavadního webu:</b> realizace přípojných a odběrných míst, průmyslové montáže, výroba rozvaděčů, údržba a rekonstrukce nouzového osvětlení, klimatizace a vzduchotechnika. Na větší zakázky spolupráce se spřízněnými firmami.</p>
+  </div>
+</section>
+
+<section class="pricesec" id="cenik" aria-labelledby="h-price">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Ceník</span>
+      <h2 id="h-price">Ceny, které znáte předem</h2>
+      <p>Ceny převzaté z dosavadního webu, uvedené bez DPH. Materiál se účtuje podle rozsahu práce a jeho cenu dopředu sdělíme.</p>
+    </div>
+    <div class="ptwo">
+      <div style="overflow-x:auto">
+        <table class="ptable">
+          <tbody>
+            <tr class="hl"><td>Elektro pohotovost – první hodina<small>havarijní služba 24/7</small></td><td>1 000 Kč</td></tr>
+            <tr class="hl"><td>Elektro pohotovost – každá další hodina</td><td>600 Kč</td></tr>
+            <tr><td>Montáž elektroinstalace<small>podle náročnosti a rozsahu práce</small></td><td>350–600 Kč/hod</td></tr>
+            <tr><td>Připojení jednofázového spotřebiče</td><td>400 Kč/ks</td></tr>
+            <tr><td>Připojení třífázového spotřebiče</td><td>700 Kč/ks</td></tr>
+            <tr><td>Revize elektroinstalace bytu<small>podle rozsahu</small></td><td>1 000–3 000 Kč</td></tr>
+            <tr><td>Revize elektroinstalace rodinného domu<small>podle rozsahu</small></td><td>1 500–4 000 Kč</td></tr>
+            <tr><td>Doprava<small>Havířov a 20 km okolí zdarma</small></td><td>12 Kč/km</td></tr>
+          </tbody>
+        </table>
+        <div class="pnotes"><span>Důchodci: sleva 15 %.</span><span>Nová elektroinstalace bytu nebo dřevostavby: cenu Vám řekneme předem podle projektu.</span></div>
+      </div>
+      <div class="amberbox">
+        <h3>Vypadla elektřina, jiskří zásuvka?</h3>
+        <span class="big">24/7</span>
+        <p>Elektro pohotovost funguje nonstop. První hodina 1 000 Kč, každá další 600 Kč, bez DPH. Doprava v Havířově a do 20 km zdarma.</p>
+        <div><a class="btn" href="tel:+420735120323">Zavolat pohotovost</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-how">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Jak to probíhá</span>
+      <h2 id="h-how">Od telefonu k funkční elektřině ve třech krocích</h2>
+    </div>
+    <ol class="how">
+      <li><h3>Zavoláte</h3><p>Popíšete, co nefunguje nebo co chcete udělat. U běžné zakázky se domluvíme na termínu, u poruchy vyrážíme jako pohotovost.</p></li>
+      <li><h3>Prohlídka a cena</h3><p>Na místě závadu najdeme nebo zaměříme práci. Cenu práce a materiálu Vám řekneme předem.</p></li>
+      <li><h3>Hotová a bezpečná instalace</h3><p>Opravíme nebo namontujeme a před odchodem vyzkoušíme, že vše funguje.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0" aria-labelledby="h-towns">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Obce, kde pracujeme</span>
+      <h2 id="h-towns">Těrlicko a okolí</h2>
+    </div>
+    <div class="towns"><span class="home">Těrlicko</span><span>Havířov</span><span>Karviná</span><span>Frýdek-Místek</span><span>Ostrava</span><span>Český Těšín</span><span>Orlová</span><span>Bohumín</span><span>Třinec</span><span>Petřvald</span></div>
+  </div>
+</section>
+
+<section style="padding-top:0" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Časté otázky</span>
+      <h2 id="h-faq">Co lidé řeší, když volají elektrikáře</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Kolik stojí výjezd pohotovosti?</summary><p>Podle ceníku na dosavadním webu: první hodina 1 000 Kč, každá další 600 Kč, bez DPH. Materiál se účtuje zvlášť a jeho cenu Vám řekneme předem. Doprava v Havířově a 20 km okolí je zdarma, dál 12 Kč/km.</p></details>
+      <details><summary>Pořád mi vypadává jistič. Co mám dělat?</summary><p>Jistič opakovaně nenahazujte. Vypojte spotřebiče v daném okruhu a zkuste ho zapnout znovu. Když vypadne i bez spotřebičů, je závada v rozvodech a je potřeba elektrikář.</p></details>
+      <details><summary>Cítím spálený zápach nebo zásuvka jiskří. Je to akutní?</summary><p>Ano. Pokud můžete bezpečně, vypněte jistič daného okruhu a zásuvku nepoužívejte. Pak volejte pohotovost na 735 120 323. Při kouři nebo ohni volejte hasiče na 150 nebo 112.</p></details>
+      <details><summary>Kdy potřebuji revizi elektroinstalace?</summary><p>Typicky po nové elektroinstalaci nebo rekonstrukci, při prodeji či pronájmu nemovitosti, nebo když to vyžaduje pojišťovna. Cena revize bytu je 1 000–3 000 Kč a rodinného domu 1 500–4 000 Kč bez DPH podle rozsahu.</p></details>
+      <details><summary>Děláte i práce o víkendu?</summary><p>Ano. Běžné zakázky Po–Ne 8:00–22:00, pohotovost 24 hodin denně, 7 dní v týdnu.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="h-c">
+  <div class="wrap c-grid">
+    <div>
+      <span class="eyebrow">Kontakt</span>
+      <h2 id="h-c" style="margin-top:12px">Zavolejte, nebo napište</h2>
+      <dl class="c-list">
+        <div><dt>Telefon</dt><dd><a href="tel:+420735120323">735 120 323</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:romanunucka@gmail.com">romanunucka@gmail.com</a></dd></div>
+        <div><dt>Adresa</dt><dd>Májová 401/34<br>735 42 Horní Těrlicko<br><a href="https://mapy.cz/zakladni?q=M%C3%A1jov%C3%A1%20401%2F34%2C%20Horn%C3%AD%20T%C4%9Brlicko" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></dd></div>
+        <div><dt>Kdy</dt><dd>Po–Ne 8:00–22:00<br>Elektro pohotovost 24/7</dd></div>
+        <div><dt>Provozovatel</dt><dd>Roman Unucka<br>IČO 08031916</dd></div>
+      </dl>
+    </div>
+    <form class="ask" id="ask" novalidate>
+      <h3>Poptávka elektro práce</h3>
+      <label for="fWhat">Co potřebujete
+        <select id="fWhat"><option>Porucha – pohotovost</option><option>Elektroinstalace</option><option>Chytrá elektroinstalace</option><option>Montáž světel a LED</option><option>Kamerový systém</option><option>Zvonek nebo vstupní systém</option><option>Hromosvod</option><option>Revize elektroinstalace</option><option>Oprava nebo připojení spotřebiče</option><option>Něco jiného</option></select>
+      </label>
+      <label for="fTown">Obec<input id="fTown" placeholder="Havířov"></label>
+      <label for="fTel">Telefon<input id="fTel" type="tel" autocomplete="tel" placeholder="777 123 456"></label>
+      <label for="fMsg">Popis <span class="hint">nepovinné</span><textarea id="fMsg" placeholder="Např. výměna 6 světel v bytě 3+1"></textarea></label>
+      <button class="btn btn-volt" type="submit">Poslat poptávku e-mailem</button>
+      <p class="hint">Otevře se Váš e-mail s předvyplněnou zprávou, nic se neodesílá automaticky. Při poruše raději volejte 735 120 323.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>Roman Unucka – elektro</b> · Májová 401/34, Horní Těrlicko · IČO 08031916</span>
+    <span>Nezávazný návrh webu – není to oficiální stránka firmy Roman Unucka – elektro.</span>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-amber" href="tel:+420735120323">Zavolat 735 120 323</a>
+  <a class="btn btn-line" href="#oblast">Co potřebujete?</a>
+</div>
+
+<script>
+(function(){
+  /* stav podle ověřené doby: Po–Ne 8–22 (Firmy.cz), pohotovost 24/7 (web) */
+  try{
+    var h=+new Intl.DateTimeFormat('cs-CZ',{hour:'numeric',hour12:false,timeZone:'Europe/Prague'}).format(new Date());
+    document.getElementById('statusTxt').textContent=(h>=8&&h<22)
+      ?'Teď běží běžná pracovní doba (Po–Ne 8:00–22:00) · pohotovost 24/7'
+      :'Mimo běžnou pracovní dobu volejte elektro pohotovost 24/7';
+  }catch(e){}
+
+  var C={x:325,y:343};
+  var towns=[
+    {n:'Havířov',x:270,y:292,main:1,dx:-12,dy:-14,a:'end'},
+    {n:'Karviná',x:391,y:165,main:1,dx:0,dy:-16,a:'middle'},
+    {n:'Frýdek-Místek',x:183,y:453,main:1,dx:0,dy:28,a:'middle'},
+    {n:'Ostrava',x:117,y:198,main:1,dx:0,dy:-16,a:'middle'},
+    {n:'Český Těšín',x:490,y:343,main:0,dx:0,dy:-14,a:'middle'},
+    {n:'Orlová',x:270,y:173,main:0,dx:0,dy:-12,a:'middle'},
+    {n:'Bohumín',x:194,y:79,main:0,dx:0,dy:-12,a:'middle'},
+    {n:'Třinec',x:533,y:462,main:0,dx:0,dy:26,a:'end'},
+    {n:'Petřvald',x:226,y:207,main:0,dx:-10,dy:4,a:'end'}
+  ];
+  var L='',T='';
+  towns.forEach(function(t){
+    var mx=(C.x+t.x)/2+(t.y-C.y)*.12,my=(C.y+t.y)/2-(t.x-C.x)*.12;
+    L+='<path class="'+(t.main?'link':'')+'" d="M'+C.x+' '+C.y+' Q'+mx+' '+my+' '+t.x+' '+t.y+'" stroke="'+(t.main?'#3D5AFE':'#4A4775')+'" stroke-width="'+(t.main?3:1.6)+'"/>';
+    T+='<circle cx="'+t.x+'" cy="'+t.y+'" r="'+(t.main?9:5)+'" fill="'+(t.main?'#9AA8FF':'#5D5A86')+'" stroke="#1E1B3A" stroke-width="2"/>';
+    T+='<text x="'+(t.x+t.dx)+'" y="'+(t.y+t.dy)+'" text-anchor="'+t.a+'" font-family="'+(t.main?'Unbounded,sans-serif':'Albert Sans,sans-serif')+'" font-size="'+(t.main?20:16)+'" font-weight="'+(t.main?700:500)+'" fill="'+(t.main?'#FFFFFF':'#B9BAD6')+'">'+t.n+'</text>';
+  });
+  document.getElementById('links').innerHTML=L;
+  document.getElementById('towns').innerHTML=T;
+
+  var ICON={
+    sos:'<path d="M13 2 4 14h7l-2 8 9-12h-7z"/>',
+    inst:'<path d="M7 3v5M17 3v5M5 8h14v4a7 7 0 0 1-14 0zM12 19v3"/>',
+    bell:'<rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="2"/>',
+    rod:'<path d="M12 2v6M8 8h8l-4 14z"/>',
+    cam:'<rect x="3" y="7" width="13" height="9" rx="2"/><path d="m16 10 5-3v10l-5-3"/>',
+    light:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/>'
+  };
+  var needs=[
+    {k:'sos',l:'Pohotovost',t:'Elektro pohotovost 24/7 – volejte kdykoli, ve dne i v noci, i o víkendu.',p:'První hodina 1 000 Kč, každá další 600 Kč (bez DPH).'},
+    {k:'inst',l:'Elektroinstalace',t:'Kompletní elektroinstalace bytu, rodinného domu, kanceláře i dřevostavby, včetně chytré elektroinstalace.',p:'Montáž 350–600 Kč/hod bez DPH podle náročnosti.'},
+    {k:'bell',l:'Zvonky a vstupní systémy',t:'Montáž vstupních a zvonkových systémů a domácích telefonů.',p:'Cenu Vám řekneme předem.'},
+    {k:'rod',l:'Hromosvody',t:'Montáž hromosvodů a jištění. Práce ve výškách nám nevadí.',p:'Cenu Vám řekneme předem.'},
+    {k:'cam',l:'Kamerové systémy',t:'Montáž kamerových a zabezpečovacích systémů pro dům, byt i firmu.',p:'Cenu Vám řekneme předem.'},
+    {k:'light',l:'Montáž světel',t:'Světla v halách, LED pásky ve skříni nebo obrazce z LED pásku v pokoji.',p:'Montáž 350–600 Kč/hod bez DPH podle náročnosti.'}
+  ];
+  var box=document.getElementById('needs');
+  needs.forEach(function(n,i){
+    var b=document.createElement('button');b.type='button';b.id='need-'+n.k;
+    if(n.k==='sos')b.className='sos';
+    b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">'+ICON[n.k]+'</svg>'+n.l;
+    b.setAttribute('aria-pressed',i===0);
+    b.onclick=function(){pick(i)};
+    box.appendChild(b);
+  });
+  function pick(i){
+    var n=needs[i];
+    box.querySelectorAll('button').forEach(function(b,j){b.setAttribute('aria-pressed',j===i)});
+    document.getElementById('ansLbl').textContent=n.l;
+    document.getElementById('ansTxt').textContent=n.t;
+    document.getElementById('ansPrice').textContent=n.p;
+    try{document.getElementById('fWhat').selectedIndex=[0,1,5,6,4,3][i]}catch(e){}
+  }
+  pick(0);
+
+  document.getElementById('ask').addEventListener('submit',function(e){
+    e.preventDefault();
+    var w=document.getElementById('fWhat').value,o=document.getElementById('fTown').value,t=document.getElementById('fTel').value,m=document.getElementById('fMsg').value;
+    var body='Dobrý den,\n\npotřebuji: '+w+'.\n'+(m?m+'\n':'')+'\nObec: '+o+'\nTelefon: '+t;
+    location.href='mailto:romanunucka@gmail.com?subject='+encodeURIComponent('Poptávka – '+w)+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
+</body>
+</html>

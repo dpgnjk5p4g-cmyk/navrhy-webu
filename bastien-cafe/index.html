@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Bastien café Bohumín</title>
+<meta name="description" content="Bastien café – kavárna a cukrárna s dětskou hernou v Bohumíně. Dorty na objednávku, svatební dorty, zákusky z vlastní výroby, zahrada a hřiště. Masarykova 360.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"Bastien café",
+  "legalName":"BASTIEN CAFE S.R.O.",
+  "description":"Kavárna a cukrárna s vlastní výrobou zákusků, dětskou hernou a zahradou s hřištěm. Dorty na objednávku a svatební dorty.",
+  "url":"https://www.bastien-cafe.cz/",
+  "telephone":"+420733537300",
+  "email":"B@stien.cz",
+  "address":{"@type":"PostalAddress","streetAddress":"Masarykova 360","addressLocality":"Bohumín","postalCode":"735 81","addressCountry":"CZ"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"14:00","closes":"20:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"20:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"21:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"20:00"}
+  ],
+  "servesCuisine":["Dezerty","Káva","Čaj"],
+  "sameAs":["https://www.facebook.com/Bastien.cafe.Bohumin/","https://www.instagram.com/bastiencafe/"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --milk:#FFFBF4;
+  --milk-2:#FBF1E6;
+  --choco:#3A2117;
+  --choco-2:#5E4034;
+  --pist:#C8DB9C;
+  --pist-2:#E4EDC9;
+  --pist-deep:#45612A;
+  --rasp:#B01F4E;
+  --rasp-dark:#8E1640;
+  --rasp-soft:#F8D9E2;
+  --line:#E6D6C6;
+  --white:#FFFFFF;
+  --demo-bg:#FFF0B8;
+  --demo-fg:#5A4500;
+  --r:18px;
+  --gut:clamp(16px,4vw,40px);
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--milk);color:var(--choco);font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.6;margin:0;overflow-x:hidden}
+h1,h2,h3{font-family:"Gloock",Georgia,serif;font-weight:400;line-height:1.08;text-wrap:balance;margin:0;color:var(--choco)}
+p{margin:0 0 1em}
+a{color:var(--rasp-dark)}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--rasp);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.demo{display:inline-block;font:600 11px/1.3 "Figtree",sans-serif;letter-spacing:.04em;text-transform:uppercase;background:var(--demo-bg);color:var(--demo-fg);border:1px dashed #B89A2A;border-radius:4px;padding:2px 6px;vertical-align:middle;white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* banner */
+.proposal{background:var(--choco);color:var(--milk);font-size:13.5px;text-align:center;padding:8px var(--gut);line-height:1.4}
+.proposal strong{color:var(--pist)}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,251,244,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:baseline;gap:6px;text-decoration:none;color:var(--choco);margin-right:auto}
+.brand b{font:400 25px/1 "Gloock",serif}
+.brand span{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rasp)}
+.nav{display:none;gap:22px}
+.nav a{color:var(--choco);text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{color:var(--rasp)}
+.tel-top{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;color:var(--choco);font-size:15px;white-space:nowrap}
+.tel-top svg{width:30px;height:30px;padding:7px;border-radius:50%;background:var(--rasp);fill:none;stroke:#fff;stroke-width:2}
+@media (min-width:900px){.nav{display:flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;font:700 16px/1 "Figtree",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--rasp);color:#fff;box-shadow:0 4px 0 var(--rasp-dark)}
+.btn-main:hover{background:var(--rasp-dark)}
+.btn-ghost{background:transparent;color:var(--choco);border-color:var(--choco)}
+.btn-ghost:hover{background:var(--choco);color:var(--milk)}
+
+/* HERO */
+.hero{padding:18px 0 0}
+.hero-grid{display:grid;gap:0}
+.hero-copy{padding:6px 0 18px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--pist-deep);margin-bottom:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--rasp)}
+.hero h1{font-size:clamp(34px,8.6vw,72px);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--rasp)}
+.hero-lead{font-size:clamp(16px,2vw,19px);color:var(--choco-2);margin:12px 0 18px;max-width:34em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+.hero-stage{position:relative;background:var(--pist);border-radius:28px 28px 0 0;padding:20px 18px 0;overflow:hidden;min-height:250px}
+.hero-stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(69,97,42,.16) 1.6px,transparent 1.7px);background-size:18px 18px}
+.hero-stage .cake{position:relative;display:block;width:min(100%,430px);margin:70px auto 0}
+.status{position:relative;z-index:2;background:var(--white);border-radius:16px;padding:14px 16px;box-shadow:0 10px 30px rgba(58,33,23,.16);border:1px solid var(--line);max-width:360px}
+.status-row{display:flex;align-items:center;gap:10px}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--pist-deep);flex:none;box-shadow:0 0 0 0 rgba(69,97,42,.5);animation:pulse 2s infinite}
+.status.closed .dot{background:var(--rasp);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(69,97,42,0)}100%{box-shadow:0 0 0 0 rgba(69,97,42,0)}}
+.status-main{font-weight:700;font-size:17px;line-height:1.25}
+.status-sub{font-size:14px;color:var(--choco-2);margin-top:4px}
+.week{display:none;margin:10px 0 0;padding:10px 0 0;border-top:1px dashed var(--line);font-size:14px;list-style:none}
+.week li{display:flex;justify-content:space-between;padding:2px 0}
+.week li.today{font-weight:700;color:var(--rasp-dark)}
+.status-card-abs{position:absolute;left:18px;right:18px;top:18px}
+.hero-stage .tag{position:absolute;z-index:2;right:16px;bottom:16px;background:var(--choco);color:var(--milk);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px}
+@media (min-width:900px){
+  .hero{padding:48px 0 0}
+  .hero-grid{grid-template-columns:1.05fr 1fr;align-items:end;gap:48px}
+  .hero-copy{padding-bottom:64px}
+  .hero-stage{border-radius:200px 200px 0 0;min-height:540px;padding:0}
+  .hero-stage{overflow:visible}
+  .hero-stage::before{border-radius:inherit}
+  .hero-stage .cake{margin:230px 6px 0 auto;width:64%}
+  .status-card-abs{left:-36px;right:auto;top:70px;bottom:auto;width:310px}
+  .week{display:block}
+  .hero-lead{margin:18px 0 28px}
+}
+
+/* scallop edge */
+.scallop{height:22px;background:radial-gradient(circle at 11px 0,var(--pist) 11px,transparent 11.5px) 0 0/22px 22px repeat-x}
+.scallop.choco{background:radial-gradient(circle at 11px 0,var(--choco) 11px,transparent 11.5px) 0 0/22px 22px repeat-x}
+
+/* facts */
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;padding-top:18px;padding-bottom:6px;font-size:14.5px;font-weight:600;color:var(--choco-2)}
+.facts span{display:inline-flex;align-items:center;gap:7px}
+.facts span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rasp)}
+
+section{scroll-margin-top:70px}
+.sec{padding:clamp(56px,9vw,104px) 0}
+.sec-head{display:grid;gap:12px;margin-bottom:34px;max-width:720px}
+.kicker{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rasp)}
+.sec h2{font-size:clamp(30px,5.4vw,52px)}
+.sec-head p{color:var(--choco-2);margin:0;font-size:18px}
+
+/* VITRINA */
+.vitrina{display:grid;gap:28px}
+.shelf{background:var(--white);border:2px solid var(--choco);border-radius:22px 22px 6px 6px;padding:22px 18px;position:relative;box-shadow:8px 8px 0 var(--pist)}
+.shelf::before{content:"Dnes ve vitríně vybíráte z";position:absolute;top:-13px;left:18px;background:var(--choco);color:var(--milk);font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.sweets{list-style:none;margin:6px 0 0;padding:0;columns:2;column-gap:20px}
+.sweets li{break-inside:avoid;padding:6px 0;border-bottom:1px dotted var(--line);font-weight:500;font-size:15.5px;line-height:1.3}
+.sweets li:nth-child(5n+1){color:var(--rasp-dark);font-weight:700}
+.shelf-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:16px;font-size:14px;color:var(--choco-2)}
+.vit-side{display:grid;gap:18px;align-content:start}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ticks li{position:relative;padding-left:30px}
+.ticks li::before{content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:var(--pist) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%2345612A' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.drinks{background:var(--pist-2);border-radius:var(--r);padding:20px}
+.drinks h3{font-size:24px;margin-bottom:8px}
+.drinks p{margin:0;color:var(--choco-2)}
+@media (min-width:700px){.sweets{columns:3}}
+@media (min-width:980px){.vitrina{grid-template-columns:1.5fr 1fr;gap:48px}.shelf{padding:30px 28px}}
+
+/* SERVICES */
+.svc-band{background:var(--milk-2)}
+.svc{display:grid;gap:18px}
+.svc-item{background:var(--white);border-radius:var(--r);padding:24px 20px;border:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.svc-item h3{font-size:27px}
+.svc-item p{margin:0;color:var(--choco-2)}
+.svc-item ul{margin:0;padding-left:18px;color:var(--choco-2)}
+.price{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-weight:700}
+.svc-item.big{background:var(--rasp);color:#fff;border:none}
+.svc-item.big h3,.svc-item.big p,.svc-item.big li{color:#fff}
+.svc-item.big .price{border-color:rgba(255,255,255,.4)}
+.svc-item.wed{background:var(--choco);border:none}
+.svc-item.wed h3,.svc-item.wed p,.svc-item.wed li{color:var(--milk)}
+.svc-item.wed .price{border-color:rgba(255,255,255,.3);color:var(--milk)}
+.svc-item.wed .hl{color:var(--pist)}
+.photo{position:relative;border-radius:14px;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:16px;font-size:14px;font-weight:600;color:var(--choco);background:repeating-linear-gradient(-45deg,var(--pist-2) 0 12px,#EEF3DA 12px 24px);border:2px dashed var(--pist-deep)}
+.photo small{display:block;font-weight:500;color:var(--choco-2)}
+.photo.on-dark{background:repeating-linear-gradient(-45deg,#4A2C20 0 12px,#55352A 12px 24px);border-color:var(--pist);color:var(--milk)}
+.photo.on-dark small{color:#E8D9CF}
+.photo.on-rasp{background:repeating-linear-gradient(-45deg,#C23A66 0 12px,#BB2E5B 12px 24px);border-color:#fff;color:#fff}
+.photo.on-rasp small{color:#fff}
+@media (min-width:900px){
+  .svc{grid-template-columns:repeat(6,1fr)}
+  .svc-item.big{grid-column:span 4;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+  .svc-item.big .photo{grid-row:span 4;min-height:100%}
+  .svc-item.wed{grid-column:span 2;grid-row:span 2}
+  .svc-item.small{grid-column:span 2}
+}
+
+/* PLAY */
+.play{background:var(--pist);position:relative}
+.play-grid{display:grid;gap:26px}
+.play h2{font-size:clamp(30px,5.4vw,52px)}
+.play-cards{display:grid;gap:14px}
+.pc{background:var(--milk);border-radius:var(--r);padding:20px;display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start}
+.pc svg{width:56px;height:56px}
+.pc h3{font-family:"Figtree",sans-serif;font-weight:700;font-size:18px;margin-bottom:4px;line-height:1.25}
+.pc p{margin:0;font-size:15.5px;color:var(--choco-2)}
+.play-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.play-photos .photo{background:repeating-linear-gradient(-45deg,#F3F7E6 0 12px,var(--milk) 12px 24px)}
+.play-photos .photo:first-child{grid-column:span 2;min-height:190px}
+@media (min-width:900px){.play-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}.play-cards{grid-template-columns:1fr 1fr}}
+
+/* ORDER */
+.order-grid{display:grid;gap:30px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:0 0 26px 62px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--choco);color:var(--milk);font:400 22px/44px "Gloock",serif;text-align:center}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:21px;top:48px;bottom:4px;border-left:2px dashed var(--line)}
+.steps h3{font-family:"Figtree",sans-serif;font-weight:700;font-size:19px;margin-bottom:4px}
+.steps p{margin:0;color:var(--choco-2)}
+.form-card{background:var(--white);border-radius:24px;border:2px solid var(--choco);box-shadow:10px 10px 0 var(--rasp-soft);padding:22px 18px}
+.form-card h3{font-size:30px;margin-bottom:4px}
+.form-card .sub{color:var(--choco-2);margin-bottom:18px;font-size:15.5px}
+fieldset{border:0;margin:0 0 18px;padding:0;min-width:0}
+legend,.lbl{display:block;font-weight:700;font-size:15px;margin-bottom:8px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;align-items:center;min-height:42px;padding:0 15px;border-radius:999px;border:1.5px solid var(--choco-2);font-weight:600;font-size:15px;cursor:pointer;background:var(--white);color:var(--choco);user-select:none}
+.chip input:checked+span{background:var(--choco);color:var(--milk);border-color:var(--choco)}
+.chip input:focus-visible+span{outline:3px solid var(--rasp);outline-offset:2px}
+.row2{display:grid;gap:16px;grid-template-columns:1fr}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--choco-2);border-radius:12px;overflow:hidden;width:max-content}
+.stepper button{width:46px;height:46px;border:0;background:var(--pist-2);color:var(--choco);font:700 22px/1 "Figtree",sans-serif;cursor:pointer}
+.stepper button:hover{background:var(--pist)}
+.stepper input{width:64px;height:46px;border:0;text-align:center;font:700 18px "Figtree",sans-serif;color:var(--choco);background:var(--white);-moz-appearance:textfield}
+.stepper input::-webkit-inner-spin-button{-webkit-appearance:none}
+input[type=date],input[type=text]{width:100%;height:48px;border:1.5px solid var(--choco-2);border-radius:12px;padding:0 12px;font:500 16px "Figtree",sans-serif;color:var(--choco);background:var(--white)}
+.sentence{background:var(--pist-2);border-left:5px solid var(--pist-deep);border-radius:10px;padding:14px 16px;margin:4px 0 16px;font-size:16.5px;line-height:1.5}
+.sentence-lbl{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pist-deep);margin-bottom:4px}
+.form-actions{display:flex;flex-wrap:wrap;gap:10px}
+.form-actions .btn{flex:1 1 180px}
+.copy-btn{background:var(--white);color:var(--choco);border-color:var(--choco-2)}
+.form-msg{margin-top:14px;padding:12px 14px;border-radius:10px;background:var(--choco);color:var(--milk);font-weight:600;display:none}
+.form-msg.show{display:block}
+@media (min-width:600px){.row2{grid-template-columns:auto 1fr;gap:22px}}
+@media (min-width:980px){.order-grid{grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}.form-card{padding:32px 30px}}
+
+/* TRUST */
+.trust{background:var(--choco);color:var(--milk)}
+.trust .wrap{display:grid;gap:22px;padding-top:44px;padding-bottom:44px}
+.score{display:flex;align-items:center;gap:18px}
+.score b{font:400 64px/1 "Gloock",serif;color:var(--pist)}
+.score p{margin:0;font-size:16px}
+.score a{color:var(--pist);font-weight:700}
+.trust-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.trust-list li{padding-left:22px;position:relative}
+.trust-list li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:50%;background:var(--rasp-soft)}
+@media (min-width:900px){.trust .wrap{grid-template-columns:1fr 1.4fr;align-items:center}}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:860px}
+details{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:0 18px}
+summary{cursor:pointer;list-style:none;padding:17px 34px 17px 0;font-weight:700;font-size:17px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font:400 28px/1 "Gloock",serif;color:var(--rasp)}
+details[open] summary::after{content:"–"}
+details p{color:var(--choco-2);margin:0 0 18px}
+
+/* CONTACT */
+.contact{background:var(--milk-2)}
+.contact-grid{display:grid;gap:22px}
+.cbox{background:var(--white);border-radius:var(--r);padding:22px 20px;border:1px solid var(--line)}
+.cbox h3{font-size:26px;margin-bottom:12px}
+.cline{display:grid;grid-template-columns:90px 1fr;gap:8px;padding:8px 0;border-bottom:1px dotted var(--line);font-size:16px}
+.cline:last-child{border:0}
+.cline dt{font-weight:700;color:var(--choco-2);font-size:14px;padding-top:2px}
+.cline dd{margin:0}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:7px 0;border-bottom:1px dotted var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--rasp-dark);font-weight:700}
+.map{position:relative;display:block;border-radius:var(--r);overflow:hidden;min-height:340px;background:var(--pist-2);text-decoration:none;color:var(--choco);border:1px solid var(--line)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map-label{position:absolute;left:14px;right:14px;bottom:14px;background:var(--white);border-radius:12px;padding:12px 14px;box-shadow:0 6px 20px rgba(58,33,23,.15);font-size:15px}
+.map-label b{display:block;font-size:16px}
+.map-label span{color:var(--rasp-dark);font-weight:700}
+.social{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.social a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--choco-2);text-decoration:none;color:var(--choco);font-weight:600;font-size:15px}
+.social svg{width:18px;height:18px}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1fr 1.2fr}.map{min-height:100%}}
+
+footer{background:var(--choco);color:#E8D9CF;font-size:14.5px;padding:30px 0 110px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{color:var(--pist)}
+@media (min-width:900px){footer{padding-bottom:30px}}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--milk);border-top:1px solid var(--line);display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px rgba(58,33,23,.1)}
+.mbar a{flex:1;min-height:48px;font-size:15px;padding:0 10px}
+@media (min-width:900px){.mbar{display:none}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+
+<div class="proposal">Nezávazný návrh webu – <strong>není to oficiální stránka firmy Bastien café</strong></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#uvod" aria-label="Bastien café – úvod"><b>Bastien</b><span>café</span></a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#vitrina">Vitrína</a>
+      <a href="#dorty">Dorty</a>
+      <a href="#herna">Herna</a>
+      <a href="#poptavka">Objednávka</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-top" href="tel:+420733537300"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" stroke-linejoin="round"/></svg>733 537 300</a>
+  </div>
+</header>
+
+<main id="uvod">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Kavárna a cukrárna · Bohumín</div>
+      <h1 id="h1">Dort, který si <em>vymyslíte</em>, a kavárna, kde si děti hrají</h1>
+      <p class="hero-lead">Zákusky z vlastní výroby, dorty na oslavy i svatby a dvoupatrová herna se zahradou – v Novém Bohumíně, Masarykova 360.</p>
+      <div class="hero-cta">
+        <a class="btn btn-main" href="#poptavka">Objednat dort</a>
+        <a class="btn btn-ghost" href="#kontakt">Jak k nám</a>
+      </div>
+    </div>
+    <div class="hero-stage">
+      <div class="status status-card-abs" id="status" aria-live="polite">
+        <div class="status-row"><span class="dot" aria-hidden="true"></span><div class="status-main" id="status-main">Dnes máme otevřeno</div></div>
+        <div class="status-sub" id="status-sub">Po 14–20 · Út–Čt 8–20 · Pá 8–21 · So–Ne 10–20</div>
+        <ul class="week" id="week" aria-label="Otevírací doba"></ul>
+      </div>
+      <svg class="cake" viewBox="0 0 440 300" role="img" aria-label="Ilustrace dortu s malinami a makronek">
+        <ellipse cx="220" cy="282" rx="190" ry="14" fill="#45612A" opacity=".22"/>
+        <!-- stand -->
+        <path d="M120 262h200l-18 18H138z" fill="#FFFBF4"/>
+        <rect x="80" y="254" width="280" height="12" rx="6" fill="#FFFBF4"/>
+        <!-- bottom tier -->
+        <rect x="104" y="168" width="232" height="88" rx="10" fill="#5A3324"/>
+        <rect x="104" y="200" width="232" height="16" fill="#F8D9E2"/>
+        <rect x="104" y="226" width="232" height="10" fill="#8B5A40"/>
+        <path d="M104 178c0-6 4-10 10-10h212c6 0 10 4 10 10v6c-8 0-8 16-16 16s-8-12-16-12-8 22-16 22-8-14-16-14-8 10-16 10-8-18-16-18-8 12-16 12-8-8-16-8-8 20-16 20-8-14-16-14-8 8-16 8-8-12-16-12-8 16-16 16-8-10-16-10-8 6-16 6z" fill="#B01F4E"/>
+        <!-- top tier -->
+        <rect x="150" y="98" width="140" height="74" rx="10" fill="#FFFBF4"/>
+        <rect x="150" y="128" width="140" height="10" fill="#C8DB9C"/>
+        <path d="M150 108c0-6 4-10 10-10h120c6 0 10 4 10 10v4c-7 0-7 14-14 14s-7-9-14-9-7 15-14 15-7-11-14-11-7 8-14 8-7-13-14-13-7 10-14 10-7-7-14-7-7 6-14 6z" fill="#45612A"/>
+        <!-- raspberries -->
+        <g fill="#B01F4E"><circle cx="192" cy="90" r="11"/><circle cx="220" cy="84" r="12"/><circle cx="248" cy="90" r="11"/></g>
+        <g fill="#8E1640"><circle cx="188" cy="87" r="2"/><circle cx="196" cy="92" r="2"/><circle cx="216" cy="80" r="2"/><circle cx="224" cy="88" r="2"/><circle cx="244" cy="87" r="2"/><circle cx="252" cy="93" r="2"/></g>
+        <path d="M220 72c4-10 14-12 18-10-4 6-10 10-18 10z" fill="#45612A"/>
+        <!-- candle -->
+        <rect x="216" y="40" width="8" height="34" rx="3" fill="#F8D9E2"/>
+        <path d="M220 22c6 8 6 14 0 18-6-4-6-10 0-18z" fill="#E9A23B"/>
+        <!-- macarons left -->
+        <g transform="translate(26 214)"><rect x="0" y="0" width="56" height="16" rx="8" fill="#C8DB9C"/><rect x="2" y="15" width="52" height="8" rx="4" fill="#FFFBF4"/><rect x="0" y="22" width="56" height="16" rx="8" fill="#C8DB9C"/></g>
+        <g transform="translate(36 180)"><rect x="0" y="0" width="48" height="14" rx="7" fill="#F8D9E2"/><rect x="2" y="13" width="44" height="7" rx="3" fill="#5A3324"/><rect x="0" y="19" width="48" height="14" rx="7" fill="#F8D9E2"/></g>
+        <!-- cake pop right -->
+        <line x1="388" y1="200" x2="388" y2="256" stroke="#FFFBF4" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="388" cy="190" r="20" fill="#5A3324"/>
+        <path d="M370 184c6-8 30-8 36 0-4 6-8 2-12 6s-8-2-12 2-8-4-12-8z" fill="#F8D9E2"/>
+        <!-- sprinkles -->
+        <g stroke-linecap="round" stroke-width="4"><line x1="60" y1="40" x2="70" y2="34" stroke="#B01F4E"/><line x1="380" y1="60" x2="392" y2="64" stroke="#5A3324"/><line x1="350" y1="120" x2="356" y2="110" stroke="#FFFBF4"/><line x1="90" y1="110" x2="100" y2="116" stroke="#FFFBF4"/></g>
+      </svg>
+      <span class="tag">vlastní výroba</span>
+    </div>
+  </div>
+  <div class="scallop" aria-hidden="true"></div>
+  <div class="wrap facts" aria-label="Vybavení kavárny">
+    <span>Nekuřácká kavárna</span><span>Dětský koutek a hřiště</span><span>Zahrádka</span><span>Wi-Fi</span><span>Platba kartou</span><span>Bezbariérový přístup</span><span>Vstup se psem</span>
+  </div>
+</section>
+
+<section class="sec" id="vitrina" aria-labelledby="h-vit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Co u nás ochutnáte</div>
+      <h2 id="h-vit">Zákusky z vitríny, které každý den pečeme sami</h2>
+      <p>Vyberte si přímo v kavárně, nebo si zákusky objednejte na oslavu – nazdobíme je podle Vašeho přání.</p>
+    </div>
+    <div class="vitrina">
+      <div class="shelf">
+        <ul class="sweets">
+          <li>Babiččin řez</li><li>Banana dort</li><li>Berlínský dort</li><li>Cake pops</li><li>Čokoextra</li><li>Čokoládový dortík</li><li>Čokomalinový dortík</li><li>Domácí čokoládka</li><li>Hruškový dort s karamelem</li><li>Cheesecake</li><li>Kofila</li><li>Koko dort</li><li>Kubánský dort</li><li>Limetkový dort</li><li>Makronka</li><li>Makronka (zdobená)</li><li>Malinové pokušení</li><li>Margot</li><li>Medový dort</li><li>Mrkvový dort</li><li>Na mechu</li><li>Opilý námořník</li><li>Ovocný dortík</li><li>Pistáciový dort</li><li>Popelka</li><li>Red velvet</li><li>Royal dort</li><li>Ruby</li><li>Sachrův dort</li><li>Schwarzwaldský dort</li><li>Špička</li><li>Tartaletka</li><li>Tartuffo</li><li>Tiramisu</li><li>Tofík</li><li>Větrník</li><li>Větrníkový dort</li><li>Zahradní pokušení</li><li>Zimní variace</li>
+        </ul>
+        <div class="shelf-foot"><span>39 druhů ze stálé nabídky · denní výběr se liší</span><span>Cena na dotaz <span class="demo">ukázkový text</span></span></div>
+      </div>
+      <div class="vit-side">
+        <ul class="ticks">
+          <li>Veliký výběr různých chutí</li>
+          <li>Denní nabídku zakoupíte přímo u nás v kavárně</li>
+          <li>Hodí se na všechny příležitosti</li>
+          <li>Podle přání nazdobíme, dodáme jedlý papír, cedulku, číslovku i figurku</li>
+        </ul>
+        <div class="drinks">
+          <h3>K zákusku</h3>
+          <p>Široký výběr káv, sypaných čajů, limonád i míchaných nápojů. A když dostanete chuť na něco slaného, máme i slané dobroty.</p>
+        </div>
+        <div class="photo">Sem přijde Vaše fotka<small>pohled do vitríny se zákusky</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec svc-band" id="dorty" aria-labelledby="h-dorty">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Dorty na objednávku</div>
+      <h2 id="h-dorty">Od dětských narozenin po svatební sweet bar</h2>
+      <p>Složení i zdobení přizpůsobíme Vám. Řekněte nám příležitost a počet hostů, zbytek vymyslíme spolu.</p>
+    </div>
+    <div class="svc">
+      <article class="svc-item big">
+        <div class="photo on-rasp">Sem přijde Vaše fotka<small>narozeninový dort s figurkou</small></div>
+        <h3>Dorty k oslavám</h3>
+        <p>Narozeniny, výročí, oslavy, křtiny. Do dortu zvolíte oblíbené suroviny – čokoládu, tvaroh, mascarpone, ovoce nebo ořechy.</p>
+        <p>Cena se odvíjí od velikosti a zdobení: potah, krém, nahý dort, modelované figurky nebo jedlý papír.</p>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+      <article class="svc-item wed">
+        <h3>Svatební dorty</h3>
+        <p>Domluvte si schůzku s naší paní cukrářkou, která Vám vše ráda vysvětlí.</p>
+        <ul>
+          <li>Osobní přístup a konzultace</li>
+          <li>Precizní detaily a koncepty na míru</li>
+          <li>Kvalitní a čerstvé suroviny</li>
+          <li>Návrhy a realizace sweet baru</li>
+          <li class="hl">Ochutnávky krémů zcela zdarma</li>
+          <li>Dovoz na smluvené místo</li>
+        </ul>
+        <div class="photo on-dark">Sem přijde Vaše fotka<small>patrový svatební dort</small></div>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+      <article class="svc-item small">
+        <h3>Zákusky na oslavu</h3>
+        <p>Vitrínové dorty a dortíky ze stálé nabídky si můžete objednat i ve větším množství na rodinnou sešlost.</p>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+      <article class="svc-item small">
+        <h3>Posezení v kavárně</h3>
+        <p>Káva, sypané čaje, limonády a slané i sladké dobroty v zrekonstruované nekuřácké kavárně se zahradou.</p>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec play" id="herna" aria-labelledby="h-herna">
+  <div class="wrap play-grid">
+    <div>
+      <div class="kicker" style="color:var(--rasp-dark)">Pro rodiny s dětmi</div>
+      <h2 id="h-herna" style="margin:12px 0 14px">Vy si dáte kávu, děti si hrají – dovnitř i ven</h2>
+      <p style="color:var(--choco);font-size:18px">Máme rádi děti. Proto u nás najdete dvoupatrovou hernu, venkovní hřiště a prostornou zahradu, kde posedíte i za hezkého počasí.</p>
+      <div class="play-cards">
+        <div class="pc">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><rect x="6" y="10" width="44" height="40" rx="6" fill="#FFFBF4" stroke="#3A2117" stroke-width="2.5"/><line x1="6" y1="30" x2="50" y2="30" stroke="#3A2117" stroke-width="2.5"/><path d="M14 30l12 20" stroke="#B01F4E" stroke-width="4" stroke-linecap="round"/><rect x="34" y="16" width="10" height="10" rx="2" fill="#C8DB9C" stroke="#3A2117" stroke-width="2"/></svg>
+          <div><h3>Dvoupatrová herna</h3><p>Vnitřní herna přes dvě patra – zábava i za deště.</p></div>
+        </div>
+        <div class="pc">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 50V18M48 50V18M8 18h40" stroke="#3A2117" stroke-width="2.5" stroke-linecap="round"/><path d="M22 18v18M34 18v18" stroke="#3A2117" stroke-width="2"/><rect x="18" y="36" width="20" height="5" rx="2" fill="#B01F4E"/><circle cx="46" cy="10" r="5" fill="#E9A23B"/></svg>
+          <div><h3>Venkovní hřiště</h3><p>Na zahradě, kde děti vyběhají energii.</p></div>
+        </div>
+        <div class="pc">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="20" r="14" fill="#45612A"/><rect x="26" y="30" width="4" height="20" fill="#3A2117"/><rect x="8" y="44" width="40" height="6" rx="3" fill="#C8DB9C" stroke="#3A2117" stroke-width="2"/></svg>
+          <div><h3>Zahrada s posezením</h3><p>Krásná prostorná zahrada pro teplé dny.</p></div>
+        </div>
+        <div class="pc">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M10 26h30v10a12 12 0 0 1-12 12h-6a12 12 0 0 1-12-12z" fill="#FFFBF4" stroke="#3A2117" stroke-width="2.5"/><path d="M40 30h4a5 5 0 0 1 0 10h-5" fill="none" stroke="#3A2117" stroke-width="2.5"/><path d="M20 8c-3 4 3 6 0 12M30 8c-3 4 3 6 0 12" stroke="#B01F4E" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+          <div><h3>Wi-Fi a platba kartou</h3><p>Bezbariérový přístup a pejsci jsou vítáni.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="play-photos">
+      <div class="photo">Sem přijde Vaše fotka<small>dvoupatrová herna</small></div>
+      <div class="photo">Sem přijde Vaše fotka<small>hřiště na zahradě</small></div>
+      <div class="photo">Sem přijde Vaše fotka<small>posezení v zahradě</small></div>
+    </div>
+  </div>
+</section>
+<div class="scallop" aria-hidden="true"></div>
+
+<section class="sec" id="poptavka" aria-labelledby="h-obj">
+  <div class="wrap order-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:28px">
+        <div class="kicker">Jak objednat dort</div>
+        <h2 id="h-obj">Tři kroky k dortu, na který se bude čekat</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Řekněte nám, co slavíte</h3><p>Vyplňte krátkou poptávku vedle, zavolejte na 733 537 300 nebo se zastavte osobně v kavárně.</p></li>
+        <li><h3>Doladíme chuť a zdobení</h3><p>Probereme velikost, krém, potah i figurky a řekneme Vám cenu. U svatebních dortů Vás čeká schůzka s cukrářkou a ochutnávka krémů zdarma.</p></li>
+        <li><h3>Dort si vyzvednete u nás</h3><p>Hotový dort na Vás počká v kavárně na Masarykově 360. <span class="demo">ukázkový text</span> Svatební dort dovezeme na smluvené místo.</p></li>
+      </ol>
+    </div>
+
+    <form class="form-card" id="cakeForm" novalidate>
+      <h3>Poptávka dortu</h3>
+      <p class="sub">Čtyři klepnutí a máte hotovou větu – stačí ji přečíst do telefonu nebo odeslat.</p>
+
+      <fieldset>
+        <legend>Příležitost</legend>
+        <div class="chips" id="occ">
+          <label class="chip"><input type="radio" name="occ" value="narozeniny" checked><span>Narozeniny</span></label>
+          <label class="chip"><input type="radio" name="occ" value="výročí"><span>Výročí</span></label>
+          <label class="chip"><input type="radio" name="occ" value="křtiny"><span>Křtiny</span></label>
+          <label class="chip"><input type="radio" name="occ" value="oslavu"><span>Oslava</span></label>
+          <label class="chip"><input type="radio" name="occ" value="svatbu"><span>Svatba</span></label>
+        </div>
+      </fieldset>
+
+      <div class="row2">
+        <div>
+          <label class="lbl" for="por">Počet porcí</label>
+          <div class="stepper">
+            <button type="button" data-d="-2" aria-label="Ubrat porce">−</button>
+            <input id="por" type="number" min="4" max="200" step="1" value="12" inputmode="numeric">
+            <button type="button" data-d="2" aria-label="Přidat porce">+</button>
+          </div>
+        </div>
+        <div>
+          <label class="lbl" for="dat">Na kdy</label>
+          <input id="dat" type="date">
+        </div>
+      </div>
+
+      <fieldset style="margin-top:18px">
+        <legend>Příchuť (můžete zvolit více)</legend>
+        <div class="chips" id="fl">
+          <label class="chip"><input type="checkbox" name="fl" value="čokoláda" checked><span>Čokoláda</span></label>
+          <label class="chip"><input type="checkbox" name="fl" value="tvaroh"><span>Tvaroh</span></label>
+          <label class="chip"><input type="checkbox" name="fl" value="mascarpone"><span>Mascarpone</span></label>
+          <label class="chip"><input type="checkbox" name="fl" value="ovoce" checked><span>Ovoce</span></label>
+          <label class="chip"><input type="checkbox" name="fl" value="ořechy"><span>Ořechy</span></label>
+        </div>
+      </fieldset>
+
+      <div class="sentence-lbl">Vaše zpráva</div>
+      <p class="sentence" id="sentence" aria-live="polite">…</p>
+
+      <div class="form-actions">
+        <button class="btn btn-main" type="submit">Odeslat poptávku</button>
+        <a class="btn btn-ghost" href="tel:+420733537300">Zavolat 733 537 300</a>
+        <button class="btn copy-btn" type="button" id="copyBtn">Zkopírovat větu</button>
+      </div>
+      <p class="form-msg" id="formMsg" role="status">Toto je jen ukázka – v hotovém webu zpráva odejde přímo do Vašeho e-mailu.</p>
+    </form>
+  </div>
+</section>
+
+<section class="trust" aria-label="Hodnocení">
+  <div class="wrap">
+    <div class="score"><b>4,8</b><p>z 5 podle 32 hodnocení zákazníků na <a href="https://www.firmy.cz/detail/13315061-bastien-cafe-bohumin-novy-bohumin.html" target="_blank" rel="noopener">Firmy.cz</a></p></div>
+    <ul class="trust-list">
+      <li>Dortíky pečeme každý den ve vlastní výrobně z kvalitních surovin.</li>
+      <li>Zrekonstruovaná nekuřácká kavárna v bývalé budově PZKO vedle evangelického kostela.</li>
+      <li>Herna, hřiště i zahrada na jednom místě – zatímco děti řádí, Vy v klidu dopijete kávu.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Časté otázky</div>
+      <h2 id="h-faq">Než přijdete nebo objednáte</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Kolik stojí dort na objednávku?</summary><p>Cena závisí na velikosti dortu a na zdobení – zda chcete potah, krém, nahý dort, modelované figurky nebo jedlý papír. Přesnou cenu Vám řekneme po telefonu nebo v kavárně.</p></details>
+      <details><summary>Jak dlouho předem mám dort objednat?</summary><p>Ideálně alespoň týden předem, u svatebních dortů s větším předstihem kvůli konzultaci a ochutnávce. <span class="demo">ukázkový text</span></p></details>
+      <details><summary>Můžu ochutnat svatební dort předem?</summary><p>Ano. Ochutnávky krémů ke svatebnímu dortu jsou zcela zdarma – domluvte si schůzku s naší paní cukrářkou na 733 537 300.</p></details>
+      <details><summary>Je kavárna vhodná pro malé děti?</summary><p>Rozhodně. Máme dvoupatrovou vnitřní hernu, venkovní hřiště a zahradu s posezením. Vstup je bezbariérový, takže projedete i s kočárkem.</p></details>
+      <details><summary>Smím přijít se psem a zaplatit kartou?</summary><p>Ano, pejsci jsou vítáni a platit můžete kartou. K dispozici je i Wi-Fi.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt" aria-labelledby="h-kon">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Kontakt a cesta k nám</div>
+      <h2 id="h-kon">Najdete nás vedle evangelického kostela</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cbox">
+        <h3>Bastien café</h3>
+        <dl style="margin:0">
+          <div class="cline"><dt>Telefon</dt><dd><a href="tel:+420733537300"><b>733 537 300</b></a></dd></div>
+          <div class="cline"><dt>E-mail</dt><dd><a href="mailto:B@stien.cz">B@stien.cz</a></dd></div>
+          <div class="cline"><dt>Adresa</dt><dd>Masarykova 360<br>735 81 Bohumín (Nový Bohumín)</dd></div>
+          <div class="cline"><dt>Firma</dt><dd>BASTIEN CAFE S.R.O.</dd></div>
+        </dl>
+        <div class="social">
+          <a href="https://www.facebook.com/Bastien.cafe.Bohumin/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#3A2117" d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg>Facebook</a>
+          <a href="https://www.instagram.com/bastiencafe/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#3A2117" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#3A2117"/></svg>Instagram</a>
+        </div>
+      </div>
+      <div class="cbox">
+        <h3>Otevírací doba</h3>
+        <table class="hours" id="hoursTable">
+          <tr data-d="1"><td>Pondělí</td><td>14:00 – 20:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>8:00 – 20:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>8:00 – 20:00</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>8:00 – 20:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>8:00 – 21:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>10:00 – 20:00</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>10:00 – 20:00</td></tr>
+        </table>
+      </div>
+      <a class="map" href="https://mapy.cz/zakladni?q=Masarykova%20360%2C%20735%2081%20Bohum%C3%ADn" target="_blank" rel="noopener" aria-label="Otevřít adresu Masarykova 360, Bohumín na Mapy.cz">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="300" fill="#E4EDC9"/>
+          <path d="M-10 190 L410 120" stroke="#FFFBF4" stroke-width="22"/>
+          <path d="M140 -10 L190 310" stroke="#FFFBF4" stroke-width="14"/>
+          <path d="M300 -10 L260 310" stroke="#FFFBF4" stroke-width="10"/>
+          <rect x="40" y="40" width="70" height="50" rx="6" fill="#C8DB9C"/>
+          <rect x="220" y="30" width="60" height="70" rx="6" fill="#C8DB9C"/>
+          <rect x="310" y="180" width="70" height="60" rx="6" fill="#C8DB9C"/>
+          <rect x="30" y="220" width="90" height="50" rx="6" fill="#C8DB9C"/>
+          <path d="M228 120 l8 -14 l8 14 z M232 120 h8 v14 h-8z" fill="#5E4034"/>
+          <circle cx="200" cy="140" r="34" fill="#B01F4E" opacity=".15"/>
+          <path d="M200 100c-15 0-26 11-26 25 0 19 26 41 26 41s26-22 26-41c0-14-11-25-26-25z" fill="#B01F4E"/>
+          <circle cx="200" cy="125" r="9" fill="#FFFBF4"/>
+        </svg>
+        <div class="map-label"><b>Masarykova 360, Bohumín</b>V bývalé budově PZKO vedle evangelického kostela · <span>Otevřít v Mapy.cz →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> BASTIEN CAFE S.R.O. · Masarykova 360, Bohumín</span>
+    <span><a href="tel:+420733537300">733 537 300</a> · <a href="mailto:B@stien.cz">B@stien.cz</a></span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Rychlé akce">
+  <a class="btn btn-ghost" href="tel:+420733537300">Volat 733 537 300</a>
+  <a class="btn btn-main" href="#poptavka">Objednat dort</a>
+</nav>
+
+<script>
+(function(){
+  // Otevírací doba: index = den v týdnu (0 = neděle), [od, do] v minutách
+  var H={0:[600,1200],1:[840,1200],2:[480,1200],3:[480,1200],4:[480,1200],5:[480,1260],6:[600,1200]};
+  var NAMES=["Neděle","Pondělí","Úterý","Středa","Čtvrtek","Pátek","Sobota"];
+  var SHORT=["Ne","Po","Út","St","Čt","Pá","So"];
+  function fmt(m){return Math.floor(m/60)+":"+String(m%60).padStart(2,"0")}
+  function pragueNow(){
+    try{
+      var parts=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+      var o={};parts.forEach(function(p){o[p.type]=p.value});
+      var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+      return {d:map[o.weekday],m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+    }catch(e){var n=new Date();return {d:n.getDay(),m:n.getHours()*60+n.getMinutes()}}
+  }
+  var now=pragueNow(),h=H[now.d],box=document.getElementById("status"),
+      main=document.getElementById("status-main"),sub=document.getElementById("status-sub");
+  if(now.m>=h[0]&&now.m<h[1]){
+    main.textContent="Dnes máme otevřeno do "+fmt(h[1]);
+    var left=h[1]-now.m;
+    sub.textContent=left<=60?"Zavíráme za "+left+" min – stihnete ještě kávu.":"Přijďte na kávu a zákusek, herna je volná pro děti.";
+  }else if(now.m<h[0]){
+    box.classList.add("closed");
+    main.textContent="Dnes otevíráme v "+fmt(h[0]);
+    sub.textContent="Otevřeno dnes "+fmt(h[0])+" – "+fmt(h[1])+".";
+  }else{
+    box.classList.add("closed");
+    var t=(now.d+1)%7;
+    main.textContent="Dnes už máme zavřeno";
+    sub.textContent="Zítra ("+NAMES[t].toLowerCase()+") otevíráme v "+fmt(H[t][0])+".";
+  }
+  var week=document.getElementById("week"),order=[1,2,3,4,5,6,0];
+  order.forEach(function(d){
+    var li=document.createElement("li");if(d===now.d)li.className="today";
+    li.innerHTML="<span>"+NAMES[d]+(d===now.d?" (dnes)":"")+"</span><span>"+fmt(H[d][0])+" – "+fmt(H[d][1])+"</span>";
+    week.appendChild(li);
+  });
+  var tr=document.querySelector('#hoursTable tr[data-d="'+now.d+'"]');if(tr)tr.classList.add("today");
+  document.getElementById("yr").textContent=new Date().getFullYear();
+
+  // Poptávka dortu
+  var form=document.getElementById("cakeForm"),por=document.getElementById("por"),
+      dat=document.getElementById("dat"),out=document.getElementById("sentence");
+  var d0=new Date();d0.setDate(d0.getDate()+7);
+  dat.value=d0.toISOString().slice(0,10);dat.min=new Date().toISOString().slice(0,10);
+  function porce(n){return n===1?"1 porci":(n>=2&&n<=4)?n+" porce":n+" porcí"}
+  function build(){
+    var occ=form.querySelector('input[name="occ"]:checked');
+    var fl=[].slice.call(form.querySelectorAll('input[name="fl"]:checked')).map(function(i){return i.value});
+    var n=Math.max(1,parseInt(por.value,10)||1);
+    var dTxt="";
+    if(dat.value){var p=dat.value.split("-");var dd=new Date(+p[0],+p[1]-1,+p[2]);
+      dTxt=" na "+NAMES[dd.getDay()].toLowerCase().replace("neděle","neděli").replace("středa","středu").replace("sobota","sobotu")+" "+(+p[2])+". "+(+p[1])+". "+p[0];}
+    var flTxt=fl.length?(fl.length===1?fl[0]:fl.slice(0,-1).join(", ")+" a "+fl[fl.length-1]):"podle Vašeho doporučení";
+    var s="Dobrý den, rád/a bych objednal/a dort na "+(occ?occ.value:"oslavu")+" pro "+porce(n)+dTxt+". Příchuť: "+flTxt+". Můžete mi prosím říct cenu a možnosti zdobení?";
+    out.textContent="„"+s+"“";return s;
+  }
+  form.addEventListener("input",build);form.addEventListener("change",build);
+  [].forEach.call(form.querySelectorAll(".stepper button"),function(b){
+    b.addEventListener("click",function(){var v=(parseInt(por.value,10)||0)+parseInt(b.getAttribute("data-d"),10);por.value=Math.min(200,Math.max(4,v));build();});
+  });
+  build();
+  document.getElementById("copyBtn").addEventListener("click",function(){
+    var s=build(),b=this;
+    var done=function(){b.textContent="Zkopírováno ✓";setTimeout(function(){b.textContent="Zkopírovat větu"},1800)};
+    if(navigator.clipboard){navigator.clipboard.writeText(s).then(done,done)}else{done()}
+  });
+  form.addEventListener("submit",function(e){e.preventDefault();document.getElementById("formMsg").classList.add("show");});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Studio MAXIM | Kadeřnictví a kosmetika Opava</title>
+<meta name="description" content="Nezávazný návrh webu pro Studio MAXIM – kadeřnictví a kosmetika v Opavě-Kateřinkách: dámské a pánské střihy, melírování a permanentní make-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Red+Hat+Text:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Studio MAXIM",
+  "telephone":"+420603527952",
+  "address":{"@type":"PostalAddress","streetAddress":"Kolofíkovo nábřeží 1121/13","addressLocality":"Opava","addressCountry":"CZ"},
+  "openingHours":["Mo-Th 08:00-18:00","Fr 08:00-14:00"],
+  "sameAs":["https://www.facebook.com/p/Studio-MAXIM-100063621790660/"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: dělený hero s obří linkovou iniciálou M, střídání porcelánových a pudrových pásů, grafitový závěr s kontaktem. */
+:root{
+  --graphite:#232326;
+  --porcelain:#FBF8F6;
+  --powder:#F2D4D0;
+  --burgundy:#7A2335;
+  --burgundy-deep:#5E1A28;
+  --muted:#5C5458;
+  --line:#D9CBC7;
+  --paper:#FFFFFF;
+  --on-dark:#FBF8F6;
+  --on-dark-muted:#CFC6C4;
+  --ok:#2F6B4F;
+  --display:"Italiana","Didot","Bodoni 72","Times New Roman",serif;
+  --text:"Red Hat Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1200px;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--porcelain);color:var(--graphite);font-family:var(--text);font-size:17px;line-height:1.6;padding-bottom:76px;overflow-x:hidden}
+@media (min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+:focus-visible{outline:2px solid var(--burgundy);outline-offset:3px;border-radius:2px}
+.nw{white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* štítek ukázkový text */
+.demo{display:inline-block;font-family:var(--text);font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;font-variant:small-caps;line-height:1;padding:4px 7px 5px;border:1px solid currentColor;border-radius:3px;color:var(--muted);vertical-align:middle;white-space:nowrap}
+.dark .demo{color:var(--on-dark-muted)}
+
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--burgundy)}
+
+/* banner */
+.notice{background:var(--graphite);color:var(--on-dark);font-size:13px;text-align:center;padding-block:9px}
+.notice strong{font-weight:600}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(251,248,246,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.04em}
+.brand small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:none}
+@media (min-width:560px){.brand small{display:inline}}
+.nav{display:none;gap:26px;font-size:14px;font-weight:500}
+.nav a{text-decoration:none;position:relative;padding-block:4px}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--burgundy);transition:right .25s}
+.nav a:hover::after{right:0}
+@media (min-width:980px){.nav{display:flex}}
+.head-tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;color:var(--burgundy);font-variant-numeric:tabular-nums;white-space:nowrap}
+.head-tel svg{width:16px;height:16px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--text);font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:15px 28px;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,transform .2s,border-color .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--burgundy);color:var(--porcelain)}
+.btn-primary:hover{background:var(--burgundy-deep);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--graphite);border-color:var(--graphite)}
+.btn-ghost:hover{background:var(--graphite);color:var(--porcelain)}
+
+/* status pill */
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--graphite)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none;box-shadow:0 0 0 4px rgba(92,84,88,.15)}
+.status.is-open i{background:var(--ok);box-shadow:0 0 0 4px rgba(47,107,79,.18)}
+.status.is-closed i{background:var(--burgundy);box-shadow:0 0 0 4px rgba(122,35,53,.15)}
+.dark .status{color:var(--on-dark)}
+.dark .status.is-open i{background:#7FC9A4}
+.dark .status.is-closed i{background:var(--powder)}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:8px;padding-block:28px 40px}
+.hero-text{display:flex;flex-direction:column;gap:18px;min-width:0}
+.hero h1{font-size:clamp(2.55rem,8.6vw,5.4rem);line-height:1.02}
+.hero h1 em{font-style:normal;color:var(--burgundy)}
+.hero-lead{font-size:17px;color:var(--muted);max-width:34ch}
+.rating{display:flex;align-items:center;gap:12px;font-size:15px;flex-wrap:wrap}
+.stars{display:inline-flex;gap:2px;color:var(--burgundy)}
+.stars svg{width:15px;height:15px}
+.rating a{color:var(--graphite);text-underline-offset:3px;text-decoration-color:var(--line)}
+.rating a:hover{text-decoration-color:var(--burgundy)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-tel{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.hero-art{position:relative;min-width:0;display:flex;justify-content:center}
+.monogram{width:min(100%,520px);height:auto;display:block}
+.monogram .ink{fill:none;stroke:var(--graphite);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.monogram .hair{fill:none;stroke:var(--burgundy);stroke-width:1.1;stroke-linecap:round}
+.monogram .thick{fill:var(--powder);stroke:var(--graphite);stroke-width:1.1;stroke-linejoin:round}
+.monogram .fine{stroke-width:.7}
+.mono-caption{position:absolute;right:4%;bottom:6%;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg)}
+@media (prefers-reduced-motion:no-preference){
+  .monogram .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s cubic-bezier(.6,.1,.2,1) forwards}
+  .monogram .d2{animation-delay:.35s}.monogram .d3{animation-delay:.8s}.monogram .d4{animation-delay:1.2s}
+  .monogram .thick{animation:fadein 1.4s .6s both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes fadein{from{fill-opacity:0}to{fill-opacity:1}}
+}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding-block:56px 72px}
+  .hero-lead{font-size:19px}
+}
+@media (max-width:899px){
+  .hero-art{margin-top:8px}
+  .monogram{width:min(88%,420px)}
+}
+
+/* sections */
+section{scroll-margin-top:72px}
+.sec{padding-block:72px}
+@media (min-width:900px){.sec{padding-block:104px}}
+.sec-head{display:grid;gap:14px;margin-bottom:40px;max-width:720px}
+.sec-head h2{font-size:clamp(2.3rem,5.6vw,4rem)}
+.sec-head p{color:var(--muted);max-width:60ch}
+
+/* kadeřnictví */
+.hair-grid{display:grid;gap:40px}
+@media (min-width:900px){.hair-grid{grid-template-columns:1fr 1.25fr;gap:72px;align-items:start}}
+.pricelist{border-top:1px solid var(--graphite)}
+.pricelist-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.svc{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding-block:22px;border-bottom:1px solid var(--line)}
+.svc h3{font-size:28px;grid-column:1}
+.svc .price{grid-column:2;grid-row:1;align-self:center;font-size:14px;font-weight:600;color:var(--burgundy);white-space:nowrap}
+.svc p{grid-column:1 / -1;color:var(--muted);font-size:16px;max-width:58ch}
+.hair-aside{display:grid;gap:20px}
+.hair-aside .photo{aspect-ratio:4/3}
+@media (min-width:900px){.hair-aside .photo{aspect-ratio:1/1}}
+
+/* fotomísto */
+.photo{position:relative;max-width:100%;background:
+  repeating-linear-gradient(135deg,transparent 0 14px,rgba(122,35,53,.05) 14px 15px),var(--paper);
+  border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:20px;color:var(--muted);font-size:14px;overflow:hidden}
+.photo::before{content:"";position:absolute;inset:10px;border:1px solid var(--powder);pointer-events:none}
+.photo svg{width:34px;height:34px;color:var(--burgundy)}
+.photo b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--graphite)}
+.photo span{font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+
+/* PMU */
+.pmu{background:var(--powder)}
+.pmu .sec-head p{color:#4E4549}
+.pmu-grid{display:grid;gap:28px}
+@media (min-width:900px){.pmu-grid{grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}}
+.stage{position:relative;background:var(--porcelain);border-radius:50% 50% 24px 24px / 38% 38% 24px 24px;padding:18px 10px 8px;max-width:520px;width:100%;margin-inline:auto}
+.face{width:100%;height:auto;display:block;overflow:visible}
+.face .base{fill:none;stroke:var(--graphite);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.face .soft{stroke-width:1;opacity:.8}
+.face .wave{fill:none;stroke:var(--graphite);stroke-width:1;stroke-linecap:round;opacity:.55}
+.zone{cursor:pointer;outline:none}
+.zone .hit{fill:transparent;stroke:none}
+.zone .halo{fill:var(--powder);opacity:0;transition:opacity .3s}
+.zone .zl{fill:none;stroke:var(--graphite);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s,stroke-width .25s}
+.zone .zf{fill:transparent;transition:fill .25s}
+.zone .tag-line{stroke:var(--muted);stroke-width:.8;stroke-dasharray:2 3;transition:stroke .25s}
+.zone .tag-dot{fill:var(--porcelain);stroke:var(--muted);stroke-width:1;transition:fill .25s,stroke .25s}
+.zone text{paint-order:stroke;stroke:var(--porcelain);stroke-width:5px;stroke-linejoin:round;font-family:var(--text);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;fill:var(--muted);transition:fill .25s}
+.zone:hover .zl{stroke:var(--burgundy)}
+.zone:hover text{fill:var(--burgundy)}
+.zone:focus-visible .halo{opacity:.6}
+.zone.on .halo{opacity:1}
+.zone.on .zl{stroke:var(--burgundy);stroke-width:3}
+.zone.on .zf{fill:var(--burgundy);fill-opacity:.85}
+.zone.on .tag-line{stroke:var(--burgundy)}
+.zone.on .tag-dot{fill:var(--burgundy);stroke:var(--burgundy)}
+.zone.on text{fill:var(--burgundy)}
+.zone-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.zone-tabs button{font-family:var(--text);font-size:14px;font-weight:600;padding:10px 18px;border-radius:999px;border:1px solid var(--graphite);background:transparent;color:var(--graphite);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.zone-tabs button[aria-selected="true"]{background:var(--burgundy);border-color:var(--burgundy);color:var(--porcelain)}
+.zone-tabs button:hover:not([aria-selected="true"]){background:rgba(122,35,53,.08)}
+.card{background:var(--porcelain);border-radius:4px;padding:28px 24px;box-shadow:0 1px 0 rgba(35,35,38,.06),0 18px 40px -24px rgba(94,26,40,.35)}
+@media (min-width:600px){.card{padding:36px 36px}}
+.card-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.card h3{font-size:clamp(2.2rem,4.6vw,3rem);color:var(--burgundy)}
+.card .intro{color:var(--muted);margin-bottom:20px}
+.card dl{margin:0;display:grid;gap:0}
+.card dl div{display:grid;gap:4px;padding-block:14px;border-top:1px solid var(--line)}
+@media (min-width:600px){.card dl div{grid-template-columns:130px 1fr;gap:20px}}
+.card dt{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--graphite);padding-top:3px}
+.card dd{margin:0;font-size:16px;color:#3A3438}
+.card-actions{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin-top:22px}
+.card-actions small{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:no-preference){.card.swap{animation:swap .35s ease}@keyframes swap{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:s;padding:28px 0;border-top:1px solid var(--graphite);display:grid;gap:10px;align-content:start}
+@media (min-width:900px){.steps li{padding:30px 32px 0 0}.steps li+li{padding-left:32px;border-left:1px solid var(--line)}}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:64px;line-height:.9;color:var(--burgundy)}
+.steps h3{font-family:var(--text);font-weight:600;font-size:19px;line-height:1.3}
+.steps p{color:var(--muted);font-size:16px}
+
+/* galerie */
+.gallery{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.gallery .photo{aspect-ratio:1/1}
+.gallery .g1{grid-column:1 / -1;aspect-ratio:16/10}
+@media (min-width:900px){
+  .gallery{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:16px}
+  .gallery .photo{aspect-ratio:auto}
+  .gallery .g1{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+}
+@media (max-width:899px){.gallery .photo:not(.g1) b{font-size:18px}.gallery .photo:not(.g1){padding:14px}}
+.gallery-note{margin-top:16px;font-size:14px;color:var(--muted)}
+
+/* faq */
+.faq-grid{display:grid;gap:32px;align-items:start}
+@media (min-width:900px){.faq-grid{grid-template-columns:1fr 1.6fr;gap:72px}}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding-block:20px;font-weight:600;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;background:linear-gradient(var(--burgundy),var(--burgundy)) center/14px 1.5px no-repeat,linear-gradient(var(--burgundy),var(--burgundy)) center/1.5px 14px no-repeat;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding-bottom:22px;color:var(--muted);max-width:62ch;display:grid;gap:10px;justify-items:start}
+
+/* kontakt (tmavý) */
+.dark{background:var(--graphite);color:var(--on-dark)}
+.dark .eyebrow{color:var(--powder)}
+.dark .sec-head p{color:var(--on-dark-muted)}
+.contact-grid{display:grid;gap:48px}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1fr;gap:72px}}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:16px}
+.hours th,.hours td{text-align:left;padding:12px 0;border-bottom:1px solid rgba(251,248,246,.16);font-weight:400}
+.hours td{text-align:right}
+.hours tr.today th,.hours tr.today td{color:var(--powder);font-weight:600}
+.hours tr.today th::after{content:"dnes";margin-left:10px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--powder);border-radius:3px;padding:2px 6px;vertical-align:2px}
+.cinfo{display:grid;gap:22px;margin-top:36px}
+.cinfo div{display:grid;gap:2px}
+.cinfo dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-muted);font-weight:600}
+.cinfo dd{margin:0;font-size:18px}
+.cinfo a{color:var(--on-dark);text-underline-offset:4px;text-decoration-color:rgba(242,212,208,.5)}
+.cinfo a:hover{text-decoration-color:var(--powder)}
+.big-tel{font-family:var(--display);font-size:clamp(2.4rem,7vw,3.4rem);line-height:1;text-decoration:none!important;font-variant-numeric:tabular-nums;color:var(--powder)!important}
+.links{display:flex;flex-wrap:wrap;gap:10px 22px}
+.form{background:var(--porcelain);color:var(--graphite);border-radius:4px;padding:28px 22px;display:grid;gap:16px;align-content:start}
+@media (min-width:600px){.form{padding:36px}}
+.form h3{font-size:34px}
+.form p.small{font-size:14px;color:var(--muted)}
+.field{display:grid;gap:6px}
+.field label{font-size:13px;font-weight:600;letter-spacing:.04em}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--graphite);background:var(--paper);border:1px solid #BEB0AD;border-radius:3px;padding:12px 14px;width:100%;min-width:0}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--burgundy);outline-offset:0;border-color:var(--burgundy)}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.form-msg{background:var(--powder);border-left:3px solid var(--burgundy);padding:14px 16px;font-size:15px}
+.form-msg a{color:var(--burgundy);font-weight:600}
+
+footer{background:var(--graphite);color:var(--on-dark-muted);font-size:13px;border-top:1px solid rgba(251,248,246,.14)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding-block:24px}
+
+/* mobilní pruh */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--porcelain);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1.2fr;gap:10px;padding:10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));box-shadow:0 -10px 30px -18px rgba(35,35,38,.4)}
+.callbar .btn{padding:13px 12px;font-size:15px}
+@media (min-width:900px){.callbar{display:none}}
+</style>
+
+<div class="notice"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy <strong>Studio MAXIM</strong></div></div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Studio MAXIM – začátek stránky"><b>Studio MAXIM</b><small>Opava-Kateřinky</small></a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#kadernictvi">Kadeřnictví</a>
+      <a href="#pmu">Permanentní make-up</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Otevírací doba a kontakt</a>
+    </nav>
+    <a class="head-tel" href="tel:+420603527952"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>603 527 952</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="eyebrow">Kadeřnictví &amp; kosmetika · Opava-Kateřinky</span>
+        <h1 id="h-hero">Střih, melír i&nbsp;permanentní <span class="nw">make-up</span> <em>v&nbsp;Kateřinkách.</em></h1>
+        <p class="hero-lead">Dámské i pánské střihy, melírování a permanentní make-up obočí, linek a rtů. Jedno studio na Kolofíkově nábřeží.</p>
+        <div class="rating">
+          <span class="stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20"><defs><linearGradient id="half"><stop offset="60%" stop-color="currentColor"/><stop offset="60%" stop-color="currentColor" stop-opacity=".25"/></linearGradient></defs><path fill="url(#half)" d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg>
+          </span>
+          <a href="https://www.facebook.com/p/Studio-MAXIM-100063621790660/" target="_blank" rel="noopener"><strong>4,6</strong> z 18 hodnocení na Facebooku</a>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+420603527952"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Objednat se</a>
+          <span class="hero-tel">tel. 603 527 952</span>
+        </div>
+        <span class="status" data-status><i></i><span>Otevírací doba: Po–Čt 8–18, Pá 8–14</span></span>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg class="monogram" viewBox="0 0 420 480" role="img">
+          <!-- silné tahy M (didonský kontrast) -->
+          <path class="thick" d="M64 72 L82 72 L210 338 L210 372 Z"/>
+          <path class="thick" d="M346 72 L364 72 L364 430 L346 430 Z"/>
+          <!-- tenké tahy -->
+          <g class="ink">
+            <path class="draw" pathLength="1" d="M58 72 V430"/>
+            <path class="draw" pathLength="1" d="M210 372 L346 72"/>
+            <path class="draw d2 fine" pathLength="1" d="M70 96 V430"/>
+            <path class="draw d2 fine" pathLength="1" d="M210 340 L334 72"/>
+            <path class="draw" pathLength="1" d="M30 430 H98 M318 430 H392 M30 72 H82 M330 72 H392"/>
+            <path class="draw d2 fine" pathLength="1" d="M30 440 H98 M318 440 H392 M30 62 H82 M330 62 H392"/>
+          </g>
+          <!-- tvář -->
+          <g class="ink">
+            <path class="draw d3" pathLength="1" d="M160 150 C158 200 175 236 210 248"/>
+            <path class="draw d3" pathLength="1" d="M262 160 C260 205 244 238 210 248"/>
+            <path class="draw d3" pathLength="1" d="M172 160 Q186 151 201 158 M220 158 Q235 151 248 160"/>
+            <path class="draw d3" pathLength="1" d="M176 177 Q187 185 198 177 M222 177 Q233 185 244 177"/>
+            <path class="draw d4 fine" pathLength="1" d="M180 181 l-3 5 M187 184 l-1 5 M194 182 l1 5 M226 182 l-1 5 M233 184 l1 5 M240 181 l3 5"/>
+            <path class="draw d3" pathLength="1" d="M211 170 C208 190 206 200 203 207 Q209 211 216 208"/>
+            <path class="draw d3" pathLength="1" d="M195 223 Q203 217 210 221 Q217 217 225 223 Q210 233 195 223 Z M195 223 Q210 226 225 223"/>
+            <path class="draw d3 fine" pathLength="1" d="M192 246 L189 300 M228 246 L232 300"/>
+          </g>
+          <!-- vlasy -->
+          <g class="hair">
+            <path class="draw d2" pathLength="1" d="M156 162 C148 110 180 90 212 90 C250 90 274 118 266 162"/>
+            <path class="draw d3" pathLength="1" d="M226 90 C292 98 314 150 296 186 C280 220 320 236 336 262 C352 290 342 322 366 352"/>
+            <path class="draw d3" pathLength="1" d="M240 96 C302 112 300 160 282 190 C264 218 302 240 318 270 C334 298 322 332 346 362"/>
+            <path class="draw d4" pathLength="1" d="M254 106 C298 130 288 172 274 198 C260 226 294 246 304 274 C314 300 306 322 322 346"/>
+            <path class="draw d3" pathLength="1" d="M172 100 C130 116 132 170 150 200 C164 226 132 252 120 282 C110 306 120 330 104 356"/>
+            <path class="draw d4" pathLength="1" d="M162 110 C122 134 120 180 138 208 C150 230 120 258 112 290"/>
+            <path class="draw d4 fine" pathLength="1" d="M190 92 C214 104 230 118 236 140 M204 90 C232 100 252 116 258 140"/>
+          </g>
+        </svg>
+        <span class="mono-caption">Studio MAXIM · Opava</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="kadernictvi" aria-labelledby="h-hair" style="padding-top:48px">
+    <div class="wrap">
+      <div class="hair-grid">
+        <div class="hair-aside">
+          <div class="sec-head" style="margin-bottom:8px">
+            <span class="eyebrow">Kadeřnictví</span>
+            <h2 id="h-hair">Střihy pro dámy i&nbsp;pány, melír na míru</h2>
+            <p>Dámské a pánské střihy a melírování pod jednou střechou. Ceny se odvíjejí od délky a hustoty vlasů, proto je řekneme konkrétně po telefonu.</p>
+          </div>
+          <div class="photo">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><path d="M11 8l2-3h6l2 3"/><circle cx="16" cy="17" r="5.5"/></svg>
+            <b>Sem přijde Vaše fotka</b>
+            <span>Interiér studia nebo práce u křesla</span>
+          </div>
+        </div>
+        <div>
+          <div class="pricelist">
+            <div class="pricelist-head"><span>Služba</span><span class="demo">ukázkový text</span></div>
+            <article class="svc">
+              <h3>Dámský střih</h3><span class="price">cena na dotaz</span>
+              <p>Střih podle tvaru obličeje a toho, kolik času ráno chcete věnovat úpravě, včetně mytí a finálního foukání.</p>
+            </article>
+            <article class="svc">
+              <h3>Pánský střih</h3><span class="price">cena na dotaz</span>
+              <p>Krátký klasický i delší střih s čistě dočištěnými přechody na spáncích a krku.</p>
+            </article>
+            <article class="svc">
+              <h3>Melírování</h3><span class="price">cena na dotaz</span>
+              <p>Světlé prameny, které rozjasní obličej a odrostou nenápadněji než celoplošná barva.</p>
+            </article>
+            <article class="svc">
+              <h3>Kosmetika</h3><span class="price">cena na dotaz</span>
+              <p>Kosmetické ošetření ve stejném studiu, takže vlasy i pleť vyřešíte během jedné cesty do Kateřinek.</p>
+            </article>
+          </div>
+          <p style="margin-top:22px;font-size:15px;color:var(--muted)">Přesnou cenu Vám řekneme do telefonu na <a href="tel:+420603527952" style="color:var(--burgundy);font-weight:600;font-variant-numeric:tabular-nums">603 527 952</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec pmu" id="pmu" aria-labelledby="h-pmu">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Permanentní make-up</span>
+        <h2 id="h-pmu">Permanentní <span class="nw">make-up</span> – kde a&nbsp;jak</h2>
+        <p>Klikněte na obočí, oční linky nebo rty. Ukážeme, co pigmentace dané partie znamená, jak probíhá konzultace a co čekat během hojení.</p>
+      </div>
+      <div class="pmu-grid">
+        <div class="stage">
+          <svg class="face" viewBox="0 0 400 440" aria-label="Linková kresba tváře s klikacími zónami">
+            <!-- vlasy -->
+            <path class="wave" d="M108 176 C82 70 318 70 292 176"/>
+            <path class="wave" d="M118 150 C120 92 210 70 262 104 C286 120 296 150 292 176"/>
+            <path class="wave" d="M100 190 C72 240 110 290 86 350 C76 376 92 404 80 430"/>
+            <path class="wave" d="M300 190 C328 240 290 290 314 350 C324 376 308 404 320 430"/>
+            <path class="wave" d="M92 214 C70 262 102 300 74 360"/>
+            <path class="wave" d="M308 214 C330 262 298 300 326 360"/>
+            <!-- obrys tváře -->
+            <path class="base" d="M114 168 C110 268 150 344 200 356 C250 344 290 268 286 168"/>
+            <path class="base soft" d="M114 200 C104 196 100 214 106 226 C110 236 116 238 118 236 M286 200 C296 196 300 214 294 226 C290 236 284 238 282 236"/>
+            <path class="base soft" d="M176 352 L172 420 M224 352 L228 420"/>
+            <!-- nos -->
+            <path class="base" d="M202 214 C200 244 192 258 189 266 Q200 274 213 266"/>
+            <!-- oči (oční bulvy) -->
+            <path class="base soft" d="M138 216 Q160 202 182 216 Q160 228 138 216 Z M218 216 Q240 202 262 216 Q240 228 218 216 Z"/>
+            <circle cx="160" cy="215" r="7" fill="none" stroke="var(--graphite)" stroke-width="1.2"/>
+            <circle cx="240" cy="215" r="7" fill="none" stroke="var(--graphite)" stroke-width="1.2"/>
+            <circle cx="160" cy="215" r="2.6" fill="var(--graphite)"/>
+            <circle cx="240" cy="215" r="2.6" fill="var(--graphite)"/>
+
+            <!-- ZÓNA: obočí -->
+            <g class="zone" data-zone="brows" tabindex="0" role="button" aria-label="Obočí">
+              <ellipse class="halo" cx="200" cy="184" rx="96" ry="22"/>
+              <path class="zl" d="M134 190 Q156 172 186 182 M214 182 Q244 172 266 190"/>
+              <path class="tag-line" d="M134 186 L58 150"/>
+              <circle class="tag-dot" cx="58" cy="150" r="4"/>
+              <text x="54" y="134" text-anchor="middle">Obočí</text>
+              <rect class="hit" x="20" y="118" width="260" height="84"/>
+            </g>
+            <!-- ZÓNA: oční linky -->
+            <g class="zone" data-zone="liner" tabindex="0" role="button" aria-label="Oční linky">
+              <ellipse class="halo" cx="200" cy="214" rx="90" ry="16"/>
+              <path class="zl" d="M136 215 Q160 199 184 213 L190 208 M216 213 Q240 199 264 215 M216 213 L210 208"/>
+              <path class="tag-line" d="M266 214 L344 232"/>
+              <circle class="tag-dot" cx="344" cy="232" r="4"/>
+              <text x="344" y="256" text-anchor="middle">Linky</text>
+              <rect class="hit" x="128" y="200" width="250" height="64"/>
+            </g>
+            <!-- ZÓNA: rty -->
+            <g class="zone" data-zone="lips" tabindex="0" role="button" aria-label="Rty">
+              <ellipse class="halo" cx="200" cy="304" rx="48" ry="22"/>
+              <path class="zf" d="M170 302 Q184 290 200 296 Q216 290 230 302 Q200 324 170 302 Z"/>
+              <path class="zl" d="M170 302 Q184 290 200 296 Q216 290 230 302 Q200 306 170 302 Z M170 302 Q200 326 230 302"/>
+              <path class="tag-line" d="M168 306 L72 334"/>
+              <circle class="tag-dot" cx="72" cy="334" r="4"/>
+              <text x="72" y="358" text-anchor="middle">Rty</text>
+              <rect class="hit" x="36" y="278" width="210" height="90"/>
+            </g>
+          </svg>
+        </div>
+
+        <div>
+          <div class="zone-tabs" role="tablist" aria-label="Vyberte partii">
+            <button type="button" role="tab" id="tab-brows" data-zone="brows" aria-selected="true" aria-controls="pmu-card">Obočí</button>
+            <button type="button" role="tab" id="tab-liner" data-zone="liner" aria-selected="false" aria-controls="pmu-card">Oční linky</button>
+            <button type="button" role="tab" id="tab-lips" data-zone="lips" aria-selected="false" aria-controls="pmu-card">Rty</button>
+          </div>
+          <article class="card" id="pmu-card" role="tabpanel" aria-live="polite">
+            <div class="card-top"><h3 data-f="title">Obočí</h3><span class="demo">ukázkový text</span></div>
+            <p class="intro" data-f="intro"></p>
+            <dl>
+              <div><dt>Co to je</dt><dd data-f="what"></dd></div>
+              <div><dt>Konzultace</dt><dd data-f="consult"></dd></div>
+              <div><dt>Hojení a korekce</dt><dd data-f="heal"></dd></div>
+            </dl>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="tel:+420603527952">Domluvit konzultaci</a>
+              <small>nebo volejte 603 527 952</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="postup" aria-labelledby="h-steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Jak to probíhá</span>
+        <h2 id="h-steps">Od telefonátu k&nbsp;hotovému účesu</h2>
+        <p><span class="demo">ukázkový text</span></p>
+      </div>
+      <ol class="steps">
+        <li><h3>Zavoláte na 603 527 952</h3><p>V otevírací době Po–Čt 8–18 a Pá 8–14. Řeknete, o jakou službu jde, a domluvíme termín.</p></li>
+        <li><h3>Ujasníme si, co chcete</h3><p>U střihu a melíru přímo v křesle, u permanentního make-upu na konzultaci před samotným zákrokem.</p></li>
+        <li><h3>Odcházíte upravení</h3><p>Po střihu doporučíme, jak účes doma udržet. Po permanentním make-upu dostanete pokyny k hojení a termín korekce.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="galerie" aria-labelledby="h-gal" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Galerie</span>
+        <h2 id="h-gal">Práce ze studia</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo g1"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><path d="M11 8l2-3h6l2 3"/><circle cx="16" cy="17" r="5.5"/></svg><b>Sem přijde Vaše fotka</b><span>Dámský střih</span></div>
+        <div class="photo"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><path d="M11 8l2-3h6l2 3"/><circle cx="16" cy="17" r="5.5"/></svg><b>Sem přijde Vaše fotka</b><span>Melír</span></div>
+        <div class="photo"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><path d="M11 8l2-3h6l2 3"/><circle cx="16" cy="17" r="5.5"/></svg><b>Sem přijde Vaše fotka</b><span>Pánský střih</span></div>
+        <div class="photo"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><path d="M11 8l2-3h6l2 3"/><circle cx="16" cy="17" r="5.5"/></svg><b>Sem přijde Vaše fotka</b><span>Obočí</span></div>
+        <div class="photo"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><path d="M11 8l2-3h6l2 3"/><circle cx="16" cy="17" r="5.5"/></svg><b>Sem přijde Vaše fotka</b><span>Rty</span></div>
+      </div>
+      <p class="gallery-note">Fotky před a po zákaznice u permanentního make-upu hledají nejčastěji. Stačí fotky z mobilu při denním světle.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="faq" aria-labelledby="h-faq" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <div class="sec-head">
+        <span class="eyebrow">Časté otázky</span>
+        <h2 id="h-faq">Než zavoláte</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Jak se objednám?</summary>
+          <div class="ans"><p>Telefonicky na 603 527 952, v pondělí až čtvrtek od 8 do 18 hodin a v pátek od 8 do 14 hodin.</p></div>
+        </details>
+        <details>
+          <summary>Kolik stojí střih nebo melír?</summary>
+          <div class="ans"><p>Ceník zatím není zveřejněný. Cena záleží hlavně na délce a hustotě vlasů, přesnou částku Vám řekneme do telefonu.</p></div>
+        </details>
+        <details>
+          <summary>Stříháte i pány?</summary>
+          <div class="ans"><p>Ano, studio dělá dámské i pánské střihy.</p></div>
+        </details>
+        <details>
+          <summary>Musím před permanentním make-upem na konzultaci?</summary>
+          <div class="ans"><span class="demo">ukázkový text</span><p>Konzultace se obvykle dělá předem. Probere se tvar, odstín pigmentu, zdravotní stav a případné alergie, a teprve pak se domlouvá termín zákroku.</p></div>
+        </details>
+        <details>
+          <summary>Jak dlouho se permanentní make-up hojí?</summary>
+          <div class="ans"><span class="demo">ukázkový text</span><p>Povrch se obvykle zhojí během jednoho až dvou týdnů, barva se usazuje několik týdnů. Pak následuje korekce, při které se doplní místa, kde pigment nechytil.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec dark" id="kontakt" aria-labelledby="h-contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <div class="sec-head" style="margin-bottom:20px">
+            <span class="eyebrow">Otevírací doba a kontakt</span>
+            <h2 id="h-contact">Kolofíkovo nábřeží, Kateřinky</h2>
+          </div>
+          <span class="status" data-status><i></i><span>Otevírací doba: Po–Čt 8–18, Pá 8–14</span></span>
+          <table class="hours" aria-label="Otevírací doba">
+            <tbody>
+              <tr data-days="1"><th scope="row">Pondělí</th><td>8:00–18:00</td></tr>
+              <tr data-days="2"><th scope="row">Úterý</th><td>8:00–18:00</td></tr>
+              <tr data-days="3"><th scope="row">Středa</th><td>8:00–18:00</td></tr>
+              <tr data-days="4"><th scope="row">Čtvrtek</th><td>8:00–18:00</td></tr>
+              <tr data-days="5"><th scope="row">Pátek</th><td>8:00–14:00</td></tr>
+              <tr data-days="6 0"><th scope="row">Sobota a neděle</th><td>zavřeno</td></tr>
+            </tbody>
+          </table>
+          <dl class="cinfo">
+            <div><dt>Telefon</dt><dd><a class="big-tel" href="tel:+420603527952">603 527 952</a></dd></div>
+            <div><dt>Adresa</dt><dd>Kolofíkovo nábřeží 1121/13<br>Opava-Kateřinky</dd></div>
+            <div><dt>E-mail</dt><dd>Doplníme podle Vás <span class="demo">ukázkový text</span></dd></div>
+            <div><dt>Odkazy</dt><dd class="links">
+              <a href="https://mapy.cz/zakladni?q=Kolof%C3%ADkovo%20n%C3%A1b%C5%99e%C5%BE%C3%AD%201121%2F13%2C%20Opava" target="_blank" rel="noopener">Ukázat na Mapy.cz</a>
+              <a href="https://www.facebook.com/p/Studio-MAXIM-100063621790660/" target="_blank" rel="noopener">Facebook · 330 sledujících</a>
+            </dd></div>
+          </dl>
+        </div>
+
+        <form class="form" id="poptavka" novalidate>
+          <h3>Napište nám</h3>
+          <p class="small">Ukázka formuláře. Na hotovém webu by zpráva přišla přímo do studia.</p>
+          <div class="two">
+            <div class="field"><label for="f-name">Jméno</label><input id="f-name" name="name" autocomplete="name" placeholder="Jana Nováková"></div>
+            <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="777 123 456"></div>
+          </div>
+          <div class="field"><label for="f-svc">O co máte zájem</label>
+            <select id="f-svc" name="svc">
+              <option>Dámský střih</option><option>Pánský střih</option><option>Melírování</option><option>Kosmetika</option><option>Permanentní make-up – konzultace</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-msg">Zpráva</label><textarea id="f-msg" name="msg" placeholder="Např. délka vlasů, kdy se Vám to hodí…"></textarea></div>
+          <button class="btn btn-primary" type="submit">Odeslat zprávu</button>
+          <div class="form-msg" id="form-msg" hidden>Tohle je jen návrh webu, zpráva nikam neodešla. Objednat se můžete telefonem na <a href="tel:+420603527952">603 527 952</a>.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Studio MAXIM · kadeřnictví a kosmetika · Kolofíkovo nábřeží 1121/13, Opava · IČO 63866455</span>
+    <span>Nezávazný návrh webu, není to oficiální stránka firmy.</span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-ghost" href="tel:+420603527952"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Zavolat</a>
+  <a class="btn btn-primary" href="tel:+420603527952">Objednat se</a>
+</div>
+
+
+<script>
+(function(){
+  /* PMU – zóny */
+  var data={
+    brows:{title:"Obočí",intro:"Pro ty, kdo si obočí každé ráno dokreslují, nebo mají řídká místa.",
+      what:"Pigment se vpraví do horní vrstvy kůže a doplní tvar i hustotu obočí. Technika, tedy jemné chloupky nebo pudrový efekt, se volí podle typu pleti.",
+      consult:"Tvar se nejdřív předkreslí a vybere se odstín k barvě vlasů a pleti. Zákrok začne až ve chvíli, kdy jste s návrhem spokojená.",
+      heal:"První dny je barva výraznější, pak se kůže jemně olupuje a odstín zesvětlí. Korekce se obvykle dělá po čtyřech až šesti týdnech."},
+    liner:{title:"Oční linky",intro:"Pro ty, kdo nosí kontaktní čočky, sportují nebo chtějí opticky hustší řasy.",
+      what:"Jemná linka v řasové linii nebo výraznější linka na horním víčku. Nerozmaže se a nepotřebuje odličování.",
+      consult:"Probere se šířka linky, citlivost očí, kontaktní čočky a alergie. Návrh se přizpůsobí tvaru víčka.",
+      heal:"Víčka mohou den až dva mírně otékat. Oči se pár dní nelíčí a korekce doladí místa, kde pigment nechytil."},
+    lips:{title:"Rty",intro:"Pro ty, kdo chtějí výraznější konturu nebo svěží barvu rtů bez rtěnky.",
+      what:"Zvýraznění kontury nebo plné vybarvení rtů v přirozeném či sytějším odstínu. Opticky může rty i zvětšit.",
+      consult:"Vybere se odstín k pleti a probere se sklon k oparům, protože zákrok je může vyvolat. Případnou prevenci je dobré řešit předem.",
+      heal:"Rty se několik dní olupují a barva je zpočátku sytější. Výsledný odstín se ustálí během několika týdnů, pak následuje korekce."}
+  };
+  var card=document.getElementById('pmu-card');
+  var zones=document.querySelectorAll('.zone');
+  var tabs=document.querySelectorAll('.zone-tabs button');
+  function pick(z,anim){
+    var d=data[z]; if(!d) return;
+    card.querySelectorAll('[data-f]').forEach(function(el){el.textContent=d[el.getAttribute('data-f')];});
+    zones.forEach(function(g){var on=g.getAttribute('data-zone')===z;g.classList.toggle('on',on);g.setAttribute('aria-pressed',on?'true':'false');});
+    tabs.forEach(function(b){b.setAttribute('aria-selected',b.getAttribute('data-zone')===z?'true':'false');});
+    if(anim){card.classList.remove('swap');void card.offsetWidth;card.classList.add('swap');}
+  }
+  zones.forEach(function(g){
+    g.addEventListener('click',function(){pick(g.getAttribute('data-zone'),true);if(window.innerWidth<900){card.scrollIntoView({block:'nearest',behavior:'smooth'});}});
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(g.getAttribute('data-zone'),true);}});
+  });
+  tabs.forEach(function(b){b.addEventListener('click',function(){pick(b.getAttribute('data-zone'),true);});});
+  pick('brows',false);
+
+  /* Otevřeno / zavřeno – pražský čas, jen ověřená doba */
+  var hours={1:[8,18],2:[8,18],3:[8,18],4:[8,18],5:[8,14]};
+  var names=['v neděli','v pondělí','v úterý','ve středu','ve čtvrtek','v pátek','v sobotu'];
+  function pragueNow(){
+    var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+    var o={};parts.forEach(function(p){o[p.type]=p.value;});
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+    return {day:wd,min:parseInt(o.hour,10)*60+parseInt(o.minute,10)};
+  }
+  function update(){
+    var n;try{n=pragueNow();}catch(e){return;}
+    var h=hours[n.day],open=h&&n.min>=h[0]*60&&n.min<h[1]*60,text;
+    if(open){text='Právě otevřeno · dnes do '+h[1]+':00';}
+    else{
+      var d=n.day,label;
+      if(h&&n.min<h[0]*60){label='dnes v '+h[0]+':00';}
+      else{for(var i=1;i<=7;i++){var dd=(n.day+i)%7;if(hours[dd]){label=(i===1?'zítra':names[dd])+' v '+hours[dd][0]+':00';break;}}}
+      text='Teď zavřeno · otevíráme '+label;
+    }
+    document.querySelectorAll('[data-status]').forEach(function(s){
+      s.classList.toggle('is-open',!!open);s.classList.toggle('is-closed',!open);
+      s.querySelector('span').textContent=text;
+    });
+    document.querySelectorAll('.hours tr').forEach(function(tr){
+      tr.classList.toggle('today',tr.getAttribute('data-days').split(' ').indexOf(String(n.day))>-1);
+    });
+  }
+  update();setInterval(update,60000);
+
+  /* Formulář – jen ukázka */
+  var f=document.getElementById('poptavka');
+  f.addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('form-msg');m.hidden=false;m.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

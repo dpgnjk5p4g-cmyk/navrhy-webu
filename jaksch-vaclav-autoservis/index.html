@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Autoservis Nový Jičín – Jaksch Václav | návrh webu</title>
+<meta name="description" content="Autoservis a pneuservis v Novém Jičíně: opravy aut, alternátory a startéry, přezouvání, odtahy a náhradní díly. Svatopluka Čecha 2088/13, tel. 728 927 080.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Jaksch Václav – autoservis",
+  "telephone": "+420728927080",
+  "email": "jakschv@seznam.cz",
+  "taxID": "86918257",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Svatopluka Čecha 2088/13",
+    "postalCode": "741 01",
+    "addressLocality": "Nový Jičín",
+    "addressCountry": "CZ"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 49.601525, "longitude": 18.017798},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "11:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "12:00", "closes": "16:00"}
+  ],
+  "description": "Opravy silničních vozidel, alternátorů a startérů, pneuservis, odtahová služba a prodej náhradních dílů."
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Layout: ocelová plocha se světlou kartou nahoře, pak papírové sekce střídané s ocelovými pásy; mobil jako první */
+:root{
+  --steel:#1B2631; --steel-2:#24323F; --yellow:#F4C430; --paper:#F7F5EF; --paper-2:#ECE8DD;
+  --cobalt:#2459A8; --cobalt-dk:#1C4787; --ink:#1B2631; --muted:#4A5562; --line:#D9D3C4; --white:#FFFFFF;
+  --f-head:"Kanit","Arial Narrow",Arial,sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --r:10px; --wrap:1120px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--f-body);-webkit-text-size-adjust:100%;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--f-head);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+a{color:var(--cobalt)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font:600 13px/1.2 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt)}
+.demo{display:inline-block;font:600 11px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;background:var(--paper-2);color:var(--muted);border:1px dashed var(--muted);border-radius:4px;padding:3px 6px;vertical-align:middle;white-space:nowrap}
+
+/* banner */
+.banner{background:var(--yellow);color:var(--ink);font:600 13px/1.35 var(--f-body);text-align:center;padding-block:8px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--steel);color:var(--white);border-bottom:1px solid #0E151C}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--steel)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none}
+.brand b{font:700 20px/1 var(--f-head);letter-spacing:.04em}
+.brand span{font:500 12px/1.1 var(--f-body);color:#C9D2DB;display:block;margin-top:2px}
+.nav{display:none;gap:22px}
+.nav a{color:#DCE3EA;text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{color:var(--yellow)}
+.toptel{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--ink);text-decoration:none;font:600 15px/1 var(--f-body);padding:10px 12px;border-radius:8px;white-space:nowrap}
+@media (min-width:900px){.nav{display:flex}}
+
+/* hero */
+.hero{position:relative;background:var(--steel);overflow:hidden}
+.hero svg.pattern{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;display:grid;gap:28px;padding-block:18px 22px}
+.card{background:var(--paper);border-radius:var(--r);padding:20px 18px;box-shadow:0 18px 40px rgba(0,0,0,.35);max-width:620px}
+.card .eyebrow{margin-bottom:8px}
+.card h1{font-size:clamp(29px,7.6vw,52px);font-weight:700;color:var(--ink)}
+.card h1 em{font-style:normal;background:var(--yellow);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.card .lead{margin-top:10px;font-size:16px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:1fr;gap:8px;margin:14px 0 16px;padding:12px 0 0;border-top:1px solid var(--line);font-size:15px}
+.facts div{display:flex;gap:10px;align-items:flex-start}
+.facts svg{flex:none;margin-top:3px}
+.facts strong{font-weight:600}
+.status{display:inline-flex;align-items:center;gap:6px;font:600 13px/1 var(--f-body);padding:5px 8px;border-radius:999px;background:var(--paper-2);color:var(--ink);margin-left:4px;vertical-align:1px}
+.status i{width:8px;height:8px;border-radius:50%;background:#7A838C}
+.status.open i{background:#1F8A4C}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:8px;font:600 16px/1 var(--f-body);text-decoration:none;border:0;cursor:pointer;flex:1 1 140px;white-space:nowrap}
+.btn-y{background:var(--yellow);color:var(--ink)}
+.btn-y:hover{background:#FFD24A}
+.btn-c{background:var(--cobalt);color:var(--white)}
+.btn-c:hover{background:var(--cobalt-dk)}
+.btn-o{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.hero-art{display:none}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:minmax(0,620px) 1fr;align-items:center;padding-block:56px}
+  .card{padding:34px 34px 30px}
+  .facts{grid-template-columns:1fr 1fr}
+  .hero-art{display:block;color:var(--yellow)}
+}
+
+/* sections */
+section{padding-block:56px}
+.sec-head{display:grid;gap:10px;margin-bottom:28px;max-width:680px}
+.sec-head h2{font-size:clamp(28px,6vw,42px);font-weight:600}
+.sec-head p{color:var(--muted)}
+
+/* problem switcher */
+.trouble{background:var(--steel);color:var(--white)}
+.trouble .eyebrow{color:var(--yellow)}
+.trouble .sec-head p{color:#C9D2DB}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.tab{display:flex;align-items:center;gap:10px;text-align:left;background:var(--steel-2);color:var(--white);border:2px solid #34465A;border-radius:8px;padding:12px;font:600 15px/1.25 var(--f-body);cursor:pointer;min-height:58px}
+.tab svg{flex:none}
+.tab[aria-selected="true"]{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.panel{background:var(--paper);color:var(--ink);border-radius:var(--r);padding:22px 18px;display:grid;gap:18px}
+.panel .ico{width:84px;height:84px;border-radius:12px;background:var(--steel);display:grid;place-items:center}
+.panel h3{font-size:26px;font-weight:600}
+.panel p{color:var(--muted);max-width:60ch}
+.panel .who{font-weight:600;color:var(--ink)}
+.panel .btn{flex:0 1 auto}
+@media (min-width:760px){
+  .tabs{grid-template-columns:repeat(4,1fr)}
+  .panel{grid-template-columns:auto 1fr;align-items:start;padding:30px}
+}
+
+/* services */
+.svc{display:grid;gap:12px}
+.svc article{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.svc h3{font-size:21px;font-weight:600;margin-bottom:4px}
+.svc p{color:var(--muted);font-size:15px}
+.price{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;background:var(--paper-2);border-radius:var(--r);padding:16px 18px}
+.price p{font-weight:600;flex:1 1 240px}
+.price .btn{flex:0 1 auto}
+@media (min-width:760px){.svc{grid-template-columns:repeat(2,1fr)}.svc article:last-child{grid-column:1/-1}}
+@media (min-width:1040px){.svc{grid-template-columns:repeat(6,1fr)}.svc article{grid-column:span 2}.svc article:nth-child(n+4){grid-column:span 3}.svc article:last-child{grid-column:span 3}}
+
+/* tyres */
+.tyres{background:var(--white);border-block:1px solid var(--line)}
+.tyre-grid{display:grid;gap:14px}
+.law{border:2px solid var(--steel);border-radius:var(--r);padding:20px;display:grid;gap:8px}
+.law .big{font:700 clamp(30px,8vw,40px)/1 var(--f-head);color:var(--ink);white-space:nowrap}
+.law .big small{font-size:.5em;font-weight:600}
+.law p{color:var(--muted);font-size:15px}
+.gauge{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.gauge p{color:var(--ink)}
+.tyre-cta{background:var(--steel);color:var(--white);border-radius:var(--r);padding:20px;display:grid;gap:14px;align-content:start}
+.tyre-cta h3{font-size:24px;font-weight:600}
+.tyre-cta p{color:#C9D2DB;font-size:15px}
+@media (min-width:860px){.tyre-grid{grid-template-columns:1fr 1fr 1.1fr}}
+
+/* trust */
+.trust-grid{display:grid;gap:14px}
+.trust-item{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:16px 0;border-top:1px solid var(--line)}
+.trust-item h3{font-size:20px;font-weight:600;margin-bottom:4px}
+.trust-item p{color:var(--muted);font-size:15px}
+.photo{border:2px dashed #9AA3AC;border-radius:var(--r);min-height:220px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(27,38,49,.04) 14px 28px);max-width:100%}
+.photo b{display:block;font:600 18px/1.2 var(--f-head);color:var(--ink);margin-top:8px}
+@media (min-width:860px){.trust-grid{grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}}
+
+/* steps */
+.steps{display:grid;gap:12px;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:8px;background:var(--steel);color:var(--yellow);display:grid;place-items:center;font:700 22px/1 var(--f-head)}
+.steps h3{font-size:20px;font-weight:600;margin-bottom:4px}
+.steps p{color:var(--muted);font-size:15px}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* order form */
+.order{background:var(--steel);color:var(--white)}
+.order .eyebrow{color:var(--yellow)}
+.order .sec-head p{color:#C9D2DB}
+.order-grid{display:grid;gap:18px}
+form{background:var(--paper);color:var(--ink);border-radius:var(--r);padding:20px 18px;display:grid;gap:14px}
+label{font-weight:600;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:400 16px/1.4 var(--f-body);color:var(--ink);background:var(--white);border:1.5px solid #9AA3AC;border-radius:8px;padding:11px 12px;width:100%}
+textarea{min-height:96px;resize:vertical}
+.row2{display:grid;gap:14px}
+@media (min-width:600px){.row2{grid-template-columns:1fr 1fr}}
+.form-note{font-size:13px;color:var(--muted)}
+.direct{display:grid;gap:12px;align-content:start}
+.direct .big-tel{font:700 clamp(30px,8vw,44px)/1 var(--f-head);color:var(--yellow);text-decoration:none;user-select:all}
+.direct p{color:#C9D2DB}
+@media (min-width:900px){.order-grid{grid-template-columns:1.3fr 1fr;gap:40px}}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:0 18px}
+summary{cursor:pointer;list-style:none;font:600 18px/1.3 var(--f-head);padding:16px 30px 16px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font:600 26px/1 var(--f-head);color:var(--cobalt)}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:16px;color:var(--muted)}
+
+/* contact */
+.contact-grid{display:grid;gap:16px}
+.cbox{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.cbox dl{margin:0;display:grid;gap:12px}
+.cbox dt{font:600 12px/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cbox dd{margin:4px 0 0;font-size:17px;font-weight:500;overflow-wrap:anywhere}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--cobalt)}
+.map{display:flex;flex-direction:column;justify-content:space-between;gap:16px;background:var(--steel);color:var(--white);border-radius:var(--r);padding:20px;min-height:200px;position:relative;overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.map > *:not(svg){position:relative}
+.map p{font:600 22px/1.2 var(--f-head)}
+@media (min-width:860px){.contact-grid{grid-template-columns:1fr 1fr 1fr}}
+
+footer{background:#121A22;color:#AEB8C2;font-size:14px;padding-block:28px}
+footer .wrap{display:grid;gap:6px}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--steel);display:flex;gap:8px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));box-shadow:0 -6px 20px rgba(0,0,0,.25)}
+.callbar .btn{min-height:52px}
+@media (min-width:900px){.callbar{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Jaksch Václav – autoservis</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Jaksch – autoservis, na začátek stránky">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="7" fill="#F4C430"/><path d="M10 24 L20 14 M18.5 10.5a5 5 0 0 0 5 6.5l2.5-2.5-2-2 2-2-2-2-2.5 2.5A5 5 0 0 0 18.5 10.5Z" stroke="#1B2631" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>JAKSCH</b><span>autoservis · Nový Jičín</span></div>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#sluzby">Služby</a><a href="#prezouvani">Přezouvání</a><a href="#objednat">Objednat</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="toptel" href="tel:+420728927080"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1B2631" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1z"/></svg>728 927 080</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1" style="padding-block:0">
+  <svg class="pattern" aria-hidden="true" preserveAspectRatio="none">
+    <defs>
+      <pattern id="plate" width="28" height="28" patternUnits="userSpaceOnUse">
+        <path d="M4 10 L10 4 M18 24 L24 18" stroke="#2C3B4A" stroke-width="3" stroke-linecap="round"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#plate)"/>
+  </svg>
+  <div class="wrap">
+    <div class="card">
+      <p class="eyebrow">Autoservis a pneuservis · Nový Jičín</p>
+      <h1 id="h1">Opraví, přezuje <em>i&nbsp;odtáhne.</em></h1>
+      <p class="lead">Opravy aut, alternátory a startéry, pneuservis, odtahy a náhradní díly u Václava Jaksche v Novém Jičíně.</p>
+      <div class="facts">
+        <div><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#2459A8" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span><strong>Svatopluka Čecha 2088/13</strong><br>741 01 Nový Jičín</span></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#2459A8" stroke-width="2.4"/><path d="M12 7v5l3 2" stroke="#2459A8" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><span><strong>Po–Pá 8–11 a 12–16</strong><span class="status" id="status" hidden><i></i><span></span></span><br>So po domluvě</span></div>
+      </div>
+      <div class="btns">
+        <a class="btn btn-y" href="#objednat">Objednat servis</a>
+        <a class="btn btn-c" href="tel:+420728927080">Zavolat</a>
+      </div>
+    </div>
+    <svg class="hero-art" viewBox="0 0 420 300" width="100%" role="img" aria-label="Ilustrace odtahového vozu">
+      <g fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M30 210 V150 L70 110 H140 V210"/>
+        <path d="M80 120 V155 H140"/>
+        <path d="M140 210 V180 H350 V210"/>
+        <path d="M30 210 H380"/>
+        <path d="M150 180 L300 90"/>
+        <path d="M300 90 V140"/>
+        <path d="M290 150 a10 10 0 1 0 20 0 l-10 -10"/>
+        <circle cx="90" cy="222" r="26"/><circle cx="90" cy="222" r="9"/>
+        <circle cx="300" cy="222" r="26"/><circle cx="300" cy="222" r="9"/>
+      </g>
+      <path d="M20 270 H400" stroke="#2C3B4A" stroke-width="4" stroke-dasharray="26 18"/>
+    </svg>
+  </div>
+</section>
+
+<section class="trouble" id="co-vas-trapi" aria-labelledby="h-trouble">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Co Vás trápí?</p>
+      <h2 id="h-trouble">Vyberte, co se s autem děje. Hned uvidíte, s čím pomůže.</h2>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Situace">
+      <button class="tab" role="tab" id="t0" aria-controls="panel" aria-selected="true" data-i="0">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M17 16h12M24 16v5M28 16v4" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Auto nestartuje</button>
+      <button class="tab" role="tab" id="t1" aria-controls="panel" aria-selected="false" data-i="1">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="9" width="24" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M9 9V6h4v3M19 9V6h4v3M17 12l-4 6h5l-3 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Svítí kontrolka dobíjení</button>
+      <button class="tab" role="tab" id="t2" aria-controls="panel" aria-selected="false" data-i="2">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v10a5 5 0 1 1-5 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M10 4h12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Auto nepojede</button>
+      <button class="tab" role="tab" id="t3" aria-controls="panel" aria-selected="false" data-i="3">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="16" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4" stroke="currentColor" stroke-width="2.4"/></svg>Je čas přezout</button>
+    </div>
+    <div class="panel" id="panel" role="tabpanel" aria-live="polite" aria-labelledby="t0">
+      <div class="ico" id="p-ico" aria-hidden="true"></div>
+      <div style="display:grid;gap:12px;min-width:0">
+        <h3 id="p-title">Auto nestartuje</h3>
+        <p id="p-text">Když motor při otočení klíčkem neprotočí nebo jen cvakne, bývá ve hře startér. Pan Jaksch opravuje startéry i alternátory, takže závadu najde a domluví s Vámi opravu.</p>
+        <p class="who" id="p-who">Startér opraví přímo v dílně v Novém Jičíně.</p>
+        <div class="btns"><a class="btn btn-c" href="tel:+420728927080">Zavolat 728 927 080</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="h-svc">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Služby</p>
+      <h2 id="h-svc">Od startéru po odtah. Vše v jedné dílně.</h2>
+      <p>Pět věcí, které Vám v autoservisu na Svatopluka Čecha vyřeší.</p>
+    </div>
+    <div class="svc">
+      <article>
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#1B2631"/><path d="M14 30l11-11m-1.5-4a5 5 0 0 0 5.5 6.5l2.5-2.5-2-2 2-2-2-2-2.5 2.5" stroke="#F4C430" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><h3>Opravy aut</h3><p>Opravy silničních vozidel: přijedete se závadou, odjedete s opraveným autem.</p></div>
+      </article>
+      <article>
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#1B2631"/><path d="M24 10l-8 13h7l-3 11 9-14h-7z" fill="#F4C430"/></svg>
+        <div><h3>Alternátory a startéry</h3><p>Když auto nechce nastartovat nebo se nedobíjí, opraví startér nebo alternátor.</p></div>
+      </article>
+      <article>
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#1B2631"/><circle cx="22" cy="22" r="11" fill="none" stroke="#F4C430" stroke-width="3"/><circle cx="22" cy="22" r="4" fill="#F4C430"/></svg>
+        <div><h3>Pneuservis</h3><p>Přezutí na zimní i letní pneumatiky, ať jste na sníh připraveni včas.</p></div>
+      </article>
+      <article>
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#1B2631"/><path d="M22 10v12a5 5 0 1 1-5 5M16 10h12" stroke="#F4C430" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        <div><h3>Odtahy</h3><p>Auto, které nepojede, odtáhne odtahová služba rovnou k opravě.</p></div>
+      </article>
+      <article>
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#1B2631"/><path d="M12 17l10-5 10 5v11l-10 5-10-5zM12 17l10 5 10-5M22 22v11" stroke="#F4C430" stroke-width="2.6" fill="none" stroke-linejoin="round"/></svg>
+        <div><h3>Náhradní díly</h3><p>Prodej náhradních dílů, takže na díl nemusíte shánět jinde.</p></div>
+      </article>
+    </div>
+    <div class="price">
+      <p>Cenu Vám řekneme předem.</p>
+      <a class="btn btn-c" href="tel:+420728927080">Zavolat 728 927 080</a>
+    </div>
+  </div>
+</section>
+
+<section class="tyres" id="prezouvani" aria-labelledby="h-tyres">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Přezouvání · sezóna říjen–listopad</p>
+      <h2 id="h-tyres">Na zimní pneumatiky přezujte dřív, než napadne sníh.</h2>
+      <p>Co říká zákon a kdy je pneumatika na zimu už opotřebená.</p>
+    </div>
+    <div class="tyre-grid">
+      <div class="law">
+        <div class="big">1. 11. – 31. 3.</div>
+        <p>V tomto období musíte mít zimní pneumatiky, když je na silnici sníh, led nebo námraza.</p>
+      </div>
+      <div class="law gauge">
+        <div class="big">4 <small>mm</small></div>
+        <p>Minimální hloubka dezénu zimních pneumatik u osobních aut. S mělčím dezénem pneumatika jako zimní neplatí.</p>
+      </div>
+      <div class="tyre-cta">
+        <h3>Přezutí v Novém Jičíně</h3>
+        <p>Zavolejte a domluvte si termín v pneuservisu. Po–Pá 8–11 a 12–16, v sobotu po domluvě.</p>
+        <div class="btns"><a class="btn btn-y" href="tel:+420728927080">Domluvit přezutí</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-trust">
+  <div class="wrap trust-grid">
+    <div>
+      <div class="sec-head">
+        <p class="eyebrow">Proč k panu Jakschovi</p>
+        <h2 id="h-trust">Jedno číslo, když auto zlobí.</h2>
+      </div>
+      <div class="trust-item">
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#F4C430"/><path d="M14 22l6 6 11-12" stroke="#1B2631" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><h3>Odtah, oprava i díl na jednom místě</h3><p>Když auto nepojede, nemusíte volat odtahovku, servis a prodejnu dílů zvlášť.</p></div>
+      </div>
+      <div class="trust-item">
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#F4C430"/><path d="M24 10l-8 13h7l-3 11 9-14h-7z" fill="#1B2631"/></svg>
+        <div><h3>Startéry a alternátory</h3><p>Autoelektriku, kvůli které auto nestartuje nebo se nedobíjí, opravuje přímo v dílně.</p></div>
+      </div>
+      <div class="trust-item">
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#F4C430"/><circle cx="22" cy="22" r="10" fill="none" stroke="#1B2631" stroke-width="3"/><path d="M22 16v6l4 3" stroke="#1B2631" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        <div><h3>I v sobotu, když se domluvíte</h3><p>Ve všední dny 8–11 a 12–16, sobotu domluvíte předem po telefonu.</p></div>
+      </div>
+    </div>
+    <div class="photo" role="img" aria-label="Místo pro fotku dílny">
+      <div>
+        <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="26" rx="4" fill="none" stroke="#4A5562" stroke-width="2.6"/><circle cx="24" cy="25" r="7" fill="none" stroke="#4A5562" stroke-width="2.6"/><path d="M17 12l3-4h8l3 4" fill="none" stroke="#4A5562" stroke-width="2.6"/></svg>
+        <b>Sem přijde Vaše fotka</b>
+        dílna, odtahový vůz nebo pan Jaksch při práci
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-2)" aria-labelledby="h-steps">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Jak to probíhá</p>
+      <h2 id="h-steps">Tři kroky od telefonu k opravenému autu.</h2>
+    </div>
+    <ol class="steps">
+      <li><div><h3>Zavoláte nebo napíšete</h3><p>Popíšete, co auto dělá. Když nepojede, domluvíte rovnou odtah.</p></div></li>
+      <li><div><h3>Domluvíte termín a cenu</h3><p>Dozvíte se, kdy auto přivézt a kolik oprava vyjde, ještě před začátkem práce.</p></div></li>
+      <li><div><h3>Vyzvednete opravené auto</h3><p>Po opravě Vám pan Jaksch dá vědět a auto si vyzvednete v dílně.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="order" id="objednat" aria-labelledby="h-order">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Objednat servis</p>
+      <h2 id="h-order">Objednejte se na opravu nebo přezutí.</h2>
+      <p>Vyplňte pár řádků. Otevře se Vám e-mail s připraveným textem, který jen odešlete.</p>
+    </div>
+    <div class="order-grid">
+      <form id="f" novalidate>
+        <div class="row2">
+          <label for="f-name">Jméno<input id="f-name" name="name" autocomplete="name" placeholder="Jan Novák"></label>
+          <label for="f-tel">Telefon<input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="777 123 456"></label>
+        </div>
+        <div class="row2">
+          <label for="f-car">Auto (značka, model)<input id="f-car" name="car" placeholder="Škoda Octavia"></label>
+          <label for="f-what">S čím potřebujete pomoct
+            <select id="f-what" name="what">
+              <option>Oprava auta</option>
+              <option>Startér / alternátor</option>
+              <option>Přezutí pneumatik</option>
+              <option>Odtah</option>
+              <option>Náhradní díl</option>
+            </select>
+          </label>
+        </div>
+        <label for="f-msg">Co se s autem děje<textarea id="f-msg" name="msg" placeholder="Popište závadu a kdy se Vám hodí přijet."></textarea></label>
+        <div class="btns">
+          <a class="btn btn-y" id="f-mail" href="mailto:jakschv@seznam.cz">Připravit e-mail</a>
+          <a class="btn btn-o" id="f-sms" href="sms:+420728927080">Poslat jako SMS</a>
+        </div>
+        <p class="form-note">Formulář nic neodesílá sám. Otevře Váš e-mail nebo SMS. Když nefunguje, napište na jakschv@seznam.cz nebo zavolejte 728 927 080.</p>
+      </form>
+      <div class="direct">
+        <p>Rychlejší je zavolat:</p>
+        <a class="big-tel" href="tel:+420728927080">728 927 080</a>
+        <p>Po–Pá 8–11 a 12–16 · So po domluvě</p>
+        <div class="btns"><a class="btn btn-y" href="tel:+420728927080" style="flex:0 1 auto">Zavolat teď</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Časté otázky</p>
+      <h2 id="h-faq">Na co se řidiči ptají nejčastěji.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Kdy musím mít zimní pneumatiky?</summary><p>Od 1. listopadu do 31. března, pokud je na silnici souvislá vrstva sněhu, led nebo námraza. Přezout se vyplatí s předstihem, než první sníh přijde.</p></details>
+      <details><summary>Jak poznám, že je zimní pneumatika už opotřebená?</summary><p>U osobních aut musí mít zimní pneumatika dezén hluboký aspoň 4 mm. Změřit ho můžete hloubkoměrem, nebo se zeptejte při přezouvání.</p></details>
+      <details><summary>Auto nestartuje. Je to baterie, nebo startér?</summary><p>Když startér jen cvakne nebo motor neprotáčí, může jít o startér. Když svítí kontrolka dobíjení a baterie se opakovaně vybíjí, často za tím bývá alternátor. Zavolejte a popište, co auto dělá.</p></details>
+      <details><summary>Co když auto nepojede vůbec?</summary><p>Pan Jaksch provozuje i odtahovou službu. Zavolejte na 728 927 080 a domluvte odtah do dílny.</p></details>
+      <details><summary>Můžu přijet v sobotu?</summary><p>V sobotu je otevřeno po předchozí domluvě. Zavolejte během týdne a domluvte si čas.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" style="background:var(--paper-2)" aria-labelledby="h-contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Kontakt</p>
+      <h2 id="h-contact">Autoservis Jaksch, Nový Jičín</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cbox">
+        <dl>
+          <div><dt>Telefon</dt><dd><a href="tel:+420728927080">728 927 080</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:jakschv@seznam.cz">jakschv@seznam.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Svatopluka Čecha 2088/13<br>741 01 Nový Jičín</dd></div>
+          <div><dt>IČO</dt><dd>86918257</dd></div>
+        </dl>
+      </div>
+      <div class="cbox">
+        <table class="hours" aria-label="Otevírací doba">
+          <tbody>
+            <tr data-d="1"><td>Pondělí</td><td>8–11, 12–16</td></tr>
+            <tr data-d="2"><td>Úterý</td><td>8–11, 12–16</td></tr>
+            <tr data-d="3"><td>Středa</td><td>8–11, 12–16</td></tr>
+            <tr data-d="4"><td>Čtvrtek</td><td>8–11, 12–16</td></tr>
+            <tr data-d="5"><td>Pátek</td><td>8–11, 12–16</td></tr>
+            <tr data-d="6"><td>Sobota</td><td>po domluvě</td></tr>
+            <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+          </tbody>
+        </table>
+        <p class="form-note" style="margin-top:10px">Ve státní svátky se otevírací doba může lišit.</p>
+      </div>
+      <div class="map">
+        <svg aria-hidden="true" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice"><path d="M0 60 H300 M0 140 H300 M80 0 V200 M210 0 V200 M0 190 L300 20" stroke="#2C3B4A" stroke-width="10" fill="none"/></svg>
+        <p>Svatopluka Čecha 2088/13,<br>Nový Jičín</p>
+        <a class="btn btn-y" style="flex:0 0 auto" href="https://mapy.cz/zakladni?q=Svatopluka%20%C4%8Cecha%202088%2F13%2C%20741%2001%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#FFFFFF">Jaksch Václav – autoservis</strong> · Svatopluka Čecha 2088/13, Nový Jičín · IČO 86918257</p>
+    <p>Nezávazný návrh webu. Údaje převzaty z veřejného záznamu firmy na Firmy.cz (ověřeno 16. 10. 2026).</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-y" href="tel:+420728927080">Zavolat 728 927 080</a>
+  <a class="btn btn-c" href="#objednat" style="flex:0 1 130px">Objednat</a>
+</div>
+
+<script>
+(function(){
+  var TEL='tel:+420728927080';
+  var icons={
+    start:'<svg width="56" height="56" viewBox="0 0 32 32"><circle cx="11" cy="16" r="6" fill="none" stroke="#F4C430" stroke-width="2.4"/><path d="M17 16h12M24 16v5M28 16v4" stroke="#F4C430" stroke-width="2.4" stroke-linecap="round"/></svg>',
+    alt:'<svg width="56" height="56" viewBox="0 0 32 32"><rect x="4" y="9" width="24" height="16" rx="2" fill="none" stroke="#F4C430" stroke-width="2.4"/><path d="M9 9V6h4v3M19 9V6h4v3M17 12l-4 6h5l-3 5" stroke="#F4C430" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    tow:'<svg width="56" height="56" viewBox="0 0 32 32"><path d="M16 4v10a5 5 0 1 1-5 5" fill="none" stroke="#F4C430" stroke-width="2.4" stroke-linecap="round"/><path d="M10 4h12" stroke="#F4C430" stroke-width="2.4" stroke-linecap="round"/></svg>',
+    tyre:'<svg width="56" height="56" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="#F4C430" stroke-width="2.4"/><circle cx="16" cy="16" r="5" fill="none" stroke="#F4C430" stroke-width="2.4"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4" stroke="#F4C430" stroke-width="2.2"/></svg>'
+  };
+  var data=[
+    {i:'start',t:'Auto nestartuje',p:'Když motor při otočení klíčkem neprotočí nebo jen cvakne, bývá ve hře startér. Pan Jaksch opravuje startéry i alternátory, takže závadu najde a domluví s Vámi opravu.',w:'Startér opraví přímo v dílně v Novém Jičíně.'},
+    {i:'alt',t:'Svítí kontrolka dobíjení',p:'Rozsvícená kontrolka dobíjení nebo baterie, která se pořád vybíjí, často ukazují na alternátor. Pan Jaksch alternátor prověří a opraví, potřebný díl zajistí z vlastního prodeje.',w:'Alternátor i startér opraví v dílně v Novém Jičíně.'},
+    {i:'tow',t:'Auto nepojede',p:'Stojíte a auto se nehne? Pan Jaksch provozuje odtahovou službu. Domluvíte odtah a auto skončí rovnou v dílně, kde ho opraví.',w:'Odtah a oprava jedním telefonátem.'},
+    {i:'tyre',t:'Je čas přezout',p:'Od 1. 11. musíte při sněhu, ledu nebo námraze jezdit na zimních pneumatikách. V pneuservisu pana Jaksche Vás přezují. Termín domluvíte po telefonu.',w:'Pneuservis Po–Pá, v sobotu po domluvě.'}
+  ];
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panel=document.getElementById('panel');
+  function show(n){
+    var d=data[n];
+    tabs.forEach(function(b,k){b.setAttribute('aria-selected',k===n?'true':'false');b.tabIndex=k===n?0:-1;});
+    panel.setAttribute('aria-labelledby','t'+n);
+    document.getElementById('p-ico').innerHTML=icons[d.i];
+    document.getElementById('p-title').textContent=d.t;
+    document.getElementById('p-text').textContent=d.p;
+    document.getElementById('p-who').textContent=d.w;
+  }
+  tabs.forEach(function(b,k){
+    b.addEventListener('click',function(){show(k);});
+    b.addEventListener('keydown',function(e){
+      var m=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(m){var n=(k+m+tabs.length)%tabs.length;tabs[n].focus();show(n);}
+    });
+  });
+  show(0);
+
+  /* otevřeno / zavřeno podle ověřené otevírací doby (čas v Praze) */
+  try{
+    var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var get=function(t){return (parts.filter(function(p){return p.type===t;})[0]||{}).value;};
+    var wd=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=parseInt(get('hour'),10)%24*60+parseInt(get('minute'),10);
+    var open=wd>=1&&wd<=5&&((m>=480&&m<660)||(m>=720&&m<960));
+    var st=document.getElementById('status');
+    st.classList.toggle('open',open);
+    st.querySelector('span').textContent=open?'Teď otevřeno':'Teď zavřeno';
+    st.hidden=false;
+    var row=document.querySelector('.hours tr[data-d="'+wd+'"]');
+    if(row)row.className='today';
+  }catch(e){}
+
+  /* objednávka: předvyplněný e-mail / SMS */
+  var f=document.getElementById('f');
+  function v(id){return document.getElementById(id).value.trim();}
+  function build(){
+    var lines=['Dobrý den,','chtěl(a) bych se objednat: '+v('f-what')+'.'];
+    if(v('f-car'))lines.push('Auto: '+v('f-car')+'.');
+    if(v('f-msg'))lines.push(v('f-msg'));
+    if(v('f-name')||v('f-tel'))lines.push('', [v('f-name'),v('f-tel')].filter(Boolean).join(', '));
+    var body=lines.join('\n');
+    document.getElementById('f-mail').href='mailto:jakschv@seznam.cz?subject='+encodeURIComponent('Objednávka servisu – '+v('f-what'))+'&body='+encodeURIComponent(body);
+    document.getElementById('f-sms').href='sms:+420728927080?body='+encodeURIComponent(body);
+  }
+  f.addEventListener('input',build);f.addEventListener('change',build);
+  f.addEventListener('submit',function(e){e.preventDefault();});
+  build();
+})();
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Firma Vodař</title>
+<meta name="description" content="Instalatérská firma Vodař z Ostravy-Poruby: rozvody vody, odpadů, topení a plynu, stoupačky, bytová jádra, vodoměry a revize plynu pro SVJ, družstva, správce i domácnosti v Ostravě. Na trhu od roku 1991.">
+<meta name="theme-color" content="#1F2A30">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Firma Vodař",
+  "telephone": ["+420596956220", "+420607215904"],
+  "email": "vodar@atlas.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kosmická 1723/2",
+    "postalCode": "708 00",
+    "addressLocality": "Ostrava-Poruba",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "06:30",
+    "closes": "14:30"
+  }],
+  "areaServed": "Ostrava",
+  "sameAs": ["https://www.facebook.com/707543579419274"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --teal:#0E7C86; --teal-d:#0A5F67; --teal-l:#D5ECEE;
+  --concrete:#E7E9E6; --concrete-d:#D3D7D3;
+  --slate:#1F2A30; --slate-2:#2B3940; --slate-3:#3A4A52;
+  --orange:#E8731A;
+  --ink:#1F2A30; --ink-2:#46535A;
+  --paper:#FFFFFF; --paper-2:#F6F7F5;
+  --on-dark:#F4F5F3; --on-dark-2:#BCC6C9;
+  --line:#C9CFCB;
+  --head:"Schibsted Grotesk", "Arial Narrow", Arial, Helvetica, sans-serif;
+  --body:"Spectral", Georgia, "Times New Roman", serif;
+  --r:6px;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.08;margin:0 0 .5em;letter-spacing:-.015em;color:inherit}
+h2{font-size:clamp(30px,5vw,52px);font-weight:800}
+h3{font-size:22px;font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--teal-d)}
+img,svg{max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+@media (min-width:900px){.wrap{padding:0 40px}}
+.eyebrow{font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:4px;background:currentColor;display:inline-block}
+.demo{display:inline-block;font-family:var(--head);font-weight:600;font-size:11px;letter-spacing:.04em;line-height:1;padding:4px 7px;border-radius:3px;background:#FFF0E2;color:#7A3B07;border:1px dashed #C9661A;vertical-align:middle;white-space:nowrap;text-transform:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* banner + header */
+.notice{background:#FFE7CF;color:#5C2C05;font-family:var(--head);font-size:13px;font-weight:600;text-align:center;padding:8px 16px;line-height:1.35}
+header.top{position:sticky;top:0;z-index:30;background:var(--slate);color:var(--on-dark);border-bottom:4px solid var(--teal)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--on-dark);text-decoration:none}
+.logo b{font-family:var(--head);font-weight:900;font-size:24px;letter-spacing:.06em}
+.logo small{display:block;font-family:var(--head);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-2);font-weight:600;margin-top:-2px}
+.nav{display:none;gap:26px;font-family:var(--head);font-weight:600;font-size:15px}
+.nav a{color:var(--on-dark);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:var(--orange)}
+@media (min-width:1080px){.nav{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--head);font-weight:700;font-size:17px;text-decoration:none;border-radius:var(--r);padding:15px 22px;border:2px solid transparent;cursor:pointer;line-height:1.1;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-call{background:var(--orange);color:#1A1208;border-color:var(--orange)}
+.btn-call:hover{background:#F08A3A}
+.btn-ghost{background:transparent;color:var(--on-dark);border-color:#8FA2A8}
+.btn-ghost:hover{border-color:var(--on-dark)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d)}
+.btn-dark{background:var(--slate);color:var(--on-dark)}
+.top .btn{padding:10px 14px;font-size:15px;white-space:nowrap}
+.logo small{white-space:nowrap}
+@media (max-width:400px){.logo small{display:none}.top .btn{padding:10px 12px}}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+
+/* hero */
+.hero{background:var(--slate);color:var(--on-dark);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:22px;padding-top:22px;padding-bottom:40px}
+.meter-box{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:16px}
+.meter{width:100%;height:auto;display:block}
+.meter-cap{font-family:var(--head);font-weight:800;font-size:22px;line-height:1.05;letter-spacing:-.01em}
+.meter-cap span{display:block;color:var(--orange);font-size:44px;font-weight:900}
+.meter-cap em{display:block;font-style:normal;font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-2);margin-top:8px}
+.hero h1{font-size:clamp(34px,8.6vw,72px);font-weight:900;margin:0 0 18px;letter-spacing:-.025em}
+.hero h1 .hl{color:var(--orange)}
+.hero .lead{font-size:19px;color:var(--on-dark-2);max-width:40ch;margin:0 0 24px}
+.hero .lead strong{color:var(--on-dark);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.cta .btn{flex:1 1 220px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-family:var(--head);font-size:14px;color:var(--on-dark-2)}
+.hero-meta b{color:var(--on-dark)}
+.status{display:inline-flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:#8FA2A8;flex:none}
+.dot.on{background:#3FD18A;box-shadow:0 0 0 4px rgba(63,209,138,.2)}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:minmax(380px,500px) 1fr;gap:56px;align-items:center;padding-top:60px;padding-bottom:80px}
+  .meter-box{grid-template-columns:1fr;justify-items:center;text-align:center;gap:18px}
+  .meter{max-width:460px}
+  .meter-cap{font-size:28px}
+  .meter-cap span{display:inline;font-size:28px}
+  .hero .lead{font-size:21px}
+  .cta .btn{flex:0 0 auto}
+}
+/* odometer */
+.roll{transition:transform 1s cubic-bezier(.25,.8,.25,1)}
+.rotor{transform-origin:200px 300px;transform-box:view-box;transition:transform 1.1s cubic-bezier(.25,.8,.25,1)}
+
+/* sections */
+section{padding:72px 0}
+@media (min-width:900px){section{padding:110px 0}}
+.sec-head{max-width:760px;margin-bottom:40px}
+.sec-head p{font-size:19px;color:var(--ink-2)}
+.concrete{background:var(--concrete)}
+.concrete .sec-head p{color:#3D4A50}
+.dark{background:var(--slate);color:var(--on-dark)}
+.dark .sec-head p{color:var(--on-dark-2)}
+.teal{background:var(--teal);color:#fff}
+.dark .eyebrow{color:var(--orange)}
+.teal .eyebrow{color:#fff}
+.concrete .eyebrow, .white .eyebrow{color:var(--slate)}
+
+/* cutaway */
+.cut{display:grid;gap:28px;align-items:start}
+.house-wrap{background:var(--paper);border:2px solid var(--slate);border-radius:var(--r);padding:14px 10px 6px;position:relative}
+.house-wrap .scale{position:absolute;right:12px;top:12px;font-family:var(--head);font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink-2);text-transform:uppercase}
+#house{display:block;width:100%;height:auto}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{font-family:var(--head);font-weight:700;font-size:15px;padding:11px 14px;border-radius:var(--r);border:2px solid var(--slate);background:var(--paper);color:var(--slate);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.tab .n{font-size:11px;opacity:.75;font-weight:800}
+.tab[aria-selected="true"]{background:var(--slate);color:#fff}
+.tab[aria-selected="true"] .n{color:var(--orange);opacity:1}
+.panel{background:var(--paper);border-radius:var(--r);border-left:6px solid var(--orange);padding:24px 22px}
+.panel h3{font-size:28px;margin-bottom:10px}
+.panel .who{font-family:var(--head);font-size:14px;font-weight:600;color:var(--ink-2);margin:0 0 14px}
+.panel ul{margin:0 0 16px;padding-left:20px}
+.panel li{margin-bottom:4px}
+.price{font-family:var(--head);font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line)}
+@media (min-width:900px){.cut{grid-template-columns:1.05fr 1fr;gap:48px}.panel{padding:30px 30px}}
+/* house layers */
+#house .pipe{fill:none;stroke:#8EA3A8;stroke-linecap:round;transition:stroke .3s, opacity .3s}
+#house .fillable{fill:#E3E8E6;stroke:#8EA3A8;stroke-width:1.5;transition:fill .3s, stroke .3s}
+#house .flow{fill:none;stroke:#fff;stroke-width:2;stroke-dasharray:3 11;stroke-linecap:round;opacity:0}
+#house .layer{opacity:.55;transition:opacity .3s}
+#house .layer.on{opacity:1}
+#house .layer.on .pipe{stroke:var(--orange)}
+#house .layer.on .fillable{fill:#FBD9BD;stroke:var(--orange)}
+#house .layer.on .flow{opacity:.9;animation:flow 1.2s linear infinite}
+#house .layer.on .lbl{opacity:1}
+#house .lbl{opacity:0;transition:opacity .3s}
+@keyframes flow{to{stroke-dashoffset:-28}}
+
+/* service cards */
+.cards{display:grid;gap:14px;margin-top:56px}
+@media (min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--paper);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--teal)}
+.card .ic{width:46px;height:46px;border-radius:8px;background:var(--slate);display:grid;place-items:center}
+.card .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:4px 0 0;font-size:21px}
+.card p{margin:0;color:var(--ink-2);font-size:17px;flex:1}
+.card .price{font-size:14px;padding-top:12px}
+.card.alert{border-top-color:var(--orange);background:var(--slate);color:var(--on-dark)}
+.card.alert p{color:var(--on-dark-2)}
+.card.alert .ic{background:var(--orange)}
+.card.alert .ic svg{stroke:#1A1208}
+.card.alert .price{border-top-color:#44545B}
+
+/* trust */
+.trust{display:grid;gap:36px}
+.bignum{font-family:var(--head);font-weight:900;font-size:clamp(110px,28vw,260px);line-height:.82;letter-spacing:-.05em;color:var(--teal);margin:0}
+.bignum-sub{font-family:var(--head);font-weight:800;font-size:clamp(26px,3.4vw,38px);line-height:1.1;margin-top:18px;max-width:20ch}
+.facts{display:grid;gap:0;border-top:2px solid var(--slate)}
+.fact{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.fact .k{font-family:var(--head);font-weight:900;font-size:26px;color:var(--teal-d);line-height:1.1}
+.fact h3{font-size:20px;margin:0 0 4px}
+.fact p{margin:0;color:var(--ink-2);font-size:17px}
+.src{font-family:var(--head);font-size:13px;color:var(--ink-2);margin-top:14px}
+@media (min-width:900px){.trust{grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}}
+
+/* references */
+.refs{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media (min-width:900px){.refs{grid-template-columns:repeat(3,1fr);gap:20px}}
+.ph{aspect-ratio:4/3;border:2px dashed #6E8188;border-radius:var(--r);display:grid;place-items:center;text-align:center;padding:10px;background:repeating-linear-gradient(135deg,#25333A 0 12px,#28373E 12px 24px);color:var(--on-dark-2);font-family:var(--head);font-size:14px;font-weight:600}
+.ph svg{width:34px;height:34px;stroke:#8FA2A8;fill:none;stroke-width:1.6;display:block;margin:0 auto 6px}
+.ref figcaption{font-family:var(--head);font-weight:700;font-size:16px;margin-top:10px;color:var(--on-dark)}
+.ref figcaption span{display:block;font-weight:500;font-size:13px;color:var(--on-dark-2)}
+.ref{margin:0}
+.addr-head{font-family:var(--head);font-weight:800;font-size:22px;margin:56px 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{font-family:var(--head);font-size:14px;font-weight:600;padding:7px 11px;border-radius:4px;border:1px solid #4B5D65;color:var(--on-dark)}
+.chips li.school{border-color:var(--orange)}
+
+/* SVJ */
+.steps{display:grid;gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:20px}}
+.step{background:#fff;color:var(--ink);border-radius:var(--r);padding:26px 22px 24px;position:relative}
+.step .no{font-family:var(--head);font-weight:900;font-size:64px;line-height:.8;color:var(--teal);display:block;margin-bottom:14px}
+.step h3{font-size:22px}
+.step p{margin:0;font-size:17px;color:var(--ink-2)}
+.step ul{margin:10px 0 0;padding-left:18px;font-size:16px;color:var(--ink-2)}
+.teal .sec-head p{color:#E6F4F5}
+.svj-foot{display:grid;gap:16px;margin-top:28px;align-items:center}
+.svj-foot .box{background:var(--teal-d);border-radius:var(--r);padding:20px 22px;font-size:17px}
+.svj-foot .box b{font-family:var(--head)}
+@media (min-width:900px){.svj-foot{grid-template-columns:1fr auto;gap:28px}}
+
+/* area */
+.area{display:grid;gap:32px;align-items:center}
+@media (min-width:900px){.area{grid-template-columns:1fr 1fr;gap:64px}}
+.area .chips li{border-color:#9AA5A3;color:var(--ink);background:#fff}
+.area .chips li.main{background:var(--slate);color:#fff;border-color:var(--slate)}
+
+/* faq */
+.faq{max-width:860px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:2px solid var(--slate)}
+summary{cursor:pointer;list-style:none;font-family:var(--head);font-weight:700;font-size:20px;padding:20px 44px 20px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;border-right:3px solid var(--teal);border-bottom:3px solid var(--teal);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details .a{padding:0 0 20px;color:var(--ink-2);font-size:18px}
+details .a p:last-child{margin:0}
+
+/* form */
+.form-grid{display:grid;gap:32px}
+@media (min-width:900px){.form-grid{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}}
+form{background:#fff;color:var(--ink);border-radius:var(--r);padding:24px 20px;display:grid;gap:16px}
+@media (min-width:640px){form{padding:32px;grid-template-columns:1fr 1fr}form .full{grid-column:1/-1}}
+label,.lab{font-family:var(--head);font-weight:700;font-size:15px;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:17px;padding:12px 13px;border:2px solid #9AA5A3;border-radius:var(--r);background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:none;box-shadow:0 0 0 3px rgba(14,124,134,.25)}
+textarea{min-height:110px;resize:vertical}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (min-width:640px){.seg{grid-template-columns:repeat(4,1fr)}}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label{margin:0;border:2px solid #9AA5A3;border-radius:var(--r);padding:11px 8px;text-align:center;cursor:pointer;font-size:14px}
+.seg input:checked + label{background:var(--slate);border-color:var(--slate);color:#fff}
+.seg input:focus-visible + label{outline:3px solid var(--orange);outline-offset:2px}
+.form-msg{display:none;background:var(--teal-l);border-left:5px solid var(--teal);padding:14px 16px;border-radius:4px;font-size:17px}
+.form-msg.show{display:block}
+.form-note{font-size:14px;color:var(--ink-2);margin:0}
+.side-call{font-family:var(--head)}
+.side-call a.big{display:block;font-size:clamp(34px,5vw,48px);font-weight:900;color:var(--on-dark);text-decoration:none;letter-spacing:-.01em;margin:6px 0 2px}
+.side-call p:not(.eyebrow){color:var(--on-dark-2);font-family:var(--body)}
+
+/* contact */
+.contact{display:grid;gap:28px}
+@media (min-width:900px){.contact{grid-template-columns:1.1fr 1fr;gap:64px}}
+.cgrid{display:grid;gap:0;border-top:2px solid var(--slate)}
+.crow{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+.crow .k{font-family:var(--head);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.crow a{color:var(--teal-d);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+.hours{background:var(--concrete);border-radius:var(--r);padding:24px}
+.hours h3{font-size:22px}
+.hours table{width:100%;border-collapse:collapse;font-size:17px}
+.hours td{padding:8px 0;border-bottom:1px solid #C7CCC8}
+.hours td:last-child{text-align:right;font-family:var(--head);font-weight:600}
+.hours tr.today td{font-weight:700;color:var(--slate)}
+.hours .status{margin-top:16px;font-family:var(--head);font-weight:700;font-size:16px}
+.hours .dot{background:#7B878A}
+.hours .dot.on{background:#1F9D5C;box-shadow:0 0 0 4px rgba(31,157,92,.2)}
+.maplinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.maplinks .btn{font-size:15px;padding:12px 16px}
+
+footer{background:#151D21;color:var(--on-dark-2);padding:44px 0 36px;font-size:15px}
+footer .wrap{display:grid;gap:20px}
+footer b{color:var(--on-dark);font-family:var(--head)}
+footer a{color:var(--on-dark)}
+@media (min-width:900px){footer .wrap{grid-template-columns:1.2fr 1fr 1fr}}
+
+/* sticky call */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--slate);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.5fr 1fr;gap:8px;border-top:3px solid var(--orange)}
+.callbar .btn{padding:13px 10px;font-size:16px}
+@media (min-width:900px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+</style>
+
+
+
+<div class="notice" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Firma Vodař</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Firma Vodař – úvod">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="7" fill="#0E7C86"/><path d="M9 30V16a6 6 0 0 1 6-6h13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M27 19c0 0-4 4.8-4 7.6a4 4 0 0 0 8 0C31 23.8 27 19 27 19z" fill="#E8731A"/></svg>
+      <span><b>VODAŘ</b><small>voda · plyn · topení</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#dum">Služby</a>
+      <a href="#proc">Proč Vodař</a>
+      <a href="#reference">Reference</a>
+      <a href="#svj">Pro SVJ</a>
+      <a href="#faq">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+420607215904" aria-label="Zavolat 607 215 904">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      607 215 904
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" style="padding:0" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="meter-box">
+      <svg class="meter" viewBox="0 0 400 400" role="img" aria-label="Ciferník vodoměru: počítadlo se protočí z roku 1991 na rok 2026">
+        <defs>
+          <radialGradient id="bez" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#3D5058"/><stop offset="1" stop-color="#1A2429"/></radialGradient>
+          <radialGradient id="face" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E8E5"/></radialGradient>
+          <clipPath id="win"><rect x="92" y="138" width="216" height="64" rx="4"/></clipPath>
+        </defs>
+        <circle cx="200" cy="200" r="196" fill="url(#bez)"/>
+        <circle cx="200" cy="200" r="182" fill="none" stroke="#0E7C86" stroke-width="8"/>
+        <circle cx="200" cy="200" r="170" fill="url(#face)"/>
+        <g id="ticks" stroke="#1F2A30"></g>
+        <text x="200" y="104" text-anchor="middle" font-family="Schibsted Grotesk, Arial, sans-serif" font-weight="900" font-size="22" letter-spacing="5" fill="#1F2A30">VODAŘ</text>
+        <text x="200" y="125" text-anchor="middle" font-family="Schibsted Grotesk, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#46535A">OSTRAVA · ROKY</text>
+        <!-- odometer window -->
+        <rect x="86" y="132" width="228" height="76" rx="8" fill="#1F2A30"/>
+        <g clip-path="url(#win)" font-family="Schibsted Grotesk, Arial, sans-serif" font-weight="800" font-size="50" text-anchor="middle" fill="#fff" id="odo"></g>
+        <g stroke="#1F2A30" stroke-width="4"><line x1="146" y1="136" x2="146" y2="204"/><line x1="200" y1="136" x2="200" y2="204"/><line x1="254" y1="136" x2="254" y2="204"/></g>
+        <rect x="92" y="138" width="216" height="64" rx="4" fill="none" stroke="#0E7C86" stroke-width="2"/>
+        <rect x="92" y="138" width="216" height="14" fill="#000" opacity=".18"/>
+        <rect x="92" y="188" width="216" height="14" fill="#000" opacity=".18"/>
+        <!-- sub dials -->
+        <g font-family="Schibsted Grotesk, Arial, sans-serif" font-size="8" font-weight="700" fill="#46535A" text-anchor="middle">
+          <circle cx="130" cy="262" r="24" fill="#fff" stroke="#1F2A30" stroke-width="2"/>
+          <circle cx="270" cy="262" r="24" fill="#fff" stroke="#1F2A30" stroke-width="2"/>
+          <text x="130" y="300">×0,1</text><text x="270" y="300">×0,01</text>
+        </g>
+        <g id="subticks" stroke="#1F2A30" stroke-width="1.2"></g>
+        <line class="rotor" id="nd1" x1="130" y1="262" x2="130" y2="244" stroke="#E8731A" stroke-width="3.5" stroke-linecap="round" style="transform-origin:130px 262px"/>
+        <line class="rotor" id="nd2" x1="270" y1="262" x2="270" y2="244" stroke="#E8731A" stroke-width="3.5" stroke-linecap="round" style="transform-origin:270px 262px"/>
+        <circle cx="130" cy="262" r="3.5" fill="#1F2A30"/><circle cx="270" cy="262" r="3.5" fill="#1F2A30"/>
+        <!-- star rotor -->
+        <circle cx="200" cy="300" r="22" fill="#D5ECEE" stroke="#0E7C86" stroke-width="2"/>
+        <g class="rotor" id="star" style="transform-origin:200px 300px"><path d="M200 282 L204 296 L218 300 L204 304 L200 318 L196 304 L182 300 L196 296Z" fill="#0E7C86"/></g>
+        <text x="200" y="350" text-anchor="middle" font-family="Schibsted Grotesk, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#46535A">OD 1991</text>
+      </svg>
+      <p class="meter-cap"><span>35 let</span> ostravských rozvodů<em>na trhu od roku 1991</em></p>
+    </div>
+    <div>
+      <p class="eyebrow" style="color:var(--orange)">Instalatérská firma · Ostrava-Poruba</p>
+      <h1 id="h1">Rozvody, stoupačky a bytová jádra <span class="hl">pro celé domy</span></h1>
+      <p class="lead">Voda, odpady, topení a plyn – montáže, rekonstrukce i opravy. Pro <strong>správce bytových domů, družstva a SVJ</strong> v Ostravě i pro jednotlivé domácnosti. Vlastní tým kolem 25 zaměstnanců.</p>
+      <div class="cta">
+        <a class="btn btn-call" href="tel:+420607215904"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Zavolat 607 215 904</a>
+        <a class="btn btn-ghost" href="#poptavka" data-type="svj">Poptávka pro SVJ <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-meta">
+        <span class="status"><span class="dot" data-dot></span><span data-status>Kancelář Po–Pá 6:30–14:30</span></span>
+        <span>Kosmická 1723/2, <b>Ostrava-Poruba</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY: ŘEZ PANELÁKEM -->
+<section class="concrete" id="dum" aria-labelledby="dum-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Služby · řez panelovým domem</p>
+      <h2 id="dum-h">Celý dům od sklepa po střechu. Jedna firma.</h2>
+      <p>Vyberte, co ve Vašem domě řešíte. Ukážeme, kudy to vede a co pro Vás uděláme.</p>
+    </div>
+    <div class="cut">
+      <div class="house-wrap">
+        <span class="scale">8 NP + suterén</span>
+        <svg id="house" viewBox="0 0 440 600" role="img" aria-label="Schematický řez osmipatrovým panelovým domem se stoupačkou, bytovými jádry, topením, plynem a vodoměry"></svg>
+      </div>
+      <div>
+        <div class="tabs" role="tablist" aria-label="Části domu">
+          <button class="tab" role="tab" aria-selected="true" data-k="stoupacky" id="t-stoupacky"><span class="n">01</span>Stoupačky</button>
+          <button class="tab" role="tab" aria-selected="false" data-k="jadra" id="t-jadra"><span class="n">02</span>Bytová jádra</button>
+          <button class="tab" role="tab" aria-selected="false" data-k="topeni" id="t-topeni"><span class="n">03</span>Topení a radiátory</button>
+          <button class="tab" role="tab" aria-selected="false" data-k="plyn" id="t-plyn"><span class="n">04</span>Plyn a revize</button>
+          <button class="tab" role="tab" aria-selected="false" data-k="vodomery" id="t-vodomery"><span class="n">05</span>Vodoměry</button>
+        </div>
+        <div class="panel" role="tabpanel" id="panel" aria-live="polite">
+          <h3 id="p-title">Stoupačky a domovní rozvody</h3>
+          <p class="who" id="p-who">Pro SVJ, družstva a správce domů</p>
+          <p id="p-text">Montáže, rekonstrukce a opravy domovních rozvodů vody a odpadů – od přípojky v suterénu až po poslední patro.</p>
+          <ul id="p-list"></ul>
+          <div class="price">Cena: na dotaz <span class="demo">ukázkový text</span></div>
+        </div>
+        <div class="cta" style="margin-top:18px">
+          <a class="btn btn-dark" href="#poptavka">Poptat tuto práci</a>
+          <a class="btn btn-teal" href="tel:+420607215904">Zavolat 607 215 904</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards" aria-label="Přehled služeb">
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></svg></div><h3>Rozvody vody a odpadů</h3><p>Montáže, rekonstrukce a opravy domovních rozvodů vody a odpadů včetně stoupaček.</p><div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="1.5"/><path d="M7 7v11M11 7v11M15 7v11M19 18v3M5 18v3"/></svg></div><h3>Topení a radiátory</h3><p>Montáže a výměny topných těles, termostatických ventilů a hlavic, rozvody topení.</p><div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-3.5 2-5 1 1.5 2 2 2 2s-.5-4 1-7z"/></svg></div><h3>Plyn a revize plynu</h3><p>Revizní a porevizní činnost, instalace a dodávky plynových spotřebičů, rozvody plynu.</p><div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><rect x="7.5" y="8" width="9" height="4" rx=".6"/><path d="M12 15.5l2-1.5"/></svg></div><h3>Vodoměry</h3><p>Instalace domovních a bytových vodoměrů, pozáruční opravy a cejchování.</p><div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2zM6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></svg></div><h3>Bytová jádra, koupelny, WC</h3><p>Rekonstrukce bytových jader, koupelen a WC – včetně výměny zařizovacích předmětů.</p><div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 10h8a3 3 0 0 1 3 3v1M16 14v2M3 10h2M9 10V6h4M11 6V4"/><path d="M15 19h5"/></svg></div><h3>Zařizovací předměty</h3><p>Vany, sprchové kouty, umyvadla, WC, dřezy, sifony a baterie; zapojení myček a praček.</p><div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div></article>
+      <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V9h6v11M11 14h8v6M7 12h2M7 15h2M14 17h2"/></svg></div><h3>Zednické a další práce</h3><p>Zednické, klempířské, malířské, natěračské a zámečnické práce – bez shánění dalších řemeslníků.</p><div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div></article>
+      <article class="card alert"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></div><h3>Havarijní služba 24 h</h3><p>Nepřetržitá havarijní služba – voda, plyn, topení, elektro. Výhradně pro smluvní partnery.</p><div class="price">Návrh smlouvy na vyžádání</div></article>
+      <article class="card" style="border-top-color:var(--slate);background:var(--teal);color:#fff"><h3 style="font-size:24px">Nevidíte svou práci?</h3><p style="color:#E6F4F5">Výčet není úplný. Popište, co potřebujete – řekneme Vám, jestli to uděláme.</p><a class="btn btn-call" href="#poptavka" style="align-self:flex-start">Napsat poptávku</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROČ MY -->
+<section class="white" id="proc" aria-labelledby="proc-h">
+  <div class="wrap trust">
+    <div>
+      <p class="eyebrow">Proč Vodař</p>
+      <p class="bignum" aria-hidden="true">1991</p>
+      <h2 id="proc-h" class="bignum-sub">35 let instalatérských prací v ostravských domech.</h2>
+      <p style="color:var(--ink-2);max-width:42ch">Od roku 1991 děláme rozvody v ostravských bytových domech – pro správce, družstva, SVJ i jednotlivé domácnosti.</p>
+    </div>
+    <div>
+      <div class="facts">
+        <div class="fact"><span class="k">25</span><div><h3>Vlastní tým zkušených řemeslníků</h3><p>Kolem 25 zaměstnanců s mnohaletou praxí – dost lidí i na celý dům.</p></div></div>
+        <div class="fact"><span class="k">SVJ</span><div><h3>Pro největší správce bytového fondu</h3><p>Pracujeme pro největší správce a vlastníky bytového fondu v Ostravě, bytová družstva i jednotlivé domácnosti.</p></div></div>
+        <div class="fact"><span class="k">24 h</span><div><h3>Havarijní služba pro smluvní partnery</h3><p>Smluvní partneři mají k dispozici nepřetržitou havarijní službu – voda, plyn, topení, elektro.</p></div></div>
+        <div class="fact"><span class="k">4+</span><div><h3>Řemesla pod jednou střechou</h3><p>Voda, odpady, topení a plyn – a k tomu zednické, klempířské a malířské práce. Jedna objednávka, jeden odpovědný dodavatel.</p></div></div>
+      </div>
+      <p class="src">Údaje: vlastní web firmy (vodar.cz) a Firmy.cz.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCE / REALIZACE -->
+<section class="dark" id="reference" aria-labelledby="ref-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Realizace a reference</p>
+      <h2 id="ref-h">Domy, školy a školky, kde už jsme pracovali</h2>
+      <p>Výběr adres z referenčního seznamu firmy. Fotografie z realizací doplníme z Vašeho archivu.</p>
+    </div>
+    <div class="refs">
+      <figure class="ref"><div class="ph"><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Sem přijde Vaše fotka</div></div><figcaption>Hlavní třída 1016–1019<span>z referenčního seznamu</span></figcaption></figure>
+      <figure class="ref"><div class="ph"><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Sem přijde Vaše fotka</div></div><figcaption>Alšovo náměstí 690<span>z referenčního seznamu</span></figcaption></figure>
+      <figure class="ref"><div class="ph"><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Sem přijde Vaše fotka</div></div><figcaption>ZŠ Bulharská<span>z referenčního seznamu</span></figcaption></figure>
+      <figure class="ref"><div class="ph"><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Sem přijde Vaše fotka</div></div><figcaption>Opavská 1131–1132<span>z referenčního seznamu</span></figcaption></figure>
+      <figure class="ref"><div class="ph"><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Sem přijde Vaše fotka</div></div><figcaption>Sokolovská 1189–1191<span>z referenčního seznamu</span></figcaption></figure>
+      <figure class="ref"><div class="ph"><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Sem přijde Vaše fotka</div></div><figcaption>MŠ J. Skupy<span>z referenčního seznamu</span></figcaption></figure>
+    </div>
+    <p class="addr-head">Všech 45 adres z referenčního seznamu</p>
+    <ul class="chips" id="addr"></ul>
+    <p style="font-family:var(--head);font-size:13px;color:var(--on-dark-2);margin-top:14px"><span style="display:inline-block;width:10px;height:10px;border:1px solid var(--orange);border-radius:2px;margin-right:6px;vertical-align:middle"></span>školy a mateřské školy</p>
+  </div>
+</section>
+
+<!-- PRO SVJ (jak probíhá zakázka) -->
+<section class="teal" id="svj" aria-labelledby="svj-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Pro SVJ a družstva · jak probíhá zakázka</p>
+      <h2 id="svj-h">Výměna rozvodů v domě, kde se dál bydlí</h2>
+      <p>Lidé v domě musí vědět, kdy poteče voda a kdy přijdeme k nim do bytu. Proto stavíme práci na plánu, ne na improvizaci. <span class="demo">ukázkový text</span></p>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="no">1</span><h3>Prohlídka a nabídka</h3><p>Prohlédneme stoupačky, suterén a technické prostory, s výborem nebo správcem projdeme rozsah prací.</p><ul><li>cenová nabídka a návrh postupu</li><li>podklady pro schůzi vlastníků</li></ul></li>
+      <li class="step"><span class="no">2</span><h3>Harmonogram pro obyvatele</h3><p>Práce rozdělíme po stoupačkách a vchodech. Obyvatelé předem dostanou termíny odstávek a vstupů do bytů.</p><ul><li>oznámení k vyvěšení ve vchodech</li><li>jeden kontakt na stavbyvedoucího</li></ul></li>
+      <li class="step"><span class="no">3</span><h3>Výměna, zkouška, předání</h3><p>Vyměníme rozvody, provedeme tlakovou zkoušku a zapravíme prostupy vlastními zedníky a malíři.</p><ul><li>úklid po každém dni práce</li><li>předání správci s dokumentací</li></ul></li>
+    </ol>
+    <div class="svj-foot">
+      <div class="box"><b>Domácnost?</b> Stačí zavolat na 607 215 904 nebo vyplnit poptávku. Domluvíme se na prohlídce a ceně předem.</div>
+      <a class="btn btn-call" href="#poptavka" data-type="svj">Poptávka pro SVJ <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- OBLAST -->
+<section class="concrete" id="oblast" aria-labelledby="obl-h">
+  <div class="wrap area">
+    <div>
+      <p class="eyebrow">Kde pracujeme</p>
+      <h2 id="obl-h">Ostrava. Sídlo máme v Porubě.</h2>
+      <p style="font-size:19px;color:#3D4A50">Domy po celé Ostravě – od Hlavní třídy v Porubě po Výškovickou na Jihu. Přesný dosah pro Vaši zakázku Vám potvrdíme po telefonu.</p>
+      <ul class="chips" style="margin-top:22px">
+        <li class="main">Ostrava-Poruba</li><li>Moravská Ostrava a Přívoz</li><li>Ostrava-Jih</li><li>Mariánské Hory a Hulváky</li><li>Svinov</li><li>Pustkovec</li><li>Třebovice</li><li>Krásné Pole</li><li>Vítkovice</li><li>Martinov</li>
+      </ul>
+      <p style="margin-top:14px"><span class="demo">ukázkový text</span> <span style="font-family:var(--head);font-size:13px;color:#3D4A50">seznam obvodů doplní firma</span></p>
+    </div>
+    <svg viewBox="0 0 420 320" role="img" aria-label="Stylizovaná mapa Ostravy se sídlem firmy v Porubě" style="width:100%;height:auto">
+      <rect width="420" height="320" rx="6" fill="#fff"/>
+      <path d="M20 250 C90 230 120 270 190 240 S300 200 400 230" fill="none" stroke="#9FD0D5" stroke-width="10" stroke-linecap="round"/>
+      <path d="M250 20 C240 90 280 140 260 210 S240 290 250 310" fill="none" stroke="#9FD0D5" stroke-width="8" stroke-linecap="round"/>
+      <path d="M40 120 L60 70 L150 50 L190 90 L170 150 L90 170Z" fill="#D5ECEE" stroke="#0E7C86" stroke-width="2"/>
+      <path d="M200 110 L300 90 L340 140 L300 190 L220 180Z" fill="#E7E9E6" stroke="#8EA3A8" stroke-width="2"/>
+      <path d="M190 200 L270 205 L300 270 L210 290 L170 250Z" fill="#E7E9E6" stroke="#8EA3A8" stroke-width="2"/>
+      <path d="M340 140 L400 130 L405 200 L330 205Z" fill="#E7E9E6" stroke="#8EA3A8" stroke-width="2"/>
+      <g font-family="Schibsted Grotesk, Arial, sans-serif" font-weight="700" font-size="13" fill="#1F2A30">
+        <text x="72" y="140">Poruba</text>
+        <text x="228" y="148">Mor. Ostrava</text>
+        <text x="200" y="250">Ostrava-Jih</text>
+        <text x="342" y="174" font-size="11">Slezská</text>
+      </g>
+      <g transform="translate(118 98)"><path d="M0 -26 C-12 -26 -18 -16 -18 -9 C-18 4 0 18 0 18 S18 4 18 -9 C18 -16 12 -26 0 -26Z" fill="#E8731A" stroke="#1F2A30" stroke-width="2"/><circle cx="0" cy="-9" r="6" fill="#1F2A30"/></g>
+      <text x="20" y="300" font-family="Schibsted Grotesk, Arial, sans-serif" font-size="11" font-weight="600" fill="#46535A">Schéma, ne mapa v měřítku</text>
+    </svg>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="white" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq">
+    <div class="sec-head">
+      <p class="eyebrow">Časté otázky</p>
+      <h2 id="faq-h">Než zavoláte</h2>
+    </div>
+    <details open><summary>Děláte i pro jednotlivé domácnosti, nebo jen pro celé domy?</summary><div class="a"><p>Obojí. Pracujeme pro správce a vlastníky bytových domů, bytová družstva i jednotlivé domácnosti – od výměny baterie po rekonstrukci celého bytového jádra.</p></div></details>
+    <details><summary>Kolik stojí výměna stoupaček nebo rekonstrukce jádra?</summary><div class="a"><p>Cena záleží na počtu stoupaček a pater, materiálu a stavu domu. Paušální ceník proto nezveřejňujeme – nabídku připravíme po prohlídce. <span class="demo">ukázkový text</span></p></div></details>
+    <details><summary>Musí se obyvatelé při výměně stoupaček vystěhovat?</summary><div class="a"><p>Ne. Výměna rozvodů probíhá v obydleném domě. Potřebujeme přístup ke stoupačce v bytě v domluveném termínu a obyvatelé předem vědí, kdy bude voda zavřená. <span class="demo">ukázkový text</span></p></div></details>
+    <details><summary>Provádíte revize plynu?</summary><div class="a"><p>Ano. Provádíme revizní i porevizní činnost plynu a také instalace a dodávky plynových spotřebičů.</p></div></details>
+    <details><summary>Máte havarijní službu?</summary><div class="a"><p>Nepřetržitou havarijní službu zajišťujeme výhradně smluvním partnerům – správcům, družstvům, SVJ a majitelům domů. O smluvní zajištění si řekněte, zašleme Vám návrh smlouvy.</p></div></details>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="dark" id="poptavka" aria-labelledby="form-h">
+  <div class="wrap form-grid">
+    <div class="side-call">
+      <p class="eyebrow">Poptávka</p>
+      <h2 id="form-h">Popište dům. Ozveme se s termínem prohlídky.</h2>
+      <p style="font-size:19px">Rychlejší je telefon – v pracovní dny od 6:30 do 14:30.</p>
+      <a class="big" href="tel:+420607215904">607 215 904</a>
+      <a class="big" href="tel:+420596956220" style="font-size:28px">596 956 220</a>
+      <p style="margin-top:16px">E-mail: <a href="mailto:vodar@atlas.cz" style="color:var(--on-dark)">vodar@atlas.cz</a></p>
+    </div>
+    <form id="f" novalidate>
+      <div class="full">
+        <span class="lab" id="typ-l">Kdo poptává</span>
+        <div class="seg" role="radiogroup" aria-labelledby="typ-l">
+          <input type="radio" name="typ" id="ty1" value="svj" checked><label for="ty1">SVJ</label>
+          <input type="radio" name="typ" id="ty2" value="druzstvo"><label for="ty2">Družstvo</label>
+          <input type="radio" name="typ" id="ty3" value="spravce"><label for="ty3">Správce</label>
+          <input type="radio" name="typ" id="ty4" value="domacnost"><label for="ty4">Domácnost</label>
+        </div>
+      </div>
+      <div><label for="sl">Co řešíte</label>
+        <select id="sl" name="sluzba">
+          <option>Stoupačky a rozvody vody / odpadů</option>
+          <option>Bytové jádro, koupelna, WC</option>
+          <option>Topení a radiátory</option>
+          <option>Plyn a revize plynu</option>
+          <option>Vodoměry</option>
+          <option>Havarijní služba – smlouva</option>
+          <option>Jiné</option>
+        </select></div>
+      <div><label for="ad">Adresa objektu</label><input id="ad" name="adresa" placeholder="ulice a číslo, Ostrava" autocomplete="street-address"></div>
+      <div><label for="jm">Jméno</label><input id="jm" name="jmeno" autocomplete="name" required></div>
+      <div><label for="te">Telefon</label><input id="te" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div class="full"><label for="em">E-mail</label><input id="em" name="email" type="email" autocomplete="email"></div>
+      <div class="full"><label for="zp">Popis</label><textarea id="zp" name="zprava" placeholder="Např. 12 pater, 3 vchody, stoupačky vody a odpadů jsou původní…"></textarea></div>
+      <div class="full"><button class="btn btn-call" type="submit" style="width:100%">Odeslat poptávku</button></div>
+      <div class="full form-msg" id="fm" role="status">Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Ve finálním webu se poptávka odešle přímo na e-mail firmy.</div>
+      <p class="full form-note">Vyplněním souhlasíte se zpracováním údajů pro vyřízení poptávky. <span class="demo">ukázkový text</span></p>
+    </form>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="white" id="kontakt" aria-labelledby="kon-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Kontakt</p><h2 id="kon-h">Firma Vodař, Ostrava-Poruba</h2></div>
+    <div class="contact">
+      <div>
+        <div class="cgrid">
+          <div class="crow"><span class="k">Mobil</span><span><a href="tel:+420607215904">607 215 904</a></span></div>
+          <div class="crow"><span class="k">Kancelář</span><span><a href="tel:+420596956220">596 956 220</a></span></div>
+          <div class="crow"><span class="k">E-mail</span><span><a href="mailto:vodar@atlas.cz">vodar@atlas.cz</a></span></div>
+          <div class="crow"><span class="k">Adresa</span><span>Kosmická 1723/2<br>708 00 Ostrava-Poruba</span></div>
+          <div class="crow"><span class="k">Havárie</span><span>Nonstop linka pro smluvní partnery:<br><a href="tel:+420602785533">602 785 533</a> · <a href="tel:+420602759356">602 759 356</a></span></div>
+          <div class="crow"><span class="k">Firma</span><span>Zdeněk Hybner · IČO 15495809</span></div>
+        </div>
+        <div class="maplinks">
+          <a class="btn btn-dark" href="https://mapy.cz/zakladni?q=Kosmick%C3%A1%201723%2F2%2C%20Ostrava-Poruba" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+          <a class="btn btn-teal" href="https://www.facebook.com/707543579419274" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="hours">
+        <h3>Otevírací doba</h3>
+        <table id="hrs">
+          <tr data-d="1"><td>Pondělí</td><td>6:30–14:30</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>6:30–14:30</td></tr>
+          <tr data-d="3"><td>Středa</td><td>6:30–14:30</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>6:30–14:30</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>6:30–14:30</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>zavřeno</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+        </table>
+        <div class="status"><span class="dot" data-dot></span><span data-status>Po–Pá 6:30–14:30</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Firma Vodař</b><br>Instalatérská firma v Ostravě od roku 1991.<br>Voda · odpady · topení · plyn.</div>
+    <div>Kosmická 1723/2, 708 00 Ostrava-Poruba<br><a href="tel:+420607215904">607 215 904</a> · <a href="mailto:vodar@atlas.cz">vodar@atlas.cz</a></div>
+    <div>Zdeněk Hybner, IČO 15495809<br>Nezávazný návrh webu – není to oficiální stránka firmy.</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-call" href="tel:+420607215904"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Zavolat 607 215 904</a>
+  <a class="btn btn-ghost" href="#poptavka">Poptávka</a>
+</div>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- meter ticks ---------- */
+  var ticks=document.getElementById('ticks');
+  for(var i=0;i<60;i++){var a=i*6*Math.PI/180,long=i%5===0,r1=long?150:156,r2=164;
+    el('line',{x1:200+r1*Math.sin(a),y1:200-r1*Math.cos(a),x2:200+r2*Math.sin(a),y2:200-r2*Math.cos(a),'stroke-width':long?2.5:1},ticks);}
+  var st=document.getElementById('subticks');
+  [[130,262],[270,262]].forEach(function(c){for(var i=0;i<10;i++){var a=i*36*Math.PI/180;el('line',{x1:c[0]+18*Math.sin(a),y1:c[1]-18*Math.cos(a),x2:c[0]+22*Math.sin(a),y2:c[1]-22*Math.cos(a)},st);}});
+
+  /* ---------- odometer 1991 -> 2026 ---------- */
+  var odo=document.getElementById('odo');
+  var cols=[[1,2],[9,0],[9,0,1,2],[1,2,3,4,5,6]];
+  var cx=[119,173,227,281], H=64, rolls=[];
+  cols.forEach(function(seq,ci){
+    var g=el('g',{'class':'roll'},odo);
+    seq.forEach(function(d,j){var t=el('text',{x:cx[ci],y:188+j*H},g);t.textContent=d;});
+    g.dataset.end=-(seq.length-1)*H;
+    rolls.push(g);
+  });
+  function setRoll(final){rolls.forEach(function(g){g.style.transform='translateY('+(final?g.dataset.end:0)+'px)';});
+    ['nd1','nd2','star'].forEach(function(id,i){document.getElementById(id).style.transform='rotate('+(final?[250,1150,720][i]:0)+'deg)';});}
+  if(reduce){rolls.forEach(function(g){g.style.transition='none'});setRoll(true);}
+  else{
+    rolls.forEach(function(g){g.style.transition='none'});setRoll(false);
+    odo.getBoundingClientRect();
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      rolls.forEach(function(g,i){g.style.transition='';g.style.transitionDelay=(i*90)+'ms';});
+      setRoll(true);
+    });});
+  }
+
+  /* ---------- panel house ---------- */
+  var svg=document.getElementById('house');
+  var top0=80, FH=55, N=8;
+  // ground / basement
+  el('rect',{x:0,y:520,width:440,height:80,fill:'#D3D7D3'},svg);
+  el('rect',{x:30,y:520,width:380,height:58,fill:'#C2C8C4',stroke:'#1F2A30','stroke-width':2},svg);
+  el('line',{x1:0,y1:520,x2:440,y2:520,stroke:'#1F2A30','stroke-width':2},svg);
+  // building shell
+  el('rect',{x:30,y:80,width:380,height:440,fill:'#F7F8F6',stroke:'#1F2A30','stroke-width':2},svg);
+  el('rect',{x:24,y:68,width:392,height:14,fill:'#1F2A30'},svg);
+  el('rect',{x:300,y:44,width:46,height:24,fill:'#3A4A52'},svg); // strojovna
+  var base=el('g',{},svg);
+  for(var f=0;f<N;f++){
+    var t=top0+f*FH;
+    if(f>0) el('rect',{x:30,y:t-3,width:380,height:6,fill:'#3A4A52'},base);
+    el('rect',{x:42,y:t+10,width:78,height:28,fill:'#DCE7E8',stroke:'#8EA3A8','stroke-width':1.2},base);
+    el('rect',{x:326,y:t+10,width:72,height:28,fill:'#DCE7E8',stroke:'#8EA3A8','stroke-width':1.2},base);
+    el('line',{x1:155,y1:t+3,x2:155,y2:t+FH-3,stroke:'#C9CFCB','stroke-width':2},base);
+    el('line',{x1:318,y1:t+3,x2:318,y2:t+FH-3,stroke:'#C9CFCB','stroke-width':2},base);
+    var lb=el('text',{x:6,y:t+33,'font-family':'Schibsted Grotesk, Arial, sans-serif','font-size':11,'font-weight':700,fill:'#46535A'},svg);lb.textContent=(N-f)+'.';
+  }
+  var sb=el('text',{x:6,y:553,'font-family':'Schibsted Grotesk, Arial, sans-serif','font-size':10,'font-weight':700,fill:'#46535A'},svg);sb.textContent='S';
+
+  var L={};
+  ['jadra','topeni','plyn','stoupacky','vodomery'].forEach(function(k){L[k]=el('g',{'class':'layer','data-k':k},svg);});
+  function pipe(layer,d,w){el('path',{d:d,'class':'pipe','stroke-width':w},layer);var fl=el('path',{d:d,'class':'flow'},layer);return fl;}
+  function lbl(layer,x,y,txt,anchor){var g=el('g',{'class':'lbl'},layer);var w=txt.length*6.6+14;var x0=anchor==='end'?x-w:x;
+    el('rect',{x:x0,y:y-13,width:w,height:19,rx:3,fill:'#1F2A30'},g);var t=el('text',{x:x0+7,y:y+1,'font-family':'Schibsted Grotesk, Arial, sans-serif','font-size':11,'font-weight':700,fill:'#fff'},g);t.textContent=txt;}
+
+  // jádra
+  for(f=0;f<N;f++){t=top0+f*FH;
+    el('rect',{x:168,y:t+9,width:82,height:40,rx:3,'class':'fillable'},L.jadra);
+    el('rect',{x:220,y:t+14,width:24,height:12,rx:4,'class':'fillable'},L.jadra);
+    el('circle',{cx:232,cy:t+38,r:5,'class':'fillable'},L.jadra);
+  }
+  lbl(L.jadra,252,62,'bytové jádro');
+  // topení
+  pipe(L.topeni,'M136 548 V90',4);pipe(L.topeni,'M310 548 V90',4);
+  pipe(L.topeni,'M136 548 H310',4);
+  el('rect',{x:94,y:530,width:44,height:30,rx:3,'class':'fillable'},L.topeni);
+  for(f=0;f<N;f++){t=top0+f*FH;
+    el('rect',{x:48,y:t+42,width:66,height:8,rx:2,'class':'fillable'},L.topeni);
+    el('rect',{x:330,y:t+42,width:64,height:8,rx:2,'class':'fillable'},L.topeni);
+    pipe(L.topeni,'M114 '+(t+46)+' H136',3);pipe(L.topeni,'M310 '+(t+46)+' H330',3);
+  }
+  lbl(L.topeni,138,575,'předávací stanice / ÚT');
+  // plyn
+  pipe(L.plyn,'M440 556 H262 V96',4);
+  for(f=0;f<N;f++){t=top0+f*FH;
+    pipe(L.plyn,'M262 '+(t+40)+' H284',3);
+    el('rect',{x:284,y:t+30,width:22,height:18,rx:2,'class':'fillable'},L.plyn);
+    el('circle',{cx:273,cy:t+40,r:3.5,'class':'fillable'},L.plyn);
+  }
+  lbl(L.plyn,436,546,'přípojka plynu','end');
+  // stoupačky
+  pipe(L.stoupacky,'M0 540 H192 V92',5);
+  pipe(L.stoupacky,'M206 40 V566 H440',8);
+  for(f=0;f<N;f++){t=top0+f*FH;
+    pipe(L.stoupacky,'M192 '+(t+32)+' H220',3);
+    pipe(L.stoupacky,'M206 '+(t+46)+' H236',4);
+  }
+  lbl(L.stoupacky,214,36,'odvětrání odpadu');
+  lbl(L.stoupacky,4,534,'přípojka vody');
+  // vodoměry
+  for(f=0;f<N;f++){t=top0+f*FH;
+    el('circle',{cx:182,cy:t+32,r:6.5,'class':'fillable'},L.vodomery);
+    el('line',{x1:178,y1:t+32,x2:186,y2:t+32,stroke:'#1F2A30','stroke-width':1.5},L.vodomery);
+  }
+  el('circle',{cx:70,cy:540,r:11,'class':'fillable'},L.vodomery);
+  el('rect',{x:64,y:536,width:12,height:5,fill:'#1F2A30'},L.vodomery);
+  lbl(L.vodomery,86,512,'domovní vodoměr');
+
+  var DATA={
+    stoupacky:{t:'Stoupačky a domovní rozvody',w:'Pro SVJ, družstva a správce domů',p:'Montáže, rekonstrukce a opravy domovních rozvodů vody a odpadů – od přípojky v suterénu až po poslední patro.',l:['výměna stoupaček vody a odpadů','ležaté rozvody v suterénu','napojení bytových rozvodů na novou stoupačku']},
+    jadra:{t:'Rekonstrukce bytových jader',w:'Pro domácnosti, SVJ i družstva',p:'Rekonstrukce bytových jader, koupelen a WC – včetně zařizovacích předmětů a navazujících řemesel.',l:['vany, sprchové kouty, umyvadla, WC a splachovače','dřezy, sifony, baterie, zapojení myček a praček','zednické, malířské a natěračské práce']},
+    topeni:{t:'Topení a radiátory',w:'Pro SVJ, družstva i jednotlivé byty',p:'Montáže, rekonstrukce a opravy rozvodů topení, výměny topných těles a regulace.',l:['montáže a výměny topných těles','termostatické ventily a hlavice','opravy a rekonstrukce rozvodů topení']},
+    plyn:{t:'Plyn a revize plynu',w:'Pro správce domů i domácnosti',p:'Rozvody plynu, revizní a porevizní činnost, instalace a dodávky plynových spotřebičů.',l:['revize a porevizní opravy plynu','montáže, rekonstrukce a opravy rozvodů plynu','instalace a dodávky plynových spotřebičů']},
+    vodomery:{t:'Vodoměry',w:'Pro správce domů, SVJ a družstva',p:'Instalace domovních i bytových vodoměrů, jejich pozáruční opravy a cejchování.',l:['domovní vodoměry na přípojce','bytové vodoměry na stoupačkách','pozáruční opravy a cejchování']}
+  };
+  var tabs=document.querySelectorAll('.tab');
+  function show(k){
+    for(var key in L){L[key].classList.toggle('on',key===k);}
+    tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.k===k?'true':'false');b.tabIndex=b.dataset.k===k?0:-1;});
+    var d=DATA[k];
+    document.getElementById('p-title').textContent=d.t;
+    document.getElementById('p-who').textContent=d.w;
+    document.getElementById('p-text').textContent=d.p;
+    var ul=document.getElementById('p-list');ul.innerHTML='';
+    d.l.forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li);});
+    document.getElementById('panel').setAttribute('aria-labelledby','t-'+k);
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){show(b.dataset.k);});
+    b.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight'||e.key==='ArrowDown')n=(i+1)%tabs.length;if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=(i-1+tabs.length)%tabs.length;if(n!==null){e.preventDefault();tabs[n].focus();show(tabs[n].dataset.k);}});
+  });
+  show('stoupacky');
+
+  /* ---------- reference addresses ---------- */
+  var A=['Alšovo náměstí 690','Badatelů 1569–1573','Bohumíra Četyny 13','Bohumínská 57–59','Čkalovova 917','Dr. Martínka 3','Francouzská 6015','Gen. Hrušky 1215','Hlavní třída 1016–1019','Hlavní třída 1047','Hlavní třída 564','I. Sekaniny 1802','Jana Šoupala 1600','Kyjevská 1231–1232','Makovského 4420','Makovského 4427','Mongolská 1474','MŠ Formana','MŠ J. Skupy','Na Jízdárně 29','Nádražní 9','nám. A. Bejdové','nám. V. Vacka','O. Jeremiáše 1987','Opavská 1131–1132','Oty Synka 1837','Pionýrů 828','Porubská 826','Porubská 944','Přívozská 31','Rošického 1079–1081','Slepá 1097','Sokolovská 1189–1191','Svojsíkova 1594','Tylova 2','Vlasákové 20','Vršovců 4','Výškovická 81','Výškovická 105','Žilinská 1359','ZŠ Bulharská','ZŠ J. Valčíka','ZŠ L. Štúra','ZŠ Spartakovců','ZŠ Šalounova'];
+  var ul=document.getElementById('addr');
+  A.forEach(function(a){var li=document.createElement('li');li.textContent=a;if(/^(ZŠ|MŠ)/.test(a))li.className='school';ul.appendChild(li);});
+
+  /* ---------- open / closed (ověřená doba Po–Pá 6:30–14:30, Europe/Prague) ---------- */
+  function prague(){
+    try{var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+      var o={};p.forEach(function(x){o[x.type]=x.value;});
+      var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];return {d:wd,m:parseInt(o.hour,10)*60+parseInt(o.minute,10)};
+    }catch(e){var n=new Date();return {d:n.getDay(),m:n.getHours()*60+n.getMinutes()};}
+  }
+  var now=prague(), work=now.d>=1&&now.d<=5, open=work&&now.m>=390&&now.m<870, msg;
+  if(open) msg='Kancelář teď otevřena · do 14:30';
+  else if(work&&now.m<390) msg='Kancelář teď zavřena · otevíráme dnes v 6:30';
+  else if(now.d>=1&&now.d<=4) msg='Kancelář teď zavřena · otevíráme zítra v 6:30';
+  else msg='Kancelář teď zavřena · otevíráme v pondělí v 6:30';
+  document.querySelectorAll('[data-status]').forEach(function(s){s.textContent=msg;});
+  document.querySelectorAll('[data-dot]').forEach(function(s){s.classList.toggle('on',open);});
+  var tr=document.querySelector('#hrs tr[data-d="'+now.d+'"]');if(tr)tr.className='today';
+
+  /* ---------- form ---------- */
+  document.querySelectorAll('[data-type="svj"]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('ty1').checked=true;});});
+  document.getElementById('f').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('fm');m.classList.add('show');m.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});
+  });
+})();
+</script>
+</body>
+</html>

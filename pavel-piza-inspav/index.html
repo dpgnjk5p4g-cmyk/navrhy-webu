@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – INSPAV Pavel Píža</title>
+<meta name="description" content="Instalatér, plynař a topenář v Ostravě-Přívoze: montáž a rekonstrukce stoupaček, rozvody vody, plynu, topení a kanalizace včetně revizí. Pavel Píža INSPAV, tel. 603 533 992.">
+<meta name="theme-color" content="#1D3F8F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Pavel Píža INSPAV",
+  "telephone": "+420603533992",
+  "email": "inspav@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zákrejsova 1066/8",
+    "addressLocality": "Ostrava-Přívoz",
+    "postalCode": "702 00",
+    "addressCountry": "CZ"
+  },
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "66717639"}
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --blue:#1D3F8F; --blue-d:#152f6b; --paper:#F2F5F0; --paper-2:#E6ECE3; --white:#FFFFFF;
+  --yellow:#F2B705; --ink:#1E2226; --ink-2:#4A5158; --red:#A3322A; --line:#C9D3DF;
+  --grid-minor:rgba(29,63,143,.07); --grid-major:rgba(29,63,143,.16);
+  --h:"Saira Condensed","Arial Narrow","Roboto Condensed","Liberation Sans Narrow","DejaVu Sans Condensed",Arial,sans-serif;
+  --t:"Source Serif 4","Source Serif Pro",Georgia,"Times New Roman",serif;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--t);font-size:18px;line-height:1.55;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{max-width:100%}
+a{color:var(--blue)}
+h1,h2,h3,h4{font-family:var(--h);line-height:1.02;margin:0;color:var(--ink);letter-spacing:.005em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media (min-width:700px){.wrap{padding:0 28px}}
+.demo{display:inline-block;vertical-align:middle;font-family:var(--h);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;margin-left:6px;border:1px dashed #6b4e00;color:#5a4100;background:#FFF3C4;border-radius:2px;white-space:nowrap}
+.lab{font-family:var(--h);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;box-shadow:0 0 0 5px var(--ink)}
+
+/* banner + header */
+.proto{background:var(--ink);color:#F2F5F0;font-family:var(--h);font-size:14px;letter-spacing:.04em;text-align:center;padding:7px 16px}
+.proto strong{color:var(--yellow);font-weight:700}
+header.top{position:sticky;top:0;z-index:30;background:rgba(242,245,240,.96);border-bottom:2px solid var(--blue);backdrop-filter:saturate(1.2) blur(6px)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+.logo svg{width:34px;height:34px;flex:none}
+.logo b{font-family:var(--h);font-weight:800;font-size:26px;letter-spacing:.06em;line-height:1}
+.logo small{display:block;white-space:nowrap;font-family:var(--h);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);line-height:1.1;margin-top:2px}
+nav.main{display:none;gap:22px}
+.hm{display:none}@media (min-width:430px){.hm{display:inline}}
+nav.main a{font-family:var(--h);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav.main a:hover{border-color:var(--blue);color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--h);font-weight:700;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);border-radius:2px;padding:12px 20px;min-height:52px;cursor:pointer;line-height:1;transition:transform .15s ease, box-shadow .15s ease}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-y{background:var(--yellow);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn-y:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.btn-b{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn-b:hover{background:var(--blue-d)}
+.btn-o{background:transparent;color:var(--ink)}
+.btn-o:hover{background:var(--white)}
+.top .btn{min-height:44px;padding:9px 14px;font-size:17px;box-shadow:3px 3px 0 var(--ink)}
+.top .btn .num{display:none}.top .btn .mnum{display:inline}
+@media (min-width:560px){.top .btn .num{display:inline}.top .btn .mnum{display:none}}
+@media (min-width:980px){nav.main{display:flex}}
+
+/* HERO */
+.hero{background-color:var(--paper);background-image:
+  linear-gradient(var(--grid-major) 1px,transparent 1px),linear-gradient(90deg,var(--grid-major) 1px,transparent 1px),
+  linear-gradient(var(--grid-minor) 1px,transparent 1px),linear-gradient(90deg,var(--grid-minor) 1px,transparent 1px);
+  background-size:50px 50px,50px 50px,10px 10px,10px 10px;background-position:-1px -1px;padding:14px 0 28px}
+.sheet{position:relative;border:2px solid var(--blue);outline:1px solid var(--blue);outline-offset:4px;margin:6px 5px;display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.sheet .corner{position:absolute;font-family:var(--h);font-size:11px;letter-spacing:.12em;color:var(--blue);background:var(--paper);padding:0 6px;top:-9px;left:14px}
+.stamp{order:1;background:var(--white);border-bottom:2px solid var(--blue)}
+.stamp-title{padding:18px 16px 16px;border-bottom:1px solid var(--blue)}
+.stamp-title .lab{display:block;margin-bottom:8px}
+.stamp h1{font-size:clamp(38px,10.6vw,64px);font-weight:800;line-height:.94;text-transform:none;letter-spacing:-.005em}
+.stamp h1 span{color:var(--blue);display:block}
+.stamp-lead{font-size:17px;color:var(--ink-2);margin:12px 0 0}
+.stamp table{width:100%;border-collapse:collapse;font-family:var(--h)}
+.stamp th,.stamp td{border-bottom:1px solid var(--blue);text-align:left;padding:7px 12px;vertical-align:middle}
+.stamp tr:last-child th,.stamp tr:last-child td{border-bottom:0}
+.stamp th{width:34%;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);border-right:1px solid var(--blue);background:#F7F9FC}
+.stamp td{font-size:19px;font-weight:600;color:var(--ink)}
+.stamp td a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--yellow)}
+.stamp .ctas{display:flex;gap:12px;flex-wrap:wrap;padding:14px 16px 16px;border-top:1px solid var(--blue)}
+.stamp .ctas .btn{flex:1 1 150px}
+.draw{order:2;position:relative;padding:12px 6px 4px;min-width:0}
+.draw svg{display:block;width:100%;height:auto;max-height:640px;margin:0 auto}
+@media (min-width:900px){.draw svg{max-height:none}}
+.draw figcaption{font-family:var(--h);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);text-align:center;padding:2px 0 8px}
+.legend{order:3;border-top:2px solid var(--blue);padding:16px;background:rgba(255,255,255,.82)}
+.legend h2{font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.media button{display:flex;align-items:center;gap:8px;min-width:0;font-family:var(--h);font-weight:700;font-size:17px;letter-spacing:.03em;text-transform:uppercase;padding:10px 12px;min-height:48px;background:var(--white);color:var(--ink);border:2px solid var(--ink);border-radius:2px;cursor:pointer;text-align:left}
+@media (max-width:420px){.media button{font-size:16px;letter-spacing:.01em;padding:10px 9px;gap:7px}}
+.media button i{display:block;width:22px;height:0;border-top:5px solid;flex:none}
+.media button[data-m=voda] i{border-color:var(--blue)}
+.media button[data-m=plyn] i{border-color:var(--yellow);box-shadow:0 0 0 1.5px var(--ink)}
+.media button[data-m=topeni] i{border-color:var(--red)}
+.media button[data-m=kanalizace] i{border-color:var(--ink);border-top-width:6px}
+.media button[aria-pressed=true]{background:var(--ink);color:#fff}
+.media button[aria-pressed=true][data-m=kanalizace] i{border-color:#fff}
+.media button:hover{background:var(--paper-2)}
+.media button[aria-pressed=true]:hover{background:var(--ink)}
+.mpanel{margin-top:14px;border-left:5px solid var(--blue);padding:2px 0 2px 14px;min-height:12.5em}
+.mpanel[data-m=plyn]{border-color:var(--yellow)}
+.mpanel[data-m=topeni]{border-color:var(--red)}
+.mpanel[data-m=kanalizace]{border-color:var(--ink)}
+.mpanel h3{font-size:24px;font-weight:700;margin-bottom:6px}
+.mpanel p{font-size:16px;margin:0 0 8px;color:var(--ink)}
+.mpanel ul{margin:0;padding:0;list-style:none;font-size:16px}
+.mpanel li{padding:3px 0 3px 18px;position:relative}
+.mpanel li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:2px;background:var(--ink)}
+.mpanel li b{font-family:var(--h);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:15px;color:var(--blue)}
+
+/* svg drawing styles */
+.dw .slab{fill:rgba(255,255,255,.55);stroke:var(--blue);stroke-width:1}
+.dw .slab.ground{fill:rgba(29,63,143,.05)}
+.dw .slab-edge{fill:#DCE4F0;stroke:var(--blue);stroke-width:1}
+.dw .slab-side{fill:#C7D3E6;stroke:var(--blue);stroke-width:1}
+.dw .hatch{stroke:var(--blue);stroke-width:.8;opacity:.6}
+.dw .wall{stroke:var(--blue);stroke-width:.8;stroke-dasharray:6 4;opacity:.55}
+.dw .wall.front{stroke-dasharray:none;opacity:.8}
+.dw .pipe,.dw .pipe-case{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dw .m-voda .pipe{stroke:var(--blue);stroke-width:3.4}
+.dw .m-plyn .pipe-case{stroke:var(--ink);stroke-width:5.6}
+.dw .m-plyn .pipe{stroke:var(--yellow);stroke-width:3.2}
+.dw .m-topeni .pipe{stroke:var(--red);stroke-width:3.4}
+.dw .m-kanalizace .pipe{stroke:var(--ink);stroke-width:4.6}
+.dw .fix{fill:#fff;stroke:var(--ink);stroke-width:1.3}
+.dw .m-voda .fix{stroke:var(--blue)}
+.dw .node{fill:var(--blue)}
+.dw .sym{fill:#fff;stroke:var(--blue);stroke-width:1.6}
+.dw .box{fill:#fff;stroke:var(--ink);stroke-width:1.2}
+.dw .box.side{fill:#EEF1F4}.dw .box.top{fill:#F7F8F9}
+.dw .valve{fill:var(--yellow);stroke:var(--ink);stroke-width:1.2}
+.dw .rad{fill:#fff;stroke:var(--red);stroke-width:1.6}
+.dw .fin{stroke:var(--red);stroke-width:1}
+.dw .dim,.dw .dimx{stroke:var(--ink);stroke-width:.8}
+.dw .dimx{opacity:.55}
+.dw .tick{stroke:var(--ink);stroke-width:1.4}
+.dw .lvl{fill:var(--ink)}
+.dw text{font-family:var(--h);fill:var(--ink)}
+.dw .t-d{font-size:12px;font-weight:600;letter-spacing:.04em}
+.dw .t-f{font-size:15px;font-weight:700;letter-spacing:.06em;fill:var(--blue)}
+.dw .t-s{font-size:11px;font-weight:700;fill:var(--blue)}
+.dw .lead{stroke:var(--ink);stroke-width:.9}
+.dw .tagc{fill:#fff;stroke:var(--ink);stroke-width:1.6}
+.dw .t-tag{font-size:13px;font-weight:800}
+.dw .m,.dw .tag{transition:opacity .35s ease}
+.dw[data-active] .m,.dw[data-active] .tag{opacity:.13}
+.dw[data-active=voda] .m-voda,.dw[data-active=plyn] .m-plyn,.dw[data-active=topeni] .m-topeni,.dw[data-active=kanalizace] .m-kanalizace,
+.dw[data-active=voda] .tag-voda,.dw[data-active=plyn] .tag-plyn,.dw[data-active=topeni] .tag-topeni,.dw[data-active=kanalizace] .tag-kanalizace{opacity:1}
+.dw[data-active=voda] .m-voda .pipe{stroke-width:5}
+.dw[data-active=plyn] .m-plyn .pipe{stroke-width:4.6}.dw[data-active=plyn] .m-plyn .pipe-case{stroke-width:7.4}
+.dw[data-active=topeni] .m-topeni .pipe{stroke-width:5}
+.dw[data-active=kanalizace] .m-kanalizace .pipe{stroke-width:6.2}
+.dw .tag.on .tagc{fill:var(--ink)} .dw .tag.on .t-tag{fill:#fff}
+@media (prefers-reduced-motion:no-preference){
+  .dw .pipe,.dw .pipe-case{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 1.6s ease forwards}
+  .dw .m-plyn .pipe,.dw .m-plyn .pipe-case{animation-delay:.25s}
+  .dw .m-topeni .pipe{animation-delay:.5s}
+  .dw .m-kanalizace .pipe{animation-delay:.75s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+
+@media (min-width:900px){
+  .hero{padding:26px 0 40px}
+  .sheet{grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);grid-template-rows:auto 1fr;margin:6px}
+  .draw{grid-column:1;grid-row:1 / span 2;border-right:2px solid var(--blue);padding:24px 16px 8px;display:flex;flex-direction:column;justify-content:center}
+  .legend{grid-column:2;grid-row:1;order:0;border-top:0;border-bottom:2px solid var(--blue);background:transparent;padding:20px 22px}
+  .stamp{grid-column:2;grid-row:2;align-self:end;order:0;border-bottom:0}
+  .stamp-title{padding:22px 22px 18px}
+  .stamp h1{font-size:clamp(44px,4.4vw,62px)}
+  .stamp .ctas{padding:16px 22px 20px}
+  .mpanel{min-height:11.5em}
+}
+
+/* sections */
+section.sec{padding:64px 0}
+@media (min-width:900px){section.sec{padding:96px 0}}
+.shead{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;align-items:end;margin-bottom:34px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+.shead .no{grid-row:1 / span 2;width:56px;height:56px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--h);font-weight:800;font-size:24px;position:relative;background:var(--white)}
+.shead .no::after{content:"";position:absolute;left:4px;right:4px;top:50%;height:1.5px;background:var(--ink)}
+.shead .no b{position:relative;top:-11px;font-size:16px}
+.shead .no small{position:absolute;bottom:7px;font-size:11px;letter-spacing:.06em;color:var(--ink-2)}
+.shead .lab{align-self:end}
+.shead h2{font-size:clamp(32px,8vw,56px);font-weight:800;grid-column:2;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.intro{max-width:720px;font-size:19px;color:var(--ink-2);margin:-12px 0 34px}
+
+/* services */
+.svc{display:grid;grid-template-columns:1fr;gap:0;border:2px solid var(--ink);background:var(--white)}
+.svc article{padding:22px 20px 20px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:4px 16px;align-content:start}
+.svc article:last-child{border-bottom:0}
+.svc .ic{grid-row:1 / span 4;width:52px;height:52px;border:2px solid var(--blue);display:grid;place-items:center;background:var(--paper)}
+.svc .ic svg{width:34px;height:34px}
+.svc h3{font-size:25px;font-weight:700}
+.svc p{font-size:17px;margin:4px 0 10px;color:var(--ink)}
+.price{font-family:var(--h);font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;flex-wrap:wrap;gap:4px;border-top:1px dashed var(--line);padding-top:8px}
+.price strong{color:var(--ink);font-weight:700}
+.svc .feat{background:var(--blue);color:#fff}
+.svc .feat h3,.svc .feat p{color:#fff}
+.svc .feat .ic{background:var(--yellow);border-color:var(--yellow)}
+.svc .feat .price{color:#DCE4F0;border-color:rgba(255,255,255,.35)}
+.svc .feat .price strong{color:#fff}
+.svc .feat .tagline{font-family:var(--h);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--yellow)}
+@media (min-width:700px){.svc{grid-template-columns:repeat(2,1fr)}.svc article{border-right:1px solid var(--line)}.svc article:nth-child(2n){border-right:0}.svc .feat{grid-column:1 / -1}}
+@media (min-width:1000px){.svc{grid-template-columns:repeat(4,1fr)}.svc article{grid-template-columns:1fr;border-right:1px solid var(--line)!important}.svc .ic{grid-row:auto;margin-bottom:12px}.svc article:nth-child(4n+3){border-right:0!important}.svc .feat{grid-column:span 2;border-right:0!important}.svc article:last-child{border-right:0!important}.svc article{border-bottom:1px solid var(--line)}.svc article:nth-child(n+4){border-bottom:0}}
+
+/* references */
+.refs-sec{background:var(--white);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.ref-top{display:grid;gap:24px;margin-bottom:28px}
+.bigfact{display:flex;align-items:center;gap:18px;background:var(--yellow);border:2px solid var(--ink);padding:16px 20px;box-shadow:6px 6px 0 var(--ink)}
+.bigfact b{font-family:var(--h);font-weight:800;font-size:84px;line-height:.8;color:var(--ink)}
+.bigfact span{font-family:var(--h);font-weight:700;font-size:21px;line-height:1.08;text-transform:uppercase;letter-spacing:.03em;color:var(--ink)}
+.filt{display:flex;flex-wrap:wrap;gap:8px}
+.filt button{font-family:var(--h);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:uppercase;padding:9px 14px;min-height:44px;border:2px solid var(--ink);background:var(--white);color:var(--ink);border-radius:2px;cursor:pointer}
+.filt button[aria-pressed=true]{background:var(--ink);color:#fff}
+.filt button em{font-style:normal;color:var(--blue);margin-left:4px}
+.filt button[aria-pressed=true] em{color:var(--yellow)}
+.bom{width:100%;border-collapse:collapse;border:2px solid var(--ink);font-size:17px}
+.bomnote{font-size:15px;color:var(--ink-2);margin:10px 0 0}
+.bom thead th{font-family:var(--h);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-align:left;background:var(--blue);color:#fff;padding:10px 12px;border-right:1px solid rgba(255,255,255,.3)}
+.bom td{padding:11px 12px;border-top:1px solid var(--line);border-right:1px solid var(--line);vertical-align:top}
+.bom td:first-child{font-family:var(--h);font-weight:700;color:var(--blue);width:64px;font-size:17px}
+.bom td:nth-child(2){font-family:var(--h);font-weight:700;font-size:21px;letter-spacing:.01em;line-height:1.15}
+.bom td:last-child{border-right:0}
+.bom tbody tr:nth-child(even){background:#F7F9FB}
+.bom tr.hide{display:none}
+.kind{display:inline-flex;align-items:center;gap:8px;font-family:var(--h);font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.kind i{width:10px;height:10px;border:2px solid var(--ink);display:block;flex:none}
+.kind.k-skoly i{background:var(--blue);border-color:var(--blue)}
+.kind.k-hotely i{background:var(--yellow)}
+.kind.k-sport i{background:var(--red);border-color:var(--red)}
+.kind.k-bydleni i{background:#fff}
+.kind.k-firmy i{background:var(--ink)}
+@media (max-width:640px){
+  .bom thead{display:none}
+  .bom,.bom tbody,.bom tr,.bom td{display:block;width:100%}
+  .bom tr{display:grid;grid-template-columns:48px 1fr;border-top:1px solid var(--line);padding:10px 12px}
+  .bom tr.hide{display:none}
+  .bom td{border:0;padding:0}
+  .bom td:first-child{width:auto;grid-row:1 / span 2;padding-top:3px}
+  .bom td:nth-child(2){font-size:20px}
+  .bom td:last-child{margin-top:4px}
+}
+@media (min-width:900px){.ref-top{grid-template-columns:auto 1fr;align-items:center}}
+
+/* why */
+.why{display:grid;gap:18px}
+.why .lead{align-self:start;background:var(--blue);color:#fff;padding:28px 24px;border:2px solid var(--ink);position:relative;overflow:hidden}
+.why .lead h3{color:#fff;font-size:clamp(32px,6vw,46px);font-weight:800;margin-bottom:12px}
+.why .lead p{color:#E4EAF5;font-size:18px}
+.why .lead .q{font-style:italic;color:#fff;border-left:4px solid var(--yellow);padding-left:14px;margin-top:16px}
+.why .lead .q small{display:block;font-style:normal;font-family:var(--h);letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:#C8D3EA;margin-top:6px}
+.why ul{list-style:none;padding:0;margin:0;display:grid;gap:0;border:2px solid var(--ink);background:var(--white)}
+.why li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px 18px;border-bottom:1px solid var(--line)}
+.why li:last-child{border-bottom:0}
+.why li .n{font-family:var(--h);font-weight:800;font-size:30px;color:var(--blue);line-height:1}
+.why li h3{font-size:23px;font-weight:700;margin-bottom:4px}
+.why li p{margin:0;font-size:17px}
+@media (min-width:900px){.why{grid-template-columns:1fr 1.1fr;gap:28px}.why .lead{padding:40px 36px}}
+
+/* work */
+.gal{display:grid;grid-template-columns:1fr;gap:16px}
+.ph{margin:0}
+.ph .fr{aspect-ratio:4/3;border:2px solid var(--ink);background:
+  repeating-linear-gradient(135deg,rgba(29,63,143,.07) 0 2px,transparent 2px 14px),var(--white);display:grid;place-items:center;position:relative}
+.ph .fr::before,.ph .fr::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--blue)}
+.ph .fr::before{top:8px;left:8px;border-right:0;border-bottom:0}
+.ph .fr::after{bottom:8px;right:8px;border-left:0;border-top:0}
+.ph .fr span{font-family:var(--h);font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--white);border:1.5px solid var(--blue);padding:8px 12px}
+.ph figcaption{font-family:var(--h);font-weight:600;font-size:17px;padding-top:8px;display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.ph figcaption b{color:var(--blue);margin-right:6px}
+@media (min-width:640px){.gal{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.gal{grid-template-columns:repeat(3,1fr)}}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:0;counter-reset:s}
+.steps li{position:relative;padding:22px 20px 22px 86px;border:2px solid var(--ink);background:var(--white);margin-top:-2px}
+.steps li .k{position:absolute;left:18px;top:20px;width:50px;height:50px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--h);font-weight:800;font-size:26px}
+.steps h3{font-size:25px;font-weight:700;margin-bottom:6px}
+.steps p{margin:0;font-size:17px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}.steps li{margin-top:0;margin-left:-2px;padding:84px 24px 26px}.steps li .k{top:20px;left:24px}}
+
+/* area */
+.area{display:grid;gap:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.chips li{font-family:var(--h);font-weight:600;font-size:18px;letter-spacing:.03em;padding:8px 14px;border:2px solid var(--ink);background:var(--white)}
+.chips li.v{background:var(--blue);color:#fff;border-color:var(--blue)}
+.area h3{font-size:24px;font-weight:700;display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+.area .card{border:2px solid var(--ink);background:var(--white);padding:22px 20px}
+@media (min-width:900px){.area{grid-template-columns:1fr 1fr}}
+
+/* faq */
+.faq{border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--h);font-weight:700;font-size:23px;line-height:1.15;padding:20px 48px 20px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:22px;height:22px;margin-top:-11px;background:
+  linear-gradient(var(--ink),var(--ink)) center/22px 3px no-repeat,linear-gradient(var(--ink),var(--ink)) center/3px 22px no-repeat}
+.faq details[open] summary::after{background:linear-gradient(var(--ink),var(--ink)) center/22px 3px no-repeat}
+.faq .a{padding:0 0 20px;max-width:760px;font-size:18px}
+.faq .a p:last-child{margin:0}
+
+/* form */
+.form-sec{background:var(--blue);color:#fff;border-top:2px solid var(--ink)}
+.form-sec .shead{border-color:#fff}
+.form-sec .shead h2,.form-sec .shead .lab{color:#fff}
+.form-sec .intro{color:#DCE4F0}
+.fgrid{display:grid;gap:28px}
+form.inq{background:var(--white);color:var(--ink);border:2px solid var(--ink);padding:22px 18px;box-shadow:8px 8px 0 var(--ink);display:grid;gap:16px}
+.fld label,.fld legend{display:block;font-family:var(--h);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--ink)}
+.fld input,.fld select,.fld textarea{width:100%;font:inherit;font-size:18px;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:2px;padding:12px 12px;min-height:50px}
+.fld textarea{min-height:120px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:3px solid var(--yellow);outline-offset:0;border-color:var(--blue)}
+fieldset.fld{border:0;padding:0;margin:0}
+.seg{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.seg label{margin:0;font-size:16px;letter-spacing:.06em;display:flex;align-items:center;gap:8px;border:2px solid var(--ink);padding:10px 12px;cursor:pointer;background:var(--paper);min-height:48px}
+.seg input{width:20px;height:20px;min-height:0;accent-color:var(--blue);margin:0}
+.two{display:grid;gap:16px}
+@media (min-width:640px){.two{grid-template-columns:1fr 1fr}.seg{grid-template-columns:repeat(4,1fr)}}
+.ok{display:none;background:#E8F0E0;border:2px solid #2F5D1E;color:#1E3A12;padding:14px 16px;font-size:17px}
+.ok.show{display:block}
+.side-call{border:2px solid #fff;padding:24px 22px;align-self:start}
+.side-call .lab{color:var(--yellow)}
+.side-call a.big{display:block;font-family:var(--h);font-weight:800;font-size:clamp(40px,9vw,56px);color:#fff;text-decoration:none;line-height:1;margin:10px 0 8px}
+.side-call p{color:#DCE4F0;font-size:17px}
+@media (min-width:900px){.fgrid{grid-template-columns:1.4fr .8fr;gap:40px}form.inq{padding:30px 28px}}
+
+/* contact */
+.contact{background:var(--ink);color:#F2F5F0}
+.contact .shead{border-color:#F2F5F0}
+.contact .shead h2,.contact .shead .lab{color:#F2F5F0}
+.contact .shead .no{background:var(--ink);border-color:#F2F5F0;color:#F2F5F0}
+.contact .shead .no::after{background:#F2F5F0}
+.contact .shead .no small{color:#C9CED3}
+.cgrid{display:grid;gap:0;border:2px solid #F2F5F0}
+.cgrid > div{padding:20px 20px;border-bottom:1px solid #5A6168}
+.cgrid > div:last-child{border-bottom:0}
+.cgrid .lab{color:var(--yellow);display:block;margin-bottom:6px}
+.cgrid a{color:#fff}
+.cgrid .v{font-family:var(--h);font-weight:700;font-size:26px;line-height:1.15}
+.cgrid .v a{text-decoration:none;border-bottom:2px solid var(--yellow)}
+.cgrid p{margin:6px 0 0;font-size:16px;color:#C9CED3}
+.cgrid p a{color:#fff}
+@media (min-width:800px){.cgrid{grid-template-columns:repeat(2,1fr)}.cgrid > div:nth-child(odd){border-right:1px solid #5A6168}.cgrid > div:nth-last-child(-n+2){border-bottom:0}}
+@media (min-width:1100px){.cgrid{grid-template-columns:repeat(4,1fr)}.cgrid > div{border-bottom:0!important;border-right:1px solid #5A6168}.cgrid > div:last-child{border-right:0}}
+
+footer.foot{background:#15181B;color:#C9CED3;padding:28px 0 32px;font-size:15px}
+footer.foot .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer.foot b{font-family:var(--h);font-weight:800;letter-spacing:.08em;color:#fff;font-size:18px}
+footer.foot a{color:#fff}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.5fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--ink);border-top:3px solid var(--yellow)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;font-family:var(--h);font-weight:800;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border-radius:2px}
+.callbar a svg{width:20px;height:20px}
+.callbar .c1{background:var(--yellow);color:var(--ink)}
+.callbar .c2{background:transparent;color:#fff;border:2px solid #fff}
+@media (min-width:900px){.callbar{display:none}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+
+
+<div class="proto" role="note">Nezávazný návrh webu – <strong>není to oficiální stránka firmy Pavel Píža INSPAV</strong></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="INSPAV – na začátek stránky">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" fill="#fff" stroke="#1D3F8F" stroke-width="3"/><path d="M11 33V12h18" fill="none" stroke="#1D3F8F" stroke-width="4"/><path d="M17 33V18h12" fill="none" stroke="#1E2226" stroke-width="4"/><circle cx="29" cy="12" r="3.2" fill="#F2B705" stroke="#1E2226" stroke-width="1.5"/></svg>
+      <span><b>INSPAV</b><small>Pavel Píža<span class="hm"> · voda · plyn · topení</span></small></span>
+    </a>
+    <nav class="main" aria-label="Hlavní navigace">
+      <a href="#sluzby">Služby</a><a href="#reference">Reference</a><a href="#postup">Postup</a><a href="#otazky">Otázky</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="btn btn-y" href="tel:+420603533992"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg><span class="num">603 533 992</span><span class="mnum">Volat</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="sheet">
+      <span class="corner" aria-hidden="true">LIST 1/1 · SCHÉMA ROZVODŮ</span>
+      <div class="stamp">
+        <div class="stamp-title">
+          <span class="lab">Instalatér · plynař · topenář — Ostrava</span>
+          <h1 id="h1">Stoupačky, plyn a&nbsp;topení. <span>Od projektu po revizi.</span></h1>
+          <p class="stamp-lead">Voda, plyn, topení i kanalizace od jedné firmy – v bytě, rodinném domě i celém paneláku.</p>
+        </div>
+        <table aria-label="Razítko výkresu – údaje o zhotoviteli">
+          <tr><th scope="row">Zhotovitel</th><td>INSPAV · Pavel Píža</td></tr>
+          <tr><th scope="row">Místo</th><td>Ostrava-Přívoz</td></tr>
+          <tr><th scope="row">Obor</th><td>voda–plyn–topení</td></tr>
+          <tr><th scope="row">Telefon</th><td><a href="tel:+420603533992">603 533 992</a></td></tr>
+        </table>
+        <div class="ctas">
+          <a class="btn btn-y" href="tel:+420603533992"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Zavolat</a>
+          <a class="btn btn-o" href="#poptavka">Poptat práci</a>
+        </div>
+      </div>
+      <figure class="draw" style="margin:0">
+        <svg class="dw" id="dw" viewBox="0 0 480 572" role="img" aria-labelledby="dwt">
+          <title id="dwt">Axonometrické schéma stoupačky přes čtyři podlaží: voda, plyn, topení a kanalizace s kótami výšek podlaží</title>
+          <g class="ground"><polygon points="196.0,352.0 424.6,484.0 320.7,544.0 92.1,412.0" class="slab ground"/><line x1="92.1" y1="412.0" x2="81.7" y2="420.4" class="hatch" /><line x1="107.7" y1="421.0" x2="97.3" y2="429.4" class="hatch" /><line x1="123.3" y1="430.0" x2="112.9" y2="438.4" class="hatch" /><line x1="138.8" y1="439.0" x2="128.5" y2="447.4" class="hatch" /><line x1="154.4" y1="448.0" x2="144.0" y2="456.4" class="hatch" /><line x1="170.0" y1="457.0" x2="159.6" y2="465.4" class="hatch" /><line x1="185.6" y1="466.0" x2="175.2" y2="474.4" class="hatch" /><line x1="201.2" y1="475.0" x2="190.8" y2="483.4" class="hatch" /><line x1="216.8" y1="484.0" x2="206.4" y2="492.4" class="hatch" /><line x1="232.4" y1="493.0" x2="222.0" y2="501.4" class="hatch" /><line x1="248.0" y1="502.0" x2="237.6" y2="510.4" class="hatch" /><line x1="263.5" y1="511.0" x2="253.2" y2="519.4" class="hatch" /><line x1="279.1" y1="520.0" x2="268.7" y2="528.4" class="hatch" /><line x1="294.7" y1="529.0" x2="284.3" y2="537.4" class="hatch" /><line x1="310.3" y1="538.0" x2="299.9" y2="546.4" class="hatch" /><line x1="424.6" y1="484.0" x2="414.2" y2="504.4" class="hatch" /><line x1="409.0" y1="493.0" x2="398.6" y2="513.4" class="hatch" /><line x1="393.5" y1="502.0" x2="383.1" y2="522.4" class="hatch" /><line x1="377.9" y1="511.0" x2="367.5" y2="531.4" class="hatch" /><line x1="362.3" y1="520.0" x2="351.9" y2="540.4" class="hatch" /><line x1="346.7" y1="529.0" x2="336.3" y2="549.4" class="hatch" /><line x1="331.1" y1="538.0" x2="320.7" y2="558.4" class="hatch" /></g>
+<g><line x1="196.0" y1="352.0" x2="196.0" y2="64.0" class="wall" /><line x1="424.6" y1="484.0" x2="424.6" y2="196.0" class="wall" /><line x1="92.1" y1="412.0" x2="92.1" y2="124.0" class="wall" /><line x1="320.7" y1="544.0" x2="320.7" y2="256.0" class="wall front" /></g>
+<g><polygon points="196.0,280.0 424.6,412.0 320.7,472.0 92.1,340.0" class="slab"/><polygon points="92.1,340.0 320.7,472.0 320.7,480.4 92.1,348.4" class="slab-edge"/><polygon points="424.6,412.0 320.7,472.0 320.7,480.4 424.6,420.4" class="slab-side"/><polygon points="196.0,208.0 424.6,340.0 320.7,400.0 92.1,268.0" class="slab"/><polygon points="92.1,268.0 320.7,400.0 320.7,408.4 92.1,276.4" class="slab-edge"/><polygon points="424.6,340.0 320.7,400.0 320.7,408.4 424.6,348.4" class="slab-side"/><polygon points="196.0,136.0 424.6,268.0 320.7,328.0 92.1,196.0" class="slab"/><polygon points="92.1,196.0 320.7,328.0 320.7,336.4 92.1,204.4" class="slab-edge"/><polygon points="424.6,268.0 320.7,328.0 320.7,336.4 424.6,276.4" class="slab-side"/><polygon points="196.0,64.0 424.6,196.0 320.7,256.0 92.1,124.0" class="slab"/><polygon points="92.1,124.0 320.7,256.0 320.7,264.4 92.1,132.4" class="slab-edge"/><polygon points="424.6,196.0 320.7,256.0 320.7,264.4 424.6,204.4" class="slab-side"/></g>
+<g class="m m-kanalizace" data-m="kanalizace"><path d="M250.0,440.8 L250.0,85.6" class="pipe"/><path d="M244.0,85.6 L256.0,85.6" class="pipe"/><path d="M250.0,398.1 L191.8,425.7" class="pipe"/><ellipse cx="184.6" cy="425.1" rx="9" ry="5.2" class="fix"/><path d="M250.0,326.1 L191.8,353.7" class="pipe"/><ellipse cx="184.6" cy="353.1" rx="9" ry="5.2" class="fix"/><path d="M250.0,254.1 L191.8,281.7" class="pipe"/><ellipse cx="184.6" cy="281.1" rx="9" ry="5.2" class="fix"/><path d="M250.0,182.1 L191.8,209.7" class="pipe"/><ellipse cx="184.6" cy="209.1" rx="9" ry="5.2" class="fix"/></g>
+<g class="m m-topeni" data-m="topeni"><path d="M233.4,421.6 L233.4,166.0" class="pipe"/><path d="M233.4,382.0 L345.6,446.8" class="pipe"/><polygon points="345.6,450.4 391.4,476.8 391.4,450.4 345.6,424.0" class="rad"/><line x1="351.9" y1="451.6" x2="351.9" y2="430.0" class="fin" /><line x1="358.1" y1="455.2" x2="358.1" y2="433.6" class="fin" /><line x1="364.4" y1="458.8" x2="364.4" y2="437.2" class="fin" /><line x1="370.6" y1="462.4" x2="370.6" y2="440.8" class="fin" /><line x1="376.8" y1="466.0" x2="376.8" y2="444.4" class="fin" /><line x1="383.1" y1="469.6" x2="383.1" y2="448.0" class="fin" /><line x1="389.3" y1="473.2" x2="389.3" y2="451.6" class="fin" /><path d="M233.4,310.0 L345.6,374.8" class="pipe"/><polygon points="345.6,378.4 391.4,404.8 391.4,378.4 345.6,352.0" class="rad"/><line x1="351.9" y1="379.6" x2="351.9" y2="358.0" class="fin" /><line x1="358.1" y1="383.2" x2="358.1" y2="361.6" class="fin" /><line x1="364.4" y1="386.8" x2="364.4" y2="365.2" class="fin" /><line x1="370.6" y1="390.4" x2="370.6" y2="368.8" class="fin" /><line x1="376.8" y1="394.0" x2="376.8" y2="372.4" class="fin" /><line x1="383.1" y1="397.6" x2="383.1" y2="376.0" class="fin" /><line x1="389.3" y1="401.2" x2="389.3" y2="379.6" class="fin" /><path d="M233.4,238.0 L345.6,302.8" class="pipe"/><polygon points="345.6,306.4 391.4,332.8 391.4,306.4 345.6,280.0" class="rad"/><line x1="351.9" y1="307.6" x2="351.9" y2="286.0" class="fin" /><line x1="358.1" y1="311.2" x2="358.1" y2="289.6" class="fin" /><line x1="364.4" y1="314.8" x2="364.4" y2="293.2" class="fin" /><line x1="370.6" y1="318.4" x2="370.6" y2="296.8" class="fin" /><line x1="376.8" y1="322.0" x2="376.8" y2="300.4" class="fin" /><line x1="383.1" y1="325.6" x2="383.1" y2="304.0" class="fin" /><line x1="389.3" y1="329.2" x2="389.3" y2="307.6" class="fin" /><path d="M233.4,166.0 L345.6,230.8" class="pipe"/><polygon points="345.6,234.4 391.4,260.8 391.4,234.4 345.6,208.0" class="rad"/><line x1="351.9" y1="235.6" x2="351.9" y2="214.0" class="fin" /><line x1="358.1" y1="239.2" x2="358.1" y2="217.6" class="fin" /><line x1="364.4" y1="242.8" x2="364.4" y2="221.2" class="fin" /><line x1="370.6" y1="246.4" x2="370.6" y2="224.8" class="fin" /><line x1="376.8" y1="250.0" x2="376.8" y2="228.4" class="fin" /><line x1="383.1" y1="253.6" x2="383.1" y2="232.0" class="fin" /><line x1="389.3" y1="257.2" x2="389.3" y2="235.6" class="fin" /></g>
+<g class="m m-voda" data-m="voda"><path d="M200.2,402.4 L200.2,131.2" class="pipe"/><path d="M200.2,347.2 L129.5,388.0 L129.5,396.4" class="pipe"/><polygon points="125.3,391.6 146.1,403.6 131.6,412.0 110.8,400.0" class="fix"/><circle cx="200.2" cy="347.2" r="2.4" class="node"/><path d="M200.2,275.2 L129.5,316.0 L129.5,324.4" class="pipe"/><polygon points="125.3,319.6 146.1,331.6 131.6,340.0 110.8,328.0" class="fix"/><circle cx="200.2" cy="275.2" r="2.4" class="node"/><path d="M200.2,203.2 L129.5,244.0 L129.5,252.4" class="pipe"/><polygon points="125.3,247.6 146.1,259.6 131.6,268.0 110.8,256.0" class="fix"/><circle cx="200.2" cy="203.2" r="2.4" class="node"/><path d="M200.2,131.2 L129.5,172.0 L129.5,180.4" class="pipe"/><polygon points="125.3,175.6 146.1,187.6 131.6,196.0 110.8,184.0" class="fix"/><circle cx="200.2" cy="131.2" r="2.4" class="node"/><circle cx="200.2" cy="388.0" r="6" class="sym"/><text x="188.2" y="391.0" class="t-s" text-anchor="end">VD</text></g>
+<g class="m m-plyn" data-m="plyn"><path d="M216.8,412.0 L216.8,128.8" class="pipe-case"/><path d="M216.8,412.0 L216.8,128.8" class="pipe"/><path d="M216.8,344.8 L304.1,395.2" class="pipe-case"/><path d="M216.8,344.8 L304.1,395.2" class="pipe"/><polygon points="293.7,413.2 314.5,425.2 314.5,396.4 293.7,384.4" class="box"/><polygon points="335.3,413.2 314.5,425.2 314.5,396.4 335.3,384.4" class="box side"/><polygon points="314.5,372.4 335.3,384.4 314.5,396.4 293.7,384.4" class="box top"/><path d="M216.8,272.8 L304.1,323.2" class="pipe-case"/><path d="M216.8,272.8 L304.1,323.2" class="pipe"/><polygon points="293.7,341.2 314.5,353.2 314.5,324.4 293.7,312.4" class="box"/><polygon points="335.3,341.2 314.5,353.2 314.5,324.4 335.3,312.4" class="box side"/><polygon points="314.5,300.4 335.3,312.4 314.5,324.4 293.7,312.4" class="box top"/><path d="M216.8,200.8 L304.1,251.2" class="pipe-case"/><path d="M216.8,200.8 L304.1,251.2" class="pipe"/><polygon points="293.7,269.2 314.5,281.2 314.5,252.4 293.7,240.4" class="box"/><polygon points="335.3,269.2 314.5,281.2 314.5,252.4 335.3,240.4" class="box side"/><polygon points="314.5,228.4 335.3,240.4 314.5,252.4 293.7,240.4" class="box top"/><path d="M216.8,128.8 L304.1,179.2" class="pipe-case"/><path d="M216.8,128.8 L304.1,179.2" class="pipe"/><polygon points="293.7,197.2 314.5,209.2 314.5,180.4 293.7,168.4" class="box"/><polygon points="335.3,197.2 314.5,209.2 314.5,180.4 335.3,168.4" class="box side"/><polygon points="314.5,156.4 335.3,168.4 314.5,180.4 293.7,168.4" class="box top"/></g>
+<g class="dims"><line x1="427.7" y1="485.8" x2="456.8" y2="502.6" class="dimx" /><line x1="447.7" y1="503.6" x2="455.7" y2="495.6" class="tick" /><line x1="427.7" y1="413.8" x2="456.8" y2="430.6" class="dimx" /><line x1="447.7" y1="431.6" x2="455.7" y2="423.6" class="tick" /><line x1="427.7" y1="341.8" x2="456.8" y2="358.6" class="dimx" /><line x1="447.7" y1="359.6" x2="455.7" y2="351.6" class="tick" /><line x1="427.7" y1="269.8" x2="456.8" y2="286.6" class="dimx" /><line x1="447.7" y1="287.6" x2="455.7" y2="279.6" class="tick" /><line x1="427.7" y1="197.8" x2="456.8" y2="214.6" class="dimx" /><line x1="447.7" y1="215.6" x2="455.7" y2="207.6" class="tick" /><line x1="451.7" y1="499.6" x2="451.7" y2="211.6" class="dim" /><text x="465.7" y="463.6" class="t-d" transform="rotate(-90 465.7 463.6)" text-anchor="middle">3 000</text><text x="465.7" y="391.6" class="t-d" transform="rotate(-90 465.7 391.6)" text-anchor="middle">3 000</text><text x="465.7" y="319.6" class="t-d" transform="rotate(-90 465.7 319.6)" text-anchor="middle">3 000</text><text x="465.7" y="247.6" class="t-d" transform="rotate(-90 465.7 247.6)" text-anchor="middle">3 000</text><line x1="86.1" y1="412.0" x2="40.1" y2="412.0" class="dimx" /><path d="M78.1,405.0 l-5,-7 h10 z" class="lvl"/><text x="70.1" y="406.0" class="t-d" text-anchor="end">±0,000</text><text x="66.1" y="380.0" class="t-f" text-anchor="end">1.NP</text><line x1="86.1" y1="340.0" x2="40.1" y2="340.0" class="dimx" /><path d="M78.1,333.0 l-5,-7 h10 z" class="lvl"/><text x="70.1" y="334.0" class="t-d" text-anchor="end">+3,000</text><text x="66.1" y="308.0" class="t-f" text-anchor="end">2.NP</text><line x1="86.1" y1="268.0" x2="40.1" y2="268.0" class="dimx" /><path d="M78.1,261.0 l-5,-7 h10 z" class="lvl"/><text x="70.1" y="262.0" class="t-d" text-anchor="end">+6,000</text><text x="66.1" y="236.0" class="t-f" text-anchor="end">3.NP</text><line x1="86.1" y1="196.0" x2="40.1" y2="196.0" class="dimx" /><path d="M78.1,189.0 l-5,-7 h10 z" class="lvl"/><text x="70.1" y="190.0" class="t-d" text-anchor="end">+9,000</text><text x="66.1" y="164.0" class="t-f" text-anchor="end">4.NP</text><line x1="86.1" y1="124.0" x2="40.1" y2="124.0" class="dimx" /><path d="M78.1,117.0 l-5,-7 h10 z" class="lvl"/><text x="70.1" y="118.0" class="t-d" text-anchor="end">+12,000</text></g>
+<g class="tag tag-voda" data-m="voda"><line x1="200.2" y1="131.2" x2="154.2" y2="114.2" class="lead"/><circle cx="154.2" cy="105.2" r="10" class="tagc"/><text x="154.2" y="109.7" text-anchor="middle" class="t-tag">V</text></g><g class="tag tag-plyn" data-m="plyn"><line x1="216.8" y1="128.8" x2="186.8" y2="111.8" class="lead"/><circle cx="186.8" cy="102.8" r="10" class="tagc"/><text x="186.8" y="107.3" text-anchor="middle" class="t-tag">P</text></g><g class="tag tag-topeni" data-m="topeni"><line x1="233.4" y1="166.0" x2="219.4" y2="149.0" class="lead"/><circle cx="219.4" cy="140.0" r="10" class="tagc"/><text x="219.4" y="144.5" text-anchor="middle" class="t-tag">T</text></g><g class="tag tag-kanalizace" data-m="kanalizace"><line x1="250.0" y1="85.6" x2="220.0" y2="68.6" class="lead"/><circle cx="220.0" cy="59.6" r="10" class="tagc"/><text x="220.0" y="64.1" text-anchor="middle" class="t-tag">K</text></g>
+        </svg>
+        <figcaption>Axonometrie stoupačky · schéma pro ilustraci</figcaption>
+      </figure>
+      <div class="legend">
+        <h2 id="legenda">Legenda médií</h2>
+        <div class="media" role="group" aria-labelledby="legenda">
+          <button type="button" data-m="voda" aria-pressed="false"><i></i>Voda</button>
+          <button type="button" data-m="plyn" aria-pressed="false"><i></i>Plyn</button>
+          <button type="button" data-m="topeni" aria-pressed="false"><i></i>Topení</button>
+          <button type="button" data-m="kanalizace" aria-pressed="false"><i></i>Kanalizace</button>
+        </div>
+        <div class="mpanel" id="mpanel" aria-live="polite">
+          <h3>Vyberte médium</h3>
+          <p>Klepněte na vodu, plyn, topení nebo kanalizaci – ve výkresu se zvýrazní daná čára a tady uvidíte, co pro ni INSPAV dělá.</p>
+          <ul><li>Montáže, výměny, rekonstrukce a opravy</li><li>Revize vody, plynu, topení a kanalizace</li><li>Projektová dokumentace</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>01</b><small>A</small></div><span class="lab">Co děláme</span><h2 id="h-sluzby">Celé rozvody pod jednou střechou</h2></div>
+    <p class="intro">Od stoupačky v paneláku po zapojení myčky. Nemusíte shánět zvlášť instalatéra, plynaře, topenáře a zedníka.</p>
+    <div class="svc">
+      <article class="feat">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v32M20 4v32M28 4v32" stroke="#1E2226" stroke-width="3"/><path d="M4 13h32M4 27h32" stroke="#1D3F8F" stroke-width="1.6" stroke-dasharray="3 2"/><path d="M28 13h6M20 27h-8" stroke="#1E2226" stroke-width="3"/></svg></div>
+        <span class="tagline">Hlavní obor</span>
+        <h3>Montáž a rekonstrukce stoupaček</h3>
+        <p>Výměna svislých rozvodů vody, kanalizace, plynu a topení v bytových a panelových domech – i s napojením bytů na každém podlaží.</p>
+        <div class="price"><strong>Cena na dotaz</strong><span class="demo">ukázkový text</span></div>
+      </article>
+      <article>
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c5 7 9 12 9 17a9 9 0 0 1-18 0c0-5 4-10 9-17z" stroke="#1D3F8F" stroke-width="2.6"/><path d="M15 23a5 5 0 0 0 5 5" stroke="#1D3F8F" stroke-width="2"/></svg></div>
+        <h3>Voda a kanalizace</h3>
+        <p>Rozvody v rodinných domech, sociálních zařízeních škol, kancelářích i výrobních halách, včetně výměny vodoměrů.</p>
+        <div class="price"><strong>Cena na dotaz</strong><span class="demo">ukázkový text</span></div>
+      </article>
+      <article>
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c1 6 8 9 8 17a8 8 0 0 1-16 0c0-4 2-6 4-8 0 3 1 5 3 5-1-5 0-10 1-14z" fill="#F2B705" stroke="#1E2226" stroke-width="2.2"/></svg></div>
+        <h3>Plyn a kotelny</h3>
+        <p>Domovní plynovody v bytech a domech, průmyslové rozvody, plynové kotelny, kondenzační kotle i gamatky.</p>
+        <div class="price"><strong>Cena na dotaz</strong><span class="demo">ukázkový text</span></div>
+      </article>
+      <article>
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="28" height="22" rx="2" stroke="#A3322A" stroke-width="2.6"/><path d="M12 13v14M17 13v14M22 13v14M28 13v14" stroke="#A3322A" stroke-width="2"/><path d="M9 31v4M31 31v4" stroke="#1E2226" stroke-width="2.6"/></svg></div>
+        <h3>Topení a podlahovka</h3>
+        <p>Rozvody z oceli, mědi i PEX-ALPEX, deskové a hliníkové radiátory, koupelnové žebříky a podlahové vytápění.</p>
+        <div class="price"><strong>Cena na dotaz</strong><span class="demo">ukázkový text</span></div>
+      </article>
+      <article>
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="5" width="24" height="30" rx="2" stroke="#1E2226" stroke-width="2.6"/><circle cx="20" cy="22" r="7" stroke="#1D3F8F" stroke-width="2.4"/><path d="M12 10h4M24 10h4" stroke="#1E2226" stroke-width="2.4"/></svg></div>
+        <h3>Zapojení spotřebičů</h3>
+        <p>Připojíme myčku, pračku, sporák nebo kotel – správně na vodu, odpad i plyn.</p>
+        <div class="price"><strong>Cena na dotaz</strong><span class="demo">ukázkový text</span></div>
+      </article>
+      <article>
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h16l6 6v24H9z" stroke="#1E2226" stroke-width="2.4"/><path d="M25 5v6h6" stroke="#1E2226" stroke-width="2"/><path d="M14 22l4 4 8-9" stroke="#1D3F8F" stroke-width="3"/></svg></div>
+        <h3>Projekt a revize</h3>
+        <p>Projektová dokumentace před stavbou a revize vody, plynu, topení a kanalizace po ní.</p>
+        <div class="price"><strong>Cena na dotaz</strong><span class="demo">ukázkový text</span></div>
+      </article>
+      <article>
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="30" height="30" stroke="#1E2226" stroke-width="2.4"/><path d="M5 15h30M5 25h30M15 5v10M25 15v10M15 25v10" stroke="#1D3F8F" stroke-width="2"/></svg></div>
+        <h3>Bourání, zdění, obklady</h3>
+        <p>Po výměně rozvodů zednicky zapravíme drážky a položíme nový obklad – bez další firmy.</p>
+        <div class="price"><strong>Cena na dotaz</strong><span class="demo">ukázkový text</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec refs-sec" id="reference" aria-labelledby="h-ref">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>02</b><small>B</small></div><span class="lab">Reference · seznam staveb</span><h2 id="h-ref">Školy, hotely, sanatorium, banka</h2></div>
+    <div class="ref-top">
+      <div class="bigfact"><b>18</b><span>referenčních staveb<br>a investorů</span></div>
+      <div class="filt" role="group" aria-label="Filtrovat stavby podle druhu">
+        <button type="button" data-k="all" aria-pressed="true">Vše<em>18</em></button>
+        <button type="button" data-k="skoly" aria-pressed="false">Školy<em>4</em></button>
+        <button type="button" data-k="hotely" aria-pressed="false">Hotely a lázně<em>3</em></button>
+        <button type="button" data-k="sport" aria-pressed="false">Sport<em>2</em></button>
+        <button type="button" data-k="bydleni" aria-pressed="false">Bydlení<em>2</em></button>
+        <button type="button" data-k="firmy" aria-pressed="false">Firmy a průmysl<em>7</em></button>
+      </div>
+    </div>
+    <table class="bom" id="bom">
+      <thead><tr><th scope="col">Poz.</th><th scope="col">Stavba / investor</th><th scope="col">Druh objektu</th></tr></thead>
+      <tbody>
+        <tr data-k="sport"><td>01</td><td>Tělocvična Sokol</td><td><span class="kind k-sport"><i></i>Sport</span></td></tr>
+        <tr data-k="firmy"><td>02</td><td>Sigal Development s.r.o.</td><td><span class="kind k-firmy"><i></i>Firmy a průmysl</span></td></tr>
+        <tr data-k="firmy"><td>03</td><td>Hasil s.r.o.</td><td><span class="kind k-firmy"><i></i>Firmy a průmysl</span></td></tr>
+        <tr data-k="skoly"><td>04</td><td>Mateřská škola</td><td><span class="kind k-skoly"><i></i>Školy</span></td></tr>
+        <tr data-k="skoly"><td>05</td><td>Základní škola</td><td><span class="kind k-skoly"><i></i>Školy</span></td></tr>
+        <tr data-k="skoly"><td>06</td><td>ZŠ Nádražní 117</td><td><span class="kind k-skoly"><i></i>Školy</span></td></tr>
+        <tr data-k="skoly"><td>07</td><td>Církevní základní škola Pittera</td><td><span class="kind k-skoly"><i></i>Školy</span></td></tr>
+        <tr data-k="firmy"><td>08</td><td>Raiffeisenbank</td><td><span class="kind k-firmy"><i></i>Firmy a průmysl</span></td></tr>
+        <tr data-k="firmy"><td>09</td><td>Výměníková stanice</td><td><span class="kind k-firmy"><i></i>Firmy a průmysl</span></td></tr>
+        <tr data-k="firmy"><td>10</td><td>Therm</td><td><span class="kind k-firmy"><i></i>Firmy a průmysl</span></td></tr>
+        <tr data-k="hotely"><td>11</td><td>Hotel Koksar *</td><td><span class="kind k-hotely"><i></i>Hotely a lázně</span></td></tr>
+        <tr data-k="hotely"><td>12</td><td>Hotel Paradise ***</td><td><span class="kind k-hotely"><i></i>Hotely a lázně</span></td></tr>
+        <tr data-k="bydleni"><td>13</td><td>3 bytové domy Frýdek-Místek</td><td><span class="kind k-bydleni"><i></i>Bydlení</span></td></tr>
+        <tr data-k="hotely"><td>14</td><td>Sanatorium Klimkovice</td><td><span class="kind k-hotely"><i></i>Hotely a lázně</span></td></tr>
+        <tr data-k="firmy"><td>15</td><td>Heřmanice – průmyslová zóna</td><td><span class="kind k-firmy"><i></i>Firmy a průmysl</span></td></tr>
+        <tr data-k="bydleni"><td>16</td><td>Residomo (RPG Byty)</td><td><span class="kind k-bydleni"><i></i>Bydlení</span></td></tr>
+        <tr data-k="sport"><td>17</td><td>Sportovní centrum Fajne</td><td><span class="kind k-sport"><i></i>Sport</span></td></tr>
+        <tr data-k="firmy"><td>18</td><td>Mountfield</td><td><span class="kind k-firmy"><i></i>Firmy a průmysl</span></td></tr>
+      </tbody>
+    </table>
+    <p class="bomnote">Výpis převzatý ze seznamu referencí na dosavadním webu firmy (inspav.webnode.cz). Rozsah prací u jednotlivých staveb doplní firma.</p>
+  </div>
+</section>
+
+<section class="sec" id="proc" aria-labelledby="h-proc">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>03</b><small>C</small></div><span class="lab">Proč INSPAV</span><h2 id="h-proc">Řemeslo, které obstálo i ve školách a hotelech</h2></div>
+    <div class="why">
+      <div class="lead">
+        <h3>18 staveb na seznamu referencí</h3>
+        <p>Mateřská, základní i církevní škola, Hotel Paradise, Sanatorium Klimkovice, Raiffeisenbank, Mountfield nebo tři bytové domy ve Frýdku-Místku. Velké provozy, kde voda, plyn a topení musí prostě fungovat.</p>
+        <p class="q">„Naší snahou je spojovat profesionální práci s kvalitním provedením na přání investora.“<small>Z dosavadního webu firmy</small></p>
+      </div>
+      <ul>
+        <li><span class="n">01</span><div><h3>Všechna média od jedné firmy</h3><p>Voda, plyn, topení i kanalizace – a k tomu bourací, zednické a obkladačské práce. Jeden kontakt, jedna odpovědnost.</p></div></li>
+        <li><span class="n">02</span><div><h3>Od projektu po revizi</h3><p>Projektovou dokumentaci i revize rozvodů zajistí INSPAV v rámci jedné zakázky.</p></div></li>
+        <li><span class="n">03</span><div><h3>Pravidelné školení</h3><p>Podle firmy se tým každý rok školí na práci s novými materiály a technologiemi dostupnými na českém trhu.</p></div></li>
+        <li><span class="n">04</span><div><h3>Rada, jak ušetřit</h3><p>Poradíme, jak ušetřit za vytápění a jak využít dešťovou vodu pro levnější chod domácnosti.</p></div></li>
+        <li><span class="n">05</span><div><h3>Dohledatelná živnost</h3><p>Pavel Píža, IČO 66717639, sídlo Zákrejsova 1066/8, Ostrava-Přívoz.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="realizace" aria-labelledby="h-real" style="background:var(--paper-2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>04</b><small>D</small></div><span class="lab">Realizace</span><h2 id="h-real">Z provedených prací</h2></div>
+    <div class="gal">
+      <figure class="ph"><div class="fr"><span>Sem přijde Vaše fotka</span></div><figcaption><b>D.1</b>Rezidence Hajov</figcaption></figure>
+      <figure class="ph"><div class="fr"><span>Sem přijde Vaše fotka</span></div><figcaption><b>D.2</b>Výměna stoupaček v panelovém domě<span class="demo">ukázkový text</span></figcaption></figure>
+      <figure class="ph"><div class="fr"><span>Sem přijde Vaše fotka</span></div><figcaption><b>D.3</b>Plynová kotelna<span class="demo">ukázkový text</span></figcaption></figure>
+      <figure class="ph"><div class="fr"><span>Sem přijde Vaše fotka</span></div><figcaption><b>D.4</b>Podlahové vytápění – pokládka<span class="demo">ukázkový text</span></figcaption></figure>
+      <figure class="ph"><div class="fr"><span>Sem přijde Vaše fotka</span></div><figcaption><b>D.5</b>Sociální zařízení školy<span class="demo">ukázkový text</span></figcaption></figure>
+      <figure class="ph"><div class="fr"><span>Sem přijde Vaše fotka</span></div><figcaption><b>D.6</b>Koupelna po rekonstrukci rozvodů a obkladu<span class="demo">ukázkový text</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="postup" aria-labelledby="h-postup">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>05</b><small>E</small></div><span class="lab">Jak probíhá zakázka</span><h2 id="h-postup">Tři kroky od telefonu po revizi</h2></div>
+    <ol class="steps">
+      <li><span class="k">1</span><h3>Zavoláte nebo napíšete</h3><p>Na 603 533 992 nebo inspav@seznam.cz. Stačí říct, co a kde potřebujete – byt, dům, kotelna, celý panelák.</p></li>
+      <li><span class="k">2</span><h3>Rozsah a nabídka</h3><p>Domluvíme prohlídku, materiál a postup. Cenu znáte dřív, než se začne bourat. <span class="demo">ukázkový text</span></p></li>
+      <li><span class="k">3</span><h3>Montáž a revize</h3><p>Provedeme rozvody, zapravíme stavbu a zajistíme revizi. Předáváme funkční a zkontrolovanou instalaci.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="oblast" aria-labelledby="h-oblast" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>06</b><small>F</small></div><span class="lab">Kde pracujeme</span><h2 id="h-oblast">Ostrava a Moravskoslezský kraj</h2></div>
+    <div class="area">
+      <div class="card">
+        <h3>Doloženo referencemi</h3>
+        <p style="margin:6px 0 0;font-size:17px">Místa uvedená přímo v seznamu staveb firmy:</p>
+        <ul class="chips"><li class="v">Ostrava-Přívoz (sídlo)</li><li class="v">Frýdek-Místek</li><li class="v">Klimkovice</li><li class="v">Heřmanice</li></ul>
+      </div>
+      <div class="card">
+        <h3>Další obce v dojezdu<span class="demo">ukázkový text</span></h3>
+        <p style="margin:6px 0 0;font-size:17px">Oblast působení firma zatím nezveřejnila. Pro představu:</p>
+        <ul class="chips"><li>Ostrava-Poruba</li><li>Slezská Ostrava</li><li>Vítkovice</li><li>Hlučín</li><li>Havířov</li><li>Orlová</li><li>Bohumín</li><li>Šenov</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="otazky" aria-labelledby="h-faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>07</b><small>G</small></div><span class="lab">Časté otázky</span><h2 id="h-faq">Na co se nás ptáte</h2></div>
+    <div class="faq">
+      <details open><summary>Kdy je čas vyměnit stoupačky v domě?</summary><div class="a"><p>Typicky když se v domě opakují úniky, rezavá voda, ucpávky odpadů nebo když se chystá rekonstrukce bytových jader. Staré ocelové a litinové rozvody v panelových domech už často dosluhují. Montáž a rekonstrukci stoupaček dělá INSPAV v bytových i panelových domech – zavolejte a domluvíme, jak dům posoudit.</p></div></details>
+      <details><summary>Zajistíte po montáži i revizi?</summary><div class="a"><p>Ano. Firma uvádí rozvody a revize vody, plynu, topení i kanalizace. U plynu je revize podmínkou, aby se zařízení smělo bezpečně používat.</p></div></details>
+      <details><summary>Kolik bude oprava nebo rekonstrukce stát?</summary><div class="a"><p>Cena záleží na rozsahu, materiálu a přístupu k rozvodům, proto ji neuvádíme paušálně. Po domluvě rozsahu dostanete konkrétní nabídku. <span class="demo">ukázkový text</span></p></div></details>
+      <details><summary>Kdo po Vás zapraví zdi a obklady?</summary><div class="a"><p>My. INSPAV dělá i bourací, zednické a obkladačské práce, takže drážky po nových rozvodech nezůstanou otevřené a nemusíte objednávat další firmu.</p></div></details>
+      <details><summary>Zapojíte i myčku, pračku, sporák nebo kotel?</summary><div class="a"><p>Ano, zapojení spotřebičů patří mezi běžné zakázky – včetně plynových sporáků a kotlů, kondenzačních kotlů a gamatek.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec form-sec" id="poptavka" aria-labelledby="h-form">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true" style="background:var(--blue);border-color:#fff;color:#fff"><b>08</b><small style="color:#DCE4F0">H</small></div><span class="lab">Poptávka</span><h2 id="h-form">Popište zakázku, ozveme se Vám</h2></div>
+    <p class="intro">Čím přesněji popíšete objekt a médium, tím rychleji dostanete konkrétní odpověď.</p>
+    <div class="fgrid">
+      <form class="inq" id="inq" novalidate>
+        <fieldset class="fld"><legend>Médium</legend>
+          <div class="seg">
+            <label><input type="checkbox" name="m" value="voda">Voda</label>
+            <label><input type="checkbox" name="m" value="plyn">Plyn</label>
+            <label><input type="checkbox" name="m" value="topeni">Topení</label>
+            <label><input type="checkbox" name="m" value="kanalizace">Kanalizace</label>
+          </div>
+        </fieldset>
+        <div class="two">
+          <div class="fld"><label for="f-obj">Objekt</label><select id="f-obj" name="obj"><option>Byt</option><option>Rodinný dům</option><option>Bytový / panelový dům (SVJ)</option><option>Firma, škola, hala</option></select></div>
+          <div class="fld"><label for="f-mesto">Obec / část Ostravy</label><input id="f-mesto" name="mesto" autocomplete="address-level2" placeholder="např. Přívoz"></div>
+        </div>
+        <div class="two">
+          <div class="fld"><label for="f-jm">Jméno</label><input id="f-jm" name="jmeno" autocomplete="name" required></div>
+          <div class="fld"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div class="fld"><label for="f-msg">Co potřebujete</label><textarea id="f-msg" name="zprava" placeholder="např. výměna stoupaček v domě se 4 podlažími, nebo zapojení plynového kotle"></textarea></div>
+        <button class="btn btn-y" type="submit">Odeslat poptávku</button>
+        <div class="ok" id="ok" role="status">Toto je ukázka formuláře v návrhu webu – nic nebylo odesláno. Ve finálním webu se poptávka odešle přímo na e-mail firmy.</div>
+      </form>
+      <aside class="side-call">
+        <span class="lab">Rychleji po telefonu</span>
+        <a class="big" href="tel:+420603533992">603 533 992</a>
+        <p>Pavel Píža, INSPAV. Když nezvedne hned, zkuste druhou linku <a href="tel:+420731329264" style="color:#fff">731 329 264</a> nebo napište na <a href="mailto:inspav@seznam.cz" style="color:#fff">inspav@seznam.cz</a>.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="shead"><div class="no" aria-hidden="true"><b>09</b><small>I</small></div><span class="lab">Kontakt</span><h2 id="h-kontakt">Pavel Píža INSPAV</h2></div>
+    <div class="cgrid">
+      <div><span class="lab">Telefon</span><div class="v"><a href="tel:+420603533992">603 533 992</a></div><p>druhá linka <a href="tel:+420731329264">731 329 264</a></p></div>
+      <div><span class="lab">E-mail</span><div class="v"><a href="mailto:inspav@seznam.cz">inspav@seznam.cz</a></div><p>Pro poptávky s fotkami a výkresy.</p></div>
+      <div><span class="lab">Adresa</span><div class="v">Zákrejsova 1066/8<br>702 00 Ostrava-Přívoz</div><p><a href="https://mapy.cz/zakladni?q=Z%C3%A1krejsova%201066%2F8%2C%20Ostrava-P%C5%99%C3%ADvoz" target="_blank" rel="noopener">Zobrazit na Mapy.cz</a></p></div>
+      <div><span class="lab">Kdy volat</span><div class="v">Volejte</div><p>Otevírací dobu firma nezveřejňuje – termín domluvíte po telefonu. IČO 66717639.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div><b>INSPAV</b> · Pavel Píža · instalatérství, plyn a topení · Ostrava-Přívoz</div>
+    <div>© 2026 Pavel Píža INSPAV · IČO 66717639 · <a href="#top">Nahoru</a></div>
+    <div style="width:100%;font-size:13px;color:#9AA1A8">Nezávazný návrh webu – není to oficiální stránka firmy.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420603533992"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Zavolat</a>
+  <a class="c2" href="#poptavka">Poptat</a>
+</nav>
+
+<script>
+(function(){
+  var M = {
+    voda:{t:"Voda",p:"Montáže, opravy a výměny rozvodů vody – od přípojky přes vodoměr až k baterii.",l:[["Stoupačky","v bytových a panelových domech"],["Rozvody","v rodinných domech, sociálních zařízeních škol a kanceláří"],["Haly","rozvody ve výrobních halách a prostorech"],["Vodoměry","výměna vodoměrů"]]},
+    plyn:{t:"Plyn",p:"Montáže, výměny, rekonstrukce a opravy plynových zařízení.",l:[["Domovní plynovody","byty, bytové domy, rodinné domy"],["Průmysl","plynové kotelny, rozvody plynu ve výrobních objektech"],["Spotřebiče","plynové a kondenzační kotle, plynová topidla gamaty"]]},
+    topeni:{t:"Topení",p:"Montáže, výměny a opravy otopných soustav.",l:[["Rozvody","ocel, měď pájená i lisovaná, lisovaná uhlíková ocel, PEX-ALPEX"],["Otopná tělesa","deskové a hliníkové radiátory, koupelnové žebříky, měděné konvektory"],["Podlahovka","systémové desky vč. dilatace, pokládka potrubí, připojení rozdělovačů"]]},
+    kanalizace:{t:"Kanalizace",p:"Montáže, opravy a výměny kanalizačních rozvodů spolu s vodou.",l:[["Stoupačky","odpadní potrubí v bytových a panelových domech"],["Objekty","rodinné domy, školy, kanceláře, výrobní haly"],["Revize","revize kanalizace po dokončení"]]}
+  };
+  var dw=document.getElementById('dw'), panel=document.getElementById('mpanel');
+  var btns=[].slice.call(document.querySelectorAll('.media button'));
+  function esc(s){return s.replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+  function set(m){
+    btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.m===m?'true':'false')});
+    [].forEach.call(dw.querySelectorAll('.tag'),function(t){t.classList.toggle('on',t.dataset.m===m)});
+    if(!m){dw.removeAttribute('data-active');return}
+    dw.setAttribute('data-active',m);
+    var d=M[m]; panel.dataset.m=m;
+    panel.innerHTML='<h3>'+esc(d.t)+'</h3><p>'+esc(d.p)+'</p><ul>'+d.l.map(function(x){return '<li><b>'+esc(x[0])+':</b> '+esc(x[1])+'</li>'}).join('')+'</ul>';
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('aria-pressed')==='true'?null:b.dataset.m)})});
+  [].forEach.call(dw.querySelectorAll('.tag'),function(t){t.style.cursor='pointer';t.addEventListener('click',function(){set(t.dataset.m)})});
+  set(null);
+
+  var fb=[].slice.call(document.querySelectorAll('.filt button')), rows=[].slice.call(document.querySelectorAll('#bom tbody tr'));
+  fb.forEach(function(b){b.addEventListener('click',function(){
+    var k=b.dataset.k; fb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    rows.forEach(function(r){r.classList.toggle('hide',k!=='all'&&r.dataset.k!==k)});
+  })});
+
+  var f=document.getElementById('inq'), ok=document.getElementById('ok');
+  f.addEventListener('submit',function(e){e.preventDefault();ok.classList.add('show');ok.scrollIntoView({block:'nearest'})});
+})();
+</script>
+</body>
+</html>

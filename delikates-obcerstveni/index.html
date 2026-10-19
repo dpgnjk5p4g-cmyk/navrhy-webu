@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Delikates Občerstvení | cukrárna a kavárna Havířov</title>
+<meta name="description" content="Cukrárna a kavárna Delikates na Hlavní třídě 168/46 v Havířově: dorty, zákusky, domácí cukroví a káva. Otevřeno sedm dní v týdnu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Wix+Madefor+Text:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"Delikates Občerstvení",
+  "description":"Provozujeme cukrárnu a kavárnu. Nabízíme dorty, zákusky, domácí cukroví a další.",
+  "telephone":"+420596813017",
+  "email":"cukrarna.lada@email.cz",
+  "address":{"@type":"PostalAddress","streetAddress":"Hlavní třída 168/46","postalCode":"736 01","addressLocality":"Havířov","addressCountry":"CZ"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"17:00"}
+  ]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  /* Layout: jedna úzká čtecí osa (max 1120 px), mobil první; vědomě jen světlý vzhled „výloha cukrárny“, všechny barvy explicitní. */
+  --cream:#FBF3E8; --cream-2:#F4E6D6; --praline:#F2C3CE; --praline-mid:#E9A9B8; --praline-ink:#A8435F;
+  --choco:#3A2320; --choco-2:#6B4A42; --mint:#B6E2D3; --mint-ink:#1E6652; --white:#FFFDF9;
+  --f-display:"Yeseva One", "Playfair Display", Georgia, "Times New Roman", serif;
+  --f-text:"Wix Madefor Text", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --r:18px; --wrap:1120px; --gutter:20px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--choco);font-family:var(--f-text);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+@media (min-width:860px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.12;margin:0;color:var(--choco);letter-spacing:.005em}
+p{margin:0 0 1em}
+a{color:var(--choco)}
+:focus-visible{outline:3px solid var(--praline-ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.ukazka{display:inline-block;font:600 11px/1.3 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:var(--white);color:var(--choco-2);border:1px dashed var(--choco-2);border-radius:999px;padding:2px 8px;vertical-align:middle;white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* banner návrhu */
+.draft{background:var(--choco);color:var(--cream);font-size:13.5px;text-align:center;padding:8px var(--gutter);line-height:1.4}
+
+/* hlavička */
+.top{background:var(--cream)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+.brand{font-family:var(--f-display);font-size:26px;text-decoration:none;color:var(--choco);line-height:1}
+.brand small{display:block;font:600 11px/1.2 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--choco-2);margin-top:4px}
+.top nav{display:none;gap:24px;font-weight:500;font-size:15px}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.tel-top{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;background:var(--mint);color:var(--choco);padding:9px 14px;border-radius:999px;white-space:nowrap}
+.tel-top svg{width:16px;height:16px}
+@media (min-width:860px){.top nav{display:flex}}
+
+/* hero – výloha */
+.hero{position:relative;background:var(--cream)}
+.awning{display:block;width:100%;height:78px}
+@media (min-width:860px){.awning{height:118px}}
+.status{background:var(--choco);color:var(--cream);}
+.status .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding-top:10px;padding-bottom:10px;font-size:15px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(182,226,211,.25);flex:none}
+.status.closed .dot{background:var(--praline)}
+.status strong{font-weight:700}
+.status .wk{color:#E9D9C9}
+.hero-body{display:grid;gap:28px;padding-top:26px;padding-bottom:40px}
+.eyebrow{font:600 12.5px/1.3 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--praline-ink);margin:0 0 10px}
+.hero h1{font-size:clamp(34px,8.6vw,64px)}
+.hero h1 em{font-style:normal;color:var(--praline-ink)}
+.lead{font-size:18px;color:var(--choco-2);margin:14px 0 22px;max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 22px;border-radius:999px;font:700 16px/1 var(--f-text);text-decoration:none;border:2px solid var(--choco);cursor:pointer;transition:transform .15s ease, background-color .15s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--choco);color:var(--cream)}
+.btn-main:hover{background:#2A1816}
+.btn-ghost{background:transparent;color:var(--choco)}
+.btn-ghost:hover{background:var(--praline)}
+.btn:active{transform:translateY(1px)}
+.rate{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:14.5px;color:var(--choco-2);text-decoration:none}
+.rate b{font-family:var(--f-display);font-weight:400;font-size:22px;color:var(--choco)}
+.rate .stars{color:var(--praline-ink);letter-spacing:2px}
+.rate:hover span.u{text-decoration:underline}
+.window{position:relative;border-radius:var(--r);background:var(--cream-2);border:2px solid var(--choco);overflow:hidden;min-height:240px;display:grid;place-items:center}
+.window svg{width:100%;height:auto;display:block}
+.photo-note{position:absolute;left:12px;bottom:12px;background:var(--white);color:var(--choco);font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--choco-2)}
+.window .photo-note{left:auto;right:12px;top:12px;bottom:auto}
+@media (min-width:860px){.hero-body{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:52px;padding-bottom:64px}}
+@media (max-width:859px){.window{display:none}}
+
+/* týden */
+.week{background:var(--cream-2);border-top:1px solid #E6D3BF;border-bottom:1px solid #E6D3BF}
+.week .wrap{padding-top:18px;padding-bottom:18px}
+.week h2{font-size:20px;margin-bottom:10px}
+.days{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.days li{background:var(--white);border-radius:12px;text-align:center;padding:8px 2px;border:1.5px solid transparent;font-size:12.5px;line-height:1.25;min-width:0}
+.days .d{display:block;font-weight:700;font-size:14px}
+.days .h{display:block;color:var(--choco-2);font-variant-numeric:tabular-nums}
+.days .h i{font-style:normal;display:block}
+.days li.today{background:var(--mint);border-color:var(--choco)}
+.days li.today .h{color:var(--choco)}
+.days .tag{display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-top:3px;min-height:1.25em;color:var(--mint-ink)}
+.days li.today .tag{color:var(--choco)}
+@media (min-width:600px){.days{gap:8px}.days li{font-size:14px;padding:12px 4px}.days .h i{display:inline}}
+
+/* sekce */
+section.sec{padding:60px 0}
+.sec-head{max-width:640px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(30px,6.4vw,46px)}
+.sec-head p{color:var(--choco-2);margin-top:12px}
+.kicker{font:700 12.5px/1.3 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--mint-ink);margin:0 0 10px}
+
+/* vitrína */
+.case{background:var(--choco);border-radius:26px 26px 18px 18px;padding:12px;box-shadow:0 18px 40px -24px rgba(58,35,32,.55)}
+.case-glass{background:linear-gradient(160deg,#FFFDF9 0%,#F8ECE0 55%,#F4E2D6 100%);border-radius:16px;padding:6px 10px 0;position:relative;overflow:hidden}
+.case-glass::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0 38%,rgba(255,255,255,.55) 40%,transparent 46%);pointer-events:none}
+.shelf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px;padding-top:18px;position:relative}
+.shelf+.shelf{margin-top:0}
+.shelf::after{content:"";grid-column:1/-1;height:12px;margin:0 -10px;background:linear-gradient(#8A5A4C,#5A3A33);box-shadow:0 6px 10px -6px rgba(58,35,32,.6)}
+.item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 2px 14px;min-width:0}
+.item svg{width:100%;max-width:150px;height:auto;display:block}
+.item h3{font-size:22px;margin-top:6px}
+.item p{font-size:14.5px;color:var(--choco-2);margin:6px 0 10px;line-height:1.45}
+.price{display:inline-block;background:var(--praline);color:var(--choco);font-weight:700;font-size:13px;padding:4px 10px;border-radius:6px;border:1px solid var(--choco);transform:rotate(-2deg)}
+.shelf.wide{grid-template-columns:1fr}
+.more{display:flex;gap:14px;align-items:center;text-align:left;padding:4px 4px 16px}
+.more svg{width:84px;flex:none}
+.more h3{font-size:21px}
+.more p{font-size:14.5px;color:var(--choco-2);margin:4px 0 0}
+.case-note{margin-top:14px;font-size:14px;color:var(--choco-2);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+@media (min-width:860px){
+  .shelf{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 22px;padding-top:26px}
+  .case{padding:16px}.case-glass{padding:8px 22px 0}
+  .shelf::after{margin:0 -22px}
+  .more{justify-content:center;padding:6px 0 18px}
+}
+.posez{margin-top:28px;display:grid;gap:18px;align-items:center;background:var(--praline);border-radius:var(--r);padding:22px;border:2px solid var(--choco)}
+.posez blockquote{margin:0;font-family:var(--f-display);font-size:24px;line-height:1.25}
+.posez cite{display:block;font:500 14px/1.4 var(--f-text);font-style:normal;margin-top:8px;color:var(--choco)}
+.ph{background:repeating-linear-gradient(-45deg,#FBF3E8 0 12px,#F6E8DA 12px 24px);border:2px dashed var(--choco-2);border-radius:14px;min-height:150px;display:grid;place-items:center;font-weight:600;color:var(--choco-2);font-size:15px;text-align:center;padding:12px}
+@media (min-width:860px){.posez{grid-template-columns:1.2fr 1fr;padding:30px}}
+
+/* důvěra */
+.trust{background:var(--cream-2)}
+.cards{display:grid;gap:14px}
+.card{background:var(--white);border-radius:var(--r);padding:22px;border:1.5px solid #E6D3BF}
+.card .big{font-family:var(--f-display);font-size:44px;line-height:1;color:var(--choco)}
+.card .big small{font-size:20px;color:var(--choco-2)}
+.card h3{font-size:22px;margin:8px 0 6px}
+.card p{margin:0;color:var(--choco-2);font-size:15.5px}
+.card a{font-weight:600}
+.card svg.ic{width:44px;height:44px;display:block}
+@media (min-width:700px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(4,1fr)}}
+
+/* kroky */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{position:relative;background:var(--white);border-radius:var(--r);padding:22px 22px 22px 78px;border:1.5px solid #E6D3BF;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:20px;top:20px;width:42px;height:42px;border-radius:50%;background:var(--mint);border:2px solid var(--choco);display:grid;place-items:center;font-family:var(--f-display);font-size:22px}
+.steps h3{font-size:21px;margin-bottom:4px}
+.steps p{margin:0;color:var(--choco-2);font-size:15.5px}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+.order-cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* kontakt */
+.contact{background:var(--choco);color:var(--cream)}
+.contact h2,.contact h3{color:var(--cream)}
+.contact .kicker{color:var(--mint)}
+.contact .sec-head p{color:#E9D9C9}
+.cgrid{display:grid;gap:18px}
+.cbox{background:#4A2E2A;border-radius:var(--r);padding:22px;border:1px solid #6B4A42}
+.cbox dl{margin:0;display:grid;gap:16px}
+.cbox dt{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);font-weight:700}
+.cbox dd{margin:2px 0 0;font-size:18px}
+.cbox a{color:var(--cream);text-underline-offset:4px}
+.big-tel{font-family:var(--f-display);font-size:30px;text-decoration:none!important}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours th,.hours td{padding:9px 0;border-bottom:1px solid #6B4A42;text-align:left;font-weight:500}
+.hours td{text-align:right}
+.hours tr.today th,.hours tr.today td{color:var(--mint);font-weight:700}
+.mapcard{display:block;text-decoration:none;border-radius:var(--r);overflow:hidden;background:var(--cream);color:var(--choco)!important;border:2px solid var(--cream)}
+.mapcard > svg{display:block;width:100%;height:auto}
+.mapcard span{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;font-weight:700}
+.mapcard:hover span{text-decoration:underline}
+.contact .btn-main{background:var(--cream);color:var(--choco);border-color:var(--cream)}
+.contact .btn-ghost{color:var(--cream);border-color:var(--cream)}
+.contact .btn-ghost:hover{background:#4A2E2A}
+@media (min-width:860px){.cgrid{grid-template-columns:1fr 1fr 1fr}}
+
+/* FAQ */
+.faq{max-width:780px}
+.faq details{background:var(--white);border:1.5px solid #E6D3BF;border-radius:14px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font-weight:700;position:relative;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:var(--praline);display:grid;place-items:center;font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 20px 18px;margin:0;color:var(--choco-2)}
+
+footer{background:var(--cream-2);padding:30px 0 34px;font-size:14px;color:var(--choco-2);border-top:1px solid #E6D3BF}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* mobilní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--choco);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;box-shadow:0 -6px 20px rgba(58,35,32,.25)}
+.callbar a{flex:1;min-height:50px;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;font-size:16px}
+.callbar .c1{background:var(--mint);color:var(--choco);flex:1.5}
+.callbar .c2{border:2px solid var(--cream);color:var(--cream)}
+.callbar svg{width:18px;height:18px}
+@media (min-width:860px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:no-preference){.steam{animation:steam 3.2s ease-in-out infinite}.steam:nth-child(2){animation-delay:.8s}@keyframes steam{0%,100%{transform:translateY(0);opacity:.9}50%{transform:translateY(-4px);opacity:.5}}}
+</style>
+
+
+<div class="draft" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Delikates Občerstvení</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Delikates – úvod">Delikates<small>cukrárna &amp; kavárna</small></a>
+    <nav aria-label="Hlavní menu">
+      <a href="#nabidka">Nabídka</a><a href="#objednavka">Objednávka</a><a href="#kontakt">Kontakt</a><a href="#otazky">Otázky</a>
+    </nav>
+    <a class="tel-top" href="tel:+420596813017"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>596 813 017</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <!-- markýza výlohy -->
+  <svg class="awning" viewBox="0 0 1440 118" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="stripes" width="80" height="118" patternUnits="userSpaceOnUse">
+        <rect width="40" height="118" fill="#E9A9B8"/><rect x="40" width="40" height="118" fill="#FFFDF9"/>
+      </pattern>
+      <pattern id="scallop" x="0" y="0" width="80" height="26" patternUnits="userSpaceOnUse">
+        <path d="M0 0h40v6a20 20 0 0 1-40 0z" fill="#E9A9B8"/><path d="M40 0h40v6a20 20 0 0 1-40 0z" fill="#FFFDF9"/>
+        <path d="M0 6a20 20 0 0 0 40 0M40 6a20 20 0 0 0 40 0" fill="none" stroke="#3A2320" stroke-width="2"/>
+      </pattern>
+      <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2320" stop-opacity=".22"/><stop offset=".35" stop-color="#3A2320" stop-opacity="0"/><stop offset="1" stop-color="#3A2320" stop-opacity=".08"/></linearGradient>
+    </defs>
+    <rect width="1440" height="14" fill="#3A2320"/>
+    <rect y="14" width="1440" height="78" fill="url(#stripes)"/>
+    <rect y="14" width="1440" height="78" fill="url(#shade)"/>
+    <rect y="92" width="1440" height="26" fill="url(#scallop)" transform="translate(0 0)"/>
+    <rect y="14" width="1440" height="78" fill="none"/>
+  </svg>
+
+  <div class="status" id="status" aria-live="polite">
+    <div class="wrap"><span class="dot" aria-hidden="true"></span><span id="status-text"><strong>Otevřeno každý den</strong> · po–pá 8–18, so 9–17, ne 12–17</span></div>
+  </div>
+
+  <div class="wrap hero-body">
+    <div>
+      <p class="eyebrow">Hlavní třída 168/46 · Havířov</p>
+      <h1 id="h1">Cukrárna a kavárna <em>na Hlavní třídě</em> v Havířově</h1>
+      <p class="lead">Provozujeme cukrárnu a kavárnu. Nabízíme dorty, zákusky, domácí cukroví a další – a k tomu posezení u kávy, sedm dní v týdnu.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="#nabidka"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 10h16v10H4zM3 6h18v4H3zM12 6v14"/></svg>Zobrazit nabídku</a>
+        <a class="btn btn-ghost" href="tel:+420596813017"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Zavolat 596 813 017</a>
+      </div>
+      <a class="rate" href="https://www.firmy.cz/detail/12908208-delikates-obcerstveni-havirov.html#hodnoceni" target="_blank" rel="noopener"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span><br><span class="u">z 13 hodnocení na Firmy.cz</span></span></a>
+    </div>
+    <div class="window" aria-hidden="true">
+      <svg viewBox="0 0 420 300">
+        <rect width="420" height="300" fill="#F4E6D6"/>
+        <rect x="0" y="236" width="420" height="64" fill="#E6D3BF"/>
+        <!-- dort na stojanu -->
+        <g transform="translate(60 70)">
+          <path d="M40 166h100M90 166v-26M60 140h60" stroke="#3A2320" stroke-width="5" stroke-linecap="round"/>
+          <rect x="30" y="80" width="120" height="58" rx="10" fill="#F2C3CE" stroke="#3A2320" stroke-width="4"/>
+          <rect x="48" y="36" width="84" height="46" rx="9" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+          <path d="M48 52c10 10 18 10 21 0s15 10 21 0 15 10 21 0 15 10 21 0" fill="none" stroke="#3A2320" stroke-width="4"/>
+          <path d="M30 96c12 12 20 12 24 0s18 12 24 0 18 12 24 0 18 12 24 0 18 12 24 0" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+          <circle cx="90" cy="26" r="10" fill="#A8435F" stroke="#3A2320" stroke-width="4"/>
+          <path d="M90 16c2-8 8-12 14-12" stroke="#3A2320" stroke-width="3" fill="none"/>
+        </g>
+        <!-- šálek -->
+        <g transform="translate(250 130)">
+          <path class="steam" d="M30 0c-8 10 8 14 0 26" stroke="#6B4A42" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path class="steam" d="M56 0c-8 10 8 14 0 26" stroke="#6B4A42" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M6 36h80v28a34 34 0 0 1-34 34h-12A34 34 0 0 1 6 64z" fill="#B6E2D3" stroke="#3A2320" stroke-width="4"/>
+          <path d="M86 46h10a14 14 0 0 1 0 28h-12" fill="none" stroke="#3A2320" stroke-width="4"/>
+          <ellipse cx="46" cy="104" rx="62" ry="8" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+        </g>
+        <text x="210" y="276" text-anchor="middle" font-family="Yeseva One, Georgia, serif" font-size="22" fill="#3A2320">Delikates</text>
+      </svg>
+      <span class="photo-note">Sem přijde Vaše fotka</span>
+    </div>
+  </div>
+</section>
+
+<section class="week" aria-labelledby="week-h">
+  <div class="wrap">
+    <h2 id="week-h">Otevírací doba</h2>
+    <ul class="days" id="days">
+      <li data-d="1"><span class="d">Po</span><span class="h">8<i>–</i>18</span><span class="tag"></span></li>
+      <li data-d="2"><span class="d">Út</span><span class="h">8<i>–</i>18</span><span class="tag"></span></li>
+      <li data-d="3"><span class="d">St</span><span class="h">8<i>–</i>18</span><span class="tag"></span></li>
+      <li data-d="4"><span class="d">Čt</span><span class="h">8<i>–</i>18</span><span class="tag"></span></li>
+      <li data-d="5"><span class="d">Pá</span><span class="h">8<i>–</i>18</span><span class="tag"></span></li>
+      <li data-d="6"><span class="d">So</span><span class="h">9<i>–</i>17</span><span class="tag"></span></li>
+      <li data-d="0"><span class="d">Ne</span><span class="h">12<i>–</i>17</span><span class="tag"></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="nabidka" aria-labelledby="nab-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Vitrína</p>
+      <h2 id="nab-h">Co u nás najdete</h2>
+      <p>Dorty, zákusky, domácí cukroví a káva. Ceny nezveřejňujeme – zeptejte se u pultu nebo po telefonu na <a href="tel:+420596813017">596 813 017</a>.</p>
+    </div>
+
+    <div class="case">
+      <div class="case-glass">
+        <div class="shelf">
+          <article class="item">
+            <svg viewBox="0 0 160 130" aria-hidden="true">
+              <path d="M30 118h100M80 118v-14M58 104h44" stroke="#3A2320" stroke-width="5" stroke-linecap="round"/>
+              <rect x="26" y="58" width="108" height="44" rx="9" fill="#F2C3CE" stroke="#3A2320" stroke-width="4"/>
+              <rect x="44" y="24" width="72" height="36" rx="8" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+              <path d="M26 72c10 10 17 10 20 0s15 10 20 0 15 10 21 0 15 10 21 0 15 10 26 0" fill="#FFFDF9" stroke="#3A2320" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M44 36c8 8 14 8 18 0s14 8 18 0 14 8 18 0 14 8 18 0" fill="none" stroke="#3A2320" stroke-width="4"/>
+              <circle cx="80" cy="15" r="8" fill="#A8435F" stroke="#3A2320" stroke-width="4"/>
+            </svg>
+            <h3>Dorty</h3>
+            <p>Na oslavu i k nedělní kávě. Druh a velikost probereme po telefonu.</p>
+            <span class="price">cena na dotaz</span>
+          </article>
+          <article class="item">
+            <svg viewBox="0 0 160 130" aria-hidden="true">
+              <ellipse cx="80" cy="114" rx="56" ry="8" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+              <path d="M36 106 124 106 124 62 36 40z" fill="#5A3A33" stroke="#3A2320" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M36 62h88M36 84h88" stroke="#F2C3CE" stroke-width="7"/>
+              <path d="M36 40 124 62" stroke="#3A2320" stroke-width="4"/>
+              <path d="M36 40 124 62 124 54 44 32z" fill="#F2C3CE" stroke="#3A2320" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M106 50c0-12 16-12 16 0" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+              <circle cx="114" cy="36" r="6" fill="#A8435F" stroke="#3A2320" stroke-width="3"/>
+            </svg>
+            <h3>Zákusky</h3>
+            <p>Ke kávě na místě nebo zabalené s sebou domů.</p>
+            <span class="price">cena na dotaz</span>
+          </article>
+          <article class="item">
+            <svg viewBox="0 0 160 130" aria-hidden="true">
+              <ellipse cx="80" cy="108" rx="64" ry="14" fill="#B6E2D3" stroke="#3A2320" stroke-width="4"/>
+              <circle cx="56" cy="88" r="17" fill="#E9C9A0" stroke="#3A2320" stroke-width="4"/>
+              <circle cx="56" cy="88" r="5" fill="#A8435F"/>
+              <path d="M98 64l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2z" fill="#E9C9A0" stroke="#3A2320" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M70 60c10-14 30-14 40 0-10-6-30-6-40 0z" fill="#FFFDF9" stroke="#3A2320" stroke-width="4" stroke-linejoin="round"/>
+              <circle cx="90" cy="96" r="12" fill="#5A3A33" stroke="#3A2320" stroke-width="4"/>
+              <path d="M84 92h12" stroke="#FFFDF9" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <h3>Domácí cukroví</h3>
+            <p>Pečené doma, k svátkům i jen tak ke kávě.</p>
+            <span class="price">cena na dotaz</span>
+          </article>
+          <article class="item">
+            <svg viewBox="0 0 160 130" aria-hidden="true">
+              <path class="steam" d="M66 10c-7 9 7 13 0 22" stroke="#6B4A42" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path class="steam" d="M88 10c-7 9 7 13 0 22" stroke="#6B4A42" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M36 42h80v26a32 32 0 0 1-32 32H68a32 32 0 0 1-32-32z" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+              <path d="M40 52h72" stroke="#5A3A33" stroke-width="6"/>
+              <path d="M116 52h8a13 13 0 0 1 0 26h-10" fill="none" stroke="#3A2320" stroke-width="4"/>
+              <ellipse cx="78" cy="108" rx="58" ry="9" fill="#F2C3CE" stroke="#3A2320" stroke-width="4"/>
+            </svg>
+            <h3>Káva</h3>
+            <p>Posezení u kávy nebo zákusku přímo v cukrárně.</p>
+            <span class="price">cena na dotaz</span>
+          </article>
+        </div>
+        <div class="shelf wide">
+          <div class="more">
+            <svg viewBox="0 0 90 80" aria-hidden="true">
+              <rect x="12" y="30" width="66" height="44" rx="4" fill="#FFFDF9" stroke="#3A2320" stroke-width="4"/>
+              <rect x="8" y="22" width="74" height="12" rx="3" fill="#F2C3CE" stroke="#3A2320" stroke-width="4"/>
+              <path d="M45 22v52" stroke="#A8435F" stroke-width="6"/>
+              <path d="M45 22c-14-16-26-6-14 0M45 22c14-16 26-6 14 0" fill="none" stroke="#A8435F" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <div><h3>…a další</h3><p>Co je dnes ve vitríně, Vám rádi řekneme po telefonu.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="case-note"><span class="ukazka">ukázkový text</span> Popisky pod kategoriemi jsou návrh – kategorie samotné uvádí firma na Firmy.cz.</p>
+
+    <div class="posez">
+      <div>
+        <blockquote>„U nás najdete příjemné posezení u kávy nebo zákusku.“</blockquote>
+        <cite>– z profilu cukrárny na Instagramu</cite>
+      </div>
+      <div class="ph">Sem přijde Vaše fotka<br>(vitrína nebo posezení)</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec trust" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Proč k nám</p>
+      <h2 id="tr-h">Hodnocení mluví za nás</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="big">4,9 <small>/ 5</small></div>
+        <h3>13 hodnocení</h3>
+        <p>Hodnocení zákazníků na <a href="https://www.firmy.cz/detail/12908208-delikates-obcerstveni-havirov.html#hodnoceni" target="_blank" rel="noopener">Firmy.cz</a>.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="18" r="12" fill="#F2C3CE" stroke="#3A2320" stroke-width="3"/><path d="M15 28l-4 13 11-5 11 5-4-13" fill="#B6E2D3" stroke="#3A2320" stroke-width="3" stroke-linejoin="round"/><text x="22" y="23" text-anchor="middle" font-family="Yeseva One, Georgia, serif" font-size="14" fill="#3A2320">1</text></svg>
+        <h3>1. místo v Havířově</h3>
+        <p>V žebříčku <a href="https://www.firmy.cz/nejlepsi/Restauracni-a-pohostinske-sluzby/Cukrarny/kraj-moravskoslezsky/karvina/4605-havirov" target="_blank" rel="noopener">Cukrárny v Havířově</a> na Firmy.cz.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="8" width="34" height="31" rx="5" fill="#FFFDF9" stroke="#3A2320" stroke-width="3"/><path d="M5 17h34M14 4v8M30 4v8" stroke="#3A2320" stroke-width="3" stroke-linecap="round"/><path d="M14 27l5 5 10-10" fill="none" stroke="#1E6652" stroke-width="3.4" stroke-linecap="round"/></svg>
+        <h3>Sedm dní v týdnu</h3>
+        <p>Ve všední dny od 8 do 18, v sobotu 9–17 a v neděli odpoledne 12–17.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 6l4.5 9 10 1.5-7.3 7 1.8 10-9-4.8-9 4.8 1.8-10-7.3-7 10-1.5z" fill="#E9C9A0" stroke="#3A2320" stroke-width="3" stroke-linejoin="round"/></svg>
+        <h3>Domácí cukroví</h3>
+        <p>Vedle dortů a zákusků i cukroví domácí výroby.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="objednavka" aria-labelledby="ob-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Dort nebo cukroví na objednávku</p>
+      <h2 id="ob-h">Jak to probíhá</h2>
+      <p><span class="ukazka">ukázkový text</span> Postup doplníme podle toho, jak objednávky v cukrárně skutečně přijímáte.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Zavolejte nebo napište</h3><p>Na 596 813 017 nebo na e-mail cukrarna.lada@email.cz. Řekněte, na kdy a pro kolik lidí.</p></li>
+      <li><h3>Domluvíme se na detailech</h3><p>Probereme druh, velikost a cenu – vše předem, žádná překvapení.</p></li>
+      <li><h3>Vyzvednete si na Hlavní třídě</h3><p>V domluvený den v otevírací době na adrese Hlavní třída 168/46.</p></li>
+    </ol>
+    <div class="order-cta">
+      <a class="btn btn-main" href="tel:+420596813017"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Zavolat 596 813 017</a>
+      <a class="btn btn-ghost" href="mailto:cukrarna.lada@email.cz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Napsat e-mail</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt" aria-labelledby="ko-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kontakt a mapa</p>
+      <h2 id="ko-h">Najdete nás na Hlavní třídě</h2>
+      <p>Havířov-Město, Hlavní třída 168/46.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cbox">
+        <dl>
+          <div><dt>Telefon</dt><dd><a class="big-tel" href="tel:+420596813017">596 813 017</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:cukrarna.lada@email.cz">cukrarna.lada@email.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Hlavní třída 168/46<br>736 01 Havířov</dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/cukrarnadelikates/" target="_blank" rel="noopener">@cukrarnadelikates</a></dd></div>
+        </dl>
+      </div>
+      <div class="cbox">
+        <h3 style="font-size:24px;margin-bottom:8px">Otevírací doba</h3>
+        <table class="hours" id="hours">
+          <tr data-d="1"><th scope="row">Pondělí</th><td>8:00–18:00</td></tr>
+          <tr data-d="2"><th scope="row">Úterý</th><td>8:00–18:00</td></tr>
+          <tr data-d="3"><th scope="row">Středa</th><td>8:00–18:00</td></tr>
+          <tr data-d="4"><th scope="row">Čtvrtek</th><td>8:00–18:00</td></tr>
+          <tr data-d="5"><th scope="row">Pátek</th><td>8:00–18:00</td></tr>
+          <tr data-d="6"><th scope="row">Sobota</th><td>9:00–17:00</td></tr>
+          <tr data-d="0"><th scope="row">Neděle</th><td>12:00–17:00</td></tr>
+        </table>
+      </div>
+      <div>
+        <a class="mapcard" href="https://mapy.cz/zakladni?q=Hlavn%C3%AD%20t%C5%99%C3%ADda%20168%2F46%2C%20736%2001%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">
+          <svg viewBox="0 0 360 200" aria-hidden="true">
+            <rect width="360" height="200" fill="#F4E6D6"/>
+            <path d="M0 120 360 92" stroke="#FFFDF9" stroke-width="26"/>
+            <path d="M0 120 360 92" stroke="#E6D3BF" stroke-width="2" stroke-dasharray="10 10"/>
+            <path d="M120 0 150 200M260 0 240 200" stroke="#FFFDF9" stroke-width="12"/>
+            <rect x="20" y="20" width="80" height="70" rx="6" fill="#B6E2D3" opacity=".7"/>
+            <rect x="170" y="140" width="56" height="46" rx="6" fill="#E9C9A0" opacity=".6"/>
+            <rect x="270" y="18" width="70" height="56" rx="6" fill="#E9C9A0" opacity=".6"/>
+            <text x="300" y="86" font-family="Wix Madefor Text, Arial, sans-serif" font-size="11" fill="#6B4A42" text-anchor="middle" transform="rotate(-4 300 86)">Hlavní třída</text>
+            <path d="M190 104c0-16 12-28 22-28s22 12 22 28c0 18-22 40-22 40s-22-22-22-40z" transform="translate(-22 -40)" fill="#A8435F" stroke="#3A2320" stroke-width="3"/>
+            <circle cx="190" cy="61" r="7" fill="#FFFDF9"/>
+          </svg>
+          <span>Otevřít v Mapy.cz <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <div class="cta" style="margin-top:14px">
+          <a class="btn btn-main" href="tel:+420596813017">Zavolat</a>
+          <a class="btn btn-ghost" href="mailto:cukrarna.lada@email.cz">Napsat e-mail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="otazky" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Časté otázky</p>
+      <h2 id="faq-h">Než se zastavíte</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Máte otevřeno i o víkendu?</summary><p>Ano. V sobotu od 9:00 do 17:00 a v neděli od 12:00 do 17:00. Ve všední dny od 8:00 do 18:00.</p></details>
+      <details><summary>Kolik stojí dorty a zákusky?</summary><p>Ceny na webu neuvádíme. Rádi Vám je řekneme u pultu nebo po telefonu na 596 813 017.</p></details>
+      <details><summary>Dá se u Vás posedět?</summary><p>Ano, jsme cukrárna i kavárna – posedíte u kávy nebo zákusku přímo u nás na Hlavní třídě.</p></details>
+      <details><summary>Jak si objednám dort nebo cukroví?</summary><p>Zavolejte na 596 813 017 nebo napište na cukrarna.lada@email.cz a domluvíme druh, velikost i termín. <span class="ukazka">ukázkový text</span></p></details>
+      <details><summary>Kde přesně Vás najdu?</summary><p>Hlavní třída 168/46, 736 01 Havířov-Město. <a href="https://mapy.cz/zakladni?q=Hlavn%C3%AD%20t%C5%99%C3%ADda%20168%2F46%2C%20736%2001%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Ukázat na Mapy.cz</a>.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Delikates Občerstvení · cukrárna a kavárna · Hlavní třída 168/46, Havířov · <a href="tel:+420596813017">596 813 017</a></span>
+    <span>Nezávazný návrh webu, není to oficiální stránka firmy.</span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420596813017"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Zavolat 596 813 017</a>
+  <a class="c2" href="#nabidka">Nabídka</a>
+</nav>
+
+<script>
+(function(){
+  var H={0:[12,17],1:[8,18],2:[8,18],3:[8,18],4:[8,18],5:[8,18],6:[9,17]};
+  var N=["neděli","pondělí","úterý","středu","čtvrtek","pátek","sobotu"];
+  var d,h,m;
+  try{
+    var p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    d=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(o.weekday);h=parseInt(o.hour,10)%24;m=parseInt(o.minute,10);
+  }catch(e){var t=new Date();d=t.getDay();h=t.getHours();m=t.getMinutes();}
+  if(d<0)return;
+  var now=h+m/60,o2=H[d],st=document.getElementById("status"),tx=document.getElementById("status-text"),msg;
+  if(now<o2[0]){msg="<strong>Dnes otevíráme v "+o2[0]+":00</strong> · otevřeno do "+o2[1]+":00";}
+  else if(now<o2[1]){msg="<strong>Dnes otevřeno do "+o2[1]+":00</strong> · Hlavní třída 168/46";}
+  else{var n=(d+1)%7;msg="<strong>Dnes už máme zavřeno</strong> · zítra od "+H[n][0]+":00";st.classList.add("closed");}
+  tx.innerHTML=msg;
+  var li=document.querySelector('#days li[data-d="'+d+'"]');
+  if(li){li.classList.add("today");li.querySelector(".tag").textContent="dnes";li.setAttribute("aria-current","date");}
+  var tr=document.querySelector('#hours tr[data-d="'+d+'"]');if(tr)tr.classList.add("today");
+})();
+</script>
+</body>
+</html>

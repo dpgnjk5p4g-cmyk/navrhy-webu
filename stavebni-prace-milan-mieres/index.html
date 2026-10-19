@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Stavební práce Milan Mieres | Rekonstrukce Karviná</title>
+<meta name="description" content="Nezávazný návrh webu pro Stavební práce Milan Mieres: rekonstrukce bytů a domů, obklady, dlažby, sádrokarton, instalatérské práce a nábytek na míru v Karviné-Ráji a okolí.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Stavební práce Milan Mieres",
+  "telephone":"+420702546124",
+  "email":"milanmieres1@seznam.cz",
+  "address":{"@type":"PostalAddress","streetAddress":"Horova 675/3","addressLocality":"Karviná-Ráj","addressCountry":"CZ"},
+  "openingHours":["Mo 08:00-15:00","Tu 08:00-17:00","We-Fr 08:00-15:00"],
+  "taxID":"88380602"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: omítková plocha, nadpisy jako nápis na stěně, pás dlaždic jako "podlaha" pod hero; hlavní ozdoba = izometrická kuchyň po vrstvách */
+:root{
+  --omitka:#EDE6DA;
+  --omitka-2:#F6F1E8;
+  --omitka-3:#E2D9CA;
+  --terakota:#B5502E;
+  --terakota-text:#9A3F21;
+  --oliva:#2F3A2E;
+  --oliva-2:#3E4B3C;
+  --sparova:#9AA08F;
+  --ink:#2F3A2E;
+  --muted:#4F5A4D;
+  --on-dark:#EDE6DA;
+  --on-dark-muted:#C9C6B8;
+  --terakota-light:#E59A7A;
+  --white:#FFFFFF;
+  --f-display:"DM Serif Display", Georgia, "Times New Roman", serif;
+  --f-body:"DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --r:4px;
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{background:var(--omitka);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0;-webkit-font-smoothing:antialiased;padding-bottom:76px}
+@media (min-width:900px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--terakota-text)}
+:focus-visible{outline:3px solid var(--terakota);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+@media (min-width:700px){.wrap{padding-left:max(32px, env(safe-area-inset-left, 0px));padding-right:max(32px, env(safe-area-inset-right, 0px))}}
+.tag{display:inline-block;font:500 11px/1 var(--f-body);text-transform:uppercase;letter-spacing:.08em;border:1px solid currentColor;border-radius:3px;padding:3px 5px 2px;color:var(--muted);vertical-align:middle;white-space:nowrap}
+.dark .tag{color:var(--on-dark-muted)}
+.eyebrow{font:700 13px/1.3 var(--f-body);text-transform:uppercase;letter-spacing:.12em;color:var(--terakota-text)}
+.dark .eyebrow{color:var(--terakota-light)}
+
+/* banner */
+.demo{background:var(--oliva);color:var(--on-dark);font-size:13.5px;line-height:1.35;text-align:center;padding-block:8px}
+.demo strong{font-weight:700}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb, var(--omitka) 92%, transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--omitka-3)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
+.brand svg{flex:none}
+.brand b{font:400 20px/1 var(--f-display);display:block;white-space:nowrap}
+.brand small{display:block;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.nav{display:none;gap:22px;margin-left:auto}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{color:var(--terakota-text)}
+.tel-head{margin-left:auto;display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;border:1.5px solid var(--ink);border-radius:999px;padding:7px 14px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tel-head:hover{background:var(--ink);color:var(--omitka)}
+@media (min-width:980px){.nav{display:flex}.tel-head{margin-left:8px}}
+@media (max-width:420px){.tel-head .num{display:none}.brand small{font-size:10.5px}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 16.5px/1 var(--f-body);text-decoration:none;border-radius:999px;padding:16px 26px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, background .15s ease, box-shadow .15s ease}
+.btn-primary{background:var(--terakota);color:var(--white)}
+.btn-primary:hover{background:var(--terakota-text);transform:translateY(-1px);box-shadow:0 6px 0 -2px var(--oliva)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent;font-variant-numeric:tabular-nums}
+.btn-ghost:hover{background:var(--ink);color:var(--omitka)}
+.dark .btn-ghost{border-color:var(--on-dark);color:var(--on-dark)}
+.dark .btn-ghost:hover{background:var(--on-dark);color:var(--oliva)}
+
+/* hero */
+.hero{padding-block:28px 0}
+.hero .eyebrow{margin-bottom:14px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hero h1{font-size:clamp(2.35rem, 6.3vw, 6.4rem);line-height:.98;max-width:21ch}
+.hero h1 em{font-style:italic;color:var(--terakota-text)}
+.hero-row{display:grid;gap:22px;margin-top:20px;padding-bottom:28px}
+.hero-lede{font-size:clamp(1.02rem, 1.4vw, 1.2rem);max-width:52ch;color:var(--muted)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.rank{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);background:var(--omitka-2);border:1px solid var(--omitka-3);border-radius:var(--r);padding:12px 16px;max-width:440px;transition:border-color .15s}
+.rank:hover{border-color:var(--terakota)}
+.rank .medal{flex:none;width:52px;height:52px}
+.rank b{display:block;font:400 22px/1.1 var(--f-display)}
+.rank span{font-size:14px;color:var(--muted);line-height:1.35;display:block}
+.rank u{text-underline-offset:3px;color:var(--terakota-text)}
+@media (min-width:900px){
+  .hero{padding-block:56px 0}
+  .hero-row{grid-template-columns:1fr auto;align-items:end;margin-top:34px;padding-bottom:44px}
+}
+@media (max-width:899px){.hero .rank{order:3}}
+.tileband{display:block;width:100%;height:96px}
+@media (min-width:900px){.tileband{height:120px}}
+.tb{animation:lay .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
+@keyframes lay{from{opacity:.0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* section rhythm */
+section{scroll-margin-top:70px}
+.sec{padding-block:64px}
+@media (min-width:900px){.sec{padding-block:104px}}
+.sec-head{display:grid;gap:12px;margin-bottom:34px;max-width:760px}
+.sec-head h2{font-size:clamp(2rem, 4.4vw, 3.6rem)}
+.sec-head p{color:var(--muted);max-width:60ch}
+.dark{background:var(--oliva);color:var(--on-dark)}
+.dark .sec-head p{color:var(--on-dark-muted)}
+
+/* layers */
+.layers{display:grid;gap:28px;align-items:center}
+@media (min-width:960px){.layers{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px}}
+.stage{position:relative;background:var(--omitka-2);border-radius:var(--r);padding:12px;max-width:100%;min-width:0}
+.stage svg{display:block;width:100%;height:auto}
+.stage .lbl{position:absolute;left:14px;top:12px;font:700 12px/1 var(--f-body);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.iso-layer{transition:opacity .45s ease, transform .55s cubic-bezier(.2,.9,.25,1.2)}
+.iso-layer.off{opacity:0;transform:translateY(-26px);pointer-events:none}
+.ctrl{min-width:0}
+.steps{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.steps button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:10px 8px 10px;border-top:4px solid var(--oliva-2);color:var(--on-dark-muted);font-size:12.5px;line-height:1.2;min-height:64px;transition:border-color .2s,color .2s}
+.steps button .n{font:400 24px/1 var(--f-display);color:var(--on-dark)}
+.steps button.done{border-color:var(--sparova);color:var(--on-dark)}
+.steps button[aria-current="step"]{border-color:var(--terakota-light);color:var(--on-dark)}
+.steps button[aria-current="step"] .n{color:var(--terakota-light)}
+.steps button:focus-visible{outline:2px solid var(--terakota-light);outline-offset:2px}
+@media (max-width:520px){.steps .t{display:none}.steps button{min-height:0;align-items:center}}
+.range{width:100%;accent-color:var(--terakota);margin:0 0 22px}
+.panel h3{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:10px}
+.panel p{color:var(--on-dark-muted);max-width:52ch}
+.panel .svc{margin-top:12px;font-size:14px;color:var(--on-dark)}
+.panel .svc b{color:var(--terakota-light);font-weight:700}
+.crew{margin-top:26px;padding-top:20px;border-top:1px solid var(--oliva-2)}
+.crew p{font-size:14px;color:var(--on-dark-muted);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13.5px;padding:6px 11px;border-radius:999px;border:1px dashed var(--oliva-2);color:var(--on-dark-muted);transition:all .25s}
+.chip.on{border:1px solid var(--terakota-light);color:var(--on-dark);background:color-mix(in srgb,var(--terakota) 30%,transparent)}
+.chip.on::before{content:"✓ ";color:var(--terakota-light);font-weight:700}
+.crew .one{margin-top:14px;font:400 22px/1.2 var(--f-display);color:var(--on-dark)}
+.crew .one a{color:var(--terakota-light);text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ctrl-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.mini{all:unset;cursor:pointer;font:600 14px/1 var(--f-body);color:var(--on-dark);border:1.5px solid var(--on-dark-muted);border-radius:999px;padding:10px 16px}
+.mini:hover{background:var(--on-dark);color:var(--oliva)}
+.mini:focus-visible{outline:2px solid var(--terakota-light);outline-offset:2px}
+.mini[disabled]{opacity:.4;cursor:default}
+
+/* services */
+.svc-grid{display:grid;gap:0;border-top:1.5px solid var(--ink)}
+@media (min-width:700px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}}
+@media (min-width:1080px){.svc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.svc-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;padding-block:22px;border-bottom:1px solid var(--omitka-3)}
+.svc-item svg{grid-row:span 3;width:44px;height:44px;color:var(--terakota-text)}
+.svc-item h3{font-size:1.45rem}
+.svc-item p{font-size:15.5px;color:var(--muted)}
+.price{font-size:13.5px;font-weight:700;color:var(--ink);margin-top:4px;display:flex;gap:8px;align-items:center}
+.price::before{content:"";width:14px;height:1.5px;background:var(--terakota)}
+.svc-item:hover svg{transform:rotate(-6deg);transition:transform .2s}
+.svc-note{margin-top:20px;font-size:14px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+/* why */
+.why{background:var(--omitka-2)}
+.why-grid{display:grid;gap:18px}
+@media (min-width:800px){.why-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.why-card{padding:24px;border-radius:var(--r);border:1px solid var(--omitka-3);background:var(--omitka);display:flex;flex-direction:column;gap:10px}
+.why-card.big{background:var(--terakota);color:var(--white);border:0;grid-row:span 2}
+.why-card.big .k{font:400 clamp(4.5rem,9vw,7rem)/0.9 var(--f-display)}
+.why-card.big a{color:var(--white)}
+.why-card .k{font:400 2.4rem/1 var(--f-display);color:var(--terakota-text)}
+.why-card h3{font-size:1.4rem}
+.why-card p{font-size:15.5px;color:var(--muted)}
+.why-card.big p{color:var(--white)}
+@media (min-width:800px){.why-grid .wide{grid-column:span 2}}
+
+/* gallery */
+.gal{display:grid;gap:22px}
+@media (min-width:800px){.gal{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.pair figcaption{grid-column:1/-1;font-size:14.5px;color:var(--muted);margin-top:6px}
+.pair figcaption b{color:var(--ink);font-weight:700}
+figure{margin:0}
+.ph{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:var(--r);border:1.5px dashed var(--sparova);background:repeating-linear-gradient(45deg, var(--omitka-2) 0 14px, var(--omitka) 14px 28px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:10px;color:var(--muted);font-size:13px;line-height:1.25}
+.ph svg{width:30px;height:30px;color:var(--terakota-text)}
+.ph .when{position:absolute;top:8px;left:8px;font:700 11px/1 var(--f-body);text-transform:uppercase;letter-spacing:.1em;background:var(--oliva);color:var(--on-dark);padding:5px 7px;border-radius:2px}
+.ph.after .when{background:var(--terakota-text)}
+
+/* process */
+.proc{display:grid;gap:0;counter-reset:s}
+@media (min-width:860px){.proc{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}}
+.proc li{list-style:none;padding:22px 0;border-top:1.5px solid var(--on-dark-muted);display:grid;gap:8px}
+.proc .n{font:400 3.6rem/1 var(--f-display);color:var(--terakota-light)}
+.proc h3{font-size:1.6rem}
+.proc p{color:var(--on-dark-muted);font-size:15.5px}
+.proc{padding:0;margin:0}
+
+/* area */
+.area{display:grid;gap:28px;align-items:center}
+@media (min-width:860px){.area{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.area-svg{max-width:100%;width:100%;height:auto;display:block}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.towns span{padding:7px 13px;border-radius:999px;background:var(--omitka-2);border:1px solid var(--omitka-3);font-size:14.5px}
+.towns span.home{background:var(--oliva);color:var(--on-dark);border-color:var(--oliva)}
+
+/* faq */
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--omitka-3)}
+.faq details:last-child{border-bottom:1px solid var(--omitka-3)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;position:relative;font:400 1.35rem/1.25 var(--f-display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-9px;border-right:2px solid var(--terakota);border-bottom:2px solid var(--terakota);transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.faq .a{padding:0 0 22px;color:var(--muted);max-width:66ch;display:grid;gap:8px}
+
+/* contact */
+.contact{display:grid;gap:36px}
+@media (min-width:920px){.contact{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:64px}}
+.cinfo{display:grid;gap:18px;align-content:start}
+.cinfo dl{margin:0;display:grid;gap:14px}
+.cinfo dt{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--on-dark-muted)}
+.cinfo dd{margin:2px 0 0;font-size:18px;overflow-wrap:anywhere}
+.cinfo dd a{color:var(--on-dark);text-underline-offset:3px}
+.big-tel{font:400 clamp(2.2rem,5vw,3.4rem)/1 var(--f-display);color:var(--on-dark);text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}
+.big-tel:hover{color:var(--terakota-light)}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:15.5px}
+.hours td{padding:5px 0;border-bottom:1px solid var(--oliva-2)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--terakota-light);font-weight:700}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--sparova)}
+.status.open i{background:#7FC08F;box-shadow:0 0 0 4px rgba(127,192,143,.2)}
+form.f{background:var(--omitka);color:var(--ink);border-radius:var(--r);padding:24px;display:grid;gap:14px}
+@media (min-width:600px){form.f{padding:32px;grid-template-columns:1fr 1fr}.f .full{grid-column:1/-1}}
+.f h3{font-size:1.9rem}
+.f label{display:grid;gap:5px;font-size:14px;font-weight:600;min-width:0}
+.f input,.f select,.f textarea{font:400 16px/1.4 var(--f-body);color:var(--ink);background:var(--omitka-2);border:1.5px solid var(--omitka-3);border-radius:var(--r);padding:11px 12px;width:100%;min-width:0}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--terakota)}
+.f textarea{min-height:110px;resize:vertical}
+.f .note{font-size:13px;color:var(--muted)}
+.f .ok{background:var(--oliva);color:var(--on-dark);border-radius:var(--r);padding:16px;font-size:15px}
+.f .ok a{color:var(--terakota-light);font-weight:700}
+
+footer{background:var(--oliva);color:var(--on-dark-muted);font-size:13.5px;border-top:1px solid var(--oliva-2)}
+footer .wrap{padding-block:26px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer a{color:var(--on-dark)}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--oliva);display:grid;grid-template-columns:1fr 1.25fr;gap:8px;padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(12px, env(safe-area-inset-left, 0px));padding-right:max(12px, env(safe-area-inset-right, 0px));box-shadow:0 -6px 20px rgba(47,58,46,.25)}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 10px;font:700 15.5px/1 var(--f-body);text-decoration:none;white-space:nowrap}
+.mbar .c{background:transparent;color:var(--on-dark);border:1.5px solid var(--on-dark-muted)}
+.mbar .p{background:var(--terakota);color:var(--white)}
+@media (min-width:900px){.mbar{display:none}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – <strong>není to oficiální stránka firmy Stavební práce Milan Mieres</strong></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Stavební práce Milan Mieres – úvod">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="#B5502E"/><rect x="18" y="1" width="15" height="15" fill="#2F3A2E"/><rect x="1" y="18" width="15" height="15" fill="#2F3A2E"/><rect x="18" y="18" width="15" height="15" fill="#B5502E"/></svg>
+      <span><b>Milan Mieres</b><small>Stavební práce a interiéry</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#vrstvy">Po vrstvách</a><a href="#sluzby">Služby</a><a href="#realizace">Realizace</a><a href="#kde">Kde pracujeme</a><a href="#poptavka">Poptávka</a>
+    </nav>
+    <a class="tel-head" href="tel:+420702546124" aria-label="Zavolat 702 546 124">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+      <span class="num">702 546 124</span><span class="short" aria-hidden="true"></span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="eyebrow">Rekonstrukce bytů a domů · Karviná&#8209;Ráj</p>
+    <h1 id="h1">Celý byt od podlahy po <em>pracovní desku.</em> Jeden kontakt v&nbsp;Karviné.</h1>
+    <div class="hero-row">
+      <div style="display:grid;gap:20px;min-width:0">
+        <p class="hero-lede">Izolace, rozvody vody, sádrokarton, obklady, dlažby i nábytek na míru. Nemusíte shánět pět řemeslníků a hlídat, kdo na koho čeká.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#poptavka">Poptat rekonstrukci
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="tel:+420702546124">Zavolat 702 546 124</a>
+        </div>
+      </div>
+      <a class="rank" href="https://www.firmy.cz/detail/12756535-stavebni-prace-milan-mieres-karvina-raj.html" target="_blank" rel="noopener">
+        <svg class="medal" viewBox="0 0 52 52" aria-hidden="true"><rect x="4" y="4" width="44" height="44" fill="#B5502E" transform="rotate(45 26 26)" rx="3"/><rect x="11" y="11" width="30" height="30" fill="none" stroke="#EDE6DA" stroke-width="1.5" transform="rotate(45 26 26)"/><text x="26" y="34" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="23" fill="#FFFFFF">3.</text></svg>
+        <span><b>3. místo · Rekonstrukce a přestavby v Karviné</b><span>Žebříček na Firmy.cz · <u>zobrazit hodnocení</u></span></span>
+      </a>
+    </div>
+  </div>
+  <svg class="tileband" viewBox="0 0 1600 120" preserveAspectRatio="xMinYMid slice" aria-hidden="true"><rect width="1600" height="120" fill="#9AA08F"/><g class="tb" style="--d:0.00s"><rect x="2" y="2" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M20.0,9.0 L31.0,20.0 L20.0,31.0 L9.0,20.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="20.0" cy="20.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.02s"><rect x="42" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.04s"><rect x="82" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.06s"><rect x="122" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.08s"><rect x="162" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.10s"><rect x="202" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.12s"><rect x="242" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.14s"><rect x="282" y="2" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M300.0,9.0 L311.0,20.0 L300.0,31.0 L289.0,20.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="300.0" cy="20.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.16s"><rect x="322" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.18s"><rect x="362" y="2" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.20s"><rect x="402" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.22s"><rect x="442" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/><path d="M442,2 L478,38" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.24s"><rect x="482" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.26s"><rect x="522" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.28s"><rect x="562" y="2" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M580.0,9.0 L591.0,20.0 L580.0,31.0 L569.0,20.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="580.0" cy="20.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.30s"><rect x="602" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.32s"><rect x="642" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.34s"><rect x="682" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.36s"><rect x="722" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.38s"><rect x="762" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.40s"><rect x="802" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.42s"><rect x="842" y="2" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M860.0,9.0 L871.0,20.0 L860.0,31.0 L849.0,20.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="860.0" cy="20.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.44s"><rect x="882" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/><path d="M882,2 L918,38" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.46s"><rect x="922" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.48s"><rect x="962" y="2" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.50s"><rect x="1002" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.52s"><rect x="1042" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.54s"><rect x="1082" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.56s"><rect x="1122" y="2" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M1140.0,9.0 L1151.0,20.0 L1140.0,31.0 L1129.0,20.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="1140.0" cy="20.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.58s"><rect x="1162" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.60s"><rect x="1202" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.62s"><rect x="1242" y="2" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.64s"><rect x="1282" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.66s"><rect x="1322" y="2" width="36" height="36" rx="1.5" fill="#BE5C38"/><path d="M1322,2 L1358,38" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.68s"><rect x="1362" y="2" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.70s"><rect x="1402" y="2" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M1420.0,9.0 L1431.0,20.0 L1420.0,31.0 L1409.0,20.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="1420.0" cy="20.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.72s"><rect x="1442" y="2" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.74s"><rect x="1482" y="2" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.76s"><rect x="1522" y="2" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.78s"><rect x="1562" y="2" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.05s"><rect x="2" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.07s"><rect x="42" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.09s"><rect x="82" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.11s"><rect x="122" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.13s"><rect x="162" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.15s"><rect x="202" y="42" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M220.0,49.0 L231.0,60.0 L220.0,71.0 L209.0,60.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="220.0" cy="60.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.17s"><rect x="242" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.19s"><rect x="282" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/><path d="M282,42 L318,78" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.21s"><rect x="322" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.23s"><rect x="362" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.25s"><rect x="402" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.27s"><rect x="442" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.29s"><rect x="482" y="42" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M500.0,49.0 L511.0,60.0 L500.0,71.0 L489.0,60.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="500.0" cy="60.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.31s"><rect x="522" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.33s"><rect x="562" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.35s"><rect x="602" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.37s"><rect x="642" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.39s"><rect x="682" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.41s"><rect x="722" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/><path d="M722,42 L758,78" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.43s"><rect x="762" y="42" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M780.0,49.0 L791.0,60.0 L780.0,71.0 L769.0,60.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="780.0" cy="60.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.45s"><rect x="802" y="42" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.47s"><rect x="842" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.49s"><rect x="882" y="42" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.51s"><rect x="922" y="42" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.53s"><rect x="962" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.55s"><rect x="1002" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.57s"><rect x="1042" y="42" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M1060.0,49.0 L1071.0,60.0 L1060.0,71.0 L1049.0,60.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="1060.0" cy="60.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.59s"><rect x="1082" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.61s"><rect x="1122" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.63s"><rect x="1162" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/><path d="M1162,42 L1198,78" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.65s"><rect x="1202" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.67s"><rect x="1242" y="42" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.69s"><rect x="1282" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.71s"><rect x="1322" y="42" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M1340.0,49.0 L1351.0,60.0 L1340.0,71.0 L1329.0,60.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="1340.0" cy="60.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.73s"><rect x="1362" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.75s"><rect x="1402" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.77s"><rect x="1442" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.79s"><rect x="1482" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.81s"><rect x="1522" y="42" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.83s"><rect x="1562" y="42" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.10s"><rect x="2" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.12s"><rect x="42" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.14s"><rect x="82" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.16s"><rect x="122" y="82" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M140.0,89.0 L151.0,100.0 L140.0,111.0 L129.0,100.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="140.0" cy="100.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.18s"><rect x="162" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.20s"><rect x="202" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.22s"><rect x="242" y="82" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.24s"><rect x="282" y="82" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.26s"><rect x="322" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.28s"><rect x="362" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.30s"><rect x="402" y="82" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M420.0,89.0 L431.0,100.0 L420.0,111.0 L409.0,100.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="420.0" cy="100.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.32s"><rect x="442" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.34s"><rect x="482" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.36s"><rect x="522" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.38s"><rect x="562" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/><path d="M562,82 L598,118" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.40s"><rect x="602" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.42s"><rect x="642" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.44s"><rect x="682" y="82" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M700.0,89.0 L711.0,100.0 L700.0,111.0 L689.0,100.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="700.0" cy="100.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.46s"><rect x="722" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.48s"><rect x="762" y="82" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.50s"><rect x="802" y="82" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.52s"><rect x="842" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.54s"><rect x="882" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.56s"><rect x="922" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.58s"><rect x="962" y="82" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M980.0,89.0 L991.0,100.0 L980.0,111.0 L969.0,100.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="980.0" cy="100.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.60s"><rect x="1002" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/><path d="M1002,82 L1038,118" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.62s"><rect x="1042" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.64s"><rect x="1082" y="82" width="36" height="36" rx="1.5" fill="#B5502E"/></g><g class="tb" style="--d:0.66s"><rect x="1122" y="82" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.68s"><rect x="1162" y="82" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.70s"><rect x="1202" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.72s"><rect x="1242" y="82" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M1260.0,89.0 L1271.0,100.0 L1260.0,111.0 L1249.0,100.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="1260.0" cy="100.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.74s"><rect x="1282" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.76s"><rect x="1322" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.78s"><rect x="1362" y="82" width="36" height="36" rx="1.5" fill="#B04C2C"/></g><g class="tb" style="--d:0.80s"><rect x="1402" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/></g><g class="tb" style="--d:0.82s"><rect x="1442" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/><path d="M1442,82 L1478,118" stroke="#9A3F21" stroke-width="1"/></g><g class="tb" style="--d:0.84s"><rect x="1482" y="82" width="36" height="36" rx="1.5" fill="#BE5C38"/></g><g class="tb" style="--d:0.86s"><rect x="1522" y="82" width="36" height="36" rx="1.5" fill="#2F3A2E"/><path d="M1540.0,89.0 L1551.0,100.0 L1540.0,111.0 L1529.0,100.0 Z" fill="none" stroke="#EDE6DA" stroke-width="1.6"/><circle cx="1540.0" cy="100.0" r="2.4" fill="#EDE6DA"/></g><g class="tb" style="--d:0.88s"><rect x="1562" y="82" width="36" height="36" rx="1.5" fill="#A9482A"/></g></svg>
+</section>
+
+<section id="vrstvy" class="sec dark" aria-labelledby="h-vrstvy">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Rekonstrukce po vrstvách</p>
+      <h2 id="h-vrstvy">Pět řemesel, jedna kuchyň. A pořád stejný člověk.</h2>
+      <p>Projděte si, jak kuchyň vzniká od holé zdi. Posuňte jezdcem nebo klikněte na krok a sledujte, co v každé fázi přibude.</p>
+    </div>
+    <div class="layers">
+      <div class="stage">
+        <span class="lbl" id="stage-lbl">Krok 5 z 5</span>
+        <svg viewBox="-200 -200 450 445" role="img" aria-labelledby="iso-title">
+          <title id="iso-title">Izometrická ilustrace kuchyně, která se skládá po vrstvách</title>
+          <g class="iso-base"><polygon points="-182.9,107.8 57.2,246.4 57.2,231.0 -182.9,92.4" fill="#B9B3A3" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="240.1,140.8 57.2,246.4 57.2,231.0 240.1,125.4" fill="#A9A595" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="0.0,-13.2 240.1,125.4 57.2,231.0 -182.9,92.4" fill="#D9D2C3" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="-11.4,-6.6 228.6,132.0 228.6,-44.0 -11.4,-182.6" fill="#CFC8B8" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="0.0,-189.2 240.1,-50.6 228.6,-44.0 -11.4,-182.6" fill="#E4DDCF" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="240.1,140.8 228.6,147.4 228.6,-44.0 240.1,-50.6" fill="#A9A595" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="0.0,0.0 -171.5,99.0 -171.5,-77.0 0.0,-176.0" fill="#BDB6A6" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="-11.4,-182.6 0.0,-176.0 -171.5,-77.0 -182.9,-83.6" fill="#E4DDCF" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="-182.9,107.8 -171.5,114.4 -171.5,-77.0 -182.9,-83.6" fill="#B9B3A3" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="-80.0,-33.0 -137.2,0.0 -137.2,-61.6 -80.0,-94.6" fill="#DCE3DA" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><line x1="-108.6" y1="-16.5" x2="-108.6" y2="-78.1" stroke="#2F3A2E" stroke-width="1" stroke-linecap="round"/><polygon points="-80.0,-33.0 -137.2,0.0 -127.7,8.8 -70.5,-24.2" fill="#F4EFE6" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/><circle cx="33.7" cy="48.6" r="0.9" fill="#9AA08F"/><circle cx="59.4" cy="72.6" r="0.9" fill="#9AA08F"/><circle cx="-47.3" cy="54.4" r="0.9" fill="#9AA08F"/><circle cx="70.4" cy="192.5" r="0.9" fill="#9AA08F"/><circle cx="126.5" cy="123.1" r="0.9" fill="#9AA08F"/><circle cx="70.3" cy="100.3" r="0.9" fill="#9AA08F"/><circle cx="20.0" cy="41.2" r="0.9" fill="#9AA08F"/><circle cx="-96.4" cy="118.6" r="0.9" fill="#9AA08F"/><circle cx="50.8" cy="182.3" r="0.9" fill="#9AA08F"/><circle cx="138.3" cy="124.9" r="0.9" fill="#9AA08F"/><circle cx="-30.6" cy="103.7" r="0.9" fill="#9AA08F"/><circle cx="23.1" cy="174.8" r="0.9" fill="#9AA08F"/><circle cx="171.2" cy="125.1" r="0.9" fill="#9AA08F"/><circle cx="24.6" cy="143.4" r="0.9" fill="#9AA08F"/><circle cx="78.9" cy="87.9" r="0.9" fill="#9AA08F"/><circle cx="85.6" cy="76.2" r="0.9" fill="#9AA08F"/><circle cx="64.0" cy="200.2" r="0.9" fill="#9AA08F"/><circle cx="69.0" cy="103.7" r="0.9" fill="#9AA08F"/><circle cx="103.2" cy="171.3" r="0.9" fill="#9AA08F"/><circle cx="55.7" cy="192.4" r="0.9" fill="#9AA08F"/><circle cx="43.4" cy="108.9" r="0.9" fill="#9AA08F"/><circle cx="59.8" cy="121.4" r="0.9" fill="#9AA08F"/><circle cx="-12.7" cy="57.4" r="0.9" fill="#9AA08F"/><circle cx="163.7" cy="113.1" r="0.9" fill="#9AA08F"/><circle cx="-85.8" cy="71.7" r="0.9" fill="#9AA08F"/><circle cx="-22.7" cy="92.0" r="0.9" fill="#9AA08F"/><circle cx="46.5" cy="98.2" r="0.9" fill="#9AA08F"/><circle cx="179.2" cy="148.9" r="0.9" fill="#9AA08F"/><circle cx="55.6" cy="78.8" r="0.9" fill="#9AA08F"/><circle cx="90.5" cy="111.9" r="0.9" fill="#9AA08F"/><circle cx="-39.3" cy="119.8" r="0.9" fill="#9AA08F"/><circle cx="-17.9" cy="99.0" r="0.9" fill="#9AA08F"/><circle cx="174.1" cy="129.3" r="0.9" fill="#9AA08F"/><circle cx="-22.0" cy="38.6" r="0.9" fill="#9AA08F"/><circle cx="66.6" cy="157.7" r="0.9" fill="#9AA08F"/><circle cx="-0.7" cy="68.9" r="0.9" fill="#9AA08F"/><circle cx="-32.8" cy="72.9" r="0.9" fill="#9AA08F"/><circle cx="-97.3" cy="77.5" r="0.9" fill="#9AA08F"/><circle cx="42.2" cy="203.4" r="0.9" fill="#9AA08F"/><circle cx="7.7" cy="184.4" r="0.9" fill="#9AA08F"/></g>
+<g class="iso-layer" data-layer="1"><polygon points="0.0,-3.3 57.2,29.7 0.0,62.7 -57.2,29.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-57.2,29.7 0.0,62.7 -57.2,95.7 -114.3,62.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-114.3,62.7 -57.2,95.7 -114.3,128.7 -171.5,95.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="57.2,29.7 114.3,62.7 57.2,95.7 0.0,62.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="0.0,62.7 57.2,95.7 0.0,128.7 -57.2,95.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-57.2,95.7 0.0,128.7 -57.2,161.7 -114.3,128.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="114.3,62.7 171.5,95.7 114.3,128.7 57.2,95.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="57.2,95.7 114.3,128.7 57.2,161.7 0.0,128.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="0.0,128.7 57.2,161.7 0.0,194.7 -57.2,161.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="171.5,95.7 228.6,128.7 171.5,161.7 114.3,128.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="114.3,128.7 171.5,161.7 114.3,194.7 57.2,161.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="57.2,161.7 114.3,194.7 57.2,227.7 0.0,194.7" fill="#E2DFCB" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-2.3,1.3 35.8,23.3 35.8,-20.7 -2.3,-42.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M-2.3,-11.9 L2.5,-20.1 L7.2,-6.4 L12.0,-14.6 L16.8,-0.9 L21.5,-9.1 L26.3,4.6 L31.1,-3.6 L35.8,10.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M-2.3,-25.1 L2.5,-33.3 L7.2,-19.6 L12.0,-27.8 L16.8,-14.1 L21.5,-22.3 L26.3,-8.6 L31.1,-16.8 L35.8,-3.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="-2.3,-42.7 35.8,-20.7 35.8,-64.7 -2.3,-86.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M-2.3,-55.9 L2.5,-64.1 L7.2,-50.4 L12.0,-58.6 L16.8,-44.9 L21.5,-53.1 L26.3,-39.4 L31.1,-47.6 L35.8,-33.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M-2.3,-69.1 L2.5,-77.3 L7.2,-63.6 L12.0,-71.8 L16.8,-58.1 L21.5,-66.3 L26.3,-52.6 L31.1,-60.8 L35.8,-47.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="-2.3,-86.7 35.8,-64.7 35.8,-108.7 -2.3,-130.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M-2.3,-99.9 L2.5,-108.1 L7.2,-94.4 L12.0,-102.6 L16.8,-88.9 L21.5,-97.1 L26.3,-83.4 L31.1,-91.6 L35.8,-77.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M-2.3,-113.1 L2.5,-121.3 L7.2,-107.6 L12.0,-115.8 L16.8,-102.1 L21.5,-110.3 L26.3,-96.6 L31.1,-104.8 L35.8,-91.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="-2.3,-130.7 35.8,-108.7 35.8,-152.7 -2.3,-174.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M-2.3,-143.9 L2.5,-152.1 L7.2,-138.4 L12.0,-146.6 L16.8,-132.9 L21.5,-141.1 L26.3,-127.4 L31.1,-135.6 L35.8,-121.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M-2.3,-157.1 L2.5,-165.3 L7.2,-151.6 L12.0,-159.8 L16.8,-146.1 L21.5,-154.3 L26.3,-140.6 L31.1,-148.8 L35.8,-135.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="35.8,23.3 73.9,45.3 73.9,1.3 35.8,-20.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M35.8,10.1 L40.6,1.9 L45.3,15.6 L50.1,7.4 L54.9,21.1 L59.6,12.9 L64.4,26.6 L69.2,18.4 L73.9,32.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M35.8,-3.1 L40.6,-11.3 L45.3,2.4 L50.1,-5.8 L54.9,7.9 L59.6,-0.3 L64.4,13.4 L69.2,5.2 L73.9,18.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="35.8,-20.7 73.9,1.3 73.9,-42.7 35.8,-64.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M35.8,-33.9 L40.6,-42.1 L45.3,-28.4 L50.1,-36.6 L54.9,-22.9 L59.6,-31.1 L64.4,-17.4 L69.2,-25.6 L73.9,-11.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M35.8,-47.1 L40.6,-55.3 L45.3,-41.6 L50.1,-49.8 L54.9,-36.1 L59.6,-44.3 L64.4,-30.6 L69.2,-38.8 L73.9,-25.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="35.8,-64.7 73.9,-42.7 73.9,-86.7 35.8,-108.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M35.8,-77.9 L40.6,-86.1 L45.3,-72.4 L50.1,-80.6 L54.9,-66.9 L59.6,-75.1 L64.4,-61.4 L69.2,-69.6 L73.9,-55.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M35.8,-91.1 L40.6,-99.3 L45.3,-85.6 L50.1,-93.8 L54.9,-80.1 L59.6,-88.3 L64.4,-74.6 L69.2,-82.8 L73.9,-69.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="35.8,-108.7 73.9,-86.7 73.9,-130.7 35.8,-152.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M35.8,-121.9 L40.6,-130.1 L45.3,-116.4 L50.1,-124.6 L54.9,-110.9 L59.6,-119.1 L64.4,-105.4 L69.2,-113.6 L73.9,-99.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M35.8,-135.1 L40.6,-143.3 L45.3,-129.6 L50.1,-137.8 L54.9,-124.1 L59.6,-132.3 L64.4,-118.6 L69.2,-126.8 L73.9,-113.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="73.9,45.3 112.0,67.3 112.0,23.3 73.9,1.3" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M73.9,32.1 L78.7,23.9 L83.5,37.6 L88.2,29.4 L93.0,43.1 L97.7,34.9 L102.5,48.6 L107.3,40.4 L112.0,54.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.9,18.9 L78.7,10.7 L83.5,24.4 L88.2,16.2 L93.0,29.9 L97.7,21.7 L102.5,35.4 L107.3,27.2 L112.0,40.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="73.9,1.3 112.0,23.3 112.0,-20.7 73.9,-42.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M73.9,-11.9 L78.7,-20.1 L83.5,-6.4 L88.2,-14.6 L93.0,-0.9 L97.7,-9.1 L102.5,4.6 L107.3,-3.6 L112.0,10.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.9,-25.1 L78.7,-33.3 L83.5,-19.6 L88.2,-27.8 L93.0,-14.1 L97.7,-22.3 L102.5,-8.6 L107.3,-16.8 L112.0,-3.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="73.9,-42.7 112.0,-20.7 112.0,-64.7 73.9,-86.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M73.9,-55.9 L78.7,-64.1 L83.5,-50.4 L88.2,-58.6 L93.0,-44.9 L97.7,-53.1 L102.5,-39.4 L107.3,-47.6 L112.0,-33.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.9,-69.1 L78.7,-77.3 L83.5,-63.6 L88.2,-71.8 L93.0,-58.1 L97.7,-66.3 L102.5,-52.6 L107.3,-60.8 L112.0,-47.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="73.9,-86.7 112.0,-64.7 112.0,-108.7 73.9,-130.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M73.9,-99.9 L78.7,-108.1 L83.5,-94.4 L88.2,-102.6 L93.0,-88.9 L97.7,-97.1 L102.5,-83.4 L107.3,-91.6 L112.0,-77.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.9,-113.1 L78.7,-121.3 L83.5,-107.6 L88.2,-115.8 L93.0,-102.1 L97.7,-110.3 L102.5,-96.6 L107.3,-104.8 L112.0,-91.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="112.0,67.3 150.1,89.3 150.1,45.3 112.0,23.3" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M112.0,54.1 L116.8,45.9 L121.6,59.6 L126.3,51.4 L131.1,65.1 L135.8,56.9 L140.6,70.6 L145.4,62.4 L150.1,76.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M112.0,40.9 L116.8,32.7 L121.6,46.4 L126.3,38.2 L131.1,51.9 L135.8,43.7 L140.6,57.4 L145.4,49.2 L150.1,62.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="112.0,23.3 150.1,45.3 150.1,1.3 112.0,-20.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M112.0,10.1 L116.8,1.9 L121.6,15.6 L126.3,7.4 L131.1,21.1 L135.8,12.9 L140.6,26.6 L145.4,18.4 L150.1,32.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M112.0,-3.1 L116.8,-11.3 L121.6,2.4 L126.3,-5.8 L131.1,7.9 L135.8,-0.3 L140.6,13.4 L145.4,5.2 L150.1,18.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="112.0,-20.7 150.1,1.3 150.1,-42.7 112.0,-64.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M112.0,-33.9 L116.8,-42.1 L121.6,-28.4 L126.3,-36.6 L131.1,-22.9 L135.8,-31.1 L140.6,-17.4 L145.4,-25.6 L150.1,-11.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M112.0,-47.1 L116.8,-55.3 L121.6,-41.6 L126.3,-49.8 L131.1,-36.1 L135.8,-44.3 L140.6,-30.6 L145.4,-38.8 L150.1,-25.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="112.0,-64.7 150.1,-42.7 150.1,-86.7 112.0,-108.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M112.0,-77.9 L116.8,-86.1 L121.6,-72.4 L126.3,-80.6 L131.1,-66.9 L135.8,-75.1 L140.6,-61.4 L145.4,-69.6 L150.1,-55.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M112.0,-91.1 L116.8,-99.3 L121.6,-85.6 L126.3,-93.8 L131.1,-80.1 L135.8,-88.3 L140.6,-74.6 L145.4,-82.8 L150.1,-69.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="150.1,89.3 188.2,111.3 188.2,67.3 150.1,45.3" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M150.1,76.1 L154.9,67.9 L159.7,81.6 L164.4,73.4 L169.2,87.1 L173.9,78.9 L178.7,92.6 L183.5,84.4 L188.2,98.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M150.1,62.9 L154.9,54.7 L159.7,68.4 L164.4,60.2 L169.2,73.9 L173.9,65.7 L178.7,79.4 L183.5,71.2 L188.2,84.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="150.1,45.3 188.2,67.3 188.2,23.3 150.1,1.3" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M150.1,32.1 L154.9,23.9 L159.7,37.6 L164.4,29.4 L169.2,43.1 L173.9,34.9 L178.7,48.6 L183.5,40.4 L188.2,54.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M150.1,18.9 L154.9,10.7 L159.7,24.4 L164.4,16.2 L169.2,29.9 L173.9,21.7 L178.7,35.4 L183.5,27.2 L188.2,40.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="150.1,1.3 188.2,23.3 188.2,-20.7 150.1,-42.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M150.1,-11.9 L154.9,-20.1 L159.7,-6.4 L164.4,-14.6 L169.2,-0.9 L173.9,-9.1 L178.7,4.6 L183.5,-3.6 L188.2,10.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M150.1,-25.1 L154.9,-33.3 L159.7,-19.6 L164.4,-27.8 L169.2,-14.1 L173.9,-22.3 L178.7,-8.6 L183.5,-16.8 L188.2,-3.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="150.1,-42.7 188.2,-20.7 188.2,-64.7 150.1,-86.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M150.1,-55.9 L154.9,-64.1 L159.7,-50.4 L164.4,-58.6 L169.2,-44.9 L173.9,-53.1 L178.7,-39.4 L183.5,-47.6 L188.2,-33.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M150.1,-69.1 L154.9,-77.3 L159.7,-63.6 L164.4,-71.8 L169.2,-58.1 L173.9,-66.3 L178.7,-52.6 L183.5,-60.8 L188.2,-47.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="188.2,111.3 226.3,133.3 226.3,89.3 188.2,67.3" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M188.2,98.1 L193.0,89.9 L197.8,103.6 L202.5,95.4 L207.3,109.1 L212.1,100.9 L216.8,114.6 L221.6,106.4 L226.3,120.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M188.2,84.9 L193.0,76.7 L197.8,90.4 L202.5,82.2 L207.3,95.9 L212.1,87.7 L216.8,101.4 L221.6,93.2 L226.3,106.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="188.2,67.3 226.3,89.3 226.3,45.3 188.2,23.3" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M188.2,54.1 L193.0,45.9 L197.8,59.6 L202.5,51.4 L207.3,65.1 L212.1,56.9 L216.8,70.6 L221.6,62.4 L226.3,76.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M188.2,40.9 L193.0,32.7 L197.8,46.4 L202.5,38.2 L207.3,51.9 L212.1,43.7 L216.8,57.4 L221.6,49.2 L226.3,62.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="188.2,23.3 226.3,45.3 226.3,1.3 188.2,-20.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M188.2,10.1 L193.0,1.9 L197.8,15.6 L202.5,7.4 L207.3,21.1 L212.1,12.9 L216.8,26.6 L221.6,18.4 L226.3,32.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M188.2,-3.1 L193.0,-11.3 L197.8,2.4 L202.5,-5.8 L207.3,7.9 L212.1,-0.3 L216.8,13.4 L221.6,5.2 L226.3,18.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="188.2,-20.7 226.3,1.3 226.3,-42.7 188.2,-64.7" fill="#D3D3BE" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><path d="M188.2,-33.9 L193.0,-42.1 L197.8,-28.4 L202.5,-36.6 L207.3,-22.9 L212.1,-31.1 L216.8,-17.4 L221.6,-25.6 L226.3,-11.9" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M188.2,-47.1 L193.0,-55.3 L197.8,-41.6 L202.5,-49.8 L207.3,-36.1 L212.1,-44.3 L216.8,-30.6 L221.6,-38.8 L226.3,-25.1" fill="none" stroke="#AEB29F" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/><polygon points="2.3,1.3 -35.8,23.3 -35.8,-20.7 2.3,-42.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="2.3,-42.7 -35.8,-20.7 -35.8,-64.7 2.3,-86.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="2.3,-86.7 -35.8,-64.7 -35.8,-108.7 2.3,-130.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="2.3,-130.7 -35.8,-108.7 -35.8,-152.7 2.3,-174.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-35.8,23.3 -73.9,45.3 -73.9,1.3 -35.8,-20.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-35.8,-20.7 -73.9,1.3 -73.9,-42.7 -35.8,-64.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-35.8,-64.7 -73.9,-42.7 -73.9,-86.7 -35.8,-108.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-35.8,-108.7 -73.9,-86.7 -73.9,-130.7 -35.8,-152.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-73.9,45.3 -112.0,67.3 -112.0,23.3 -73.9,1.3" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-73.9,1.3 -112.0,23.3 -112.0,-20.7 -73.9,-42.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-73.9,-42.7 -112.0,-20.7 -112.0,-64.7 -73.9,-86.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-73.9,-86.7 -112.0,-64.7 -112.0,-108.7 -73.9,-130.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-112.0,67.3 -150.1,89.3 -150.1,45.3 -112.0,23.3" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-112.0,23.3 -150.1,45.3 -150.1,1.3 -112.0,-20.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-112.0,-20.7 -150.1,1.3 -150.1,-42.7 -112.0,-64.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-112.0,-64.7 -150.1,-42.7 -150.1,-86.7 -112.0,-108.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-150.1,89.3 -169.2,100.3 -169.2,56.3 -150.1,45.3" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-150.1,45.3 -169.2,56.3 -169.2,12.3 -150.1,1.3" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-150.1,1.3 -169.2,12.3 -169.2,-31.7 -150.1,-42.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-150.1,-42.7 -169.2,-31.7 -169.2,-75.7 -150.1,-86.7" fill="#C6C7B1" stroke="#9AA08F" stroke-width="0.8" stroke-linejoin="round"/><polygon points="-77.5,-31.6 -134.7,1.4 -134.7,-60.2 -77.5,-93.2" fill="#DCE3DA" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><line x1="-106.1" y1="-15.1" x2="-106.1" y2="-76.7" stroke="#2F3A2E" stroke-width="1" stroke-linecap="round"/></g>
+<g class="iso-layer" data-layer="2"><path d="M-145.8,69.8 L0.0,-14.3 L130.5,61.0 L130.5,3.8" fill="none" stroke="#B5502E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-155.3,64.3 L0.0,-25.3 L141.9,56.7 L141.9,10.5" fill="none" stroke="#4E6B5A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M193.4,109.4 L136.2,76.4 L136.2,29.1" fill="none" stroke="#7D8272" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-16.2,-16.0 L-16.2,-97.4" fill="none" stroke="#4E6B5A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="130.5" cy="3.8" r="3.2" fill="#B5502E" stroke="#2F3A2E" stroke-width="0.8"/><circle cx="141.9" cy="10.5" r="3.2" fill="#4E6B5A" stroke="#2F3A2E" stroke-width="0.8"/><circle cx="-16.2" cy="-97.4" r="3.2" fill="#4E6B5A" stroke="#2F3A2E" stroke-width="0.8"/><line x1="34.3" y1="5.5" x2="34.3" y2="-12.1" stroke="#2F3A2E" stroke-width="1.4" stroke-linecap="round"/><line x1="72.4" y1="27.5" x2="72.4" y2="9.9" stroke="#2F3A2E" stroke-width="1.4" stroke-linecap="round"/><line x1="110.5" y1="49.5" x2="110.5" y2="31.9" stroke="#2F3A2E" stroke-width="1.4" stroke-linecap="round"/><line x1="167.7" y1="82.5" x2="167.7" y2="64.9" stroke="#2F3A2E" stroke-width="1.4" stroke-linecap="round"/></g>
+<g class="iso-layer" data-layer="3"><polygon points="-5.7,3.3 222.9,135.3 222.9,-40.7 -5.7,-172.7" fill="#F2EDE3" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><line x1="32.4" y1="23.1" x2="32.4" y2="-126.5" stroke="#CFC6B5" stroke-width="1" stroke-linecap="round"/><line x1="70.5" y1="45.1" x2="70.5" y2="-104.5" stroke="#CFC6B5" stroke-width="1" stroke-linecap="round"/><line x1="108.6" y1="67.1" x2="108.6" y2="-82.5" stroke="#CFC6B5" stroke-width="1" stroke-linecap="round"/><line x1="146.7" y1="89.1" x2="146.7" y2="-60.5" stroke="#CFC6B5" stroke-width="1" stroke-linecap="round"/><line x1="184.8" y1="111.1" x2="184.8" y2="-38.5" stroke="#CFC6B5" stroke-width="1" stroke-linecap="round"/><circle cx="-1.0" cy="-15.9" r="0.8" fill="#B5AD9C"/><circle cx="-1.0" cy="-60.0" r="0.8" fill="#B5AD9C"/><circle cx="-1.0" cy="-104.0" r="0.8" fill="#B5AD9C"/><circle cx="37.2" cy="6.0" r="0.8" fill="#B5AD9C"/><circle cx="37.2" cy="-38.0" r="0.8" fill="#B5AD9C"/><circle cx="37.2" cy="-82.0" r="0.8" fill="#B5AD9C"/><circle cx="75.3" cy="28.0" r="0.8" fill="#B5AD9C"/><circle cx="75.3" cy="-16.0" r="0.8" fill="#B5AD9C"/><circle cx="75.3" cy="-60.0" r="0.8" fill="#B5AD9C"/><circle cx="113.4" cy="50.0" r="0.8" fill="#B5AD9C"/><circle cx="113.4" cy="6.0" r="0.8" fill="#B5AD9C"/><circle cx="113.4" cy="-38.0" r="0.8" fill="#B5AD9C"/><circle cx="151.5" cy="72.1" r="0.8" fill="#B5AD9C"/><circle cx="151.5" cy="28.1" r="0.8" fill="#B5AD9C"/><circle cx="151.5" cy="-15.9" r="0.8" fill="#B5AD9C"/><circle cx="189.6" cy="94.1" r="0.8" fill="#B5AD9C"/><circle cx="189.6" cy="50.1" r="0.8" fill="#B5AD9C"/><circle cx="189.6" cy="6.1" r="0.8" fill="#B5AD9C"/><polygon points="0.0,6.6 -165.8,102.3 -165.8,-73.7 0.0,-169.4" fill="#E2DCCF" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="-74.3,-29.7 -131.5,3.3 -131.5,-58.3 -74.3,-91.3" fill="#DCE3DA" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><line x1="-102.9" y1="-13.2" x2="-102.9" y2="-74.8" stroke="#2F3A2E" stroke-width="1" stroke-linecap="round"/><polygon points="-74.3,-29.7 -131.5,3.3 -121.9,12.1 -64.8,-20.9" fill="#F7F3EC" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/><line x1="-32.4" y1="23.1" x2="-32.4" y2="-126.5" stroke="#CFC6B5" stroke-width="1" stroke-linecap="round"/><line x1="-146.7" y1="89.1" x2="-146.7" y2="-60.5" stroke="#CFC6B5" stroke-width="1" stroke-linecap="round"/><polygon points="-30.5,-129.8 192.4,-1.1 192.4,-23.1 -30.5,-151.8" fill="#EAE3D6" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="222.9,-18.7 192.4,-1.1 192.4,-23.1 222.9,-40.7" fill="#DDD5C6" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="0.0,-169.4 222.9,-40.7 192.4,-23.1 -30.5,-151.8" fill="#F7F3EC" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><ellipse cx="21.0" cy="-102.1" rx="5" ry="2.4" fill="#FFF8E8" stroke="#2F3A2E" stroke-width="0.7"/><ellipse cx="78.1" cy="-69.1" rx="5" ry="2.4" fill="#FFF8E8" stroke="#2F3A2E" stroke-width="0.7"/><ellipse cx="135.3" cy="-36.1" rx="5" ry="2.4" fill="#FFF8E8" stroke="#2F3A2E" stroke-width="0.7"/><circle cx="131.5" cy="3.3" r="2.6" fill="#B5502E" stroke="#2F3A2E" stroke-width="0.8"/><circle cx="142.9" cy="9.9" r="2.6" fill="#4E6B5A" stroke="#2F3A2E" stroke-width="0.8"/><polygon points="36.2,-60.5 47.6,-53.9 47.6,-67.1 36.2,-73.7" fill="#FFFFFF" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/></g>
+<g class="iso-layer" data-layer="4"><polygon points="0.0,5.5 222.9,134.2 57.2,229.9 -165.8,101.2" fill="#9AA08F"/><polygon points="0.0,6.8 25.9,21.8 0.0,36.7 -25.9,21.8" fill="#2F3A2E"/><polygon points="-28.6,23.3 -2.7,38.3 -28.6,53.2 -54.5,38.3" fill="#A9482A"/><polygon points="-57.2,39.8 -31.2,54.8 -57.2,69.7 -83.1,54.8" fill="#B04C2C"/><polygon points="-85.7,56.3 -59.8,71.3 -85.7,86.2 -111.6,71.3" fill="#B5502E"/><polygon points="-114.3,72.8 -88.4,87.8 -114.3,102.7 -140.2,87.8" fill="#B5502E"/><polygon points="-142.9,89.3 -117.0,104.3 -137.2,115.9 -163.1,101.0" fill="#2F3A2E"/><polygon points="28.6,23.3 54.5,38.3 28.6,53.2 2.7,38.3" fill="#BE5C38"/><polygon points="0.0,39.8 25.9,54.8 0.0,69.7 -25.9,54.8" fill="#B5502E"/><polygon points="-28.6,56.3 -2.7,71.3 -28.6,86.2 -54.5,71.3" fill="#A9482A"/><polygon points="-57.2,72.8 -31.2,87.8 -57.2,102.7 -83.1,87.8" fill="#B5502E"/><polygon points="-85.7,89.3 -59.8,104.3 -85.7,119.2 -111.6,104.3" fill="#2F3A2E"/><polygon points="-114.3,105.8 -88.4,120.8 -108.6,132.4 -134.5,117.5" fill="#B04C2C"/><polygon points="57.2,39.8 83.1,54.8 57.2,69.7 31.2,54.8" fill="#B04C2C"/><polygon points="28.6,56.3 54.5,71.3 28.6,86.2 2.7,71.3" fill="#B5502E"/><polygon points="0.0,72.8 25.9,87.8 0.0,102.7 -25.9,87.8" fill="#A9482A"/><polygon points="-28.6,89.3 -2.7,104.3 -28.6,119.2 -54.5,104.3" fill="#2F3A2E"/><polygon points="-57.2,105.8 -31.2,120.8 -57.2,135.7 -83.1,120.8" fill="#B04C2C"/><polygon points="-85.7,122.3 -59.8,137.3 -80.0,148.9 -105.9,134.0" fill="#B5502E"/><polygon points="85.7,56.3 111.6,71.3 85.7,86.2 59.8,71.3" fill="#B5502E"/><polygon points="57.2,72.8 83.1,87.8 57.2,102.7 31.2,87.8" fill="#A9482A"/><polygon points="28.6,89.3 54.5,104.3 28.6,119.2 2.7,104.3" fill="#2F3A2E"/><polygon points="0.0,105.8 25.9,120.8 0.0,135.7 -25.9,120.8" fill="#B04C2C"/><polygon points="-28.6,122.3 -2.7,137.3 -28.6,152.2 -54.5,137.3" fill="#B5502E"/><polygon points="-57.2,138.8 -31.2,153.8 -51.4,165.4 -77.4,150.5" fill="#A9482A"/><polygon points="114.3,72.8 140.2,87.8 114.3,102.7 88.4,87.8" fill="#B5502E"/><polygon points="85.7,89.3 111.6,104.3 85.7,119.2 59.8,104.3" fill="#2F3A2E"/><polygon points="57.2,105.8 83.1,120.8 57.2,135.7 31.2,120.8" fill="#BE5C38"/><polygon points="28.6,122.3 54.5,137.3 28.6,152.2 2.7,137.3" fill="#B04C2C"/><polygon points="0.0,138.8 25.9,153.8 0.0,168.7 -25.9,153.8" fill="#A9482A"/><polygon points="-28.6,155.3 -2.7,170.3 -22.9,181.9 -48.8,167.0" fill="#B5502E"/><polygon points="142.9,89.3 168.8,104.3 142.9,119.2 117.0,104.3" fill="#2F3A2E"/><polygon points="114.3,105.8 140.2,120.8 114.3,135.7 88.4,120.8" fill="#A9482A"/><polygon points="85.7,122.3 111.6,137.3 85.7,152.2 59.8,137.3" fill="#B5502E"/><polygon points="57.2,138.8 83.1,153.8 57.2,168.7 31.2,153.8" fill="#A9482A"/><polygon points="28.6,155.3 54.5,170.3 28.6,185.2 2.7,170.3" fill="#BE5C38"/><polygon points="0.0,171.8 25.9,186.8 5.7,198.4 -20.2,183.5" fill="#2F3A2E"/><polygon points="171.5,105.8 197.4,120.8 171.5,135.7 145.6,120.8" fill="#B5502E"/><polygon points="142.9,122.3 168.8,137.3 142.9,152.2 117.0,137.3" fill="#B5502E"/><polygon points="114.3,138.8 140.2,153.8 114.3,168.7 88.4,153.8" fill="#A9482A"/><polygon points="85.7,155.3 111.6,170.3 85.7,185.2 59.8,170.3" fill="#B04C2C"/><polygon points="57.2,171.8 83.1,186.8 57.2,201.7 31.2,186.8" fill="#2F3A2E"/><polygon points="28.6,188.3 54.5,203.3 34.3,214.9 8.4,200.0" fill="#BE5C38"/><polygon points="200.1,122.3 220.2,134.0 194.3,148.9 174.1,137.3" fill="#B04C2C"/><polygon points="171.5,138.8 191.7,150.5 165.8,165.4 145.6,153.8" fill="#B04C2C"/><polygon points="142.9,155.3 163.1,167.0 137.2,181.9 117.0,170.3" fill="#BE5C38"/><polygon points="114.3,171.8 134.5,183.5 108.6,198.4 88.4,186.8" fill="#2F3A2E"/><polygon points="85.7,188.3 105.9,200.0 80.0,214.9 59.8,203.3" fill="#A9482A"/><polygon points="57.2,204.8 77.4,216.5 57.2,228.1 37.0,216.5" fill="#A9482A"/><polygon points="-0.4,-63.6 203.5,54.1 203.5,5.7 -0.4,-112.0" fill="#9AA08F"/><polygon points="0.4,-64.0 11.8,-57.4 11.8,-67.3 0.4,-73.9" fill="#4E6B5A"/><polygon points="13.7,-56.3 25.1,-49.7 25.1,-59.6 13.7,-66.2" fill="#3E4D3C"/><polygon points="27.1,-48.6 38.5,-42.0 38.5,-51.9 27.1,-58.5" fill="#3E4D3C"/><polygon points="40.4,-40.9 51.8,-34.3 51.8,-44.2 40.4,-50.8" fill="#4E6B5A"/><polygon points="53.7,-33.2 65.2,-26.6 65.2,-36.5 53.7,-43.1" fill="#3E4D3C"/><polygon points="67.1,-25.5 78.5,-18.9 78.5,-28.8 67.1,-35.4" fill="#3E4D3C"/><polygon points="80.4,-17.8 91.8,-11.2 91.8,-21.1 80.4,-27.7" fill="#4E6B5A"/><polygon points="93.7,-10.1 105.2,-3.5 105.2,-13.4 93.7,-20.0" fill="#3E4D3C"/><polygon points="107.1,-2.4 118.5,4.2 118.5,-5.7 107.1,-12.3" fill="#3E4D3C"/><polygon points="120.4,5.3 131.8,11.9 131.8,2.0 120.4,-4.6" fill="#4E6B5A"/><polygon points="133.7,13.0 145.2,19.6 145.2,9.7 133.7,3.1" fill="#3E4D3C"/><polygon points="147.1,20.7 158.5,27.3 158.5,17.4 147.1,10.8" fill="#3E4D3C"/><polygon points="160.4,28.4 171.9,35.0 171.9,25.1 160.4,18.5" fill="#4E6B5A"/><polygon points="173.8,36.1 185.2,42.7 185.2,32.8 173.8,26.2" fill="#3E4D3C"/><polygon points="187.1,43.8 198.5,50.4 198.5,40.5 187.1,33.9" fill="#3E4D3C"/><polygon points="200.4,51.5 202.3,52.6 202.3,42.7 200.4,41.6" fill="#4E6B5A"/><polygon points="0.4,-76.1 5.1,-73.4 5.1,-83.3 0.4,-86.0" fill="#3E4D3C"/><polygon points="7.0,-72.3 18.5,-65.7 18.5,-75.6 7.0,-82.2" fill="#3E4D3C"/><polygon points="20.4,-64.6 31.8,-58.0 31.8,-67.9 20.4,-74.5" fill="#4E6B5A"/><polygon points="33.7,-56.9 45.2,-50.3 45.2,-60.2 33.7,-66.8" fill="#3E4D3C"/><polygon points="47.1,-49.2 58.5,-42.6 58.5,-52.5 47.1,-59.1" fill="#3E4D3C"/><polygon points="60.4,-41.5 71.8,-34.9 71.8,-44.8 60.4,-51.4" fill="#4E6B5A"/><polygon points="73.7,-33.8 85.2,-27.2 85.2,-37.1 73.7,-43.7" fill="#3E4D3C"/><polygon points="87.1,-26.1 98.5,-19.5 98.5,-29.4 87.1,-36.0" fill="#3E4D3C"/><polygon points="100.4,-18.4 111.8,-11.8 111.8,-21.7 100.4,-28.3" fill="#4E6B5A"/><polygon points="113.7,-10.7 125.2,-4.1 125.2,-14.0 113.7,-20.6" fill="#3E4D3C"/><polygon points="127.1,-3.0 138.5,3.6 138.5,-6.3 127.1,-12.9" fill="#3E4D3C"/><polygon points="140.4,4.7 151.8,11.3 151.8,1.4 140.4,-5.2" fill="#4E6B5A"/><polygon points="153.8,12.4 165.2,19.0 165.2,9.1 153.8,2.5" fill="#3E4D3C"/><polygon points="167.1,20.1 178.5,26.7 178.5,16.8 167.1,10.2" fill="#3E4D3C"/><polygon points="180.4,27.8 191.9,34.4 191.9,24.5 180.4,17.9" fill="#4E6B5A"/><polygon points="193.8,35.5 202.3,40.5 202.3,30.6 193.8,25.6" fill="#3E4D3C"/><polygon points="0.4,-88.2 11.8,-81.6 11.8,-91.5 0.4,-98.1" fill="#3E4D3C"/><polygon points="13.7,-80.5 25.1,-73.9 25.1,-83.8 13.7,-90.4" fill="#4E6B5A"/><polygon points="27.1,-72.8 38.5,-66.2 38.5,-76.1 27.1,-82.7" fill="#3E4D3C"/><polygon points="40.4,-65.1 51.8,-58.5 51.8,-68.4 40.4,-75.0" fill="#3E4D3C"/><polygon points="53.7,-57.4 65.2,-50.8 65.2,-60.7 53.7,-67.3" fill="#4E6B5A"/><polygon points="67.1,-49.7 78.5,-43.1 78.5,-53.0 67.1,-59.6" fill="#3E4D3C"/><polygon points="80.4,-42.0 91.8,-35.4 91.8,-45.3 80.4,-51.9" fill="#3E4D3C"/><polygon points="93.7,-34.3 105.2,-27.7 105.2,-37.6 93.7,-44.2" fill="#4E6B5A"/><polygon points="107.1,-26.6 118.5,-20.0 118.5,-29.9 107.1,-36.5" fill="#3E4D3C"/><polygon points="120.4,-18.9 131.8,-12.3 131.8,-22.2 120.4,-28.8" fill="#3E4D3C"/><polygon points="133.7,-11.2 145.2,-4.6 145.2,-14.5 133.7,-21.1" fill="#4E6B5A"/><polygon points="147.1,-3.5 158.5,3.1 158.5,-6.8 147.1,-13.4" fill="#3E4D3C"/><polygon points="160.4,4.2 171.9,10.8 171.9,0.9 160.4,-5.7" fill="#3E4D3C"/><polygon points="173.8,11.9 185.2,18.5 185.2,8.6 173.8,2.0" fill="#4E6B5A"/><polygon points="187.1,19.6 198.5,26.2 198.5,16.3 187.1,9.7" fill="#3E4D3C"/><polygon points="200.4,27.3 202.3,28.4 202.3,18.5 200.4,17.4" fill="#3E4D3C"/><polygon points="0.4,-100.3 5.1,-97.6 5.1,-107.5 0.4,-110.2" fill="#4E6B5A"/><polygon points="7.0,-96.5 18.5,-89.9 18.5,-99.8 7.0,-106.4" fill="#3E4D3C"/><polygon points="20.4,-88.8 31.8,-82.2 31.8,-92.1 20.4,-98.7" fill="#3E4D3C"/><polygon points="33.7,-81.1 45.2,-74.5 45.2,-84.4 33.7,-91.0" fill="#4E6B5A"/><polygon points="47.1,-73.4 58.5,-66.8 58.5,-76.7 47.1,-83.3" fill="#3E4D3C"/><polygon points="60.4,-65.7 71.8,-59.1 71.8,-69.0 60.4,-75.6" fill="#3E4D3C"/><polygon points="73.7,-58.0 85.2,-51.4 85.2,-61.3 73.7,-67.9" fill="#4E6B5A"/><polygon points="87.1,-50.3 98.5,-43.7 98.5,-53.6 87.1,-60.2" fill="#3E4D3C"/><polygon points="100.4,-42.6 111.8,-36.0 111.8,-45.9 100.4,-52.5" fill="#3E4D3C"/><polygon points="113.7,-34.9 125.2,-28.3 125.2,-38.2 113.7,-44.8" fill="#4E6B5A"/><polygon points="127.1,-27.2 138.5,-20.6 138.5,-30.5 127.1,-37.1" fill="#3E4D3C"/><polygon points="140.4,-19.5 151.8,-12.9 151.8,-22.8 140.4,-29.4" fill="#3E4D3C"/><polygon points="153.8,-11.8 165.2,-5.2 165.2,-15.1 153.8,-21.7" fill="#4E6B5A"/><polygon points="167.1,-4.1 178.5,2.5 178.5,-7.4 167.1,-14.0" fill="#3E4D3C"/><polygon points="180.4,3.6 191.9,10.2 191.9,0.3 180.4,-6.3" fill="#3E4D3C"/><polygon points="193.8,11.3 202.3,16.3 202.3,6.4 193.8,1.4" fill="#4E6B5A"/><polygon points="0.4,6.8 -165.4,102.5 -165.4,94.8 0.4,-0.9" fill="#9A3F21" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/></g>
+<g class="iso-layer" data-layer="5"><polygon points="-40.0,24.2 154.3,136.4 154.3,73.7 -40.0,-38.5" fill="#F7F3EC" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="194.3,113.3 154.3,136.4 154.3,73.7 194.3,50.6" fill="#E3DCCD" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="0.0,-61.6 194.3,50.6 154.3,73.7 -40.0,-38.5" fill="#EFE9DE" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="-40.0,29.7 154.3,141.9 154.3,136.4 -40.0,24.2" fill="#2F3A2E" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><polygon points="194.3,118.8 154.3,141.9 154.3,136.4 194.3,113.3" fill="#2F3A2E" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><polygon points="0.0,1.1 194.3,113.3 154.3,136.4 -40.0,24.2" fill="#2F3A2E" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><polygon points="-38.5,23.3 -2.5,44.1 -2.5,-15.1 -38.5,-35.9" fill="#F7F3EC" stroke="#BDB4A2" stroke-width="0.8" stroke-linejoin="round"/><line x1="-28.6" y1="-23.1" x2="-12.4" y2="-13.8" stroke="#2F3A2E" stroke-width="2.2" stroke-linecap="round"/><polygon points="0.6,45.9 36.6,66.7 36.6,7.5 0.6,-13.3" fill="#F7F3EC" stroke="#BDB4A2" stroke-width="0.8" stroke-linejoin="round"/><line x1="10.5" y1="-0.6" x2="26.7" y2="8.8" stroke="#2F3A2E" stroke-width="2.2" stroke-linecap="round"/><polygon points="39.6,68.4 75.6,89.2 75.6,30.0 39.6,9.2" fill="#F7F3EC" stroke="#BDB4A2" stroke-width="0.8" stroke-linejoin="round"/><line x1="49.5" y1="22.0" x2="65.7" y2="31.3" stroke="#2F3A2E" stroke-width="2.2" stroke-linecap="round"/><polygon points="78.7,91.0 114.7,111.8 114.7,52.6 78.7,31.8" fill="#F7F3EC" stroke="#BDB4A2" stroke-width="0.8" stroke-linejoin="round"/><line x1="88.6" y1="44.5" x2="104.8" y2="53.9" stroke="#2F3A2E" stroke-width="2.2" stroke-linecap="round"/><polygon points="117.7,113.5 153.8,134.3 153.8,75.1 117.7,54.3" fill="#F7F3EC" stroke="#BDB4A2" stroke-width="0.8" stroke-linejoin="round"/><line x1="127.7" y1="67.1" x2="143.8" y2="76.4" stroke="#2F3A2E" stroke-width="2.2" stroke-linecap="round"/><polygon points="-44.8,-35.8 153.4,78.6 153.4,70.9 -44.8,-43.5" fill="#3F3122" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="198.1,52.8 153.4,78.6 153.4,70.9 198.1,45.1" fill="#4A3A29" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="0.0,-69.3 198.1,45.1 153.4,70.9 -44.8,-43.5" fill="#5A4632" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="111.5,4.7 145.8,24.5 119.1,39.9 84.8,20.1" fill="#C9CDBF" stroke="#2F3A2E" stroke-width="0.9" stroke-linejoin="round"/><polygon points="112.4,8.6 139.1,24.0 118.1,36.1 91.5,20.7" fill="#9AA08F" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><path d="M134.3,11.5 L134.3,-11.5 L118.1,-2.2 L118.1,4.4" fill="none" stroke="#7D8272" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><polygon points="0.0,-31.9 30.5,-14.3 30.5,-17.2 0.0,-34.8" fill="#A86B44" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><polygon points="49.5,-25.3 30.5,-14.3 30.5,-17.2 49.5,-28.2" fill="#9A6040" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><polygon points="19.1,-45.8 49.5,-28.2 30.5,-17.2 0.0,-34.8" fill="#C98A5E" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><ellipse cx="64.8" cy="-11.7" rx="13" ry="6" fill="#B5502E" stroke="#2F3A2E" stroke-width="0.8"/><ellipse cx="64.8" cy="-13.7" rx="10" ry="4" fill="#9A3F21"/><polygon points="-22.9,-99.0 70.5,-45.1 70.5,-80.3 -22.9,-134.2" fill="#F7F3EC" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="93.4,-58.3 70.5,-45.1 70.5,-80.3 93.4,-93.5" fill="#E3DCCD" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="0.0,-147.4 93.4,-93.5 70.5,-80.3 -22.9,-134.2" fill="#EFE9DE" stroke="#2F3A2E" stroke-width="1" stroke-linejoin="round"/><polygon points="-21.3,-99.9 22.3,-74.7 22.3,-106.4 -21.3,-131.6" fill="#F7F3EC" stroke="#BDB4A2" stroke-width="0.8" stroke-linejoin="round"/><line x1="-7.6" y1="-97.9" x2="7.6" y2="-89.1" stroke="#2F3A2E" stroke-width="2.2" stroke-linecap="round"/><polygon points="25.3,-72.9 69.0,-47.7 69.0,-79.4 25.3,-104.6" fill="#F7F3EC" stroke="#BDB4A2" stroke-width="0.8" stroke-linejoin="round"/><line x1="39.1" y1="-71.0" x2="54.3" y2="-62.2" stroke="#2F3A2E" stroke-width="2.2" stroke-linecap="round"/><polygon points="141.0,-15.4 184.8,9.9 184.8,5.5 141.0,-19.8" fill="#3F3122" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/><polygon points="202.0,0.0 184.8,9.9 184.8,5.5 202.0,-4.4" fill="#4A3A29" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/><polygon points="158.1,-29.7 202.0,-4.4 184.8,5.5 141.0,-19.8" fill="#5A4632" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/><polygon points="156.2,-15.4 167.7,-8.8 167.7,-22.0 156.2,-28.6" fill="#9A3F21" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><polygon points="177.2,-14.3 167.7,-8.8 167.7,-22.0 177.2,-27.5" fill="#8A381D" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><polygon points="165.8,-34.1 177.2,-27.5 167.7,-22.0 156.2,-28.6" fill="#B5502E" stroke="#2F3A2E" stroke-width="0.6" stroke-linejoin="round"/><path d="M166.7,-28.1 q-10,-14 -4,-24 M166.7,-28.1 q8,-12 12,-20 M166.7,-28.1 q-2,-10 4,-28" fill="none" stroke="#4E6B5A" stroke-width="2.6" stroke-linecap="round"/><polygon points="-3.8,116.6 11.4,125.4 11.4,77.0 -3.8,68.2" fill="#9A3F21" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/><polygon points="26.7,116.6 11.4,125.4 11.4,77.0 26.7,68.2" fill="#8A381D" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/><polygon points="11.4,59.4 26.7,68.2 11.4,77.0 -3.8,68.2" fill="#B5502E" stroke="#2F3A2E" stroke-width="0.8" stroke-linejoin="round"/></g>
+        </svg>
+      </div>
+      <div class="ctrl">
+        <ol class="steps" id="steps">
+          <li><button type="button" data-step="1"><span class="n">1</span><span class="t">Izolace a zateplení</span></button></li>
+          <li><button type="button" data-step="2"><span class="n">2</span><span class="t">Rozvody vody</span></button></li>
+          <li><button type="button" data-step="3"><span class="n">3</span><span class="t">Sádrokarton</span></button></li>
+          <li><button type="button" data-step="4"><span class="n">4</span><span class="t">Obklady a dlažby</span></button></li>
+          <li><button type="button" data-step="5"><span class="n">5</span><span class="t">Nábytek a deska</span></button></li>
+        </ol>
+        <label class="sr" for="layer-range" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Fáze rekonstrukce</label>
+        <input class="range" id="layer-range" type="range" min="1" max="5" step="1" value="5">
+        <div class="panel" aria-live="polite">
+          <h3 id="p-title">Nábytek na míru a pracovní deska</h3>
+          <p id="p-text">Na závěr přijde kuchyňská linka na míru a nová pracovní deska. Když Vám stačí jen vyměnit starou desku, udělá i to.</p>
+          <p class="svc" id="p-svc"><b>Služby v této fázi:</b> nábytek na míru, výměna pracovních desek</p>
+        </div>
+        <div class="ctrl-row">
+          <button class="mini" type="button" id="prev">← Vrstva zpět</button>
+          <button class="mini" type="button" id="next">Další vrstva →</button>
+          <button class="mini" type="button" id="play">Přehrát od holé zdi</button>
+        </div>
+        <div class="crew">
+          <p>Koho byste jinak sháněli zvlášť:</p>
+          <div class="chips" id="chips">
+            <span class="chip" data-c="1">izolatér</span><span class="chip" data-c="2">instalatér</span><span class="chip" data-c="3">sádrokartonář</span><span class="chip" data-c="4">obkladač</span><span class="chip" data-c="5">truhlář</span>
+          </div>
+          <p class="one">Tady stačí jedno číslo: <a href="tel:+420702546124">702 546 124</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" class="sec" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Služby a ceník</p>
+      <h2 id="h-sluzby">Co pro Vás udělám</h2>
+      <p>Od výměny jedné pracovní desky po kompletní rekonstrukci domu. Ceny nejsou zveřejněné; každou zakázku nacením po domluvě.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M6 20 22 8l16 12v16H6z"/><path d="M17 36V26h10v10"/><path d="M30 12V6h4v9"/></svg>
+        <h3>Kompletní rekonstrukce</h3>
+        <p>Byt nebo rodinný dům od bourání po úklid, s jedním člověkem, který ví, co na sebe navazuje.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="6" width="32" height="32"/><path d="M6 17h32M6 27h32M17 6v32M27 6v32"/><rect x="17" y="17" width="10" height="10" fill="currentColor" opacity=".25"/></svg>
+        <h3>Obklady a dlažby</h3>
+        <p>Koupelny, kuchyňské zástěny, chodby i předsíně, včetně přípravy podkladu a spárování.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 30 22 20l18 10-18 10z"/><path d="M10 26.6l18 10M16 23.3l18 10"/><path d="M4 30v3l18 10 18-10v-3"/></svg>
+        <h3>Podlahové krytiny</h3>
+        <p>Pokládka nových podlah v pokojích i chodbách, aby přechody mezi místnostmi seděly.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="16" width="32" height="22"/><path d="M4 16h36M22 16v22M16 22h3M25 22h3"/><rect x="8" y="5" width="16" height="7"/></svg>
+        <h3>Nábytek na míru</h3>
+        <p>Kuchyňské linky, vestavěné skříně a police přesně do Vašich rozměrů a výklenků.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 18h36v5H4z"/><path d="M8 23v15M36 23v15"/><path d="M26 18v-6a4 4 0 0 1 8 0" stroke-linecap="round"/><path d="M12 12l4-4 4 4" stroke-linecap="round"/></svg>
+        <h3>Výměna pracovních desek</h3>
+        <p>Novou desku Vám osadím i do stávající linky, včetně výřezu pro dřez a varnou desku.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="5" width="28" height="34"/><path d="M22 5v34"/><circle cx="13" cy="11" r="1" fill="currentColor"/><circle cx="13" cy="22" r="1" fill="currentColor"/><circle cx="13" cy="33" r="1" fill="currentColor"/><circle cx="31" cy="11" r="1" fill="currentColor"/><circle cx="31" cy="22" r="1" fill="currentColor"/><circle cx="31" cy="33" r="1" fill="currentColor"/></svg>
+        <h3>Sádrokarton</h3>
+        <p>Příčky, předstěny, podhledy a zakrytí rozvodů, aby byly stěny rovné a čisté.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 14h14a6 6 0 0 1 6 6v6"/><path d="M6 20h12a2 2 0 0 1 2 2v4"/><path d="M14 10v14"/><path d="M23 30c0 3-3 4-3 6a3 3 0 0 0 6 0c0-2-3-3-3-6z"/></svg>
+        <h3>Instalatérské práce</h3>
+        <p>Nové rozvody vody a odpadů, přípojky pro baterie, myčku a pračku.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h36M4 34h36"/><path d="M4 22l4-6 4 12 4-12 4 12 4-12 4 12 4-12 4 12 4-6"/></svg>
+        <h3>Izolace</h3>
+        <p>Izolace proti vlhkosti, teplu i hluku tam, kde to stavba potřebuje.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+      <article class="svc-item">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M10 38V18L24 8l14 10v20z"/><path d="M6 38V16L24 3l18 13v22"/><rect x="20" y="26" width="8" height="12"/></svg>
+        <h3>Zateplení</h3>
+        <p>Zateplení stěn a konstrukcí, aby dům méně ztrácel teplo a nevznikala plíseň.</p>
+        <span class="price">cena na dotaz</span>
+      </article>
+    </div>
+    <p class="svc-note"><span class="tag">ukázkový text</span> Popisy služeb a ceník jsou ukázkové. Názvy služeb odpovídají nabídce firmy, ceny firma nezveřejňuje.</p>
+  </div>
+</section>
+
+<section class="sec why" aria-labelledby="h-proc">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Proč Milan Mieres</p>
+      <h2 id="h-proc">Proč zavolat právě sem</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card big">
+        <span class="k">3.</span>
+        <h3>místo v žebříčku Rekonstrukce a přestavby v Karviné</h3>
+        <p>Podle hodnocení zákazníků na Firmy.cz. Hodnocení jsou z let 2025–2026 a majitel na ně osobně odpovídá.</p>
+        <p><a href="https://www.firmy.cz/detail/12756535-stavebni-prace-milan-mieres-karvina-raj.html" target="_blank" rel="noopener">Přečíst hodnocení na Firmy.cz ↗</a></p>
+      </div>
+      <div class="why-card">
+        <span class="k">9</span>
+        <h3>druhů prací pod jednou střechou</h3>
+        <p>Od izolací přes instalatérské práce až po nábytek na míru. Žádné přehazování odpovědnosti mezi firmami.</p>
+      </div>
+      <div class="why-card">
+        <span class="k">Ráj</span>
+        <h3>Sídlo na Horově ulici v Karviné-Ráji</h3>
+        <p>Pracuje v Karviné a okolí, takže na prohlídku i na dodělávky to nemá daleko.</p>
+      </div>
+      <div class="why-card wide">
+        <span class="k">Út do 17</span>
+        <h3>Ve všední dny k zastižení od 8 hodin</h3>
+        <p>Pondělí a středa až pátek 8–15, v úterý až do 17. Zavolejte a domluvte si termín prohlídky.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="realizace" class="sec" aria-labelledby="h-real">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Realizace</p>
+      <h2 id="h-real">Před a po</h2>
+      <p>Místo pro fotky z hotových zakázek. Nejvíc zákazníky přesvědčí stejná místnost vyfocená ze stejného místa před a po rekonstrukci.</p>
+    </div>
+    <div class="gal">
+      <figure class="pair">
+        <div class="ph"><span class="when">Před</span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><circle cx="16" cy="17.5" r="5.5"/><path d="M11 8l2-3h6l2 3"/></svg>Sem přijde Vaše fotka</div>
+        <div class="ph after"><span class="when">Po</span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><circle cx="16" cy="17.5" r="5.5"/><path d="M11 8l2-3h6l2 3"/></svg>Sem přijde Vaše fotka</div>
+        <figcaption><b>Koupelna</b> · obklady, dlažba, instalace</figcaption>
+      </figure>
+      <figure class="pair">
+        <div class="ph"><span class="when">Před</span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><circle cx="16" cy="17.5" r="5.5"/><path d="M11 8l2-3h6l2 3"/></svg>Sem přijde Vaše fotka</div>
+        <div class="ph after"><span class="when">Po</span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><circle cx="16" cy="17.5" r="5.5"/><path d="M11 8l2-3h6l2 3"/></svg>Sem přijde Vaše fotka</div>
+        <figcaption><b>Kuchyň</b> · linka na míru, pracovní deska</figcaption>
+      </figure>
+      <figure class="pair">
+        <div class="ph"><span class="when">Před</span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><circle cx="16" cy="17.5" r="5.5"/><path d="M11 8l2-3h6l2 3"/></svg>Sem přijde Vaše fotka</div>
+        <div class="ph after"><span class="when">Po</span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="2"/><circle cx="16" cy="17.5" r="5.5"/><path d="M11 8l2-3h6l2 3"/></svg>Sem přijde Vaše fotka</div>
+        <figcaption><b>Obývací pokoj</b> · sádrokarton, podlaha</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" aria-labelledby="h-jak">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Jak probíhá zakázka <span class="tag">ukázkový text</span></p>
+      <h2 id="h-jak">Od telefonu po předání ve třech krocích</h2>
+    </div>
+    <ol class="proc">
+      <li><span class="n">1</span><h3>Zavoláte nebo pošlete poptávku</h3><p>Popíšete, co chcete změnit, a ideálně pošlete pár fotek. Domluvíme termín prohlídky.</p></li>
+      <li><span class="n">2</span><h3>Prohlídka a nabídka</h3><p>Na místě zaměřím rozměry, probereme materiály a pořadí prací. Pak dostanete cenovou nabídku.</p></li>
+      <li><span class="n">3</span><h3>Práce a předání</h3><p>Postupně udělám jednotlivé vrstvy od izolací po nábytek. Na konci spolu projdeme hotový byt.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="kde" class="sec" aria-labelledby="h-kde">
+  <div class="wrap area">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Kde pracujeme</p>
+        <h2 id="h-kde">Karviná a okolí</h2>
+        <p>Firma sídlí na Horově ulici v Karviné-Ráji a pracuje pro majitele bytů a rodinných domů v Karviné a okolí.</p>
+      </div>
+      <div class="towns">
+        <span class="home">Karviná</span><span>Havířov</span><span>Orlová</span><span>Petřvald</span><span>Stonava</span><span>Český Těšín</span>
+      </div>
+      <p style="margin-top:12px;font-size:14px;color:var(--muted)"><span class="tag">ukázkový text</span> Seznam konkrétních obcí je ukázkový, firma ho doplní.</p>
+    </div>
+    <svg class="area-svg" viewBox="0 0 480 340" role="img" aria-label="Schéma: Karviná-Ráj uprostřed, kolem okolní obce">
+      <rect width="480" height="340" fill="#F6F1E8"/>
+      <g stroke="#E2D9CA" stroke-width="1">
+        <path d="M0 40h480M0 80h480M0 120h480M0 160h480M0 200h480M0 240h480M0 280h480M0 320h480M40 0v340M80 0v340M120 0v340M160 0v340M200 0v340M240 0v340M280 0v340M320 0v340M360 0v340M400 0v340M440 0v340"/>
+      </g>
+      <circle cx="240" cy="170" r="150" fill="none" stroke="#9AA08F" stroke-width="1.5" stroke-dasharray="4 6"/>
+      <circle cx="240" cy="170" r="90" fill="#B5502E" fill-opacity=".08" stroke="#B5502E" stroke-width="1.5"/>
+      <rect x="226" y="156" width="28" height="28" fill="#B5502E" transform="rotate(45 240 170)"/>
+      <circle cx="240" cy="170" r="4" fill="#FFFFFF"/>
+      <text x="240" y="216" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="22" fill="#2F3A2E">Karviná-Ráj</text>
+      <text x="240" y="234" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="#4F5A4D">HOROVA 675/3</text>
+      <text x="240" y="44" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="#4F5A4D">A OKOLÍ</text>
+    </svg>
+  </div>
+</section>
+
+<section class="sec why" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Časté otázky</p>
+      <h2 id="h-faq">Na co se lidé ptají před rekonstrukcí</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Musím k rekonstrukci shánět instalatéra a obkladače zvlášť?</summary>
+        <div class="a"><p>Nemusíte. V nabídce jsou instalatérské práce, sádrokarton, obklady a dlažby, podlahy i nábytek na míru, takže celou rekonstrukci domluvíte s jedním člověkem.</p></div>
+      </details>
+      <details>
+        <summary>Kolik bude rekonstrukce stát?</summary>
+        <div class="a"><p>Ceny nejsou zveřejněné, protože každý byt je jiný. Cenu dostanete po domluvě, nejlépe po prohlídce na místě.</p><p><span class="tag">ukázkový text</span></p></div>
+      </details>
+      <details>
+        <summary>Vezmete i menší zakázku, třeba jen výměnu pracovní desky?</summary>
+        <div class="a"><p>Výměna pracovních desek je samostatná služba v nabídce. Zavolejte a popište, jakou desku a linku máte.</p></div>
+      </details>
+      <details>
+        <summary>Jak dlouho trvá rekonstrukce koupelny?</summary>
+        <div class="a"><p>Záleží na rozsahu, hlavně na tom, jestli se mění rozvody a jak velká je plocha obkladů. Odhad termínu dostanete spolu s nabídkou.</p><p><span class="tag">ukázkový text</span></p></div>
+      </details>
+      <details>
+        <summary>Jezdíte i mimo Karvinou?</summary>
+        <div class="a"><p>Firma pracuje v Karviné a okolí. Pokud bydlíte v sousední obci, zavolejte a domluvte se.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="poptavka" class="sec dark" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="contact">
+      <div class="cinfo">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="h-kontakt" style="font-size:clamp(2rem,4.4vw,3.6rem)">Poptejte rekonstrukci</h2>
+        <a class="big-tel" href="tel:+420702546124">702 546 124</a>
+        <span class="status" id="status"><i></i><span id="status-t">Otevírací doba</span></span>
+        <dl>
+          <div><dt>E-mail</dt><dd><a href="mailto:milanmieres1@seznam.cz">milanmieres1@seznam.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Horova 675/3, Karviná-Ráj · <a href="https://mapy.cz/zakladni?q=Horova%20675%2F3%2C%20Karvin%C3%A1-R%C3%A1j" target="_blank" rel="noopener">Mapy.cz ↗</a></dd></div>
+          <div><dt>IČO</dt><dd>88380602</dd></div>
+        </dl>
+        <table class="hours" aria-label="Otevírací doba">
+          <tbody>
+            <tr data-d="1"><td>Pondělí</td><td>8:00–15:00</td></tr>
+            <tr data-d="2"><td>Úterý</td><td>8:00–17:00</td></tr>
+            <tr data-d="3"><td>Středa</td><td>8:00–15:00</td></tr>
+            <tr data-d="4"><td>Čtvrtek</td><td>8:00–15:00</td></tr>
+            <tr data-d="5"><td>Pátek</td><td>8:00–15:00</td></tr>
+            <tr data-d="6"><td>Sobota</td><td>zavřeno</td></tr>
+            <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <form class="f" id="form" novalidate>
+        <h3 class="full">Poptávka rekonstrukce</h3>
+        <label>Jméno<input id="f-name" name="name" autocomplete="name" required></label>
+        <label>Telefon<input id="f-tel" name="tel" type="tel" autocomplete="tel" required></label>
+        <label>E-mail<input id="f-mail" name="email" type="email" autocomplete="email"></label>
+        <label>Obec<input id="f-town" name="town" value="Karviná"></label>
+        <label class="full">Co potřebujete
+          <select id="f-type" name="type">
+            <option>Kompletní rekonstrukce bytu</option>
+            <option>Kompletní rekonstrukce domu</option>
+            <option>Koupelna – obklady, dlažby, instalace</option>
+            <option>Kuchyň – nábytek na míru, pracovní deska</option>
+            <option>Výměna pracovní desky</option>
+            <option>Sádrokarton</option>
+            <option>Podlahy</option>
+            <option>Izolace a zateplení</option>
+            <option>Jiné</option>
+          </select>
+        </label>
+        <label class="full">Popis<textarea id="f-msg" name="msg" placeholder="Např. panelový byt 3+1, chceme novou koupelnu a kuchyňskou linku."></textarea></label>
+        <div class="full" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <button class="btn btn-primary" type="submit">Odeslat poptávku</button>
+          <span class="note">Nebo rovnou volejte 702 546 124.</span>
+        </div>
+        <div class="full ok" id="ok" hidden>Toto je jen návrh webu, formulář zatím nic neodesílá. Poptávku můžete probrat rovnou po telefonu: <a href="tel:+420702546124">702 546 124</a>.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Stavební práce Milan Mieres · Horova 675/3, Karviná-Ráj · IČO 88380602</span>
+    <span>Nezávazný návrh webu. Údaje převzaty z veřejného profilu na <a href="https://www.firmy.cz/detail/12756535-stavebni-prace-milan-mieres-karvina-raj.html" target="_blank" rel="noopener">Firmy.cz</a>.</span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Rychlý kontakt">
+  <a class="c" href="tel:+420702546124"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Zavolat</a>
+  <a class="p" href="#poptavka">Poptat rekonstrukci</a>
+</nav>
+
+
+<script>
+(function(){
+  var STEPS = [
+    null,
+    {t:"Izolace a zateplení", p:"Začíná se tím, co pak nebude vidět. Stěny a podlaha dostanou izolaci a zateplení, aby místnost držela teplo a nevlhla.", s:"izolace, zateplení"},
+    {t:"Rozvody vody", p:"Nové rozvody teplé a studené vody a odpad přesně tam, kde bude dřez. Instalatéra zvlášť shánět nemusíte.", s:"instalatérské práce"},
+    {t:"Sádrokarton", p:"Rozvody zmizí pod sádrokartonem. Stěny jsou rovné a nad linkou vznikne podhled pro světla.", s:"sádrokarton"},
+    {t:"Obklady, dlažby a podlahy", p:"Na podlahu přijde dlažba, za linku obklad a sokl podél stěn.", s:"obklady a dlažby, podlahové krytiny"},
+    {t:"Nábytek na míru a pracovní deska", p:"Na závěr přijde kuchyňská linka na míru a nová pracovní deska. Když Vám stačí jen vyměnit starou desku, udělá i to.", s:"nábytek na míru, výměna pracovních desek"}
+  ];
+  var layers = document.querySelectorAll('.iso-layer');
+  var btns = document.querySelectorAll('#steps button');
+  var range = document.getElementById('layer-range');
+  var chips = document.querySelectorAll('#chips .chip');
+  var prev = document.getElementById('prev'), next = document.getElementById('next'), play = document.getElementById('play');
+  var cur = 5, timer = null;
+  function set(n, keepTimer){
+    n = Math.max(1, Math.min(5, n)); cur = n;
+    if(!keepTimer && timer){clearInterval(timer); timer = null;}
+    layers.forEach(function(g){ g.classList.toggle('off', +g.getAttribute('data-layer') > n); });
+    btns.forEach(function(b){
+      var s = +b.getAttribute('data-step');
+      b.classList.toggle('done', s < n);
+      if(s === n) b.setAttribute('aria-current','step'); else b.removeAttribute('aria-current');
+    });
+    chips.forEach(function(c){ c.classList.toggle('on', +c.getAttribute('data-c') <= n); });
+    range.value = n;
+    document.getElementById('p-title').textContent = STEPS[n].t;
+    document.getElementById('p-text').textContent = STEPS[n].p;
+    document.getElementById('p-svc').innerHTML = '<b>Služby v této fázi:</b> ' + STEPS[n].s;
+    document.getElementById('stage-lbl').textContent = 'Krok ' + n + ' z 5';
+    prev.disabled = n === 1; next.disabled = n === 5;
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ set(+b.getAttribute('data-step')); }); });
+  range.addEventListener('input', function(){ set(+range.value); });
+  prev.addEventListener('click', function(){ set(cur - 1); });
+  next.addEventListener('click', function(){ set(cur + 1); });
+  play.addEventListener('click', function(){
+    if(timer) clearInterval(timer);
+    set(1, true);
+    timer = setInterval(function(){ if(cur >= 5){ clearInterval(timer); timer = null; return; } set(cur + 1, true); }, 1300);
+  });
+  set(5);
+
+  // otevírací doba (ověřená) – pražský čas
+  var H = {1:[8,15],2:[8,17],3:[8,15],4:[8,15],5:[8,15]};
+  function prague(){
+    var parts = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var o = {}; parts.forEach(function(p){ o[p.type] = p.value; });
+    var map = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {d:map[o.weekday], m:(+o.hour % 24) * 60 + (+o.minute)};
+  }
+  try{
+    var t = prague(), h = H[t.d], st = document.getElementById('status'), tx = document.getElementById('status-t');
+    var row = document.querySelector('.hours tr[data-d="' + t.d + '"]'); if(row) row.classList.add('today');
+    if(h && t.m >= h[0]*60 && t.m < h[1]*60){ st.classList.add('open'); tx.textContent = 'Teď otevřeno, do ' + h[1] + ':00'; }
+    else { tx.textContent = 'Teď zavřeno · zavolejte v otevírací době'; }
+  }catch(e){}
+
+  var form = document.getElementById('form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = document.getElementById('ok'); ok.hidden = false;
+    ok.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+})();
+</script>
+</body>
+</html>

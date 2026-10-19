@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Psycholožka Jana Lehnerová</title>
+<meta name="description" content="Psycholožka PhDr. Ing. Jana Lehnerová, Petřvald: dopravně psychologická vyšetření řidičů v Ostravě, psychologické poradenství i online, koučink a kariérní diagnostika. Ceny na webu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"PhDr. Ing. Jana Lehnerová – Psychologické poradenství",
+  "description":"Dopravně psychologická vyšetření řidičů, psychologické poradenství (i online), koučink, kariérní poradenství a diagnostika, lektorská činnost.",
+  "telephone":"+420606960596",
+  "email":"psycholog.petrvald@gmail.com",
+  "address":{"@type":"PostalAddress","streetAddress":"Březinská 222","postalCode":"735 41","addressLocality":"Petřvald","addressCountry":"CZ"},
+  "founder":{"@type":"Person","name":"PhDr. Ing. Jana Lehnerová","jobTitle":"Psycholožka, akreditovaná dopravní psycholožka, koučka"},
+  "sameAs":["https://www.linkedin.com/in/jana-lehnerova/","https://www.firmy.cz/detail/12873616-phdr-ing-jana-lehnerova-psychologicke-poradenstvi-petrvald.html"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --paper:#F3F3EE;
+  --paper-2:#E9EAE3;
+  --white:#FCFCFA;
+  --ink:#1E2836;
+  --slate:#34475F;
+  --slate-2:#4A5F7A;
+  --muted:#4F5A68;
+  --lav:#C9C3E0;
+  --lav-soft:#E7E4F2;
+  --lav-ink:#4E4878;
+  --sage:#A7BCA6;
+  --sage-soft:#DDE6DA;
+  --sage-ink:#3E5A45;
+  --line:#CDD0C6;
+  --focus:#4E4878;
+  --radius:14px;
+  --gutter:clamp(16px,4vw,40px);
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Literata",Georgia,serif;font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:"Literata",Georgia,serif;font-weight:500;line-height:1.15;text-wrap:balance;margin:0;color:var(--ink);letter-spacing:-.01em}
+p{margin:0 0 1em}
+a{color:var(--slate)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.ui{font-family:"Lexend",system-ui,sans-serif}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.demo{display:inline-block;font-family:"Lexend",system-ui,sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.02em;text-transform:uppercase;background:#FFF3C9;color:#5A4500;border:1px solid #D9C27A;border-radius:4px;padding:1px 6px;vertical-align:middle;margin-left:4px;white-space:nowrap}
+
+/* banner */
+.proto{background:var(--ink);color:#F3F3EE;font-family:"Lexend",system-ui,sans-serif;font-size:.8rem;text-align:center;padding:8px 16px;line-height:1.35}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(243,243,238,.94);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
+.brand svg{flex:none}
+.brand b{font-family:"Literata",serif;font-weight:600;font-size:1.02rem;display:block;line-height:1.1}
+.brand small{font-family:"Lexend",sans-serif;font-size:.72rem;color:var(--muted);display:block;line-height:1.2}
+.nav{display:none;gap:22px;font-family:"Lexend",sans-serif;font-size:.88rem}
+.nav a{text-decoration:none;color:var(--slate)}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.toptel{font-family:"Lexend",sans-serif;font-weight:500;font-size:.88rem;text-decoration:none;color:var(--white);background:var(--slate);border-radius:999px;padding:9px 14px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.toptel:hover{background:var(--ink)}
+
+/* buttons */
+.btn{font-family:"Lexend",system-ui,sans-serif;font-weight:500;font-size:1rem;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border-radius:999px;padding:14px 22px;border:2px solid transparent;cursor:pointer;line-height:1.2;transition:background .2s,color .2s,border-color .2s}
+.btn-primary{background:var(--slate);color:var(--white)}
+.btn-primary:hover{background:var(--ink)}
+.btn-ghost{background:transparent;color:var(--slate);border-color:var(--slate)}
+.btn-ghost:hover{background:var(--slate);color:var(--white)}
+
+/* hero */
+.hero{padding:22px 0 40px;position:relative}
+.hero-grid{display:grid;gap:26px}
+.eyebrow{font-family:"Lexend",sans-serif;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--sage-ink);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--sage-ink);display:inline-block}
+.hero h1{font-size:clamp(1.85rem,6.6vw,3.5rem);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--lav-ink);font-weight:400}
+.lead{font-size:1.05rem;color:var(--muted);max-width:36em;margin-bottom:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.hero-meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:"Lexend",sans-serif;font-size:.84rem;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
+.portrait{position:relative;justify-self:center;width:min(100%,430px)}
+.arch{aspect-ratio:4/5;border-radius:999px 999px 18px 18px;background:linear-gradient(170deg,var(--lav-soft) 0%,var(--lav) 58%,#B4AED3 100%);position:relative;overflow:hidden;border:1px solid #BDB6D8}
+.arch svg.pattern{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.arch .ph{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:calc(100% - 44px);background:rgba(252,252,250,.92);border-radius:12px;padding:12px 14px;text-align:center;font-family:"Lexend",sans-serif;font-size:.82rem;color:var(--ink);line-height:1.4}
+.arch .ph b{display:block;font-weight:600;font-size:.9rem;color:var(--lav-ink)}
+.arch-ring{position:absolute;top:-14px;left:-14px;right:14px;bottom:14px;border:1.5px solid var(--sage);border-radius:999px 999px 18px 18px;pointer-events:none}
+.name-tag{position:absolute;left:-6px;top:22%;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:0 8px 24px rgba(30,40,54,.08);font-family:"Lexend",sans-serif;font-size:.78rem;color:var(--muted);line-height:1.35;max-width:210px}
+.name-tag b{display:block;font-family:"Literata",serif;font-size:1rem;color:var(--ink);font-weight:600}
+
+/* dates strip */
+.dates{background:var(--sage-soft);border-top:1px solid #C5D3C1;border-bottom:1px solid #C5D3C1}
+.dates .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding-top:14px;padding-bottom:14px;font-family:"Lexend",sans-serif;font-size:.88rem;color:var(--sage-ink)}
+.dates strong{font-weight:600;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--white);border:1px solid #B7C7B3;border-radius:999px;padding:5px 12px;color:var(--ink);white-space:nowrap}
+.dates a{color:var(--sage-ink);font-weight:500}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:64px 0}
+.sec-head{max-width:720px;margin-bottom:30px}
+.kicker{font-family:"Lexend",sans-serif;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--lav-ink);margin-bottom:8px;display:block}
+.sec h2{font-size:clamp(1.6rem,4.6vw,2.5rem);margin-bottom:12px}
+.sec-head p{color:var(--muted)}
+
+/* rozcestník */
+.switch{display:grid;gap:12px}
+.tile{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:14px;background:var(--white);border:1.5px solid var(--line);border-radius:var(--radius);padding:16px 16px;transition:border-color .2s,background .2s,transform .2s;font-family:"Literata",serif}
+.tile:hover{border-color:var(--slate-2)}
+.tile:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.tile .ico{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--lav-soft);color:var(--lav-ink)}
+.tile:nth-child(2) .ico{background:var(--sage-soft);color:var(--sage-ink)}
+.tile:nth-child(3) .ico{background:#DFE5EE;color:var(--slate)}
+.tile .t{font-size:1.12rem;font-weight:600;color:var(--ink);line-height:1.25;display:block}
+.tile .s{font-family:"Lexend",sans-serif;font-size:.8rem;color:var(--muted);display:block;margin-top:3px}
+.tile .arr{font-family:"Lexend",sans-serif;color:var(--slate);transition:transform .25s}
+.tile[aria-selected="true"]{background:var(--slate);border-color:var(--slate)}
+.tile[aria-selected="true"] .t{color:var(--white)}
+.tile[aria-selected="true"] .s{color:#DCE2EA}
+.tile[aria-selected="true"] .arr{color:var(--white);transform:rotate(90deg)}
+.panel{background:var(--white);border:1.5px solid var(--slate);border-radius:var(--radius);padding:24px 20px;margin-top:14px;position:relative}
+.panel[hidden]{display:none}
+.panel h3{font-size:1.45rem;margin-bottom:10px}
+.panel .intro{color:var(--muted)}
+.panel-grid{display:grid;gap:18px;margin-top:16px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fact{background:var(--paper);border-radius:10px;padding:12px 14px}
+.fact .k{font-family:"Lexend",sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block}
+.fact .v{font-size:1.15rem;font-weight:600;color:var(--ink);display:block;line-height:1.3;margin-top:2px}
+.fact.price{background:var(--lav-soft)}
+.fact.price .v{color:var(--lav-ink)}
+.fact.wide{grid-column:1/-1}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.checks li{position:relative;padding-left:28px}
+.checks li::before{content:"";position:absolute;left:2px;top:.45em;width:14px;height:8px;border-left:2px solid var(--sage-ink);border-bottom:2px solid var(--sage-ink);transform:rotate(-45deg)}
+.panel .small{font-family:"Lexend",sans-serif;font-size:.82rem;color:var(--muted);margin-top:12px}
+.panel .cta-row{margin-top:18px}
+
+/* teams / firmy */
+.firms{margin-top:22px;display:grid;gap:16px;background:var(--paper-2);border-radius:var(--radius);padding:22px 20px}
+.firms h3{font-size:1.25rem}
+.topics{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.topics li{font-family:"Lexend",sans-serif;font-size:.82rem;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink)}
+
+/* steps */
+.steps-wrap{background:var(--slate);color:#EEF1F5}
+.steps-wrap h2,.steps-wrap h3{color:var(--white)}
+.steps-wrap .kicker{color:#D5D0EA}
+.steps-wrap .sec-head p{color:#D6DDE6}
+.tracks{display:grid;gap:34px}
+.track h3{font-size:1.25rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.track h3 .pill{font-family:"Lexend",sans-serif;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.06em;background:var(--lav);color:var(--ink);border-radius:999px;padding:3px 10px}
+.track.drv h3 .pill{background:var(--sage)}
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:0}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 22px 56px}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:38px;height:38px;border-radius:50%;border:1.5px solid #9FB0C4;display:grid;place-items:center;font-family:"Lexend",sans-serif;font-weight:500;color:var(--white);background:var(--slate)}
+ol.steps li:not(:last-child)::after{content:"";position:absolute;left:19px;top:40px;bottom:2px;width:1.5px;background:#6E819A}
+ol.steps b{display:block;font-size:1.08rem;color:var(--white);margin-bottom:2px}
+ol.steps span{color:#D6DDE6}
+.bring{background:rgba(255,255,255,.07);border:1px solid #6E819A;border-radius:var(--radius);padding:18px 18px;margin-top:6px}
+.bring h4{font-family:"Lexend",sans-serif;font-weight:500;font-size:.9rem;margin:0 0 10px;color:var(--white);text-transform:uppercase;letter-spacing:.05em}
+.bring ul{margin:0;padding-left:20px;color:#E4E9EF}
+.bring li{margin-bottom:4px}
+.bring p{margin:10px 0 0;font-size:.92rem;color:#D6DDE6}
+
+/* pricing */
+.price-groups{display:grid;gap:22px}
+.pg{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:8px 20px 14px}
+.pg h3{font-family:"Lexend",sans-serif;font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--lav-ink);padding:14px 0 6px;border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:14px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .n{font-weight:600;color:var(--ink)}
+.row .p{font-family:"Lexend",sans-serif;font-weight:500;color:var(--slate);white-space:nowrap;text-align:right}
+.row .d{grid-column:1/-1;font-size:.94rem;color:var(--muted)}
+.note{font-family:"Lexend",sans-serif;font-size:.82rem;color:var(--muted);margin-top:16px}
+
+/* trust */
+.trust-grid{display:grid;gap:22px;align-items:start}
+.about p{color:var(--ink)}
+.quote{font-style:italic;color:var(--lav-ink);border-left:3px solid var(--lav);padding-left:14px;margin:18px 0}
+.creds{display:grid;gap:12px}
+.cred{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.cred .big{font-family:"Literata",serif;font-size:1.9rem;font-weight:600;color:var(--slate);line-height:1;min-width:64px}
+.cred .big small{font-size:.9rem;font-weight:400;color:var(--muted)}
+.cred p{margin:0;font-size:.95rem;color:var(--muted)}
+.cred b{color:var(--ink);display:block;font-size:1rem}
+.cred a{font-family:"Lexend",sans-serif;font-size:.82rem}
+.cred.rating{background:var(--sage-soft);border-color:#C5D3C1}
+.cred.rating .big{color:var(--sage-ink)}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:860px}
+details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+summary{cursor:pointer;list-style:none;padding:16px 30px 16px 0;font-weight:600;font-size:1.05rem;position:relative;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:4px;top:50%;width:10px;height:10px;border-right:2px solid var(--slate);border-bottom:2px solid var(--slate);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details .a{padding:0 0 16px;color:var(--muted)}
+details .a ul{margin:6px 0 10px;padding-left:20px}
+
+/* contact */
+.contact{background:var(--lav-soft)}
+.contact-grid{display:grid;gap:24px}
+.cbox{background:var(--white);border-radius:var(--radius);padding:22px 20px;border:1px solid #D3CEE6}
+.cline{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.cline:last-of-type{border-bottom:0}
+.cline svg{color:var(--lav-ink);margin-top:3px}
+.cline .k{font-family:"Lexend",sans-serif;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block}
+.cline a,.cline .v{font-size:1.05rem;color:var(--ink);font-weight:500;word-break:break-word}
+.cline small{display:block;color:var(--muted);font-size:.9rem}
+.cline .maplink{font-family:"Lexend",sans-serif;font-size:.84rem;font-weight:500;color:var(--slate)}
+.hours{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:4px}
+.hours td{padding:3px 0;color:var(--ink)}
+.hours td:last-child{text-align:right;font-family:"Lexend",sans-serif;font-size:.88rem}
+form{display:grid;gap:12px}
+label{font-family:"Lexend",sans-serif;font-size:.84rem;color:var(--ink);display:grid;gap:5px}
+input,textarea,select{font:inherit;font-size:1rem;padding:12px 12px;border:1.5px solid #A9AFA4;border-radius:10px;background:var(--white);color:var(--ink);width:100%}
+textarea{min-height:110px;resize:vertical}
+.form-ok{font-family:"Lexend",sans-serif;font-size:.9rem;background:var(--sage-soft);color:var(--sage-ink);border-radius:10px;padding:12px 14px}
+.form-ok[hidden]{display:none}
+.fineprint{font-family:"Lexend",sans-serif;font-size:.76rem;color:var(--muted)}
+
+footer{background:var(--ink);color:#D5DBE3;padding:34px 0 110px;font-family:"Lexend",sans-serif;font-size:.86rem}
+footer .wrap{display:grid;gap:14px}
+footer a{color:#FFFFFF}
+footer b{font-family:"Literata",serif;font-size:1.05rem;color:#fff;font-weight:600}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--white);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(30,40,54,.08);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:1.4fr 1fr;gap:8px}
+.callbar .btn{padding:12px 10px;font-size:.92rem}
+
+@media (min-width:760px){
+  .switch{grid-template-columns:repeat(3,1fr)}
+  .tile{grid-template-columns:1fr;align-content:start;padding:22px 20px 20px;gap:12px;min-height:190px}
+  .tile .arr{justify-self:start}
+  .tile[aria-selected="true"] .arr{transform:rotate(90deg)}
+  .panel{padding:30px 32px}
+  .panel-grid{grid-template-columns:1.1fr 1fr;gap:30px}
+  .tracks{grid-template-columns:1fr 1fr;gap:48px}
+  .price-groups{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1.15fr 1fr;gap:44px}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .firms{grid-template-columns:1fr 1.3fr;align-items:center;padding:26px 28px}
+  footer{padding-bottom:40px}
+  footer .wrap{grid-template-columns:1.2fr 1fr 1fr}
+}
+@media (min-width:980px){
+  .nav{display:flex}
+  .hero{padding:56px 0 72px}
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}
+  .sec{padding:88px 0}
+  .callbar{display:none}
+  .name-tag{left:-40px}
+}
+@media (max-width:979px){
+  .portrait{width:min(78%,360px)}
+  .name-tag{left:-14px;top:auto;bottom:34%}
+}
+@media (max-width:420px){
+  .brand small{display:none}
+  .toptel .lbl{display:none}
+  .hero-meta{font-size:.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+
+
+<div class="proto" role="note">Nezávazný návrh webu – není to oficiální stránka firmy PhDr. Ing. Jana Lehnerová – Psychologické poradenství</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Jana Lehnerová – úvod">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M5 31V15a12 12 0 0 1 24 0v16" fill="none" stroke="#34475F" stroke-width="2.2"/><path d="M11 31V16a6 6 0 0 1 12 0v15" fill="none" stroke="#A7BCA6" stroke-width="2.2"/></svg>
+      <span><b>Jana Lehnerová</b><small>psycholožka · Petřvald a Ostrava</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#rozcestnik">S čím pomáhám</a>
+      <a href="#prubeh">Jak to probíhá</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#o-mne">O mně</a>
+      <a href="#dotazy">Dotazy</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="toptel" href="tel:+420606960596" aria-label="Zavolat 606 960 596">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span>606 960 596</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Psycholožka · Petřvald</p>
+        <h1>Klidné místo pro <em>důležitá rozhodnutí</em> – i pro psychotesty řidičů</h1>
+        <p class="lead">Dopravně psychologická vyšetření řidičů, psychologické poradenství (i online), koučink a kariérní diagnostika. Ceny znáte předem, termín domluvíme telefonem nebo e-mailem.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#kontakt">Domluvit první konzultaci</a>
+          <a class="btn btn-ghost" href="#rozcestnik" data-open="ridic">Objednat vyšetření řidiče</a>
+        </div>
+        <div class="hero-meta">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#3E5A45" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>Sídlo Březinská 222, Petřvald</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#3E5A45" stroke-width="2"/><path d="M8 12.5l3 3 5-6" fill="none" stroke="#3E5A45" stroke-width="2"/></svg>Akreditovaná dopravní psycholožka od 2014</span>
+        </div>
+      </div>
+      <div class="portrait">
+        <div class="arch-ring" aria-hidden="true"></div>
+        <div class="arch" role="img" aria-label="Místo pro portrétní fotografii">
+          <svg class="pattern" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">
+            <g fill="none" stroke="#FCFCFA" stroke-width="1.2">
+              <path d="M200 500V250"/>
+              <path d="M40 500V230a160 160 0 0 1 320 0v270"/>
+              <path d="M80 500V240a120 120 0 0 1 240 0v260"/>
+              <path d="M120 500V250a80 80 0 0 1 160 0v250"/>
+              <path d="M160 500V260a40 40 0 0 1 80 0v240"/>
+            </g>
+            <circle cx="200" cy="170" r="54" fill="#FCFCFA" opacity=".45"/>
+            <path d="M96 420c10-70 56-118 104-118s94 48 104 118" fill="#FCFCFA" opacity=".45"/>
+          </svg>
+          <div class="ph"><b>Sem přijde Vaše fotka</b>Portrét do pasu, přirozené světlo, klidný úsměv – nejlépe v pracovně</div>
+        </div>
+        <div class="name-tag"><b>PhDr. Ing. Jana Lehnerová</b>psycholožka, koučka, akreditovaná dopravní psycholožka</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="dates" aria-label="Nejbližší termíny vyšetření řidičů">
+    <div class="wrap">
+      <span><strong>Vypsané termíny vyšetření řidičů</strong> (Ostrava-Vítkovice, začátek v 7:30)</span>
+      <span class="chips"><span class="chip">so 24. 10. 2026</span><span class="chip">so 7. 11. 2026</span><span class="chip">pá 20. 11. 2026</span></span>
+      <a href="tel:+420606960596">Rezervovat telefonem</a>
+    </div>
+  </div>
+
+  <section class="sec" id="rozcestnik">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">S čím přicházíte</span>
+        <h2>Vyberte, co právě řešíte. Hned uvidíte průběh, délku i cenu.</h2>
+        <p>Každý přichází s jinou potřebou – někdo s posudkem pro práci, jiný na rozcestí v životě nebo v kariéře.</p>
+      </div>
+
+      <div class="switch" role="tablist" aria-label="S čím přicházíte">
+        <button class="tile" role="tab" id="tab-ridic" aria-controls="p-ridic" aria-selected="true">
+          <span class="ico"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="14" r="3" fill="currentColor"/><path d="M3.5 12.5h7.5M17 12.5h7.5M14 17v7.5" stroke="currentColor" stroke-width="2"/></svg></span>
+          <span><span class="t">Řidič potřebuje posudek</span><span class="s">Psychotesty, vrácení řidičáku, pohovor</span></span>
+          <span class="arr" aria-hidden="true">→</span>
+        </button>
+        <button class="tile" role="tab" id="tab-opora" aria-controls="p-opora" aria-selected="false" tabindex="-1">
+          <span class="ico"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 26V15M14 15L6 7M14 15l8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="5" r="2.4" fill="currentColor"/><circle cx="22" cy="5" r="2.4" fill="currentColor"/></svg></span>
+          <span><span class="t">Hledám oporu nebo směr</span><span class="s">Psychologické poradenství, i online</span></span>
+          <span class="arr" aria-hidden="true">→</span>
+        </button>
+        <button class="tile" role="tab" id="tab-kariera" aria-controls="p-kariera" aria-selected="false" tabindex="-1">
+          <span class="ico"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 23h5v-6h5v-5h5V6h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M19 3h5v5" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <span><span class="t">Kariéra a koučink</span><span class="s">Diagnostika, kariérní poradenství, kouč</span></span>
+          <span class="arr" aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-ridic" aria-labelledby="tab-ridic">
+        <h3>Dopravně psychologické vyšetření řidičů</h3>
+        <p class="intro">Komplexní vyšetření pro profesionální řidiče všech skupin (C, C+E, C1+E, D, D1, D+E, D1+E, T, ADR), řidiče žádající o vrácení řidičského oprávnění, taxikáře, obsluhu stavebních strojů nad 7,5 t, učitele autoškol, řidiče s modrým majákem, seniory i uchazeče o profesní způsobilost.</p>
+        <div class="panel-grid">
+          <div class="facts">
+            <div class="fact"><span class="k">Délka</span><span class="v">3–4 h testů + rozhovor</span></div>
+            <div class="fact price"><span class="k">Cena</span><span class="v">2 800–3 500 Kč</span></div>
+            <div class="fact wide"><span class="k">Kde</span><span class="v">Akreditované pracoviště, SŠ technická a dopravní, Moravská 2/964, Ostrava-Vítkovice</span></div>
+            <div class="fact"><span class="k">Dopravně psych. pohovor</span><span class="v">30 + 210 min</span></div>
+            <div class="fact price"><span class="k">Cena pohovoru</span><span class="v">4 000 Kč</span></div>
+          </div>
+          <div>
+            <ul class="checks">
+              <li>Úvodní rozhovor, testy výkonu (pozornost, reakce, paměť, rozhodování) a osobnosti, část na počítači.</li>
+              <li>Následný rozhovor, zhodnocení výsledků a zpráva se závěrem z vyšetření.</li>
+              <li>Víkendové a sváteční termíny po domluvě. Přihlaste se alespoň 1–3 dny předem.</li>
+              <li>Sleva při testování více řidičů z jedné firmy po dohodě.</li>
+            </ul>
+            <p class="small">Přesnou cenu podle náročnosti vyšetření domluvíme při objednání. Nevypsaný termín +2 000 Kč, řidiči cizinci s tlumočníkem za příplatek.</p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+420606960596">Objednat vyšetření: 606 960 596</a>
+          <a class="btn btn-ghost" href="#prubeh">Co si vzít s sebou</a>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-opora" aria-labelledby="tab-opora" hidden>
+        <h3>Psychologické poradenství (také online)</h3>
+        <p class="intro">Pro dospělé i děti – témata pracovní, školní, rodinná i osobní. Pracuji s metodami kognitivně-behaviorální terapie (KBT) a s hypnózou. Prostor, kde si můžete věci v klidu srovnat a najít další krok.</p>
+        <div class="panel-grid">
+          <div class="facts">
+            <div class="fact"><span class="k">Délka</span><span class="v">55 minut</span></div>
+            <div class="fact price"><span class="k">Osobně (úvodní setkání)</span><span class="v">1 200 Kč</span></div>
+            <div class="fact"><span class="k">Další setkání</span><span class="v">online</span></div>
+            <div class="fact price"><span class="k">Online konzultace</span><span class="v">1 000 Kč</span></div>
+          </div>
+          <div>
+            <ul class="checks">
+              <li>První setkání osobně pro vzájemné seznámení, další pokračujeme online.</li>
+              <li>Online konzultace se platí předem na účet po domluvě termínu.</li>
+              <li>Termín lze z vážných důvodů předem přesunout.</li>
+              <li>Na přání zpráva nebo potvrzení o poskytnuté péči (500 Kč).</li>
+            </ul>
+            <p class="small">Poradenství hradí klient přímo. Při nedostavení se bez omluvy na online schůzku se účtuje storno 100 % ceny.</p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#kontakt">Domluvit první konzultaci</a>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-kariera" aria-labelledby="tab-kariera" hidden>
+        <h3>Kariérní poradenství, diagnostika a koučink</h3>
+        <p class="intro">Když stojíte na pracovní nebo životní křižovatce: koučovací rozhovor pro rozvoj a reflexi, nebo diagnostika osobnosti se zprávou a doporučením pro další kariérní cestu.</p>
+        <div class="panel-grid">
+          <div class="facts">
+            <div class="fact"><span class="k">Koučink</span><span class="v">60 minut</span></div>
+            <div class="fact price"><span class="k">Osobně / online</span><span class="v">1 500 / 1 300 Kč</span></div>
+            <div class="fact"><span class="k">Kariérní diagnostika</span><span class="v">zpráva + rozhovor</span></div>
+            <div class="fact price"><span class="k">Cena diagnostiky</span><span class="v">3 500 Kč</span></div>
+            <div class="fact wide"><span class="k">Poradenská hodina (kariéra, psychologie práce)</span><span class="v">1 000 Kč</span></div>
+          </div>
+          <div>
+            <ul class="checks">
+              <li>První telefonát a domluva dalšího koučování zdarma.</li>
+              <li>Při domluvě na více sezeních je hodina koučinku levnější.</li>
+              <li>Diagnostika osobnosti končí písemnou zprávou, rozhovorem a doporučeními.</li>
+              <li>Pro firmy: kariérní růst, outplacement, assessment centra – dle kontraktu.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#kontakt">Domluvit první konzultaci</a>
+        </div>
+      </div>
+
+      <div class="firms">
+        <div>
+          <span class="kicker">Pro firmy, školy a organizace</span>
+          <h3>Workshopy a semináře na míru, i online</h3>
+          <p class="note" style="margin-top:8px">Psychologie, andragogika, řízení lidských zdrojů, time management a školní prostředí. Cena podle počtu účastníků a délky.</p>
+        </div>
+        <ul class="topics" aria-label="Témata workshopů">
+          <li>Wellbeing a zátěžové situace (4–6 h)</li>
+          <li>Prokrastinace a vlastní cíle (1–2 h)</li>
+          <li>Psychosomatické obtíže a prevence (1–2 h)</li>
+          <li>Psychohygiena spánku (1–2 h)</li>
+          <li>Toxické vztahy na pracovišti (2 h)</li>
+          <li>Produktivita v remote prostředí (1–2 h)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec steps-wrap" id="prubeh">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Jak to probíhá</span>
+        <h2>Tři kroky, žádná překvapení</h2>
+        <p>Vše začíná krátkým telefonátem nebo e-mailem. Dozvíte se cenu, termín a co budete potřebovat.</p>
+      </div>
+      <div class="tracks">
+        <div class="track">
+          <h3><span class="pill">Konzultace a koučink</span></h3>
+          <ol class="steps">
+            <li><b>Ozvete se</b><span>Zavoláte nebo napíšete, v krátkosti popíšete, s čím přicházíte. U koučinku je první rozhovor zdarma.</span></li>
+            <li><b>První setkání</b><span>55 minut osobně – seznámíme se, pojmenujeme téma a domluvíme, jak budeme pokračovat.</span></li>
+            <li><b>Pokračujeme online</b><span>Další setkání probíhají online v termínech, které Vám vyhovují. Platba předem na účet.</span></li>
+          </ol>
+        </div>
+        <div class="track drv">
+          <h3><span class="pill">Vyšetření řidičů</span></h3>
+          <ol class="steps">
+            <li><b>Objednáte se</b><span>Telefonem nebo e-mailem alespoň 1–3 dny předem. Dohodneme termín a cenu.</span></li>
+            <li><b>Testování v Ostravě</b><span>Úvodní rozhovor, 3–4 hodiny testů (část na počítači) a následný rozhovor.</span></li>
+            <li><b>Zpráva se závěrem</b><span>Zhodnotíme výsledky a dostanete zprávu se závěrem z vyšetření.</span></li>
+          </ol>
+          <div class="bring">
+            <h4>Co si vzít s sebou</h4>
+            <ul>
+              <li>platný občanský průkaz</li>
+              <li>výpis z evidenční karty řidiče ne starší 30 dní + kopii (nejde o výpis bodů z CzechPointu)</li>
+              <li>posudek o zdravotní způsobilosti ne starší 30 dní + kopii</li>
+              <li>platný řidičský průkaz (kromě žádostí o vrácení)</li>
+              <li>brýle či jiné pomůcky, pokud je používáte</li>
+              <li>jméno a adresu lékaře, který posuzuje Vaši zdravotní způsobilost</li>
+            </ul>
+            <p>Přijďte odpočatí, bez vlivu alkoholu a jiných návykových látek.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="cenik">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Ceník</span>
+        <h2>Ceny na jednom místě</h2>
+        <p>Platí podle aktuálního ceníku. Přesnou cenu vyšetření řidičů potvrdíme při objednání.</p>
+      </div>
+      <div class="price-groups">
+        <div class="pg">
+          <h3>Řidiči</h3>
+          <div class="row"><span class="n">Dopravně psychologické vyšetření</span><span class="p">2 800–3 500 Kč</span><span class="d">Podle náročnosti vyšetření, ve vypsaném termínu.</span></div>
+          <div class="row"><span class="n">Nevypsaný termín</span><span class="p">+2 000 Kč</span><span class="d">Příplatek za termín mimo vypsané dny.</span></div>
+          <div class="row"><span class="n">Dopravně psychologický pohovor</span><span class="p">4 000 Kč</span><span class="d">30 min individuálně + 210 min ve skupině, s potvrzením o absolvování.</span></div>
+          <div class="row"><span class="n">Více řidičů z jedné firmy</span><span class="p">sleva dohodou</span><span class="d">Řidiči zaslaní úřadem práce podle cenového předpisu ministerstva.</span></div>
+        </div>
+        <div class="pg">
+          <h3>Poradenství, koučink, kariéra</h3>
+          <div class="row"><span class="n">Psychologické poradenství osobně</span><span class="p">1 200 Kč</span><span class="d">55 minut, úvodní setkání.</span></div>
+          <div class="row"><span class="n">Psychologické poradenství online</span><span class="p">1 000 Kč</span><span class="d">55 minut, platba předem.</span></div>
+          <div class="row"><span class="n">Koučink osobně / online</span><span class="p">1 500 / 1 300 Kč</span><span class="d">Za hodinu, při více sezeních levněji.</span></div>
+          <div class="row"><span class="n">Kariérní diagnostika osobnosti</span><span class="p">3 500 Kč</span><span class="d">Zpráva, rozhovor a doporučení pro další cestu.</span></div>
+          <div class="row"><span class="n">Kariérní poradenská hodina</span><span class="p">1 000 Kč</span><span class="d">Kariérové poradenství a psychologie práce.</span></div>
+          <div class="row"><span class="n">Zpráva / potvrzení o péči</span><span class="p">500 Kč</span><span class="d">Na žádost klienta.</span></div>
+          <div class="row"><span class="n">Workshopy a lektorování</span><span class="p">dle dohody</span><span class="d">Podle počtu účastníků a délky.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="o-mne" style="background:var(--paper-2)">
+    <div class="wrap trust-grid">
+      <div class="about">
+        <span class="kicker">O mně</span>
+        <h2>Psycholožka s praxí ve školách, firmách i v dopravní psychologii</h2>
+        <p style="margin-top:14px">Jsem psycholožka, koučka a andragožka. Hlavním úvazkem pracuji jako školní psycholožka na gymnáziu v Karviné a v Ostravě, externě učím na Pedagogické fakultě Ostravské univerzity. Čtyři roky jsem působila jako firemní psycholožka a koučka.</p>
+        <p>Psychologii jsem vystudovala na Univerzitě Palackého v Olomouci, dále andragogiku a management a marketing na Slezské univerzitě. Od roku 2024 procházím pětiletým psychoterapeutickým výcvikem v KBT.</p>
+        <p class="quote">„Schopný je ten, kdo věří, že je schopný.“ – Vergilius</p>
+      </div>
+      <div class="creds">
+        <div class="cred rating">
+          <span class="big">4,7<small>/5</small></span>
+          <p><b>16 hodnocení na Firmy.cz</b>Průměr hodnocení klientů, stav k 12. 10. 2026.<br><a href="https://www.firmy.cz/detail/12873616-phdr-ing-jana-lehnerova-psychologicke-poradenstvi-petrvald.html#hodnoceni" rel="noopener" target="_blank">Přečíst hodnocení na Firmy.cz</a></p>
+        </div>
+        <div class="cred">
+          <span class="big">2014</span>
+          <p><b>Akreditovaná dopravní psycholožka</b>Akreditace Ministerstva dopravy, od téhož roku vlastní poradenská praxe.<br><a href="https://www.mdcr.cz/Dokumenty/Silnicni-doprava/Udelene-akreditace-k-provadeni-dopravne-psychologi" rel="noopener" target="_blank">Seznam akreditací na mdcr.cz</a></p>
+        </div>
+        <div class="cred">
+          <span class="big" style="font-size:1.35rem">ADP</span>
+          <p><b>Členka Asociace dopravních psychologů ČR</b>Spolupracovala na aktualizaci metodiky dopravně psychologického vyšetření řidičů.</p>
+        </div>
+        <div class="cred">
+          <span class="big" style="font-size:1.35rem">PhDr.</span>
+          <p><b>Psychologie, UP Olomouc</b>Postgraduálně dopravní psychologie a zdravotnická psychologie, akreditovaná koučka (2013).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="dotazy">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Časté otázky</span>
+        <h2>Na co se lidé ptají nejčastěji</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Kdo musí na dopravně psychologické vyšetření?</summary>
+          <div class="a">
+            <p>Povinnost stanoví zákon č. 361/2000 Sb., o provozu na pozemních komunikacích (§ 87a). Týká se zejména:</p>
+            <ul>
+              <li>řidičů skupin C1+E, C a C+E, pokud řídí nákladní či speciální automobil nebo soupravu nad 7 500 kg,</li>
+              <li>řidičů skupin D1+E, D a D+E,</li>
+              <li>řidičů, kteří žádají o vrácení řidičského oprávnění (např. po 12 bodech nebo po zákazu řízení).</li>
+            </ul>
+            <p>Profesionální řidiči se vyšetření podrobují před zahájením činnosti, pak v půl roce před 50. narozeninami a dále každých 5 let. Zákon se mění – pokud si nejste jistí, zda se Vás povinnost týká, zavolejte a ověříme to spolu.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Kdo potřebuje dopravně psychologický pohovor?</summary>
+          <div class="a"><p>Začínající řidič, kterému byl uložen zákaz řízení za přestupek hodnocený 6 body nebo za trestný čin, a řidičský průkaz získal méně než dva roky před tímto zákazem. Pohovor trvá 30 minut individuálně a 210 minut ve skupině. S sebou potřebujete občanský průkaz (pas) a výpis z evidenční karty řidiče ne starší 30 dní.</p></div>
+        </details>
+        <details>
+          <summary>Jaké testy mě na vyšetření čekají?</summary>
+          <div class="a"><p>Vyplníte dotazník o svém dosavadním životě jako podklad pro rozhovor a absolvujete testy výkonu (pozornost, paměť, reakční čas, senzomotorika, rozhodování) a osobnosti podle vyhlášky č. 75/2016 Sb. Část probíhá na počítači. Délka se řídí testovou baterií a Vaším tempem.</p></div>
+        </details>
+        <details>
+          <summary>Můžu poradenství nebo koučink absolvovat online?</summary>
+          <div class="a"><p>Ano. U psychologického poradenství proběhne první setkání osobně, další konzultace pak online za 1 000 Kč / 55 minut. Koučink online stojí 1 300 Kč za hodinu.</p></div>
+        </details>
+        <details>
+          <summary>Jak ověřím akreditaci dopravního psychologa?</summary>
+          <div class="a"><p>Akreditace uděluje Ministerstvo dopravy a jejich seznam zveřejňuje na <a href="https://www.mdcr.cz/Dokumenty/Silnicni-doprava/Udelene-akreditace-k-provadeni-dopravne-psychologi" rel="noopener" target="_blank">mdcr.cz</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="kontakt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Kontakt</span>
+        <h2>Domluvme si první konzultaci nebo termín vyšetření</h2>
+        <p>Nejrychleji telefonem. Pokud to nezvednu, ozvu se zpět.<span class="demo">ukázkový text</span></p>
+      </div>
+      <div class="contact-grid">
+        <div class="cbox">
+          <div class="cline">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+            <div><span class="k">Telefon</span><a href="tel:+420606960596">+420 606 960 596</a></div>
+          </div>
+          <div class="cline">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg>
+            <div><span class="k">E-mail</span><a href="mailto:psycholog.petrvald@gmail.com">psycholog.petrvald@gmail.com</a></div>
+          </div>
+          <div class="cline">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <div><span class="k">Sídlo</span><span class="v">Březinská 222, 735 41 Petřvald</span><small>Služby po předchozí domluvě.</small><a class="maplink" href="https://mapy.cz/zakladni?q=B%C5%99ezinsk%C3%A1%20222%2C%20735%2041%20Pet%C5%99vald" rel="noopener" target="_blank">Otevřít v Mapy.cz</a></div>
+          </div>
+          <div class="cline">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg>
+            <div><span class="k">Vyšetření řidičů</span><span class="v">SŠ technická a dopravní, Moravská 2/964, 703 00 Ostrava-Vítkovice</span><small>Akreditované pracoviště dopravní psychologie.</small><a class="maplink" href="https://mapy.cz/zakladni?q=Moravsk%C3%A1%202%2F964%2C%20Ostrava-V%C3%ADtkovice" rel="noopener" target="_blank">Otevřít v Mapy.cz</a></div>
+          </div>
+          <div class="cline">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <div><span class="k">Telefonické objednávky</span>
+              <table class="hours">
+                <tr><td>Po–Čt</td><td>16:00–19:00</td></tr>
+                <tr><td>Pá</td><td>11:00–19:00</td></tr>
+                <tr><td>So–Ne</td><td>8:00–12:00</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="cline">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/jana-lehnerova/" rel="noopener" target="_blank">linkedin.com/in/jana-lehnerova</a></div>
+          </div>
+        </div>
+        <div class="cbox">
+          <h3 style="font-size:1.25rem;margin-bottom:12px">Napište mi</h3>
+          <form id="f" novalidate>
+            <label>Jméno<input name="jmeno" autocomplete="name" required></label>
+            <label>Telefon nebo e-mail<input name="kontakt" autocomplete="email" required></label>
+            <label>O co máte zájem
+              <select name="sluzba">
+                <option>Psychologická konzultace</option>
+                <option>Vyšetření řidiče</option>
+                <option>Dopravně psychologický pohovor</option>
+                <option>Koučink / kariéra</option>
+                <option>Workshop pro firmu či školu</option>
+              </select>
+            </label>
+            <label>Zpráva (nepovinné)<textarea name="zprava"></textarea></label>
+            <button class="btn btn-primary" type="submit">Odeslat a domluvit termín</button>
+            <p class="form-ok" id="ok" role="status" hidden>Toto je jen ukázka – v hotovém webu zpráva odejde přímo do Vašeho e-mailu.</p>
+            <p class="fineprint">Údaje použiji jen k domluvě termínu.<span class="demo">ukázkový text</span></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>PhDr. Ing. Jana Lehnerová</b><br>Psychologické poradenství · IČO 02968495<br>Březinská 222, 735 41 Petřvald</div>
+    <div><a href="tel:+420606960596">+420 606 960 596</a><br><a href="mailto:psycholog.petrvald@gmail.com">psycholog.petrvald@gmail.com</a></div>
+    <div>© 2026 Jana Lehnerová<br><a href="#top">Zpět nahoru</a></div>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Rychlý kontakt">
+  <a class="btn btn-primary" href="tel:+420606960596">Zavolat 606 960 596</a>
+  <a class="btn btn-ghost" href="#kontakt">Napsat</a>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tile'));
+  function select(t,focus){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on?'true':'false');
+      x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      var k=e.key,n=null;
+      if(k==='ArrowRight'||k==='ArrowDown')n=tabs[(i+1)%tabs.length];
+      if(k==='ArrowLeft'||k==='ArrowUp')n=tabs[(i-1+tabs.length)%tabs.length];
+      if(n){e.preventDefault();select(n,true)}
+    });
+  });
+  [].forEach.call(document.querySelectorAll('[data-open]'),function(a){
+    a.addEventListener('click',function(){var t=document.getElementById('tab-'+a.getAttribute('data-open'));if(t)select(t)});
+  });
+  var f=document.getElementById('f');
+  f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').hidden=false});
+})();
+</script>
+</body>
+</html>

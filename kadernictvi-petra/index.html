@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Kadeřnictví Petra | kadeřnictví Ostrava-Dubina</title>
+<meta name="description" content="Nezávazný návrh webu pro Kadeřnictví Petra v Ostravě-Dubině: dámské a pánské kadeřnictví, nehtová modeláž a pedikúra na jednom místě.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Yeseva+One&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Kadeřnictví Petra",
+  "telephone": "+420603143774",
+  "email": "figurova@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Aloise Gavlase 48/3a",
+    "addressLocality": "Ostrava-Dubina",
+    "addressCountry": "CZ"
+  }
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: dělený hero (text | ilustrace s ochutnávkou barev), pak střídání bílých a mátových/modrých pásů; jedna světlá, sousedská paleta */
+:root{
+  --ink:#1E2238;
+  --blue:#3E5BA9;
+  --coral:#F27C7C;
+  --coral-text:#B83E3E;
+  --mint:#CDEBDD;
+  --mint-soft:#E9F6EF;
+  --blue-soft:#EEF1FA;
+  --paper:#FFFFFF;
+  --muted:#4A4F66;
+  --line:#D9DDEA;
+  --skin:#FFF7F3;
+  --font-display:"Yeseva One", "Georgia", "Times New Roman", serif;
+  --font-body:"Jost", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --radius:18px;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:.005em}
+h2{font-size:clamp(30px,4.4vw,46px)}
+h3{font-size:22px}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.section{padding-block:clamp(64px,9vw,112px)}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-text)}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:60ch}
+.tag{display:inline-block;font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-variant:small-caps;color:var(--muted);border:1px solid var(--line);background:var(--paper);border-radius:6px;padding:1px 7px;line-height:1.6;vertical-align:middle;white-space:nowrap}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--font-body);font-size:17px;font-weight:600;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
+.btn-main{background:var(--coral);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn-main:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn-main:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn-ghost{background:var(--paper);color:var(--ink)}
+.btn-ghost:hover{background:var(--mint-soft)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* banner + hlavička */
+.notice{background:var(--ink);color:#fff;font-size:14px;text-align:center;padding-block:9px;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.notice strong{font-weight:600}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
+.brand b{font-family:var(--font-display);font-weight:400;font-size:22px}
+.brand span{font-size:13px;color:var(--muted);letter-spacing:.06em}
+.nav{display:none;gap:26px}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:16px}
+.nav a:hover{color:var(--coral-text)}
+.top-tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:6px 14px;font-size:15px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.top-tel:hover{background:var(--mint)}
+.top-tel svg{width:16px;height:16px}
+.top-tel .short{display:none}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,72px) clamp(56px,7vw,96px);position:relative}
+.hero .wrap{display:grid;gap:40px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
+.hero h1{font-size:clamp(36px,6.2vw,72px)}
+.hero h1 .u{position:relative;white-space:nowrap;color:var(--blue)}
+.hero h1 .u svg{position:absolute;left:-2%;bottom:-.16em;width:104%;height:.32em;overflow:visible}
+.hero-sub{font-size:clamp(17px,1.7vw,20px);color:var(--muted);max-width:44ch}
+.rating{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 12px;font-size:15px;color:var(--ink);text-decoration:none;width:fit-content;max-width:100%}
+.rating .stars{display:inline-flex;gap:2px}
+.rating .stars svg{width:18px;height:18px;fill:var(--coral);stroke:var(--ink);stroke-width:1.2}
+.rating b{font-weight:600}
+.rating u{text-decoration-color:var(--coral);text-decoration-thickness:2px;text-underline-offset:3px;color:var(--muted)}
+.rating:hover u{color:var(--ink)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-note{font-size:15px;color:var(--muted)}
+
+.studio{position:relative;display:flex;flex-direction:column;gap:0;min-width:0}
+.figure{position:relative;width:100%;max-width:520px;margin:0 auto}
+.figure svg{display:block;width:100%;height:auto;max-width:100%}
+.hair-fill,.nail{transition:fill .7s cubic-bezier(.4,.1,.2,1)}
+.pop{animation:pop .55s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.035)}100%{transform:scale(1)}}
+#hair,#hand{transform-box:fill-box;transform-origin:50% 60%}
+.spark{transform-box:fill-box;transform-origin:center;animation:twinkle 3.6s ease-in-out infinite}
+.spark:nth-of-type(2){animation-delay:1.2s}.spark:nth-of-type(3){animation-delay:2.4s}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.6) rotate(25deg)}}
+
+/* zkuste si barvu */
+.tryon{position:relative;margin-top:-12px;background:var(--paper);border:2px solid var(--ink);border-radius:24px;padding:22px 20px 20px;box-shadow:6px 6px 0 var(--mint);display:flex;flex-direction:column;gap:18px}
+.tryon-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tryon-head h2{font-size:26px}
+.tryon-head p{font-size:14px;color:var(--muted)}
+.row{display:flex;flex-direction:column;gap:8px}
+.row-label{display:flex;justify-content:space-between;gap:10px;font-size:15px;font-weight:500}
+.row-label output{color:var(--coral-text);font-weight:600}
+.drops{display:flex;flex-wrap:nowrap;justify-content:space-between;max-width:340px;gap:6px;padding:0;margin:0;list-style:none}
+.drop{position:relative;width:44px;height:48px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.drop i{display:block;width:32px;height:32px;background:var(--c);border:2px solid var(--ink);border-radius:50% 0 50% 50%;transform:rotate(-45deg);transition:transform .25s cubic-bezier(.3,1.6,.5,1), box-shadow .2s;box-shadow:inset -4px 4px 0 rgba(255,255,255,.35)}
+.drop:hover i{transform:rotate(-45deg) scale(1.12)}
+.drop[aria-pressed="true"] i{transform:rotate(-45deg) scale(1.16);box-shadow:inset -4px 4px 0 rgba(255,255,255,.35),0 0 0 3px var(--paper),0 0 0 5px var(--blue)}
+.drop[aria-pressed="true"]::after{content:"";position:absolute;bottom:-4px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--blue)}
+.tryon-foot{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;justify-content:space-between;border-top:1px dashed var(--line);padding-top:16px}
+.tryon-foot p{font-size:14px;color:var(--muted);max-width:30ch}
+.tryon-foot .btn{min-height:46px;font-size:16px;padding:0 20px}
+
+/* důvěra */
+.proof{background:var(--blue);color:#fff}
+.proof .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-block:28px}
+.proof-score{display:flex;align-items:center;gap:18px}
+.proof-score .big{font-family:var(--font-display);font-size:58px;line-height:1}
+.proof-score small{display:block;font-size:15px;opacity:.92}
+.proof-score b{font-size:20px;font-weight:600}
+.proof a{color:#fff;font-weight:500;text-underline-offset:4px}
+
+/* služby */
+.services-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 40px;margin-bottom:40px}
+.services-head > div{display:flex;flex-direction:column;gap:12px;min-width:0}
+.svc-grid{display:grid;gap:20px}
+.svc{border:2px solid var(--ink);border-radius:var(--radius);padding:26px 24px;background:var(--paper);display:flex;flex-direction:column;gap:18px;min-width:0}
+.svc-title{display:flex;align-items:center;gap:14px}
+.svc-title .tag{margin-left:auto}
+.svc-title .ico{width:52px;height:52px;flex:none;border-radius:50%;display:grid;place-items:center;border:2px solid var(--ink)}
+.svc-title .ico svg{width:28px;height:28px}
+.svc.hair .ico{background:var(--mint)}
+.svc.nails .ico{background:#FCDADA}
+.svc.pedi .ico{background:var(--blue-soft)}
+.svc ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.svc li{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-block:14px;border-top:1px dashed var(--line)}
+.svc li:first-child{border-top:0;padding-top:0}
+.svc li b{font-weight:600;font-size:17px}
+.svc li .price{font-size:14px;color:var(--coral-text);font-weight:600;white-space:nowrap;align-self:start;padding-top:2px}
+.svc li p{grid-column:1 / -1;font-size:15.5px;color:var(--muted)}
+.svc ul{flex:1}
+.svc-cta{margin-top:auto;align-self:flex-start;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--coral);padding-bottom:2px}
+.svc-cta:hover{color:var(--coral-text)}
+.svc-note{font-size:15px;color:var(--muted);margin-top:20px}
+
+/* Petra */
+.petra{background:var(--mint-soft)}
+.petra .wrap{display:grid;gap:40px;align-items:center}
+.petra-copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.petra-copy p{max-width:56ch}
+.petra-sign{font-family:var(--font-display);font-size:30px;color:var(--blue)}
+
+/* fotomísta */
+.photo{position:relative;border:2px dashed var(--blue);border-radius:var(--radius);background:
+  radial-gradient(circle at 88% 12%, rgba(242,124,124,.22) 0 32px, transparent 33px),
+  repeating-linear-gradient(135deg, var(--blue-soft) 0 14px, #F6F8FD 14px 28px);
+  display:grid;place-items:center;text-align:center;color:var(--blue);padding:20px;max-width:100%}
+.photo span{display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:600;font-size:15px;background:rgba(255,255,255,.9);padding:12px 16px;border-radius:14px}
+.photo svg{width:30px;height:30px}
+.photo em{font-style:normal;font-weight:400;font-size:13px;color:var(--muted)}
+.photo-petra{aspect-ratio:4/5;width:100%;max-width:440px;margin:0 auto;border-radius:200px 200px var(--radius) var(--radius)}
+
+/* galerie */
+.gallery-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 40px;margin-bottom:32px}
+.gallery-head > div{display:flex;flex-direction:column;gap:12px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.gallery .photo{aspect-ratio:4/5;padding:12px}
+.gallery .photo span{padding:10px 12px}
+.book .eyebrow + h2,.faq .eyebrow + h2{margin-top:12px}
+
+/* objednání */
+.book{background:var(--blue-soft)}
+.book .wrap{display:grid;gap:44px}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:start;background:var(--paper);border-radius:var(--radius);padding:20px 22px;border:2px solid var(--ink)}
+.steps li::before{content:counter(s);grid-row:span 2;width:48px;height:48px;border-radius:50%;background:var(--coral);border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--font-display);font-size:22px}
+.steps b{font-size:18px;font-weight:600}
+.steps p{color:var(--muted);font-size:16px}
+.steps a{font-weight:600}
+form{background:var(--paper);border:2px solid var(--ink);border-radius:24px;padding:26px 22px;display:flex;flex-direction:column;gap:16px;box-shadow:6px 6px 0 var(--mint);min-width:0}
+form h3{font-size:26px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:15px;font-weight:500}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1.5px solid #8A90A8;border-radius:12px;padding:12px 14px;width:100%}
+.field textarea{min-height:96px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px;border:0;padding:0;margin:0}
+.chips legend{font-size:15px;font-weight:500;margin-bottom:6px;padding:0}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-block;border:1.5px solid var(--ink);border-radius:999px;padding:7px 14px;font-size:15px;cursor:pointer;transition:background .2s}
+.chips input:checked + span{background:var(--mint);font-weight:600}
+.chips input:focus-visible + span{outline:3px solid var(--blue);outline-offset:2px}
+.form-msg{background:var(--mint-soft);border:1.5px solid var(--ink);border-radius:14px;padding:14px 16px;font-size:15.5px}
+
+/* FAQ */
+.faq .wrap{display:grid;gap:32px}
+.faq-list{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;font-size:18px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:34px;height:34px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;transition:transform .3s, background .3s}
+summary .pm svg{width:14px;height:14px}
+details[open] summary .pm{transform:rotate(45deg);background:var(--coral)}
+details .ans{padding-bottom:22px;color:var(--muted);max-width:62ch;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+
+/* kontakt */
+.contact{background:var(--ink);color:#fff}
+.contact .wrap{display:grid;gap:40px}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--coral)}
+.contact-list{display:grid;gap:22px;margin:0}
+.contact-list div{display:flex;flex-direction:column;gap:2px}
+.contact-list dt{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mint)}
+.contact-list dd{margin:0;font-size:20px;overflow-wrap:anywhere}
+.contact-list a{color:#fff;text-decoration-color:var(--coral);text-underline-offset:4px}
+.contact .btn-ghost{background:transparent;color:#fff;border-color:#fff}
+.contact .btn-ghost:hover{background:rgba(255,255,255,.1)}
+.contact .btn-main{box-shadow:4px 4px 0 var(--mint)}
+.map-card{border:2px solid #fff;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,.04)}
+.map-card svg{width:100%;height:auto;display:block;border-radius:14px}
+.map-card p{font-size:15px;color:#D6D9E6}
+.copy-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.copy{font:inherit;font-size:14px;color:#fff;background:transparent;border:1.5px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 12px;cursor:pointer}
+.copy:hover{background:rgba(255,255,255,.1)}
+
+footer{background:var(--ink);color:#C9CDDC;border-top:1px solid rgba(255,255,255,.15);font-size:14px}
+footer .wrap{padding-block:26px 110px;display:flex;flex-direction:column;gap:6px}
+footer a{color:#fff}
+
+/* mobilní pruh */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;background:var(--paper);border-top:2px solid var(--ink);padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.callbar .btn{min-height:48px;padding:0 12px;font-size:16px;box-shadow:none}
+.callbar .btn-main{box-shadow:3px 3px 0 var(--ink)}
+
+@media (min-width:720px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc.hair{grid-row:span 2}
+  .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .gallery .photo:nth-child(1){grid-column:span 2;aspect-ratio:auto}
+  .steps{grid-template-columns:1fr}
+  .contact .wrap{grid-template-columns:1.1fr 1fr;align-items:start}
+}
+@media (min-width:960px){
+  .nav{display:flex}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;gap:56px}
+  .petra .wrap{grid-template-columns:.85fr 1.15fr;gap:72px}
+  .book .wrap{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .faq .wrap{grid-template-columns:.8fr 1.2fr;gap:64px}
+  .callbar{display:none}
+  footer .wrap{padding-block:26px}
+}
+@media (max-width:420px){
+  .top-tel .num{display:none}
+  .top-tel .short{display:inline}
+  .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+<div class="notice"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Kadeřnictví Petra</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kadeřnictví Petra, nahoru"><b>Kadeřnictví Petra</b><span>Ostrava-Dubina</span></a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#sluzby">Služby a ceny</a>
+      <a href="#barva">Zkuste si barvu</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#objednat">Jak se objednat</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="top-tel" href="tel:+420603143774" aria-label="Zavolat 603 143 774">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+      <span class="num">603 143 774</span><span class="short">Zavolat</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Dámské a pánské kadeřnictví · nehty · pedikúra</p>
+      <h1>Vlasy, nehty i&nbsp;pedikúra. Všechno <span class="u">u&nbsp;Petry<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 40 4, 70 18, 105 10 S 170 4, 197 11" fill="none" stroke="#F27C7C" stroke-width="5" stroke-linecap="round"/></svg></span> na Dubině.</h1>
+      <p class="hero-sub">Ostříháme, obarvíme, uděláme melír nebo trvalou. A když už jste tu, nehty i pedikúru máte na stejné adrese – Aloise Gavlase 48/3a.</p>
+      <a class="rating" href="https://www.firmy.cz/detail/12935225-kadernictvi-petra-ostrava-dubina.html" target="_blank" rel="noopener">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>
+        </span>
+        <span><b>5,0 „Fantastické“</b> · <u>5 recenzí na Firmy.cz</u></span>
+      </a>
+      <div class="hero-actions">
+        <a class="btn btn-main" href="tel:+420603143774">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+          Objednat se
+        </a>
+        <span class="hero-note">Zavolejte na <b>603 143 774</b>,<br>domluvíme termín.</span>
+      </div>
+    </div>
+
+    <div class="studio" id="barva">
+      <div class="figure">
+        <svg viewBox="0 0 460 470" role="img" aria-labelledby="ilu-t">
+          <title id="ilu-t">Ilustrace: ženský profil s vlnitými vlasy a ruka s nalakovanými nehty</title>
+          <circle cx="262" cy="236" r="212" fill="none" stroke="#3E5BA9" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 12" opacity=".55"/>
+          <circle cx="262" cy="236" r="190" fill="#CDEBDD"/>
+          <!-- jiskry -->
+          <g fill="#F27C7C" stroke="#1E2238" stroke-width="1.6" stroke-linejoin="round">
+            <path class="spark" d="M408 92 l5 13 13 5 -13 5 -5 13 -5 -13 -13 -5 13 -5z"/>
+            <path class="spark" d="M58 120 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#3E5BA9"/>
+            <path class="spark" d="M430 318 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#FFFFFF"/>
+          </g>
+          <g stroke="#1E2238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <!-- obličej a krk -->
+            <path fill="#FFF7F3" d="M252 118 C222 124 206 150 204 178 C203 190 200 196 196 202 C190 214 182 226 178 236 C176 241 180 245 186 245 C190 246 193 248 192 252 C188 256 188 260 192 262 C189 266 190 271 195 273 C194 280 194 286 198 292 C202 302 214 306 228 304 C234 306 236 316 236 330 L238 400 L326 400 L322 320 C330 300 334 270 330 240 C320 150 290 118 252 118 Z"/>
+            <!-- halenka -->
+            <path fill="#3E5BA9" d="M112 474 C132 428 186 404 236 394 C258 416 304 416 326 392 C374 402 414 428 434 474 Z"/>
+            <path fill="none" stroke="#CDEBDD" stroke-width="2" d="M244 404 C262 420 300 420 318 402" opacity=".9"/>
+            <!-- oko, obočí, tvář -->
+            <path fill="none" d="M213 199 Q224 208 235 199"/>
+            <path fill="none" stroke-width="2.4" d="M216 203 l-4 5 M223 206 l-1 6 M230 204 l3 5"/>
+            <path fill="none" d="M208 184 Q222 175 238 182"/>
+            <ellipse cx="238" cy="234" rx="14" ry="8.5" fill="#F27C7C" stroke="none" opacity=".45"/>
+            <path fill="none" stroke="#B83E3E" stroke-width="2.6" d="M191 262 Q194 263 197 261"/>
+            <!-- vlasy -->
+            <g id="hair">
+              <path class="hair-fill" fill="#5A3626" d="M204 176 C200 132 236 92 286 90 C340 88 378 124 384 176 C390 226 372 252 382 290 C392 326 370 364 338 360 C318 356 314 336 330 328 C314 316 312 290 318 262 C320 240 312 214 296 202 C278 188 254 184 238 170 C228 182 214 186 204 176 Z"/>
+              <path fill="#FFFFFF" stroke="none" opacity=".28" d="M246 106 C286 92 330 102 354 130 C322 116 288 112 252 120 Z"/>
+              <g fill="none" stroke-width="2" opacity=".55">
+                <path d="M240 114 C290 100 338 122 360 172"/>
+                <path d="M262 136 C310 128 350 162 354 222"/>
+                <path d="M304 206 C340 226 352 272 352 320"/>
+                <path d="M226 160 C246 144 270 140 292 146"/>
+              </g>
+              <rect x="300" y="100" width="32" height="12" rx="6" fill="#F27C7C" stroke-width="2.4" transform="rotate(24 316 106)"/>
+            </g>
+            <!-- ucho a náušnice -->
+            <path fill="#FFF7F3" d="M296 218 C310 212 318 236 306 250 C302 256 296 254 294 248"/>
+            <path fill="none" stroke-width="2" d="M302 254 L302 262"/>
+            <circle cx="302" cy="268" r="6" fill="#F27C7C" stroke-width="2.2"/>
+            <!-- ruka -->
+            <g id="hand">
+              <g transform="translate(118 362) rotate(-14)">
+                <g transform="translate(-38 14) rotate(-30)">
+                  <rect x="-11" y="-62" width="22" height="74" rx="11" fill="#FFF7F3"/>
+                  <rect class="nail" x="-6.5" y="-57" width="13" height="18" rx="6.5" fill="#F27C7C" stroke-width="2"/>
+                </g>
+                <g transform="rotate(-7 -33 10)">
+                  <rect x="-43" y="-94" width="20" height="110" rx="10.0" fill="#FFF7F3"/>
+                  <rect class="nail" x="-39.5" y="-90" width="13" height="19" rx="6.5" fill="#F27C7C" stroke-width="2"/>
+                  <path d="M-36 -85 v6" stroke="#FFFFFF" stroke-width="2" opacity=".8"/>
+                </g>
+                <g transform="rotate(-2 -11 10)">
+                  <rect x="-21" y="-112" width="20" height="128" rx="10.0" fill="#FFF7F3"/>
+                  <rect class="nail" x="-17.5" y="-108" width="13" height="19" rx="6.5" fill="#F27C7C" stroke-width="2"/>
+                  <path d="M-14 -103 v6" stroke="#FFFFFF" stroke-width="2" opacity=".8"/>
+                </g>
+                <g transform="rotate(3 11 10)">
+                  <rect x="1" y="-104" width="20" height="120" rx="10.0" fill="#FFF7F3"/>
+                  <rect class="nail" x="4.5" y="-100" width="13" height="19" rx="6.5" fill="#F27C7C" stroke-width="2"/>
+                  <path d="M8 -95 v6" stroke="#FFFFFF" stroke-width="2" opacity=".8"/>
+                </g>
+                <g transform="rotate(9 32 10)">
+                  <rect x="23" y="-80" width="18" height="96" rx="9.0" fill="#FFF7F3"/>
+                  <rect class="nail" x="26.5" y="-76" width="11" height="17" rx="5.5" fill="#F27C7C" stroke-width="2"/>
+                  <path d="M30 -71 v6" stroke="#FFFFFF" stroke-width="2" opacity=".8"/>
+                </g>
+                <path fill="#FFF7F3" stroke="none" d="M-47 -26 L45 -26 Q51 30 40 72 L-38 72 Q-50 30 -47 -26 Z"/>
+                <path fill="none" d="M-47 -20 Q-50 30 -38 72 L-36 130 M45 -20 Q51 30 40 72 L38 130"/>
+                <path fill="none" stroke-width="2" opacity=".5" d="M-30 -6 q6 4 12 0 M-8 -8 q6 4 12 0 M14 -6 q6 4 12 0"/>
+                <path fill="#3E5BA9" d="M-52 108 L54 104 L60 190 L-60 190 Z"/>
+                <path fill="none" stroke="#CDEBDD" stroke-width="2" d="M-50 122 L54 118"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="tryon">
+        <div class="tryon-head">
+          <h2>Zkuste si barvu</h2>
+          <p>Klikněte na kapku</p>
+        </div>
+        <div class="row" role="group" aria-labelledby="lbl-hair">
+          <div class="row-label"><span id="lbl-hair">Barva vlasů</span><output id="out-hair" aria-live="polite">Čokoládová</output></div>
+          <div class="drops" data-target="hair">
+            <button type="button" class="drop" style="--c:#1F1A1E" data-c="#1F1A1E" data-n="Havraní černá" aria-pressed="false" aria-label="Havraní černá"><i></i></button>
+            <button type="button" class="drop" style="--c:#5A3626" data-c="#5A3626" data-n="Čokoládová" aria-pressed="true" aria-label="Čokoládová"><i></i></button>
+            <button type="button" class="drop" style="--c:#8A4024" data-c="#8A4024" data-n="Kaštanová" aria-pressed="false" aria-label="Kaštanová"><i></i></button>
+            <button type="button" class="drop" style="--c:#C8622F" data-c="#C8622F" data-n="Měděná" aria-pressed="false" aria-label="Měděná"><i></i></button>
+            <button type="button" class="drop" style="--c:#DDB06A" data-c="#DDB06A" data-n="Medová blond" aria-pressed="false" aria-label="Medová blond"><i></i></button>
+            <button type="button" class="drop" style="--c:#EDE4D3" data-c="#EDE4D3" data-n="Platinová" aria-pressed="false" aria-label="Platinová"><i></i></button>
+          </div>
+        </div>
+        <div class="row" role="group" aria-labelledby="lbl-nail">
+          <div class="row-label"><span id="lbl-nail">Barva nehtů</span><output id="out-nail" aria-live="polite">Korálová</output></div>
+          <div class="drops" data-target="nail">
+            <button type="button" class="drop" style="--c:#F27C7C" data-c="#F27C7C" data-n="Korálová" aria-pressed="true" aria-label="Korálová"><i></i></button>
+            <button type="button" class="drop" style="--c:#B5172F" data-c="#B5172F" data-n="Třešňová" aria-pressed="false" aria-label="Třešňová"><i></i></button>
+            <button type="button" class="drop" style="--c:#F6C6CB" data-c="#F6C6CB" data-n="Pudrová" aria-pressed="false" aria-label="Pudrová"><i></i></button>
+            <button type="button" class="drop" style="--c:#3E5BA9" data-c="#3E5BA9" data-n="Pomněnková" aria-pressed="false" aria-label="Pomněnková"><i></i></button>
+            <button type="button" class="drop" style="--c:#8FD3B5" data-c="#8FD3B5" data-n="Mátová" aria-pressed="false" aria-label="Mátová"><i></i></button>
+            <button type="button" class="drop" style="--c:#6E3F8F" data-c="#6E3F8F" data-n="Lilková" aria-pressed="false" aria-label="Lilková"><i></i></button>
+          </div>
+        </div>
+        <div class="tryon-foot">
+          <p>Ilustrace – přesný odstín vybereme spolu v salonu.</p>
+          <a class="btn btn-main" href="tel:+420603143774">Objednat se</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Hodnocení">
+  <div class="wrap">
+    <div class="proof-score">
+      <span class="big">5,0</span>
+      <div><b>„Fantastické“</b><small>z 5 hodnocení na Firmy.cz, poslední z května 2026</small></div>
+    </div>
+    <a href="https://www.firmy.cz/detail/12935225-kadernictvi-petra-ostrava-dubina.html" target="_blank" rel="noopener">Přečíst recenze na Firmy.cz →</a>
+  </div>
+</section>
+
+<section class="section" id="sluzby">
+  <div class="wrap">
+    <div class="services-head">
+      <div>
+        <p class="eyebrow">Služby a ceny</p>
+        <h2>Co pro Vás u Petry uděláme</h2>
+      </div>
+      <p class="lead">Cenu Vám řekneme předem do telefonu – podle délky vlasů a toho, co si přejete. <span class="tag">ukázkový text</span></p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc hair">
+        <div class="svc-title">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#1E2238" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="24" r="4"/><circle cx="23" cy="24" r="4"/><path d="M11.5 21 L22 5 M20.5 21 L10 5"/></svg></span>
+          <h3>Vlasy</h3><span class="tag">ukázkový text</span>
+        </div>
+        <ul>
+          <li><b>Dámský střih</b><span class="price">cena na dotaz</span><p>Mytí, střih a foukaná podle toho, jak vlasy nosíte doma.</p></li>
+          <li><b>Pánský střih</b><span class="price">cena na dotaz</span><p>Klasika i kratší střih strojkem, upravené kontury kolem uší a na krku.</p></li>
+          <li><b>Barvení</b><span class="price">cena na dotaz</span><p>Odstín vybereme spolu podle vzorníku, dorost i celou délku.</p></li>
+          <li><b>Melír</b><span class="price">cena na dotaz</span><p>Jemné prosvětlení nebo výraznější pramínky, které oživí Vaši barvu.</p></li>
+          <li><b>Trvalá</b><span class="price">cena na dotaz</span><p>Vlny nebo objem, který vydrží – poradíme, co Vaše vlasy snesou.</p></li>
+        </ul>
+        <a class="svc-cta" href="tel:+420603143774">Objednat se na 603 143 774 →</a>
+      </article>
+      <article class="svc nails">
+        <div class="svc-title">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#1E2238" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="3" width="10" height="26" rx="5"/><rect x="13" y="5" width="6" height="9" rx="3" fill="#F27C7C"/></svg></span>
+          <h3>Nehty</h3><span class="tag">ukázkový text</span>
+        </div>
+        <ul>
+          <li><b>Nehtová modeláž</b><span class="price">cena na dotaz</span><p>Nové nehty nebo doplnění, tvar a barvu si vyberete na místě.</p></li>
+        </ul>
+        <a class="svc-cta" href="tel:+420603143774">Objednat se na 603 143 774 →</a>
+      </article>
+      <article class="svc pedi">
+        <div class="svc-title">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#1E2238" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 28 C6 22 7 14 10 9 C12 5 17 5 18 10 C19 15 22 18 24 22 C26 26 22 29 18 28 Z"/><circle cx="21" cy="5" r="1.6"/><circle cx="24.5" cy="7.5" r="1.4"/><circle cx="26.5" cy="11" r="1.2"/></svg></span>
+          <h3>Pedikúra</h3><span class="tag">ukázkový text</span>
+        </div>
+        <ul>
+          <li><b>Pedikúra</b><span class="price">cena na dotaz</span><p>Péče o chodidla a nehty na nohou, aby se Vám zase dobře chodilo.</p></li>
+        </ul>
+        <a class="svc-cta" href="tel:+420603143774">Objednat se na 603 143 774 →</a>
+      </article>
+    </div>
+    <p class="svc-note">Ceny zatím nejsou zveřejněné. Zavolejte na <a href="tel:+420603143774">603 143 774</a> a dozvíte se je předem.</p>
+  </div>
+</section>
+
+<section class="section petra" id="petra">
+  <div class="wrap">
+    <div class="photo photo-petra" role="img" aria-label="Místo pro fotku Petry">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<em>Petra v salonu</em></span>
+    </div>
+    <div class="petra-copy">
+      <p class="eyebrow">Kdo Vás bude česat</p>
+      <h2>Petra, Vaše kadeřnice od vedle</h2>
+      <p>Salon na Aloise Gavlase je malý a v klidu. Žádné spěchání mezi křesly, máte čas říct, co se Vám na vlasech nelíbí a co byste chtěla zkusit. <span class="tag">ukázkový text</span></p>
+      <p>Chodí sem maminky, dcery, tátové i sousedé z vedlejšího vchodu. Kdo chce, nechá si udělat vlasy a hned potom nehty nebo pedikúru, bez přejíždění po městě. <span class="tag">ukázkový text</span></p>
+      <p class="petra-sign">Petra</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="galerie">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <p class="eyebrow">Galerie prací</p>
+        <h2>Střihy, barvy a nehty z Dubiny</h2>
+      </div>
+      <p class="lead">Sem patří fotky Vašich prací – před a po, detail melíru, čerstvá modeláž.</p>
+    </div>
+    <div class="gallery">
+      <div class="photo" role="img" aria-label="Místo pro fotku"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<em>Barvení – před a po</em></span></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<em>Melír</em></span></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<em>Nehtová modeláž</em></span></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<em>Pánský střih</em></span></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<em>Trvalá</em></span></div>
+      <div class="photo" role="img" aria-label="Místo pro fotku"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Sem přijde Vaše fotka<em>Pedikúra</em></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section book" id="objednat">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Jak se objednat</p>
+      <h2>Tři kroky k&nbsp;novému účesu</h2>
+      <ol class="steps">
+        <li><b>Zavolejte</b><p>Na <a href="tel:+420603143774">603 143 774</a>. Řekněte, co si přejete – střih, barvu, nehty nebo pedikúru.</p></li>
+        <li><b>Domluvíme termín</b><p>Najdeme čas, který Vám sedí, a rovnou Vám řekneme cenu. <span class="tag">ukázkový text</span></p></li>
+        <li><b>Přijďte na Dubinu</b><p>Aloise Gavlase 48/3a. Odcházíte s novým účesem a s radou, jak ho udržet doma. <span class="tag">ukázkový text</span></p></li>
+      </ol>
+    </div>
+    <form id="poptavka" novalidate>
+      <h3>Napište si o termín</h3>
+      <div class="field"><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" autocomplete="name" placeholder="Např. Jana"></div>
+      <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Zavoláme Vám zpět"></div>
+      <fieldset class="chips">
+        <legend>O co máte zájem</legend>
+        <label><input type="checkbox" id="f-strih" name="sluzba" value="střih"><span>Střih</span></label>
+        <label><input type="checkbox" id="f-barva" name="sluzba" value="barva"><span>Barva / melír</span></label>
+        <label><input type="checkbox" id="f-trvala" name="sluzba" value="trvalá"><span>Trvalá</span></label>
+        <label><input type="checkbox" id="f-nehty" name="sluzba" value="nehty"><span>Nehty</span></label>
+        <label><input type="checkbox" id="f-pedi" name="sluzba" value="pedikúra"><span>Pedikúra</span></label>
+      </fieldset>
+      <div class="field"><label for="f-pozn">Kdy se Vám to hodí?</label><textarea id="f-pozn" name="poznamka" placeholder="Např. úterý odpoledne"></textarea></div>
+      <button class="btn btn-main" type="submit">Odeslat poptávku</button>
+      <p class="form-msg" id="form-msg" role="status" hidden>Tohle je jen návrh webu, zpráva se nikam neodeslala. Termín si zatím domluvte telefonem na <a href="tel:+420603143774"><b>603 143 774</b></a>.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section faq" id="otazky">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Časté otázky</p>
+      <h2>Na co se lidé ptají</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Kolik stojí střih nebo barvení?<span class="pm" aria-hidden="true"><svg viewBox="0 0 14 14" stroke="#1E2238" stroke-width="2.4" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="ans"><p>Ceny zatím nejsou zveřejněné. Zavolejte na 603 143 774 a cenu se dozvíte předem, podle délky vlasů a toho, co si přejete.</p></div>
+      </details>
+      <details>
+        <summary>Stříháte i pány?<span class="pm" aria-hidden="true"><svg viewBox="0 0 14 14" stroke="#1E2238" stroke-width="2.4" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="ans"><p>Ano, Kadeřnictví Petra je dámské i pánské.</p></div>
+      </details>
+      <details>
+        <summary>Můžu si udělat vlasy a nehty v jeden den?<span class="pm" aria-hidden="true"><svg viewBox="0 0 14 14" stroke="#1E2238" stroke-width="2.4" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="ans"><p>Vlasy, nehty i pedikúra jsou na jedné adrese. Řekněte při objednání, že chcete obojí, a termíny naplánujeme za sebou.</p><span class="tag">ukázkový text</span></div>
+      </details>
+      <details>
+        <summary>Jak dlouho trvá barvení nebo melír?<span class="pm" aria-hidden="true"><svg viewBox="0 0 14 14" stroke="#1E2238" stroke-width="2.4" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="ans"><p>Záleží na délce vlasů a na tom, co se bude dělat. Přibližný čas Vám řekneme do telefonu, ať si můžete naplánovat den.</p><span class="tag">ukázkový text</span></div>
+      </details>
+      <details>
+        <summary>Kde salon najdu?<span class="pm" aria-hidden="true"><svg viewBox="0 0 14 14" stroke="#1E2238" stroke-width="2.4" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="ans"><p>Na adrese Aloise Gavlase 48/3a, Ostrava-Dubina. <a href="https://mapy.cz/zakladni?q=Aloise%20Gavlase%2048%2F3a%2C%20Ostrava-Dubina" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="kontakt">
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:28px;min-width:0">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p class="eyebrow">Kontakt</p>
+        <h2>Zavolejte, domluvíme termín</h2>
+      </div>
+      <dl class="contact-list">
+        <div><dt>Telefon</dt><dd><a href="tel:+420603143774" id="tel-text">603 143 774</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:figurova@seznam.cz">figurova@seznam.cz</a></dd></div>
+        <div><dt>Adresa</dt><dd>Aloise Gavlase 48/3a<br>Ostrava-Dubina</dd></div>
+        <div><dt>Otevírací doba</dt><dd>Podle domluvy – zavolejte a najdeme termín.</dd></div>
+      </dl>
+      <div class="copy-row">
+        <a class="btn btn-main" href="tel:+420603143774">Objednat se</a>
+        <button type="button" class="copy" id="copy-tel">Zkopírovat číslo</button>
+      </div>
+    </div>
+    <div class="map-card">
+      <svg viewBox="0 0 400 220" aria-hidden="true">
+        <rect width="400" height="220" fill="#CDEBDD"/>
+        <g stroke="#FFFFFF" stroke-width="14" fill="none" stroke-linecap="round">
+          <path d="M-10 70 C90 60 180 90 410 76"/><path d="M120 -10 C130 80 110 150 140 230"/><path d="M260 -10 C250 90 290 160 270 230"/>
+        </g>
+        <g fill="#B9DECB"><rect x="30" y="100" width="70" height="40" rx="6"/><rect x="170" y="110" width="70" height="50" rx="6"/><rect x="300" y="110" width="70" height="36" rx="6"/><rect x="160" y="10" width="80" height="40" rx="6"/><rect x="300" y="14" width="80" height="36" rx="6"/></g>
+        <g transform="translate(204 132)">
+          <ellipse cx="0" cy="6" rx="16" ry="5" fill="#1E2238" opacity=".2"/>
+          <path d="M0 4 C-18 -16 -20 -26 -20 -32 A20 20 0 0 1 20 -32 C20 -26 18 -16 0 4 Z" fill="#F27C7C" stroke="#1E2238" stroke-width="3"/>
+          <circle cx="0" cy="-32" r="7" fill="#FFFFFF" stroke="#1E2238" stroke-width="2.5"/>
+        </g>
+      </svg>
+      <p>Aloise Gavlase 48/3a, Ostrava-Dubina. Mapa je jen ilustrace, cestu Vám ukáže Mapy.cz.</p>
+      <a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=Aloise%20Gavlase%2048%2F3a%2C%20Ostrava-Dubina" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Kadeřnictví Petra · Aloise Gavlase 48/3a, Ostrava-Dubina · IČO 74936689</p>
+    <p>Nezávazný návrh webu, není to oficiální stránka firmy. Údaje z veřejného profilu na <a href="https://www.firmy.cz/detail/12935225-kadernictvi-petra-ostrava-dubina.html" target="_blank" rel="noopener">Firmy.cz</a>.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="btn btn-ghost" href="tel:+420603143774">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Zavolat</a>
+  <a class="btn btn-main" href="#objednat">Objednat se</a>
+</nav>
+
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function bump(el){
+    if(reduce || !el) return;
+    el.classList.remove('pop'); void el.getBoundingClientRect(); el.classList.add('pop');
+  }
+  document.querySelectorAll('.drops').forEach(function(group){
+    var target = group.getAttribute('data-target');
+    group.addEventListener('click', function(e){
+      var btn = e.target.closest('.drop'); if(!btn) return;
+      group.querySelectorAll('.drop').forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      var c = btn.getAttribute('data-c'), n = btn.getAttribute('data-n');
+      if(target === 'hair'){
+        document.querySelectorAll('.hair-fill').forEach(function(p){ p.style.fill = c; });
+        document.getElementById('out-hair').textContent = n;
+        bump(document.getElementById('hair'));
+      } else {
+        document.querySelectorAll('.nail').forEach(function(p){ p.style.fill = c; });
+        document.getElementById('out-nail').textContent = n;
+        bump(document.getElementById('hand'));
+      }
+    });
+  });
+
+  var form = document.getElementById('poptavka');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var msg = document.getElementById('form-msg');
+    msg.hidden = false;
+    msg.scrollIntoView({block:'nearest', behavior: reduce ? 'auto' : 'smooth'});
+  });
+
+  var copyBtn = document.getElementById('copy-tel');
+  copyBtn.addEventListener('click', function(){
+    var done = function(){ copyBtn.textContent = 'Zkopírováno'; setTimeout(function(){ copyBtn.textContent = 'Zkopírovat číslo'; }, 2000); };
+    var fallback = function(){
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('tel-text'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      copyBtn.textContent = 'Číslo je označené';
+    };
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText('603 143 774').then(done, fallback);
+      } else fallback();
+    }catch(err){ fallback(); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Instalatérství Lukáš Kaňák</title>
+<meta name="description" content="Instalatér a topenář v Havířově a okolí: rozvody vody a topení, instalace a výměny kotlů, opravy a havarijní služba NONSTOP. Volejte 731 389 791.">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Figtree:wght@400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Instalatérství Lukáš Kaňák",
+  "telephone": "+420 731 389 791",
+  "email": "lukas.kanak7@post.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Moravská 394/11",
+    "addressLocality": "Havířov-Šumbark",
+    "postalCode": "736 01",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+  ],
+  "areaServed": "Havířov a okolí"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --blue:#0B3C5D; --blue-2:#0E4A72; --blue-d:#072A42; --yellow:#FFC531; --frost:#F4F7FA;
+  --copper:#B4532A; --copper-l:#D9774A; --ink:#10212F; --muted:#44586A; --line:#D5DEE7; --white:#FFFFFF;
+  --black:#111417;
+  --head:"Archivo","Arial Narrow",Arial,sans-serif; --text:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:14px; --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--frost);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:var(--blue)}
+h1,h2,h3{font-family:var(--head);font-stretch:112%;line-height:1.05;margin:0 0 .5em;letter-spacing:-.01em;color:var(--blue)}
+h2{font-size:clamp(30px,6vw,52px);font-weight:850}
+h3{font-size:21px;font-weight:750;font-stretch:100%}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.eyebrow{font-family:var(--head);font-stretch:125%;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:4px;border-radius:2px;background:var(--copper)}
+.lead{font-size:19px;color:var(--muted);max-width:640px}
+section{padding:72px 0}
+.demo{display:inline-block;vertical-align:middle;font-family:var(--text);font-size:11px;font-weight:700;line-height:1.3;letter-spacing:.03em;text-transform:uppercase;color:#5B3A00;background:#FFE9A8;border:1px dashed #A06B00;border-radius:6px;padding:1px 6px;margin-left:6px;white-space:nowrap;font-stretch:100%}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+/* banner + header */
+.proto{background:var(--black);color:#F1F1F1;font-size:13.5px;text-align:center;padding:8px 16px;line-height:1.4}
+.proto strong{color:var(--yellow)}
+header.top{position:sticky;top:0;z-index:40;background:rgba(244,247,250,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--blue)}
+.logo b{display:block;font-family:var(--head);font-stretch:125%;font-weight:900;font-size:21px;letter-spacing:.02em;line-height:1}
+.logo small{display:block;font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.02em;margin-top:3px}
+nav.menu{display:none;gap:26px}
+nav.menu a{text-decoration:none;color:var(--ink);font-weight:600;font-size:15.5px}
+nav.menu a:hover{color:var(--copper)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--head);font-weight:800;font-stretch:110%;text-decoration:none;border-radius:12px;border:0;cursor:pointer;line-height:1.1;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-call{background:var(--yellow);color:var(--black);box-shadow:0 4px 0 #C99300}
+.btn-call:active{transform:translateY(2px);box-shadow:0 2px 0 #C99300}
+.btn-head{padding:11px 14px;font-size:15px}
+.btn-head span{display:none}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.btn-ghost:hover{border-color:#fff}
+
+/* hero */
+.hero{position:relative;background:var(--blue);color:#fff;overflow:hidden;padding:0}
+.hero-in{position:relative;z-index:2;padding:34px 20px 22px;max-width:var(--wrap);margin:0 auto}
+.status{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;margin-bottom:18px}
+.dot{width:10px;height:10px;border-radius:50%;background:#9AA9B6;flex:none}
+.status.is-open .dot{background:#4BE08A;box-shadow:0 0 0 0 rgba(75,224,138,.6);animation:pulse 2s infinite}
+.status .sep{opacity:.45;display:none}
+@media (min-width:640px){.status .sep{display:inline}}
+.status .ns{color:var(--yellow)}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(75,224,138,0)}100%{box-shadow:0 0 0 0 rgba(75,224,138,0)}}
+.hero h1{color:#fff;font-size:clamp(40px,10.4vw,84px);font-weight:900;font-stretch:118%;line-height:.98;max-width:13ch;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--yellow);display:block}
+.hero p.sub{font-size:18.5px;color:#DCE7F0;max-width:520px;margin-bottom:22px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn-big{padding:18px 24px;font-size:21px;border-radius:14px;width:100%}
+.btn-big svg{flex:none}
+.rating{display:inline-flex;align-items:center;gap:10px;margin-top:18px;color:#fff;text-decoration:none;font-size:15px;border-bottom:1px solid transparent}
+.rating:hover{border-bottom-color:rgba(255,255,255,.6)}
+.rating .score{font-family:var(--head);font-stretch:118%;font-weight:900;font-size:24px;color:var(--yellow)}
+.stars{color:var(--yellow);letter-spacing:2px;font-size:17px}
+.rating u{text-decoration:underline;text-underline-offset:3px}
+.scene{display:block;width:100%;height:auto;position:relative;z-index:1}
+.scene .lbl{font-family:var(--text);font-weight:700;font-size:22px;fill:#CFE0EC}
+.water{fill:none;stroke-linecap:round;stroke-dasharray:14 22;animation:flow 1.6s linear infinite}
+.water.hot{stroke:#FFD873}
+.water.cold{stroke:#BFE6FF}
+.water.slow{animation-duration:2.4s}
+@keyframes flow{to{stroke-dashoffset:-72}}
+.drip{animation:drip 2.6s ease-in infinite}
+@keyframes drip{0%{transform:translateY(0);opacity:0}15%{opacity:1}80%{transform:translateY(46px);opacity:1}100%{transform:translateY(52px);opacity:0}}
+
+/* emergency card */
+.alarm{background:var(--blue);padding:8px 0 64px}
+.hazard{border-radius:20px;padding:12px;background:repeating-linear-gradient(-45deg,var(--black) 0 18px,var(--yellow) 18px 36px);box-shadow:0 22px 50px rgba(0,0,0,.35)}
+.hazard-in{background:var(--yellow);border-radius:12px;padding:26px 20px;color:var(--black)}
+.hazard h2{color:var(--black);font-size:clamp(28px,6.4vw,46px);font-stretch:118%;margin-bottom:6px}
+.hazard .eyebrow{color:var(--black)}
+.hazard .eyebrow::before{background:var(--black)}
+.hazard p.k{font-size:17px;max-width:620px;color:#2B2200}
+.steps{list-style:none;padding:0;margin:22px 0;display:grid;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;background:#FFF4CF;border:2px solid var(--black);border-radius:12px;padding:14px}
+.steps .n{width:52px;height:52px;border-radius:10px;background:var(--black);color:var(--yellow);display:grid;place-items:center}
+.steps b{display:block;font-family:var(--head);font-stretch:108%;font-weight:800;font-size:18.5px;line-height:1.2;margin-bottom:3px}
+.steps small{display:block;font-size:15px;line-height:1.45;color:#3A2E00}
+.btn-black{background:var(--black);color:var(--yellow);padding:18px 22px;font-size:21px;width:100%;border-radius:14px;box-shadow:0 4px 0 #000}
+.hazard .note{font-size:14px;margin:12px 0 0;color:#3A2E00}
+
+/* services */
+.grid{display:grid;gap:16px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;position:relative;display:flex;flex-direction:column}
+.svc .ic{width:56px;height:56px;border-radius:12px;background:#E8EFF5;display:grid;place-items:center;margin-bottom:16px}
+.svc p{color:var(--muted);flex:1}
+.price{border-top:1px dashed var(--line);padding-top:12px;margin-top:6px;font-size:14.5px;font-weight:700;color:var(--blue)}
+.svc.ns{background:var(--blue);color:#fff;border-color:var(--blue)}
+.svc.ns h3{color:var(--yellow)}
+.svc.ns p{color:#DCE7F0}
+.svc.ns .ic{background:rgba(255,197,49,.14)}
+.svc.ns .price{color:#fff;border-color:rgba(255,255,255,.25)}
+.svc.ns a{color:var(--yellow);font-weight:700}
+
+/* trust */
+.trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.big-proof{background:var(--blue);color:#fff;border-radius:20px;padding:28px 22px;display:grid;gap:20px;position:relative;overflow:hidden}
+.big-proof .num{font-family:var(--head);font-stretch:125%;font-weight:900;font-size:clamp(78px,20vw,140px);line-height:.85;color:var(--yellow)}
+.big-proof .num small{font-size:.32em;color:#fff;font-stretch:100%;font-weight:700;margin-left:6px}
+.big-proof p{color:#DCE7F0;margin:0}
+.big-proof a{color:#fff;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:4px 12px;border-radius:999px;font-size:14px;font-weight:600}
+.facts{display:grid;gap:14px;margin-top:16px}
+.fact{border:1px solid var(--line);border-left:5px solid var(--copper);border-radius:12px;padding:18px 18px 16px;background:var(--frost)}
+.fact h3{font-size:18.5px;margin-bottom:6px}
+.fact p{margin:0;color:var(--muted);font-size:16px}
+.voice{font-family:var(--head);font-stretch:100%;font-weight:700;font-size:clamp(22px,4.6vw,30px);line-height:1.25;color:var(--blue);margin:34px 0 0;padding-left:20px;border-left:5px solid var(--yellow)}
+.voice small{display:block;font-family:var(--text);font-size:14px;font-weight:600;color:var(--muted);margin-top:8px}
+
+/* gallery */
+.gal{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.ph{aspect-ratio:4/3;border-radius:12px;border:2px dashed #9FB2C3;background:repeating-linear-gradient(135deg,#EAF0F5 0 12px,#F4F7FA 12px 24px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;color:var(--muted);font-weight:700;font-size:14.5px;gap:6px}
+.ph svg{opacity:.8}
+.ph.wide{grid-column:1/-1;aspect-ratio:16/8}
+.cap{font-size:13px;font-weight:600;color:var(--ink);line-height:1.35}
+.cap .demo{margin:4px 0 0}
+
+/* process */
+.proc{display:grid;gap:16px;counter-reset:p}
+.pstep{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;position:relative}
+.pstep .pn{font-family:var(--head);font-stretch:125%;font-weight:900;font-size:56px;line-height:1;color:var(--copper);margin-bottom:8px}
+.pstep p{color:var(--muted);margin:0}
+
+/* area */
+.area{background:var(--blue);color:#fff}
+.area h2{color:#fff}
+.area .lead{color:#DCE7F0}
+.area .eyebrow{color:var(--yellow)}
+.area .eyebrow::before{background:var(--yellow)}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 10px;padding:0;list-style:none}
+.towns li{border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 16px;font-weight:600;font-size:15.5px}
+.towns li.main{background:var(--yellow);color:var(--black);border-color:var(--yellow)}
+.area-map{margin-top:28px}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:860px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 20px}
+summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;font-family:var(--head);font-stretch:105%;font-weight:750;font-size:18.5px;color:var(--blue);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font-size:28px;color:var(--copper);font-weight:500}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:0 0 18px}
+
+/* form */
+.formbox{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 20px;display:grid;gap:26px}
+form{display:grid;gap:14px}
+label{font-weight:700;font-size:15px;display:grid;gap:6px;color:var(--ink)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--frost);border:1.5px solid #B6C4D1;border-radius:10px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:3px solid rgba(255,197,49,.6);outline-offset:0}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;gap:14px}
+.btn-send{background:var(--blue);color:#fff;padding:16px 22px;font-size:18px;box-shadow:0 4px 0 var(--blue-d)}
+.formmsg{display:none;background:#E6F6EC;border:1px solid #6BBF8A;color:#164A2B;border-radius:10px;padding:14px 16px;font-weight:600}
+.formmsg.show{display:block}
+.form-side{background:var(--frost);border-radius:14px;padding:20px}
+.form-side h3{margin-bottom:8px}
+.form-side p{color:var(--muted);font-size:16px}
+
+/* contact */
+.contact{background:#fff;border-top:1px solid var(--line)}
+.cgrid{display:grid;gap:18px}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--frost)}
+.card h3{font-size:18px;margin-bottom:10px}
+.bigtel{font-family:var(--head);font-stretch:118%;font-weight:900;font-size:clamp(30px,7.4vw,40px);color:var(--blue);text-decoration:none;display:block;line-height:1.1}
+.card a{font-weight:700}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:7px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:var(--copper)}
+.hours tr.today td:first-child::after{content:" · dnes";font-weight:600;font-size:13px}
+.nsline{margin-top:12px;background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;font-weight:700;font-size:15px}
+.nsline span{color:var(--yellow)}
+
+footer{background:var(--blue-d);color:#C9D7E3;padding:40px 0 120px;font-size:15px}
+footer a{color:#fff}
+footer .fgrid{display:grid;gap:18px}
+footer b{color:#fff}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--blue-d);border-top:3px solid var(--yellow)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-family:var(--head);font-weight:800;font-stretch:110%;border-radius:10px;padding:13px 12px;font-size:17px}
+.callbar .c1{background:var(--yellow);color:var(--black)}
+.callbar .c2{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);font-size:15px}
+
+@media (min-width:640px){
+  .btn-head span{display:inline}
+  .btn-big,.btn-black{width:auto}
+  .row2{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .svc.ns{grid-column:1/-1}
+  .gal{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ph.wide{grid-column:span 2;aspect-ratio:auto}
+  .facts{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .cgrid{grid-template-columns:1fr 1fr}
+  footer .fgrid{grid-template-columns:2fr 1fr 1fr}
+}
+@media (min-width:960px){
+  body{font-size:17.5px}
+  section{padding:104px 0}
+  nav.menu{display:flex}
+  .callbar{display:none}
+  footer{padding-bottom:44px}
+  .hero{min-height:760px}
+  .hero-in{padding:72px 20px 0;min-height:760px}
+  .hero-text{max-width:780px}
+  .hero h1{font-size:clamp(52px,4.6vw,70px);max-width:none}
+  .hero h1 em{display:block}
+  .hero p.sub{max-width:560px}
+  .scene{position:absolute;inset:0;width:100%;height:100%}
+  .scene .lbl{font-size:17px}
+  .alarm{padding-top:40px}
+  .hazard-in{padding:40px 44px;display:grid;grid-template-columns:1fr;gap:4px}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .steps li{grid-template-columns:1fr;gap:12px;padding:18px;align-content:start}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .svc.ns{grid-column:span 2}
+  .big-proof{grid-template-columns:auto 1fr;align-items:center;padding:40px 44px;gap:44px}
+  .trust-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
+  .facts{grid-template-columns:1fr;margin-top:0}
+  .proc{grid-template-columns:repeat(3,1fr)}
+  .formbox{grid-template-columns:1.5fr 1fr;padding:40px}
+  .cgrid{grid-template-columns:1.1fr 1fr 1fr}
+  .area-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .area-map{margin-top:0}
+}
+@media (max-width:959px){
+  .scene .lbl{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<div class="proto" role="note">Nezávazný návrh webu – <strong>není to oficiální stránka firmy Instalatérství Lukáš Kaňák</strong></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Instalatérství Lukáš Kaňák – úvod">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#0B3C5D"/>
+        <path d="M9 12h12a8 8 0 0 1 8 8v11" fill="none" stroke="#B4532A" stroke-width="6" stroke-linecap="round"/>
+        <path d="M9 12h12a8 8 0 0 1 8 8v11" fill="none" stroke="#FFC531" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round"/>
+        <circle cx="29" cy="33" r="2.4" fill="#BFE6FF"/>
+      </svg>
+      <span><b>KAŇÁK</b><small>instalatér · topenář · Havířov</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní menu">
+      <a href="#sluzby">Služby</a><a href="#proc">Proč já</a><a href="#realizace">Realizace</a><a href="#oblast">Kde jezdím</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="btn btn-call btn-head" href="tel:+420731389791" aria-label="Zavolat 731 389 791">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span>731 389 791</span>
+    </a>
+  </div>
+</header>
+
+<main id="obsah">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-in">
+    <div class="hero-text">
+      <div class="status" id="status" aria-live="polite">
+        <span class="dot"></span><span id="status-txt">Po–Pá 7–17, So 8–12</span><span class="sep">|</span><span class="ns">Havarijní služba NONSTOP</span>
+      </div>
+      <h1 id="h1">Instalatér v Havířově. <em>I v noci, když teče.</em></h1>
+      <p class="sub">Rozvody vody a topení, výměny kotlů a opravy pro domácnosti v Havířově a okolí. Voláte přímo řemeslníkovi, který přijede.</p>
+      <div class="cta-row">
+        <a class="btn btn-call btn-big" href="tel:+420731389791">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          Zavolat 731 389 791
+        </a>
+        <a class="btn btn-ghost" style="padding:15px 20px;font-size:17px" href="#poptavka">Napsat poptávku</a>
+      </div>
+      <a class="rating" href="https://www.firmy.cz/detail/13498196-instalaterstvi-lukas-kanak-havirov-sumbark.html#hodnoceni" target="_blank" rel="noopener">
+        <span class="score">4,8</span><span class="stars" aria-hidden="true">★★★★★</span><span>z <u>25 hodnocení na Firmy.cz</u></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Řez zdí: měděné trubky, kohouty, radiátor, proudící voda -->
+  <svg class="scene" viewBox="0 0 1440 760" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Ilustrace: řez zdí s měděnými trubkami, kohouty a radiátorem, kterými proudí voda">
+    <defs>
+      <pattern id="brick" width="96" height="48" patternUnits="userSpaceOnUse">
+        <rect width="96" height="48" fill="#0B3C5D"/>
+        <path d="M0 0.5H96M0 24.5H96M48 0V24M0 24V48M96 24V48" stroke="#0E466B" stroke-width="2"/>
+      </pattern>
+      <linearGradient id="cu" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#E08A5C"/><stop offset=".45" stop-color="#B4532A"/><stop offset="1" stop-color="#7E3418"/>
+      </linearGradient>
+      <linearGradient id="cuv" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#E08A5C"/><stop offset=".45" stop-color="#B4532A"/><stop offset="1" stop-color="#7E3418"/>
+      </linearGradient>
+      <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#0B3C5D" stop-opacity=".92"/><stop offset=".42" stop-color="#0B3C5D" stop-opacity=".55"/><stop offset=".7" stop-color="#0B3C5D" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="rad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#E9EEF3"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#C9D4DE"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="760" fill="url(#brick)"/>
+    <!-- vertical cutaway channel -->
+    <rect x="928" y="0" width="150" height="760" fill="#062437"/>
+    <rect x="928" y="0" width="150" height="760" fill="none" stroke="#2A6A94" stroke-width="2" stroke-dasharray="8 8"/>
+    <!-- horizontal cutaway channel at floor -->
+    <rect x="0" y="600" width="1440" height="122" fill="#062437"/>
+    <path d="M0 600H1440M0 722H1440" stroke="#2A6A94" stroke-width="2" stroke-dasharray="8 8"/>
+    <rect x="0" y="722" width="1440" height="38" fill="#072A42"/>
+    <path d="M0 722H1440" stroke="#FFC531" stroke-width="3" opacity=".9"/>
+
+    <!-- pipes: cold (lower), hot (upper) -->
+    <g>
+      <!-- hot supply: floor -> up channel -> radiator -->
+      <path d="M-20 640H970V250H1150" fill="none" stroke="url(#cu)" stroke-width="20" stroke-linejoin="round"/>
+      <path d="M-20 640H970V250H1150" fill="none" stroke="#7E3418" stroke-width="9" stroke-linejoin="round"/>
+      <path class="water hot" d="M-20 640H970V250H1150" stroke-width="4"/>
+      <!-- return / cold: floor -> up channel -> radiator bottom -->
+      <path d="M1460 690H1036V470H1150" fill="none" stroke="url(#cu)" stroke-width="20" stroke-linejoin="round"/>
+      <path d="M1460 690H1036V470H1150" fill="none" stroke="#7E3418" stroke-width="9" stroke-linejoin="round"/>
+      <path class="water cold slow" d="M1150 470H1036V690H1460" stroke-width="4"/>
+      <!-- cold water line along floor -->
+      <path d="M-20 690H900" fill="none" stroke="url(#cu)" stroke-width="20"/>
+      <path d="M-20 690H900" fill="none" stroke="#7E3418" stroke-width="9"/>
+      <path class="water cold" d="M-20 690H900" stroke-width="4"/>
+      <!-- branch up to tap -->
+      <path d="M760 690V520" fill="none" stroke="url(#cuv)" stroke-width="16"/>
+      <path class="water cold" d="M760 690V520" stroke-width="3"/>
+    </g>
+    <!-- fittings / clamps -->
+    <g fill="#8E3F1E">
+      <rect x="300" y="626" width="16" height="28" rx="3"/><rect x="300" y="676" width="16" height="28" rx="3"/>
+      <rect x="620" y="626" width="16" height="28" rx="3"/><rect x="620" y="676" width="16" height="28" rx="3"/>
+      <rect x="956" y="400" width="28" height="16" rx="3"/><rect x="1022" y="580" width="28" height="16" rx="3"/>
+    </g>
+    <!-- main shutoff valve (cold line) -->
+    <g transform="translate(180 690)">
+      <rect x="-26" y="-20" width="52" height="40" rx="6" fill="#C9D4DE"/>
+      <rect x="-6" y="-58" width="12" height="40" fill="#9AA9B6"/>
+      <rect x="-46" y="-70" width="92" height="18" rx="9" fill="#FFC531"/>
+    </g>
+    <text class="lbl" x="128" y="748">hlavní uzávěr</text>
+    <!-- water meter -->
+    <g transform="translate(470 690)">
+      <rect x="-40" y="-26" width="80" height="52" rx="10" fill="#E9EEF3"/>
+      <circle r="17" fill="#0B3C5D"/><circle r="12" fill="#BFE6FF"/>
+      <path d="M0 0L7-7" stroke="#B4532A" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <text class="lbl" x="436" y="748">vodoměr</text>
+    <!-- tap with drip -->
+    <g transform="translate(760 520)">
+      <rect x="-14" y="-30" width="28" height="34" rx="5" fill="#C9D4DE"/>
+      <rect x="-40" y="-46" width="80" height="14" rx="7" fill="#FFC531"/>
+      <path d="M14 -16H46V2" fill="none" stroke="#C9D4DE" stroke-width="14" stroke-linecap="round"/>
+      <circle class="drip" cx="46" cy="16" r="6" fill="#BFE6FF"/>
+    </g>
+    <!-- valve on hot riser -->
+    <g transform="translate(970 330)">
+      <rect x="-22" y="-22" width="44" height="44" rx="6" fill="#C9D4DE"/>
+      <rect x="22" y="-6" width="40" height="12" fill="#9AA9B6"/>
+      <rect x="58" y="-30" width="16" height="60" rx="8" fill="#FFC531"/>
+    </g>
+    <!-- radiator -->
+    <g transform="translate(1150 200)">
+      <rect x="0" y="0" width="250" height="320" rx="12" fill="url(#rad)"/>
+      <g fill="#C9D4DE">
+        <rect x="18" y="18" width="18" height="284" rx="9"/><rect x="58" y="18" width="18" height="284" rx="9"/>
+        <rect x="98" y="18" width="18" height="284" rx="9"/><rect x="138" y="18" width="18" height="284" rx="9"/>
+        <rect x="178" y="18" width="18" height="284" rx="9"/><rect x="218" y="18" width="18" height="284" rx="9"/>
+      </g>
+      <g stroke="#FFC531" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9">
+        <path d="M60 -26c-12-16 12-24 0-42"/><path d="M125 -26c-12-16 12-24 0-42"/><path d="M190 -26c-12-16 12-24 0-42"/>
+      </g>
+      <rect x="-12" y="38" width="24" height="24" rx="5" fill="#9AA9B6"/>
+      <rect x="-12" y="258" width="24" height="24" rx="5" fill="#9AA9B6"/>
+    </g>
+    <text class="lbl" x="1180" y="560">radiátor</text>
+    <rect width="1440" height="600" fill="url(#fade)"/>
+  </svg>
+</section>
+
+<!-- HAVARIJNÍ KARTA -->
+<section class="alarm" id="havarie" aria-labelledby="h-hav">
+  <div class="wrap">
+    <div class="hazard">
+      <div class="hazard-in">
+        <p class="eyebrow">Havarijní karta</p>
+        <h2 id="h-hav">Teče Vám voda? Co udělat, než přijedu.</h2>
+        <p class="k">Čtyři kroky, které omezí škodu. Uložte si tuto stránku – v panice se hodí.</p>
+        <ol class="steps">
+          <li><span class="n"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 20h24" stroke="#FFC531" stroke-width="5" stroke-linecap="round"/><rect x="12" y="14" width="8" height="12" rx="2" fill="#FFC531"/><rect x="6" y="6" width="20" height="6" rx="3" fill="#FFC531"/></svg></span>
+            <div><b>1. Zavřete hlavní uzávěr vody</b><small>Bývá u vodoměru – ve sklepě, v šachtě v bytě nebo v technické místnosti. Otočte po směru hodinových ručiček.</small></div></li>
+          <li><span class="n"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M18 3 7 18h8l-2 11 12-16h-8z" fill="#FFC531"/></svg></span>
+            <div><b>2. Vypněte kotel a elektřinu v zasažené části</b><small>Kotel vypínačem, mokrou místnost jističem v rozvaděči. Na mokré zásuvky nesahejte.</small></div></li>
+          <li><span class="n"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 11h18l-2 16H9z" fill="#FFC531"/><path d="M10 11c0-4 12-4 12 0" stroke="#FFC531" stroke-width="2.5" fill="none"/><path d="M16 15c-2 3-3 4-3 6a3 3 0 0 0 6 0c0-2-1-3-3-6z" fill="#111417"/></svg></span>
+            <div><b>3. Odčerpejte a podložte</b><small>Kbelík pod únik, ručníky na podlahu, cennosti a elektroniku pryč z dosahu vody.</small></div></li>
+          <li><span class="n"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFC531" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+            <div><b>4. Zavolejte – havarijní služba NONSTOP</b><small>Řekněte, co teče, odkud a kde v Havířově nebo okolí jste.</small></div></li>
+        </ol>
+        <a class="btn btn-black" href="tel:+420731389791">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          Havárie: 731 389 791
+        </a>
+        <p class="note">Únik plynu nehlaste instalatérovi – volejte plynárenskou pohotovost 1239 nebo 112.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY -->
+<section id="sluzby" aria-labelledby="h-sl">
+  <div class="wrap">
+    <p class="eyebrow">Služby</p>
+    <h2 id="h-sl">Voda, topení, kotle. Od kapky po celý rozvod.</h2>
+    <p class="lead">Instalatérské a topenářské práce v rodinných domech i panelových bytech.</p>
+    <div class="grid" style="margin-top:32px">
+      <article class="svc">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="3" width="18" height="26" rx="3" fill="none" stroke="#0B3C5D" stroke-width="2.5"/><path d="M16 12c-3 4-4 5-4 7.5a4 4 0 0 0 8 0c0-2.5-1-3.5-4-7.5z" fill="#B4532A"/><path d="M11 29v2M21 29v2" stroke="#0B3C5D" stroke-width="2.5"/></svg></div>
+        <h3>Instalace a výměny kotlů</h3>
+        <p>Starý kotel demontuji, nový namontuji a připojím na stávající rozvod topení i vody.</p>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 9h12a6 6 0 0 1 6 6v14" fill="none" stroke="#B4532A" stroke-width="5"/><path d="M3 21h4a4 4 0 0 1 4 4v4" fill="none" stroke="#0B3C5D" stroke-width="3.5"/></svg></div>
+        <h3>Rozvody vody a topení</h3>
+        <p>Nové i rekonstruované rozvody v rodinných domech a panelových bytech, od stoupačky po baterii.</p>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M21 4a7 7 0 0 0-6.6 9.3L4.5 23.2a2.6 2.6 0 0 0 3.7 3.7l9.9-9.9A7 7 0 0 0 27.4 10l-4 4-3.8-1-1-3.8 4-4A7 7 0 0 0 21 4z" fill="#0B3C5D"/></svg></div>
+        <h3>Opravy vody a topení</h3>
+        <p>Kapající baterie, protékající WC, netěsný spoj nebo topení, které nehřeje – najdu příčinu a opravím ji.</p>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="3" width="14" height="24" rx="7" fill="none" stroke="#0B3C5D" stroke-width="2.5"/><path d="M12 29h8" stroke="#0B3C5D" stroke-width="2.5"/><path d="M13 16h6M13 20h6" stroke="#B4532A" stroke-width="2.5"/></svg></div>
+        <h3>Výměna bojleru</h3>
+        <p>Vyměním dosloužilý ohřívač vody a zapojím nový, aby teplá voda zase tekla.</p>
+        <div class="price">Cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+      <article class="svc ns">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c-5 7-8 10.5-8 15a8 8 0 0 0 16 0c0-4.5-3-8-8-15z" fill="#FFC531"/><path d="M16 12v7M16 22.5v.5" stroke="#0B3C5D" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3>Havarijní služba NONSTOP</h3>
+        <p>Prasklá trubka, únik u pračky, voda u sousedů pod Vámi. Volejte kdykoli – i v noci a o víkendu. Než přijedu, řiďte se <a href="#havarie">havarijní kartou</a>.</p>
+        <div class="price">Výjezd: cena na dotaz <span class="demo">ukázkový text</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROČ / DŮVĚRA -->
+<section class="trust" id="proc" aria-labelledby="h-pr">
+  <div class="wrap">
+    <p class="eyebrow">Proč volat mně</p>
+    <h2 id="h-pr">Hodnotí mě lidé z Havířova, ne reklama.</h2>
+    <div class="trust-grid" style="margin-top:30px">
+      <div class="big-proof">
+        <div class="num">4,8<small>/ 5</small></div>
+        <div>
+          <p><strong style="color:#fff;font-size:19px">25 hodnocení na Firmy.cz</strong><br>Zákazníci nejčastěji oceňují:</p>
+          <div class="chips"><span>Cena</span><span>Termíny</span><span>Kvalita</span><span>Komunikace</span></div>
+          <p style="margin-top:16px"><a href="https://www.firmy.cz/detail/13498196-instalaterstvi-lukas-kanak-havirov-sumbark.html#hodnoceni" target="_blank" rel="noopener">Přečíst recenze na Firmy.cz →</a></p>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="fact"><h3>3. místo v žebříčku Firmy.cz</h3><p>Instalatérství a topenářství v Karviné (okres) – stav k 13. 10. 2026.</p></div>
+        <div class="fact"><h3>Přijel i o víkendu</h3><p>Zákaznice s únikem vody u pračky popisuje, že termín dostala hned další den, přestože byl víkend.</p></div>
+        <div class="fact"><h3>Opraví i práci po jiném</h3><p>Podle recenze vyřešil hned na místě problém, který vznikl neodbornou instalací předchozího instalatéra.</p></div>
+        <div class="fact"><h3>Jednáte přímo s řemeslníkem</h3><p>Živnostník, IČO 07088434. Kdo zvedne telefon, ten přijede a práci udělá.</p></div>
+      </div>
+    </div>
+    <p class="voice">„Rychle, poctivě a profesionálně.“<small>Lukáš Kaňák o své práci (popis firmy na Firmy.cz)</small></p>
+  </div>
+</section>
+
+<!-- REALIZACE -->
+<section id="realizace" aria-labelledby="h-re">
+  <div class="wrap">
+    <p class="eyebrow">Realizace</p>
+    <h2 id="h-re">Skutečné zakázky místo fotek z fotobanky.</h2>
+    <p class="lead">Tady budou fotky Vaší práce: před a po, s krátkým popisem a místem.</p>
+    <div class="gal" style="margin-top:30px">
+      <div class="ph wide"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><path fill="#44586A" d="M4 5h3l2-2h6l2 2h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>Sem přijde Vaše fotka<span class="cap">Výměna kotle, rodinný dům <span class="demo">ukázkový text</span></span></div>
+      <div class="ph"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="#44586A" d="M4 5h3l2-2h6l2 2h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>Sem přijde Vaše fotka<span class="cap">Rozvody v panelovém bytě <span class="demo">ukázkový text</span></span></div>
+      <div class="ph"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="#44586A" d="M4 5h3l2-2h6l2 2h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>Sem přijde Vaše fotka<span class="cap">Nový záchod při rekonstrukci <span class="demo">ukázkový text</span></span></div>
+      <div class="ph"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="#44586A" d="M4 5h3l2-2h6l2 2h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>Sem přijde Vaše fotka<span class="cap">Výměna bojleru <span class="demo">ukázkový text</span></span></div>
+      <div class="ph"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="#44586A" d="M4 5h3l2-2h6l2 2h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>Sem přijde Vaše fotka<span class="cap">Oprava po havárii <span class="demo">ukázkový text</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK TO PROBÍHÁ -->
+<section style="padding-top:0" aria-labelledby="h-pc">
+  <div class="wrap">
+    <p class="eyebrow">Jak to probíhá</p>
+    <h2 id="h-pc">Tři kroky. Žádné papírování navíc.</h2>
+    <div class="proc" style="margin-top:30px">
+      <div class="pstep"><div class="pn">01</div><h3>Zavoláte nebo napíšete</h3><p>Popíšete, co se děje, kde bydlíte a jak je to naléhavé. Fotka problému pomůže.</p></div>
+      <div class="pstep"><div class="pn">02</div><h3>Domluvíme termín</h3><p>Běžné práce v otevírací době, havárie NONSTOP. Rozsah a cenu probereme před začátkem práce. <span class="demo">ukázkový text</span></p></div>
+      <div class="pstep"><div class="pn">03</div><h3>Přijedu a opravím</h3><p>Práci dokončím, vyzkoušíme ji spolu a ukážu Vám, kde máte uzávěry. <span class="demo">ukázkový text</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBLAST -->
+<section class="area" id="oblast" aria-labelledby="h-ob">
+  <div class="wrap area-in">
+    <div>
+      <p class="eyebrow">Kde jezdím</p>
+      <h2 id="h-ob">Havířov a okolí. Ze Šumbarku jsem u Vás rychle.</h2>
+      <p class="lead">Sídlo mám na Šumbarku. Jezdím po celém Havířově a do okolních obcí.</p>
+      <ul class="towns">
+        <li class="main">Havířov – všechny části</li>
+        <li>Petřvald</li><li>Horní Suchá</li><li>Těrlicko</li><li>Albrechtice</li><li>Šenov</li><li>Orlová</li><li>Karviná</li><li>Ostrava-Jih</li>
+      </ul>
+      <p style="font-size:14.5px;color:#DCE7F0">Seznam okolních obcí <span class="demo">ukázkový text</span> – Vaše obec chybí? Zavolejte.</p>
+    </div>
+    <div class="area-map">
+      <svg viewBox="0 0 520 380" width="100%" role="img" aria-label="Schematická mapa: Havířov uprostřed, okolní obce kolem">
+        <rect width="520" height="380" rx="20" fill="#0E4A72"/>
+        <g stroke="#2A6A94" stroke-width="1"><path d="M0 95H520M0 190H520M0 285H520M130 0V380M260 0V380M390 0V380"/></g>
+        <circle cx="260" cy="200" r="150" fill="none" stroke="#FFC531" stroke-width="2" stroke-dasharray="6 8" opacity=".7"/>
+        <circle cx="260" cy="200" r="70" fill="#FFC531" opacity=".16"/>
+        <path d="M120 120C180 150 220 170 260 200S360 250 420 300" fill="none" stroke="#B4532A" stroke-width="7" stroke-linecap="round"/>
+        <path d="M120 120C180 150 220 170 260 200S360 250 420 300" fill="none" stroke="#FFD873" stroke-width="2" stroke-dasharray="8 10" class="water hot" style="stroke-width:2"/>
+        <circle cx="260" cy="200" r="13" fill="#FFC531"/><circle cx="260" cy="200" r="5" fill="#0B3C5D"/>
+        <g font-family="Figtree,Arial,sans-serif" font-weight="700" fill="#FFFFFF" font-size="17">
+          <text x="280" y="196">Havířov</text>
+        </g>
+        <g font-family="Figtree,Arial,sans-serif" font-weight="600" fill="#DCE7F0" font-size="14">
+          <circle cx="210" cy="95" r="5" fill="#DCE7F0"/><text x="220" y="100">Petřvald</text>
+          <circle cx="345" cy="78" r="5" fill="#DCE7F0"/><text x="355" y="83">Orlová</text>
+          <circle cx="430" cy="140" r="5" fill="#DCE7F0"/><text x="380" y="128">Karviná</text>
+          <circle cx="345" cy="285" r="5" fill="#DCE7F0"/><text x="355" y="290">Horní Suchá</text>
+          <circle cx="250" cy="330" r="5" fill="#DCE7F0"/><text x="190" y="355">Těrlicko</text>
+          <circle cx="115" cy="225" r="5" fill="#DCE7F0"/><text x="58" y="252">Šenov</text>
+          <circle cx="70" cy="110" r="5" fill="#DCE7F0"/><text x="28" y="96">Ostrava</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="h-fq">
+  <div class="wrap">
+    <p class="eyebrow">Časté otázky</p>
+    <h2 id="h-fq">Na co se lidé ptají nejčastěji</h2>
+    <div class="faq" style="margin-top:28px">
+      <details open><summary>Teče mi voda. Co mám udělat jako první?</summary><p>Zavřete hlavní uzávěr vody, vypněte kotel a elektřinu v zasažené části, podložte a odčerpejte vodu a zavolejte na 731 389 791. Vše krok za krokem je v <a href="#havarie">havarijní kartě</a> výše.</p></details>
+      <details><summary>Přijedete i v noci nebo o víkendu?</summary><p>Ano, pro havárie funguje havarijní služba NONSTOP. Běžné práce domlouvám v otevírací době Po–Pá 7–17 a So 8–12.</p></details>
+      <details><summary>Kolik stojí výjezd a oprava?</summary><p>Ceny nejsou zveřejněné, záleží na rozsahu práce a materiálu. Popište problém po telefonu nebo ve formuláři a cenu probereme předem. <span class="demo">ukázkový text</span></p></details>
+      <details><summary>Děláte rozvody i v paneláku?</summary><p>Ano. Rozvody vody a topení dělám v rodinných domech i v panelových bytech, včetně oprav stávajících rozvodů.</p></details>
+      <details><summary>Vyměníte mi starý kotel?</summary><p>Ano, instalace a výměny kotlů patří k hlavním službám. Typ a značku kotle i případné úpravy rozvodu probereme na místě. <span class="demo">ukázkový text</span></p></details>
+    </div>
+  </div>
+</section>
+
+<!-- POPTÁVKA -->
+<section id="poptavka" style="padding-top:0" aria-labelledby="h-po">
+  <div class="wrap">
+    <div class="formbox">
+      <div>
+        <p class="eyebrow">Poptávka</p>
+        <h2 id="h-po">Nespěchá to? Napište mi.</h2>
+        <form id="form" novalidate>
+          <div class="row2">
+            <label>Jméno<input name="jmeno" autocomplete="name" required></label>
+            <label>Telefon<input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
+          </div>
+          <div class="row2">
+            <label>Obec / část Havířova<input name="obec" placeholder="např. Podlesí"></label>
+            <label>Co potřebujete<select name="typ"><option>Oprava</option><option>Výměna kotle</option><option>Rozvody vody a topení</option><option>Výměna bojleru</option><option>Jiné</option></select></label>
+          </div>
+          <label>Popis<textarea name="popis" placeholder="Co se děje, odkdy a kde – stačí pár vět."></textarea></label>
+          <button class="btn btn-send" type="submit">Odeslat poptávku</button>
+          <div class="formmsg" id="formmsg" role="status">Toto je ukázka formuláře v návrhu. Ve finálním webu se poptávka odešle přímo na e-mail firmy.</div>
+        </form>
+      </div>
+      <aside class="form-side">
+        <h3>Teče to právě teď?</h3>
+        <p>Nepište. U havárie rozhoduje každá minuta – volejte rovnou.</p>
+        <a class="btn btn-call" style="padding:15px 18px;font-size:18px;width:100%" href="tel:+420731389791">Zavolat 731 389 791</a>
+        <p style="margin:18px 0 0">Nebo e-mail: <a href="mailto:lukas.kanak7@post.cz" style="font-weight:700">lukas.kanak7@post.cz</a></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact" id="kontakt" aria-labelledby="h-ko">
+  <div class="wrap">
+    <p class="eyebrow">Kontakt</p>
+    <h2 id="h-ko">Instalatérství Lukáš Kaňák</h2>
+    <div class="cgrid" style="margin-top:26px">
+      <div class="card">
+        <h3>Telefon a e-mail</h3>
+        <a class="bigtel" href="tel:+420731389791">731 389 791</a>
+        <p style="margin:12px 0 0"><a href="mailto:lukas.kanak7@post.cz">lukas.kanak7@post.cz</a></p>
+        <p style="margin:12px 0 0"><a href="https://www.facebook.com/profile.php?id=100093570386595" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+      <div class="card">
+        <h3>Adresa</h3>
+        <p style="margin:0 0 12px">Moravská 394/11<br>736 01 Havířov-Šumbark</p>
+        <a href="https://mapy.cz/zakladni?q=Moravsk%C3%A1%20394%2F11%2C%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Ukázat na Mapy.cz →</a>
+        <p style="margin:14px 0 0;font-size:15px;color:var(--muted)">IČO 07088434</p>
+      </div>
+      <div class="card">
+        <h3>Otevírací doba</h3>
+        <table class="hours" id="hours">
+          <tr data-d="1"><td>Pondělí</td><td>7:00–17:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>7:00–17:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>7:00–17:00</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>7:00–17:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>7:00–17:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>8:00–12:00</td></tr>
+          <tr data-d="7"><td>Neděle</td><td>zavřeno</td></tr>
+        </table>
+        <div class="nsline">Havárie: <span>NONSTOP</span> na 731 389 791</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div><b>Instalatérství Lukáš Kaňák</b><br>Instalatér a topenář pro Havířov a okolí.<br>IČO 07088434</div>
+    <div><b>Kontakt</b><br><a href="tel:+420731389791">731 389 791</a><br><a href="mailto:lukas.kanak7@post.cz">lukas.kanak7@post.cz</a></div>
+    <div><b>Návrh webu</b><br>Nezávazný návrh modernizace webu. Není to oficiální stránka firmy.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420731389791"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 731 389 791</a>
+  <a class="c2" href="#havarie">Havárie?</a>
+</nav>
+
+<script>
+(function(){
+  // Ověřená otevírací doba (Firmy.cz): Po–Pá 7–17, So 8–12, Ne zavřeno. Čas Europe/Prague.
+  var H={1:[7,17],2:[7,17],3:[7,17],4:[7,17],5:[7,17],6:[8,12]};
+  var names={1:"v pondělí",2:"v úterý",3:"ve středu",4:"ve čtvrtek",5:"v pátek",6:"v sobotu",7:"v neděli"};
+  function now(){
+    try{
+      var p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+      var o={};p.forEach(function(x){o[x.type]=x.value});
+      var d={Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:7}[o.weekday];
+      return {d:d,m:parseInt(o.hour,10)*60+parseInt(o.minute,10)};
+    }catch(e){return null}
+  }
+  function update(){
+    var t=now(), el=document.getElementById("status"), tx=document.getElementById("status-txt");
+    if(!t||!el)return;
+    var h=H[t.d], open=h&&t.m>=h[0]*60&&t.m<h[1]*60;
+    if(open){
+      el.classList.add("is-open");
+      tx.textContent="Teď máme otevřeno · dnes do "+h[1]+":00";
+    }else{
+      el.classList.remove("is-open");
+      var msg="";
+      if(h&&t.m<h[0]*60){msg="dnes v "+h[0]+":00";}
+      else{
+        for(var i=1;i<=7;i++){var dd=((t.d-1+i)%7)+1;if(H[dd]){msg=(i===1?"zítra":names[dd])+" v "+H[dd][0]+":00";break;}}
+      }
+      tx.textContent="Teď je zavřeno · otevíráme "+msg;
+    }
+    var rows=document.querySelectorAll("#hours tr");
+    for(var j=0;j<rows.length;j++){rows[j].classList.toggle("today",+rows[j].getAttribute("data-d")===t.d);}
+  }
+  update(); setInterval(update,60000);
+
+  var f=document.getElementById("form");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var m=document.getElementById("formmsg"); m.classList.add("show"); m.focus&&m.focus();
+  });
+})();
+</script>
+</body>
+</html>

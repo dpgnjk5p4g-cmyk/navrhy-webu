@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Instalatérské, topenářské práce Roman Macura</title>
+<meta name="description" content="Instalatér a topenář Roman Macura, Třinec-Staré Město: výměna rozvodů vody, topení, kanalizace a plynu, montáž kotlů, tepelných čerpadel a solárního ohřevu, čištění odpadů, jádrové vrtání. Nonstop pohotovost.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;800;900&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Instalatérské, topenářské práce Roman Macura",
+  "telephone": "+420792493362",
+  "email": "inmar@post.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "88215628"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Komenského 677",
+    "addressLocality": "Třinec – Staré Město",
+    "postalCode": "739 61",
+    "addressCountry": "CZ"
+  },
+  "areaServed": "Třinec a okolí",
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "bestRating": "5", "reviewCount": "10"}
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/*
+  KONCEPT ROZLOŽENÍ – „Od kotle po kohoutek“
+  1) Pás s upozorněním, lepkavá hlavička s telefonem.
+  2) Hero: obří tučný slab nápis přes celou šířku na popelavém papíře, hodnocení 5,0 z Firmy.cz,
+     pod ním pás se siluetou beskydských kopců, smrků a komínů (kouř se pomalu vlní).
+  3) Uhelný pás „Čím topíte?“ – pět velkých dlaždic, každá otevře konkrétní práce, tip a předvyplněnou poptávku.
+  4) Služby s ikonami + menší blok „Odpady a vrtání“, proč já, realizace (místa na fotky),
+     3 kroky zakázky, kde pracuji, časté otázky, poptávkový formulář, kontakt.
+  Mobil: stálý pruh „Zavolat“ dole.
+*/
+:root{
+  --coal:#3A2A1F;
+  --coal-2:#2B1F17;
+  --coal-3:#4B382A;
+  --flame:#D9480F;          /* jen dekor a velké plochy */
+  --flame-ink:#B23A0B;      /* text a tlačítka na světlém (5,3 : 1 na papíře) */
+  --flame-light:#F08A4B;    /* text na uhelném podkladu (5,5 : 1) */
+  --paper:#F6F1E7;
+  --paper-2:#EDE4D3;
+  --paper-3:#E2D6C0;
+  --spruce:#3F6B4A;
+  --spruce-dark:#2F5238;
+  --ink:#3A2A1F;
+  --muted:#6B5A4C;
+  --on-dark:#F6F1E7;
+  --on-dark-muted:#C9BBA6;
+  --white:#FFFFFF;
+  --line:#D6C8B0;
+  --hill-far:#B9AE97;
+  --hill-mid:#7E8C70;
+  --hill-near:#3F6B4A;
+  --smoke:#A89B88;
+  --focus:#1F5FBF;
+  --radius:14px;
+  --shadow:0 2px 0 var(--coal);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cabin",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:17px;line-height:1.6}
+.page{overflow-x:clip}
+h1,h2,h3{font-family:"Bitter",Georgia,"Times New Roman",serif;line-height:1.1;margin:0;text-wrap:balance;color:var(--coal)}
+h2{font-size:clamp(30px,5.4vw,52px);font-weight:900;letter-spacing:-.01em}
+h3{font-size:21px;font-weight:800}
+p{margin:0 0 1em;max-width:65ch}
+a{color:var(--flame-ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:72px}
+.kicker{display:inline-block;font-family:"Cabin",sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--flame-ink);margin-bottom:14px}
+.ukazka{display:inline-block;font-family:"Cabin",sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--paper-3);color:var(--coal);border:1px dashed var(--muted);border-radius:4px;padding:1px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+
+/* Upozornění */
+.notice{background:var(--coal-2);color:var(--on-dark);font-size:14px;text-align:center}
+.notice .wrap{padding-block:8px}
+
+/* Hlavička */
+.head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:2px solid var(--coal)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--coal)}
+.brand-mark{width:40px;height:40px;flex:none}
+.brand b{display:block;font-family:"Bitter",serif;font-weight:900;font-size:19px;line-height:1}
+.brand small{display:block;font-size:13px;color:var(--muted);line-height:1.3}
+.nav{display:none;gap:22px}
+.nav a{color:var(--coal);text-decoration:none;font-weight:600;font-size:15px}
+.nav a:hover{color:var(--flame-ink)}
+.head-tel{display:inline-flex;align-items:center;gap:8px;background:var(--flame-ink);color:var(--white);text-decoration:none;font-weight:700;border-radius:999px;padding:9px 14px;font-size:15px;white-space:nowrap}
+.head-tel svg{width:18px;height:18px}
+.head-tel .num{display:none}
+
+/* Hero */
+.hero{padding-top:28px}
+.hero-top{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin-bottom:16px;font-weight:600;font-size:15px}
+.pin{display:inline-flex;align-items:center;gap:6px;color:var(--spruce-dark)}
+.pin svg{width:16px;height:16px}
+.sos{display:inline-flex;align-items:center;gap:7px;color:var(--flame-ink)}
+.sos::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--flame)}
+.hero h1{font-size:clamp(40px,10.6vw,128px);font-weight:900;letter-spacing:-.025em;line-height:.98}
+.hero h1 em{font-style:normal;color:var(--flame-ink);display:block}
+.hero-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:22px}
+.hero-lead{font-size:18px;max-width:46ch;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Cabin",sans-serif;font-weight:700;font-size:17px;text-decoration:none;border-radius:12px;padding:14px 20px;border:2px solid var(--coal);cursor:pointer;line-height:1.1}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-fire{background:var(--flame-ink);border-color:var(--flame-ink);color:var(--white);box-shadow:0 4px 0 var(--coal)}
+.btn-fire:hover{background:var(--coal)}
+.btn-line{background:transparent;color:var(--coal)}
+.btn-line:hover{background:var(--coal);color:var(--paper)}
+.rating{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--coal);border:2px solid var(--coal);border-radius:12px;padding:8px 14px;background:var(--white)}
+.rating strong{font-family:"Bitter",serif;font-size:26px;font-weight:900;line-height:1}
+.stars{color:var(--flame-ink);letter-spacing:2px;font-size:17px}
+.rating span{font-size:14px;line-height:1.25}
+.rating span u{text-decoration-color:var(--flame)}
+
+/* Krajina */
+.ridge{display:block;width:100%;height:150px;margin-top:20px}
+.smoke path{fill:none;stroke:var(--smoke);stroke-width:2.2;stroke-linecap:round;opacity:.8;animation:smoke 6s ease-in-out infinite}
+.smoke path:nth-child(2){animation-delay:-2s}
+.smoke path:nth-child(3){animation-delay:-4s}
+@keyframes smoke{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+
+/* Volič */
+.picker{background:var(--coal);color:var(--on-dark)}
+.picker h2{color:var(--paper)}
+.picker .kicker{color:var(--flame-light)}
+.picker-intro{color:var(--on-dark-muted);font-size:18px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:28px}
+.tile{appearance:none;font:inherit;text-align:left;cursor:pointer;background:var(--coal-3);color:var(--paper);border:2px solid var(--coal-3);border-radius:var(--radius);padding:16px 14px 14px;display:flex;flex-direction:column;gap:12px;min-height:150px;transition:transform .15s,border-color .15s,background .15s}
+.tile:last-child{grid-column:1 / -1;flex-direction:row;align-items:center;min-height:auto}
+.tile svg{width:56px;height:56px;flex:none}
+.tile b{font-family:"Bitter",serif;font-size:20px;font-weight:800;line-height:1.15;display:block}
+.tile small{display:block;color:var(--on-dark-muted);font-size:14px;margin-top:3px}
+.tile:hover{border-color:var(--flame-light);transform:translateY(-2px)}
+.tile[aria-pressed="true"]{background:var(--paper);color:var(--coal);border-color:var(--flame)}
+.tile[aria-pressed="true"] small{color:var(--muted)}
+.answer{margin-top:16px;background:var(--paper);color:var(--ink);border-radius:var(--radius);border-top:8px solid var(--flame);padding:24px 20px;display:grid;gap:22px}
+.answer h3{font-size:clamp(24px,3.4vw,32px);font-weight:900}
+.answer-lbl{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--spruce-dark);margin:0 0 8px}
+.work{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.work li{display:flex;gap:10px;align-items:flex-start}
+.work li::before{content:"";flex:none;width:12px;height:12px;margin-top:7px;background:var(--flame);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.tip{background:var(--paper-2);border-left:4px solid var(--spruce);border-radius:0 10px 10px 0;padding:14px 16px;font-size:16px}
+.tip p{margin:0}
+.answer .btn{justify-self:start}
+
+/* Služby */
+.services{display:grid;grid-template-columns:1fr;gap:14px;margin-top:30px}
+.svc{background:var(--white);border:2px solid var(--coal);border-radius:var(--radius);padding:22px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.svc-ico{width:54px;height:54px;border-radius:12px;background:var(--paper-2);display:grid;place-items:center;margin-bottom:14px}
+.svc-ico svg{width:36px;height:36px}
+.svc h3{margin-bottom:8px}
+.svc p{font-size:16px;color:var(--ink);margin-bottom:12px}
+.price{margin-top:auto;font-weight:700;font-size:14px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+.extra{margin-top:18px;background:var(--spruce);color:var(--white);border-radius:var(--radius);padding:24px 20px;display:grid;gap:18px}
+.extra h3{color:var(--white);font-size:24px}
+.extra-items{display:grid;gap:12px}
+.extra-item{display:flex;gap:14px;align-items:flex-start;background:var(--spruce-dark);border-radius:12px;padding:14px}
+.extra-item svg{width:40px;height:40px;flex:none}
+.extra-item b{display:block;font-size:17px}
+.extra-item span{font-size:15px}
+.extra .btn{background:var(--paper);color:var(--coal);border-color:var(--paper);justify-self:start}
+.extra .btn:hover{background:var(--white)}
+
+/* Proč já */
+.why{background:var(--paper-2);border-block:2px solid var(--coal)}
+.why-grid{display:grid;gap:14px;margin-top:28px}
+.why-item{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start}
+.why-num{font-family:"Bitter",serif;font-weight:900;font-size:22px;width:52px;height:52px;border-radius:50%;background:var(--coal);color:var(--paper);display:grid;place-items:center}
+.why-item h3{font-size:20px;margin:4px 0 6px}
+.why-item p{font-size:16px;margin:0}
+
+/* Realizace */
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:28px}
+.ph{aspect-ratio:4/3;border-radius:12px;border:2px dashed var(--muted);background:repeating-linear-gradient(135deg,var(--paper-2) 0 12px,var(--paper) 12px 24px);display:flex;flex-direction:column;justify-content:flex-end;padding:12px;gap:2px}
+.ph b{font-size:14px;color:var(--coal)}
+.ph span{font-size:13px;color:var(--muted);line-height:1.3}
+.ph:first-child{grid-column:1 / -1;aspect-ratio:16/9}
+
+/* Kroky */
+.steps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{position:relative;background:var(--white);border:2px solid var(--coal);border-radius:var(--radius);padding:22px 20px 20px 78px;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:18px;top:18px;width:44px;height:44px;border-radius:10px;background:var(--flame-ink);color:var(--white);font-family:"Bitter",serif;font-weight:900;font-size:24px;display:grid;place-items:center}
+.steps h3{font-size:20px;margin-bottom:6px}
+.steps p{margin:0;font-size:16px}
+
+/* Kde pracuji */
+.area{display:grid;gap:24px;align-items:center}
+.area-card{background:var(--coal);color:var(--on-dark);border-radius:var(--radius);padding:24px 20px}
+.area-card h3{color:var(--paper);font-size:30px;font-weight:900}
+.area-card p{color:var(--on-dark-muted);margin:10px 0 16px}
+.area-card a{color:var(--flame-light);font-weight:700}
+.area-map{width:100%;height:auto;display:block;border-radius:var(--radius)}
+
+/* FAQ */
+.faq{margin-top:26px;display:grid;gap:10px;max-width:860px}
+.faq details{background:var(--white);border:2px solid var(--coal);border-radius:12px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 50px 16px 18px;font-family:"Bitter",serif;font-weight:800;font-size:18px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--flame-ink)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 16px;margin:0;font-size:16px}
+
+/* Formulář */
+.contact{background:var(--coal);color:var(--on-dark)}
+.contact h2{color:var(--paper)}
+.contact .kicker{color:var(--flame-light)}
+.contact-grid{display:grid;gap:26px;margin-top:26px}
+.form{background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:22px 18px;display:grid;gap:14px;border-top:8px solid var(--flame)}
+.field{display:grid;gap:6px}
+.field label{font-weight:700;font-size:15px}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--white);border:2px solid var(--coal);border-radius:10px;padding:12px;width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.two{display:grid;gap:14px}
+.form .btn{width:100%}
+.form-note{font-size:14px;color:var(--muted);margin:0}
+.form-msg{display:none;background:var(--spruce);color:var(--white);border-radius:10px;padding:14px 16px;font-weight:600}
+.form-msg.show{display:block}
+.info{display:grid;gap:14px;align-content:start}
+.info-row{display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid var(--coal-3);padding-bottom:14px}
+.info-row svg{width:26px;height:26px;flex:none;margin-top:2px}
+.info-row b{display:block;color:var(--on-dark-muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.info-row a,.info-row span{color:var(--paper);font-size:18px;font-weight:600;text-decoration:none}
+.info-row a:hover{color:var(--flame-light)}
+.info-row a.big{font-family:"Bitter",serif;font-size:30px;font-weight:900}
+
+.foot{background:var(--coal-2);color:var(--on-dark-muted);font-size:14px}
+.foot .wrap{padding-block:26px calc(96px + env(safe-area-inset-bottom,0px))}
+.foot p{margin:0 0 6px;max-width:none}
+.foot a{color:var(--on-dark)}
+
+/* Mobilní pruh */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--coal-2);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;gap:10px}
+.callbar a{flex:1;white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:12px;font-weight:700;text-decoration:none;font-size:16px}
+.callbar .c1{background:var(--flame-ink);color:var(--white);flex:2.2}
+.callbar .c2{background:var(--paper);color:var(--coal)}
+.callbar svg{width:18px;height:18px}
+
+@media (min-width:640px){
+  .tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tile:last-child{grid-column:auto;flex-direction:column;align-items:flex-start}
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .two{grid-template-columns:1fr 1fr}
+  .head-tel .num{display:inline}
+  .extra-items{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  .band{padding-block:100px}
+  .nav{display:flex}
+  .tiles{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .tile{min-height:190px;padding:20px 18px}
+  .tile svg{width:68px;height:68px}
+  .answer{grid-template-columns:1.1fr 1fr;padding:34px 34px;gap:28px 40px}
+  .answer-head{grid-column:1 / -1}
+  .services{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .extra{grid-template-columns:1fr 1.6fr auto;align-items:center;padding:28px 30px}
+  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .area{grid-template-columns:1fr 1.2fr}
+  .contact-grid{grid-template-columns:1.4fr 1fr;gap:48px}
+  .form{padding:30px}
+  .callbar{display:none}
+  .foot .wrap{padding-block:26px}
+  .gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ph:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .hero{padding-top:44px}
+  .hero h1{font-size:clamp(64px,7.6vw,112px)}
+  .ridge{height:auto;margin-top:8px}
+  .hero-lead{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+
+<div class="page">
+  <div class="notice"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Instalatérské, topenářské práce Roman Macura</div></div>
+
+  <header class="head">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Roman Macura – instalatér a topenář, úvod">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#3A2A1F"/><path d="M20 7c4 6 9 9 9 16a9 9 0 0 1-18 0c0-4 2-7 4-9 0 3 1 5 3 6 0-5 1-9 2-13z" fill="#D9480F"/><path d="M20 21c2 3 4 4 4 7a4 4 0 0 1-8 0c0-2 2-4 4-7z" fill="#F6F1E7"/></svg>
+        <span><b>Roman Macura</b><small>instalatér a topenář · Třinec</small></span>
+      </a>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#topeni">Čím topíte?</a>
+        <a href="#sluzby">Služby</a>
+        <a href="#postup">Jak to probíhá</a>
+        <a href="#poptavka">Poptávka</a>
+      </nav>
+      <a class="head-tel" href="tel:+420792493362" aria-label="Zavolat 792 493 362">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+        <span>Zavolat</span><span class="num">792 493 362</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="wrap">
+        <div class="hero-top">
+          <span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>Třinec-Staré Město a okolí</span>
+          <span class="sos">Nonstop pohotovost při haváriích</span>
+        </div>
+        <h1 id="hero-h">Topení, voda a&nbsp;plyn v&nbsp;Třinci. <em>Od kotle po kohoutek.</em></h1>
+        <div class="hero-row">
+          <p class="hero-lead">Vyměním rozvody, namontuji kotel, tepelné čerpadlo nebo solární ohřev a dám dohromady koupelnu. Volejte rovnou mně.</p>
+          <div class="btns">
+            <a class="btn btn-fire" href="tel:+420792493362"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 792 493 362</a>
+            <a class="btn btn-line" href="#poptavka">Poptat</a>
+          </div>
+          <a class="rating" href="https://www.firmy.cz/detail/13630901-instalaterske-topenarske-prace-roman-macura-trinec-stare-mesto.html" target="_blank" rel="noopener">
+            <strong>5,0</strong>
+            <span><span class="stars" aria-hidden="true">★★★★★</span><br><u>z 10 hodnocení na Firmy.cz</u></span>
+          </a>
+        </div>
+      </div>
+
+      <svg class="ridge" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Silueta beskydských kopců se smrky a domky s kouřícími komíny">
+        <path fill="var(--hill-far)" d="M0 150 L120 112 L210 128 L330 70 L410 96 L520 52 L600 84 L700 60 L790 98 L900 66 L1010 104 L1120 58 L1230 92 L1330 74 L1440 110 L1440 260 L0 260Z"/>
+        <path fill="var(--hill-mid)" d="M0 190 C120 160 200 150 300 168 C420 188 480 132 600 140 C720 148 780 180 900 170 C1010 160 1080 128 1190 138 C1300 148 1360 176 1440 168 L1440 260 L0 260Z"/>
+        <g fill="var(--spruce-dark)">
+          <path d="M60 196 l14 -40 l14 40z M84 200 l11 -30 l11 30z M250 186 l13 -36 l13 36z M272 190 l10 -28 l10 28z M1080 168 l13 -38 l13 38z M1104 172 l10 -28 l10 28z M1290 176 l14 -40 l14 40z M1316 180 l10 -26 l10 26z"/>
+        </g>
+        <path fill="var(--hill-near)" d="M0 222 C160 200 300 206 460 214 C620 222 700 196 860 200 C1020 204 1160 224 1300 214 C1370 209 1410 206 1440 206 L1440 260 L0 260Z"/>
+        <g fill="var(--coal)">
+          <rect x="520" y="188" width="70" height="40"/><path d="M510 190 L555 160 L600 190Z"/><rect x="575" y="158" width="10" height="22"/>
+          <rect x="740" y="182" width="88" height="44"/><path d="M728 184 L784 148 L840 184Z"/><rect x="806" y="146" width="11" height="24"/>
+          <rect x="960" y="192" width="64" height="36"/><path d="M950 194 L992 166 L1034 194Z"/><rect x="1008" y="164" width="9" height="20"/>
+        </g>
+        <g fill="var(--flame)"><rect x="534" y="200" width="12" height="12"/><rect x="760" y="196" width="14" height="14"/><rect x="792" y="196" width="14" height="14"/><rect x="976" y="204" width="11" height="11"/></g>
+        <g class="smoke">
+          <path d="M580 152 c-8 -12 8 -20 0 -32 c-8 -12 8 -20 0 -32"/>
+          <path d="M811 140 c-9 -12 9 -22 0 -34 c-9 -12 9 -22 0 -34"/>
+          <path d="M1012 158 c-7 -10 7 -18 0 -28 c-7 -10 7 -18 0 -28"/>
+        </g>
+        <rect y="240" width="1440" height="20" fill="var(--coal)"/>
+      </svg>
+    </section>
+
+    <section class="picker band" id="topeni" aria-labelledby="picker-h">
+      <div class="wrap">
+        <span class="kicker">Vyberte, co máte doma</span>
+        <h2 id="picker-h">Čím topíte?</h2>
+        <p class="picker-intro">Klepněte na svůj zdroj tepla. Uvidíte, co pro Vás můžu udělat, a poptávka se Vám rovnou předvyplní.</p>
+
+        <div class="tiles" role="group" aria-label="Zdroj tepla">
+          <button class="tile" type="button" data-fuel="uhli" aria-pressed="true" aria-controls="answer">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 46h44l-4 10H14z" fill="#6B5A4C"/><path d="M16 46l6-10 8 4 6-8 8 6 6-2 4 10z" fill="#2B1F17"/><path d="M32 8c5 8 10 11 10 19a10 10 0 0 1-20 0c0-4 2-7 4-9 0 3 1 5 3 6 0-6 1-11 3-16z" fill="#D9480F"/><path d="M32 22c2 3 4 5 4 8a4 4 0 0 1-8 0c0-3 2-5 4-8z" fill="#F6C27A"/></svg>
+            <span><b>Uhlí a dřevo</b><small>kotel na tuhá paliva</small></span>
+          </button>
+          <button class="tile" type="button" data-fuel="plyn" aria-pressed="false" aria-controls="answer">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="50" rx="20" ry="5" fill="#6B5A4C"/><path d="M20 46c-2-8 4-12 4-20 4 4 4 8 4 10 2-6 2-14 6-22 4 8 10 14 10 24 0 4-1 6-2 8z" fill="#5B8FD6"/><path d="M28 46c-1-5 2-8 3-12 3 3 5 7 5 12z" fill="#CFE0F7"/></svg>
+            <span><b>Plyn</b><small>plynový kotel</small></span>
+          </button>
+          <button class="tile" type="button" data-fuel="elektro" aria-pressed="false" aria-controls="answer">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="8" width="36" height="48" rx="6" fill="#6B5A4C"/><rect x="20" y="14" width="24" height="10" rx="2" fill="#2B1F17"/><path d="M35 28l-10 14h7l-3 10 11-15h-7l3-9z" fill="#F2C14E"/></svg>
+            <span><b>Elektřina</b><small>elektrokotel</small></span>
+          </button>
+          <button class="tile" type="button" data-fuel="cerpadlo" aria-pressed="false" aria-controls="answer">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="16" width="52" height="36" rx="5" fill="#6B5A4C"/><circle cx="26" cy="34" r="13" fill="#2B1F17"/><g fill="#9FC7A8"><path d="M26 34l-2-11c4 0 7 3 7 6z"/><path d="M26 34l11 2c0 4-3 7-6 7z"/><path d="M26 34l-9 7c-3-3-3-7-1-10z"/></g><circle cx="26" cy="34" r="2.5" fill="#F6F1E7"/><rect x="44" y="24" width="8" height="4" rx="1" fill="#F6F1E7"/><rect x="44" y="32" width="8" height="4" rx="1" fill="#F6F1E7"/></svg>
+            <span><b>Tepelné čerpadlo</b><small>teplo ze vzduchu či země</small></span>
+          </button>
+          <button class="tile" type="button" data-fuel="slunce" aria-pressed="false" aria-controls="answer">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="44" cy="16" r="8" fill="#F2C14E"/><g stroke="#F2C14E" stroke-width="3" stroke-linecap="round"><path d="M44 2v4M58 16h-4M54 6l-3 3M34 6l3 3"/></g><path d="M6 52l10-24h34l-10 24z" fill="#6B5A4C"/><g stroke="#2B1F17" stroke-width="2"><path d="M14 40h32M18 32l-6 16M28 32l-6 16M38 32l-6 16M48 32l-6 16"/></g></svg>
+            <span><b>Slunce</b><small>solární ohřev vody</small></span>
+          </button>
+        </div>
+
+        <div class="answer" id="answer" aria-live="polite">
+          <div class="answer-head">
+            <p class="answer-lbl" id="a-lbl">Topíte uhlím a dřevem</p>
+            <h3 id="a-title">Kotel, který zatopí celý dům</h3>
+          </div>
+          <div>
+            <p class="answer-lbl">Co pro Vás udělám</p>
+            <ul class="work" id="a-work"></ul>
+          </div>
+          <div>
+            <p class="answer-lbl">Dobré vědět</p>
+            <div class="tip"><p id="a-tip"></p></div>
+            <p style="margin:16px 0 0"><a class="btn btn-fire" id="a-btn" href="#poptavka" data-fuel="uhli">Poptat práci na kotli na tuhá paliva</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="sluzby" aria-labelledby="svc-h">
+      <div class="wrap">
+        <span class="kicker">Co dělám</span>
+        <h2 id="svc-h">Voda, topení, kanalizace, plyn.</h2>
+        <div class="services">
+          <article class="svc">
+            <div class="svc-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 14h14v6h18v8H12v-6H4z" fill="#3A2A1F"/><circle cx="18" cy="17" r="4" fill="#D9480F"/><path d="M33 31c2 3 3 4 3 5.5a3 3 0 0 1-6 0c0-1.5 1-2.5 3-5.5z" fill="#3F6B4A"/></svg></div>
+            <h3>Výměna rozvodů</h3>
+            <p>Staré rozvody vody, topení, kanalizace i plynu vyměním za nové – v bytě i v rodinném domě.</p>
+            <p class="price">Cena na dotaz</p>
+          </article>
+          <article class="svc">
+            <div class="svc-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="9" y="4" width="22" height="32" rx="3" fill="#3A2A1F"/><rect x="13" y="8" width="14" height="6" rx="1" fill="#F6F1E7"/><path d="M20 18c3 4 5 6 5 9a5 5 0 0 1-10 0c0-2 1-4 2-5 0 2 1 3 2 3 0-3 0-5 1-7z" fill="#D9480F"/></svg></div>
+            <h3>Montáž zdrojů tepla</h3>
+            <p>Kotle na tuhá paliva, plynové kotle, elektrokotle a tepelná čerpadla včetně akumulačních nádrží.</p>
+            <p class="price">Cena na dotaz</p>
+          </article>
+          <article class="svc">
+            <div class="svc-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="10" width="30" height="20" rx="3" fill="#3A2A1F"/><g fill="#F6F1E7"><rect x="9" y="13" width="3" height="14" rx="1.5"/><rect x="15" y="13" width="3" height="14" rx="1.5"/><rect x="21" y="13" width="3" height="14" rx="1.5"/><rect x="27" y="13" width="3" height="14" rx="1.5"/></g><path d="M12 6c1 2-1 2 0 4M20 5c1 2-1 3 0 5M28 6c1 2-1 2 0 4" stroke="#D9480F" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+            <h3>Radiátory a solární ohřev</h3>
+            <p>Montáž otopných těles a solárního ohřevu vody, napojení na stávající topení.</p>
+            <p class="price">Cena na dotaz</p>
+          </article>
+          <article class="svc">
+            <div class="svc-ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 20h30v4a9 9 0 0 1-9 9H14a9 9 0 0 1-9-9z" fill="#3A2A1F"/><path d="M9 20V9a4 4 0 0 1 8 0" stroke="#3A2A1F" stroke-width="3" fill="none"/><path d="M17 12c1 2 2 3 2 4a2 2 0 0 1-4 0c0-1 1-2 2-4z" fill="#3F6B4A"/><path d="M12 33l-2 4M28 33l2 4" stroke="#3A2A1F" stroke-width="3"/></svg></div>
+            <h3>Vybavení koupelny</h3>
+            <p>Kompletace sanity: umyvadlo, vana nebo sprcha, WC a baterie zapojené a dotažené.</p>
+            <p class="price">Cena na dotaz</p>
+          </article>
+        </div>
+
+        <div class="extra" id="odpady">
+          <div>
+            <span class="kicker" style="color:var(--paper);margin-bottom:6px">Navíc</span>
+            <h3>Odpady a vrtání</h3>
+          </div>
+          <div class="extra-items">
+            <div class="extra-item">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 10h18v8h14v8H14v-8H4z" fill="#F6F1E7"/><path d="M26 22c3-3 6 3 9 0" stroke="#D9480F" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="9" cy="14" r="2" fill="#2F5238"/></svg>
+              <span><b>Strojní čištění odpadů</b>Ucpané odpadní potrubí pročistím strojem.</span>
+            </div>
+            <div class="extra-item">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="22" y="4" width="14" height="32" fill="#C9BBA6"/><circle cx="29" cy="20" r="5" fill="#2F5238" stroke="#F6F1E7" stroke-width="2"/><rect x="4" y="17" width="20" height="6" rx="2" fill="#F6F1E7"/><rect x="2" y="15" width="6" height="10" rx="2" fill="#D9480F"/></svg>
+              <span><b>Jádrové vrtání</b>Čisté otvory ve zdi a ve stropě pro potrubí.</span>
+            </div>
+          </div>
+          <a class="btn" href="#poptavka" data-fuel="odpady">Poptat</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="why band" aria-labelledby="why-h">
+      <div class="wrap">
+        <span class="kicker">Proč já</span>
+        <h2 id="why-h">Jeden člověk, celé řemeslo.</h2>
+        <div class="why-grid">
+          <div class="why-item"><span class="why-num">1</span><div><h3>Mluvíte přímo s řemeslníkem</h3><p>Číslo 792 493 362 je přímo na Romana Macuru – domluvíte se s tím, kdo práci udělá.</p></div></div>
+          <div class="why-item"><span class="why-num">2</span><div><h3>Voda, topení i plyn z jedné ruky</h3><p>Rozvody, kotel, radiátory i koupelna – nemusíte shánět tři různé firmy na jednu rekonstrukci.</p></div></div>
+          <div class="why-item"><span class="why-num">3</span><div><h3>Nonstop pohotovost</h3><p>Když teče voda nebo nehřeje topení, volejte kdykoli.</p></div></div>
+          <div class="why-item"><span class="why-num">4</span><div><h3>5,0 z 10 hodnocení</h3><p>Zákazníci hodnotí práci na <a href="https://www.firmy.cz/detail/13630901-instalaterske-topenarske-prace-roman-macura-trinec-stare-mesto.html" target="_blank" rel="noopener">Firmy.cz</a> plným počtem hvězd.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="realizace" aria-labelledby="gal-h">
+      <div class="wrap">
+        <span class="kicker">Realizace</span>
+        <h2 id="gal-h">Hotová práce z okolí Třince.</h2>
+        <div class="gallery">
+          <div class="ph"><b>Sem přijde Vaše fotka</b><span>Nově zapojená kotelna – kotel, akumulační nádrž a rozvody</span></div>
+          <div class="ph"><b>Sem přijde Vaše fotka</b><span>Tepelné čerpadlo u domu</span></div>
+          <div class="ph"><b>Sem přijde Vaše fotka</b><span>Hotová koupelna</span></div>
+          <div class="ph"><b>Sem přijde Vaše fotka</b><span>Nové rozvody před zazděním</span></div>
+          <div class="ph"><b>Sem přijde Vaše fotka</b><span>Solární panely na střeše</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="postup" aria-labelledby="steps-h" style="padding-top:0">
+      <div class="wrap">
+        <span class="kicker">Jak probíhá zakázka</span>
+        <h2 id="steps-h">Tři kroky. Bez zbytečností.</h2>
+        <ol class="steps">
+          <li><h3>Zavoláte nebo napíšete</h3><p>Řeknete, co potřebujete – výměnu kotle, nové rozvody, ucpaný odpad. U havárie volejte rovnou.</p></li>
+          <li><h3>Prohlídka a domluva</h3><p>Podívám se na místo, navrhnu řešení a domluvíme cenu i termín ještě před začátkem práce.</p></li>
+          <li><h3>Hotovo a funkční</h3><p>Práci udělám, vyzkoušíme spolu, že vše teče, hřeje a těsní, a uklidím po sobě.<span class="ukazka">ukázkový text</span></p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="area-h" style="padding-top:0">
+      <div class="wrap area">
+        <div class="area-card">
+          <span class="kicker" style="color:var(--flame-light)">Kde pracuji</span>
+          <h3 id="area-h">Třinec a okolí</h3>
+          <p>Sídlo mám ve Starém Městě, Komenského 677. Jestli jezdím i k Vám, zjistíte jedním telefonátem.</p>
+          <a href="https://mapy.cz/zakladni?q=Komensk%C3%A9ho%20677%2C%20T%C5%99inec" target="_blank" rel="noopener">Otevřít na Mapy.cz →</a>
+        </div>
+        <svg class="area-map" viewBox="0 0 520 300" role="img" aria-label="Schematická značka: Třinec mezi beskydskými kopci">
+          <rect width="520" height="300" rx="14" fill="var(--paper-2)"/>
+          <path d="M0 230 L80 170 L140 196 L230 120 L300 170 L380 110 L450 160 L520 130 L520 300 L0 300Z" fill="var(--hill-far)"/>
+          <path d="M0 260 C120 230 220 250 300 240 C400 228 460 250 520 240 L520 300 L0 300Z" fill="var(--hill-mid)"/>
+          <path d="M40 300 C120 250 160 220 260 214 C360 208 420 170 500 150" stroke="var(--spruce)" stroke-width="5" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+          <circle cx="260" cy="112" r="66" fill="none" stroke="var(--flame)" stroke-width="3" stroke-dasharray="8 8"/>
+          <path d="M260 62c-17 0-30 13-30 30 0 22 30 52 30 52s30-30 30-52c0-17-13-30-30-30z" fill="var(--coal)"/>
+          <circle cx="260" cy="92" r="11" fill="var(--flame)"/>
+          <rect x="196" y="196" width="128" height="42" rx="21" fill="var(--coal)"/>
+          <text x="260" y="225" text-anchor="middle" font-family="Bitter, Georgia, serif" font-weight="900" font-size="22" fill="var(--paper)">Třinec</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="faq-h" style="padding-top:0">
+      <div class="wrap">
+        <span class="kicker">Časté otázky</span>
+        <h2 id="faq-h">Na co se lidé ptají.</h2>
+        <div class="faq">
+          <details><summary>Co dělat, když mi teče voda a nejde zastavit?</summary><p>Zavřete hlavní uzávěr vody (bývá u vodoměru), u topení vypněte kotel a stáhněte tlak. Pak volejte 792 493 362 – na havárie je nonstop pohotovost.</p></details>
+          <details><summary>Cítím plyn. Komu mám volat?</summary><p>Zavřete hlavní uzávěr plynu, otevřete okna, nepoužívejte vypínače ani otevřený oheň a odejděte ven. Volejte pohotovostní linku plynárenské distribuce 1239. Opravu rozvodu pak můžeme řešit spolu.</p></details>
+          <details><summary>Kolik bude stát výměna kotle nebo rozvodů?</summary><p>Záleží na velikosti domu, stavu rozvodů a zvoleném zdroji tepla. Cenu Vám řeknu po prohlídce na místě, ještě než se do čehokoli pustíme.</p></details>
+          <details><summary>Vyplatí se ke kotli akumulační nádrž?</summary><p>U kotle na dřevo nebo uhlí obvykle ano: nádrž uloží teplo z jednoho zátopu a dům pak topí déle a rovnoměrněji. U tepelného čerpadla zase pomáhá, aby se zbytečně často nespínalo. Co dává smysl u Vás, probereme na místě.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact band" id="poptavka" aria-labelledby="form-h">
+      <div class="wrap">
+        <span class="kicker">Poptávka</span>
+        <h2 id="form-h">Napište, co potřebujete.</h2>
+        <div class="contact-grid">
+          <form class="form" id="poptavka-form" novalidate>
+            <div class="two">
+              <div class="field"><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            </div>
+            <div class="two">
+              <div class="field"><label for="f-tema">O co jde</label>
+                <select id="f-tema" name="tema">
+                  <option value="uhli">Kotel na uhlí a dřevo</option>
+                  <option value="plyn">Plynový kotel a rozvody plynu</option>
+                  <option value="elektro">Elektrokotel</option>
+                  <option value="cerpadlo">Tepelné čerpadlo</option>
+                  <option value="slunce">Solární ohřev</option>
+                  <option value="rozvody">Výměna rozvodů vody / kanalizace</option>
+                  <option value="koupelna">Koupelna (kompletace sanity)</option>
+                  <option value="odpady">Čištění odpadů / jádrové vrtání</option>
+                  <option value="havarie">Havárie</option>
+                  <option value="jine">Něco jiného</option>
+                </select>
+              </div>
+              <div class="field"><label for="f-obec">Obec nebo část</label><input id="f-obec" name="obec" type="text" placeholder="např. Třinec-Lyžbice"></div>
+            </div>
+            <div class="field"><label for="f-zprava">Popis</label><textarea id="f-zprava" name="zprava" placeholder="Co je potřeba udělat, jak je to naléhavé…"></textarea></div>
+            <button class="btn btn-fire" id="f-odeslat" type="submit">Odeslat poptávku</button>
+            <p class="form-msg" id="f-msg" role="status">Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Na hotovém webu by poptávka dorazila přímo Romanu Macurovi.</p>
+            <p class="form-note">Při havárii nepište – volejte 792 493 362.</p>
+          </form>
+
+          <div class="info">
+            <div class="info-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F08A4B" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><div><b>Telefon · nonstop pohotovost</b><a class="big" href="tel:+420792493362">792 493 362</a></div></div>
+            <div class="info-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F08A4B" d="M3 5h18v14H3zm2 2v.4l7 4.6 7-4.6V7z"/></svg><div><b>E-mail</b><a href="mailto:inmar@post.cz">inmar@post.cz</a></div></div>
+            <div class="info-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F08A4B" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg><div><b>Adresa</b><a href="https://mapy.cz/zakladni?q=Komensk%C3%A9ho%20677%2C%20T%C5%99inec" target="_blank" rel="noopener">Komenského 677, 739 61 Třinec-Staré Město</a></div></div>
+            <div class="info-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F08A4B" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4l3.5 2.1-1 1.7L11 13V6h2z"/></svg><div><b>Kdy</b><span>Dle telefonické domluvy</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p><strong>Instalatérské, topenářské práce Roman Macura</strong> · Komenského 677, 739 61 Třinec · IČO 88215628</p>
+      <p>Hodnocení podle <a href="https://www.firmy.cz/detail/13630901-instalaterske-topenarske-prace-roman-macura-trinec-stare-mesto.html" target="_blank" rel="noopener">Firmy.cz</a> (stav k 14. 10. 2026). Nezávazný návrh webu – není to oficiální stránka firmy.</p>
+    </div>
+  </footer>
+
+  <div class="callbar">
+    <a class="c1" href="tel:+420792493362"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 792 493 362</a>
+    <a class="c2" href="#poptavka">Poptat</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var data = {
+    uhli: {
+      lbl: "Topíte uhlím a dřevem",
+      title: "Kotel, který zatopí celý dům",
+      work: ["Montáž kotle na tuhá paliva", "Akumulační nádrž, která uloží teplo z jednoho zátopu", "Výměna rozvodů topení", "Nová otopná tělesa (radiátory)"],
+      tip: "Kotle na pevná paliva podléhají pravidelné kontrole technického stavu. Termín si ohlídejte – a při výměně kotle myslete i na nádrž, ušetří Vám přikládání.",
+      btn: "Poptat práci na kotli na tuhá paliva"
+    },
+    plyn: {
+      lbl: "Topíte plynem",
+      title: "Plynový kotel a bezpečné rozvody",
+      work: ["Montáž plynového kotle", "Výměna rozvodů plynu", "Výměna rozvodů topení", "Nová otopná tělesa (radiátory)"],
+      tip: "Když ucítíte plyn: zavřete hlavní uzávěr, vyvětrejte, nesahejte na vypínače a volejte pohotovostní linku 1239.",
+      btn: "Poptat práci na plynovém kotli"
+    },
+    elektro: {
+      lbl: "Topíte elektřinou",
+      title: "Elektrokotel bez komína",
+      work: ["Montáž elektrokotle", "Akumulační nádrž", "Výměna rozvodů topení", "Nová otopná tělesa (radiátory)"],
+      tip: "Elektrokotel potřebuje odpovídající jistič a obvykle i vhodnou sazbu elektřiny. Než ho koupíte, ověřte si obojí u svého dodavatele.",
+      btn: "Poptat práci na elektrokotli"
+    },
+    cerpadlo: {
+      lbl: "Topíte tepelným čerpadlem",
+      title: "Tepelné čerpadlo, které dává smysl",
+      work: ["Montáž tepelného čerpadla", "Akumulační nádrž", "Úprava rozvodů topení", "Otopná tělesa vhodná pro nižší teplotu vody"],
+      tip: "Tepelné čerpadlo topí nejúsporněji s nízkou teplotou topné vody. Pomáhají větší radiátory nebo podlahové topení.",
+      btn: "Poptat tepelné čerpadlo"
+    },
+    slunce: {
+      lbl: "Chcete ohřívat sluncem",
+      title: "Solární ohřev teplé vody",
+      work: ["Montáž solárního ohřevu", "Napojení na akumulační nádrž", "Propojení s kotlem nebo stávajícím ohřevem"],
+      tip: "Solární ohřev vodu hlavně doplňuje. V zimě a za zataženého počasí dohřívá kotel nebo elektřina, proto je dobré myslet na propojení s nimi.",
+      btn: "Poptat solární ohřev"
+    }
+  };
+  var tiles = document.querySelectorAll(".tile");
+  var lbl = document.getElementById("a-lbl"), title = document.getElementById("a-title"),
+      work = document.getElementById("a-work"), tip = document.getElementById("a-tip"),
+      btn = document.getElementById("a-btn"), sel = document.getElementById("f-tema");
+
+  function show(key){
+    var d = data[key]; if(!d) return;
+    lbl.textContent = d.lbl; title.textContent = d.title; tip.textContent = d.tip;
+    btn.textContent = d.btn; btn.setAttribute("data-fuel", key);
+    work.innerHTML = "";
+    d.work.forEach(function(w){ var li = document.createElement("li"); li.textContent = w; work.appendChild(li); });
+    tiles.forEach(function(t){ t.setAttribute("aria-pressed", t.getAttribute("data-fuel") === key ? "true" : "false"); });
+  }
+  tiles.forEach(function(t){ t.addEventListener("click", function(){ show(t.getAttribute("data-fuel")); }); });
+  show("uhli");
+
+  document.querySelectorAll('a[href="#poptavka"][data-fuel]').forEach(function(a){
+    a.addEventListener("click", function(){
+      var v = a.getAttribute("data-fuel");
+      if (sel && sel.querySelector('option[value="' + v + '"]')) sel.value = v;
+    });
+  });
+
+  var form = document.getElementById("poptavka-form"), msg = document.getElementById("f-msg");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    msg.classList.add("show");
+    msg.focus && msg.setAttribute("tabindex","-1");
+    msg.focus();
+  });
+})();
+</script>
+</body>
+</html>

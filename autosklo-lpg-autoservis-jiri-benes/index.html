@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Autoskla, LPG a autoservis Bílovec – AUTOSKLO-LPG-AUTOSERVIS Jiří Beneš | návrh webu</title>
+<meta name="description" content="Autoskla, LPG a autoservis v Bílovci od roku 2005. Opravy a výměny autoskel pro osobní a dodávkové vozy, autobusy, TIR i zemědělskou techniku. Při časově náročné opravě náhradní auto zdarma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"AUTOSKLO-LPG-AUTOSERVIS","founder":{"@type":"Person","name":"Jiří Beneš"},"foundingDate":"2005","description":"Opravy a výměny autoskel na osobní a dodávkové vozy, autoskla pro autobusy, TIR a zemědělskou techniku, LPG a autoservis.","telephone":"+420608833993","email":"benesisko@centrum.cz","address":{"@type":"PostalAddress","streetAddress":"Ostravská 363/17","addressLocality":"Bílovec","addressCountry":"CZ"},"sameAs":["https://lpg-bilovec.webnode.cz/"]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Layout: dělený hero (text vlevo, čelní sklo vpravo), slunečnicový pás náhradního auta, přepínač vozidel, služby, důvěra, před zimou, postup, objednávka, FAQ, kontakt */
+:root{
+  --bottle:#0F3D3E; --bottle-2:#14504F; --glass:#CFE8EF; --glass-2:#E7F4F7; --sun:#F2B705; --white:#FFFFFF;
+  --ink:#122B2C; --muted:#4A5F60; --line:#D5E3E5;
+  --display:"Josefin Sans","Trebuchet MS",Arial,sans-serif; --body:"Open Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.65 var(--body);padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--white)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0;color:var(--bottle);font-weight:700}
+h2{font-size:clamp(1.8rem,1.3rem + 2vw,2.6rem)}
+h3{font-size:1.3rem}
+p{margin:0}
+a{color:var(--bottle)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font:700 .85rem/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--bottle-2)}
+.demo{display:inline-block;vertical-align:middle;font:600 .66rem/1 var(--body);letter-spacing:.04em;text-transform:uppercase;background:#FFF3C4;color:#5A4500;border:1px solid #E6CF7A;border-radius:3px;padding:3px 5px;margin-left:6px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 22px;border-radius:999px;font:700 1.02rem/1 var(--display);letter-spacing:.03em;text-decoration:none;border:2px solid transparent;cursor:pointer;padding-top:3px}
+.btn-sun{background:var(--sun);color:var(--bottle)}
+.btn-sun:hover{background:#FFC820}
+.btn-line{background:transparent;color:var(--bottle);border-color:var(--bottle)}
+.btn-line:hover{background:var(--bottle);color:var(--white)}
+.btn-dark{background:var(--bottle);color:var(--white)}
+.btn svg{width:19px;height:19px;flex:none;margin-top:-3px}
+
+.proto{background:var(--ink);color:#EAF4F5;font-size:.82rem;text-align:center;padding-block:7px}
+.proto strong{color:var(--sun)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--bottle);min-width:0}
+.brand svg{width:36px;height:36px;flex:none}
+.brand b{display:block;font:700 .92rem/1.15 var(--display);letter-spacing:.03em}
+.brand small{display:block;font:400 .74rem/1.2 var(--body);color:var(--muted)}
+.top nav{display:none;gap:22px}
+.top nav a{color:var(--ink);text-decoration:none;font:600 .98rem var(--display)}
+.top nav a:hover{color:var(--bottle-2);text-decoration:underline}
+.tel-top{display:inline-flex;align-items:center;gap:6px;font:700 1.05rem/1 var(--display);color:var(--bottle);text-decoration:none;white-space:nowrap;background:var(--glass);padding:10px 12px 8px;border-radius:999px}
+.tel-top svg{width:17px;height:17px;margin-top:-2px}
+@media (min-width:980px){.top nav{display:flex}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--glass-2),var(--white));padding-block:26px 34px}
+.hero .wrap{display:grid;gap:26px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,1.5rem + 3.4vw,3.9rem);margin:10px 0 12px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%);padding:0 2px}
+.hero .lead{font-size:1.02rem;color:var(--ink);max-width:36em}
+.since{display:inline-flex;align-items:center;gap:8px;background:var(--bottle);color:var(--white);font:700 .82rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:8px 14px 6px}
+.since i{width:8px;height:8px;border-radius:50%;background:var(--sun);display:inline-block;margin-top:-2px}
+.hero .actions{display:grid;gap:10px;margin-top:18px}
+.hero .addr{margin-top:14px;font-size:.92rem;color:var(--muted)}
+.shield{width:100%;max-width:560px;justify-self:center}
+.shield svg{display:block;width:100%;height:auto}
+.crack{fill:none;stroke:#FFFFFF;stroke-width:2.4;stroke-linecap:round;opacity:0;animation:heal 2.6s ease-in-out both}
+.crack.thin{stroke-width:1.4}
+.chip-mark{opacity:0;animation:heal 2.6s ease-in-out both}
+@keyframes heal{0%,30%{opacity:1;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:var(--len,200)}}
+.fixed{animation:pop .6s 2.4s ease-out both}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.shine{animation:shine 1.4s 2.2s ease-in-out both}
+@keyframes shine{from{transform:translateX(-260px)}to{transform:translateX(560px)}}
+@media (min-width:520px){.hero .actions{grid-template-columns:auto auto;justify-content:start}}
+@media (min-width:900px){.hero{padding-block:60px 70px}.hero .wrap{grid-template-columns:1.05fr 1fr}}
+
+/* replacement car band */
+.band{background:var(--sun);color:var(--bottle)}
+.band .wrap{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:center;padding-block:22px}
+.band svg{width:78px;height:auto;grid-row:span 2}
+.band b{font:700 clamp(1.35rem,1.1rem + 1.2vw,2rem)/1.1 var(--display)}
+.band p{font-size:.98rem}
+.band .btn{grid-column:1 / -1;justify-self:start}
+@media (min-width:900px){.band .wrap{grid-template-columns:auto 1fr auto;column-gap:28px}.band svg{width:110px;grid-column:1;grid-row:1 / 3}.band b{grid-column:2;grid-row:1}.band p{grid-column:2;grid-row:2}.band .btn{grid-column:3;grid-row:1 / 3;justify-self:end}}
+
+section{padding-block:56px}
+.sec-head{display:grid;gap:10px;max-width:720px;margin-bottom:28px}
+.sec-head p{color:var(--muted)}
+
+/* vehicles */
+.veh{background:var(--glass-2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tab{font:700 1rem/1 var(--display);padding:13px 16px 10px;border-radius:999px;border:2px solid var(--bottle);background:var(--white);color:var(--bottle);cursor:pointer;min-height:46px}
+.tab[aria-selected="true"]{background:var(--bottle);color:var(--white)}
+.vgrid{display:grid;gap:18px;align-items:stretch}
+.vstage{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;place-items:center;min-height:220px;position:relative;overflow:hidden}
+.vstage::before{content:"";position:absolute;left:0;right:0;bottom:30px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 18px,transparent 18px 30px)}
+.vstage svg{width:100%;max-width:520px;height:auto;position:relative}
+.vstage .sil{transition:opacity .35s}
+.vinfo{background:var(--bottle);color:var(--white);border-radius:14px;padding:24px 22px;display:grid;gap:12px;align-content:start;min-width:0}
+.vinfo h3{color:var(--white);font-size:1.6rem}
+.vinfo .k{font:700 .82rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--sun)}
+.vinfo ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.vinfo li{display:grid;grid-template-columns:22px 1fr;gap:8px;color:#E3EFF0}
+.vinfo li svg{width:20px;height:20px;margin-top:3px;color:var(--sun)}
+.vinfo .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.vinfo .btn-line{color:var(--white);border-color:var(--white)}
+.vinfo .btn-line:hover{background:var(--white);color:var(--bottle)}
+.vinfo .small{font-size:.85rem;color:#BFD6D8}
+@media (min-width:900px){.vgrid{grid-template-columns:1.3fr 1fr}}
+
+/* services */
+.svc{display:grid;gap:14px}
+.svc article{border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:10px;align-content:start;background:var(--white)}
+.svc article.main{background:var(--glass);border-color:var(--glass)}
+.svc .ic{width:54px;height:54px;border-radius:50%;background:var(--bottle);display:grid;place-items:center}
+.svc .ic svg{width:30px;height:30px}
+.svc article p{font-size:.98rem}
+.note{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;justify-content:space-between;border:2px dashed var(--bottle);border-radius:14px;padding:16px 20px}
+.note p{font:700 1.15rem/1.3 var(--display);color:var(--bottle)}
+@media (min-width:800px){.svc{grid-template-columns:1.3fr 1fr 1fr}}
+
+/* trust */
+.trust{background:var(--bottle);color:var(--white)}
+.trust h2{color:var(--white)}
+.trust .eyebrow{color:var(--sun)}
+.tgrid{display:grid;gap:16px}
+.year{display:grid;gap:4px;align-content:center}
+.year .n{font:700 clamp(4.2rem,3rem + 6vw,7.5rem)/.9 var(--display);color:var(--sun);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.year p{color:#E3EFF0;font-size:1.05rem}
+.tlist{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.tlist li{background:var(--bottle-2);border-radius:12px;padding:16px 18px;color:#E3EFF0}
+.tlist li b{display:block;font:700 1.1rem var(--display);color:var(--white);margin-bottom:2px}
+.photo{border:2px dashed #5E8D8E;border-radius:14px;min-height:200px;display:grid;place-items:center;text-align:center;color:#BFD6D8;padding:20px}
+.photo b{display:block;font:700 1.2rem var(--display);color:var(--white)}
+@media (min-width:900px){.tgrid{grid-template-columns:.9fr 1.2fr 1fr;align-items:stretch}}
+
+/* winter */
+.winter .grid{display:grid;gap:14px}
+.winter .item{border-radius:14px;padding:22px;display:grid;gap:8px;align-content:start;background:var(--glass-2);border:1px solid var(--line)}
+.winter .item svg{width:44px;height:44px}
+.winter .item.ours{background:var(--sun);border-color:var(--sun)}
+.winter .item.ours a{color:var(--bottle);font-weight:700}
+.winter .src{font-size:.84rem;color:var(--muted);margin-top:14px}
+@media (min-width:800px){.winter .grid{grid-template-columns:repeat(3,1fr)}}
+
+/* steps */
+.steps{display:grid;gap:14px;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{position:relative;border:1px solid var(--line);border-radius:14px;padding:20px 20px 20px 76px;min-height:96px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:42px;height:42px;border-radius:50%;background:var(--sun);color:var(--bottle);display:grid;place-items:center;font:700 1.35rem var(--display);padding-top:3px}
+.steps li h3{margin-bottom:4px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* form */
+.order{background:var(--glass-2)}
+.o-grid{display:grid;gap:24px}
+form{display:grid;gap:14px;min-width:0}
+label{display:grid;gap:6px;font:700 .98rem var(--display);color:var(--bottle)}
+input,select,textarea{font:400 1rem var(--body);color:var(--ink);background:var(--white);border:1px solid #9DB9BC;border-radius:10px;padding:12px;min-height:48px;width:100%}
+textarea{min-height:96px;resize:vertical}
+.f2{display:grid;gap:14px}
+@media (min-width:600px){.f2{grid-template-columns:1fr 1fr}}
+.out{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px}
+.out pre{white-space:pre-wrap;word-break:break-word;font:400 .95rem/1.5 var(--body);margin:0}
+.side{background:var(--bottle);color:var(--white);border-radius:14px;padding:24px;display:grid;gap:10px;align-content:start}
+.side h3{color:var(--white)}
+.side .num{font:700 2rem/1 var(--display);color:var(--sun);text-decoration:none}
+.side p{color:#E3EFF0}
+.linkbtn{background:none;border:0;padding:0;color:var(--bottle);font:600 .9rem var(--body);text-decoration:underline;cursor:pointer}
+.small{font-size:.88rem;color:var(--muted)}
+@media (min-width:900px){.o-grid{grid-template-columns:1.4fr 1fr}}
+
+.faq details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white)}
+.faq summary{cursor:pointer;list-style:none;padding:17px 50px 14px 18px;font:700 1.12rem/1.3 var(--display);color:var(--bottle);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:10px;width:30px;height:30px;border-radius:50%;background:var(--sun);display:grid;place-items:center;font:700 1.3rem var(--display);color:var(--bottle);padding-top:3px}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 18px}
+
+.contact{background:var(--bottle);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact .eyebrow{color:var(--sun)}
+.c-grid{display:grid;gap:20px}
+.c-list{display:grid;gap:14px;margin:0}
+.c-list div{display:grid;gap:2px}
+.c-list dt{font:700 .82rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:#A9CBCD}
+.c-list dd{margin:0;font-size:1.1rem}
+.c-list a{color:var(--white)}
+.maplink{display:grid;place-items:center;text-align:center;border-radius:14px;min-height:230px;text-decoration:none;color:var(--bottle);background:
+ radial-gradient(circle at 50% 46%,var(--sun) 0 9px,transparent 10px),
+ repeating-linear-gradient(90deg,transparent 0 40px,rgba(15,61,62,.08) 40px 42px),
+ repeating-linear-gradient(0deg,transparent 0 40px,rgba(15,61,62,.08) 40px 42px),var(--glass);padding:20px}
+.maplink div{background:var(--white);border-radius:12px;padding:14px 18px;margin-top:90px}
+.maplink b{font:700 1.15rem var(--display);display:block}
+.maplink span{display:inline-block;margin-top:8px;font:700 .95rem var(--display);text-decoration:underline}
+@media (min-width:900px){.c-grid{grid-template-columns:1fr 1fr}}
+footer{background:var(--ink);color:#BFD6D8;font-size:.85rem;padding-block:22px}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--white);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));box-shadow:0 -6px 18px rgba(0,0,0,.08)}
+.mbar .btn{min-height:48px;padding:3px 10px 0;font-size:.98rem}
+@media (min-width:900px){.mbar{display:none}}
+</style>
+</head>
+<body>
+
+<div class="proto"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy <strong>AUTOSKLO-LPG-AUTOSERVIS (Jiří Beneš)</strong></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="AUTOSKLO-LPG-AUTOSERVIS – úvod">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 12q15-6 30 0l-3 18q-12-4-24 0z" fill="#CFE8EF" stroke="#0F3D3E" stroke-width="3" stroke-linejoin="round"/><path d="M12 14l5 10" stroke="#F2B705" stroke-width="3" stroke-linecap="round"/></svg>
+      <span><b>AUTOSKLO · LPG · AUTOSERVIS</b><small>Jiří Beneš · Bílovec</small></span>
+    </a>
+    <nav aria-label="Hlavní menu"><a href="#vozidla">Pro jaké vozy</a><a href="#sluzby">Služby</a><a href="#zima">Před zimou</a><a href="#objednat">Objednat</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="tel-top" href="tel:+420608833993" aria-label="Zavolat 608 833 993"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>608 833 993</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <span class="since"><i></i>Bílovec · od roku 2005</span>
+      <h1 id="h1"><em>Autoskla</em>, LPG a autoservis v Bílovci</h1>
+      <p class="lead">Opravy a výměny autoskel pro osobní auta, dodávky, autobusy, TIR i zemědělskou techniku. Při časově náročné opravě Vám zapůjčíme náhradní auto zdarma.</p>
+      <div class="actions">
+        <a class="btn btn-sun" href="#objednat">Objednat servis</a>
+        <a class="btn btn-line" href="tel:+420608833993"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 608 833 993</a>
+      </div>
+      <p class="addr">Ostravská 363/17, za kulturním domem</p>
+    </div>
+    <div class="shield">
+      <svg viewBox="0 0 560 360" role="img" aria-labelledby="ws-t">
+        <title id="ws-t">Čelní sklo, na kterém se prasklina po opravě ztratí</title>
+        <defs>
+          <linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7F4F7"/><stop offset=".55" stop-color="#CFE8EF"/><stop offset="1" stop-color="#A9D3DE"/></linearGradient>
+          <clipPath id="clipg"><path d="M66 70 Q280 22 494 70 L 452 300 Q 280 276 108 300 Z"/></clipPath>
+        </defs>
+        <path d="M44 58 Q280 2 516 58 L 470 318 Q 280 290 90 318 Z" fill="#0F3D3E"/>
+        <path d="M66 70 Q280 22 494 70 L 452 300 Q 280 276 108 300 Z" fill="url(#gl)"/>
+        <g clip-path="url(#clipg)">
+          <rect class="shine" x="-120" y="0" width="70" height="360" fill="#FFFFFF" opacity=".55" transform="skewX(-20)"/>
+          <path d="M100 280 Q 160 150 300 60" stroke="#FFFFFF" stroke-width="10" opacity=".35" fill="none"/>
+          <path d="M140 290 Q 200 170 330 70" stroke="#FFFFFF" stroke-width="4" opacity=".35" fill="none"/>
+        </g>
+        <!-- wipers -->
+        <path d="M170 300 L 300 236" stroke="#0F3D3E" stroke-width="6" stroke-linecap="round"/>
+        <path d="M320 300 L 446 238" stroke="#0F3D3E" stroke-width="6" stroke-linecap="round"/>
+        <!-- crack -->
+        <g clip-path="url(#clipg)">
+          <circle class="chip-mark" cx="352" cy="140" r="9" fill="#FFFFFF" stroke="#7FB2C0" stroke-width="2"/>
+          <path class="crack" style="--len:180" stroke-dasharray="180" d="M352 140 L 384 120 L 402 128 L 440 96 L 470 92"/>
+          <path class="crack" style="--len:200" stroke-dasharray="200" d="M352 140 L 330 170 L 336 196 L 300 236 L 268 250"/>
+          <path class="crack thin" style="--len:120" stroke-dasharray="120" d="M352 140 L 318 128 L 290 136 L 262 120"/>
+          <path class="crack thin" style="--len:120" stroke-dasharray="120" d="M352 140 L 372 170 L 368 196 L 392 222"/>
+          <path class="crack thin" style="--len:80" stroke-dasharray="80" d="M352 140 L 346 112 L 358 86"/>
+        </g>
+        <!-- mirror -->
+        <rect x="258" y="54" width="44" height="18" rx="6" fill="#0F3D3E"/>
+        <!-- badge -->
+        <g class="fixed">
+          <rect x="175" y="314" width="210" height="40" rx="20" fill="#F2B705"/>
+          <path d="M199 334l8 8 14-16" fill="none" stroke="#0F3D3E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="231" y="341" font-family="Josefin Sans,Trebuchet MS,Arial,sans-serif" font-weight="700" font-size="18" fill="#0F3D3E">Sklo opravené</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="band" role="note">
+  <div class="wrap">
+    <svg viewBox="0 0 110 56" aria-hidden="true"><path d="M8 38 L14 22 Q18 14 28 14 L66 14 Q74 14 80 22 L92 30 Q104 32 104 40 L104 44 L8 44 Z" fill="#0F3D3E"/><path d="M24 20 L 46 20 L 46 30 L 18 30 Z M52 20 L 66 20 Q 72 20 76 30 L 52 30 Z" fill="#CFE8EF"/><circle cx="28" cy="44" r="9" fill="#0F3D3E" stroke="#F2B705" stroke-width="4"/><circle cx="82" cy="44" r="9" fill="#0F3D3E" stroke="#F2B705" stroke-width="4"/></svg>
+    <b>Náhradní auto zdarma</b>
+    <p>Při časově náročné opravě Vám zapůjčíme náhradní automobil zdarma. Nemusíte řešit, jak se dostanete do práce.</p>
+    <a class="btn btn-dark" href="tel:+420608833993">Domluvit opravu</a>
+  </div>
+</div>
+
+<section class="veh" id="vozidla" aria-labelledby="vh-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Pro jaké vozy</p>
+      <h2 id="vh-h">Vyberte, s čím přijedete</h2>
+      <p>Autoskla děláme od osobních aut po kamiony a zemědělské stroje.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Typ vozidla">
+      <button class="tab" role="tab" type="button" id="t-osobni" data-k="osobni" aria-selected="true">Osobní</button>
+      <button class="tab" role="tab" type="button" id="t-dodavka" data-k="dodavka" aria-selected="false">Dodávka</button>
+      <button class="tab" role="tab" type="button" id="t-tir" data-k="tir" aria-selected="false">Autobus a TIR</button>
+      <button class="tab" role="tab" type="button" id="t-zem" data-k="zem" aria-selected="false">Zemědělská technika</button>
+    </div>
+    <div class="vgrid">
+      <div class="vstage" role="tabpanel" aria-live="polite">
+        <svg viewBox="0 0 520 220" aria-hidden="true">
+          <!-- osobni -->
+          <g class="sil" data-k="osobni">
+            <path d="M40 160 L52 124 Q60 104 84 100 L150 92 Q190 60 240 58 L320 58 Q360 60 392 92 L450 104 Q478 110 480 136 L482 160 Z" fill="#0F3D3E"/>
+            <path d="M168 96 Q200 70 244 68 L258 68 L258 98 Z" fill="#CFE8EF"/><path d="M272 68 L318 68 Q352 70 378 98 L272 98 Z" fill="#CFE8EF"/>
+            <circle cx="132" cy="162" r="28" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/><circle cx="398" cy="162" r="28" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/>
+          </g>
+          <!-- dodavka -->
+          <g class="sil" data-k="dodavka" style="opacity:0">
+            <path d="M30 162 L30 60 Q30 40 50 40 L340 40 Q366 40 384 60 L436 112 Q474 118 482 140 L484 162 Z" fill="#0F3D3E"/>
+            <path d="M346 54 L370 54 Q380 54 388 64 L424 106 L346 106 Z" fill="#CFE8EF"/>
+            <rect x="60" y="62" width="60" height="34" rx="4" fill="#14504F"/>
+            <circle cx="112" cy="164" r="27" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/><circle cx="400" cy="164" r="27" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/>
+          </g>
+          <!-- tir -->
+          <g class="sil" data-k="tir" style="opacity:0">
+            <rect x="20" y="30" width="330" height="130" rx="6" fill="#14504F"/>
+            <path d="M360 160 L360 46 Q360 30 376 30 L440 30 Q470 30 480 60 L494 120 L496 160 Z" fill="#0F3D3E"/>
+            <path d="M420 42 L444 42 Q462 42 468 62 L478 104 L420 104 Z" fill="#CFE8EF"/>
+            <circle cx="80" cy="166" r="24" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/><circle cx="140" cy="166" r="24" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/><circle cx="440" cy="166" r="24" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/>
+          </g>
+          <!-- zemedelska -->
+          <g class="sil" data-k="zem" style="opacity:0">
+            <path d="M120 140 L120 100 L250 100 L250 34 Q250 24 260 24 L370 24 Q382 24 384 36 L392 100 L460 108 Q476 112 476 128 L476 150 L120 150 Z" fill="#0F3D3E"/>
+            <path d="M266 38 L312 38 L312 96 L266 96 Z M324 38 L368 38 L376 96 L324 96 Z" fill="#CFE8EF"/>
+            <rect x="96" y="84" width="40" height="12" rx="3" fill="#14504F"/>
+            <circle cx="340" cy="152" r="50" fill="#0F3D3E" stroke="#F2B705" stroke-width="9"/><circle cx="340" cy="152" r="14" fill="#F2B705"/>
+            <circle cx="160" cy="166" r="28" fill="#0F3D3E" stroke="#F2B705" stroke-width="7"/>
+          </g>
+        </svg>
+      </div>
+      <div class="vinfo">
+        <p class="k" id="v-k">Osobní auto</p>
+        <h3 id="v-h">Nové nebo opravené sklo pro Vaše auto</h3>
+        <ul id="v-l"></ul>
+        <div class="acts">
+          <a class="btn btn-sun" id="v-sms" href="sms:+420608833993">Poslat SMS</a>
+          <a class="btn btn-line" href="tel:+420608833993">Zavolat</a>
+        </div>
+        <p class="small">Číslo: <strong style="color:#fff">608 833 993</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="sv-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Služby</p>
+      <h2 id="sv-h">Tři obory pod jednou střechou</h2>
+      <p>Autoskla, LPG a autoservis v jedné dílně v Bílovci.</p>
+    </div>
+    <div class="svc">
+      <article class="main">
+        <div class="ic"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 9q12-5 24 0l-3 15q-9-3-18 0z" fill="#CFE8EF"/><path d="M11 11l4 7" stroke="#F2B705" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <h3>Autoskla</h3>
+        <p>Opravy a výměny autoskel na osobní a dodávkové vozy. Specializujeme se na autobusy, TIR a zemědělskou techniku. Vždy používáme originální skla výrobců automobilů.</p>
+      </article>
+      <article>
+        <div class="ic"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="6" y="9" width="18" height="14" rx="7" fill="#CFE8EF"/><rect x="12" y="4" width="6" height="6" rx="1.5" fill="#F2B705"/></svg></div>
+        <h3>LPG</h3>
+        <p>Jezdíte na plyn? Zavolejte a domluvíme se, co pro Vaše auto s LPG uděláme. <span class="demo">ukázkový text</span></p>
+      </article>
+      <article>
+        <div class="ic"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M20 4a6 6 0 0 0-5.6 8.2L5 21.6 8.4 25l9.4-9.4A6 6 0 0 0 26 10l-3.6 3.6-3-1-1-3L22 6a6 6 0 0 0-2-2z" fill="#CFE8EF"/></svg></div>
+        <h3>Autoservis</h3>
+        <p>Řekněte nám, co auto potřebuje, a domluvíme termín v dílně na Ostravské. <span class="demo">ukázkový text</span></p>
+      </article>
+    </div>
+    <div class="note">
+      <p>Cenu Vám řekneme předem. <span class="demo">ukázkový text</span></p>
+      <a class="btn btn-dark" href="tel:+420608833993">Zavolat 608 833 993</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Proč k nám</p><h2 id="tr-h">Zkušenosti z Bílovce, sklo od výrobce</h2></div>
+    <div class="tgrid">
+      <div class="year"><p class="n">2005</p><p>Od roku 2005 opravujeme a měníme autoskla v Bílovci.</p></div>
+      <ul class="tlist">
+        <li><b>Originální skla výrobců</b>Vždy používáme originální skla výrobců automobilů.</li>
+        <li><b>Náhradní auto zdarma</b>Při časově náročné opravě Vám zapůjčíme náhradní automobil.</li>
+        <li><b>Autobusy, TIR, zemědělská technika</b>Velká skla jsou naše specialita, nejen osobní auta.</li>
+      </ul>
+      <div class="photo"><div><b>Sem přijde Vaše fotka</b>dílna nebo výměna skla na autobusu</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="winter" id="zima" aria-labelledby="zi-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Před zimou</p><h2 id="zi-h">Kamínek ve skle nenechávejte na mráz</h2><p>Obecné rady k čelnímu sklu v zimě.</p></div>
+    <div class="grid">
+      <div class="item">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4v36M6 13l32 18M6 31l32-18" stroke="#0F3D3E" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Teplotní rozdíly</h3><p>Malé poškození skla se může při velkých rozdílech teplot zvětšit. V zimě, kdy venku mrzne a topení ohřívá sklo zevnitř, k tomu bývá víc příležitostí.</p>
+      </div>
+      <div class="item">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M14 8h16l-2 26H16z" fill="none" stroke="#0F3D3E" stroke-width="3" stroke-linejoin="round"/><path d="M8 38h28" stroke="#0F3D3E" stroke-width="3" stroke-linecap="round"/><path d="M6 6l32 32" stroke="#C0392B" stroke-width="3"/></svg>
+        <h3>Žádná horká voda</h3><p>Zamrzlé sklo nepolévejte horkou vodou. Prudká změna teploty může sklo poškodit, obzvlášť když už má kamínek.</p>
+      </div>
+      <div class="item ours">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" fill="#0F3D3E"/><path d="M14 22l6 6 10-12" fill="none" stroke="#F2B705" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Ukažte nám ho včas</h3><p>Sklo s poškozením opravíme nebo vyměníme. Při časově náročné opravě dostanete náhradní auto zdarma. <a href="#objednat">Objednat</a></p>
+      </div>
+    </div>
+    <p class="src">Rady jsou obecné. Jestli jde poškození opravit, nebo je nutná výměna, záleží na jeho velikosti a místě.</p>
+  </div>
+</section>
+
+<section aria-labelledby="st-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Jak to probíhá</p><h2 id="st-h">Ze zavolání k čistému výhledu <span class="demo">ukázkový text</span></h2></div>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo napíšete</h3><p>Řeknete, o jaký vůz jde a kde je sklo poškozené. Stačí i fotka poslaná zprávou.</p></li>
+      <li><h3>Domluvíme termín</h3><p>Připravíme sklo a domluvíme, kdy přijet. Když oprava zabere víc času, půjčíme Vám náhradní auto zdarma.</p></li>
+      <li><h3>Odjedete s novým sklem</h3><p>Vyzvednete si vůz v Bílovci na Ostravské 363/17, za kulturním domem.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="order" id="objednat" aria-labelledby="or-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Objednat servis</p><h2 id="or-h">Popište, co potřebujete. Zprávu Vám připravíme.</h2><p>Formulář nic neodesílá. Otevře se SMS nebo e-mail s hotovým textem, který jen potvrdíte.</p></div>
+    <div class="o-grid">
+      <form id="f" novalidate>
+        <div class="f2">
+          <label for="f-veh">Typ vozidla<select id="f-veh"><option>Osobní auto</option><option>Dodávka</option><option>Autobus</option><option>Kamion (TIR)</option><option>Zemědělská technika</option></select></label>
+          <label for="f-what">Co potřebujete<select id="f-what"><option>Oprava autoskla</option><option>Výměna autoskla</option><option>LPG</option><option>Autoservis</option></select></label>
+        </div>
+        <label for="f-car">Značka a model<input id="f-car" placeholder="např. Ford Transit" autocomplete="off"></label>
+        <label for="f-note">Popis<textarea id="f-note" placeholder="např. prasklina na čelním skle vpravo dole"></textarea></label>
+        <div class="f2">
+          <label for="f-name">Jméno<input id="f-name" autocomplete="name"></label>
+          <label for="f-tel">Telefon<input id="f-tel" type="tel" autocomplete="tel"></label>
+        </div>
+        <div class="f2">
+          <button class="btn btn-sun" type="submit" data-via="sms">Připravit SMS</button>
+          <button class="btn btn-line" type="submit" data-via="mail">Připravit e-mail</button>
+        </div>
+        <div class="out" id="out" hidden>
+          <pre id="out-t"></pre>
+          <p class="small">Pokud se aplikace neotevřela, pošlete text na 608 833 993 nebo benesisko@centrum.cz. <button class="linkbtn" type="button" id="out-copy">Zkopírovat</button></p>
+        </div>
+      </form>
+      <aside class="side">
+        <h3>Nejrychleji po telefonu</h3>
+        <a class="num" href="tel:+420608833993">608 833 993</a>
+        <p>Jiří Beneš, AUTOSKLO-LPG-AUTOSERVIS</p>
+        <p>Ostravská 363/17, Bílovec, za kulturním domem</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="fq-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Časté otázky</p><h2 id="fq-h">Na co se řidiči ptají</h2></div>
+    <details><summary>Dá se prasklina opravit, nebo musí být nové sklo?</summary><p>Záleží na velikosti poškození a na tom, kde ve skle je. Zavolejte nebo pošlete fotku a řekneme Vám, co připadá v úvahu.</p></details>
+    <details><summary>Jaké sklo do auta dáte?</summary><p>Vždy používáme originální skla výrobců automobilů.</p></details>
+    <details><summary>Co když oprava potrvá déle?</summary><p>Při časově náročné opravě Vám zapůjčíme náhradní automobil zdarma, abyste nezůstal(a) bez auta.</p></details>
+    <details><summary>Měníte skla i na autobus, kamion nebo traktor?</summary><p>Ano. Na autobusy, TIR a zemědělskou techniku se specializujeme.</p></details>
+    <details><summary>Kde Vás v Bílovci najdu?</summary><p>Na Ostravské 363/17, za kulturním domem. Před cestou zavolejte na 608 833 993, ať Vás čekáme.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="ct-h">
+  <div class="wrap c-grid">
+    <div>
+      <p class="eyebrow">Kontakt</p>
+      <h2 id="ct-h" style="margin:8px 0 22px">AUTOSKLO-LPG-AUTOSERVIS</h2>
+      <dl class="c-list">
+        <div><dt>Telefon</dt><dd><a href="tel:+420608833993">608 833 993</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:benesisko@centrum.cz">benesisko@centrum.cz</a></dd></div>
+        <div><dt>Adresa</dt><dd>Ostravská 363/17, Bílovec (za kulturním domem)</dd></div>
+        <div><dt>Provozovatel</dt><dd>Jiří Beneš</dd></div>
+      </dl>
+    </div>
+    <a class="maplink" href="https://mapy.cz/zakladni?q=Ostravsk%C3%A1%20363%2F17%2C%20B%C3%ADlovec" target="_blank" rel="noopener">
+      <div><b>Ostravská 363/17, Bílovec</b>za kulturním domem<br><span>Otevřít v Mapy.cz</span></div>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">AUTOSKLO-LPG-AUTOSERVIS · Jiří Beneš · Bílovec · Nezávazný návrh webu, nejde o oficiální stránku firmy. Texty označené „ukázkový text“ je potřeba s firmou ověřit.</div></footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+420608833993">Zavolat</a>
+  <a class="btn btn-sun" href="#objednat">Objednat servis</a>
+</div>
+
+<script>
+(function(){
+  function $(id){return document.getElementById(id)}
+  var V={
+    osobni:{k:"Osobní auto",h:"Nové nebo opravené sklo pro Vaše auto",l:["Opravy a výměny autoskel na osobní vozy.","Vždy originální skla výrobců automobilů.","Při časově náročné opravě náhradní auto zdarma."],m:"Dobrý den, potřebuji opravit/vyměnit sklo na osobním autě. Vůz: "},
+    dodavka:{k:"Dodávka",h:"Skla pro dodávkové vozy",l:["Opravy a výměny autoskel na dodávkové vozy.","Vždy originální skla výrobců automobilů.","Při časově náročné opravě náhradní auto zdarma."],m:"Dobrý den, potřebuji opravit/vyměnit sklo na dodávce. Vůz: "},
+    tir:{k:"Autobus a TIR",h:"Velká skla jsou naše specialita",l:["Na autobusy a TIR se specializujeme.","Opravy a výměny skel autobusů a kamionů.","Vždy originální skla výrobců."],m:"Dobrý den, potřebuji sklo na autobus/kamion. Vůz: "},
+    zem:{k:"Zemědělská technika",h:"Skla pro zemědělské stroje",l:["Na zemědělskou techniku se specializujeme.","Poškozené sklo kabiny opravíme nebo vyměníme.","Vždy originální skla výrobců."],m:"Dobrý den, potřebuji sklo na zemědělský stroj. Stroj: "}
+  };
+  var ck='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+  function show(k){
+    var d=V[k]; if(!d) return;
+    $("v-k").textContent=d.k; $("v-h").textContent=d.h;
+    $("v-l").innerHTML=d.l.map(function(x){return "<li>"+ck+"<span>"+x+"</span></li>"}).join("");
+    $("v-sms").href="sms:+420608833993?body="+encodeURIComponent(d.m);
+    document.querySelectorAll(".tab").forEach(function(t){t.setAttribute("aria-selected",t.dataset.k===k?"true":"false")});
+    document.querySelectorAll(".sil").forEach(function(s){s.style.opacity=s.dataset.k===k?"1":"0"});
+  }
+  document.querySelectorAll(".tab").forEach(function(t){t.addEventListener("click",function(){show(t.dataset.k)})});
+  show("osobni");
+
+  var f=$("f"),via="sms";
+  f.querySelectorAll("button[type=submit]").forEach(function(b){b.addEventListener("click",function(){via=b.dataset.via})});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var t="Dobrý den, mám zájem o: "+$("f-what").value+" ("+$("f-veh").value+").";
+    [["f-car","Vůz"],["f-note","Popis"],["f-name","Jméno"],["f-tel","Telefon"]].forEach(function(p){var v=$(p[0]).value.trim(); if(v) t+="\n"+p[1]+": "+v});
+    $("out-t").textContent=t; $("out").hidden=false;
+    var href= via==="sms" ? "sms:+420608833993?body="+encodeURIComponent(t) : "mailto:benesisko@centrum.cz?subject="+encodeURIComponent("Poptávka – autosklo / servis")+"&body="+encodeURIComponent(t);
+    var a=document.createElement("a"); a.href=href; document.body.appendChild(a); a.click(); a.remove();
+  });
+  $("out-copy").addEventListener("click",function(){var b=this;try{navigator.clipboard.writeText($("out-t").textContent).then(function(){b.textContent="Zkopírováno"},function(){})}catch(e){}});
+})();
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Pneuservis Třinec – Pneuservis Kojkovice | návrh webu</title>
+<meta name="description" content="Pneuservis Kojkovice, Třinec – přezouvání, vyvažování, opravy a prodej pneumatik, servis a dezinfekce klimatizace od 200 Kč. Objednejte přezutí na tel. 734 181 969.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800;900&amp;family=Mukta:wght@400;500;700&amp;display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Pneuservis Kojkovice – Eugeniusz Zalisz",
+  "telephone": "+420734181969",
+  "email": "pneuservis-kojkovice@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "06447333"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kojkovice 7",
+    "addressLocality": "Třinec",
+    "postalCode": "739 61",
+    "addressCountry": "CZ"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 49.701019, "longitude": 18.693153},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "15:00"}
+  ]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/*
+  Koncept rozložení „Dezén a sezóna“:
+  - tmavý antracitový hero jako guma pneumatiky, přes něj pruh dezénu (inline SVG vzor),
+  - hned pod ním výrazný sezónní ukazatel (ledová zima / meruňkové léto) s ročním pásem,
+  - světlé pásy se službami a ceníkem, zelená (beskydská) pro důvěru a kroky,
+  - kontakt + objednávka přezutí na konci, na mobilu stále viditelný pruh „Zavolat“.
+*/
+:root{
+  --anthracite:#24272B;
+  --anthracite-2:#30343A;
+  --anthracite-3:#3B4048;
+  --ice:#D6ECF7;
+  --ice-soft:#EBF5FB;
+  --apricot:#F49D37;
+  --apricot-soft:#FDE6CB;
+  --green:#2F6E4E;
+  --green-soft:#DCEBE2;
+  --paper:#FAFBFC;
+  --white:#FFFFFF;
+  --ink:#24272B;
+  --ink-muted:#4C535C;
+  --on-dark:#F3F5F7;
+  --on-dark-muted:#BFC6CE;
+  --line:#D5DCE2;
+  --line-dark:#474D55;
+  --focus:#F49D37;
+  --star:#F49D37;
+  --ok:#2F6E4E;
+  --closed:#9A3B2E;
+  --radius:14px;
+  --radius-lg:22px;
+  --shadow:0 10px 30px rgba(36,39,43,.12);
+  --font-head:"Gabarito", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body:"Mukta", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:18px;line-height:1.55}
+.page{overflow-x:clip;padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){.page{padding-bottom:0}}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.08;margin:0 0 .5em;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(30px,5vw,46px);font-weight:800}
+h3{font-size:22px;font-weight:700}
+p{margin:0 0 1em;max-width:65ch}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+.band{padding-block:72px}
+@media (min-width:900px){.band{padding-block:104px}}
+.eyebrow{font-family:var(--font-head);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:14px;color:var(--green);margin:0 0 12px}
+.ukazka{display:inline-block;font-family:var(--font-body);font-size:12px;font-weight:700;line-height:1.3;letter-spacing:.02em;text-transform:none;background:var(--apricot-soft);color:var(--ink);border:1px dashed var(--apricot);border-radius:999px;padding:1px 8px;vertical-align:middle;white-space:nowrap}
+
+/* návrhový banner */
+.draft{background:var(--apricot);color:var(--anthracite);font-weight:700;font-size:15px;text-align:center}
+.draft .wrap{padding-block:8px}
+
+/* hlavička */
+.head{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--anthracite);color:var(--on-dark);border-bottom:1px solid var(--line-dark)}
+.head .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--font-head);font-weight:800;font-size:19px;line-height:1.05;color:var(--on-dark)}
+.brand small{display:block;font-family:var(--font-body);font-weight:500;font-size:13px;color:var(--on-dark-muted);letter-spacing:.02em}
+.brand svg{flex:none}
+.nav{display:none;margin-left:auto;gap:22px}
+.nav a{text-decoration:none;color:var(--on-dark-muted);font-weight:500;font-size:16px}
+.nav a:hover{color:var(--on-dark)}
+.head-tel{margin-left:auto;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--font-head);font-weight:700;font-size:17px;color:var(--anthracite);background:var(--ice);padding:9px 14px;border-radius:999px;white-space:nowrap}
+.head-tel svg{width:18px;height:18px}
+@media (max-width:420px){.head-tel .num{display:none}.head-tel::after{content:"Zavolat"}}
+@media (min-width:960px){.nav{display:flex}.head-tel{margin-left:8px}}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 24px;border-radius:999px;font-family:var(--font-head);font-weight:700;font-size:18px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, background-color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--apricot);color:var(--anthracite)}
+.btn-primary:hover{background:#F7AD55}
+.btn-ghost{background:transparent;color:var(--on-dark);border-color:var(--on-dark-muted)}
+.btn-ghost:hover{border-color:var(--on-dark)}
+.btn-dark{background:var(--anthracite);color:var(--on-dark)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* hero */
+.hero{background:var(--anthracite);color:var(--on-dark);position:relative}
+.hero .wrap{padding-block:30px 34px;position:relative;z-index:1}
+@media (min-width:900px){.hero .wrap{padding-block:76px 84px;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}}
+.hero-kicker{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px;color:var(--on-dark-muted);margin:0 0 12px}
+.hero-kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--apricot)}
+.hero h1{font-size:clamp(40px,10.6vw,92px);font-weight:900;line-height:.95;letter-spacing:-.025em;margin:0 0 14px}
+.hero h1 .accent{color:var(--apricot)}
+.hero h1 .ice{color:var(--ice)}
+.hero-lead{font-size:clamp(17px,2.2vw,21px);color:var(--on-dark);max-width:38ch;margin:0 0 18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.rating{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-dark);font-size:16px;line-height:1.25}
+.rating b{font-family:var(--font-head);font-size:22px}
+.rating .stars{color:var(--star);font-size:18px;letter-spacing:2px}
+.rating u{color:var(--on-dark-muted);text-decoration-color:var(--on-dark-muted)}
+.hero-side{display:none}
+@media (min-width:900px){.hero-side{display:block}}
+.wheel{width:100%;max-width:380px;margin-left:auto}
+.wheel .spin{transform-origin:50% 50%;animation:roll 30s linear infinite}
+@keyframes roll{to{transform:rotate(360deg)}}
+.tread{display:block;width:100%;height:46px;background:var(--anthracite-2);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
+.tread svg{width:100%;height:46px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--on-dark-muted)}
+.hero-facts li{display:flex;align-items:center;gap:6px}
+.hero-facts svg{width:16px;height:16px;color:var(--apricot)}
+
+/* sezónní ukazatel */
+.season{background:var(--ice);color:var(--ink);transition:background-color .3s ease}
+.season[data-mode="leto"]{background:var(--apricot-soft)}
+.season .wrap{padding-block:56px}
+@media (min-width:900px){.season .wrap{padding-block:80px}}
+.season-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:22px}
+.season-top h2{margin:0}
+.season-date{font-size:16px;color:var(--ink-muted);margin:0 0 6px}
+.toggle{display:inline-flex;background:var(--white);border:2px solid var(--anthracite);border-radius:999px;padding:4px;gap:4px}
+.toggle button{font-family:var(--font-head);font-weight:700;font-size:17px;border:0;background:transparent;color:var(--ink);padding:9px 18px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.toggle button[aria-pressed="true"]{background:var(--anthracite);color:var(--on-dark)}
+.toggle svg{width:18px;height:18px}
+.season-card{display:grid;gap:22px;background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:22px;border:1px solid var(--line)}
+@media (min-width:900px){.season-card{grid-template-columns:1.1fr .9fr;padding:36px;gap:40px}}
+.season-head{display:flex;gap:16px;align-items:flex-start}
+.season-icon{flex:none;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:var(--anthracite);color:var(--ice)}
+.season[data-mode="leto"] .season-icon{color:var(--apricot)}
+.season-icon svg{width:38px;height:38px}
+.season-now{font-size:clamp(26px,4.4vw,38px);font-weight:900;margin:0 0 6px}
+.season-sub{margin:0;color:var(--ink-muted);font-size:17px}
+.facts{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px}
+.facts li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;font-size:17px}
+.facts li svg{width:24px;height:24px;color:var(--green);margin-top:2px}
+.facts small{display:block;color:var(--ink-muted);font-size:14px}
+.year{margin-top:6px}
+.year-title{font-family:var(--font-head);font-weight:700;font-size:16px;margin:0 0 10px}
+.year-bar{position:relative;height:54px;border-radius:12px;background:var(--apricot-soft);overflow:hidden;border:1px solid var(--line)}
+.year-bar .winter{position:absolute;top:0;bottom:0;background:var(--ice);border-left:2px solid var(--anthracite);border-right:2px solid var(--anthracite)}
+.year-bar .today{position:absolute;top:-2px;bottom:-2px;width:3px;background:var(--apricot);box-shadow:0 0 0 2px var(--anthracite)}
+.year-bar .lbl{position:absolute;top:50%;transform:translateY(-50%);font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap}
+.months{display:grid;grid-template-columns:repeat(12,1fr);font-size:12px;color:var(--ink-muted);margin-top:6px;text-align:center}
+.year-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--ink-muted);margin-top:10px}
+.year-legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:14px;border-radius:4px;border:1px solid var(--anthracite);display:inline-block}
+.countdown{margin-top:18px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:17px}
+.countdown b{font-family:var(--font-head);font-size:40px;line-height:1;color:var(--green)}
+.season-cta{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.season-src{font-size:14px;color:var(--ink-muted);margin:16px 0 0}
+.season-src a{color:var(--ink)}
+
+/* služby */
+.services{display:grid;gap:14px;margin-top:28px}
+@media (min-width:640px){.services{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.services{grid-template-columns:repeat(3,1fr);gap:18px}}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:6px;position:relative}
+.svc .ico{width:48px;height:48px;border-radius:12px;background:var(--ice);color:var(--anthracite);display:grid;place-items:center;margin-bottom:8px}
+.svc .ico svg{width:28px;height:28px}
+@media (max-width:639px){.svc{display:grid;grid-template-columns:48px 1fr;column-gap:14px;row-gap:4px;padding:18px}.svc .ico{grid-row:1/span 3;margin:0}.svc .price{padding-top:6px}.svc .tag{position:static;justify-self:start;grid-column:2;order:-1}}
+.svc.hot{background:var(--anthracite);color:var(--on-dark);border-color:var(--anthracite)}
+.svc.hot .ico{background:var(--apricot)}
+.svc.hot p{color:var(--on-dark-muted)}
+.svc h3{margin:0}
+.svc p{margin:0;color:var(--ink-muted);font-size:17px}
+.svc .price{margin-top:auto;padding-top:12px;font-family:var(--font-head);font-weight:700;font-size:18px}
+.svc .price.ask{font-family:var(--font-body);font-weight:500;color:var(--ink-muted);font-size:16px}
+.svc.hot .price.ask{color:var(--on-dark-muted)}
+.svc .tag{position:absolute;top:16px;right:16px;font-size:13px;font-weight:700;background:var(--apricot);color:var(--anthracite);border-radius:999px;padding:2px 10px}
+.svc a.inline{color:inherit;font-weight:700}
+
+/* ceník */
+.pricing{background:var(--white)}
+.price-grid{display:grid;gap:28px;margin-top:20px}
+@media (min-width:900px){.price-grid{grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}}
+.ptable{width:100%;border-collapse:collapse;font-size:17px}
+.ptable caption{text-align:left;font-family:var(--font-head);font-weight:700;font-size:20px;padding-bottom:10px}
+.ptable th,.ptable td{text-align:left;padding:13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable td:last-child,.ptable th:last-child{text-align:right;white-space:nowrap;padding-left:14px}
+.ptable th{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted);font-weight:700}
+.ptable .v{font-family:var(--font-head);font-weight:700}
+.ptable .q{color:var(--ink-muted)}
+.ptable small{display:block;color:var(--ink-muted);font-size:14px}
+.ask{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;justify-content:space-between;background:var(--ice-soft);border-left:4px solid var(--apricot);border-radius:10px;padding:16px 18px}
+.ask p{margin:0;font-family:var(--font-head);font-weight:700;font-size:20px;line-height:1.2}
+.note{background:var(--ice-soft);border-left:4px solid var(--green);border-radius:10px;padding:16px 18px;font-size:16px}
+.note p{margin:0 0 .6em}
+.note p:last-child{margin:0}
+.photo{border:2px dashed var(--line);border-radius:var(--radius);background:repeating-linear-gradient(135deg,var(--ice-soft) 0 14px,var(--white) 14px 28px);min-height:200px;display:grid;place-items:center;text-align:center;padding:22px;color:var(--ink-muted);font-size:16px}
+.photo b{display:block;font-family:var(--font-head);color:var(--ink);font-size:18px;margin-bottom:4px}
+
+/* důvěra + kroky */
+.trust{background:var(--green);color:var(--white)}
+.trust .eyebrow{color:var(--apricot-soft)}
+.trust-grid{display:grid;gap:16px;margin-top:22px}
+@media (min-width:800px){.trust-grid{grid-template-columns:repeat(3,1fr)}}
+.tcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:22px}
+.tcard .big{font-family:var(--font-head);font-weight:900;font-size:48px;line-height:1}
+.tcard p{margin:8px 0 0;color:var(--white)}
+.tcard a{color:var(--white);font-weight:700}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;counter-reset:s}
+@media (min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:22px 22px 22px 22px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--anthracite);color:var(--apricot);font-family:var(--font-head);font-weight:900;font-size:22px;margin-bottom:12px}
+.steps h3{margin:0 0 6px}
+.steps p{margin:0;color:var(--ink-muted);font-size:17px}
+.steps-title{margin-top:56px}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;font-family:var(--font-head);font-weight:700;font-size:20px;padding:16px 40px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:12px;font-size:28px;color:var(--green)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--ink-muted);font-size:17px}
+.faq a{color:var(--ink)}
+
+/* kontakt */
+.contact{background:var(--anthracite);color:var(--on-dark)}
+.contact .eyebrow{color:var(--apricot)}
+.contact-grid{display:grid;gap:28px;margin-top:20px}
+@media (min-width:960px){.contact-grid{grid-template-columns:.9fr 1.1fr;gap:48px}}
+.clist{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:14px}
+.clist li{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.clist .ci{width:40px;height:40px;border-radius:10px;background:var(--anthracite-3);display:grid;place-items:center;color:var(--apricot)}
+.clist .ci svg{width:22px;height:22px}
+.clist b{display:block;font-family:var(--font-head);font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted);font-weight:700}
+.clist a{color:var(--on-dark);font-size:19px;font-weight:500;word-break:break-word}
+.clist span{font-size:18px}
+.hours{width:100%;border-collapse:collapse;font-size:17px;margin-top:4px}
+.hours td{padding:5px 0;border-bottom:1px solid var(--line-dark)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--apricot);font-weight:700}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px;padding:4px 12px;border-radius:999px;background:var(--anthracite-3);margin-top:8px}
+.status i{width:10px;height:10px;border-radius:50%;background:var(--on-dark-muted)}
+.status.open i{background:#5FC28A}
+.status.phone i{background:var(--apricot)}
+.status.closed i{background:#E0806F}
+.hours-src{font-size:14px;color:var(--on-dark-muted);margin:8px 0 0}
+.map{display:block;text-decoration:none;color:var(--on-dark);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line-dark);margin-top:22px;background:var(--anthracite-2)}
+.map svg{width:100%;height:auto}
+.map > span{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;font-weight:700;font-size:16px}
+.form{background:var(--white);color:var(--ink);border-radius:var(--radius-lg);padding:22px;display:grid;gap:14px}
+@media (min-width:700px){.form{padding:32px;grid-template-columns:1fr 1fr}.form .full{grid-column:1/-1}}
+.form h3{font-size:26px;margin:0}
+.form label{display:block;font-weight:700;font-size:16px;margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:10px;padding:11px 12px;min-height:50px}
+.form textarea{min-height:110px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--green);outline:none;box-shadow:0 0 0 3px var(--green-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0}
+.chips legend{font-weight:700;font-size:16px;margin-bottom:6px;padding:0}
+.chips label{margin:0;display:inline-flex;align-items:center;gap:6px;font-weight:500;border:2px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;min-height:44px}
+.chips input{width:auto;min-height:0;accent-color:var(--green)}
+.chips label:has(input:checked){border-color:var(--green);background:var(--green-soft)}
+.form-note{font-size:14px;color:var(--ink-muted);margin:0}
+.form-msg{display:none;background:var(--green-soft);border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;font-size:16px}
+.form-msg.show{display:block}
+
+/* patička */
+.foot{background:var(--anthracite-2);color:var(--on-dark-muted);font-size:15px}
+.foot .wrap{padding-block:30px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+.foot a{color:var(--on-dark)}
+
+/* mobilní pruh */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--anthracite);border-top:1px solid var(--line-dark);padding:10px max(16px, env(safe-area-inset-right,0px)) 10px max(16px, env(safe-area-inset-left,0px));padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px}
+.callbar a{flex:1;min-height:50px;font-size:17px;padding:10px 12px;white-space:nowrap}
+.callbar a:first-child{flex:1.7}
+@media (min-width:900px){.callbar{display:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+
+<div class="page">
+  <div class="draft" role="note"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Pneuservis Kojkovice (Eugeniusz Zalisz)</div></div>
+
+  <header class="head">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Pneuservis Kojkovice – na začátek">
+        <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#F49D37"/><circle cx="20" cy="20" r="11" fill="#24272B"/><circle cx="20" cy="20" r="4" fill="#D6ECF7"/><g stroke="#24272B" stroke-width="3"><path d="M20 2v5M20 33v5M2 20h5M33 20h5M7.3 7.3l3.5 3.5M29.2 29.2l3.5 3.5M7.3 32.7l3.5-3.5M29.2 10.8l3.5-3.5"/></g></svg>
+        <span>Pneuservis Kojkovice<small>Třinec · Kojkovice 7</small></span>
+      </a>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#sezona">Sezóna</a>
+        <a href="#sluzby">Služby</a>
+        <a href="#cenik">Ceník</a>
+        <a href="#postup">Jak to probíhá</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="head-tel" href="tel:+420734181969" aria-label="Zavolat 734 181 969">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+        <span class="num">734 181 969</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <p class="hero-kicker"><span>Pneuservis</span><span class="dot" aria-hidden="true"></span><span>Třinec – Kojkovice</span><span class="dot" aria-hidden="true"></span><span>klimatizace</span></p>
+          <h1 id="hero-title">Přezujeme <span class="ice">Vás</span> v&nbsp;<span class="accent">Kojkovicích.</span></h1>
+          <p class="hero-lead">Přezouvání, vyvažování, opravy a prodej pneumatik a servis klimatizace – kousek od Třince, termín domluvíme po telefonu.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#objednat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>
+              Objednat přezutí
+            </a>
+            <a class="btn btn-ghost" href="tel:+420734181969">Zavolat 734 181 969</a>
+          </div>
+          <a class="rating" href="https://www.firmy.cz/detail/13226488-eugeniusz-zalisz-trinec-kojkovice.html#hodnoceni" target="_blank" rel="noopener">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span><b>5,0</b> z 12 hodnocení <u>na Firmy.cz</u></span>
+          </a>
+        </div>
+        <div class="hero-side" aria-hidden="true">
+          <svg class="wheel" viewBox="0 0 300 300">
+            <g class="spin">
+              <circle cx="150" cy="150" r="144" fill="#30343A"/>
+              <circle cx="150" cy="150" r="131" fill="none" stroke="#474D55" stroke-width="18" stroke-dasharray="14 10"/>
+              <circle cx="150" cy="150" r="118" fill="#24272B"/>
+              <circle cx="150" cy="150" r="96" fill="#D6ECF7"/>
+              <circle cx="150" cy="150" r="82" fill="#24272B"/>
+              <g stroke="#D6ECF7" stroke-width="20" stroke-linecap="round">
+                <path d="M150 150 L150 74"/><path d="M150 150 L222 127"/><path d="M150 150 L195 212"/><path d="M150 150 L105 212"/><path d="M150 150 L78 127"/>
+              </g>
+              <circle cx="150" cy="150" r="26" fill="#F49D37"/>
+              <circle cx="150" cy="150" r="9" fill="#24272B"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="tread" aria-hidden="true">
+        <svg preserveAspectRatio="none" viewBox="0 0 1200 46">
+          <defs>
+            <pattern id="dezen" width="48" height="46" patternUnits="userSpaceOnUse">
+              <path d="M0 0 L16 23 L0 46" fill="none" stroke="#474D55" stroke-width="7"/>
+              <path d="M24 0 L40 23 L24 46" fill="none" stroke="#474D55" stroke-width="7"/>
+              <path d="M12 21 h8" stroke="#24272B" stroke-width="3"/>
+            </pattern>
+          </defs>
+          <rect width="1200" height="46" fill="url(#dezen)"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="season" id="sezona" data-mode="zima" aria-labelledby="season-title">
+      <div class="wrap">
+        <div class="season-top">
+          <div>
+            <p class="eyebrow">Sezónní ukazatel</p>
+            <p class="season-date" id="season-date">Dnes</p>
+            <h2 id="season-title">Které gumy teď?</h2>
+          </div>
+          <div class="toggle" role="group" aria-label="Zobrazit informace pro">
+            <button type="button" id="btn-zima" aria-pressed="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M4 6l16 12M20 6L4 18M9 3l3 3 3-3M9 21l3-3 3 3"/></svg>Zima
+            </button>
+            <button type="button" id="btn-leto" aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>Léto
+            </button>
+          </div>
+        </div>
+
+        <div class="season-card" aria-live="polite">
+          <div>
+            <div class="season-head">
+              <div class="season-icon" id="season-icon" aria-hidden="true"></div>
+              <div>
+                <p class="season-now" id="season-now">Teď je čas na zimní pneu</p>
+                <p class="season-sub" id="season-sub">Ranní teploty klesají – přezujte dřív, než napadne první sníh.</p>
+              </div>
+            </div>
+            <ul class="facts" id="season-facts"></ul>
+            <div class="season-cta">
+              <a class="btn btn-primary" id="season-btn" href="#objednat">Objednat přezutí na zimní</a>
+              <a class="btn btn-dark" href="tel:+420734181969">734 181 969</a>
+            </div>
+          </div>
+          <div class="year">
+            <p class="year-title">Kalendář pneumatik pro rok <span id="year-num">2026</span></p>
+            <div class="year-bar" id="year-bar" role="img" aria-label="Roční pás: zimní období od 1. listopadu do 31. března, dnešní den je vyznačen">
+              <div class="winter" style="left:0;width:24.7%"></div>
+              <div class="winter" style="left:83.6%;width:16.4%"></div>
+              <span class="lbl" style="left:3%">zimní</span>
+              <span class="lbl" style="left:44%">letní</span>
+              <span class="lbl" style="left:86%">zimní</span>
+              <div class="today" id="today-mark" style="left:78%"></div>
+            </div>
+            <div class="months" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
+            <div class="year-legend">
+              <span><i class="sw" style="background:#D6ECF7"></i>1. 11. – 31. 3.: zimní pneu povinné při zimních podmínkách</span>
+              <span><i class="sw" style="background:#F49D37"></i>dnes</span>
+            </div>
+            <div class="countdown" id="countdown"></div>
+            <p class="season-src">Zákonné údaje podle § 40a zákona č. 361/2000 Sb., jak je shrnuje <a href="https://archiv.policie.gov.cz/clanek/policie-cr-upozornuje-od-1-listopadu-plati-povinnost-zimni-vybavy.aspx" target="_blank" rel="noopener">Policie ČR</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="sluzby" aria-labelledby="svc-title">
+      <div class="wrap">
+        <p class="eyebrow">Služby</p>
+        <h2 id="svc-title">Kola, klimatizace a ještě něco navíc</h2>
+        <p>„Komplexní řešení pneu služeb – prodej, přezouvání, vyvažování, oprava pneumatik, huštění a jiné.“ Tak to stojí na původním webu – a tady to máte přehledně, s cenami tam, kde je firma zveřejnila.</p>
+        <div class="services">
+          <article class="svc hot">
+            <span class="tag">sezóna</span>
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="4"/><path d="M12 2.5v5.5M12 16v5.5M2.5 12H8M16 12h5.5"/></svg></div>
+            <h3>Přezouvání pneumatik</h3>
+            <p>Sezónní výměna zimních a letních pneu – stačí zavolat a domluvit termín.</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 20h18M12 20V8M5 8h14M5 8l-2 6h4zM19 8l-2 6h4z"/><circle cx="12" cy="5" r="2"/></svg></div>
+            <h3>Vyvažování kol</h3>
+            <p>Vyvážené kolo nevibruje ve volantu a pneumatika se sjíždí rovnoměrně.</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M8 12h8M12 8v8"/></svg></div>
+            <h3>Oprava a huštění</h3>
+            <p>Píchlá pneumatika nebo pomalý únik vzduchu – opravíme a nahustíme na správný tlak.</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16l-1.5 13h-13z"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div>
+            <h3>Prodej pneumatik</h3>
+            <p>Nové pneu Vám zajistíme a rovnou je i namontujeme – rozměr a značku řekněte do telefonu.</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Servis a dezinfekce klimatizace</h3>
+            <p>„Pravidelná kontrola a údržba klimatizace prospěje Vašemu zdraví.“ Servis s chladivem R134a.</p>
+            <p class="price">dezinfekce od 200 Kč<br>servis od 300 Kč</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 15h9l3-3h4"/><circle cx="20" cy="12" r="1.8"/><path d="M6 15v3M10 15v3"/></svg></div>
+            <h3>Montáž tažných zařízení</h3>
+            <p>Podle původního webu firma montuje mimo jiné značky Westfalia, Auto-Hak, Aragon, Steinhof, GDW, Thule, Brink a Hakpol.</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-8h5l3 8M9 9h-2M14 5h3"/></svg></div>
+            <h3>Půjčovna cyklonosiče</h3>
+            <p>Cyklonosič na tažné zařízení pro 4 jízdní kola, po telefonické rezervaci.</p>
+            <p class="price">100 Kč/den + vratná kauce</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="M8 10l3 3 5-5"/></svg></div>
+            <h3>Příprava vozidla na STK</h3>
+            <p>Komplexní kontrola a příprava vozidla, aby technická prohlídka proběhla bez problémů.</p>
+          </article>
+          <article class="svc">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 13l2-5a2 2 0 0 1 2-1h12a2 2 0 0 1 2 1l2 5v4H2z"/><path d="M6 7l3 6M14 7l-2 6"/></svg></div>
+            <h3>Výměna autoskel</h3>
+            <p>Prasklé čelní sklo? Zavolejte, domluvíme výměnu i cenu pro Váš vůz.</p>
+          </article>
+        </div>
+        <p class="note" style="margin-top:22px">Odtahy a přeprava vozidel (v rámci ČR i dovoz z EU) zajišťuje samostatně William Zalisz – tel. <a class="inline" href="tel:+420608129006">608 129 006</a>, jak uvádí původní web.</p>
+      </div>
+    </section>
+
+    <section class="band pricing" id="cenik" aria-labelledby="price-title">
+      <div class="wrap">
+        <p class="eyebrow">Ceník</p>
+        <h2 id="price-title">Ceny, které firma zveřejnila</h2>
+        <div class="price-grid">
+          <div>
+          <table class="ptable">
+            <caption>Zveřejněné ceny</caption>
+            <thead><tr><th scope="col">Služba</th><th scope="col">Cena</th></tr></thead>
+            <tbody>
+              <tr><td>Dezinfekce klimatizace</td><td class="v">od 200 Kč</td></tr>
+              <tr><td>Servis klimatizace<small>chladivo R134a</small></td><td class="v">od 300 Kč</td></tr>
+              <tr><td>Zapůjčení cyklonosiče<small>na tažné zařízení, 4 kola</small></td><td class="v">100 Kč/den<small>+ vratná kauce</small></td></tr>
+            </tbody>
+          </table>
+          <div class="ask"><p>Cenu ostatních služeb Vám řekneme předem.</p><a class="btn btn-primary" href="tel:+420734181969">Zavolat 734 181 969</a></div>
+          </div>
+          <div>
+            <div class="note">
+              <p><strong>Jak jsme k cenám došli:</strong> ceny klimatizace a cyklonosiče jsou převzaté z původního webu firmy. U ostatních služeb zatím cena zveřejněná není.</p>
+              <p>Do hotového webu doplníme ceny přezutí podle velikosti disku (např. 13–15″, 16–17″, 18″ a víc, SUV a dodávky) – zákazníci je hledají nejčastěji. <span class="ukazka">ukázkový text</span></p>
+            </div>
+            <div class="photo" style="margin-top:18px"><div><b>Sem přijde Vaše fotka</b>Dílna nebo zvedák s autem při přezouvání – nejlépe skutečná fotka z Kojkovic.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band trust" id="postup" aria-labelledby="trust-title">
+      <div class="wrap">
+        <p class="eyebrow">Proč Kojkovice</p>
+        <h2 id="trust-title">Řidiči z Třinecka hodnotí na plný počet</h2>
+        <div class="trust-grid">
+          <div class="tcard">
+            <div class="big">5,0 ★</div>
+            <p>z 12 hodnocení na <a href="https://www.firmy.cz/detail/13226488-eugeniusz-zalisz-trinec-kojkovice.html#hodnoceni" target="_blank" rel="noopener">Firmy.cz</a>. Ve veřejných hodnoceních zákazníci kladně označují cenu, termíny, kvalitu i komunikaci.</p>
+          </div>
+          <div class="tcard">
+            <div class="big">3.&nbsp;místo</div>
+            <p>v žebříčku <a href="https://www.firmy.cz/nejlepsi/Auto-moto/Auto-moto-sluzby/Autoservisy/kraj-moravskoslezsky/frydek-mistek/4592-trinec" target="_blank" rel="noopener">Autoservisy v Třinci</a> na Firmy.cz (stav k 14. 10. 2026).</p>
+          </div>
+          <div class="tcard">
+            <div class="big">Po–Pá 7–15</div>
+            <p>V sobotu 8–12 h jen po telefonické domluvě. Firma upřednostňuje rezervaci telefonem na <a href="tel:+420734181969">734 181 969</a>.</p>
+          </div>
+        </div>
+
+        <h2 class="steps-title">Jak to probíhá</h2>
+        <ol class="steps">
+          <li><h3>Zavoláte nebo napíšete</h3><p>Řeknete, co potřebujete – přezutí, vyvážení, opravu, klimatizaci – a jaké máte auto.</p></li>
+          <li><h3>Domluvíme termín</h3><p>Ve všední den 7–15 h, v sobotu 8–12 h jen po předchozí telefonické domluvě.</p></li>
+          <li><h3>Přijedete do Kojkovic</h3><p>Na adresu Kojkovice 7. Po práci odjíždíte na kolech, která odpovídají sezóně.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="eyebrow">Časté otázky</p>
+        <h2 id="faq-title">Na co se řidiči ptají</h2>
+        <div class="faq">
+          <details open>
+            <summary>Kdy přezout na zimní pneumatiky?</summary>
+            <p>Zimní pneumatiky jsou povinné od 1. listopadu do 31. března, když jsou na silnici zimní podmínky (sníh, led, námraza). Termín na přezutí je proto dobré domluvit s předstihem, ještě než napadne první sníh.</p>
+          </details>
+          <details>
+            <summary>Je zimní výbava povinná?</summary>
+            <p>Od 1. listopadu do 31. března platí povinnost mít zimní pneumatiky, pokud je na silnici souvislá vrstva sněhu, ledu nebo námrazy, nebo pokud se dá vzhledem k počasí očekávat. U osobních aut je minimální hloubka dezénu zimní pneumatiky 4 mm. Shrnutí najdete u <a href="https://archiv.policie.gov.cz/clanek/policie-cr-upozornuje-od-1-listopadu-plati-povinnost-zimni-vybavy.aspx" target="_blank" rel="noopener">Policie ČR</a>; místní značky mohou povinnost stanovit i jinak.</p>
+          </details>
+          <details>
+            <summary>Musím se předem objednat?</summary>
+            <p>Firma uvádí, že upřednostňuje telefonickou rezervaci. V sobotu (8–12 h) se pracuje jen po předchozí telefonické domluvě. Zavolejte na 734 181 969.</p>
+          </details>
+          <details>
+            <summary>Proč kola při přezutí vyvažovat?</summary>
+            <p>Nevyvážené kolo se projeví chvěním volantu, hlavně při vyšší rychlosti, a nerovnoměrně ojíždí pneumatiku i zatěžuje podvozek. Vyvážení se proto obvykle dělá při každém přezutí nebo po opravě.</p>
+          </details>
+          <details>
+            <summary>Půjčíte mi nosič na kola?</summary>
+            <p>Ano, k zapůjčení je cyklonosič na tažné zařízení pro 4 jízdní kola za 100 Kč/den plus vratná kauce, po telefonické rezervaci.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="band contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="contact-title">Kojkovice 7, kousek od Třince</h2>
+        <div class="contact-grid">
+          <div>
+            <ul class="clist">
+              <li><span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></span><div><b>Telefon</b><a href="tel:+420734181969">734 181 969</a></div></li>
+              <li><span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg></span><div><b>E-mail</b><a href="mailto:pneuservis-kojkovice@seznam.cz">pneuservis-kojkovice@seznam.cz</a></div></li>
+              <li><span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Adresa</b><span>Kojkovice 7, 739 61 Třinec</span></div></li>
+              <li><span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Otevírací doba</b>
+                <table class="hours" id="hours">
+                  <tr data-d="1"><td>Po – Pá</td><td>7:00 – 15:00</td></tr>
+                  <tr data-d="6"><td>Sobota*</td><td>8:00 – 12:00</td></tr>
+                  <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+                </table>
+                <span class="status" id="status"><i></i><span id="status-text">Otevírací doba</span></span>
+                <p class="hours-src">* V sobotu jen po telefonické domluvě. Podle stránky Kontakt na původním webu firmy. Firma upřednostňuje telefonickou rezervaci.</p>
+              </div></li>
+            </ul>
+            <a class="map" href="https://mapy.cz/zakladni?q=Kojkovice%207%2C%20T%C5%99inec" target="_blank" rel="noopener" aria-label="Otevřít adresu Kojkovice 7, Třinec na Mapy.cz">
+              <svg viewBox="0 0 520 220" aria-hidden="true">
+                <rect width="520" height="220" fill="#30343A"/>
+                <path d="M0 170 C120 150 180 190 300 160 S460 120 520 140" stroke="#2F6E4E" stroke-width="40" fill="none" opacity=".55"/>
+                <path d="M-10 60 C120 80 220 40 330 90 S480 110 530 70" stroke="#474D55" stroke-width="14" fill="none"/>
+                <path d="M200 -10 C210 60 250 120 240 230" stroke="#474D55" stroke-width="10" fill="none"/>
+                <path d="M-10 60 C120 80 220 40 330 90 S480 110 530 70" stroke="#D6ECF7" stroke-width="2" stroke-dasharray="10 10" fill="none"/>
+                <circle cx="268" cy="110" r="22" fill="#F49D37"/>
+                <circle cx="268" cy="110" r="8" fill="#24272B"/>
+                <text x="296" y="146" fill="#F3F5F7" font-family="Gabarito, Arial, sans-serif" font-weight="700" font-size="20">Kojkovice 7</text>
+                <text x="28" y="44" fill="#BFC6CE" font-family="Mukta, Arial, sans-serif" font-size="15">směr Třinec</text>
+              </svg>
+              <span>Otevřít na Mapy.cz <span aria-hidden="true">→</span></span>
+            </a>
+          </div>
+
+          <form class="form" id="objednat" novalidate>
+            <div class="full">
+              <h3>Objednat přezutí</h3>
+              <p class="form-note">Vyplňte, co potřebujete, a ozveme se s termínem. Rychlejší je zavolat na 734&nbsp;181&nbsp;969.</p>
+            </div>
+            <fieldset class="chips full">
+              <legend>Co potřebujete</legend>
+              <label for="sl-zima"><input type="radio" id="sl-zima" name="sluzba" value="zimni" checked> Přezout na zimní</label>
+              <label for="sl-leto"><input type="radio" id="sl-leto" name="sluzba" value="letni"> Přezout na letní</label>
+              <label for="sl-oprava"><input type="radio" id="sl-oprava" name="sluzba" value="oprava"> Oprava pneu</label>
+              <label for="sl-klima"><input type="radio" id="sl-klima" name="sluzba" value="klima"> Klimatizace</label>
+              <label for="sl-jine"><input type="radio" id="sl-jine" name="sluzba" value="jine"> Jiné</label>
+            </fieldset>
+            <div>
+              <label for="f-jmeno">Jméno</label>
+              <input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="f-tel">Telefon</label>
+              <input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required>
+            </div>
+            <div>
+              <label for="f-auto">Auto a rozměr pneu</label>
+              <input id="f-auto" name="auto" type="text" placeholder="např. Octavia, 205/55 R16">
+            </div>
+            <div>
+              <label for="f-den">Kdy by se Vám hodilo</label>
+              <select id="f-den" name="den">
+                <option value="">Je mi to jedno</option>
+                <option value="rano">Ve všední den ráno</option>
+                <option value="odpoledne">Ve všední den odpoledne</option>
+                <option value="sobota">V sobotu dopoledne</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="f-zprava">Poznámka</label>
+              <textarea id="f-zprava" name="zprava" placeholder="Např. mám vlastní kola na discích, chci i vyvážit…"></textarea>
+            </div>
+            <div class="full">
+              <button class="btn btn-primary" type="submit" id="f-odeslat">Odeslat poptávku</button>
+            </div>
+            <div class="form-msg full" id="form-msg" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>Pneuservis Kojkovice – Eugeniusz Zalisz · IČO 06447333 · Kojkovice 7, 739 61 Třinec</span>
+      <span>Nezávazný návrh webu · <a href="https://www.firmy.cz/detail/13226488-eugeniusz-zalisz-trinec-kojkovice.html" target="_blank" rel="noopener">Profil na Firmy.cz</a></span>
+    </div>
+  </footer>
+
+  <div class="callbar">
+    <a class="btn btn-primary" href="tel:+420734181969">Zavolat 734 181 969</a>
+    <a class="btn btn-ghost" href="#objednat">Objednat</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var ICON_ZIMA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2v20M4 6l16 12M20 6L4 18M9 3l3 3 3-3M9 21l3-3 3 3"/></svg>';
+  var ICON_LETO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>';
+  var CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>';
+
+  /* dnešní datum v Praze */
+  function pragueNow(){
+    var parts={};
+    try{
+      new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",year:"numeric",month:"numeric",day:"numeric",hour:"numeric",minute:"numeric",hourCycle:"h23",weekday:"short"})
+        .formatToParts(new Date()).forEach(function(p){parts[p.type]=p.value;});
+    }catch(e){
+      var d=new Date();parts={year:d.getFullYear(),month:d.getMonth()+1,day:d.getDate(),hour:d.getHours(),minute:d.getMinutes(),weekday:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getDay()]};
+    }
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[parts.weekday];
+    return {y:+parts.year,m:+parts.month,d:+parts.day,h:+parts.hour,min:+parts.minute,wd:wd};
+  }
+  var now=pragueNow();
+  var MESICE=["ledna","února","března","dubna","května","června","července","srpna","září","října","listopadu","prosince"];
+  var DNY=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  function utc(y,m,d){return Date.UTC(y,m-1,d);}
+  var todayUTC=utc(now.y,now.m,now.d);
+  function daysTo(y,m,d){return Math.round((utc(y,m,d)-todayUTC)/86400000);}
+  function dny(n){return n===1?"den":(n>=2&&n<=4?"dny":"dní");}
+
+  /* doporučená sezóna podle data */
+  var autoMode=(now.m>=10||now.m<=3)?"zima":"leto";
+  var section=document.getElementById("sezona");
+  var el=function(id){return document.getElementById(id);};
+  el("season-date").textContent="Dnes je "+DNY[now.wd]+" "+now.d+". "+MESICE[now.m-1]+" "+now.y+" (pražský čas)";
+  el("year-num").textContent=now.y;
+
+  /* pozice dneška na ročním pásu */
+  var start=utc(now.y,1,1), end=utc(now.y+1,1,1);
+  el("today-mark").style.left=(((todayUTC-start)/(end-start))*100).toFixed(2)+"%";
+
+  function headline(mode){
+    var m=now.m, d=now.d;
+    if(mode==="zima"){
+      if(m>=4&&m<=9) return ["Zimní pneu teď čekají ve sklepě","Zimní období začíná 1. listopadu. Termín na přezutí je dobré domluvit už v říjnu."];
+      if(m===10) return ["Teď je čas na zimní pneu","Od 1. 11. platí zimní výbava při zimních podmínkách. Termín na přezutí domluvte s předstihem."];
+      if(m===3) return ["Zimní pneu ještě nesundávejte","Do 31. března platí povinnost zimní výbavy při zimních podmínkách na silnici."];
+      return ["Jezdíte na zimních? Správně.","Zimní výbava je teď při sněhu, ledu nebo námraze na silnici povinná. Zkontrolujte dezén – minimum jsou 4 mm."];
+    } else {
+      if(m===4) return ["Teď je čas na letní pneu","Zimní období skončilo 31. března. Termín na přezutí na letní domluvte po telefonu."];
+      if(m===3) return ["Letní pneu jsou za dveřmi","Zimní období končí 31. března. S přezutím na letní počkejte, až se oteplí natrvalo."];
+      if(m===10) return ["Letní pneu jdou brzy do sklepa","Od 1. 11. platí zimní výbava při zimních podmínkách. Na letní se vrátíte na jaře."];
+      if(m>=5&&m<=9) return ["Letní sezóna je v plném proudu","Zimní období začíná 1. listopadu – termín na přezutí je dobré domluvit s předstihem."];
+      return ["Letní pneu teď patří do sklepa","Od 1. 11. do 31. 3. platí zimní výbava při zimních podmínkách. Na letní přezujete na jaře."];
+    }
+  }
+  var FACTS={
+    zima:[
+      ["1. 11. – 31. 3.","Zimní pneu povinné, pokud je na silnici souvislý sníh, led nebo námraza, nebo je lze čekat.","§ 40a zák. č. 361/2000 Sb."],
+      ["Dezén aspoň 4 mm","Minimum pro zimní pneumatiky osobních aut.","zákonné minimum"]
+    ],
+    leto:[
+      ["Po 31. 3.","Konec období, kdy může být zimní výbava povinná. Přezujte, až pomine riziko sněhu a náledí.","§ 40a zák. č. 361/2000 Sb."],
+      ["Dezén aspoň 4 mm","Minimum pro zimní pneumatiky osobních aut – zkontrolujte ho, než sadu uložíte.","zákonné minimum"]
+    ]
+  };
+  var current=autoMode;
+  function render(mode){
+    current=mode;
+    section.setAttribute("data-mode",mode);
+    el("btn-zima").setAttribute("aria-pressed",mode==="zima"?"true":"false");
+    el("btn-leto").setAttribute("aria-pressed",mode==="leto"?"true":"false");
+    el("season-icon").innerHTML=mode==="zima"?ICON_ZIMA:ICON_LETO;
+    var h=headline(mode);
+    el("season-now").textContent=h[0];
+    el("season-sub").textContent=h[1];
+    var ul=el("season-facts");ul.innerHTML="";
+    FACTS[mode].forEach(function(f){
+      var li=document.createElement("li");
+      li.innerHTML=CHECK+"<div><strong></strong> – <span></span><small></small></div>";
+      li.querySelector("strong").textContent=f[0];
+      li.querySelector("span").textContent=f[1];
+      li.querySelector("small").textContent=f[2];
+      ul.appendChild(li);
+    });
+    el("season-btn").textContent=mode==="zima"?"Objednat přezutí na zimní":"Objednat přezutí na letní";
+    var r=el(mode==="zima"?"sl-zima":"sl-leto"); if(r) r.checked=true;
+    /* odpočet k významnému datu */
+    var cd=el("countdown"), n, txt;
+    var inWinter=(now.m>=11||now.m<=3);
+    if(mode==="zima"){
+      if(inWinter){n=daysTo(now.m>=11?now.y+1:now.y,3,31);txt="do konce zimního období (31. 3.)";}
+      else{n=daysTo(now.y,11,1);txt="do 1. listopadu, kdy začíná zimní období";}
+    } else {
+      if(inWinter){n=daysTo(now.m>=11?now.y+1:now.y,3,31);txt="do 31. 3., kdy končí zimní období";}
+      else{n=daysTo(now.y,11,1);txt="letní sezóny zbývá do 1. listopadu";}
+    }
+    cd.innerHTML="<b></b><span></span>";
+    cd.querySelector("b").textContent=n+" "+dny(n);
+    cd.querySelector("span").textContent=txt;
+  }
+  el("btn-zima").addEventListener("click",function(){render("zima");});
+  el("btn-leto").addEventListener("click",function(){render("leto");});
+  render(autoMode);
+
+  /* otevírací doba – jen ověřené údaje z původního webu */
+  var st=el("status"), stt=el("status-text"), t=now.h*60+now.min;
+  var rows=document.querySelectorAll("#hours tr");
+  var rowDay=(now.wd>=1&&now.wd<=5)?"1":String(now.wd);
+  rows.forEach(function(r){if(r.getAttribute("data-d")===rowDay) r.className="today";});
+  if(now.wd>=1&&now.wd<=5&&t>=420&&t<900){st.className="status open";stt.textContent="Teď otevřeno, do 15:00";}
+  else if(now.wd===6&&t>=480&&t<720){st.className="status phone";stt.textContent="Sobota: jen po telefonické domluvě";}
+  else{st.className="status closed";stt.textContent="Teď zavřeno – nechte vzkaz nebo zavolejte v pracovní době";}
+
+  /* formulář – jen ukázka */
+  var form=el("objednat"), msg=el("form-msg");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    msg.textContent="Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Na hotovém webu by poptávka přišla na pneuservis-kojkovice@seznam.cz. Teď prosím volejte 734 181 969.";
+    msg.classList.add("show");
+  });
+
+  /* respektovat omezení pohybu */
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var s=document.querySelector(".wheel .spin"); if(s) s.style.animation="none";
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Mário Koribanič</title>
+<meta name="description" content="Malíř, natěrač a tapetář ve Frýdku-Místku a okolí. Malování od 15 Kč/m², nátěry, tapetování, dekorativní nástřiky, fasády a společné prostory bytových domů (SVJ). Tel. 777 105 597.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "name": "Mário Koribanič - malířství",
+  "telephone": "+420777105597",
+  "email": "koribanicmario@centrum.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jiráskova 490",
+    "addressLocality": "Frýdek-Místek",
+    "addressCountry": "CZ"
+  },
+  "areaServed": "Frýdek-Místek a okolí",
+  "identifier": "IČO 65879589"
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --lime:#FBFAF6; --paper:#FFFFFF; --cobalt:#2340A8; --cobalt-d:#1A3186;
+  --terra:#C8623E; --terra-t:#A6492A; --umbra:#2B2420; --muted:#62574F;
+  --line:#E7E2D8; --wash:#F3EFE6; --cobalt-wash:#E9EDF9;
+  --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lime);color:var(--umbra);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:76px}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{max-width:100%;display:block}
+a{color:var(--cobalt)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0;color:var(--umbra);letter-spacing:-.01em}
+h2{font-size:clamp(36px,6vw,58px)}
+h3{font-size:26px}
+p{margin:0 0 1em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.demo{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7A4A00;background:#FFF1C9;border:1px dashed #C99A2E;border-radius:4px;padding:1px 6px;vertical-align:middle;line-height:1.5;white-space:nowrap}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--terra-t);margin:0 0 14px}
+section{padding:72px 0}
+@media (min-width:900px){section{padding:104px 0}}
+.lead{font-size:19px;color:var(--muted);max-width:640px}
+h2 + .lead{margin-top:16px}
+
+/* banner + header */
+.notice{background:var(--umbra);color:#F5EFE6;font-size:13.5px;text-align:center;padding:8px 16px;line-height:1.4}
+.notice strong{color:#fff}
+header.top{position:sticky;top:0;z-index:30;background:rgba(251,250,246,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--umbra);min-width:0}
+.brand svg{flex:none}
+.brand b{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1;white-space:nowrap}
+.brand small{display:block;font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-top:3px}
+nav.menu{margin-left:auto;display:none;gap:26px}
+nav.menu a{color:var(--umbra);text-decoration:none;font-weight:600;font-size:15px}
+nav.menu a:hover{color:var(--cobalt)}
+.top .tel{margin-left:auto;display:inline-flex;align-items:center;gap:8px;background:var(--cobalt);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:9px 14px;font-size:15px;white-space:nowrap}
+.top .tel:hover{background:var(--cobalt-d)}
+@media (min-width:980px){nav.menu{display:flex}.top .tel{margin-left:20px;padding:10px 18px}}
+@media (max-width:420px){.brand small{display:none}}
+@media (max-width:899px){.hero .btn-ghost{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:17px;border-radius:999px;padding:15px 24px;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.2}
+.btn-primary{background:var(--cobalt);color:#fff}
+.btn-primary:hover{background:var(--cobalt-d)}
+.btn-ghost{background:transparent;color:var(--umbra);border-color:var(--umbra)}
+.btn-ghost:hover{background:var(--umbra);color:#fff}
+.btn svg{width:20px;height:20px}
+
+/* hero */
+.hero{padding:22px 0 56px;position:relative;overflow:hidden}
+.hero .grid{display:grid;gap:8px}
+.fanbox{position:relative;height:180px;margin:0 -20px}
+.fanbox svg{max-width:none;position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:380px;height:auto}
+.hero h1{font-size:clamp(42px,11vw,92px);line-height:.98;margin-top:6px}
+.hero h1 em{font-style:italic;color:var(--cobalt)}
+.hero h1 .place{display:block;font-size:.55em;line-height:1.1;margin-top:10px;color:var(--terra-t)}
+.hero p.sub{font-size:17px;color:var(--muted);margin:16px 0 22px;max-width:520px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.years{display:flex;align-items:center;gap:12px;margin-top:22px}
+.years .num{font-family:var(--serif);font-size:56px;line-height:.8;color:var(--terra)}
+.years .txt{font-size:14px;line-height:1.35;font-weight:600;color:var(--umbra)}
+.years .txt span{display:block;color:var(--muted);font-weight:500}
+@media (min-width:900px){
+  .hero{padding:56px 0 96px}
+  .hero .grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:24px}
+  .fanbox{order:2;height:560px;margin:0}
+  .fanbox svg{width:820px;bottom:20px;left:50%}
+  .years .num{font-size:76px}.years .txt{font-size:16px}
+  .hero p.sub{font-size:20px}
+}
+/* fan animation */
+.fan .blade{transform-box:view-box;transform-origin:300px 470px;transform:rotate(var(--a));transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.fan.closed .blade{transform:rotate(-4deg)}
+@media (prefers-reduced-motion:reduce){.fan .blade{transition:none}html{scroll-behavior:auto}}
+
+/* services */
+.services{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-head{display:grid;gap:18px;margin-bottom:40px}
+@media (min-width:900px){.svc-head{grid-template-columns:1fr 1fr;align-items:end}}
+.svc-list{display:grid;gap:0;border-top:1px solid var(--line)}
+@media (min-width:760px){.svc-list{grid-template-columns:1fr 1fr;column-gap:48px}}
+.svc{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.svc .ic{width:52px;height:52px;border-radius:12px;background:var(--cobalt-wash);display:grid;place-items:center}
+.svc .ic svg{width:28px;height:28px}
+.svc h3{font-size:27px;margin-bottom:4px}
+.svc p{margin:0 0 8px;color:var(--muted);font-size:16px}
+.price{font-weight:700;font-size:15px;color:var(--umbra)}
+.price b{color:var(--cobalt);font-size:18px}
+.price small{font-weight:500;color:var(--muted)}
+.svc.feature{background:var(--wash);border-radius:var(--r);padding:24px 18px;border-bottom:0;margin:12px 0}
+@media (min-width:760px){.svc.feature{grid-column:1/-1}}
+.fine{font-size:14px;color:var(--muted);margin-top:22px;max-width:820px}
+
+/* calculator */
+.calc{background:var(--umbra);color:#F5EFE6;position:relative;overflow:hidden}
+.calc h2{color:#fff}
+.calc .eyebrow{color:#E8B9A5}
+.calc .lead{color:#D9CFC4}
+.calc-grid{display:grid;gap:28px;margin-top:36px}
+@media (min-width:900px){.calc-grid{grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
+.panel{background:#3A312C;border-radius:20px;padding:22px}
+@media (min-width:900px){.panel{padding:32px}}
+.step-lbl{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E8B9A5;margin:0 0 12px}
+.types{display:grid;gap:10px;border:0;padding:0;margin:0 0 26px}
+.types legend{padding:0}
+.type{position:relative}
+.type input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.type label{display:grid;grid-template-columns:14px 1fr auto;align-items:center;gap:14px;background:#2B2420;border:2px solid #574A42;border-radius:14px;padding:14px 16px;cursor:pointer;transition:border-color .2s,background .2s}
+.type .chip{width:14px;height:44px;border-radius:4px}
+.type .nm{font-weight:700;color:#fff;font-size:16px;line-height:1.3}
+.type .nm small{display:block;font-weight:500;color:#CFC4B8;font-size:13.5px}
+.type .pp{font-family:var(--serif);font-size:30px;color:#fff;white-space:nowrap}
+.type .pp small{font-family:var(--sans);font-size:13px;color:#CFC4B8}
+.type input:checked + label{border-color:#E8B9A5;background:#463B35}
+.type input:focus-visible + label{outline:3px solid #9DB0F0;outline-offset:2px}
+.area-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.area-row input[type=number]{width:130px;font:700 26px var(--sans);color:var(--umbra);background:#FBFAF6;border:0;border-radius:12px;padding:10px 14px}
+.area-row .unit{font-weight:700;font-size:18px}
+input[type=range]{width:100%;margin:18px 0 6px;accent-color:#E8B9A5;height:28px}
+.helper{margin-top:18px;border-top:1px solid #574A42;padding-top:16px}
+.helper summary{cursor:pointer;font-weight:700;color:#fff;font-size:15px}
+.helper summary::marker{color:#E8B9A5}
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.dims label{font-size:13px;color:#D9CFC4;font-weight:600}
+.dims input{width:100%;font:600 17px var(--sans);color:var(--umbra);background:#FBFAF6;border:0;border-radius:10px;padding:9px 10px;margin-top:4px}
+.dims-out{margin:12px 0 0;font-size:14.5px;color:#D9CFC4}
+.linkbtn{background:none;border:0;color:#E8B9A5;font:700 14.5px var(--sans);text-decoration:underline;cursor:pointer;padding:0}
+.result{background:#FBFAF6;color:var(--umbra);border-radius:20px;padding:26px 22px;position:relative}
+@media (min-width:900px){.result{padding:34px;position:sticky;top:96px}}
+.result .k{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra-t);margin:0}
+.result .big{font-family:var(--serif);font-size:clamp(54px,12vw,80px);line-height:1;margin:6px 0 2px;color:var(--cobalt)}
+.result .meta{font-size:14px;color:var(--muted);margin:0 0 18px}
+.say{border-left:4px solid var(--terra);background:var(--wash);padding:14px 16px;border-radius:0 12px 12px 0;font-size:17px;margin:0 0 18px}
+.say q{font-style:italic}
+.result .btn{width:100%}
+.result .note{font-size:13.5px;color:var(--muted);margin:14px 0 0}
+
+/* trust */
+.trust-grid{display:grid;gap:36px}
+@media (min-width:900px){.trust-grid{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}}
+.bignum{display:flex;align-items:flex-end;gap:14px}
+.bignum .n{font-family:var(--serif);font-size:clamp(150px,34vw,240px);line-height:.78;color:var(--cobalt)}
+.bignum .t{font-size:20px;font-weight:700;line-height:1.25;padding-bottom:10px}
+.bignum .t span{display:block;font-weight:500;color:var(--muted);font-size:16px}
+.quote{font-family:var(--serif);font-size:30px;line-height:1.2;margin:28px 0 0;color:var(--umbra)}
+.quote small{display:block;font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:10px}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.points li{display:grid;grid-template-columns:38px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.points li:first-child{border-top:1px solid var(--line)}
+.points .tick{width:38px;height:38px;border-radius:50%;background:var(--cobalt);display:grid;place-items:center}
+.points .tick svg{width:18px;height:18px}
+.points b{display:block;font-size:17.5px}
+.points span{color:var(--muted);font-size:16px}
+
+/* gallery */
+.gallery{background:var(--wash)}
+.g-grid{display:grid;gap:14px;margin-top:36px;grid-template-columns:1fr 1fr}
+@media (min-width:900px){.g-grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+.ph{position:relative;aspect-ratio:4/5;border-radius:var(--r);border:2px dashed #C9BFB2;background:repeating-linear-gradient(135deg,#F7F3EB 0 14px,#F1ECE2 14px 28px);display:flex;flex-direction:column;justify-content:space-between;padding:14px;overflow:hidden}
+.ph.wide{grid-column:span 2;aspect-ratio:auto;min-height:220px}
+.ph .tag{max-width:calc(100% - 22px);align-self:flex-start;background:#fff;border-radius:999px;padding:4px 10px;font-size:12.5px;font-weight:700;color:var(--umbra)}
+.ph .here{font-size:14px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:8px}
+.ph .here svg{width:20px;height:20px;flex:none}
+.ph .strip{position:absolute;right:14px;top:14px;width:10px;height:56px;border-radius:3px}
+
+/* steps */
+.steps{display:grid;gap:18px;margin-top:40px;counter-reset:s}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:24px}}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 22px;position:relative}
+.step .no{font-family:var(--serif);font-size:64px;line-height:.8;color:var(--terra)}
+.step h3{margin:14px 0 8px;font-size:28px}
+.step p{margin:0;color:var(--muted);font-size:16px}
+
+/* area */
+.area{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.area-grid{display:grid;gap:32px}
+@media (min-width:900px){.area-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.towns li{border:1px solid var(--line);background:var(--lime);border-radius:999px;padding:7px 14px;font-weight:600;font-size:15px}
+.towns li.main{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+.mapart{background:var(--wash);border-radius:20px;padding:12px}
+
+/* faq */
+.faq-list{margin-top:32px;border-top:1px solid var(--line);max-width:860px}
+.faq-list details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 0;font-weight:700;font-size:18px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .pm{flex:none;width:32px;height:32px;border-radius:50%;border:2px solid var(--cobalt);position:relative}
+.faq-list summary .pm::before,.faq-list summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--cobalt);transform:translate(-50%,-50%)}
+.faq-list summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .2s}
+.faq-list details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-list details p{color:var(--muted);margin:0 0 18px;max-width:720px}
+
+/* form */
+.form-sec{background:var(--cobalt);color:#fff}
+.form-sec h2{color:#fff}
+.form-sec .eyebrow{color:#F3D3C5}
+.form-sec .lead{color:#DCE3F8}
+.form-grid{display:grid;gap:32px}
+@media (min-width:900px){.form-grid{grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}}
+form.ask{background:#FBFAF6;color:var(--umbra);border-radius:20px;padding:22px;display:grid;gap:14px}
+@media (min-width:600px){form.ask{grid-template-columns:1fr 1fr;padding:30px}form.ask .full{grid-column:1/-1}}
+form.ask label{display:block;font-size:14px;font-weight:700;margin-bottom:5px}
+form.ask input,form.ask select,form.ask textarea{width:100%;font:500 16px var(--sans);color:var(--umbra);background:#fff;border:1.5px solid #CFC6BA;border-radius:10px;padding:12px}
+form.ask input:focus,form.ask select:focus,form.ask textarea:focus{outline:3px solid #9DB0F0;border-color:var(--cobalt)}
+form.ask textarea{min-height:110px;resize:vertical}
+form.ask .btn{width:100%}
+.form-msg{display:none;background:#E7F2EA;border:1.5px solid #3C7A4E;color:#1F4A2C;border-radius:12px;padding:14px;font-weight:600}
+.form-msg.show{display:block}
+.direct{margin-top:22px;font-size:17px}
+.direct a{color:#fff;font-weight:700}
+
+/* contact */
+.contact-grid{display:grid;gap:28px;margin-top:36px}
+@media (min-width:900px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.c-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px}
+.c-card .k{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra-t);margin:0 0 8px}
+.c-card .v{color:var(--umbra);font-family:var(--serif);font-size:30px;line-height:1.1;margin:0 0 6px;word-break:break-word}
+.c-card .v a{color:var(--umbra);text-decoration:none}
+.c-card .v a:hover{color:var(--cobalt)}
+.c-card p{margin:0;color:var(--muted);font-size:15.5px}
+.c-card .lnk{display:inline-block;margin-top:10px;font-weight:700}
+
+footer{background:var(--umbra);color:#D9CFC4;padding:44px 0 40px;font-size:14.5px}
+footer .wrap{display:grid;gap:18px}
+@media (min-width:900px){footer .wrap{grid-template-columns:1fr auto;align-items:end}}
+footer b{color:#fff;font-family:var(--serif);font-weight:400;font-size:26px;display:block}
+footer a{color:#F3D3C5}
+.swatchbar{display:flex;height:8px}
+.swatchbar i{flex:1}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--umbra);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center;box-shadow:0 -6px 20px rgba(43,36,32,.18)}
+.callbar a.call{flex:1;justify-content:center;display:flex;align-items:center;gap:10px;background:var(--cobalt);color:#fff;font-weight:800;font-size:17px;text-decoration:none;border-radius:999px;padding:13px 16px}
+.callbar a.calc-l{color:#fff;font-weight:700;font-size:14.5px;text-decoration:none;border:1.5px solid #8A7D73;border-radius:999px;padding:12px 14px;white-space:nowrap}
+@media (min-width:900px){.callbar{display:none}}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+</style>
+
+
+
+<div class="notice"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Mário Koribanič - malířství</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mário Koribanič – malířství, úvod">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="3" y="4" width="20" height="10" rx="3" fill="#2340A8"/><rect x="23" y="7" width="6" height="4" rx="1" fill="#2B2420"/><path d="M27 11v6h-12v5" fill="none" stroke="#2B2420" stroke-width="2.2"/><rect x="12.5" y="21" width="5" height="10" rx="2" fill="#C8623E"/></svg>
+      <span><b>Mário Koribanič</b><small>malíř · natěrač · tapetář</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní menu">
+      <a href="#sluzby">Služby a ceny</a>
+      <a href="#kalkulacka">Kalkulačka</a>
+      <a href="#proc">Proč já</a>
+      <a href="#realizace">Realizace</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+420777105597" aria-label="Zavolat 777 105 597">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      <span>777 105 597</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap grid">
+    <div class="fanbox" aria-hidden="true">
+      <svg class="fan closed" id="fan" viewBox="-120 20 840 470" role="img" overflow="visible">
+        <defs>
+          <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#2B2420" flood-opacity=".16"/></filter>
+        </defs>
+        <!-- blades: color, name, code -->
+        <g class="blade" style="--a:-62deg" filter="url(#sh)"><rect x="262" y="40" width="76" height="450" rx="10" fill="#B9B4A9"/><rect x="262" y="40" width="76" height="12" rx="6" fill="#ffffff" opacity=".25"/><text transform="translate(296 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="700" fill="#2B2420">Sklepní šedá</text><text transform="translate(320 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#2B2420">#B9B4A9</text></g>
+        <g class="blade" style="--a:-44deg" filter="url(#sh)"><rect x="262" y="40" width="76" height="450" rx="10" fill="#7E9A86"/><text transform="translate(296 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="700" fill="#1E2A22">Šalvěj</text><text transform="translate(320 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#1E2A22">#7E9A86</text></g>
+        <g class="blade" style="--a:-26deg" filter="url(#sh)"><rect x="262" y="40" width="76" height="450" rx="10" fill="#D9A441"/><text transform="translate(296 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="700" fill="#2B2420">Okr</text><text transform="translate(320 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#2B2420">#D9A441</text></g>
+        <g class="blade" style="--a:-8deg" filter="url(#sh)"><rect x="262" y="40" width="76" height="450" rx="10" fill="#C8623E"/><text transform="translate(296 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="700" fill="#2B2420">Terakota</text><text transform="translate(320 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#2B2420">#C8623E</text></g>
+        <g class="blade" style="--a:10deg" filter="url(#sh)"><rect x="262" y="40" width="76" height="450" rx="10" fill="#E7DCCB"/><text transform="translate(296 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="700" fill="#2B2420">Lněná</text><text transform="translate(320 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#2B2420">#E7DCCB</text></g>
+        <g class="blade" style="--a:28deg" filter="url(#sh)"><rect x="262" y="40" width="76" height="450" rx="10" fill="#2340A8"/><text transform="translate(296 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Kobalt</text><text transform="translate(320 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#FFFFFF">#2340A8</text></g>
+        <g class="blade" style="--a:46deg" filter="url(#sh)"><rect x="262" y="40" width="76" height="450" rx="10" fill="#FBFAF6" stroke="#DDD6C9" stroke-width="2"/><text transform="translate(296 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="700" fill="#2B2420">Vápenná bílá</text><text transform="translate(320 215) rotate(-90)" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#2B2420">#FBFAF6</text></g>
+        <circle cx="300" cy="470" r="13" fill="#2B2420"/><circle cx="300" cy="470" r="5" fill="#E7DCCB"/>
+      </svg>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Malíř · natěrač · tapetář</p>
+      <h1>Malování od <em>15&nbsp;Kč</em> za&nbsp;metr.<span class="place">Frýdek-Místek a okolí.</span></h1>
+      <p class="sub">Byty, rodinné domy i společné prostory bytových domů. Nejdřív se přijedu podívat, pak dostanete písemnou nabídku – a domluvenou cenu i termín dodržím.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+420777105597">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Zavolat 777 105 597
+        </a>
+        <a class="btn btn-ghost" href="#kalkulacka">Spočítat cenu</a>
+      </div>
+      <div class="years">
+        <span class="num">32</span>
+        <span class="txt">let v oboru<span>28 let jako samostatná firma</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY -->
+<section class="services" id="sluzby">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <p class="eyebrow">Služby a ceny</p>
+        <h2>Co udělám a za kolik</h2>
+      </div>
+      <p class="lead" style="margin:0">Interiér i exteriér: malby, nátěry, tapety, dekorativní nástřiky a jejich kombinace. Nejsem plátce DPH, takže uvedené ceny jsou konečné.</p>
+    </div>
+
+    <div class="svc-list">
+      <div class="svc feature">
+        <div class="ic"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="13" width="9" height="15" fill="#2340A8"/><rect x="15" y="7" width="9" height="21" fill="#2340A8"/><path d="M2 28h28" stroke="#2B2420" stroke-width="2"/><path d="M15 7l4.5-4 4.5 4" fill="none" stroke="#C8623E" stroke-width="2"/></svg></div>
+        <div>
+          <h3>Společné prostory bytových domů</h3>
+          <p>Moje specializace. Schodiště, chodby a sklepy pro SVJ a družstva – s písemnou nabídkou pro výbor a s úklidem po práci.</p>
+          <span class="price">sklepy <b>15 Kč/m²</b> · chodby a schodiště <b>25 Kč/m²</b> <small>– cena za práci</small></span>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="4" width="20" height="9" rx="2" fill="#2340A8"/><path d="M25 8.5h3v7H16v4" fill="none" stroke="#2B2420" stroke-width="2"/><rect x="14" y="19" width="4" height="10" rx="1.5" fill="#C8623E"/></svg></div>
+        <div>
+          <h3>Malování</h3>
+          <p>Pokoje, kuchyně i celé byty – stěny a stropy, bílé i barevné.</p>
+          <span class="price">obytné prostory <b>35 Kč/m²</b> <small>– cena za práci</small></span>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 3h10v8l-2 3h-6l-2-3z" fill="#2340A8"/><rect x="14" y="14" width="4" height="14" rx="2" fill="#C8623E"/></svg></div>
+        <div>
+          <h3>Natírání</h3>
+          <p>Dřevo, kov, zárubně, radiátory i střechy – včetně přípravy podkladu.</p>
+          <span class="price">kov od <b>90 Kč/m²</b> · dřevo <b>120 Kč/m²</b> <small>– cena za práci</small></span>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="4" width="16" height="24" fill="#2340A8"/><path d="M8 9l3 3 3-3 3 3M8 17l3 3 3-3 3 3" fill="none" stroke="#FBFAF6" stroke-width="1.6"/><path d="M21 4h4a2 2 0 0 1 0 4h-4" fill="#C8623E"/></svg></div>
+        <div>
+          <h3>Tapetování</h3>
+          <p>Tapety a fototapety na stěny i stropy, bordury a polystyrenové lišty.</p>
+          <span class="price">stěny <b>120 Kč/m²</b> · strop <b>160 Kč/m²</b> <small>– cena za práci</small></span>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="16" width="10" height="10" rx="2" fill="#2340A8"/><path d="M14 19l5-3" stroke="#2B2420" stroke-width="2"/><g fill="#C8623E"><circle cx="22" cy="10" r="1.6"/><circle cx="26" cy="14" r="1.6"/><circle cx="27" cy="7" r="1.6"/><circle cx="22" cy="5" r="1.2"/><circle cx="28" cy="20" r="1.2"/></g></svg></div>
+        <div>
+          <h3>Dekorativní nástřiky</h3>
+          <p>Gotelle, Izolux, Briliant nebo Variopaint – odolný povrch do chodeb i obýváků.</p>
+          <span class="price">od <b>100 Kč/m²</b> <small>– včetně materiálu, podkladu a zakrytí</small></span>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 14L16 4l12 10v14H4z" fill="#2340A8"/><rect x="13" y="19" width="6" height="9" fill="#FBFAF6"/><path d="M2 28h28" stroke="#2B2420" stroke-width="2"/><rect x="21" y="16" width="4" height="4" fill="#C8623E"/></svg></div>
+        <div>
+          <h3>Nátěry fasád</h3>
+          <p>Dvojí nátěr s penetrací a přípravou podkladu, drobné opravy omítky v ceně.</p>
+          <span class="price">hladká <b>60–90 Kč/m²</b> · hrubá <b>120–160 Kč/m²</b> <small>– práce</small></span>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 22l12-12 5 5-12 12H5z" fill="#2340A8"/><path d="M17 10l4-4 5 5-4 4" fill="#C8623E"/><path d="M3 29h26" stroke="#2B2420" stroke-width="2"/></svg></div>
+        <div>
+          <h3>Příprava a drobné zednické práce</h3>
+          <p>Odstranění starých maleb s penetrací, vyhlazení stěn tmelem, lišty a drobné opravy.</p>
+          <span class="price">od <b>30 Kč/m²</b> <small>– odstranění maleb + penetrace, s materiálem</small></span><br>
+          <span class="price"><small>zednické opravy: cena na dotaz</small> <span class="demo">ukázkový text</span></span>
+        </div>
+      </div>
+    </div>
+    <p class="fine">Ceny jsou orientační – vždy záleží na stavu podkladu, materiálu a rozsahu. Okna, dveře a obklady se z plochy odečítají jednotlivě, a to jen část nad 4 m² (podle ČSN). Zakrývací práce 15 % z ceny. Malování 15 / 25 / 35 Kč/m² je uvedeno i na Firmy.cz; ostatní položky pocházejí z ceníku na původním webu (platný od 1.&nbsp;1.&nbsp;2015).</p>
+  </div>
+</section>
+
+<!-- KALKULAČKA -->
+<section class="calc" id="kalkulacka">
+  <div class="wrap">
+    <p class="eyebrow">Kalkulačka malování</p>
+    <h2>Kolik zaplatíte za práci?</h2>
+    <p class="lead">Vyberte typ prostoru, zadejte plochu stěn a stropů. Za pár vteřin víte, s jakou částkou počítat.</p>
+
+    <div class="calc-grid">
+      <div class="panel">
+        <fieldset class="types">
+          <legend class="step-lbl">1 · Typ prostoru</legend>
+          <div class="type">
+            <input type="radio" name="typ" id="t1" value="15" data-name="sklepních prostor">
+            <label for="t1"><span class="chip" style="background:#B9B4A9"></span><span class="nm">Sklep<small>Malování Standart – sklepní prostory</small></span><span class="pp">15 <small>Kč/m²</small></span></label>
+          </div>
+          <div class="type">
+            <input type="radio" name="typ" id="t2" value="25" data-name="společných prostor">
+            <label for="t2"><span class="chip" style="background:#C8623E"></span><span class="nm">Společné prostory<small>Malování Klasik – chodby a schodiště domu</small></span><span class="pp">25 <small>Kč/m²</small></span></label>
+          </div>
+          <div class="type">
+            <input type="radio" name="typ" id="t3" value="35" data-name="obytných prostor" checked>
+            <label for="t3"><span class="chip" style="background:#2340A8"></span><span class="nm">Obytné prostory<small>Malování Plus – pokoje, kuchyně, celé byty</small></span><span class="pp">35 <small>Kč/m²</small></span></label>
+          </div>
+        </fieldset>
+
+        <p class="step-lbl"><label for="m2">2 · Plocha stěn + stropů</label></p>
+        <div class="area-row">
+          <input type="number" id="m2" min="1" max="3000" step="1" value="120" inputmode="numeric">
+          <span class="unit">m²</span>
+        </div>
+        <input type="range" id="m2r" min="10" max="800" step="5" value="120" aria-label="Plocha v m², posuvník">
+
+        <details class="helper">
+          <summary>Nevíte plochu? Spočítejte ji z rozměrů místnosti</summary>
+          <div class="dims">
+            <label>Délka (m)<input type="number" id="dl" value="4" min="0" step="0.1" inputmode="decimal"></label>
+            <label>Šířka (m)<input type="number" id="sl" value="3.5" min="0" step="0.1" inputmode="decimal"></label>
+            <label>Výška (m)<input type="number" id="vl" value="2.6" min="0" step="0.1" inputmode="decimal"></label>
+          </div>
+          <p class="dims-out" id="dimsOut"></p>
+          <button type="button" class="linkbtn" id="useDims">Použít tuto plochu</button>
+        </details>
+      </div>
+
+      <div class="result" aria-live="polite">
+        <p class="k">Orientační cena práce</p>
+        <p class="big" id="price">4 200 Kč</p>
+        <p class="meta" id="meta">120 m² × 35 Kč/m² · neplátce DPH · bez materiálu</p>
+        <p class="say" id="say">Zavolejte a řekněte: <q>Potřebuji vymalovat 120 m² obytných prostor, orientačně za 4 200 Kč.</q></p>
+        <a class="btn btn-primary" href="tel:+420777105597">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Zavolat 777 105 597
+        </a>
+        <p class="note">Přesnou cenu Vám řeknu po prohlídce – záleží na stavu podkladu, materiálu a rozsahu. Případné odstranění starých maleb, vyhlazení nebo zakrývání se počítá zvlášť podle ceníku.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROČ -->
+<section id="proc">
+  <div class="wrap trust-grid">
+    <div>
+      <p class="eyebrow">Proč zavolat právě mně</p>
+      <div class="bignum"><span class="n">32</span><span class="t">let v oboru<span>z toho 28 let jako samostatná firma</span></span></div>
+      <p class="quote">„Před samotnou prací Vás osobně navštívím, abychom zjistili Vaše představy – co, jak, čím a kdy.“<small>Mário Koribanič, malíř z Frýdku-Místku</small></p>
+    </div>
+    <ul class="points">
+      <li><span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6"/></svg></span><div><b>Písemná nabídka obratem</b><span>Vaše přání zpracuji do psané nabídky a pošlu ji hned po prohlídce.</span></div></li>
+      <li><span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6"/></svg></span><div><b>Termín a cena platí</b><span>Striktně dodržuji domluvu o termínech i smluvené ceně.</span></div></li>
+      <li><span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6"/></svg></span><div><b>Čistá práce</b><span>Fólie, textilie, oblepovací pásky a hrubý úklid – i když se zrovna nedíváte.</span></div></li>
+      <li><span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6"/></svg></span><div><b>Specialista na bytové domy</b><span>Společné prostory pro SVJ jsou moje hlavní práce, ne doplněk.</span></div></li>
+      <li><span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6"/></svg></span><div><b>Konečné ceny bez DPH navíc</b><span>Nejsem plátce DPH – cena v nabídce je cena, kterou zaplatíte.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- REALIZACE -->
+<section class="gallery" id="realizace">
+  <div class="wrap">
+    <p class="eyebrow">Realizace</p>
+    <h2>Hotová práce mluví sama</h2>
+    <p class="lead">Na finálním webu tu budou aktuální fotky z Vašich zakázek – před a po.</p>
+    <div class="g-grid">
+      <div class="ph wide"><span class="tag">Společné prostory – schodiště a sklepy</span><span class="strip" style="background:#C8623E"></span><span class="here"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#62574F" stroke-width="1.8"/><circle cx="9" cy="10" r="2" fill="#62574F"/><path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="#62574F" stroke-width="1.8"/></svg>Sem přijde Vaše fotka</span></div>
+      <div class="ph"><span class="tag">Malby</span><span class="strip" style="background:#2340A8"></span><span class="here"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#62574F" stroke-width="1.8"/><circle cx="9" cy="10" r="2" fill="#62574F"/><path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="#62574F" stroke-width="1.8"/></svg>Sem přijde Vaše fotka</span></div>
+      <div class="ph"><span class="tag">Tapetování</span><span class="strip" style="background:#7E9A86"></span><span class="here"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#62574F" stroke-width="1.8"/><circle cx="9" cy="10" r="2" fill="#62574F"/><path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="#62574F" stroke-width="1.8"/></svg>Sem přijde Vaše fotka</span></div>
+      <div class="ph"><span class="tag">Nátěry</span><span class="strip" style="background:#D9A441"></span><span class="here"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#62574F" stroke-width="1.8"/><circle cx="9" cy="10" r="2" fill="#62574F"/><path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="#62574F" stroke-width="1.8"/></svg>Sem přijde Vaše fotka</span></div>
+      <div class="ph"><span class="tag">Dekorační nástřiky</span><span class="strip" style="background:#B9B4A9"></span><span class="here"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#62574F" stroke-width="1.8"/><circle cx="9" cy="10" r="2" fill="#62574F"/><path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="#62574F" stroke-width="1.8"/></svg>Sem přijde Vaše fotka</span></div>
+      <div class="ph wide"><span class="tag">Nátěr fasády</span><span class="strip" style="background:#E7DCCB"></span><span class="here"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#62574F" stroke-width="1.8"/><circle cx="9" cy="10" r="2" fill="#62574F"/><path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="#62574F" stroke-width="1.8"/></svg>Sem přijde Vaše fotka</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTUP -->
+<section id="postup">
+  <div class="wrap">
+    <p class="eyebrow">Jak to probíhá</p>
+    <h2>Tři kroky k čistým stěnám</h2>
+    <div class="steps">
+      <div class="step"><span class="no">1</span><h3>Zavoláte</h3><p>Řeknete, co potřebujete – nebo si cenu nejdřív zkusíte v kalkulačce. Domluvíme se na prohlídce.</p></div>
+      <div class="step"><span class="no">2</span><h3>Přijedu a prohlédnu</h3><p>Na místě probereme co, jak, čím a kdy. Potom Vám obratem pošlu písemnou nabídku.</p></div>
+      <div class="step"><span class="no">3</span><h3>Vymaluji a uklidím</h3><p>V domluveném termínu a za domluvenou cenu. Zakryji, vymaluji a po sobě uklidím.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBLAST -->
+<section class="area" id="oblast">
+  <div class="wrap area-grid">
+    <div>
+      <p class="eyebrow">Kde pracuji</p>
+      <h2>Frýdek-Místek a okolí</h2>
+      <p class="lead" style="margin-top:16px">Působím ve Frýdku a okolí, ale neodmítám ani práci „přes pole“. Zavolejte, domluvíme se.</p>
+      <ul class="towns">
+        <li class="main">Frýdek-Místek</li>
+        <li>Frýdlant nad Ostravicí</li><li>Brušperk</li><li>Paskov</li><li>Sviadnov</li><li>Staříč</li><li>Palkovice</li><li>Baška</li><li>Dobrá</li><li>Raškovice</li>
+      </ul>
+      <p style="margin-top:12px"><span class="demo">ukázkový text</span> <small style="color:var(--muted)">seznam okolních obcí</small></p>
+    </div>
+    <div class="mapart" aria-hidden="true">
+      <svg viewBox="0 0 480 340">
+        <rect width="480" height="340" rx="14" fill="#F3EFE6"/>
+        <path d="M0 230 C90 200 140 250 230 220 S380 160 480 190" fill="none" stroke="#9DB0F0" stroke-width="10" stroke-linecap="round"/>
+        <path d="M250 0 C240 80 270 140 240 220 S260 300 250 340" fill="none" stroke="#9DB0F0" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="240" cy="190" r="120" fill="#2340A8" opacity=".08"/>
+        <circle cx="240" cy="190" r="70" fill="#2340A8" opacity=".10"/>
+        <g fill="#2B2420"><circle cx="150" cy="120" r="4"/><circle cx="330" cy="130" r="4"/><circle cx="170" cy="270" r="4"/><circle cx="330" cy="270" r="4"/><circle cx="300" cy="80" r="4"/><circle cx="110" cy="200" r="4"/></g>
+        <path d="M240 140c-17 0-30 13-30 30 0 22 30 50 30 50s30-28 30-50c0-17-13-30-30-30z" fill="#C8623E"/>
+        <circle cx="240" cy="170" r="10" fill="#FBFAF6"/>
+        <text x="240" y="250" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="17" fill="#2B2420">Frýdek-Místek</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">Časté otázky</p>
+    <h2>Než zavoláte</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>Jak se počítá plocha k vymalování?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Sčítají se stěny a stropy. Okna, dveře a obklady se odečítají každé zvlášť, a to jen část, která přesahuje 4 m² – podle ČSN. Hrubý odhad pro jednu místnost: obvod × výška + plocha stropu.</p>
+      </details>
+      <details>
+        <summary>Je cena z kalkulačky konečná?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Je to cena za práci a je orientační. Výsledek ovlivní stav podkladu, zvolený materiál a rozsah – třeba odstranění starých maleb nebo vyhlazení stěn. Přesnou částku dostanete písemně po prohlídce. DPH se nepřičítá, nejsem plátce.</p>
+      </details>
+      <details>
+        <summary>Malujete i chodby a schodiště pro SVJ?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Ano, společné prostory bytových domů jsou moje specializace – schodiště, chodby i sklepy. Výbor dostane písemnou nabídku, podle které může rozhodnout.</p>
+      </details>
+      <details>
+        <summary>Musím před malováním vystěhovat byt?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Co a jak připravit, domluvíme při prohlídce. Podlahy a nábytek zakrývám fólií a textilií, okraje oblepím páskou a po práci udělám hrubý úklid.</p>
+      </details>
+      <details>
+        <summary>Děláte i barevné a dekorativní stěny?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Ano – barevné malby, dekorační nástřiky (Gotelle, Izolux, Briliant, Variopaint), speciální techniky, geometrické vzory a linky i tapety a fototapety.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁŘ -->
+<section class="form-sec" id="poptavka">
+  <div class="wrap form-grid">
+    <div>
+      <p class="eyebrow">Poptávka</p>
+      <h2>Napište, co chcete vymalovat</h2>
+      <p class="lead" style="margin-top:16px">Stačí pár řádků. Ozvu se a domluvíme prohlídku – po ní dostanete písemnou nabídku.</p>
+      <p class="direct">Rychlejší je zavolat: <a href="tel:+420777105597">777 105 597</a></p>
+    </div>
+    <form class="ask" id="askForm" novalidate>
+      <div><label for="f-name">Jméno</label><input id="f-name" name="jmeno" autocomplete="name" required></div>
+      <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+      <div><label for="f-obec">Obec</label><input id="f-obec" name="obec" placeholder="např. Frýdek-Místek"></div>
+      <div><label for="f-typ">Co potřebujete</label>
+        <select id="f-typ" name="typ"><option>Malování bytu / domu</option><option>Společné prostory (SVJ)</option><option>Sklepy</option><option>Nátěry</option><option>Tapetování</option><option>Dekorativní nástřik</option><option>Nátěr fasády</option><option>Něco jiného</option></select></div>
+      <div class="full"><label for="f-msg">Zpráva</label><textarea id="f-msg" name="zprava" placeholder="Kolik místností, přibližná plocha, kdy by se Vám to hodilo…"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Odeslat poptávku</button></div>
+      <div class="full form-msg" id="formMsg" role="status">Toto je ukázka formuláře v návrhu. Ve finálním webu se poptávka odešle přímo na e-mail firmy.</div>
+    </form>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="wrap">
+    <p class="eyebrow">Kontakt</p>
+    <h2>Mário Koribanič – malířství</h2>
+    <div class="contact-grid">
+      <div class="c-card">
+        <p class="k">Telefon</p>
+        <p class="v"><a href="tel:+420777105597">777 105 597</a></p>
+        <p>Otevírací doba: domluvou po telefonu <span class="demo">ukázkový text</span></p>
+      </div>
+      <div class="c-card">
+        <p class="k">E-mail</p>
+        <p class="v"><a href="mailto:koribanicmario@centrum.cz">koribanicmario<wbr>@centrum.cz</a></p>
+        <p>Pošlete rozměry nebo fotky prostoru.</p>
+      </div>
+      <div class="c-card">
+        <p class="k">Adresa</p>
+        <p class="v">Jiráskova 490<br>Frýdek-Místek</p>
+        <a class="lnk" href="https://mapy.cz/zakladni?q=Jir%C3%A1skova%20490%2C%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Zobrazit na Mapy.cz →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="swatchbar" aria-hidden="true"><i style="background:#B9B4A9"></i><i style="background:#7E9A86"></i><i style="background:#D9A441"></i><i style="background:#C8623E"></i><i style="background:#E7DCCB"></i><i style="background:#2340A8"></i><i style="background:#2B2420"></i></div>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Mário Koribanič – malířství</b>
+      Malíř, natěrač a tapetář · Jiráskova 490, Frýdek-Místek · IČO 65879589 · neplátce DPH<br>
+      <a href="tel:+420777105597">777 105 597</a> · <a href="mailto:koribanicmario@centrum.cz">koribanicmario@centrum.cz</a>
+    </div>
+    <div>Nezávazný návrh webu, není to oficiální stránka firmy.</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="call" href="tel:+420777105597"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zavolat 777 105 597</a>
+  <a class="calc-l" href="#kalkulacka">Cena</a>
+</div>
+
+<script>
+(function(){
+  // fan opening
+  var fan=document.getElementById('fan');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){fan.classList.remove('closed');}
+  else{requestAnimationFrame(function(){setTimeout(function(){fan.classList.remove('closed');},120);});}
+
+  // calculator
+  var m2=document.getElementById('m2'), m2r=document.getElementById('m2r');
+  var out=document.getElementById('price'), meta=document.getElementById('meta'), say=document.getElementById('say');
+  function fmt(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  function calc(){
+    var r=document.querySelector('input[name=typ]:checked');
+    var rate=+r.value, a=Math.max(0,Math.round(+m2.value||0)), total=rate*a;
+    out.textContent=fmt(total)+' Kč';
+    meta.textContent=fmt(a)+' m² × '+rate+' Kč/m² · neplátce DPH · bez materiálu';
+    say.innerHTML='Zavolejte a řekněte: <q>Potřebuji vymalovat '+fmt(a)+' m² '+r.dataset.name+', orientačně za '+fmt(total)+' Kč.</q>';
+  }
+  m2.addEventListener('input',function(){ if(+m2.value>=10&&+m2.value<=800) m2r.value=m2.value; calc();});
+  m2r.addEventListener('input',function(){m2.value=m2r.value;calc();});
+  document.querySelectorAll('input[name=typ]').forEach(function(el){el.addEventListener('change',calc);});
+
+  // dims helper
+  var dl=document.getElementById('dl'),sl=document.getElementById('sl'),vl=document.getElementById('vl'),dOut=document.getElementById('dimsOut');
+  function dimsArea(){var d=+dl.value||0,s=+sl.value||0,v=+vl.value||0;return {walls:2*(d+s)*v,ceil:d*s};}
+  function showDims(){var x=dimsArea();dOut.textContent='Stěny '+x.walls.toFixed(1).replace('.',',')+' m² + strop '+x.ceil.toFixed(1).replace('.',',')+' m² = '+Math.round(x.walls+x.ceil)+' m² (bez odečtu oken a dveří)';}
+  [dl,sl,vl].forEach(function(el){el.addEventListener('input',showDims);});
+  document.getElementById('useDims').addEventListener('click',function(){var x=dimsArea();m2.value=Math.round(x.walls+x.ceil);m2.dispatchEvent(new Event('input'));});
+  showDims();calc();
+
+  // form demo
+  document.getElementById('askForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formMsg').classList.add('show');});
+})();
+</script>
+</body>
+</html>

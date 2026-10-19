@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Mgr. Andrea Fantová – Doučování Morava | doučování Hlubočec u Opavy</title>
+<meta name="description" content="Doučování češtiny, angličtiny, základů společenských věd a dějin umění – Mgr. Andrea Fantová, Hlubočec u Opavy a online. Příprava na přijímačky, maturitu a testy Scio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Alegreya+Sans:wght@400;500;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"EducationalOrganization",
+  "name":"Lektorská činnost – Mgr. Andrea Fantová (Doučování Morava)",
+  "description":"Doučování českého a anglického jazyka, základů společenských věd a dějin umění; příprava na přijímací zkoušky, maturitu a testy Scio.",
+  "telephone":"+420775348489",
+  "email":"fantova.andy@gmail.com",
+  "address":{"@type":"PostalAddress","streetAddress":"Hlubočec 141","postalCode":"747 69","addressLocality":"Hlubočec","addressCountry":"CZ"},
+  "founder":{"@type":"Person","name":"Mgr. Andrea Fantová","jobTitle":"lektorka"}
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  /* layout: mobil první, jeden sloupec; od 860 px dělený hero a dvousloupcové sekce; vědomě jen světlý vzhled (tabule + křída) */
+  --board:#1F3D33;      /* tabulová zelená */
+  --board-2:#28503F;
+  --chalk:#F5F4EC;      /* křídově bílá */
+  --paper:#FFFFFF;
+  --ink:#1F3A82;        /* inkoustová modř */
+  --ink-soft:#3A4F86;
+  --text:#1C2621;
+  --muted:#4A564F;
+  --line:#D9DCCF;
+  --hl:#F4DC3E;         /* zvýrazňovač */
+  --hl-soft:#FBF0A6;
+  --f-head:"Alegreya", Georgia, "Times New Roman", serif;
+  --f-body:"Alegreya Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --r:14px;
+  --wrap:1120px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--chalk);color:var(--text);font:400 18px/1.55 var(--f-body)}
+img,svg{max-width:100%;display:block}
+a{color:var(--ink)}
+h1,h2,h3{font-family:var(--f-head);line-height:1.12;margin:0 0 .5em;color:var(--text)}
+h2{font-size:clamp(30px,6vw,44px);font-weight:800}
+h3{font-size:23px;font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.board :focus-visible{outline-color:var(--hl)}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;z-index:99;background:var(--paper);padding:8px 12px}
+.ukazka{display:inline-block;font:700 11px/1.2 var(--f-body);letter-spacing:.04em;text-transform:uppercase;background:#ECE7FF;color:#3B2A86;border:1px dashed #6A58C4;border-radius:4px;padding:2px 6px;vertical-align:middle;margin-left:6px}
+.sec-head h2 .hl{white-space:nowrap}
+mark,.hl{background:linear-gradient(transparent 52%,var(--hl) 52%, var(--hl) 92%, transparent 92%);color:inherit;padding:0 .08em}
+
+/* banner návrhu */
+.demo{background:#111;color:#fff;font-size:14px;line-height:1.35;text-align:center;padding:8px 16px}
+
+/* hlavička */
+.top{background:var(--board);color:var(--chalk);border-bottom:1px solid rgba(255,255,255,.12)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{font-family:var(--f-head);font-weight:800;font-size:20px;color:var(--chalk);text-decoration:none;line-height:1.1}
+.brand small{display:block;font:500 13px var(--f-body);color:#CFE0D6;letter-spacing:.02em}
+.nav{display:none;gap:22px}
+.nav a{color:var(--chalk);text-decoration:none;font-weight:500;font-size:16px}
+.nav a:hover{text-decoration:underline;text-decoration-color:var(--hl);text-underline-offset:5px}
+.tel-top{display:inline-flex;align-items:center;gap:8px;color:var(--board);background:var(--hl);text-decoration:none;font-weight:800;font-size:16px;padding:9px 14px;border-radius:999px;white-space:nowrap}
+@media (min-width:860px){.nav{display:flex}}
+
+/* hero */
+.board{background:var(--board);color:var(--chalk);
+  background-image:radial-gradient(ellipse at 20% 0%,rgba(255,255,255,.07),transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(0,0,0,.18),transparent 55%)}
+.hero{padding:26px 0 40px}
+.hero .wrap{display:grid;gap:26px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:#E4EEE8;margin-bottom:12px}
+.eyebrow::before{content:"";width:22px;height:3px;background:var(--hl);border-radius:2px}
+.hero h1{color:var(--chalk);font-size:clamp(34px,8.6vw,60px);font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+.hero h1 em{font-style:italic;font-weight:700;color:var(--hl)}
+.hero .lead{font-size:19px;color:#E9F0EC;max-width:34em;margin-bottom:20px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:800 18px/1 var(--f-body);text-decoration:none;border-radius:12px;padding:16px 22px;border:2px solid transparent;cursor:pointer}
+.btn-hl{background:var(--hl);color:#1A2A22;box-shadow:0 3px 0 #B59F16}
+.btn-hl:hover{background:#F8E66A}
+.btn-ghost{color:var(--chalk);border-color:rgba(245,244,236,.55);background:transparent}
+.btn-ghost:hover{border-color:var(--chalk)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#18306D}
+.btn-line{background:var(--paper);color:var(--ink);border-color:var(--ink)}
+.hero-facts{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:16px;color:#DCE8E1}
+.hero-facts li{display:flex;gap:7px;align-items:center}
+.hero-facts svg{flex:none}
+.hero-phone{margin-top:14px;font-size:16px;color:#DCE8E1}
+.hero-phone a{color:var(--chalk);font-weight:700}
+.hero-art{max-width:560px;width:100%;margin:0 auto}
+@media (min-width:860px){
+  .hero{padding:56px 0 64px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+}
+
+/* sekce */
+section{padding:56px 0}
+.sec-head{max-width:40em;margin-bottom:28px}
+.kicker{font:800 14px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.sec-head p{color:var(--muted);font-size:19px}
+.sec-head .kicker{color:var(--ink);font-size:14px}
+.refs-sec .sec-head .kicker{color:var(--hl)}
+
+/* předměty */
+.subjects{display:grid;gap:14px}
+.subj{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 20px 18px;position:relative;
+  border-left:5px solid var(--ink)}
+.subj::before{content:"";position:absolute;left:12px;top:0;bottom:0;width:1.5px;background:#E79A9A;opacity:.7}
+.subj h3{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.price{font:800 17px var(--f-body);color:var(--ink);white-space:nowrap}
+.subj p{color:var(--muted);margin:0}
+.subj .tag{font-size:15px;color:var(--ink-soft);margin-top:10px;font-weight:500}
+@media (min-width:700px){.subjects{grid-template-columns:1fr 1fr}}
+.goals{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.goal{background:var(--hl-soft);border:1px solid #E6CF3A;border-radius:999px;padding:8px 14px;font-weight:700;font-size:16px}
+
+/* kalkulačka */
+.calc-sec{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.calc{display:grid;gap:22px}
+.calc fieldset{border:0;margin:0 0 20px;padding:0}
+.calc legend{font:700 21px var(--f-head);margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.calc legend .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--board);color:var(--chalk);font:800 16px var(--f-body)}
+.opts{display:grid;gap:8px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt span{display:flex;justify-content:space-between;gap:10px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:13px 14px;background:var(--chalk);font-weight:700;font-size:17px;line-height:1.2}
+.opt span small{font-weight:500;color:var(--muted);font-size:15px;white-space:nowrap}
+.opt input:checked + span{border-color:var(--ink);background:#EEF2FC;box-shadow:inset 0 0 0 1px var(--ink)}
+.opt input:focus-visible + span{outline:3px solid var(--ink);outline-offset:2px}
+.stepper{display:flex;align-items:center;gap:12px}
+.stepper button{width:52px;height:52px;border-radius:12px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font:800 26px/1 var(--f-body);cursor:pointer}
+.stepper button:disabled{opacity:.35;cursor:not-allowed}
+.stepper output{min-width:120px;text-align:center;font:800 22px var(--f-body)}
+.hint{font-size:15px;color:var(--muted);margin-top:8px}
+.result{background:var(--board);color:var(--chalk);border-radius:18px;padding:24px 22px;position:relative;overflow:hidden}
+.result::after{content:"";position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;border:2px dashed rgba(245,244,236,.18)}
+.result .lbl{font-size:16px;color:#D5E3DB;margin:0 0 2px}
+.result .big{font:800 clamp(48px,13vw,68px)/1 var(--f-head);color:var(--hl);margin:2px 0 6px}
+.result .sub{font-size:17px;color:#E9F0EC;margin-bottom:14px}
+.result table{width:100%;border-collapse:collapse;font-size:16px;margin:10px 0 18px}
+.result td{padding:7px 0;border-top:1px solid rgba(245,244,236,.18)}
+.result td:last-child{text-align:right;font-weight:700}
+.result .note{font-size:14.5px;color:#CFDDD5;margin:14px 0 0}
+@media (min-width:860px){.calc{grid-template-columns:1.1fr .9fr;align-items:start;gap:40px}.result{position:sticky;top:20px}}
+
+/* ceník tabulka */
+.pricelist{margin-top:30px;background:var(--chalk);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.pricelist table{width:100%;border-collapse:collapse;font-size:16.5px}
+.pricelist th,.pricelist td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.pricelist th{font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:#EEEEE3}
+.pricelist td.num,.pricelist th.num{text-align:right;white-space:nowrap}
+.pricelist caption{caption-side:bottom;text-align:left;padding:12px 14px;font-size:15px;color:var(--muted)}
+
+/* kroky */
+.steps{display:grid;gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px 20px 74px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:42px;height:42px;border-radius:50%;background:var(--hl);color:#1A2A22;display:grid;place-items:center;font:800 22px var(--f-head)}
+.steps p{margin:0;color:var(--muted)}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* o mně */
+.about{display:grid;gap:28px}
+.photo{aspect-ratio:4/3;max-width:420px;width:100%;border-radius:18px;background:repeating-linear-gradient(45deg,#E9EBDF 0 14px,#F1F2E9 14px 28px);border:2px dashed #9BA597;display:grid;place-items:center;text-align:center;color:#4A564F;font-weight:700;padding:20px}
+.facts{display:grid;gap:12px;margin:20px 0 0;padding:0;list-style:none}
+.facts li{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.facts b{font-family:var(--f-head);font-size:26px;color:var(--ink);line-height:1;min-width:58px}
+.facts span{font-size:17px}
+@media (min-width:860px){.about{grid-template-columns:340px 1fr;gap:56px;align-items:start}.photo{aspect-ratio:4/5}}
+
+/* reference */
+.refs-sec{background:var(--board);color:var(--chalk)}
+.refs-sec h2,.refs-sec .kicker{color:var(--chalk)}
+.refs-sec .kicker{color:var(--hl)}
+.refs-sec .sec-head p{color:#DCE8E1}
+.refs{display:grid;gap:16px}
+.ref{margin:0;background:var(--board-2);border:1px solid rgba(245,244,236,.16);border-radius:var(--r);padding:22px 20px}
+.ref blockquote{margin:0 0 12px;font:500 italic 21px/1.4 var(--f-head);color:var(--chalk)}
+.ref figcaption{font-size:15px;color:#CFDDD5}
+.refs-sec a{color:var(--hl)}
+@media (min-width:860px){.refs{grid-template-columns:repeat(3,1fr)}}
+
+/* FAQ */
+.faq{max-width:800px}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:17px 52px 17px 18px;font:700 20px/1.3 var(--f-head);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font:800 26px var(--f-body);color:var(--ink)}
+.faq details[open] summary::after{content:"–"}
+.faq details>div{padding:0 18px 16px;color:var(--muted)}
+
+/* kontakt */
+.contact{display:grid;gap:22px}
+.card{color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px 20px}
+.big-tel{display:block;font:800 clamp(34px,9vw,46px)/1.1 var(--f-head);color:var(--ink);text-decoration:none;margin:4px 0 14px}
+.c-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.c-list li{display:flex;gap:12px;align-items:flex-start}
+.c-list .ico{flex:none;width:40px;height:40px;border-radius:10px;background:#EEF2FC;display:grid;place-items:center}
+.c-list b{display:block;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.c-list a{font-weight:700;word-break:break-word}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+@media (min-width:860px){.contact{grid-template-columns:1fr 1fr;gap:28px}}
+
+footer{background:#16302A;color:#CFDDD5;font-size:15px;padding:28px 0 calc(104px + env(safe-area-inset-bottom,0px))}
+@media (min-width:860px){footer{padding-bottom:32px}}
+footer a{color:var(--chalk)}
+footer .wrap{display:grid;gap:8px}
+
+/* mobilní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--board);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;box-shadow:0 -6px 18px rgba(0,0,0,.18)}
+.callbar a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;border-radius:12px;padding:9px 8px;font-weight:800;font-size:17px;line-height:1.15}
+.callbar a small{font-weight:500;font-size:13.5px}
+.callbar .c1{background:var(--hl);color:#1A2A22}
+.callbar .c2{flex:.55;background:transparent;color:var(--chalk);border:2px solid rgba(245,244,236,.5)}
+@media (min-width:860px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:no-preference){
+  .write{stroke-dasharray:420;stroke-dashoffset:0;animation:draw 1.6s ease-out both}
+  @keyframes draw{from{stroke-dashoffset:420}to{stroke-dashoffset:0}}
+}
+</style>
+
+
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<div class="demo" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Mgr. Andrea Fantová – Doučování Morava</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#obsah">Andrea Fantová<small>Doučování Morava · Hlubočec u Opavy</small></a>
+    <nav class="nav" aria-label="Hlavní menu">
+      <a href="#predmety">Předměty</a>
+      <a href="#cena">Cena</a>
+      <a href="#o-mne">O mně</a>
+      <a href="#otazky">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-top" href="tel:+420775348489" aria-label="Zavolat 775 348 489">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      775 348 489
+    </a>
+  </div>
+</header>
+
+<main id="obsah">
+<section class="board hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Doučování na Opavsku i online</p>
+      <h1 id="h1">Čeština, angličtina, ZSV a dějiny umění – <em>v klidu a srozumitelně</em></h1>
+      <p class="lead">Mgr. Andrea Fantová z Hlubočce u Opavy připraví Vaše dítě (i Vás) na přijímačky, maturitu a testy Scio. Hodiny online nebo osobně po domluvě.</p>
+      <div class="cta-row">
+        <a class="btn btn-hl" href="tel:+420775348489">Domluvit první hodinu</a>
+        <a class="btn btn-ghost" href="#cena">Spočítat cenu</a>
+      </div>
+      <p class="hero-phone">Zavolejte na <a href="tel:+420775348489">775 348 489</a> nebo napište na <a href="mailto:fantova.andy@gmail.com">fantova.andy@gmail.com</a></p>
+      <ul class="hero-facts">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F4DC3E" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>od 270 Kč za 45 minut</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F4DC3E" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>materiály v ceně</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F4DC3E" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>přes 10 let praxe</li>
+      </ul>
+    </div>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 560 440" role="img" aria-labelledby="art-t">
+        <title id="art-t">Kreslená školní lavice s otevřeným sešitem, ve kterém jsou ručně napsané předměty: čeština, English, ZSV a dějiny umění</title>
+        <!-- lavice -->
+        <path d="M18 300 L542 300 L520 360 L40 360 Z" fill="#C89B62"/>
+        <path d="M40 360 L520 360 L520 374 L40 374 Z" fill="#9C7442"/>
+        <rect x="70" y="374" width="16" height="66" fill="#2B2B2B"/>
+        <rect x="474" y="374" width="16" height="66" fill="#2B2B2B"/>
+        <path d="M18 300 L542 300" stroke="#E0B983" stroke-width="3"/>
+        <!-- stín sešitu -->
+        <ellipse cx="280" cy="312" rx="230" ry="14" fill="#000" opacity=".18"/>
+        <!-- sešit levá strana -->
+        <g transform="rotate(-3 280 190)">
+          <path d="M60 52 Q160 40 278 58 L278 306 Q160 290 60 302 Z" fill="#FFFFFF"/>
+          <path d="M282 58 Q400 40 500 52 L500 302 Q400 290 282 306 Z" fill="#FBFBF6"/>
+          <path d="M278 58 L282 58 L282 306 L278 306 Z" fill="#D7D9CC"/>
+          <!-- linky -->
+          <g stroke="#B9C7E6" stroke-width="1.4">
+            <path d="M74 92 H266"/><path d="M74 126 H266"/><path d="M74 160 H266"/><path d="M74 194 H266"/><path d="M74 228 H266"/><path d="M74 262 H266"/>
+            <path d="M294 92 H486"/><path d="M294 126 H486"/><path d="M294 160 H486"/><path d="M294 194 H486"/><path d="M294 228 H486"/><path d="M294 262 H486"/>
+          </g>
+          <path d="M96 64 V292" stroke="#E79A9A" stroke-width="1.4"/>
+          <path d="M316 62 V292" stroke="#E79A9A" stroke-width="1.4"/>
+          <!-- zvýrazňovač -->
+          <rect x="104" y="98" width="128" height="20" rx="4" fill="#F4DC3E" opacity=".85"/>
+          <rect x="324" y="166" width="150" height="20" rx="4" fill="#F4DC3E" opacity=".85"/>
+          <!-- ručně psané předměty -->
+          <g font-family="Alegreya, Georgia, serif" font-style="italic" fill="#1F3A82">
+            <text x="108" y="118" font-size="27" font-weight="700" transform="rotate(-2 108 118)">čeština</text>
+            <text x="108" y="152" font-size="18" transform="rotate(-1 108 152)">vyjmenovaná slova ✓</text>
+            <text x="108" y="186" font-size="25" font-weight="700" transform="rotate(-2 108 186)">English</text>
+            <text x="108" y="220" font-size="18" transform="rotate(-1 108 220)">present perfect ✓</text>
+            <text x="108" y="255" font-size="18" transform="rotate(-1.5 108 255)">sloh: úvaha</text>
+            <text x="326" y="118" font-size="25" font-weight="700" transform="rotate(-1 326 118)">ZSV</text>
+            <text x="326" y="150" font-size="18" transform="rotate(-1 326 150)">Scio testy</text>
+            <text x="328" y="185" font-size="23" font-weight="700" transform="rotate(-1.5 328 185)">dějiny umění</text>
+            <text x="326" y="219" font-size="18" transform="rotate(-1 326 219)">film · divadlo</text>
+            <text x="326" y="254" font-size="20" font-weight="700" transform="rotate(-2 326 254)">maturita</text>
+          </g>
+          <!-- podtržení perem -->
+          <path class="write" d="M104 124 q60 8 124 -2" fill="none" stroke="#1F3A82" stroke-width="2.4" stroke-linecap="round"/>
+          <path class="write" d="M420 250 l8 8 l18 -22" fill="none" stroke="#1F3A82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <!-- tužka -->
+        <g transform="rotate(-24 470 292)">
+          <rect x="388" y="282" width="120" height="16" rx="3" fill="#F4DC3E"/>
+          <rect x="388" y="282" width="120" height="5" fill="#E2C72A"/>
+          <rect x="374" y="282" width="16" height="16" fill="#E79A9A"/>
+          <rect x="386" y="282" width="6" height="16" fill="#B9B9B9"/>
+          <path d="M508 282 L530 290 L508 298 Z" fill="#E8C99A"/>
+          <path d="M522 287.5 L530 290 L522 292.5 Z" fill="#2B2B2B"/>
+        </g>
+        <!-- lísteček -->
+        <g transform="rotate(5 470 50)">
+          <rect x="400" y="8" width="138" height="92" rx="4" fill="#FBF0A6"/>
+          <rect x="440" y="2" width="56" height="14" fill="#FFFFFF" opacity=".7"/>
+          <g font-family="Alegreya, Georgia, serif" font-style="italic" fill="#1C2621" font-size="17">
+            <text x="414" y="42">přijímačky ✓</text>
+            <text x="414" y="64">maturita ✓</text>
+            <text x="414" y="86">Scio ✓</text>
+          </g>
+        </g>
+        <!-- jablko -->
+        <g>
+          <circle cx="52" cy="276" r="22" fill="#D9534F"/>
+          <circle cx="44" cy="270" r="6" fill="#fff" opacity=".35"/>
+          <path d="M52 254 q2 -10 8 -12" stroke="#5A3B1C" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M58 248 q12 -8 18 2 q-10 6 -18 -2z" fill="#5BA35B"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="predmety" aria-labelledby="h-pred">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">S čím pomáhám</p>
+      <h2 id="h-pred">Čtyři předměty, jeden cíl: <span class="hl">zvládnout to</span></h2>
+      <p>Výuku vždy přizpůsobuji tomu, co konkrétně potřebujete – ať je to dlouhodobé doučování ke škole, nebo příprava na jednu důležitou zkoušku.</p>
+    </div>
+    <div class="subjects">
+      <article class="subj">
+        <h3>Český jazyk <span class="price">od 270 Kč / 45 min</span></h3>
+        <p>Gramatika, porozumění textu, sloh. Příprava na přijímací zkoušky a didaktický test i ústní část maturity.</p>
+        <p class="tag">Doučuji i češtinu pro cizince.</p>
+      </article>
+      <article class="subj">
+        <h3>Anglický jazyk <span class="price">od 270 Kč / 45 min</span></h3>
+        <p>Pro začátečníky, mírně i středně pokročilé – děti i dospělé. Konverzace, gramatika, poslech.</p>
+        <p class="tag">Příprava na maturitu a certifikát B1.</p>
+      </article>
+      <article class="subj">
+        <h3>Základy společenských věd <span class="price">od 320 Kč / 45 min</span></h3>
+        <p>Příprava na testy Scio a přijímací zkoušky na vysokou školu. Více než deset let praxe v tomto oboru.</p>
+      </article>
+      <article class="subj">
+        <h3>Dějiny umění <span class="price">od 320 Kč / 45 min</span></h3>
+        <p>Výtvarné umění, film a divadlo – výklad od lektorky, která o divadle léta psala jako recenzentka.</p>
+      </article>
+    </div>
+    <div class="goals" aria-label="Na co připravuji">
+      <span class="goal">Přijímací zkoušky na SŠ</span>
+      <span class="goal">Státní maturita</span>
+      <span class="goal">Testy Scio</span>
+      <span class="goal">Certifikát B1</span>
+      <span class="goal">Opravný termín maturity</span>
+    </div>
+  </div>
+</section>
+
+<section id="cena" class="calc-sec" aria-labelledby="h-cena">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kalkulačka ceny</p>
+      <h2 id="h-cena">Kolik bude stát jedna lekce?</h2>
+      <p>Tři kliknutí a víte to přesně. Počítá se podle ceníku platného od 1. 1. 2025.</p>
+    </div>
+
+    <form class="calc" id="calc" onsubmit="return false">
+      <div>
+        <fieldset>
+          <legend><span class="n">1</span>Předmět</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="sub" value="cj" checked><span>Český jazyk <small>270 / 320 Kč</small></span></label>
+            <label class="opt"><input type="radio" name="sub" value="aj"><span>Anglický jazyk <small>270 / 320 Kč</small></span></label>
+            <label class="opt"><input type="radio" name="sub" value="zsv"><span>Základy společenských věd <small>320 / 370 Kč</small></span></label>
+            <label class="opt"><input type="radio" name="sub" value="du"><span>Dějiny umění <small>320 / 370 Kč</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><span class="n">2</span>Délka lekce</legend>
+          <div class="opts two">
+            <label class="opt"><input type="radio" name="len" value="45" checked><span>45 minut</span></label>
+            <label class="opt"><input type="radio" name="len" value="60"><span>60 minut</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><span class="n">3</span>Počet žáků</legend>
+          <div class="stepper">
+            <button type="button" id="minus" aria-label="Ubrat žáka">−</button>
+            <output id="cnt" aria-live="polite">1 žák</output>
+            <button type="button" id="plus" aria-label="Přidat žáka">+</button>
+          </div>
+          <p class="hint">Učí se dva a více (sourozenci, kamarádi)? Cena se každému sníží o 50 Kč.</p>
+        </fieldset>
+      </div>
+
+      <div class="result" aria-live="polite">
+        <p class="lbl" id="r-what">Český jazyk · 45 minut</p>
+        <p class="big"><span id="r-total">270</span> Kč</p>
+        <p class="sub" id="r-sub">za jednu lekci</p>
+        <table>
+          <tr><td>Základní cena za osobu</td><td id="r-base">270 Kč</td></tr>
+          <tr><td>Skupinová sleva za osobu</td><td id="r-disc">—</td></tr>
+          <tr><td>Cena za osobu</td><td id="r-per">270 Kč</td></tr>
+        </table>
+        <a class="btn btn-hl" href="tel:+420775348489">Domluvit první hodinu</a>
+        <p class="note">V ceně jsou všechny materiály. Pokud za Vámi lektorka dojíždí, připočítá se jízdné. Platí se hotově po hodině, pokud se nedomluvíte jinak.</p>
+      </div>
+    </form>
+
+    <div class="pricelist">
+      <table>
+        <caption>Ceník platný od 1. ledna 2025. Při výuce dvou a více studentů se sazba snižuje o 50 Kč na osobu.</caption>
+        <thead><tr><th>Předmět</th><th class="num">45 min</th><th class="num">60 min</th></tr></thead>
+        <tbody>
+          <tr><td>Český jazyk</td><td class="num">270 Kč</td><td class="num">320 Kč</td></tr>
+          <tr><td>Anglický jazyk</td><td class="num">270 Kč</td><td class="num">320 Kč</td></tr>
+          <tr><td>Základy společenských věd</td><td class="num">320 Kč</td><td class="num">370 Kč</td></tr>
+          <tr><td>Dějiny umění</td><td class="num">320 Kč</td><td class="num">370 Kč</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="jak" aria-labelledby="h-jak">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Jak to probíhá</p>
+      <h2 id="h-jak">Od prvního telefonátu k jisté zkoušce</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Ozvete se</h3><p>Zavolejte na 775 348 489 nebo napište e-mail. Stačí říct předmět, ročník a k čemu se chystáte – třeba přijímačky v dubnu.</p></li>
+      <li><h3>První hodina</h3><p>Zjistíme, kde to drhne, a domluvíme plán. Výuku stavím podle Vašich potřeb, ne podle šablony.</p></li>
+      <li><h3>Pravidelné lekce</h3><p>Online z pohodlí domova, nebo osobně po domluvě. Materiály dostanete, na zkoušku si zkusíte i ostré testy.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="o-mne" aria-labelledby="h-omne" style="padding-top:0">
+  <div class="wrap about">
+    <div class="photo" role="img" aria-label="Místo pro fotografii lektorky">Sem přijde Vaše fotka</div>
+    <div>
+      <p class="kicker">O mně</p>
+      <h2 id="h-omne">Mgr. Andrea Fantová</h2>
+      <p>Vystudovala jsem umělecký obor na Filozofické fakultě Univerzity Palackého a mám osvědčení o pedagogickém minimu. Devět let jsem pracovala v médiích – jako redaktorka v televizi, v tištěných i internetových novinách – a psala divadelní recenze pro Moravu a Slezsko.</p>
+      <p>Při výuce kladu důraz na individuální potřeby každého studenta. Proto se ke mně hlásí školáci, maturanti i dospělí, kteří s angličtinou teprve začínají.</p>
+      <ul class="facts">
+        <li><b>10+</b><span>let soukromě doučuji angličtinu a češtinu</span></li>
+        <li><b>10+</b><span>let pedagogické praxe v ZSV a přípravě na testy Scio</span></li>
+        <li><b>29</b><span>poděkování od žáků a rodičů na mém dosavadním webu</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="refs-sec" aria-labelledby="h-refs">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Co říkají žáci a rodiče</p>
+      <h2 id="h-refs">Maturity, přijímačky, certifikáty</h2>
+      <p>Výběr z poděkování zveřejněných na <a href="https://doucovani-morava.webnode.cz/reference/" rel="noopener">dosavadním webu</a>.</p>
+    </div>
+    <div class="refs">
+      <figure class="ref"><blockquote>„Díky vám se dostal na střední školu a udělal si certifikát z angličtiny. Na vaše hodiny chodil vždy rád.“</blockquote><figcaption>Rodiče žáka · přijímačky z češtiny + certifikát B1</figcaption></figure>
+      <figure class="ref"><blockquote>„Po třech měsících doučování byl můj druhý pokus již úspěšný.“</blockquote><figcaption>Maturant · didaktický test z češtiny, opravný termín</figcaption></figure>
+      <figure class="ref"><blockquote>„Již po třech lekcích jsem se cítila jistější a zkoušky jsem se přestala obávat.“</blockquote><figcaption>Dospělá studentka · maturita z češtiny po 25 letech</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="otazky" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Časté otázky</p>
+      <h2 id="h-faq">Než zavoláte</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Učíte online, nebo osobně?</summary><div><p>Doučování probíhá především online přes videohovor, takže nezáleží na tom, kde bydlíte. Osobní výuka je možná po domluvě – pokud za Vámi dojíždím, připočítá se k ceně jízdné.</p></div></details>
+      <details><summary>Kolik stojí lekce, když se učí sourozenci spolu?</summary><div><p>Při výuce dvou a více studentů se sazba snižuje o 50 Kč na osobu. Například dva žáci na 45 minut angličtiny zaplatí každý 220 Kč, tedy 440 Kč za lekci. Přesnou částku si spočítáte v <a href="#cena">kalkulačce</a>.</p></div></details>
+      <details><summary>Jak se platí?</summary><div><p>Hotově po každé hodině, pokud se nedomluvíme jinak. Všechny materiály jsou už v ceně.</p></div></details>
+      <details><summary>Co když nemůžeme přijít?</summary><div><p>Stačí se telefonicky omluvit nejpozději 2 hodiny před lekcí, u víkendové výuky 12 hodin předem. Jinak se hodina platí. Platí to i pro mě: pokud lekce bez mé včasné omluvy odpadne, příští hodinu máte zdarma.</p></div></details>
+      <details><summary>Připravujete i dospělé?</summary><div><p>Ano. Angličtinu učím od úplných začátečníků po středně pokročilé a připravuji i dospělé, kteří si doplňují maturitu.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="board" aria-labelledby="h-kontakt">
+  <div class="wrap contact">
+    <div>
+      <p class="kicker" style="color:var(--hl)">Kontakt</p>
+      <h2 id="h-kontakt" style="color:var(--chalk)">Domluvme první hodinu</h2>
+      <p style="color:#E9F0EC;font-size:19px">Zavolejte nebo napište, co potřebujete. Domluvíme termín, předmět i to, jestli se budeme učit online, nebo osobně.</p>
+    </div>
+    <div class="card">
+      <p style="margin:0;color:var(--muted);font-weight:700">Telefon</p>
+      <a class="big-tel" href="tel:+420775348489">775 348 489</a>
+      <ul class="c-list">
+        <li><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F3A82" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span><span><b>E-mail</b><a href="mailto:fantova.andy@gmail.com">fantova.andy@gmail.com</a></span></li>
+        <li><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F3A82" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></span><span><b>Adresa</b>Hlubočec 141, 747 69<br><a href="https://mapy.cz/zakladni?q=Hlubo%C4%8Dec%20141%2C%20747%2069" rel="noopener">Zobrazit na Mapy.cz</a></span></li>
+        <li><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F3A82" d="M21 3H3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 13H3V5h18z"/></svg></span><span><b>Výuka</b>především online · osobně po domluvě</span></li>
+      </ul>
+      <div class="btns">
+        <a class="btn btn-ink" href="tel:+420775348489">Zavolat</a>
+        <a class="btn btn-line" href="mailto:fantova.andy@gmail.com?subject=Dou%C4%8Dov%C3%A1n%C3%AD%20%E2%80%93%20prvn%C3%AD%20hodina">Napsat e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0"><strong style="color:var(--chalk)">Lektorská činnost – Mgr. Andrea Fantová</strong> · Hlubočec 141, 747 69 · IČO 03291413</p>
+    <p style="margin:0"><a href="tel:+420775348489">775 348 489</a> · <a href="mailto:fantova.andy@gmail.com">fantova.andy@gmail.com</a></p>
+    <p style="margin:0">© 2026 · Nezávazný návrh webu, není to oficiální stránka.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420775348489">Zavolat<small>775 348 489</small></a>
+  <a class="c2" href="mailto:fantova.andy@gmail.com">E-mail</a>
+</nav>
+
+<script>
+(function(){
+  var P={cj:{n:"Český jazyk",45:270,60:320},aj:{n:"Anglický jazyk",45:270,60:320},zsv:{n:"Základy společenských věd",45:320,60:370},du:{n:"Dějiny umění",45:320,60:370}};
+  var f=document.getElementById("calc"),n=1,MAX=5;
+  var $=function(id){return document.getElementById(id)};
+  function zak(k){return k===1?"1 žák":(k<5?k+" žáci":k+" žáků")}
+  function fmt(x){return x.toLocaleString("cs-CZ")+" Kč"}
+  function upd(){
+    var s=f.querySelector('input[name=sub]:checked').value,l=f.querySelector('input[name=len]:checked').value;
+    var base=P[s][l],disc=n>=2?50:0,per=base-disc,tot=per*n;
+    $("cnt").textContent=zak(n);
+    $("minus").disabled=n<=1;$("plus").disabled=n>=MAX;
+    $("r-what").textContent=P[s].n+" · "+l+" minut · "+zak(n);
+    $("r-total").textContent=tot.toLocaleString("cs-CZ");
+    $("r-sub").textContent=n===1?"za jednu lekci":"za jednu lekci celkem ("+fmt(per)+" za osobu)";
+    $("r-base").textContent=fmt(base);
+    $("r-disc").textContent=disc?"− 50 Kč":"—";
+    $("r-per").textContent=fmt(per);
+  }
+  f.addEventListener("change",upd);
+  $("minus").addEventListener("click",function(){if(n>1){n--;upd()}});
+  $("plus").addEventListener("click",function(){if(n<MAX){n++;upd()}});
+  upd();
+})();
+</script>
+</body>
+</html>

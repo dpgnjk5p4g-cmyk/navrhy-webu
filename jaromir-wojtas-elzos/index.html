@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – ELZOS Jaromír Wojtas</title>
+<meta name="description" content="Elektrikář Ostrava-Svinov: elektroinstalace od návrhu po realizaci, tepelná čerpadla, zabezpečení EZS s napojením na pult, kamery, EPS, chytrý dům, fotovoltaika a práce z plošin. Na trhu od roku 1991.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Petrona:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Jaromír Wojtas - ELZOS",
+  "telephone": "+420602544750",
+  "email": "info@elzos.cz",
+  "taxID": "43622194",
+  "foundingDate": "1991",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Krůčkova 725/8",
+    "addressLocality": "Ostrava-Svinov",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "06:00",
+    "closes": "17:00"
+  }],
+  "sameAs": ["https://www.facebook.com/www.elzos.cz/"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --forest:#12372A; --forest-2:#1C4A39; --forest-3:#2A5E4A;
+  --sage:#E8EFE9; --sage-2:#D5E1D8; --paper:#FFFFFF; --paper-2:#F6F9F6;
+  --amber:#F4A62A; --amber-soft:#FCE6BE; --amber-ink:#7A4A00;
+  --char:#1B1F1D; --muted:#4A5A52; --line:#BFD0C4;
+  --head:"Familjen Grotesk", "Arial Narrow", Arial, sans-serif;
+  --body:"Petrona", Georgia, "Times New Roman", serif;
+  --r:14px; --gut:16px; --max:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--char);font-family:var(--body);font-size:17px;line-height:1.6;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.08;margin:0;color:inherit;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--forest)}
+img,svg{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+@media (min-width:700px){:root{--gut:28px}}
+.demo{display:inline-block;font-family:var(--head);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1;padding:4px 7px;border-radius:99px;background:var(--amber-soft);color:var(--amber-ink);border:1px solid #E9B962;vertical-align:middle;white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+/* banner + header */
+.proto{background:var(--char);color:#F1F4F2;font-family:var(--head);font-size:13px;text-align:center;padding:8px var(--gut);line-height:1.35}
+.proto b{color:var(--amber);font-weight:600}
+header.top{background:var(--forest);color:var(--sage);position:sticky;top:0;z-index:40;border-bottom:1px solid #0B2A1F}
+.top .wrap{display:flex;align-items:center;gap:16px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--sage)}
+.logo b{font-family:var(--head);font-size:22px;letter-spacing:.08em;font-weight:700}
+.logo small{display:block;white-space:nowrap;font-family:var(--head);font-size:10.5px;letter-spacing:.06em;color:#B9CDBF;text-transform:uppercase;line-height:1.1}
+.top nav{display:none;margin-left:auto;gap:22px}
+.top nav a{color:var(--sage);text-decoration:none;font-family:var(--head);font-size:15px;font-weight:500}
+.top nav a:hover{color:var(--amber)}
+.tel-top{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--amber);color:var(--char);text-decoration:none;font-family:var(--head);font-weight:700;font-size:15px;padding:9px 14px;border-radius:99px;white-space:nowrap}
+.tel-top svg{width:17px;height:17px}
+.status{display:none;align-items:center;gap:7px;font-family:var(--head);font-size:13px;color:#CFDDD3;white-space:nowrap}
+.dot{width:9px;height:9px;border-radius:50%;background:#8FA59A;flex:none}
+.dot.on{background:#5FD38F;box-shadow:0 0 0 3px rgba(95,211,143,.25)}
+@media (min-width:980px){.top nav{display:flex}.tel-top{margin-left:8px}.status{display:flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--head);font-weight:700;font-size:17px;text-decoration:none;border-radius:99px;padding:14px 22px;border:2px solid transparent;cursor:pointer;line-height:1.1}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-amber{background:var(--amber);color:var(--char)}
+.btn-amber:hover{background:#FFB743}
+.btn-ghost{background:transparent;color:var(--forest);border-color:var(--forest)}
+.btn-ghost:hover{background:var(--forest);color:var(--sage)}
+.btn-dark{background:var(--forest);color:var(--sage)}
+
+/* hero */
+.hero{background:var(--sage);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(18,55,42,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(18,55,42,.07) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+.hero .wrap{position:relative;padding-top:26px;padding-bottom:36px}
+.eyebrow{font-family:var(--head);font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--forest-3);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.eyebrow i{width:6px;height:6px;background:var(--amber);border-radius:50%;display:inline-block}
+.hero h1{font-size:clamp(31px,8.4vw,68px);font-weight:700;color:var(--forest);margin-top:12px;letter-spacing:-.025em;max-width:16ch}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 70%,rgba(244,166,42,.85) 70%,rgba(244,166,42,.85) 94%,transparent 94%)}
+.lead{font-size:18px;color:#26332D;margin-top:14px;max-width:42ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.cta-row .btn{flex:1 1 auto}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-family:var(--head);font-size:14px;color:var(--muted)}
+.facts span{display:flex;align-items:center;gap:6px}
+.facts svg{width:16px;height:16px;color:var(--forest-3)}
+.hero-top{display:grid;gap:8px}
+@media (min-width:900px){
+  .hero .wrap{padding-top:52px;padding-bottom:64px}
+  .hero-top{grid-template-columns:1.45fr 1fr;gap:48px;align-items:end}
+  .cta-row .btn{flex:0 0 auto}
+}
+
+/* plan */
+.plan-box{margin-top:26px;display:grid;gap:14px}
+@media (min-width:900px){.plan-box{grid-template-columns:1fr 360px;gap:22px;margin-top:40px;align-items:stretch}}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:10px;position:relative;box-shadow:0 18px 40px -26px rgba(18,55,42,.45)}
+.plan-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:4px 6px 8px;font-family:var(--head);font-size:13px;color:var(--muted)}
+.plan-head b{color:var(--forest);font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:12px}
+.stage{position:relative;width:100%;aspect-ratio:800/530}
+.stage svg.fp{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hs{position:absolute;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;border:2px solid var(--forest);background:var(--amber);color:var(--char);display:grid;place-items:center;cursor:pointer;padding:0;z-index:2;transition:transform .15s,background .15s}
+.hs svg{width:17px;height:17px}
+.hs::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--amber);opacity:.0;animation:ping 2.4s ease-out infinite}
+.hs:nth-of-type(2n)::after{animation-delay:.8s}
+.hs:hover{transform:translate(-50%,-50%) scale(1.08)}
+.hs[aria-pressed="true"]{background:var(--forest);color:var(--amber);border-color:var(--amber);transform:translate(-50%,-50%) scale(1.12)}
+.hs[aria-pressed="true"]::after{animation:none;opacity:0}
+@keyframes ping{0%{opacity:.8;transform:scale(.7)}80%,100%{opacity:0;transform:scale(1.35)}}
+@media (min-width:900px){.hs{width:42px;height:42px}.hs svg{width:21px;height:21px}}
+.cable{fill:none;stroke:var(--amber);stroke-width:3;stroke-dasharray:7 6;opacity:0;transition:opacity .25s}
+.cable.on{opacity:1;animation:flow 1s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-13}}
+.zone{transition:fill .25s}
+.zone.on{fill:rgba(244,166,42,.22)}
+.plan-hint{font-family:var(--head);font-size:13px;color:var(--muted);padding:8px 6px 2px;display:flex;align-items:center;gap:8px}
+
+.card{background:var(--forest);color:var(--sage);border-radius:var(--r);padding:22px 20px 20px;display:flex;flex-direction:column;gap:12px;min-height:300px}
+.card .k{font-family:var(--head);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#B9CDBF;display:flex;justify-content:space-between;align-items:center}
+.card .ico{width:52px;height:52px;border-radius:12px;background:var(--amber);color:var(--char);display:grid;place-items:center}
+.card .ico svg{width:28px;height:28px}
+.card h3{font-size:27px;color:#FFFFFF}
+.card p{color:#DCE7DF;font-size:17px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-family:var(--head);font-size:12px;font-weight:600;padding:4px 9px;border-radius:99px;border:1px solid #4F7A68;color:#DCE7DF}
+.card .row{margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.card .row .btn{flex:1 1 auto;font-size:16px;padding:12px 16px}
+.mini{display:none;flex-wrap:wrap;gap:6px;margin-top:4px;padding-top:14px;border-top:1px solid #2F6150}
+@media (min-width:900px){.mini{display:flex}}
+.mini button{font-family:var(--head);font-size:13px;font-weight:600;padding:6px 10px;border-radius:99px;border:1px solid #4F7A68;background:transparent;color:#DCE7DF;cursor:pointer}
+.mini button:hover{border-color:var(--amber)}
+.mini button[aria-current="true"]{background:var(--amber);color:var(--char);border-color:var(--amber)}
+.nav-ar{width:44px;height:44px;border-radius:50%;border:1.5px solid #4F7A68;background:transparent;color:var(--sage);display:grid;place-items:center;cursor:pointer}
+.nav-ar:hover{border-color:var(--amber);color:var(--amber)}
+.nav-ar svg{width:18px;height:18px}
+
+/* sections */
+section{padding:64px 0}
+@media (min-width:900px){section{padding:96px 0}}
+.sec-k{font-family:var(--head);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--forest-3);display:flex;align-items:center;gap:10px}
+.sec-k::before{content:"";width:22px;height:3px;background:var(--amber);border-radius:2px}
+h2{font-size:clamp(30px,6.4vw,50px);color:var(--forest);margin-top:12px;max-width:20ch;letter-spacing:-.02em}
+.sec-lead{margin-top:14px;max-width:58ch;color:#2E3B35;font-size:18px}
+
+/* pro koho */
+.who{background:var(--forest);color:var(--sage)}
+.who h2{color:#FFFFFF}
+.who .sec-k{color:#B9CDBF}
+.who .sec-lead{color:#DCE7DF}
+.tabs{display:flex;gap:6px;margin-top:28px;background:#0C2A1F;padding:6px;border-radius:99px;max-width:560px}
+.tab{flex:1;border:0;background:transparent;color:#DCE7DF;font-family:var(--head);font-size:15px;font-weight:600;padding:12px 6px;border-radius:99px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;line-height:1.1}
+.tab svg{width:18px;height:18px;flex:none;display:none}
+@media (min-width:500px){.tab svg{display:block}.tab{font-size:16px}}
+.tab[aria-selected="true"]{background:var(--amber);color:var(--char)}
+.tabpanel{margin-top:26px;display:grid;gap:22px}
+.tabpanel[hidden]{display:none}
+@media (min-width:900px){.tabpanel{grid-template-columns:.85fr 1.6fr;gap:44px}}
+.tp-intro h3{font-size:30px;color:#FFFFFF}
+.tp-intro p{margin-top:12px;color:#DCE7DF}
+.tp-intro .btn{margin-top:20px}
+.tp-list{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+@media (min-width:640px){.tp-list{grid-template-columns:1fr 1fr}}
+.tp-list li{background:var(--forest-2);border:1px solid #2F6150;border-radius:12px;padding:16px;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.tp-list li.key{border-color:var(--amber);background:#20503E}
+.tp-list .i{width:40px;height:40px;border-radius:10px;background:#0C2A1F;color:var(--amber);display:grid;place-items:center}
+.tp-list .i svg{width:22px;height:22px}
+.tp-list b{font-family:var(--head);font-size:17px;color:#FFFFFF;display:block;line-height:1.2}
+.tp-list span{font-size:15px;color:#CFDDD3;display:block;margin-top:3px;line-height:1.45}
+
+/* services */
+.svc-grid{display:grid;gap:12px;margin-top:34px}
+@media (min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+.svc{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:var(--paper);display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s}
+.svc:hover{border-color:var(--forest-3);box-shadow:0 12px 30px -22px rgba(18,55,42,.6)}
+.svc .si{width:46px;height:46px;border-radius:11px;background:var(--sage);color:var(--forest);display:grid;place-items:center}
+.svc .si svg{width:25px;height:25px}
+.svc h3{font-size:21px;color:var(--forest)}
+.svc p{font-size:16px;color:#2E3B35;line-height:1.5}
+.price{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px;font-family:var(--head);font-size:14px;color:var(--muted)}
+.price b{color:var(--char);font-weight:600}
+
+/* trust */
+.trust{background:var(--sage)}
+.trust-grid{display:grid;gap:14px;margin-top:34px}
+@media (min-width:900px){.trust-grid{grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto}}
+.big .yr{font-size:clamp(92px,24vw,140px)!important}
+.big{background:var(--forest);color:var(--sage);border-radius:var(--r);padding:28px 24px;position:relative;overflow:hidden}
+@media (min-width:900px){.big{grid-row:span 2;padding:36px}}
+.big .yr{font-family:var(--head);font-weight:700;font-size:clamp(96px,26vw,170px);line-height:.85;color:var(--amber);letter-spacing:-.04em}
+.big h3{font-size:28px;color:#FFFFFF;margin-top:16px}
+.big p{margin-top:10px;color:#DCE7DF}
+.big svg.rings{position:absolute;right:-60px;bottom:-60px;width:240px;height:240px;opacity:.18}
+.tcard{background:var(--paper);border-radius:var(--r);padding:22px;border:1px solid var(--line)}
+.tcard .n{font-family:var(--head);font-size:40px;font-weight:700;color:var(--forest);line-height:1}
+.tcard h3{font-size:19px;color:var(--forest);margin-top:8px}
+.tcard p{font-size:16px;color:#2E3B35;margin-top:6px}
+
+/* realizace */
+.real-grid{display:grid;gap:14px;margin-top:34px}
+@media (min-width:800px){.real-grid{grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr}.real-grid .r1{grid-row:span 2}}
+.ph{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column}
+.ph .frame{flex:1;min-height:190px;background:repeating-linear-gradient(135deg,var(--sage) 0 14px,#DFE8E1 14px 28px);display:grid;place-items:center;text-align:center;padding:20px;font-family:var(--head);color:var(--forest);font-weight:600;font-size:16px}
+.ph .frame svg{width:40px;height:40px;display:block;margin:0 auto 8px;color:var(--forest-3)}
+.r1 .frame{min-height:260px}
+.ph .cap{padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.ph .cap b{font-family:var(--head);font-size:18px;color:var(--forest);line-height:1.25}
+.ph .cap span{font-size:15px;color:var(--muted)}
+.ph .cap .demo{font-size:11px;color:var(--amber-ink)}
+
+/* steps */
+.steps{background:var(--sage)}
+.steps ol{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+@media (min-width:900px){.steps ol{grid-template-columns:repeat(3,1fr);gap:18px}}
+.steps li{background:var(--paper);border-radius:var(--r);padding:24px 22px;position:relative;border:1px solid var(--line)}
+.steps li .num{font-family:var(--head);font-size:15px;font-weight:700;color:var(--char);background:var(--amber);width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.steps li h3{font-size:22px;color:var(--forest);margin-top:16px}
+.steps li p{margin-top:8px;font-size:16px;color:#2E3B35}
+
+/* area */
+.area-grid{display:grid;gap:26px;margin-top:30px;align-items:center}
+@media (min-width:900px){.area-grid{grid-template-columns:1fr 1fr;gap:48px}}
+.area-map{background:var(--sage);border-radius:var(--r);padding:10px;border:1px solid var(--line)}
+.area-map svg{display:block;width:100%;height:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;list-style:none;padding:0}
+.chips li{font-family:var(--head);font-size:15px;font-weight:500;padding:8px 13px;border-radius:99px;background:var(--sage);color:var(--forest)}
+.chips li.home{background:var(--forest);color:var(--sage)}
+
+/* faq */
+.faq{background:var(--sage)}
+.faq-list{margin-top:30px;display:grid;gap:10px;max-width:860px}
+details{background:var(--paper);border-radius:12px;border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 54px 18px 20px;font-family:var(--head);font-weight:600;font-size:18px;color:var(--forest);position:relative;line-height:1.3}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:20px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--forest);border-bottom:2.5px solid var(--forest);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{padding:0 20px 18px;color:#2E3B35;font-size:16.5px}
+
+/* form */
+.ask{background:var(--forest);color:var(--sage)}
+.ask h2{color:#FFFFFF}
+.ask .sec-k{color:#B9CDBF}
+.ask .sec-lead{color:#DCE7DF}
+.ask-grid{display:grid;gap:28px;margin-top:30px}
+@media (min-width:900px){.ask-grid{grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}}
+.ask-side{display:grid;gap:12px}
+.ask-side a.big-tel{display:block;background:var(--amber);color:var(--char);text-decoration:none;border-radius:var(--r);padding:20px 22px;font-family:var(--head)}
+.ask-side a.big-tel small{display:block;font-size:14px;font-weight:600}
+.ask-side a.big-tel b{display:block;font-size:clamp(28px,8vw,38px);letter-spacing:-.01em;margin-top:4px}
+.ask-side p{color:#DCE7DF;font-size:16px}
+form{background:var(--paper);color:var(--char);border-radius:var(--r);padding:22px 18px;display:grid;gap:14px}
+@media (min-width:600px){form{padding:30px;grid-template-columns:1fr 1fr}form .full{grid-column:1/-1}}
+label{font-family:var(--head);font-size:14px;font-weight:600;color:var(--forest);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-weight:400;font-size:16px;font-family:var(--body);color:var(--char);background:var(--paper-2);border:1.5px solid #9DB5A6;border-radius:10px;padding:12px 13px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(244,166,42,.45)}
+textarea{min-height:120px;resize:vertical}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+legend{font-family:var(--head);font-size:14px;font-weight:600;color:var(--forest);margin-bottom:8px;padding:0}
+.seg{position:relative;display:inline-block}
+.seg input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.seg span{display:inline-block;font-family:var(--head);font-size:15px;font-weight:600;padding:10px 14px;border-radius:99px;border:1.5px solid #9DB5A6;color:var(--forest);cursor:pointer}
+.seg input:checked+span{background:var(--forest);color:var(--sage);border-color:var(--forest)}
+.seg input:focus-visible+span{outline:3px solid var(--amber);outline-offset:2px}
+.form-note{font-size:14px;color:var(--muted)}
+.form-ok{display:none;background:var(--sage);border-left:4px solid var(--amber);padding:14px 16px;border-radius:8px;font-size:16px;color:var(--char)}
+.form-ok.show{display:block}
+
+/* contact */
+.contact-grid{display:grid;gap:14px;margin-top:30px}
+@media (min-width:800px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.contact-grid{grid-template-columns:1.2fr 1fr 1fr}}
+.cbox{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--paper)}
+.cbox h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.cbox .v{font-family:var(--head);font-size:22px;font-weight:600;color:var(--forest);margin-top:8px;line-height:1.3;word-break:break-word}
+.cbox .v a{color:var(--forest);text-decoration-color:var(--amber);text-decoration-thickness:2px;text-underline-offset:4px}
+.cbox p{margin-top:8px;color:#2E3B35;font-size:16px}
+.cbox .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cbox .links a{font-family:var(--head);font-size:15px;font-weight:600;color:var(--forest);background:var(--sage);text-decoration:none;padding:9px 14px;border-radius:99px}
+.cbox .links a:hover{background:var(--amber);color:var(--char)}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;margin-top:10px;font-family:var(--head);font-size:16px}
+.hours dt{color:var(--muted)}.hours dd{margin:0;color:var(--char);font-weight:600}
+.live{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:var(--head);font-size:14px;font-weight:600;background:var(--sage);color:var(--forest);padding:7px 12px;border-radius:99px}
+
+footer{background:var(--char);color:#C9D3CD;padding:40px 0 30px;font-size:15px}
+footer .wrap{display:grid;gap:18px}
+@media (min-width:800px){footer .wrap{grid-template-columns:1.2fr 1fr 1fr;align-items:start}}
+footer b{font-family:var(--head);color:#FFFFFF;font-size:18px;letter-spacing:.06em}
+footer a{color:#E8EFE9}
+footer .fine{grid-column:1/-1;border-top:1px solid #3A423E;padding-top:16px;font-size:13.5px;color:#AEB9B3}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--forest);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;box-shadow:0 -8px 24px rgba(0,0,0,.18)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-family:var(--head);font-weight:700;font-size:16px;border-radius:99px;padding:13px 10px;line-height:1}
+.callbar svg{width:18px;height:18px}
+.callbar .c1{background:var(--amber);color:var(--char);flex:1.5}
+.callbar .c2{background:transparent;color:var(--sage);border:1.5px solid #4F7A68}
+@media (min-width:900px){.callbar{display:none}}
+</style>
+
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6.9 6.9l1.5-2.3L21 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-pump" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="10" cy="12" r="4.2"/><path d="M10 7.8v8.4M5.8 12h8.4M17.5 9h1.5M17.5 12h1.5M17.5 15h1.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 7.5 16 4l1.6 6L4.6 13.5z"/><path d="M17 7.5 21 7v4l-3.2.9M9 12.3l1 4.2H4.5M4.5 14v5"/></symbol>
+    <symbol id="i-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="9" r="6"/><circle cx="12" cy="9" r="1.6"/><path d="M8 19.5c1.2-1 2.6-1 4 0s2.8 1 4 0"/></symbol>
+    <symbol id="i-smart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 11 12 3.5 21 11"/><path d="M5.5 9v11h13V9"/><path d="M9.3 15.2a3.8 3.8 0 0 1 5.4 0M7.6 13.3a6.2 6.2 0 0 1 8.8 0"/><circle cx="12" cy="17.2" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-speaker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 9.5h3.5L13 5v14l-5.5-4.5H4z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.5h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V17.5h5.2v-1.7c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-solar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><path d="M5 9h14l2.5 9h-19z"/><path d="M9.7 9 9 18M14.3 9l.7 9M3.8 13.5h16.4"/><path d="M12 2.5v2.5M6.5 4.5 7.8 6M17.5 4.5 16.2 6"/></symbol>
+    <symbol id="i-floor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 20h18"/><path d="M5 16V8a2 2 0 0 1 4 0v8a2 2 0 0 0 4 0V8a2 2 0 0 1 4 0v8a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h14v2.5H3z"/><circle cx="6" cy="21.5" r=".6"/><path d="M8 18l6-6-4-4 6-4"/><path d="M14.5 2.5h6v3.5h-6z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-mega" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h3l9 5V5L6 10z"/><path d="M7 14.5 8.5 20h2.5l-1-4.4M18.5 9.5v5"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M8 7h8M8 11h8M8 15h3M14 15h2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></symbol>
+    <symbol id="i-firm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 21V10l6 3V10l6 3V5h6v16z"/><path d="M7 17h2M12 17h2M17 17h1"/></symbol>
+    <symbol id="i-school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 21V11l9-6 9 6v10z"/><circle cx="12" cy="11.5" r="2.3"/><path d="M10 21v-4h4v4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m4 18 5-5 4 4 3-3 4 4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  </defs>
+</svg>
+
+<div class="proto">Nezávazný návrh webu – <b>není to oficiální stránka firmy ELZOS Jaromír Wojtas</b></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="ELZOS – úvod">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8" fill="#F4A62A"/><path d="M7 16 17 8l10 8" fill="none" stroke="#12372A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 13 13.5 20h4l-1 6 5-7.5h-4z" fill="#12372A"/></svg>
+      <span><b>ELZOS</b><small>Jaromír Wojtas · Ostrava</small></span>
+    </a>
+    <nav aria-label="Hlavní navigace">
+      <a href="#sluzby">Služby</a>
+      <a href="#proc-my">Proč ELZOS</a>
+      <a href="#realizace">Realizace</a>
+      <a href="#faq">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <span class="status"><span class="dot" data-dot></span><span data-status>Po–Pá 6:00–17:00</span></span>
+    <a class="tel-top" href="tel:+420602544750"><svg aria-hidden="true"><use href="#i-phone"/></svg>602 544 750</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" style="padding:0" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="eyebrow"><span>Elektro</span><i></i><span>Teplo</span><i></i><span>Zabezpečení</span><i></i><span>Ostrava-Svinov</span></p>
+        <h1 id="h1">Elektřina, teplo a bezpečí pod jednou střechou. <em>Ostrava od roku 1991.</em></h1>
+      </div>
+      <div>
+        <p class="lead">Od návrhu po realizaci: elektroinstalace, tepelná čerpadla, zabezpečení s napojením na pult, kamery i chytrý dům. Jeden dodavatel pro celý dům, firmu i školu.</p>
+        <div class="cta-row">
+          <a class="btn btn-amber" href="tel:+420602544750"><svg aria-hidden="true"><use href="#i-phone"/></svg>Zavolat 602 544 750</a>
+          <a class="btn btn-ghost" href="#poptavka">Poptat zakázku</a>
+        </div>
+        <div class="facts">
+          <span><svg aria-hidden="true"><use href="#i-cal"/></svg>Na trhu 35 let</span>
+          <span><svg aria-hidden="true"><use href="#i-clock"/></svg>Po–Pá 6–17 h</span>
+          <span><svg aria-hidden="true"><use href="#i-pin"/></svg>Krůčkova, Svinov</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan-box">
+      <div class="plan">
+        <div class="plan-head"><b>Půdorys · rodinný dům</b><span>Vyberte bod v domě</span></div>
+        <div class="stage" id="stage">
+          <svg class="fp" viewBox="0 0 800 530" aria-hidden="true" font-family="Familjen Grotesk, Arial, sans-serif">
+            <defs>
+              <pattern id="cells" width="26" height="20" patternUnits="userSpaceOnUse"><rect width="26" height="20" fill="#E8EFE9"/><path d="M0 0H26M0 0V20" stroke="#8FB09D" stroke-width="1.4"/></pattern>
+              <pattern id="tiles" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0H16M0 0V16" stroke="#D5E1D8" stroke-width="1"/></pattern>
+            </defs>
+            <!-- FVE strip -->
+            <rect id="z-fve" class="zone" x="120" y="18" width="500" height="44" rx="4" fill="url(#cells)" stroke="#12372A" stroke-width="2"/>
+            <text x="132" y="12" font-size="12" fill="#4A5A52" letter-spacing="1.5">STŘECHA · FOTOVOLTAICKÉ PANELY</text>
+            <!-- rooms floor -->
+            <rect x="60" y="90" width="620" height="380" fill="#FFFFFF"/>
+            <rect id="z-podlaha" class="zone" x="480" y="290" width="200" height="180" fill="url(#tiles)"/>
+            <path id="heat" d="M500 330 H585 V350 H500 V370 H585 V390 H500 V410 H585 V430 H500 V450 H585" fill="none" stroke="#E7A748" stroke-width="2.4" stroke-dasharray="5 4" opacity=".75"/>
+            <!-- furniture -->
+            <g fill="none" stroke="#8FA59A" stroke-width="1.6">
+              <rect x="260" y="96" width="134" height="30" rx="2"/>
+              <circle cx="290" cy="111" r="8"/><circle cx="330" cy="105" r="5"/><circle cx="346" cy="105" r="5"/><circle cx="330" cy="118" r="5"/><circle cx="346" cy="118" r="5"/>
+              <circle cx="320" cy="205" r="26"/><circle cx="320" cy="168" r="6"/><circle cx="320" cy="242" r="6"/><circle cx="283" cy="205" r="6"/><circle cx="357" cy="205" r="6"/>
+              <rect x="86" y="220" width="150" height="50" rx="6"/><path d="M86 232h150"/>
+              <rect x="120" y="180" width="80" height="26" rx="3"/>
+              <rect x="520" y="118" width="128" height="140" rx="4"/><rect x="530" y="126" width="48" height="24" rx="4"/><rect x="590" y="126" width="48" height="24" rx="4"/><path d="M520 162h128"/>
+              <rect x="408" y="100" width="22" height="120"/>
+              <rect x="76" y="304" width="110" height="38" rx="2"/><circle cx="130" cy="362" r="12"/>
+              <rect x="602" y="300" width="70" height="150" rx="22"/>
+              <rect x="492" y="298" width="40" height="22" rx="8"/>
+              <rect x="604" y="300" width="0" height="0"/>
+              <rect x="276" y="430" width="50" height="30"/>
+            </g>
+            <!-- walls -->
+            <g stroke="#12372A" stroke-width="9" stroke-linecap="square" fill="none">
+              <path d="M60 90H680V470H400M340 470H60V90"/>
+            </g>
+            <g stroke="#12372A" stroke-width="5" stroke-linecap="square" fill="none">
+              <path d="M60 290H290M370 290H420M460 290H680"/>
+              <path d="M400 90V290"/>
+              <path d="M260 290V400M260 440V470"/>
+              <path d="M480 290V340M480 380V470"/>
+            </g>
+            <!-- windows -->
+            <g fill="#FFFFFF" stroke="#12372A" stroke-width="1.6">
+              <rect x="140" y="85" width="100" height="10"/><rect x="500" y="85" width="110" height="10"/>
+              <rect x="55" y="140" width="10" height="70"/><rect x="55" y="350" width="10" height="70"/>
+              <rect x="675" y="130" width="10" height="90"/><rect x="120" y="465" width="80" height="10"/><rect x="560" y="465" width="60" height="10"/>
+            </g>
+            <!-- doors -->
+            <g fill="none" stroke="#12372A" stroke-width="1.6">
+              <path d="M340 470V412"/><path d="M340 412A58 58 0 0 1 398 470" stroke-dasharray="3 3"/>
+              <path d="M420 290V252"/><path d="M420 252A38 38 0 0 1 458 290" stroke-dasharray="3 3"/>
+              <path d="M480 340H518"/><path d="M518 340A40 40 0 0 1 480 380" stroke-dasharray="3 3"/>
+              <path d="M260 400H222"/><path d="M222 400A40 40 0 0 0 260 440" stroke-dasharray="3 3"/>
+            </g>
+            <!-- devices -->
+            <rect id="z-rozvadec" class="zone" x="452" y="298" width="22" height="30" rx="2" fill="#FFFFFF" stroke="#12372A" stroke-width="2"/>
+            <path d="M463 303 459 313h4l-2 9 7-11h-4l2-8z" fill="#12372A"/>
+            <g id="z-tc-g">
+              <path d="M684 352H704" stroke="#12372A" stroke-width="3"/>
+              <rect id="z-tc" class="zone" x="704" y="318" width="64" height="68" rx="5" fill="#FFFFFF" stroke="#12372A" stroke-width="2"/>
+              <circle cx="736" cy="352" r="22" fill="none" stroke="#12372A" stroke-width="1.6"/><path d="M736 332V372M716 352H756" stroke="#12372A" stroke-width="1.2"/>
+              <text x="736" y="404" font-size="11" fill="#4A5A52" letter-spacing="1" text-anchor="middle">VENKU</text>
+            </g>
+            <path d="M412 482 L360 528 L470 528 Z" fill="rgba(244,166,42,.16)" stroke="#E7A748" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <rect x="404" y="476" width="18" height="10" rx="2" fill="#12372A"/>
+            <path id="z-ezs" class="zone" d="M66 96 L170 128 L104 196 Z" fill="rgba(18,55,42,.05)" stroke="#8FA59A" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <g stroke="#E7A748" stroke-width="1.6" fill="none"><circle cx="210" cy="160" r="9"/><path d="M210 142v-6M210 178v6M192 160h-6M228 160h6M197 147l-4-4M223 173l4 4M223 147l4-4M197 173l-4 4"/></g>
+            <rect x="388" y="168" width="8" height="22" rx="1.5" fill="#12372A"/>
+            <!-- cables -->
+            <path class="cable" data-for="fve" d="M463 312V74H540V62"/>
+            <path class="cable" data-for="tc" d="M474 312H596V352H704"/>
+            <path class="cable" data-for="kamera" d="M463 328V460H413V476"/>
+            <path class="cable" data-for="ezs" d="M452 312H412V108H80"/>
+            <path class="cable" data-for="svetla" d="M452 312H412V160H219"/>
+            <path class="cable" data-for="chytry" d="M452 312H412V179H396"/>
+            <path class="cable" data-for="podlaha" d="M463 328V340H500"/>
+            <!-- room labels -->
+            <g font-size="12.5" fill="#4A5A52" letter-spacing="1.6" font-weight="600">
+              <text x="76" y="282">OBÝVACÍ POKOJ + KUCHYŇ</text>
+              <text x="512" y="282">LOŽNICE</text>
+              <text x="76" y="460">PRACOVNA</text>
+              <text x="276" y="320">CHODBA</text>
+              <text x="494" y="462">KOUPELNA</text>
+              <text x="430" y="522" font-size="11">VCHOD</text>
+            </g>
+          </svg>
+          <!-- hotspots: positions in % of 800x530 -->
+          <button class="hs" data-k="fve" style="left:67.5%;top:7.6%" aria-label="Fotovoltaika na střeše"><svg aria-hidden="true"><use href="#i-solar"/></svg></button>
+          <button class="hs" data-k="tc" style="left:92%;top:66.4%" aria-label="Tepelné čerpadlo"><svg aria-hidden="true"><use href="#i-pump"/></svg></button>
+          <button class="hs" data-k="rozvadec" style="left:57.9%;top:56.6%" aria-label="Rozvaděč a elektroinstalace"><svg aria-hidden="true"><use href="#i-bolt"/></svg></button>
+          <button class="hs" data-k="kamera" style="left:51.6%;top:89.6%" aria-label="Kamera u vchodu"><svg aria-hidden="true"><use href="#i-cam"/></svg></button>
+          <button class="hs" data-k="ezs" style="left:10.5%;top:21%" aria-label="Čidlo zabezpečení EZS"><svg aria-hidden="true"><use href="#i-shield"/></svg></button>
+          <button class="hs" data-k="svetla" style="left:26.25%;top:30.2%" aria-label="Osvětlení"><svg aria-hidden="true"><use href="#i-bulb"/></svg></button>
+          <button class="hs" data-k="chytry" style="left:43%;top:33.8%" aria-label="Chytrý dům"><svg aria-hidden="true"><use href="#i-smart"/></svg></button>
+          <button class="hs" data-k="podlaha" style="left:68%;top:77%" aria-label="Topná podlaha v koupelně"><svg aria-hidden="true"><use href="#i-floor"/></svg></button>
+        </div>
+        <p class="plan-hint"><svg width="16" height="16" aria-hidden="true" style="color:#2A5E4A"><use href="#i-bolt"/></svg>Všechno vede do jednoho rozvaděče – a k jednomu elektrikáři.</p>
+      </div>
+
+      <aside class="card" id="card" aria-live="polite">
+        <div class="k"><span data-c="idx">01 / 08</span><span data-c="where">Střecha</span></div>
+        <div class="ico"><svg aria-hidden="true"><use data-c="ico" href="#i-solar"/></svg></div>
+        <h3 data-c="t">Fotovoltaika</h3>
+        <p data-c="p"></p>
+        <div class="tags" data-c="tags"></div>
+        <div class="mini" data-c="mini" aria-label="Všechny body v domě"></div>
+        <div class="row">
+          <button class="nav-ar" type="button" data-step="-1" aria-label="Předchozí bod"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
+          <a class="btn btn-amber" href="#poptavka" data-c="cta">Poptat tuto službu</a>
+          <button class="nav-ar" type="button" data-step="1" aria-label="Další bod"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PRO KOHO + SLUŽBY -->
+<section class="who" id="pro-koho" aria-labelledby="h-who">
+  <div class="wrap">
+    <p class="sec-k">Pro koho pracujeme</p>
+    <h2 id="h-who">Vyberte, kdo jste. Ukážeme, co pro Vás uděláme.</h2>
+    <div class="tabs" role="tablist" aria-label="Typ zákazníka">
+      <button class="tab" role="tab" id="t-dom" aria-controls="p-dom" aria-selected="true"><svg aria-hidden="true"><use href="#i-home"/></svg>Domácnost</button>
+      <button class="tab" role="tab" id="t-firma" aria-controls="p-firma" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-firm"/></svg>Firma</button>
+      <button class="tab" role="tab" id="t-obec" aria-controls="p-obec" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-school"/></svg>Škola a obec</button>
+    </div>
+
+    <div class="tabpanel" role="tabpanel" id="p-dom" aria-labelledby="t-dom">
+      <div class="tp-intro">
+        <h3>Teplý, úsporný a hlídaný domov</h3>
+        <p>Novostavba i rekonstrukce: navrhneme a zapojíme vytápění, elektřinu i zabezpečení tak, aby spolu fungovaly. Ovládání pak máte v mobilu.</p>
+        <a class="btn btn-amber" href="#poptavka" data-who="Domácnost">Poptat pro domácnost</a>
+      </div>
+      <ul class="tp-list">
+        <li class="key"><span class="i"><svg aria-hidden="true"><use href="#i-pump"/></svg></span><div><b>Tepelné čerpadlo</b><span>Bezobslužný zdroj tepla s minimálními provozními náklady – montáž i servis.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-solar"/></svg></span><div><b>Fotovoltaika</b><span>Vlastní elektřina ze střechy, zapojená do domovní instalace.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-floor"/></svg></span><div><b>Topné podlahy</b><span>Teplá podlaha v koupelně i obytných místnostech.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-smart"/></svg></span><div><b>Chytrý dům</b><span>Stínění, světla, topení i vrata jedním dotykem z mobilu.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><div><b>Zabezpečení EZS</b><span>Domy i byty, s připojením na pult centralizované ochrany.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span><div><b>Elektroinstalace</b><span>Nové rozvody, rozvaděč, opravy a servis.</span></div></li>
+      </ul>
+    </div>
+
+    <div class="tabpanel" role="tabpanel" id="p-firma" aria-labelledby="t-firma" hidden>
+      <div class="tp-intro">
+        <h3>Provoz, který je vidět a je chráněný</h3>
+        <p>Elektropráce od návrhu po realizaci, zabezpečení objektu, kamerový dohled i požární signalizace. A práce ve výškách, kam se žebřík nedostane.</p>
+        <a class="btn btn-amber" href="#poptavka" data-who="Firma">Poptat pro firmu</a>
+      </div>
+      <ul class="tp-list">
+        <li class="key"><span class="i"><svg aria-hidden="true"><use href="#i-lift"/></svg></span><div><b>Práce z plošin a pronájem</b><span>Montážní plošiny venku do 27 m, uvnitř do 12 m. Plošiny také pronajímáme.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span><div><b>Elektromontážní práce</b><span>Kompletní elektropráce od návrhu až k realizaci, servis a opravy.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><div><b>EZS s napojením na PCO</b><span>Elektronické zabezpečení objektu s připojením na pult centralizované ochrany.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-cam"/></svg></span><div><b>Kamerové systémy CCTV</b><span>Kompletní řešení kamerového systému pro areál i provozovnu.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-fire"/></svg></span><div><b>EPS</b><span>Elektrická požární signalizace – instalace a servis.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-bulb"/></svg></span><div><b>Osvětlení</b><span>Montáž veškeré světelné techniky, záruční i pozáruční servis.</span></div></li>
+      </ul>
+    </div>
+
+    <div class="tabpanel" role="tabpanel" id="p-obec" aria-labelledby="t-obec" hidden>
+      <div class="tp-intro">
+        <h3>Čas, zvonění a rozhlas, které spolu ladí</h3>
+        <p>Jednotný čas sjednotíme se školním zvoněním, evakuačním rozhlasem či jinou signalizací. Pro obce osvětlení a prvky chytrého města.</p>
+        <a class="btn btn-amber" href="#poptavka" data-who="Škola a obec">Poptat pro školu či obec</a>
+      </div>
+      <ul class="tp-list">
+        <li class="key"><span class="i"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><div><b>Jednotný čas a měření času</b><span>Všechny hodiny v budově ukazují stejný čas.</span></div></li>
+        <li class="key"><span class="i"><svg aria-hidden="true"><use href="#i-bell"/></svg></span><div><b>Školní zvonění</b><span>Napojené na jednotný čas, s vlastním rozvrhem.</span></div></li>
+        <li class="key"><span class="i"><svg aria-hidden="true"><use href="#i-mega"/></svg></span><div><b>Evakuační rozhlas</b><span>Sjednocený se zvoněním a ostatní signalizací.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-speaker"/></svg></span><div><b>Ozvučovací technika</b><span>Technika i instalace na míru pro sály a společné prostory.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-bulb"/></svg></span><div><b>Osvětlení budov</b><span>Například LED osvětlení vstupního portálu kostela ve Svinově.</span></div></li>
+        <li><span class="i"><svg aria-hidden="true"><use href="#i-fire"/></svg></span><div><b>EPS a zabezpečení</b><span>Požární signalizace a EZS pro veřejné budovy.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="h-svc">
+  <div class="wrap">
+    <p class="sec-k">Všechny služby</p>
+    <h2 id="h-svc">Dvanáct oborů. Jedna firma, jedno telefonní číslo.</h2>
+    <p class="sec-lead">Nemusíte shánět elektrikáře, topenáře a „toho od alarmu“ zvlášť. Ceny se odvíjí od rozsahu – spočítáme je pro Vaši zakázku.</p>
+    <div class="svc-grid">
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span><h3>Elektropráce a elektroinstalace</h3><p>Veškeré elektropráce od návrhu až k realizaci – instalace, servis a opravy.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-pump"/></svg></span><h3>Tepelná čerpadla</h3><p>Navrhneme nejvhodnější technologii pro Váš dům; montáž, instalace a servis po dobu životnosti zařízení.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><h3>Zabezpečení EZS</h3><p>Zabezpečení objektů a bytů s připojením na pult centralizované ochrany (PCO).</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-cam"/></svg></span><h3>Kamerové systémy CCTV</h3><p>Kompletní řešení kamerového systému – od návrhu rozmístění kamer po zprovoznění.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-fire"/></svg></span><h3>EPS – požární signalizace</h3><p>Elektrická požární signalizace, která včas upozorní na kouř a požár.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-smart"/></svg></span><h3>Chytrý dům</h3><p>Stínění, osvětlení, vytápění, zabezpečení i zahradu ovládáte mobilem, tabletem nebo počítačem.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-speaker"/></svg></span><h3>Ozvučovací technika</h3><p>Multimediální koncept na míru – technika i instalace pro mluvené slovo, hudbu i video.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-bulb"/></svg></span><h3>Osvětlovací technika</h3><p>Montáže veškeré světelné techniky včetně záručního i pozáručního servisu.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-solar"/></svg></span><h3>Fotovoltaické elektrárny</h3><p>Panely na střechu zapojené do elektroinstalace domu nebo provozovny.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-floor"/></svg></span><h3>Topné podlahy</h3><p>Rovnoměrné teplo od podlahy – v koupelně i v obytných místnostech.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><h3>Jednotný čas a měření</h3><p>Jednotný čas sjednocený s evakuačním rozhlasem, školním zvoněním či jinou signalizací.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+      <article class="svc"><span class="si"><svg aria-hidden="true"><use href="#i-lift"/></svg></span><h3>Práce z plošin a pronájem</h3><p>Práce ve výškách z montážních plošin – venku do 27 m, uvnitř do 12 m. Plošiny i pronajímáme.</p><div class="price"><b>cena na dotaz</b><span class="demo">ukázkový text</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROČ MY -->
+<section class="trust" id="proc-my" aria-labelledby="h-trust">
+  <div class="wrap">
+    <p class="sec-k">Proč ELZOS</p>
+    <h2 id="h-trust">Zkušenost, kterou nejde dohnat rychlokurzem.</h2>
+    <div class="trust-grid">
+      <div class="big">
+        <div class="yr">1991</div>
+        <h3>35 let na trhu, sídlo v Ostravě-Svinově</h3>
+        <p>ELZOS Jaromír Wojtas je česká firma, která působí na trhu od roku 1991. Za tu dobu prošla elektrotechnika domem od jističe po chytrý telefon – a my s ní.</p>
+        <svg class="rings" viewBox="0 0 240 240" aria-hidden="true"><g fill="none" stroke="#F4A62A" stroke-width="2"><circle cx="120" cy="120" r="40"/><circle cx="120" cy="120" r="70"/><circle cx="120" cy="120" r="100"/></g></svg>
+      </div>
+      <div class="tcard"><div class="n">12</div><h3>oborů pod jednou střechou</h3><p>Elektro, teplo, zabezpečení, zvuk, světlo i práce ve výškách. Jednotlivé systémy na sebe navazují, protože je dělá jedna firma.</p></div>
+      <div class="tcard"><div class="n">27 m</div><h3>výška montážních plošin venku</h3><p>Uvnitř do 12 m. Fasády, haly, osvětlení i kamery ve výšce. Plošiny také pronajímáme.</p></div>
+      <div class="tcard"><div class="n">PCO</div><h3>zabezpečení s napojením na pult</h3><p>EZS s připojením na pult centralizované ochrany – alarm nezůstane jen u Vás doma.</p></div>
+      <div class="tcard"><div class="n">6–17</div><h3>otevřeno Po–Pá</h3><p>Od šesti ráno do pěti odpoledne. Volejte přímo na 602 544 750.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REALIZACE -->
+<section id="realizace" aria-labelledby="h-real">
+  <div class="wrap">
+    <p class="sec-k">Realizace</p>
+    <h2 id="h-real">Práce, které můžete vidět na vlastní oči.</h2>
+    <div class="real-grid">
+      <figure class="ph r1" style="margin:0">
+        <div class="frame"><div><svg aria-hidden="true"><use href="#i-photo"/></svg>Sem přijde Vaše fotka</div></div>
+        <figcaption class="cap"><b>LED osvětlení vstupního portálu kostela Krista Krále, Ostrava-Svinov</b><span>Osvětlovací technika · instalace ze starého webu firmy</span></figcaption>
+      </figure>
+      <figure class="ph" style="margin:0">
+        <div class="frame"><div><svg aria-hidden="true"><use href="#i-photo"/></svg>Sem přijde Vaše fotka</div></div>
+        <figcaption class="cap"><b>Tepelné čerpadlo v rodinném domě</b><span>Tepelná čerpadla · <span class="demo">ukázkový text</span></span></figcaption>
+      </figure>
+      <figure class="ph" style="margin:0">
+        <div class="frame"><div><svg aria-hidden="true"><use href="#i-photo"/></svg>Sem přijde Vaše fotka</div></div>
+        <figcaption class="cap"><b>Kamerový systém a EZS pro provozovnu</b><span>Zabezpečení · <span class="demo">ukázkový text</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- JAK TO PROBÍHÁ -->
+<section class="steps" aria-labelledby="h-steps">
+  <div class="wrap">
+    <p class="sec-k">Jak probíhá zakázka</p>
+    <h2 id="h-steps">Od prvního telefonátu po zapnutý systém.</h2>
+    <ol>
+      <li><span class="num">1</span><h3>Zavoláte nebo napíšete</h3><p>Po–Pá 6–17 na 602 544 750, nebo poptávkou níže. Stačí popsat, co potřebujete a kde.</p></li>
+      <li><span class="num">2</span><h3>Navrhneme řešení</h3><p>Podle objektu vybereme technologii a připravíme nabídku s cenou pro Vaši zakázku.</p></li>
+      <li><span class="num">3</span><h3>Realizujeme a servisujeme</h3><p>Montáž, zapojení a předání. Na servis se pak obracíte na stejnou firmu, která systém postavila.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- OBLAST -->
+<section aria-labelledby="h-area">
+  <div class="wrap">
+    <p class="sec-k">Kde pracujeme</p>
+    <h2 id="h-area">Ze Svinova po celé Ostravě a okolí.</h2>
+    <div class="area-grid">
+      <div class="area-map">
+        <svg viewBox="0 0 520 340" role="img" aria-label="Schéma: sídlo ve Svinově a okolní obce" font-family="Familjen Grotesk, Arial, sans-serif">
+          <rect width="520" height="340" fill="#E8EFE9"/>
+          <path d="M0 250 C120 230 170 280 260 250 S420 200 520 230" fill="none" stroke="#9FC2D0" stroke-width="10" opacity=".7"/>
+          <g fill="none" stroke="#12372A" stroke-dasharray="4 6" opacity=".45"><circle cx="230" cy="170" r="70"/><circle cx="230" cy="170" r="135"/></g>
+          <g font-size="16" fill="#1B1F1D" font-weight="600">
+            <circle cx="230" cy="170" r="9" fill="#F4A62A" stroke="#12372A" stroke-width="3"/>
+            <text x="244" y="164" font-size="18" fill="#12372A">Ostrava-Svinov</text>
+            <circle cx="330" cy="200" r="5" fill="#12372A"/><text x="340" y="205">Ostrava-centrum</text>
+            <circle cx="200" cy="120" r="5" fill="#12372A"/><text x="140" y="140">Poruba</text>
+            <circle cx="150" cy="200" r="5" fill="#12372A"/><text x="60" y="226">Klimkovice</text>
+            <circle cx="270" cy="70" r="5" fill="#12372A"/><text x="282" y="74">Hlučín</text>
+            <circle cx="115" cy="90" r="5" fill="#12372A"/><text x="30" y="76">Velká Polom</text>
+            <circle cx="190" cy="270" r="5" fill="#12372A"/><text x="118" y="294">Studénka</text>
+            <circle cx="400" cy="120" r="5" fill="#12372A"/><text x="360" y="104">Petřkovice</text>
+            <circle cx="370" cy="290" r="5" fill="#12372A"/><text x="382" y="295">Vítkovice</text>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <p class="sec-lead" style="margin-top:0">Sídlíme v Ostravě-Svinově, Krůčkova 725/8. Pracujeme pro domácnosti, firmy, školy i obce.</p>
+        <ul class="chips">
+          <li class="home">Ostrava-Svinov</li><li>Poruba</li><li>Třebovice</li><li>Martinov</li><li>Ostrava-centrum</li><li>Vítkovice</li><li>Klimkovice</li><li>Velká Polom</li><li>Hlučín</li><li>Studénka</li>
+        </ul>
+        <p style="margin-top:12px;font-size:15px;color:#4A5A52">Seznam obcí mimo sídlo <span class="demo">ukázkový text</span> – firma oblast působnosti nezveřejnila.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <p class="sec-k">Časté otázky</p>
+    <h2 id="h-faq">Na tohle se ptá skoro každý.</h2>
+    <div class="faq-list">
+      <details open><summary>Vyplatí se mi tepelné čerpadlo?</summary><p>Záleží na domě, tepelných ztrátách a stávajícím vytápění. Tepelné čerpadlo je bezobslužný zdroj tepla s nízkými provozními náklady a umí i chladit. Návratnost i vhodný typ Vám spočítáme pro konkrétní dům – zavolejte, probereme to.</p></details>
+      <details><summary>Dá se alarm napojit na pult centralizované ochrany?</summary><p>Ano. Elektronické zabezpečení (EZS) instalujeme s připojením na PCO, takže poplach neřeší jen siréna, ale i pult. Podmínky konkrétního pultu a pojišťovny probereme při návrhu.</p></details>
+      <details><summary>Půjčujete plošiny i bez obsluhy?</summary><p>Montážní plošiny (venku do 27 m, uvnitř do 12 m) používáme na vlastní práce a nabízíme je také k pronájmu. Podmínky pronájmu Vám sdělíme po telefonu.</p></details>
+      <details><summary>Zvládnete celou elektroinstalaci v novostavbě?</summary><p>Ano, elektropráce děláme od návrhu až po realizaci. Výhodou je, že na stejnou instalaci rovnou navážeme tepelné čerpadlo, fotovoltaiku, zabezpečení nebo chytrý dům.</p></details>
+      <details><summary>Kolik to bude stát?</summary><p>Ceny nezveřejňujeme, protože každá zakázka má jiný rozsah. Pošlete poptávku nebo zavolejte – cenu připravíme pro Vaši konkrétní zakázku.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- POPTÁVKA -->
+<section class="ask" id="poptavka" aria-labelledby="h-ask">
+  <div class="wrap">
+    <p class="sec-k">Poptávka</p>
+    <h2 id="h-ask">Popište, co potřebujete. Ozveme se Vám.</h2>
+    <div class="ask-grid">
+      <div class="ask-side">
+        <a class="big-tel" href="tel:+420602544750"><small>Rychlejší je zavolat · Po–Pá 6–17</small><b>602 544 750</b></a>
+        <p>Nebo napište na <a href="mailto:info@elzos.cz" style="color:#F4A62A">info@elzos.cz</a>. Pomůže typ objektu, místo a co Vás trápí – stačí pár vět.</p>
+      </div>
+      <form id="f" novalidate>
+        <fieldset class="full">
+          <legend>Poptávám pro</legend>
+          <label class="seg"><input type="radio" name="who" value="Domácnost" checked><span>Domácnost</span></label>
+          <label class="seg"><input type="radio" name="who" value="Firma"><span>Firma</span></label>
+          <label class="seg"><input type="radio" name="who" value="Škola a obec"><span>Škola a obec</span></label>
+        </fieldset>
+        <label>Jméno<input name="jmeno" autocomplete="name" required></label>
+        <label>Telefon<input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <label class="full">E-mail<input name="email" type="email" autocomplete="email"></label>
+        <label class="full">Služba
+          <select name="sluzba" id="sluzba">
+            <option>Elektropráce a elektroinstalace</option><option>Tepelné čerpadlo</option><option>Zabezpečení EZS</option><option>Kamerový systém</option><option>EPS</option><option>Chytrý dům</option><option>Ozvučení</option><option>Osvětlení</option><option>Fotovoltaika</option><option>Topné podlahy</option><option>Jednotný čas, zvonění, rozhlas</option><option>Práce z plošiny / pronájem plošiny</option><option>Jiné / více služeb</option>
+          </select>
+        </label>
+        <label class="full">Co potřebujete<textarea name="zprava" placeholder="Např. rodinný dům v Porubě, chci nahradit plynový kotel tepelným čerpadlem."></textarea></label>
+        <div class="full"><button class="btn btn-amber" type="submit" style="width:100%">Odeslat poptávku<svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+        <p class="form-note full">Odesláním souhlasíte se zpracováním údajů pro vyřízení poptávky.</p>
+        <div class="form-ok full" id="ok" role="status">Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Ve finálním webu se poptávka odešle přímo na e-mail firmy.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" aria-labelledby="h-con">
+  <div class="wrap">
+    <p class="sec-k">Kontakt</p>
+    <h2 id="h-con">Jaromír Wojtas – ELZOS</h2>
+    <div class="contact-grid">
+      <div class="cbox">
+        <h3>Telefon a e-mail</h3>
+        <div class="v"><a href="tel:+420602544750">602 544 750</a></div>
+        <div class="v" style="font-size:19px"><a href="mailto:info@elzos.cz">info@elzos.cz</a></div>
+        <span class="live"><span class="dot" data-dot></span><span data-status2>Po–Pá 6:00–17:00</span></span>
+      </div>
+      <div class="cbox">
+        <h3>Adresa</h3>
+        <div class="v">Krůčkova 725/8<br>Ostrava-Svinov</div>
+        <p>IČO 43622194</p>
+        <div class="links">
+          <a href="https://mapy.cz/zakladni?q=Kr%C5%AF%C4%8Dkova%20725%2F8%20Ostrava-Svinov" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+        </div>
+      </div>
+      <div class="cbox">
+        <h3>Otevírací doba</h3>
+        <dl class="hours"><dt>Pondělí–pátek</dt><dd>6:00–17:00</dd><dt>Sobota–neděle</dt><dd>zavřeno</dd></dl>
+        <div class="links">
+          <a href="https://www.facebook.com/www.elzos.cz/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.firmy.cz/detail/663572-jaromir-wojtas-elzos-ostrava-svinov.html" target="_blank" rel="noopener">Firmy.cz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>ELZOS</b><p style="margin-top:8px">Jaromír Wojtas · elektropráce, tepelná čerpadla a zabezpečení. Ostrava od roku 1991.</p></div>
+    <div><p>Krůčkova 725/8, Ostrava-Svinov<br>IČO 43622194</p></div>
+    <div><p><a href="tel:+420602544750">602 544 750</a><br><a href="mailto:info@elzos.cz">info@elzos.cz</a></p></div>
+    <p class="fine">© 2026 ELZOS Jaromír Wojtas · Nezávazný návrh webu, nejde o oficiální stránku firmy. Ilustrace a ikony vlastní (SVG).</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Rychlý kontakt">
+  <a class="c1" href="tel:+420602544750"><svg aria-hidden="true"><use href="#i-phone"/></svg>Zavolat 602 544 750</a>
+  <a class="c2" href="#poptavka">Poptat</a>
+</nav>
+
+<script>
+(function(){
+  /* ---- hotspots ---- */
+  var D = {
+    fve:{t:"Fotovoltaika",w:"Střecha",i:"i-solar",p:"Fotovoltaická elektrárna na střeše – navrhneme ji a zapojíme do elektroinstalace domu, aby energie šla tam, kde ji spotřebujete.",tags:["Domácnost","Firma"],s:"Fotovoltaika"},
+    tc:{t:"Tepelné čerpadlo",w:"Venkovní zeď",i:"i-pump",p:"Navrhneme a zrealizujeme nejvhodnější technologii pro Váš dům. Bezobslužný zdroj tepla s minimálními provozními náklady – montáž, instalace a servis po dobu životnosti zařízení.",tags:["Domácnost","Firma"],s:"Tepelné čerpadlo"},
+    rozvadec:{t:"Rozvaděč a elektroinstalace",w:"Chodba",i:"i-bolt",p:"Srdce domu. Veškeré elektropráce od návrhu až k realizaci – nové rozvody, rozvaděč, instalace, servis i opravy.",tags:["Domácnost","Firma","Škola a obec"],s:"Elektropráce a elektroinstalace"},
+    kamera:{t:"Kamera u vchodu",w:"Vchod",i:"i-cam",p:"Kompletní řešení kamerového systému CCTV: kamera u dveří, na příjezdu i na zahradě – od návrhu rozmístění po zprovoznění.",tags:["Domácnost","Firma"],s:"Kamerový systém"},
+    ezs:{t:"Zabezpečení EZS",w:"Obývací pokoj",i:"i-shield",p:"Čidla pohybu a otevření oken napojená na ústřednu – s připojením na pult centralizované ochrany. Pro domy, byty i firmy.",tags:["Domácnost","Firma","Škola a obec"],s:"Zabezpečení EZS"},
+    svetla:{t:"Osvětlení",w:"Obývací pokoj",i:"i-bulb",p:"Montáže veškeré světelné techniky – od svítidel v obýváku po osvětlení fasády. Samozřejmostí je záruční i pozáruční servis.",tags:["Domácnost","Firma","Škola a obec"],s:"Osvětlení"},
+    chytry:{t:"Chytrý dům",w:"Panel na zdi",i:"i-smart",p:"Stínění, osvětlení, multimédia, vytápění, zabezpečení i zahradu ovládáte jedním dotykem z mobilu, tabletu nebo počítače.",tags:["Domácnost","Škola a obec"],s:"Chytrý dům"},
+    podlaha:{t:"Topná podlaha",w:"Koupelna",i:"i-floor",p:"Teplá dlažba v koupelně i v obytných místnostech. Topnou podlahu zapojíme do stejné instalace jako zbytek domu.",tags:["Domácnost"],s:"Topné podlahy"}
+  };
+  var order = ["fve","tc","rozvadec","kamera","ezs","svetla","chytry","podlaha"];
+  var card = document.getElementById("card");
+  var q = function(s){return card.querySelector('[data-c="'+s+'"]')};
+  var cur = "tc";
+  function show(k){
+    cur = k; var d = D[k], n = order.indexOf(k)+1;
+    q("idx").textContent = (n<10?"0":"")+n+" / 08";
+    q("where").textContent = d.w;
+    q("ico").setAttribute("href","#"+d.i);
+    q("t").textContent = d.t;
+    q("p").textContent = d.p;
+    q("tags").innerHTML = d.tags.map(function(t){return "<span>"+t+"</span>"}).join("");
+    q("cta").dataset.svc = d.s;
+    document.querySelectorAll(".hs").forEach(function(b){b.setAttribute("aria-pressed", b.dataset.k===k ? "true":"false")});
+    card.querySelectorAll(".mini button").forEach(function(b){b.setAttribute("aria-current", b.dataset.k===k ? "true":"false")});
+    document.querySelectorAll(".cable").forEach(function(c){c.classList.toggle("on", c.dataset.for===k)});
+    document.querySelectorAll(".zone").forEach(function(z){z.classList.toggle("on", z.id==="z-"+k)});
+  }
+  document.querySelectorAll(".hs").forEach(function(b){
+    b.addEventListener("click", function(){
+      show(b.dataset.k);
+      if (window.matchMedia("(max-width:899px)").matches){
+        var r = card.getBoundingClientRect();
+        if (r.top > window.innerHeight - 120) card.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth", block:"nearest"});
+      }
+    });
+    b.addEventListener("mouseenter", function(){ if (matchMedia("(hover:hover)").matches) show(b.dataset.k); });
+    b.addEventListener("focus", function(){ show(b.dataset.k); });
+  });
+  card.querySelectorAll("[data-step]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var i = (order.indexOf(cur) + parseInt(b.dataset.step,10) + order.length) % order.length;
+      show(order[i]);
+    });
+  });
+  var sel = document.getElementById("sluzba");
+  function preselect(v){ for (var i=0;i<sel.options.length;i++){ if (sel.options[i].text===v){ sel.selectedIndex=i; break; } } }
+  q("cta").addEventListener("click", function(){ preselect(this.dataset.svc); });
+  var mini = q("mini");
+  order.forEach(function(k){ var b=document.createElement("button"); b.type="button"; b.textContent=D[k].t; b.dataset.k=k; b.addEventListener("click",function(){show(k)}); mini.appendChild(b); });
+  show("tc");
+
+  /* ---- tabs ---- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function sel_tab(t, focus){
+    tabs.forEach(function(x){
+      var on = x===t; x.setAttribute("aria-selected", on); x.tabIndex = on?0:-1;
+      document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
+    });
+    if (focus) t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener("click", function(){ sel_tab(t); });
+    t.addEventListener("keydown", function(e){
+      if (e.key==="ArrowRight"||e.key==="ArrowLeft"){ e.preventDefault(); var n=tabs[(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length]; sel_tab(n,true); }
+    });
+  });
+  document.querySelectorAll("[data-who]").forEach(function(a){
+    a.addEventListener("click", function(){
+      var r = document.querySelector('input[name="who"][value="'+a.dataset.who+'"]'); if (r) r.checked = true;
+    });
+  });
+
+  /* ---- open status (ověřená doba Po–Pá 6–17) ---- */
+  function status(){
+    var p = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+    var o = {}; p.forEach(function(x){o[x.type]=x.value});
+    var wd = ["Mon","Tue","Wed","Thu","Fri"].indexOf(o.weekday) > -1;
+    var m = parseInt(o.hour,10)*60 + parseInt(o.minute,10);
+    var open = wd && m >= 360 && m < 1020;
+    var txt = open ? "Teď otevřeno · do 17:00" : "Teď zavřeno · Po–Pá 6:00–17:00";
+    document.querySelectorAll("[data-dot]").forEach(function(d){d.classList.toggle("on", open)});
+    var a = document.querySelector("[data-status]"), b = document.querySelector("[data-status2]");
+    if (a) a.textContent = txt; if (b) b.textContent = txt;
+  }
+  try { status(); setInterval(status, 60000); } catch(e){}
+
+  /* ---- form (jen ukázka) ---- */
+  document.getElementById("f").addEventListener("submit", function(e){
+    e.preventDefault();
+    var ok = document.getElementById("ok"); ok.classList.add("show"); ok.focus && ok.setAttribute("tabindex","-1"); ok.focus();
+  });
+})();
+</script>
+</body>
+</html>

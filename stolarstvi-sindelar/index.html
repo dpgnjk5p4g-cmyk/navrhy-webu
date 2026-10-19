@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Stolařství Šindelář</title>
+<meta name="description" content="Stolařství Šindelář, Třinec: kuchyně, ordinace, lékárny a kanceláře na zakázku – interiéry na klíč včetně instalatérských, zednických a elektrických prací.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Stolařství Šindelář",
+  "description": "Zakázková výroba kuchyňských linek, kanceláří, ordinací, lékáren, obývacích pokojů, ložnic a školicích místností. Výroba na klíč včetně instalatérských, zednických a elektrických prací.",
+  "telephone": "+420602506996",
+  "email": "sindelar.stolarstvi@seznam.cz",
+  "identifier": "IČO 65174003",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Míru 284",
+    "addressLocality": "Třinec-Kanada",
+    "postalCode": "739 61",
+    "addressCountry": "CZ"
+  },
+  "areaServed": "Třinec",
+  "sameAs": ["https://www.firmy.cz/detail/639316-stolarstvi-sindelar-trinec-kanada.html"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --javor:#F3E9D8;
+  --javor-2:#EADBC0;
+  --javor-3:#E4C79A;
+  --bridlice:#1F2B3A;
+  --bridlice-2:#2B394B;
+  --bridlice-soft:#4A5566;
+  --mosaz:#A9781F;
+  --mosaz-text:#7E5912;
+  --mosaz-svetla:#D9B26A;
+  --bila:#FFFFFF;
+  --linka:#D6C3A1;
+  --f-nadpis:"Young Serif", "Georgia", "Times New Roman", serif;
+  --f-text:"Work Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --okraj:clamp(16px,4.5vw,56px);
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--javor);color:var(--bridlice);font-family:var(--f-text);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--bridlice)}
+h1,h2,h3{font-family:var(--f-nadpis);font-weight:400;line-height:1.12;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(30px,4.6vw,48px)}
+h3{font-size:21px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--okraj)}
+.demo{display:inline-block;vertical-align:middle;font-family:var(--f-text);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border:1px dashed var(--mosaz-text);color:var(--mosaz-text);background:var(--bila);border-radius:2px;white-space:nowrap;margin-left:4px}
+.dark .demo{background:transparent;color:var(--mosaz-svetla);border-color:var(--mosaz-svetla)}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mosaz-text);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:2px;background:var(--mosaz)}
+.dark .kicker{color:var(--mosaz-svetla)}
+:focus-visible{outline:3px solid var(--mosaz);outline-offset:3px}
+
+/* Pruh návrhu */
+.navrh-pruh{background:var(--bridlice);color:var(--bila);font-size:13.5px;line-height:1.4;padding:9px var(--okraj);text-align:center}
+.navrh-pruh strong{color:var(--mosaz-svetla);font-weight:600}
+
+/* Hlavička */
+.hlavicka{position:sticky;top:0;z-index:40;background:var(--javor);border-bottom:1px solid var(--linka)}
+.hlavicka .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--bridlice)}
+.znacka svg{width:34px;height:34px;flex:none}
+.znacka b{font-family:var(--f-nadpis);font-weight:400;font-size:19px;line-height:1.05;display:block}
+.znacka small{display:block;font-size:12px;color:var(--bridlice-soft);letter-spacing:.06em;text-transform:uppercase}
+.menu{display:none;gap:26px;font-size:15px;font-weight:500}
+.menu a{text-decoration:none;color:var(--bridlice);padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover{border-color:var(--mosaz)}
+.tel-hlava{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;color:var(--bridlice);border:1.5px solid var(--bridlice);padding:8px 12px;border-radius:3px;white-space:nowrap}
+.tel-hlava svg{width:16px;height:16px}
+.tel-hlava:hover{background:var(--bridlice);color:var(--bila)}
+@media (min-width:1040px){.menu{display:flex}}
+@media (max-width:380px){.znacka small{display:none}.tel-hlava{padding:8px 10px;font-size:14px}}
+
+/* Hero */
+.hero{padding:28px 0 0;position:relative}
+.hero-grid{display:grid;gap:28px}
+.hero h1{font-size:clamp(33px,6.4vw,64px);margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--mosaz-text)}
+.hero-lead{font-size:clamp(17px,1.6vw,19.5px);max-width:36em;margin-bottom:22px}
+.hero-lead strong{font-weight:600}
+.akce{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-text);font-weight:600;font-size:17px;text-decoration:none;padding:15px 24px;border-radius:3px;border:0;cursor:pointer;line-height:1.2}
+.btn-hlavni{background:var(--mosaz-text);color:var(--bila);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18)}
+.btn-hlavni:hover{background:var(--bridlice)}
+.btn svg{width:18px;height:18px}
+.tel-text{display:flex;flex-direction:column;text-decoration:none;color:var(--bridlice);line-height:1.2}
+.tel-text small{font-size:13px;color:var(--bridlice-soft)}
+.tel-text b{font-size:22px;font-weight:600;letter-spacing:.01em}
+.hero-fakta{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14.5px;color:var(--bridlice-soft)}
+.hero-fakta li{display:flex;align-items:center;gap:7px}
+.hero-fakta li::before{content:"";width:7px;height:7px;background:var(--mosaz);transform:rotate(45deg)}
+
+/* Přepínač interiérů */
+.interier{background:var(--bila);border:1px solid var(--linka);border-radius:4px;padding:14px;position:relative}
+.prepinac{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:var(--javor);padding:4px;border-radius:3px;margin-bottom:6px}
+.prepinac button{font-family:var(--f-text);font-size:14.5px;font-weight:600;color:var(--bridlice);background:transparent;border:0;padding:10px 4px;border-radius:2px;cursor:pointer;min-height:44px}
+.prepinac button[aria-selected="true"]{background:var(--bridlice);color:var(--bila)}
+.prepinac button:hover:not([aria-selected="true"]){background:var(--javor-2)}
+.axo{width:100%;height:auto;aspect-ratio:419/416}
+.axo .scene[hidden]{display:none}
+@media (max-width:420px){.prepinac button{font-size:13.5px;padding:10px 2px}}
+[id]{scroll-margin-top:76px}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--bridlice-soft);margin-top:4px;padding:0 4px}
+.legenda span{display:inline-flex;align-items:center;gap:6px}
+.legenda i{font-style:normal;width:20px;height:20px;border-radius:50%;background:var(--bridlice);color:var(--bila);font-size:11px;font-weight:700;display:inline-grid;place-items:center;box-shadow:0 0 0 1.5px var(--mosaz)}
+@media (min-width:960px){
+  .hero{padding:56px 0 0}
+  .hero-grid{grid-template-columns:1.02fr 1fr;align-items:center;gap:56px}
+}
+
+/* Popis interiéru */
+.popis-interieru{background:var(--bridlice);color:var(--bila);margin-top:48px;padding:44px 0 48px}
+.popis-grid{display:grid;gap:24px}
+.popis-interieru h2{font-size:clamp(28px,3.6vw,40px)}
+.popis-interieru h2 span{color:var(--mosaz-svetla)}
+.popis-interieru p{color:#E6DCCB}
+.prace{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.prace li{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:16px 0;border-top:1px solid #3A4A5E}
+.prace li:last-child{border-bottom:1px solid #3A4A5E}
+.prace i{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--bridlice-2);box-shadow:0 0 0 2px var(--mosaz);display:grid;place-items:center;font-weight:700;font-size:13px;color:var(--bila);margin-top:2px}
+.prace b{display:block;font-weight:600;color:var(--bila);font-size:16px}
+.prace span{color:#D5CCBD;font-size:15.5px}
+.citace{border-left:3px solid var(--mosaz);padding:4px 0 4px 16px;font-size:15.5px;color:#E6DCCB;margin-top:20px}
+.citace a{color:var(--mosaz-svetla)}
+@media (min-width:900px){.popis-grid{grid-template-columns:.9fr 1.1fr;gap:64px}}
+
+/* Sekce */
+.sekce{padding:72px 0}
+.sekce-hlava{display:grid;gap:12px;margin-bottom:36px;max-width:760px}
+.sekce-hlava p{font-size:18px;color:var(--bridlice-soft);margin:0}
+
+/* Služby */
+.sluzby{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--linka)}
+.sluzba{display:grid;align-content:start;grid-template-columns:52px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--linka)}
+.sluzba svg{width:48px;height:48px}
+.sluzba h3{margin-bottom:6px}
+.sluzba p{margin:0 0 10px;font-size:16px}
+.cena{font-size:14px;font-weight:600;color:var(--mosaz-text)}
+@media (min-width:700px){.sluzby{grid-template-columns:1fr 1fr;column-gap:40px}}
+@media (min-width:1100px){.sluzby{grid-template-columns:repeat(4,1fr);column-gap:32px}.sluzba{grid-template-columns:1fr;gap:12px;padding:26px 0}}
+.sluzba--remeslo{background:var(--bila);padding-left:16px;padding-right:16px;border:1px solid var(--linka)}
+@media (min-width:700px){.sluzba--remeslo{grid-column:1/-1;grid-template-columns:52px 1fr}}
+
+/* Proč my */
+.proc{background:var(--bila);border-top:1px solid var(--linka);border-bottom:1px solid var(--linka)}
+.proc-grid{display:grid;gap:36px}
+.duvody{list-style:none;padding:0;margin:0;counter-reset:d;display:grid;gap:0}
+.duvody li{counter-increment:d;display:grid;grid-template-columns:56px 1fr;gap:14px;padding:22px 0;border-top:1px solid var(--linka)}
+.duvody li::before{content:counter(d,decimal-leading-zero);font-family:var(--f-nadpis);font-size:30px;color:var(--mosaz-text);line-height:1}
+.duvody h3{margin-bottom:6px}
+.duvody p{margin:0;font-size:16px}
+.overeno{background:var(--javor);border:1px solid var(--linka);padding:24px;border-radius:3px;align-self:start}
+.overeno h3{font-size:19px;margin-bottom:14px}
+.overeno dl{margin:0;display:grid;gap:12px}
+.overeno dt{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bridlice-soft);font-weight:600}
+.overeno dd{margin:2px 0 0;font-weight:500}
+.overeno a{color:var(--mosaz-text);font-weight:600}
+@media (min-width:960px){.proc-grid{grid-template-columns:1.5fr 1fr;gap:64px}}
+
+/* Realizace */
+.foto-grid{display:grid;gap:14px;grid-template-columns:1fr}
+.foto{position:relative;min-height:180px;border:1.5px dashed var(--mosaz-text);background:
+  repeating-linear-gradient(135deg,rgba(169,120,31,.07) 0 12px,transparent 12px 24px),var(--javor-2);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:18px;border-radius:2px;overflow:hidden}
+.foto svg.ram{position:absolute;inset:18px auto auto 18px;width:44px;height:44px}
+.foto b{font-family:var(--f-nadpis);font-weight:400;font-size:20px;display:block}
+.foto span{font-size:15px;color:var(--bridlice-soft)}
+@media (min-width:760px){
+  .foto-grid{grid-template-columns:repeat(6,1fr);grid-auto-rows:200px}
+  .foto{min-height:0}
+  .foto:nth-child(1){grid-column:span 4;grid-row:span 2}
+  .foto:nth-child(2),.foto:nth-child(3){grid-column:span 2}
+  .foto:nth-child(4),.foto:nth-child(5){grid-column:span 3}
+}
+
+/* Postup */
+.postup{background:var(--bridlice);color:var(--bila)}
+.postup .sekce-hlava p{color:#D5CCBD}
+.kroky{list-style:none;margin:0;padding:0;display:grid;gap:18px;counter-reset:k}
+.kroky li{counter-increment:k;position:relative;padding:26px 22px 24px;border:1px solid #3A4A5E;background:var(--bridlice-2);border-radius:3px}
+.kroky li::before{content:"Krok " counter(k);display:block;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mosaz-svetla);margin-bottom:10px}
+.kroky h3{font-size:23px;margin-bottom:8px;color:var(--bila)}
+.kroky p{margin:0;color:#D5CCBD;font-size:16px}
+@media (min-width:860px){.kroky{grid-template-columns:repeat(3,1fr);gap:22px}}
+
+/* Oblast */
+.oblast-grid{display:grid;gap:32px;align-items:center}
+.oblast svg{width:100%;max-width:440px;height:auto;margin:0 auto}
+.oblast-txt p{font-size:17px}
+@media (min-width:900px){.oblast-grid{grid-template-columns:1fr 1fr;gap:64px}}
+
+/* Poptávka */
+.poptavka{background:var(--bila);border-top:1px solid var(--linka)}
+.popt-grid{display:grid;gap:36px}
+.volat-box{background:var(--bridlice);color:var(--bila);padding:26px 24px;border-radius:3px;align-self:start}
+.volat-box h3{color:var(--bila);margin-bottom:8px}
+.volat-box p{color:#D5CCBD;font-size:16px}
+.volat-box a.velke-tel{display:block;font-family:var(--f-nadpis);font-size:clamp(30px,4vw,40px);color:var(--bila);text-decoration:none;border-bottom:2px solid var(--mosaz);padding-bottom:6px;margin:4px 0 14px;width:max-content;max-width:100%}
+.volat-box a.mail{color:var(--mosaz-svetla);font-weight:600;overflow-wrap:anywhere}
+form{display:grid;gap:16px}
+.pole-2{display:grid;gap:16px}
+@media (min-width:640px){.pole-2{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+label small{font-weight:400;color:var(--bridlice-soft)}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--bridlice);background:var(--javor);border:1.5px solid #B9A47F;border-radius:3px;padding:12px 13px;min-height:48px}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--mosaz);outline-offset:1px;border-color:var(--bridlice)}
+.typy{display:flex;flex-wrap:wrap;gap:8px;border:0;padding:0;margin:0}
+.typy legend{font-weight:600;font-size:15px;margin-bottom:8px;padding:0}
+.typy label{margin:0;font-weight:500;font-size:15px;display:inline-flex;align-items:center;gap:8px;border:1.5px solid #B9A47F;border-radius:3px;padding:9px 12px;background:var(--javor);cursor:pointer;min-height:44px}
+.typy input{width:18px;height:18px;min-height:0;accent-color:var(--bridlice);margin:0}
+.souhlas{font-size:14px;color:var(--bridlice-soft)}
+.hlaska{display:none;background:var(--javor);border-left:4px solid var(--mosaz);padding:14px 16px;font-weight:500}
+.hlaska.on{display:block}
+@media (min-width:960px){.popt-grid{grid-template-columns:.8fr 1.2fr;gap:64px}}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--linka)}
+.faq details:last-child{border-bottom:1px solid var(--linka)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-family:var(--f-nadpis);font-size:20px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2px solid var(--mosaz-text);border-bottom:2px solid var(--mosaz-text);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{padding:0 0 18px;margin:0;font-size:16.5px}
+
+/* Kontakt */
+.kontakt{background:var(--bridlice);color:var(--bila)}
+.kontakt-grid{display:grid;gap:28px}
+.kontakt h2{color:var(--bila)}
+.kontakt dl{margin:0;display:grid;gap:18px}
+.kontakt dt{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mosaz-svetla);font-weight:600}
+.kontakt dd{margin:4px 0 0;font-size:18px}
+.kontakt a{color:var(--bila)}
+.kontakt .odkaz{display:inline-flex;align-items:center;gap:8px;margin-top:8px;color:var(--mosaz-svetla);font-weight:600;font-size:16px}
+.paticka{border-top:1px solid #3A4A5E;margin-top:48px;padding-top:22px;font-size:14px;color:#C9C0B1;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media (min-width:860px){.kontakt-grid{grid-template-columns:1fr 1fr 1fr;gap:48px}}
+
+/* Mobilní lišta */
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.35fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--bridlice);box-shadow:0 -6px 20px rgba(31,43,58,.25)}
+.lista a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:16px;min-height:48px;border-radius:3px;line-height:1.1;text-align:center}
+.lista .l-tel{background:var(--mosaz-text);color:var(--bila)}
+.lista .l-popt{border:1.5px solid var(--mosaz-svetla);color:var(--bila)}
+.lista svg{width:18px;height:18px;flex:none}
+body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+@media (min-width:900px){.lista{display:none}body{padding-bottom:0}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 2.8 9.4 6c.5.6.5 1.4 0 2L8 9.6a12.6 12.6 0 0 0 6.4 6.4l1.6-1.4c.6-.5 1.4-.5 2 0l3.2 2.8c.6.5.7 1.4.2 2l-1.5 1.9c-.6.7-1.5 1-2.4.8C9.7 20.4 3.6 14.3 1.9 6.5c-.2-.9.1-1.8.8-2.4L4.6 2.6c.6-.5 1.5-.4 2 .2Z" fill="currentColor"/></symbol>
+    <symbol id="i-sipka" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></symbol>
+    <symbol id="i-kuchyne" viewBox="0 0 48 48"><rect x="5" y="22" width="38" height="20" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M5 27h38M24 27v15" stroke="#1F2B3A" stroke-width="2"/><rect x="7" y="5" width="34" height="11" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M24 5v11" stroke="#1F2B3A" stroke-width="2"/><path d="M19 34h2M27 34h2" stroke="#A9781F" stroke-width="3"/><path d="M30 22v-3h6" fill="none" stroke="#A9781F" stroke-width="2"/></symbol>
+    <symbol id="i-ordinace" viewBox="0 0 48 48"><path d="M4 30h28v4H4zM8 34v8M28 34v8" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M4 30v-5h8v5" fill="none" stroke="#1F2B3A" stroke-width="2"/><rect x="34" y="8" width="10" height="34" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M34 20h10M34 31h10" stroke="#1F2B3A" stroke-width="2"/><path d="M15 6v12M9 12h12" stroke="#A9781F" stroke-width="3"/></symbol>
+    <symbol id="i-lekarna" viewBox="0 0 48 48"><rect x="5" y="5" width="38" height="20" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M5 15h38M14 5v20M24 5v20M34 5v20" stroke="#1F2B3A" stroke-width="1.6"/><rect x="3" y="30" width="42" height="12" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M3 34h42" stroke="#1F2B3A" stroke-width="2"/><path d="M24 36v6M21 39h6" stroke="#A9781F" stroke-width="2.4"/></symbol>
+    <symbol id="i-kancelar" viewBox="0 0 48 48"><path d="M3 26h42M8 26v16M40 26v16" stroke="#1F2B3A" stroke-width="2" fill="none"/><rect x="14" y="10" width="20" height="13" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M24 23v3" stroke="#1F2B3A" stroke-width="2"/><rect x="28" y="30" width="10" height="12" fill="none" stroke="#A9781F" stroke-width="2"/><path d="M28 36h10" stroke="#A9781F" stroke-width="2"/></symbol>
+    <symbol id="i-obyvak" viewBox="0 0 48 48"><path d="M6 24v-8h36v8" fill="none" stroke="#1F2B3A" stroke-width="2"/><rect x="3" y="24" width="42" height="12" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M7 36v5M41 36v5" stroke="#1F2B3A" stroke-width="2"/><path d="M14 4h20v6H14z" fill="none" stroke="#A9781F" stroke-width="2"/></symbol>
+    <symbol id="i-loznice" viewBox="0 0 48 48"><path d="M4 40V12M44 40V24M4 30h40" fill="none" stroke="#1F2B3A" stroke-width="2"/><rect x="8" y="20" width="12" height="7" fill="none" stroke="#A9781F" stroke-width="2"/><path d="M4 24h40" stroke="#1F2B3A" stroke-width="2"/></symbol>
+    <symbol id="i-skoleni" viewBox="0 0 48 48"><rect x="8" y="4" width="32" height="18" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M14 10h14M14 15h20" stroke="#A9781F" stroke-width="2"/><path d="M4 32h16M28 32h16M8 32v10M16 32v10M32 32v10M40 32v10" stroke="#1F2B3A" stroke-width="2"/></symbol>
+    <symbol id="i-remesla" viewBox="0 0 48 48"><path d="M6 8h10v6H6z" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M11 14v8a6 6 0 0 0 6 6h4" fill="none" stroke="#1F2B3A" stroke-width="2"/><path d="M30 4l-6 12h7l-5 12" fill="none" stroke="#A9781F" stroke-width="2.4" stroke-linejoin="round"/><path d="M4 34h40v8H4zM17 34v8M30 34v8M10 38h0" fill="none" stroke="#1F2B3A" stroke-width="2"/></symbol>
+  </defs>
+</svg>
+
+<div class="navrh-pruh" role="note"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Stolařství Šindelář</div>
+
+<header class="hlavicka">
+  <div class="wrap">
+    <a class="znacka" href="#top" aria-label="Stolařství Šindelář – na začátek">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" fill="#1F2B3A"/><path d="M8 24 17 9l9 15" fill="none" stroke="#A9781F" stroke-width="2.4"/><path d="M11 24h12" stroke="#FFFFFF" stroke-width="2.4"/></svg>
+      <span><b>Stolařství Šindelář</b><small>Třinec-Kanada</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní">
+      <a href="#interiery">Interiéry na klíč</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#realizace">Realizace</a>
+      <a href="#postup">Postup</a>
+      <a href="#faq">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-hlava" href="tel:+420602506996"><svg aria-hidden="true"><use href="#i-tel"/></svg>602 506 996</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="kicker">Truhlář · Třinec a okolí</p>
+      <h1 id="h1">Kuchyně, ordinace i lékárny na míru – <em>od zaměření po zapojenou zásuvku</em></h1>
+      <p class="hero-lead">Vyrábíme nábytek na zakázku v Třinci-Kanadě. <strong>Kompletně zajistíme instalatérské, zednické a elektrické práce</strong>, takže interiér předáme hotový a nemusíte shánět další řemeslníky.</p>
+      <div class="akce">
+        <a class="btn btn-hlavni" href="#poptavka">Zavolat nebo poptat <svg aria-hidden="true"><use href="#i-sipka"/></svg></a>
+        <a class="tel-text" href="tel:+420602506996"><small>Rovnou volejte</small><b>602 506 996</b></a>
+      </div>
+      <ul class="hero-fakta">
+        <li>Výroba na klíč</li>
+        <li>Domácnosti i zdravotnické provozy</li>
+        <li>Míru 284, Třinec</li>
+      </ul>
+    </div>
+
+    <div class="interier" id="interiery">
+      <div class="prepinac" role="tablist" aria-label="Vyberte interiér">
+        <button role="tab" id="tab-kuchyne" aria-selected="true" aria-controls="popis" data-k="kuchyne">Kuchyně</button>
+        <button role="tab" id="tab-ordinace" aria-selected="false" aria-controls="popis" data-k="ordinace" tabindex="-1">Ordinace</button>
+        <button role="tab" id="tab-lekarna" aria-selected="false" aria-controls="popis" data-k="lekarna" tabindex="-1">Lékárna</button>
+        <button role="tab" id="tab-kancelar" aria-selected="false" aria-controls="popis" data-k="kancelar" tabindex="-1">Kancelář</button>
+      </div>
+      <svg class="axo" viewBox="-187.9 -177.5 419.1 416.0" role="img" aria-labelledby="axo-t">
+        <title id="axo-t">Axonometrická ilustrace interiéru – kuchyně</title>
+        <g class="room-shell">
+<polygon points="0.0,0.0 216.5,125.0 43.3,225.0 -173.2,100.0" fill="#EADBC0" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="21.7" y1="12.5" x2="-151.6" y2="112.5" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="43.3" y1="25.0" x2="-129.9" y2="125.0" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="65.0" y1="37.5" x2="-108.3" y2="137.5" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="86.6" y1="50.0" x2="-86.6" y2="150.0" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="108.3" y1="62.5" x2="-65.0" y2="162.5" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="129.9" y1="75.0" x2="-43.3" y2="175.0" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="151.6" y1="87.5" x2="-21.7" y2="187.5" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="173.2" y1="100.0" x2="0.0" y2="200.0" stroke="#D8C39F" stroke-width="0.6"/>
+<line x1="194.9" y1="112.5" x2="21.7" y2="212.5" stroke="#D8C39F" stroke-width="0.6"/>
+<polygon points="0.0,0.0 -173.2,100.0 -173.2,-30.0 0.0,-130.0" fill="#F7F1E6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="0.0,0.0 216.5,125.0 216.5,-5.0 0.0,-130.0" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="0.0,-138.8 224.1,-9.4 216.5,-5.0 0.0,-130.0 -173.2,-30.0 -180.8,-34.4" fill="#1F2B3A" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="224.1,120.6 216.5,125.0 216.5,-5.0 224.1,-9.4" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-180.8,95.6 -173.2,100.0 -173.2,-30.0 -180.8,-34.4" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-173.2,100.0 43.3,225.0 43.3,232.5 -180.8,103.1 -180.8,95.6" fill="#1F2B3A" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="224.1,120.6 43.3,225.0 43.3,232.5 224.1,128.1" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+</g>
+<g class="scene" data-scene="kuchyne">
+<polygon points="-34.6,20.0 -8.7,35.0 -8.7,-75.0 -34.6,-90.0" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="21.7,17.5 -8.7,35.0 -8.7,-75.0 21.7,-92.5" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-4.3,-107.5 21.7,-92.5 -8.7,-75.0 -34.6,-90.0" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="6.5" y1="18.7" x2="6.5" y2="-76.2" stroke="#1F2B3A" stroke-width="0.6"/>
+<polygon points="0.0,30.0 142.9,112.5 142.9,67.5 0.0,-15.0" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="168.9,97.5 142.9,112.5 142.9,67.5 168.9,52.5" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="26.0,-30.0 168.9,52.5 142.9,67.5 0.0,-15.0" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="35.7" y1="46.9" x2="35.7" y2="9.4" stroke="#55657A" stroke-width="0.7"/>
+<line x1="71.4" y1="67.5" x2="71.4" y2="30.0" stroke="#55657A" stroke-width="0.7"/>
+<line x1="107.2" y1="88.1" x2="107.2" y2="50.6" stroke="#55657A" stroke-width="0.7"/>
+<polygon points="-2.2,-13.8 140.7,68.7 140.7,64.2 -2.2,-18.3" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="168.9,52.5 140.7,68.7 140.7,64.2 168.9,48.0" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="26.0,-34.5 168.9,48.0 140.7,64.2 -2.2,-18.3" fill="#F0DDBD" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="96.3,12.1 122.3,27.1 106.1,36.5 80.1,21.5" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="109.3,18.6 112.6,20.5 112.6,5.5 109.3,3.6" fill="#8D98A5" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="115.8,18.6 112.6,20.5 112.6,5.5 115.8,3.6" fill="#78818C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="112.6,1.7 115.8,3.6 112.6,5.5 109.3,3.6" fill="#B3BCC6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="37.9,-21.6 68.2,-4.1 50.9,5.9 20.6,-11.6" fill="#1F2B3A" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="10.8,-53.8 153.7,28.7 153.7,-6.3 10.8,-88.8" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="168.9,20.0 153.7,28.7 153.7,-6.3 168.9,-15.0" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="26.0,-97.5 168.9,-15.0 153.7,-6.3 10.8,-88.8" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="46.5" y1="-35.6" x2="46.5" y2="-65.6" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="82.3" y1="-15.0" x2="82.3" y2="-45.0" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="118.0" y1="5.6" x2="118.0" y2="-24.4" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="13.4" y1="-52.2" x2="152.0" y2="27.8" stroke="#F6D98E" stroke-width="2.2"/>
+<polygon points="177.5,47.5 186.2,52.5 186.2,43.7 177.5,38.7" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/><circle cx="181.9" cy="45.7" r="1.4" fill="#1F2B3A"/>
+<polygon points="-47.6,102.5 30.3,147.5 30.3,102.5 -47.6,57.5" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="65.0,127.5 30.3,147.5 30.3,102.5 65.0,82.5" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-13.0,37.5 65.0,82.5 30.3,102.5 -47.6,57.5" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-56.3,57.5 34.6,110.0 34.6,105.0 -56.3,52.5" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="77.9,85.0 34.6,110.0 34.6,105.0 77.9,80.0" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-13.0,27.5 77.9,80.0 34.6,105.0 -56.3,52.5" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-60.6,125.0 -47.6,132.5 -47.6,97.5 -60.6,90.0" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-34.6,125.0 -47.6,132.5 -47.6,97.5 -34.6,90.0" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-47.6,82.5 -34.6,90.0 -47.6,97.5 -60.6,90.0" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-17.3,150.0 -4.3,157.5 -4.3,122.5 -17.3,115.0" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="8.7,150.0 -4.3,157.5 -4.3,122.5 8.7,115.0" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-4.3,107.5 8.7,115.0 -4.3,122.5 -17.3,115.0" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="-13.0" y1="-27.5" x2="-13.0" y2="10.0" stroke="#1F2B3A" stroke-width="0.9"/><path d="M-22.0,21.5 Q-13.0,7.5 -4.0,21.5 Z" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.8"/><ellipse cx="-13.0" cy="21.5" rx="9" ry="2.6" fill="#FFF3D6" stroke="#1F2B3A" stroke-width="0.6"/>
+<line x1="34.6" y1="0.0" x2="34.6" y2="37.5" stroke="#1F2B3A" stroke-width="0.9"/><path d="M25.6,49.0 Q34.6,35.0 43.6,49.0 Z" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.8"/><ellipse cx="34.6" cy="49.0" rx="9" ry="2.6" fill="#FFF3D6" stroke="#1F2B3A" stroke-width="0.6"/>
+<g class="pin" transform="translate(-6.5,-91.3)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+<g class="pin" transform="translate(101.8,8.7)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">V</text></g>
+<g class="pin" transform="translate(181.9,40.0)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">E</text></g>
+<g class="pin" transform="translate(8.7,65.0)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+</g>
+<g class="scene" data-scene="ordinace" hidden>
+<polygon points="140.7,81.2 62.8,126.2 62.8,21.2 140.7,-23.8" fill="#BFD6DE" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round" fill-opacity="0.55"/>
+<polygon points="62.8,21.2 65.4,22.7 65.4,17.7 62.8,16.2" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="143.3,-22.3 65.4,22.7 65.4,17.7 143.3,-27.3" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="140.7,-28.8 143.3,-27.3 65.4,17.7 62.8,16.2" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-86.6,50.0 -65.0,62.5 -65.0,17.5 -86.6,5.0" fill="#EAEAEA" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="13.0,17.5 -65.0,62.5 -65.0,17.5 13.0,-27.5" fill="#C6C6C6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-8.7,-40.0 13.0,-27.5 -65.0,17.5 -86.6,5.0" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-86.6,5.0 -63.9,18.1 -63.9,15.1 -86.6,2.0" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="14.1,-26.9 -63.9,18.1 -63.9,15.1 14.1,-29.9" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-8.7,-43.0 14.1,-29.9 -63.9,15.1 -86.6,2.0" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-82.3,-22.5 -69.3,-15.0 -69.3,-55.0 -82.3,-62.5" fill="#EAEAEA" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="0.0,-55.0 -69.3,-15.0 -69.3,-55.0 0.0,-95.0" fill="#C6C6C6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-13.0,-102.5 0.0,-95.0 -69.3,-55.0 -82.3,-62.5" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-8.7,-55.0 -65.0,-22.5 -65.0,-52.5 -8.7,-85.0" fill="#BFD6DE" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="19.5,-1.2 54.1,18.8 54.1,10.0 19.5,-10.0" fill="#EAEAEA" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="73.6,7.5 54.1,18.8 54.1,10.0 73.6,-1.2" fill="#C6C6C6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="39.0,-21.3 73.6,-1.2 54.1,10.0 19.5,-10.0" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="40.1,-17.1 66.0,-2.1 53.0,5.4 27.1,-9.6" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="52.2,-10.1 54.8,-8.6 54.8,-19.9 52.2,-21.4" fill="#8D98A5" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="57.4,-10.1 54.8,-8.6 54.8,-19.9 57.4,-21.4" fill="#78818C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="54.8,-22.9 57.4,-21.4 54.8,-19.9 52.2,-21.4" fill="#B3BCC6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="41.1,-38.8 71.4,-21.3 71.4,-56.3 41.1,-73.8" fill="#DDE7EC" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-34.6,110.0 -30.3,112.5 -30.3,70.0 -34.6,67.5" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="17.3,85.0 -30.3,112.5 -30.3,70.0 17.3,42.5" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="13.0,40.0 17.3,42.5 -30.3,70.0 -34.6,67.5" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="13.0,137.5 17.3,140.0 17.3,97.5 13.0,95.0" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="65.0,112.5 17.3,140.0 17.3,97.5 65.0,70.0" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="60.6,67.5 65.0,70.0 17.3,97.5 13.0,95.0" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-39.0,67.5 17.3,100.0 17.3,96.2 -39.0,63.8" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="67.1,71.2 17.3,100.0 17.3,96.2 67.1,67.5" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="10.8,35.0 67.1,67.5 17.3,96.2 -39.0,63.8" fill="#F0DDBD" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="19.1,52.7 38.5,64.0 38.5,44.0 19.1,32.7" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="41.1,62.5 38.5,64.0 38.5,44.0 41.1,42.5" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="21.7,31.2 41.1,42.5 38.5,44.0 19.1,32.7" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="123.4,108.7 171.0,136.2 171.0,108.7 123.4,81.2" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="190.5,125.0 171.0,136.2 171.0,108.7 190.5,97.5" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="142.9,70.0 190.5,97.5 171.0,108.7 123.4,81.2" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="114.7,81.2 171.0,113.8 171.0,106.2 114.7,73.7" fill="#D5DADE" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="199.2,97.5 171.0,113.8 171.0,106.2 199.2,90.0" fill="#B4B9BC" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="142.9,57.5 199.2,90.0 171.0,106.2 114.7,73.7" fill="#EDF2F5" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="114.7,73.7 129.9,82.5 129.9,73.7 114.7,65.0" fill="#D5DADE" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="158.0,66.2 129.9,82.5 129.9,73.7 158.0,57.5" fill="#B4B9BC" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="142.9,48.7 158.0,57.5 129.9,73.7 114.7,65.0" fill="#EDF2F5" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-49.8,138.8 -30.3,150.0 -30.3,125.0 -49.8,113.8" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-10.8,138.8 -30.3,150.0 -30.3,125.0 -10.8,113.8" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-30.3,102.5 -10.8,113.8 -30.3,125.0 -49.8,113.8" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-50.9,114.4 -31.4,125.6 -31.4,95.6 -50.9,84.4" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-28.1,123.7 -31.4,125.6 -31.4,95.6 -28.1,93.7" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-47.6,82.5 -28.1,93.7 -31.4,95.6 -50.9,84.4" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="99.6,32.5 108.3,37.5 108.3,28.7 99.6,23.7" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/><circle cx="103.9" cy="30.7" r="1.4" fill="#1F2B3A"/>
+<line x1="153.7" y1="-11.3" x2="153.7" y2="21.2" stroke="#1F2B3A" stroke-width="0.9"/><path d="M144.7,32.7 Q153.7,18.7 162.7,32.7 Z" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8"/><ellipse cx="153.7" cy="32.7" rx="9" ry="2.6" fill="#FFF3D6" stroke="#1F2B3A" stroke-width="0.6"/>
+<g class="pin" transform="translate(-36.8,-76.3)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+<g class="pin" transform="translate(47.6,-17.5)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">V</text></g>
+<g class="pin" transform="translate(62.8,21.2)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">S</text></g>
+<g class="pin" transform="translate(103.9,25.0)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">E</text></g>
+</g>
+<g class="scene" data-scene="lekarna" hidden>
+<polygon points="-8.7,20.0 177.5,127.5 177.5,15.0 -8.7,-92.5" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="199.2,115.0 177.5,127.5 177.5,15.0 199.2,2.5" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="13.0,-105.0 199.2,2.5 177.5,15.0 -8.7,-92.5" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-4.3,-25.0 173.2,77.5 173.2,17.5 -4.3,-85.0" fill="#F7EEDC" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="-4.3" y1="-26.3" x2="173.2" y2="76.2" stroke="#C9A06A" stroke-width="0.9"/>
+<polygon points="0.0,-25.0 7.6,-20.6 7.6,-30.6 0.0,-35.0" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="9.3,-19.6 19.5,-13.8 19.5,-28.3 9.3,-34.1" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="21.2,-12.8 34.0,-5.4 34.0,-15.4 21.2,-22.8" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="35.7,-4.4 43.3,-0.0 43.3,-14.5 35.7,-18.9" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="45.0,1.0 55.2,6.9 55.2,-3.1 45.0,-9.0" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="56.9,7.9 69.7,15.2 69.7,0.7 56.9,-6.6" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="71.4,16.2 79.0,20.6 79.0,10.6 71.4,6.2" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="80.8,21.6 90.9,27.5 90.9,13.0 80.8,7.1" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="92.7,28.5 105.4,35.9 105.4,25.9 92.7,18.5" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="107.2,36.9 114.7,41.2 114.7,26.7 107.2,22.4" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="116.5,42.2 126.7,48.1 126.7,38.1 116.5,32.2" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="128.4,49.1 141.2,56.5 141.2,42.0 128.4,34.6" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="142.9,57.5 150.5,61.9 150.5,51.9 142.9,47.5" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="152.2,62.9 162.4,68.7 162.4,54.2 152.2,48.4" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="164.1,69.7 176.9,77.1 176.9,67.1 164.1,59.7" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<line x1="-4.3" y1="-47.5" x2="173.2" y2="55.0" stroke="#C9A06A" stroke-width="0.9"/>
+<polygon points="0.0,-46.2 7.6,-41.9 7.6,-56.4 0.0,-60.8" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="9.3,-40.9 19.5,-35.0 19.5,-45.0 9.3,-50.9" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="21.2,-34.0 34.0,-26.6 34.0,-41.1 21.2,-48.5" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="35.7,-25.6 43.3,-21.3 43.3,-31.3 35.7,-35.6" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="45.0,-20.3 55.2,-14.4 55.2,-28.9 45.0,-34.8" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="56.9,-13.4 69.7,-6.0 69.7,-16.0 56.9,-23.4" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="71.4,-5.0 79.0,-0.6 79.0,-15.1 71.4,-19.5" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="80.8,0.4 90.9,6.2 90.9,-3.8 80.8,-9.6" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="92.7,7.2 105.4,14.6 105.4,0.1 92.7,-7.3" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="107.2,15.6 114.7,20.0 114.7,10.0 107.2,5.6" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="116.5,21.0 126.7,26.9 126.7,12.4 116.5,6.5" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="128.4,27.9 141.2,35.2 141.2,25.2 128.4,17.9" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="142.9,36.2 150.5,40.6 150.5,26.1 142.9,21.7" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="152.2,41.6 162.4,47.5 162.4,37.5 152.2,31.6" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="164.1,48.5 176.9,55.9 176.9,41.4 164.1,34.0" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.5"/>
+<line x1="-4.3" y1="-68.8" x2="173.2" y2="33.7" stroke="#C9A06A" stroke-width="0.9"/>
+<polygon points="0.0,-67.5 7.6,-63.1 7.6,-73.1 0.0,-77.5" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="9.3,-62.1 19.5,-56.3 19.5,-70.8 9.3,-76.6" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="21.2,-55.3 34.0,-47.9 34.0,-57.9 21.2,-65.3" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="35.7,-46.9 43.3,-42.5 43.3,-57.0 35.7,-61.4" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="45.0,-41.5 55.2,-35.6 55.2,-45.6 45.0,-51.5" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="56.9,-34.6 69.7,-27.3 69.7,-41.8 56.9,-49.1" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="71.4,-26.3 79.0,-21.9 79.0,-31.9 71.4,-36.3" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="80.8,-20.9 90.9,-15.0 90.9,-29.5 80.8,-35.4" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="92.7,-14.0 105.4,-6.6 105.4,-16.6 92.7,-24.0" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="107.2,-5.6 114.7,-1.3 114.7,-15.8 107.2,-20.1" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="116.5,-0.3 126.7,5.6 126.7,-4.4 116.5,-10.3" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="128.4,6.6 141.2,14.0 141.2,-0.5 128.4,-7.9" fill="#3A4A5E" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="142.9,15.0 150.5,19.4 150.5,9.4 142.9,5.0" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="152.2,20.4 162.4,26.2 162.4,11.7 152.2,5.9" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.5"/>
+<polygon points="164.1,27.2 176.9,34.6 176.9,24.6 164.1,17.2" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.5"/>
+<line x1="14.6" y1="29.7" x2="14.6" y2="-10.3" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="37.9" y1="43.1" x2="37.9" y2="3.1" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="61.2" y1="56.6" x2="61.2" y2="16.6" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="84.4" y1="70.0" x2="84.4" y2="30.0" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="107.7" y1="83.4" x2="107.7" y2="43.4" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="131.0" y1="96.9" x2="131.0" y2="56.9" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="154.3" y1="110.3" x2="154.3" y2="70.3" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="-6.5" y1="6.2" x2="175.4" y2="111.2" stroke="#C9A06A" stroke-width="0.6"/>
+<line x1="-6.5" y1="-8.8" x2="175.4" y2="96.2" stroke="#C9A06A" stroke-width="0.6"/>
+<line x1="-3.9" y1="-86.5" x2="173.6" y2="16.0" stroke="#F6D98E" stroke-width="2.2"/>
+<polygon points="-134.2,77.5 -114.7,88.8 -114.7,23.8 -134.2,12.5" fill="#EAEAEA" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-23.8,36.2 -114.7,88.8 -114.7,23.8 -23.8,-28.8" fill="#C6C6C6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-43.3,-40.0 -23.8,-28.8 -114.7,23.8 -134.2,12.5" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-30.3,7.5 -108.3,52.5 -108.3,25.0 -30.3,-20.0" fill="#BFD6DE" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-69.3,80.0 69.3,160.0 69.3,110.0 -69.3,30.0" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="95.3,145.0 69.3,160.0 69.3,110.0 95.3,95.0" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-43.3,15.0 95.3,95.0 69.3,110.0 -69.3,30.0" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-75.8,28.8 71.4,113.7 71.4,110.0 -75.8,25.0" fill="#EAEAEA" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="101.8,96.2 71.4,113.7 71.4,110.0 101.8,92.5" fill="#C6C6C6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-45.5,7.5 101.8,92.5 71.4,110.0 -75.8,25.0" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="-34.6" y1="95.0" x2="-34.6" y2="55.0" stroke="#A9781F" stroke-width="1.2"/>
+<line x1="0.0" y1="115.0" x2="0.0" y2="75.0" stroke="#A9781F" stroke-width="1.2"/>
+<line x1="34.6" y1="135.0" x2="34.6" y2="95.0" stroke="#A9781F" stroke-width="1.2"/>
+<polygon points="-49.8,25.0 71.4,95.0 71.4,68.7 -49.8,-1.3" fill="#BFD6DE" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round" fill-opacity="0.6"/>
+<g class="pin" transform="translate(97.4,-46.2)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+<g class="pin" transform="translate(17.3,27.5)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+<g class="pin" transform="translate(177.5,12.5)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">E</text></g>
+<g class="pin" transform="translate(-111.5,8.1)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+<g class="pin" transform="translate(43.3,190.0)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">S</text></g>
+</g>
+<g class="scene" data-scene="kancelar" hidden>
+<polygon points="-103.9,60.0 -84.4,71.2 -84.4,-18.8 -103.9,-30.0" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="15.2,13.8 -84.4,71.2 -84.4,-18.8 15.2,-76.2" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-4.3,-87.5 15.2,-76.2 -84.4,-18.8 -103.9,-30.0" fill="#EAD5B3" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="-9.7" y1="24.4" x2="-9.7" y2="-58.1" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="-34.6" y1="38.7" x2="-34.6" y2="-43.8" stroke="#C9A06A" stroke-width="0.7"/>
+<line x1="-59.5" y1="53.1" x2="-59.5" y2="-29.4" stroke="#C9A06A" stroke-width="0.7"/>
+<polygon points="15.2,26.2 88.8,68.7 88.8,-26.3 15.2,-68.8" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="103.9,60.0 88.8,68.7 88.8,-26.3 103.9,-35.0" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.3,-77.5 103.9,-35.0 88.8,-26.3 15.2,-68.8" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="18.4,23.1 85.5,61.9 85.5,-23.1 18.4,-61.9" fill="#2B394B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="18.4" y1="3.1" x2="85.5" y2="41.9" stroke="#E4C79A" stroke-width="1.6"/>
+<polygon points="21.7,3.7 26.4,6.5 26.4,-11.0 21.7,-13.8" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="28.1,7.5 32.9,10.2 32.9,-7.3 28.1,-10.0" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="34.6,11.2 39.4,14.0 39.4,-3.5 34.6,-6.3" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="46.5,18.1 51.3,20.9 51.3,3.4 46.5,0.6" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="53.0,21.9 57.8,24.6 57.8,7.1 53.0,4.4" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="59.5,25.6 64.3,28.4 64.3,10.9 59.5,8.1" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="71.4,32.5 76.2,35.2 76.2,17.7 71.4,15.0" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="77.9,36.2 82.7,39.0 82.7,21.5 77.9,18.7" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.4"/>
+<line x1="18.4" y1="-19.4" x2="85.5" y2="19.4" stroke="#E4C79A" stroke-width="1.6"/>
+<polygon points="21.7,-18.8 26.4,-16.0 26.4,-33.5 21.7,-36.3" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="28.1,-15.0 32.9,-12.3 32.9,-29.8 28.1,-32.5" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="34.6,-11.3 39.4,-8.5 39.4,-26.0 34.6,-28.8" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="46.5,-4.4 51.3,-1.6 51.3,-19.1 46.5,-21.9" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="53.0,-0.6 57.8,2.1 57.8,-15.4 53.0,-18.1" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="59.5,3.1 64.3,5.9 64.3,-11.6 59.5,-14.4" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="71.4,10.0 76.2,12.7 76.2,-4.8 71.4,-7.5" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="77.9,13.7 82.7,16.5 82.7,-1.0 77.9,-3.8" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.4"/>
+<line x1="18.4" y1="-41.9" x2="85.5" y2="-3.1" stroke="#E4C79A" stroke-width="1.6"/>
+<polygon points="21.7,-41.2 26.4,-38.5 26.4,-56.0 21.7,-58.8" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="28.1,-37.5 32.9,-34.7 32.9,-52.3 28.1,-55.0" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="34.6,-33.7 39.4,-31.0 39.4,-48.5 34.6,-51.3" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="46.5,-26.9 51.3,-24.1 51.3,-41.6 46.5,-44.4" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="53.0,-23.1 57.8,-20.4 57.8,-37.9 53.0,-40.6" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="59.5,-19.4 64.3,-16.6 64.3,-34.1 59.5,-36.9" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="71.4,-12.5 76.2,-9.8 76.2,-27.3 71.4,-30.0" fill="#D9C3A0" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="77.9,-8.8 82.7,-6.0 82.7,-23.5 77.9,-26.3" fill="#7FA8BC" stroke="#1F2B3A" stroke-width="0.4"/>
+<polygon points="121.2,25.0 199.2,70.0 199.2,5.0 121.2,-40.0" fill="#DDE7EC" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="160.2" y1="47.5" x2="160.2" y2="-17.5" stroke="#1F2B3A" stroke-width="0.8"/>
+<polygon points="-43.3,100.0 -40.1,101.9 -40.1,59.4 -43.3,57.5" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-1.1,79.4 -40.1,101.9 -40.1,59.4 -1.1,36.9" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-4.3,35.0 -1.1,36.9 -40.1,59.4 -43.3,57.5" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="8.7,130.0 11.9,131.9 11.9,89.4 8.7,87.5" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="50.9,109.4 11.9,131.9 11.9,89.4 50.9,66.9" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="47.6,65.0 50.9,66.9 11.9,89.4 8.7,87.5" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-49.8,58.7 9.7,93.1 9.7,89.6 -49.8,55.2" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="53.0,68.1 9.7,93.1 9.7,89.6 53.0,64.6" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-6.5,30.2 53.0,64.6 9.7,89.6 -49.8,55.2" fill="#F0DDBD" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="6.9,47.5 26.4,58.7 26.4,41.2 6.9,30.0" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="28.1,57.8 26.4,58.7 26.4,41.2 28.1,40.2" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="8.7,29.0 28.1,40.2 26.4,41.2 6.9,30.0" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="26.0,140.0 29.2,141.9 29.2,99.4 26.0,97.5" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="68.2,119.4 29.2,141.9 29.2,99.4 68.2,76.9" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="65.0,75.0 68.2,76.9 29.2,99.4 26.0,97.5" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="77.9,170.0 81.2,171.9 81.2,129.4 77.9,127.5" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="120.2,149.4 81.2,171.9 81.2,129.4 120.2,106.9" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="116.9,105.0 120.2,106.9 81.2,129.4 77.9,127.5" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="19.5,98.8 79.0,133.1 79.0,129.6 19.5,95.2" fill="#D1B78D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="122.3,108.1 79.0,133.1 79.0,129.6 122.3,104.6" fill="#B19B78" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="62.8,70.2 122.3,104.6 79.0,129.6 19.5,95.2" fill="#F0DDBD" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="76.2,87.5 95.7,98.7 95.7,81.2 76.2,70.0" fill="#1C2735" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="97.4,97.7 95.7,98.7 95.7,81.2 97.4,80.2" fill="#18212D" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="77.9,69.0 97.4,80.2 95.7,81.2 76.2,70.0" fill="#57606B" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="103.9,65.0 210.0,126.2 210.0,118.7 103.9,57.5" fill="#EAEAEA" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="214.3,123.7 210.0,126.2 210.0,118.7 214.3,116.2" fill="#C6C6C6" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="108.3,55.0 214.3,116.2 210.0,118.7 103.9,57.5" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="194.9,97.5 203.5,102.5 203.5,93.7 194.9,88.7" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/><circle cx="199.2" cy="95.7" r="1.4" fill="#1F2B3A"/>
+<polygon points="-56.3,127.5 -39.0,137.5 -39.0,115.0 -56.3,105.0" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-21.7,127.5 -39.0,137.5 -39.0,115.0 -21.7,105.0" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-39.0,95.0 -21.7,105.0 -39.0,115.0 -56.3,105.0" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-56.7,105.2 -39.4,115.2 -39.4,87.7 -56.7,77.7" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-36.8,113.7 -39.4,115.2 -39.4,87.7 -36.8,86.2" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="-54.1,76.2 -36.8,86.2 -39.4,87.7 -56.7,77.7" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="13.0,167.5 30.3,177.5 30.3,155.0 13.0,145.0" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="47.6,167.5 30.3,177.5 30.3,155.0 47.6,145.0" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="30.3,135.0 47.6,145.0 30.3,155.0 13.0,145.0" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="12.6,145.2 29.9,155.2 29.9,127.7 12.6,117.7" fill="#9B6E1C" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="32.5,153.7 29.9,155.2 29.9,127.7 32.5,126.2" fill="#835D18" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<polygon points="15.2,116.2 32.5,126.2 29.9,127.7 12.6,117.7" fill="#BE9957" stroke="#1F2B3A" stroke-width="0.8" stroke-linejoin="round"/>
+<line x1="2.2" y1="-23.8" x2="2.2" y2="11.2" stroke="#1F2B3A" stroke-width="0.9"/><path d="M-6.8,22.7 Q2.2,8.7 11.2,22.7 Z" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.8"/><ellipse cx="2.2" cy="22.7" rx="9" ry="2.6" fill="#FFF3D6" stroke="#1F2B3A" stroke-width="0.6"/>
+<line x1="71.4" y1="16.2" x2="71.4" y2="51.2" stroke="#1F2B3A" stroke-width="0.9"/><path d="M62.400000000000006,62.7 Q71.4,48.7 80.4,62.7 Z" fill="#A9781F" stroke="#1F2B3A" stroke-width="0.8"/><ellipse cx="71.4" cy="62.7" rx="9" ry="2.6" fill="#FFF3D6" stroke="#1F2B3A" stroke-width="0.6"/>
+<g class="pin" transform="translate(-44.4,-58.1)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+<g class="pin" transform="translate(2.2,51.2)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">T</text></g>
+<g class="pin" transform="translate(158.0,78.7)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">E</text></g>
+<g class="pin" transform="translate(160.2,-22.5)"><line x1="0" y1="0" x2="0" y2="-14" stroke="#1F2B3A" stroke-width="1"/><circle cx="0" cy="-22" r="8.5" fill="#1F2B3A"/><circle cx="0" cy="-22" r="8.5" fill="none" stroke="#A9781F" stroke-width="1.6"/><text x="0" y="-18.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="Work Sans, Arial, sans-serif">S</text></g>
+</g>
+      </svg>
+      <div class="legenda" aria-hidden="true">
+        <span><i>T</i>truhlářina</span><span><i>V</i>voda</span><span><i>E</i>elektro</span><span><i>S</i>stavební práce</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popis-interieru dark" id="popis" role="tabpanel" aria-labelledby="tab-kuchyne" aria-live="polite">
+    <div class="wrap popis-grid">
+      <div>
+        <p class="kicker">Interiér na klíč</p>
+        <h2 id="p-nadpis">Kuchyně, <span>kterou jen začnete používat</span></h2>
+        <p id="p-text" style="margin-top:14px">Linku vyrobíme na centimetry přesně podle Vaší místnosti, napojíme dřez, zapojíme světla a dorovnáme stěny. Přijdete do hotového.</p>
+        <p class="citace">„Zakázková výroba … Výroba na klíč. Kompletně zajistíme instalatérské, zednické a elektrické práce.“ – popis firmy na <a href="https://www.firmy.cz/detail/639316-stolarstvi-sindelar-trinec-kanada.html" rel="noopener">Firmy.cz</a></p>
+      </div>
+      <div>
+        <ul class="prace" id="p-prace"></ul>
+        <p style="margin:12px 0 0;font-size:14px">Popis a rozpis prací v jednotlivých interiérech <span class="demo">ukázkový text</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sekce" id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <p class="kicker">Co vyrábíme</p>
+      <h2 id="h-sluzby">Nábytek na zakázku do domu, ordinace i firmy</h2>
+      <p>Každý kus kreslíme a vyrábíme pro konkrétní místnost. Cenu spočítáme po zaměření, protože žádné dvě zakázky nejsou stejné.</p>
+    </div>
+    <div class="sluzby">
+      <article class="sluzba"><svg aria-hidden="true"><use href="#i-kuchyne"/></svg><div><h3>Kuchyňské linky</h3><p>Linka přesně do Vaší místnosti – i do zkosených rohů a kolem stoupaček. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+      <article class="sluzba"><svg aria-hidden="true"><use href="#i-ordinace"/></svg><div><h3>Ordinace</h3><p>Pracovní stůl lékaře, skříně na materiál a omyvatelné povrchy pro každodenní provoz. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+      <article class="sluzba"><svg aria-hidden="true"><use href="#i-lekarna"/></svg><div><h3>Lékárny</h3><p>Výdejní pult, regály a zásuvkové skříně, ve kterých má každé balení své místo. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+      <article class="sluzba"><svg aria-hidden="true"><use href="#i-kancelar"/></svg><div><h3>Kanceláře</h3><p>Stoly, skříně a knihovny s vedením kabelů, aby na stole nezůstal žádný zmatek drátů. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+      <article class="sluzba"><svg aria-hidden="true"><use href="#i-obyvak"/></svg><div><h3>Obývací pokoje</h3><p>Stěna pod televizi, knihovna nebo vestavba, která využije celou výšku místnosti. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+      <article class="sluzba"><svg aria-hidden="true"><use href="#i-loznice"/></svg><div><h3>Ložnice</h3><p>Postel, šatní skříň a noční stolky z jednoho materiálu a v jedné linii. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+      <article class="sluzba"><svg aria-hidden="true"><use href="#i-skoleni"/></svg><div><h3>Školicí místnosti</h3><p>Stoly a úložné prostory, které se dají rychle přestavět pro přednášku i práci ve skupinách. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+      <article class="sluzba sluzba--remeslo"><svg aria-hidden="true"><use href="#i-remesla"/></svg><div><h3>Instalatérské, zednické a elektro práce</h3><p>Kompletně je zajistíme k nábytku, který u nás objednáte – jedna zakázka, jeden termín, jeden odpovědný člověk. <span class="demo">ukázkový text</span></p><span class="cena">Cena na dotaz</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sekce proc" aria-labelledby="h-proc">
+  <div class="wrap proc-grid">
+    <div>
+      <div class="sekce-hlava">
+        <p class="kicker">Proč my</p>
+        <h2 id="h-proc">Jeden řemeslník za celý interiér</h2>
+      </div>
+      <ol class="duvody">
+        <li><div><h3>Nehledáte instalatéra ani elektrikáře</h3><p>Truhlářskou práci i napojení vody, elektřiny a stavební úpravy zajistíme v jedné zakázce. Termíny řemesel ladíme my, ne Vy. <span class="demo">ukázkový text</span></p></div></li>
+        <li><div><h3>Umíme provozy s přísnějšími nároky</h3><p>Vybavujeme ordinace a lékárny, kde rozhoduje hygiena, přehledné uložení a pracovní výšky. <span class="demo">ukázkový text</span></p></div></li>
+        <li><div><h3>Přesně na Vaše rozměry</h3><p>Nevybíráte z katalogu. Nábytek navrhneme podle zaměření tak, aby využil každý centimetr. <span class="demo">ukázkový text</span></p></div></li>
+        <li><div><h3>Blízko – v Třinci-Kanadě</h3><p>Sídlíme na ulici Míru 284. Na zaměření i montáž to máme po Třinci a okolí kousek.</p></div></li>
+      </ol>
+    </div>
+    <aside class="overeno" aria-label="Ověřené údaje">
+      <h3>Ověřené údaje o firmě</h3>
+      <dl>
+        <div><dt>Obor</dt><dd>Výroba zakázkového nábytku, truhlářství a stolařství</dd></div>
+        <div><dt>Sídlo</dt><dd>Míru 284, 739 61 Třinec-Kanada</dd></div>
+        <div><dt>IČO</dt><dd>65174003</dd></div>
+        <div><dt>Záznam firmy</dt><dd>Interiéry na klíč včetně instalatérských, zednických a elektrických prací (podle katalogu)<br><a href="https://www.firmy.cz/detail/639316-stolarstvi-sindelar-trinec-kanada.html" rel="noopener">Záznam na Firmy.cz →</a></dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="sekce" id="realizace" aria-labelledby="h-real">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <p class="kicker">Realizace</p>
+      <h2 id="h-real">Hotové interiéry z Třince a okolí</h2>
+      <p>Místo pro fotografie skutečných zakázek. Nejvíc prodává fotka celé místnosti a jeden detail spoje nebo kování.</p>
+    </div>
+    <div class="foto-grid">
+      <figure class="foto" style="margin:0"><svg class="ram" viewBox="0 0 44 44" aria-hidden="true"><path d="M2 14V2h12M30 2h12v12M42 30v12H30M14 42H2V30" fill="none" stroke="#7E5912" stroke-width="2"/><circle cx="22" cy="22" r="6" fill="none" stroke="#7E5912" stroke-width="2"/></svg><figcaption><b>Sem přijde Vaše fotka</b><span>Kuchyňská linka s ostrůvkem – celkový pohled</span></figcaption></figure>
+      <figure class="foto" style="margin:0"><svg class="ram" viewBox="0 0 44 44" aria-hidden="true"><path d="M2 14V2h12M30 2h12v12M42 30v12H30M14 42H2V30" fill="none" stroke="#7E5912" stroke-width="2"/><circle cx="22" cy="22" r="6" fill="none" stroke="#7E5912" stroke-width="2"/></svg><figcaption><b>Sem přijde Vaše fotka</b><span>Ordinace – pracovní stůl a skříně</span></figcaption></figure>
+      <figure class="foto" style="margin:0"><svg class="ram" viewBox="0 0 44 44" aria-hidden="true"><path d="M2 14V2h12M30 2h12v12M42 30v12H30M14 42H2V30" fill="none" stroke="#7E5912" stroke-width="2"/><circle cx="22" cy="22" r="6" fill="none" stroke="#7E5912" stroke-width="2"/></svg><figcaption><b>Sem přijde Vaše fotka</b><span>Lékárna – výdejní pult a regály</span></figcaption></figure>
+      <figure class="foto" style="margin:0"><svg class="ram" viewBox="0 0 44 44" aria-hidden="true"><path d="M2 14V2h12M30 2h12v12M42 30v12H30M14 42H2V30" fill="none" stroke="#7E5912" stroke-width="2"/><circle cx="22" cy="22" r="6" fill="none" stroke="#7E5912" stroke-width="2"/></svg><figcaption><b>Sem přijde Vaše fotka</b><span>Kancelář nebo školicí místnost</span></figcaption></figure>
+      <figure class="foto" style="margin:0"><svg class="ram" viewBox="0 0 44 44" aria-hidden="true"><path d="M2 14V2h12M30 2h12v12M42 30v12H30M14 42H2V30" fill="none" stroke="#7E5912" stroke-width="2"/><circle cx="22" cy="22" r="6" fill="none" stroke="#7E5912" stroke-width="2"/></svg><figcaption><b>Sem přijde Vaše fotka</b><span>Detail z dílny – spoj, hrana, kování</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sekce postup dark" id="postup" aria-labelledby="h-postup">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <p class="kicker">Jak probíhá zakázka</p>
+      <h2 id="h-postup">Tři kroky od telefonu k hotovému interiéru</h2>
+      <p>Celou dobu jednáte s námi – i když na stavbě pracuje instalatér nebo elektrikář.</p>
+    </div>
+    <ol class="kroky">
+      <li><h3>Zavoláte nebo pošlete poptávku</h3><p>Řeknete, o jakou místnost jde a co v ní potřebujete. Stačí hrubá představa, rozměry nebo fotka z mobilu.</p></li>
+      <li><h3>Zaměření a návrh s cenou</h3><p>Přijedeme zaměřit, navrhneme řešení a připravíme cenu včetně instalatérských, zednických a elektro prací. <span class="demo">ukázkový text</span></p></li>
+      <li><h3>Výroba, montáž, předání</h3><p>Nábytek vyrobíme, namontujeme, napojíme vodu a elektřinu a předáme hotový interiér. <span class="demo">ukázkový text</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce oblast" aria-labelledby="h-oblast">
+  <div class="wrap oblast-grid">
+    <div class="oblast-txt">
+      <p class="kicker">Kde pracujeme</p>
+      <h2 id="h-oblast" style="margin-bottom:16px">Třinec a okolí</h2>
+      <p>Sídlíme v Třinci-Kanadě a zakázky děláme především v Třinci a v obcích v okolí. Na zaměření přijedeme k Vám domů nebo do provozu. <span class="demo">ukázkový text</span></p>
+      <p>Bydlíte dál? Zavolejte – domluvíme se, zda zakázku zvládneme i u Vás. <span class="demo">ukázkový text</span></p>
+      <p style="font-size:15px;color:var(--bridlice-soft)">Seznam konkrétních obcí a dojezdu doplní firma.</p>
+    </div>
+    <svg viewBox="0 0 440 340" role="img" aria-label="Schéma: Třinec uprostřed, kolem něj okolní obce">
+      <rect x="0" y="0" width="440" height="340" fill="#EADBC0"/>
+      <g fill="none" stroke="#D6C3A1" stroke-width="1">
+        <path d="M0 40h440M0 80h440M0 120h440M0 160h440M0 200h440M0 240h440M0 280h440M0 320h440"/>
+        <path d="M40 0v340M80 0v340M120 0v340M160 0v340M200 0v340M240 0v340M280 0v340M320 0v340M360 0v340M400 0v340"/>
+      </g>
+      <path d="M-10 250 C60 230 110 260 170 220 S300 150 450 170" fill="none" stroke="#7FA8BC" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="220" cy="170" r="140" fill="none" stroke="#A9781F" stroke-width="1.5" stroke-dasharray="5 6"/>
+      <circle cx="220" cy="170" r="84" fill="rgba(169,120,31,.10)" stroke="#A9781F" stroke-width="1.5"/>
+      <g fill="#FFFFFF" stroke="#1F2B3A" stroke-width="1.5">
+        <circle cx="128" cy="96" r="6"/><circle cx="330" cy="110" r="6"/><circle cx="300" cy="262" r="6"/><circle cx="118" cy="250" r="6"/><circle cx="356" cy="200" r="6"/>
+      </g>
+      <g font-family="Work Sans, Arial, sans-serif" font-size="17" fill="#1F2B3A">
+        <text x="140" y="92">obec</text><text x="342" y="104">obec</text><text x="312" y="282">obec</text><text x="58" y="276">obec</text><text x="370" y="206">obec</text>
+      </g>
+      <rect x="196" y="146" width="48" height="48" fill="#1F2B3A"/>
+      <path d="M206 186 220 160l14 26" fill="none" stroke="#A9781F" stroke-width="2.6"/>
+      <rect x="152" y="202" width="136" height="30" fill="#FFFFFF" stroke="#1F2B3A" stroke-width="1.2"/>
+      <text x="220" y="222" text-anchor="middle" font-family="Work Sans, Arial, sans-serif" font-size="16" font-weight="600" fill="#1F2B3A">Třinec-Kanada</text>
+    </svg>
+  </div>
+</section>
+
+<section class="sekce poptavka" id="poptavka" aria-labelledby="h-popt">
+  <div class="wrap popt-grid">
+    <div>
+      <div class="sekce-hlava" style="margin-bottom:24px">
+        <p class="kicker">Zavolat nebo poptat</p>
+        <h2 id="h-popt">Popište nám místnost, ozveme se s dalším postupem</h2>
+      </div>
+      <div class="volat-box dark">
+        <h3>Nejrychlejší je zavolat</h3>
+        <p>Do telefonu se nejlépe domluví rozměry, termín zaměření i to, jaké řemeslné práce bude zakázka potřebovat.</p>
+        <a class="velke-tel" href="tel:+420602506996">602 506 996</a>
+        <p style="margin:0">nebo e-mail<br><a class="mail" href="mailto:sindelar.stolarstvi@seznam.cz">sindelar.stolarstvi@seznam.cz</a></p>
+      </div>
+    </div>
+    <form id="formular" novalidate>
+      <fieldset class="typy">
+        <legend>Co potřebujete vyrobit?</legend>
+        <label><input type="checkbox" name="typ" value="kuchyne">Kuchyň</label>
+        <label><input type="checkbox" name="typ" value="ordinace">Ordinace</label>
+        <label><input type="checkbox" name="typ" value="lekarna">Lékárna</label>
+        <label><input type="checkbox" name="typ" value="kancelar">Kancelář / školicí místnost</label>
+        <label><input type="checkbox" name="typ" value="byt">Obývák / ložnice</label>
+        <label><input type="checkbox" name="typ" value="jine">Jiné</label>
+      </fieldset>
+      <fieldset class="typy">
+        <legend>Máte zájem i o řemeslné práce?</legend>
+        <label><input type="checkbox" name="remesla" value="voda">Instalatérské</label>
+        <label><input type="checkbox" name="remesla" value="zednik">Zednické</label>
+        <label><input type="checkbox" name="remesla" value="elektro">Elektro</label>
+      </fieldset>
+      <div class="pole-2">
+        <div><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" autocomplete="name" required></div>
+        <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      </div>
+      <div class="pole-2">
+        <div><label for="f-mail">E-mail <small>(nepovinné)</small></label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-obec">Obec <small>(kde je místnost)</small></label><input id="f-obec" name="obec" autocomplete="address-level2"></div>
+      </div>
+      <div><label for="f-zprava">Popis zakázky</label><textarea id="f-zprava" name="zprava" placeholder="Např. kuchyň 3,2 × 2,6 m, rohová, chci i nový přívod vody k ostrůvku."></textarea></div>
+      <p class="souhlas">Odesláním souhlasíte se zpracováním údajů pro vyřízení poptávky.</p>
+      <div><button class="btn btn-hlavni" type="submit">Odeslat poptávku <svg aria-hidden="true"><use href="#i-sipka"/></svg></button></div>
+      <p class="hlaska" id="hlaska" role="status">Toto je jen návrh webu – poptávka se nikam neodeslala. Zavolejte prosím na 602 506 996.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sekce" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <p class="kicker">Časté otázky</p>
+      <h2 id="h-faq">Na co se nás lidé ptají</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Kolik stojí kuchyň na míru?</summary><p>Cena záleží hlavně na délce linky, materiálu dvířek a pracovní desky, kování a spotřebičích. Přesnou částku lze říct až po zaměření – proto ceny nezveřejňujeme paušálně a připravíme Vám nabídku pro konkrétní místnost.</p></details>
+      <details><summary>Zajistíte i vodu, elektřinu a stavební úpravy?</summary><p>Ano. Kompletně zajistíme instalatérské, zednické a elektrické práce, takže interiér dostanete na klíč a nemusíte koordinovat další firmy.</p></details>
+      <details><summary>Jak dlouho trvá výroba a montáž?</summary><p>Záleží na velikosti zakázky a aktuální vytíženosti dílny. Termín Vám řekneme při předání nabídky a držíme se ho. <span class="demo">ukázkový text</span></p></details>
+      <details><summary>Musím mít hotový návrh, nebo poradíte?</summary><p>Stačí rozměry a představa, k čemu má místnost sloužit. Návrh rozvržení připravíme my a společně ho doladíme. <span class="demo">ukázkový text</span></p></details>
+      <details><summary>Vybavujete i ordinace a lékárny za provozu?</summary><p>Ordinace a lékárny vybavujeme. Postup montáže se dá naplánovat tak, aby provoz stál co nejkratší dobu – domluvíme ho předem. <span class="demo">ukázkový text</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sekce kontakt dark" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="kontakt-grid">
+      <div>
+        <p class="kicker">Kontakt</p>
+        <h2 id="h-kontakt">Stolařství Šindelář</h2>
+        <p style="color:#D5CCBD;margin-top:14px">Truhlář a nábytek na zakázku, interiéry na klíč. Třinec a okolí.</p>
+      </div>
+      <dl>
+        <div><dt>Telefon</dt><dd><a href="tel:+420602506996">602 506 996</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:sindelar.stolarstvi@seznam.cz" style="word-break:break-all">sindelar.stolarstvi@seznam.cz</a></dd></div>
+      </dl>
+      <dl>
+        <div><dt>Adresa</dt><dd>Míru 284<br>739 61 Třinec-Kanada<br><a class="odkaz" href="https://mapy.cz/zakladni?q=M%C3%ADru%20284%2C%20739%2061%20T%C5%99inec" rel="noopener">Otevřít na Mapy.cz →</a></dd></div>
+        <div><dt>Otevírací doba</dt><dd>Není zveřejněná – před návštěvou prosím zavolejte.</dd></div>
+      </dl>
+    </div>
+    <div class="paticka">
+      <span>Stolařství Šindelář · IČO 65174003</span>
+      <span>Nezávazný návrh webu – není to oficiální stránka firmy.</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<nav class="lista" aria-label="Rychlý kontakt">
+  <a class="l-tel" href="tel:+420602506996"><svg aria-hidden="true"><use href="#i-tel"/></svg>Zavolat 602 506 996</a>
+  <a class="l-popt" href="#poptavka">Poptat</a>
+</nav>
+
+<script>
+(function(){
+  var data={
+    kuchyne:{n:'Kuchyně',h:'Kuchyně, <span>kterou jen začnete používat</span>',
+      t:'Linku vyrobíme na centimetry přesně podle Vaší místnosti, napojíme dřez, zapojíme světla a dorovnáme stěny. Přijdete do hotového.',
+      p:[['T','Truhlářina','Spodní a horní skříňky, vysoké skříně na spotřebiče, ostrůvek s pracovní deskou.'],
+         ['V','Instalatérské práce','Přívod a odpad k dřezu a myčce, případně přeložení k ostrůvku.'],
+         ['E','Elektro','Zásuvky nad pracovní deskou, světelná lišta pod skříňkami, přívod k varné desce.'],
+         ['S','Zednické práce','Vyrovnání stěn, drážky pro rozvody, obklad za linkou.']]},
+    ordinace:{n:'Ordinace',h:'Ordinace, <span>kde má všechno své místo</span>',
+      t:'Vybavíme pracovnu lékaře i vyšetřovnu: nábytek, umyvadlo, osvětlení i dělicí příčku. Vy řešíte pacienty, my termíny řemeslníků.',
+      p:[['T','Truhlářina','Pracovní stůl, skříně na zdravotnický materiál s prosklenými dvířky, recepční pult.'],
+         ['V','Instalatérské práce','Umyvadlo pro mytí rukou s napojením vody a odpadu.'],
+         ['E','Elektro','Zásuvky u stolu a lehátka, osvětlení vyšetřovny.'],
+         ['S','Zednické práce','Příčka mezi pracovnou a vyšetřovnou, začištění stěn.']]},
+    lekarna:{n:'Lékárna',h:'Lékárna, <span>přehledná pro Vás i pacienty</span>',
+      t:'Regály, zásuvkové skříně a výdejní pult vyrobíme na míru prostoru. Osvětlení a přípravu prostoru zajistíme v jedné zakázce.',
+      p:[['T','Truhlářina','Regálová stěna, zásuvkové skříně na léčiva, výdejní pult, vitríny u vstupu.'],
+         ['E','Elektro','Osvětlení regálů, přívody k pokladním místům u pultu.'],
+         ['S','Zednické práce','Příprava stěn a podlahy před montáží nábytku.'],
+         ['V','Instalatérské práce','Umyvadlo nebo kuchyňka v zázemí lékárny.']]},
+    kancelar:{n:'Kancelář',h:'Kancelář, <span>kde kabely nepřekáží</span>',
+      t:'Stoly, skříně i knihovny navrhneme podle počtu míst a způsobu práce. K tomu zásuvky, kabelové lišty i stavební úpravy.',
+      p:[['T','Truhlářina','Pracovní stoly, vysoké skříně na šanony, otevřené knihovny, jednací stůl.'],
+         ['E','Elektro','Kabelové lišty a zásuvky u každého pracovního místa, osvětlení nad stoly.'],
+         ['S','Zednické práce','Úpravy stěn a otvorů, příčky pro oddělení místností.'],
+         ['V','Instalatérské práce','Kuchyňka pro zaměstnance s dřezem.']]}
+  };
+  var tabs=[].slice.call(document.querySelectorAll('.prepinac [role="tab"]'));
+  var scenes=[].slice.call(document.querySelectorAll('.axo .scene'));
+  var title=document.getElementById('axo-t');
+  var panel=document.getElementById('popis');
+  var nad=document.getElementById('p-nadpis'),txt=document.getElementById('p-text'),ul=document.getElementById('p-prace');
+  function render(k){
+    var d=data[k];
+    nad.innerHTML=d.h; txt.textContent=d.t;
+    ul.innerHTML=d.p.map(function(r){return '<li><i aria-hidden="true">'+r[0]+'</i><div><b>'+r[1]+'</b><span>'+r[2]+'</span></div></li>';}).join('');
+    scenes.forEach(function(s){ if(s.getAttribute('data-scene')===k){s.removeAttribute('hidden');}else{s.setAttribute('hidden','');} });
+    title.textContent='Axonometrická ilustrace interiéru – '+d.n.toLowerCase();
+    tabs.forEach(function(t){var on=t.getAttribute('data-k')===k;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;if(on)panel.setAttribute('aria-labelledby',t.id);});
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){render(t.getAttribute('data-k'));});
+    t.addEventListener('keydown',function(e){
+      var j=null;
+      if(e.key==='ArrowRight')j=(i+1)%tabs.length;
+      if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length;
+      if(e.key==='Home')j=0; if(e.key==='End')j=tabs.length-1;
+      if(j!==null){e.preventDefault();tabs[j].focus();render(tabs[j].getAttribute('data-k'));}
+    });
+  });
+  render('kuchyne');
+  var f=document.getElementById('formular'),h=document.getElementById('hlaska');
+  f.addEventListener('submit',function(e){e.preventDefault();h.classList.add('on');h.focus&&h.setAttribute('tabindex','-1');h.focus();});
+})();
+</script>
+</body>
+</html>

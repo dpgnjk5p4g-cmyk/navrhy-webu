@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Salon Mária | kadeřnictví a masáže Havířov</title>
+<meta name="description" content="Nezávazný návrh webu pro Salon Mária – kadeřnictví, pedikúra, masáže a přístrojová lymfatická masáž v Havířově-Šumbarku, Jarošova 29b.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Salon Mária","description":"Kadeřnictví, pedikúra, masáže a přístrojová lymfatická masáž","telephone":"+420775047731","email":"salonmaria1@seznam.cz","taxID":"47173076","address":{"@type":"PostalAddress","streetAddress":"Jarošova 1217/29b","addressLocality":"Havířov-Šumbark","addressCountry":"CZ"},"sameAs":["https://www.facebook.com/MariaHavirov/"]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: lavender band with slow lymph waves carrying a sand card; the "Od hlavy k patě" silhouette is the one bold moment, everything else stays quiet on sand. */
+:root{
+  --sand:#F4EDE3;
+  --sand-card:#FBF7F1;
+  --sand-line:#E3D8C8;
+  --euk:#5B8C85;
+  --euk-ink:#3F6B65;
+  --euk-mist:#DCE8E5;
+  --plum:#3B2A3A;
+  --plum-soft:#5E4A5C;
+  --lav:#E9E4F2;
+  --lav-deep:#D6CDE8;
+  --white:#FFFFFF;
+  --f-display:"Lora",Georgia,"Times New Roman",serif;
+  --f-body:"Outfit","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r:18px;
+  --wrap:1120px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--sand);color:var(--plum);font-family:var(--f-body);font-size:17px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.15;margin:0;text-wrap:balance;color:var(--plum)}
+p{margin:0}
+a{color:var(--euk-ink)}
+:focus-visible{outline:3px solid var(--euk-ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.uk{display:inline-block;font:600 11px/1.4 var(--f-body);text-transform:uppercase;letter-spacing:.09em;color:var(--plum-soft);border:1px solid currentColor;border-radius:4px;padding:1px 6px;vertical-align:middle;white-space:nowrap;opacity:.9}
+.eyebrow{font:500 13px/1.3 var(--f-body);text-transform:uppercase;letter-spacing:.14em;color:var(--euk-ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:500 17px/1 var(--f-body);text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease}
+.btn-main{background:var(--euk-ink);color:var(--white);box-shadow:0 8px 22px -12px rgba(63,107,101,.9)}
+.btn-main:hover{background:#355C57;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--plum);border:1.5px solid var(--plum)}
+.btn-ghost:hover{background:var(--plum);color:var(--sand)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Banner + header */
+.demo-banner{background:var(--plum);color:var(--sand);font-size:13.5px;line-height:1.4;text-align:center;padding-block:9px}
+.demo-banner strong{font-weight:600}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(244,237,227,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--sand-line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--plum);min-width:0}
+.brand svg{width:30px;height:30px;flex:none}
+.brand b{font:500 21px/1 var(--f-display);display:block}
+.brand small{display:block;font-size:12px;color:var(--plum-soft);letter-spacing:.06em;margin-top:3px}
+.head-right{display:flex;align-items:center;gap:14px}
+.head-tel{display:inline-flex;align-items:center;gap:8px;font-weight:500;text-decoration:none;color:var(--euk-ink);white-space:nowrap}
+.head-tel svg{width:18px;height:18px}
+.head-nav{display:none;gap:22px}
+.head-nav a{color:var(--plum);text-decoration:none;font-size:15px}
+.head-nav a:hover{color:var(--euk-ink)}
+.head-cta{display:none}
+@media (min-width:980px){.head-nav{display:flex}}
+@media (min-width:720px){.head-cta{display:inline-flex;min-height:42px;padding:0 20px;font-size:15px}}
+
+/* Hero */
+.hero{position:relative;background:var(--lav);overflow:hidden;isolation:isolate}
+.hero .waves{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.wave{position:absolute;left:0;width:200%;height:100%;animation:drift linear infinite}
+.wave path{vector-effect:non-scaling-stroke}
+.w1{animation-duration:38s;top:6%}
+.w2{animation-duration:52s;animation-direction:reverse;top:24%}
+.w3{animation-duration:30s;top:46%}
+.w4{animation-duration:64s;animation-direction:reverse;top:62%}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.wave{animation:none}}
+.hero .wrap{padding-block:22px 34px;display:grid;gap:28px;align-items:center}
+.hero-card{background:var(--sand);border-radius:28px;padding:26px 22px 24px;box-shadow:0 30px 60px -40px rgba(59,42,58,.55),0 1px 0 rgba(255,255,255,.6) inset;max-width:640px;position:relative}
+.hero-card .eyebrow{margin-bottom:12px}
+.hero h1{font-size:clamp(31px,7.6vw,58px);letter-spacing:-.01em;line-height:1.08}
+.hero h1 em{font-style:italic;color:var(--euk-ink)}
+.hero-lead{margin-top:14px;font-size:17.5px;color:var(--plum-soft);max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:20px}
+.hero-num{font:500 16px/1.2 var(--f-body);color:var(--plum);text-decoration:none;border-bottom:1px solid var(--sand-line);padding-bottom:2px}
+.rating{display:flex;align-items:center;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid var(--sand-line);font-size:15px;color:var(--plum-soft);flex-wrap:wrap}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:17px;height:17px}
+.rating b{font-weight:600;color:var(--plum)}
+.rating a{color:var(--euk-ink);font-weight:500}
+.hero-side{display:none}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);padding-block:72px 84px}
+  .hero-card{padding:46px 48px 40px}
+  .hero-side{display:block}
+}
+.hero-chips{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.chip{display:inline-flex;align-items:center;gap:10px;background:rgba(251,247,241,.78);border:1px solid rgba(255,255,255,.8);padding:10px 16px 10px 12px;border-radius:999px;font-size:15px;color:var(--plum)}
+.chip i{width:28px;height:28px;border-radius:50%;background:var(--euk-mist);display:grid;place-items:center;font-style:normal}
+.chip i svg{width:16px;height:16px}
+.hero-chips .chip:nth-child(2){margin-left:36px}
+.hero-chips .chip:nth-child(3){margin-left:12px}
+.hero-chips .chip:nth-child(4){margin-left:52px}
+
+/* Sections */
+section{scroll-margin-top:70px}
+.sec{padding-block:64px}
+.sec-head{max-width:720px;display:grid;gap:12px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(28px,5.4vw,44px)}
+.sec-head p{color:var(--plum-soft);font-size:17.5px}
+@media (min-width:900px){.sec{padding-block:96px}}
+
+/* Od hlavy k patě */
+.body-map{background:linear-gradient(180deg,var(--sand) 0%,var(--sand-card) 100%)}
+.map-grid{display:grid;gap:22px;align-items:start}
+@media (min-width:960px){.map-grid{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:40px;align-items:center}}
+.figure-box{background:var(--sand-card);border:1px solid var(--sand-line);border-radius:28px;padding:16px 10px 18px;position:relative}
+.figure-box svg.fig{display:block;width:100%;height:auto;max-width:100%}
+.fig .ln{fill:none;stroke:var(--plum);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:stroke .45s ease}
+.fig .ln-soft{fill:none;stroke:var(--plum-soft);stroke-width:1.4;stroke-linecap:round;opacity:.55}
+.fig .towel{fill:var(--lav);stroke:var(--plum);stroke-width:2.4;stroke-linejoin:round;transition:fill .45s ease,stroke .45s ease}
+.fig .glow{opacity:0;transition:opacity .55s ease}
+.fig .zone{cursor:pointer;outline:none}
+.fig .hit{fill:transparent}
+.fig .zone:hover .glow{opacity:.45}
+.fig .zone.on .glow{opacity:1}
+.fig .zone.on .ln{stroke:var(--euk-ink)}
+.fig .zone.on .towel{fill:var(--euk-mist);stroke:var(--euk-ink)}
+.fig .zone:focus-visible .hit{stroke:var(--euk-ink);stroke-width:2;stroke-dasharray:4 5}
+.fig .dot{fill:var(--euk-ink)}
+.fig .dot-ring{fill:none;stroke:var(--euk-ink);stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}
+.fig .zone.on .dot-ring{animation:none;opacity:0}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}80%,100%{transform:scale(2.2);opacity:0}}
+@media (prefers-reduced-motion:reduce){.fig .dot-ring{animation:none;opacity:.5}}
+.fig .lbl{font:500 15px var(--f-body);fill:var(--plum-soft);letter-spacing:.08em;text-transform:uppercase}
+.fig .zone.on .lbl{fill:var(--euk-ink)}
+@media (max-width:620px){.fig .lbl{font-size:24px;font-weight:600}.figure-box{padding:12px 6px 16px}}
+.zone-tabs{display:flex;gap:6px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.zone-tab{font:500 15px/1 var(--f-body);color:var(--plum);background:transparent;border:1.5px solid var(--sand-line);border-radius:999px;padding:11px 18px;cursor:pointer;transition:all .25s ease}
+.zone-tab:hover{border-color:var(--euk)}
+.zone-tab[aria-selected="true"]{background:var(--euk-ink);border-color:var(--euk-ink);color:var(--white)}
+.hint{text-align:center;font-size:14px;color:var(--plum-soft);margin-top:10px}
+.svc-card{background:var(--white);border-radius:24px;padding:28px 24px;box-shadow:0 24px 50px -36px rgba(59,42,58,.5);border:1px solid var(--sand-line);min-width:0;animation:rise .45s ease}
+@keyframes rise{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.svc-card{animation:none}}
+.svc-card .kicker{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.svc-card h3{font-size:30px}
+.svc-card p{margin-top:10px;color:var(--plum-soft)}
+.svc-card ul{list-style:none;padding:0;margin:18px 0 22px;display:grid;gap:0}
+.svc-card li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-top:1px dashed var(--sand-line);font-size:16px}
+.svc-card li span:last-child{color:var(--euk-ink);font-weight:500;white-space:nowrap}
+.svc-card .note{font-size:14px;margin-top:12px;color:var(--plum-soft)}
+
+/* Ceník */
+.price-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.price-grid{display:grid;gap:16px}
+@media (min-width:760px){.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.price{background:var(--sand-card);border:1px solid var(--sand-line);border-radius:var(--r);padding:24px 22px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:start;min-width:0}
+.price .ic{grid-row:span 3;width:52px;height:52px;border-radius:16px;background:var(--lav);display:grid;place-items:center}
+.price .ic svg{width:28px;height:28px}
+.price h3{font-size:22px}
+.price p{color:var(--plum-soft);font-size:16px}
+.price .meta{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:8px;font-size:14.5px;color:var(--plum)}
+.price .meta span{display:inline-flex;align-items:center;gap:6px}
+.price .meta svg{width:15px;height:15px}
+.price .meta .cost{color:var(--euk-ink);font-weight:600}
+.price-foot{margin-top:18px;font-size:15px;color:var(--plum-soft)}
+
+/* Lymfa */
+.lymfa{background:var(--lav)}
+.lymfa-grid{display:grid;gap:28px;align-items:start}
+@media (min-width:900px){.lymfa-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.lymfa-illu{background:var(--sand-card);border-radius:28px;padding:18px;border:1px solid rgba(255,255,255,.7)}
+.lymfa-illu svg{display:block;width:100%;height:auto}
+.pulse{animation:pump 3.2s ease-in-out infinite}.p2{animation-delay:.8s}
+@keyframes pump{0%,100%{opacity:.2}40%{opacity:.7}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+.flow{stroke-dasharray:6 10;animation:flow 2.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+@media (prefers-reduced-motion:reduce){.flow{animation:none}}
+.lymfa-illu figcaption{font-size:14px;color:var(--plum-soft);padding:10px 6px 2px}
+.info-cols{display:grid;gap:16px;margin-top:22px}
+@media (min-width:620px){.info-cols{grid-template-columns:1fr 1fr}}
+.info{background:var(--sand-card);border-radius:var(--r);padding:20px 20px 18px;min-width:0}
+.info.warn{background:var(--white);border:1px solid var(--lav-deep)}
+.info h3{font:600 16px/1.3 var(--f-body);letter-spacing:.02em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.info ul{margin:10px 0 0;padding-left:18px;display:grid;gap:6px;font-size:15.5px;color:var(--plum-soft)}
+.info ul li::marker{color:var(--euk)}
+.lymfa .lead{font-size:17.5px;color:var(--plum-soft)}
+.lymfa .lead + .lead{margin-top:12px}
+
+/* Photos */
+.photos{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.photos .ph{min-width:0}
+.photos .ph:first-child{grid-column:span 2}
+@media (min-width:800px){.photos{grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)}.photos .ph:first-child{grid-column:auto}}
+.ph{position:relative;border-radius:22px;aspect-ratio:4/3;max-width:100%;background:repeating-linear-gradient(135deg,var(--sand-card) 0 14px,var(--sand) 14px 28px);border:1.5px dashed var(--euk);display:grid;place-items:center;text-align:center;padding:14px;color:var(--plum-soft);font-size:14.5px}
+.ph svg{width:34px;height:34px;display:block;margin:0 auto 8px}
+.ph b{display:block;font:500 16px/1.3 var(--f-display);color:var(--plum);margin-bottom:2px}
+@media (max-width:799px){.ph:not(:first-child){aspect-ratio:1/1}}
+
+/* Voucher */
+.voucher{background:var(--plum);color:var(--sand)}
+.voucher h2{color:var(--sand)}
+.voucher .eyebrow{color:var(--euk-mist)}
+.voucher .uk{color:var(--lav)}
+.voucher-grid{display:grid;gap:30px;align-items:center}
+@media (min-width:880px){.voucher-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px}}
+.voucher p{color:#E6DCE5;font-size:17.5px;margin-top:14px;max-width:34em}
+.voucher .btn-main{background:var(--sand);color:var(--plum);box-shadow:none;margin-top:24px}
+.voucher .btn-main:hover{background:var(--white)}
+.voucher svg.gift{width:100%;height:auto;display:block;max-width:520px;margin:0 auto}
+
+/* Steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:16px;counter-reset:s}
+@media (min-width:820px){.steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}}
+.step{position:relative;padding:26px 22px 24px;border-radius:var(--r);background:var(--sand-card);border:1px solid var(--sand-line);counter-increment:s;min-width:0}
+.step::before{content:counter(s);font:italic 500 46px/1 var(--f-display);color:var(--euk);display:block;margin-bottom:10px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{color:var(--plum-soft);font-size:16px}
+.step a{font-weight:500}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:820px}
+.faq details{background:var(--sand-card);border:1px solid var(--sand-line);border-radius:16px;padding:0 20px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 34px 18px 0;font:500 18px/1.35 var(--f-display);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:4px;top:50%;width:11px;height:11px;border-right:2px solid var(--euk-ink);border-bottom:2px solid var(--euk-ink);transform:translateY(-70%) rotate(45deg);transition:transform .25s ease}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{padding:0 0 18px;color:var(--plum-soft);font-size:16px}
+
+/* Contact */
+.contact{background:var(--sand-card);border-top:1px solid var(--sand-line)}
+.contact-grid{display:grid;gap:28px}
+@media (min-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.c-list{display:grid;gap:0;margin:0}
+.c-row{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:15px 0;border-top:1px solid var(--sand-line);min-width:0}
+.c-row dt{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--plum-soft);padding-top:3px}
+.c-row dd{margin:0;font-size:17px;min-width:0;overflow-wrap:anywhere}
+.c-row dd a{font-weight:500}
+.c-big{font:500 26px/1.2 var(--f-display);text-decoration:none;color:var(--euk-ink)}
+@media (max-width:420px){.c-row{grid-template-columns:1fr;gap:2px}}
+.form{background:var(--white);border:1px solid var(--sand-line);border-radius:24px;padding:26px 22px;display:grid;gap:14px;min-width:0}
+.form h3{font-size:24px}
+.form label{display:grid;gap:6px;font-size:14.5px;color:var(--plum-soft)}
+.form input,.form select,.form textarea{font:400 16px/1.4 var(--f-body);color:var(--plum);background:var(--sand-card);border:1.5px solid var(--sand-line);border-radius:12px;padding:12px 14px;width:100%;min-width:0}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--euk-ink);box-shadow:0 0 0 3px var(--euk-mist)}
+.form textarea{min-height:96px;resize:vertical}
+.form .row2{display:grid;gap:14px}
+@media (min-width:560px){.form .row2{grid-template-columns:1fr 1fr}}
+.form-msg{background:var(--lav);border-radius:14px;padding:14px 16px;font-size:15.5px}
+.form-msg a{font-weight:600}
+
+footer{background:var(--plum);color:#E6DCE5;font-size:14px;padding-block:28px 100px}
+footer .wrap{display:grid;gap:6px}
+footer a{color:var(--sand)}
+@media (min-width:720px){footer{padding-block:32px}}
+
+/* Mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(251,247,241,.97);border-top:1px solid var(--sand-line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1fr 1fr;gap:10px;box-shadow:0 -10px 30px -20px rgba(59,42,58,.5)}
+.mbar .btn{min-height:48px;padding:0 12px;font-size:16px}
+@media (min-width:720px){.mbar{display:none}}
+</style>
+
+<div class="demo-banner"><div class="wrap"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Salon Mária</div></div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Salon Mária – úvod">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#E9E4F2"/><path d="M6 18c3-3 6-3 10 0s7 3 10 0M6 13c3-3 6-3 10 0s7 3 10 0" fill="none" stroke="#3F6B65" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span><b>Salon Mária</b><small>Havířov-Šumbark</small></span>
+    </a>
+    <nav class="head-nav" aria-label="Hlavní">
+      <a href="#od-hlavy">Od hlavy k patě</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#lymfa">Lymfatická masáž</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="head-right">
+      <a class="head-tel" href="tel:+420775047731"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>775 047 731</a>
+      <a class="btn btn-main head-cta" href="tel:+420775047731">Objednat se</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="waves" aria-hidden="true">
+    <svg class="wave w1" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 100 C200 40 400 160 600 100 S1000 40 1200 100 S1600 160 1800 100 S2200 40 2400 100" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity=".9"/></svg>
+    <svg class="wave w2" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 110 C300 30 300 190 600 110 S900 30 1200 110 S1500 190 1800 110 S2100 30 2400 110 V200 H0Z" fill="#DED6EE" opacity=".7"/></svg>
+    <svg class="wave w3" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 90 C200 150 400 30 600 90 S1000 150 1200 90 S1600 30 1800 90 S2200 150 2400 90" fill="none" stroke="#5B8C85" stroke-width="1.5" opacity=".45"/></svg>
+    <svg class="wave w4" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 100 C300 170 300 30 600 100 S900 170 1200 100 S1500 30 1800 100 S2100 170 2400 100 V200 H0Z" fill="#D6CDE8" opacity=".8"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="hero-card">
+      <p class="eyebrow">Kadeřnictví · pedikúra · masáže</p>
+      <h1 id="hero-h">Vlasy, nohy i záda <em>v jednom salonu</em> na Šumbarku.</h1>
+      <p class="hero-lead">Salon Mária na Jarošově 29b v Havířově-Šumbarku. Střih, pedikúra, masáž a přístrojová lymfatická masáž pod jednou střechou. Termín domluvíte po telefonu.</p>
+      <div class="hero-actions">
+        <a class="btn btn-main" href="tel:+420775047731"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Objednat se</a>
+        <a class="hero-num" href="tel:+420775047731">775 047 731</a>
+      </div>
+      <div class="rating">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="#3F6B65"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="#3F6B65"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="#3F6B65"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="#3F6B65"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="#3F6B65"/></svg>
+        </span>
+        <span><b>5,0</b> ze 7 hodnocení na <a href="https://www.facebook.com/MariaHavirov/" target="_blank" rel="noopener">Facebooku</a></span>
+      </div>
+    </div>
+    <div class="hero-side" aria-hidden="true">
+      <div class="hero-chips">
+        <span class="chip"><i><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="7" r="3"/><circle cx="6" cy="17" r="3"/><path d="M8.5 8.5 20 18M8.5 15.5 20 6"/></svg></i>Kadeřnictví</span>
+        <span class="chip"><i><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><path d="M4 14c3-1 5-1 8 0s5 1 8 0M4 9c3-1 5-1 8 0s5 1 8 0"/></svg></i>Masáže</span>
+        <span class="chip"><i><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><path d="M9 3v8c0 4-3 5-3 8a2 2 0 0 0 2 2h7c2 0 3-1 3-3 0-2-3-3-5-3"/></svg></i>Pedikúra</span>
+        <span class="chip"><i><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><path d="M12 20V5M7 10l5-5 5 5M7 16l5-5 5 5"/></svg></i>Lymfatická masáž přístrojem</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec body-map" id="od-hlavy" aria-labelledby="map-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Od hlavy k patě</p>
+      <h2 id="map-h">Vyberte, kde chcete ulevit</h2>
+      <p>Klepněte na vlasy, tělo nebo chodidla. Ukážeme Vám, co pro danou část v salonu děláme.</p>
+    </div>
+    <div class="map-grid">
+      <div class="figure-box">
+        <svg class="fig" viewBox="0 94 640 198" role="group" aria-label="Silueta ženy na masážním lehátku se třemi volitelnými částmi">
+          <defs>
+            <radialGradient id="gl" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#5B8C85" stop-opacity=".38"/>
+              <stop offset=".6" stop-color="#5B8C85" stop-opacity=".12"/>
+              <stop offset="1" stop-color="#5B8C85" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- lehátko -->
+          <path class="ln-soft" d="M34 214 H606 M40 226 H600 M84 226 V284 M556 226 V284 M70 284 H98 M542 284 H570"/>
+          <path class="ln-soft" d="M66 212 C74 200 140 198 160 204 C164 208 162 212 156 213"/>
+
+          <!-- ZÓNA: vlasy -->
+          <g class="zone" data-zone="vlasy" tabindex="0" role="button" aria-label="Vlasy – kadeřnictví">
+            <ellipse class="glow" cx="104" cy="178" rx="100" ry="92" fill="url(#gl)"/>
+            <rect class="hit" x="8" y="96" width="150" height="190" rx="24"/>
+            <!-- hlava z profilu, obličej nahoru -->
+            <path class="ln" d="M150 186 C150 196 142 204 130 205 C112 207 94 200 90 184 C86 168 94 150 112 146 C122 144 132 146 138 152"/>
+            <path class="ln" d="M138 152 C141 156 141 160 143 163 C146 165 150 166 149 169 C147 171 146 172 147 174 C146 176 146 178 148 180 C149 182 150 184 150 186"/>
+            <!-- vlasy splývající přes okraj lehátka -->
+            <path class="ln" d="M112 146 C92 146 76 160 72 182 C68 202 60 222 48 244"/>
+            <path class="ln" d="M104 150 C86 158 80 176 80 196 C80 214 72 236 60 256"/>
+            <path class="ln" d="M96 160 C88 176 90 198 88 214 C86 234 80 250 74 266"/>
+            <path class="ln-soft" d="M120 146 C102 150 92 166 92 184"/>
+            <circle class="dot" cx="96" cy="120" r="4.5"/><circle class="dot-ring" cx="96" cy="120" r="6"/>
+            <text class="lbl" x="110" y="125">Vlasy</text>
+          </g>
+
+          <!-- ZÓNA: tělo -->
+          <g class="zone" data-zone="telo" tabindex="0" role="button" aria-label="Tělo – masáže a lymfatická masáž přístrojem">
+            <ellipse class="glow" cx="350" cy="182" rx="210" ry="84" fill="url(#gl)"/>
+            <rect class="hit" x="158" y="100" width="388" height="190" rx="24"/>
+            <!-- krk a ramena -->
+            <path class="ln" d="M148 190 C156 188 164 184 172 178 C180 172 190 170 200 170"/>
+            <!-- ručník přes trup a stehna -->
+            <path class="towel" d="M204 172 C218 158 236 152 252 160 C266 168 272 180 294 182 C322 184 350 172 378 168 C400 165 418 172 434 180 C440 192 440 204 436 212 L200 212 C194 200 196 184 204 172 Z"/>
+            <path class="ln-soft" d="M252 166 C258 182 260 196 256 210 M318 184 C324 194 326 202 324 210 M392 172 C398 186 398 198 396 210"/>
+            <!-- paže přes ručník -->
+            <path class="ln" d="M212 182 C236 196 268 200 300 198 C312 197 320 198 326 202"/>
+            <!-- nohy -->
+            <path class="ln" d="M434 180 C450 182 462 180 482 178 C502 176 520 182 540 186"/>
+            <path class="ln" d="M432 206 C460 204 480 204 500 202 C516 200 528 202 540 204"/>
+            <path class="ln-soft" d="M478 180 C482 186 482 196 480 204"/>
+            <circle class="dot" cx="318" cy="128" r="4.5"/><circle class="dot-ring" cx="318" cy="128" r="6"/>
+            <text class="lbl" x="330" y="133">Tělo</text>
+          </g>
+
+          <!-- ZÓNA: chodidla -->
+          <g class="zone" data-zone="chodidla" tabindex="0" role="button" aria-label="Chodidla – pedikúra">
+            <ellipse class="glow" cx="566" cy="180" rx="70" ry="80" fill="url(#gl)"/>
+            <rect class="hit" x="540" y="96" width="98" height="190" rx="24"/>
+            <!-- chodidlo (pata dole, prsty nahoru) -->
+            <path class="ln" d="M540 186 C548 184 554 178 556 168 C558 158 562 150 570 148 C578 147 584 152 582 160 C580 168 580 178 582 188 C584 198 580 208 570 210 C560 211 548 208 540 204"/>
+            <path class="ln-soft" d="M566 150 C570 146 576 144 580 148 M560 158 C562 154 566 152 568 152"/>
+            <path class="ln" d="M552 174 C556 166 562 160 568 158" opacity=".5"/>
+            <circle class="dot" cx="566" cy="118" r="4.5"/><circle class="dot-ring" cx="566" cy="118" r="6"/>
+            <text class="lbl" x="552" y="123" text-anchor="end">Chodidla</text>
+          </g>
+        </svg>
+        <div class="zone-tabs" role="tablist" aria-label="Část těla">
+          <button class="zone-tab" role="tab" id="tab-vlasy" data-zone="vlasy" aria-selected="false" aria-controls="svc-card">Vlasy</button>
+          <button class="zone-tab" role="tab" id="tab-telo" data-zone="telo" aria-selected="true" aria-controls="svc-card">Tělo</button>
+          <button class="zone-tab" role="tab" id="tab-chodidla" data-zone="chodidla" aria-selected="false" aria-controls="svc-card">Chodidla</button>
+        </div>
+      </div>
+      <article class="svc-card" id="svc-card" role="tabpanel" aria-live="polite">
+        <div class="kicker"><span class="eyebrow" id="svc-kicker">Tělo</span><span class="uk">ukázkový text</span></div>
+        <h3 id="svc-title">Masáže a lymfatická masáž přístrojem</h3>
+        <p id="svc-text">Ruční masáž uvolní ztuhlá záda a šíji. Přístrojová lymfatická masáž pomáhá nohám, které jsou po celém dni na nohou těžké a oteklé.</p>
+        <ul id="svc-list"></ul>
+        <a class="btn btn-main" href="tel:+420775047731" id="svc-btn">Objednat se na masáž</a>
+        <p class="note">Termín po telefonické domluvě na <span style="white-space:nowrap">775 047 731</span>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sluzby" aria-labelledby="sluzby-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Služby a ceník</p>
+      <div class="price-head"><h2 id="sluzby-h">Co u nás můžete absolvovat</h2><span class="uk">ukázkový text</span></div>
+      <p>Délky jsou orientační. Ceny salon zatím nezveřejňuje, rádi Vám je řekneme do telefonu.</p>
+    </div>
+    <div class="price-grid">
+      <article class="price">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="7" r="3"/><circle cx="6" cy="17" r="3"/><path d="M8.5 8.5 20 18M8.5 15.5 20 6"/></svg></span>
+        <h3>Kadeřnictví</h3>
+        <p>Střih, foukaná nebo barvení podle toho, jak chcete vypadat a kolik času máte na ranní úpravu.</p>
+        <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>45–120 min</span><span class="cost">cena na dotaz</span></div>
+      </article>
+      <article class="price">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><path d="M9 3v8c0 4-3 5-3 8a2 2 0 0 0 2 2h7c2 0 3-1 3-3 0-2-3-3-5-3"/></svg></span>
+        <h3>Pedikúra</h3>
+        <p>Zkrácení a úprava nehtů, odstranění ztvrdlé kůže a promazání chodidel, aby se Vám zase dobře chodilo.</p>
+        <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>cca 60 min</span><span class="cost">cena na dotaz</span></div>
+      </article>
+      <article class="price">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><path d="M4 14c3-1 5-1 8 0s5 1 8 0M4 9c3-1 5-1 8 0s5 1 8 0"/></svg></span>
+        <h3>Masáž</h3>
+        <p>Ruční masáž zad a šíje pro ty, kdo celý den sedí u počítače nebo nosí děti a nákupy.</p>
+        <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>30 / 60 min</span><span class="cost">cena na dotaz</span></div>
+      </article>
+      <article class="price">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.6" stroke-linecap="round"><path d="M12 20V5M7 10l5-5 5 5M7 16l5-5 5 5"/></svg></span>
+        <h3>Lymfatická masáž přístrojem</h3>
+        <p>Manžety na nohou se postupně nafukují od kotníků nahoru a jemně posouvají tekutinu k tělu.</p>
+        <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>30–45 min</span><span class="cost">cena na dotaz</span></div>
+      </article>
+    </div>
+    <p class="price-foot">Chcete spojit více služeb v jeden den? Řekněte to při objednání a termíny naplánujeme za sebou.</p>
+  </div>
+</section>
+
+<section class="sec lymfa" id="lymfa" aria-labelledby="lymfa-h">
+  <div class="wrap lymfa-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:18px">
+        <p class="eyebrow">Přístrojová lymfatická masáž</p>
+        <h2 id="lymfa-h">Lehké nohy po dni stráveném na nohou</h2>
+      </div>
+      <p class="lead">Ležíte, na nohou máte měkké manžety a přístroj je postupně nafukuje od chodidel ke stehnům. Tlak je jemný a pravidelný, mnoho klientek u toho zavře oči a odpočívá. <span class="uk">ukázkový text</span></p>
+      <div class="info-cols">
+        <div class="info">
+          <h3>Pro koho je vhodná <span class="uk">ukázkový text</span></h3>
+          <ul>
+            <li>pocit těžkých, unavených nohou večer</li>
+            <li>práce ve stoje nebo dlouhé sezení</li>
+            <li>mírné otoky kotníků po celém dni</li>
+            <li>chvíle klidu jako doplněk k masáži</li>
+          </ul>
+        </div>
+        <div class="info warn">
+          <h3>Kdy ji nedoporučujeme <span class="uk">ukázkový text</span></h3>
+          <ul>
+            <li>trombóza nebo zánět žil</li>
+            <li>horečka a akutní záněty</li>
+            <li>vážné onemocnění srdce či ledvin</li>
+            <li>těhotenství, otevřené rány na nohou</li>
+          </ul>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:18px;font-size:15.5px">Nejste si jistá? Zeptejte se nejdřív svého lékaře, nebo se poraďte s námi po telefonu.</p>
+    </div>
+    <figure class="lymfa-illu" style="margin:0">
+      <svg viewBox="0 0 400 360" role="img" aria-label="Ilustrace: manžety na nohou, tlak postupuje od chodidel nahoru">
+        <rect x="0" y="0" width="400" height="360" rx="20" fill="#FBF7F1"/>
+        <!-- dvě nohy v manžetách -->
+        <g fill="#E9E4F2" stroke="#3B2A3A" stroke-width="2" stroke-linejoin="round">
+          <path d="M120 40 C150 34 180 36 196 44 L190 300 C180 312 150 314 136 304 Z"/>
+          <path d="M204 44 C222 36 252 34 282 40 L266 304 C252 314 222 312 212 300 Z"/>
+        </g>
+        <!-- komory manžet -->
+        <g stroke="#3B2A3A" stroke-width="1.2" opacity=".5" fill="none">
+          <path d="M124 92 H194 M127 144 H193 M130 196 H192 M133 248 H191"/>
+          <path d="M206 92 H278 M207 144 H275 M208 196 H272 M209 248 H269"/>
+        </g>
+        <!-- vlna tlaku -->
+        <g fill="#5B8C85">
+          <rect class="pulse p1" x="134" y="250" width="56" height="48" rx="6" opacity=".55"/>
+          <rect class="pulse p2" x="131" y="198" width="60" height="46" rx="6" opacity=".4"/>
+          <rect class="pulse p1" x="210" y="250" width="58" height="48" rx="6" opacity=".55"/>
+          <rect class="pulse p2" x="209" y="198" width="62" height="46" rx="6" opacity=".4"/>
+        </g>
+        <!-- chodidla -->
+        <path d="M136 304 C134 322 146 332 166 332 C186 332 192 320 190 300" fill="#FBF7F1" stroke="#3B2A3A" stroke-width="2"/>
+        <path d="M212 300 C210 320 216 332 236 332 C256 332 268 322 266 304" fill="#FBF7F1" stroke="#3B2A3A" stroke-width="2"/>
+        <!-- šipky toku -->
+        <g stroke="#3F6B65" stroke-width="2.4" fill="none" stroke-linecap="round">
+          <path class="flow" d="M80 320 C70 240 90 160 80 60"/>
+          <path class="flow" d="M320 320 C330 240 310 160 320 60"/>
+        </g>
+        <path d="M70 72 L80 52 L90 72 M310 72 L320 52 L330 72" stroke="#3F6B65" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="200" y="26" text-anchor="middle" font-family="Outfit, sans-serif" font-size="14" fill="#3F6B65" letter-spacing="1.5">OD KOTNÍKŮ NAHORU</text>
+      </svg>
+      <figcaption>Ilustrace: přístroj nafukuje komory manžet postupně zdola nahoru.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="foto-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Salon zevnitř</p>
+      <h2 id="foto-h">Podívejte se, kam přijdete</h2>
+    </div>
+    <div class="photos">
+      <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><b>Sem přijde Vaše fotka</b>kadeřnické křeslo a zrcadlo</div></div>
+      <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><b>Sem přijde Vaše fotka</b>masážní lehátko</div></div>
+      <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="#3F6B65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><b>Sem přijde Vaše fotka</b>místo pro pedikúru</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec voucher" id="poukaz" aria-labelledby="poukaz-h">
+  <div class="wrap voucher-grid">
+    <div>
+      <p class="eyebrow">Dárkový poukaz <span class="uk">ukázkový text</span></p>
+      <h2 id="poukaz-h" style="font-size:clamp(28px,5.4vw,44px);margin-top:12px">Darujte mamince, kamarádce nebo sobě hodinu klidu</h2>
+      <p>Poukaz na masáž, pedikúru nebo kadeřnictví připravíme na jméno. Službu a hodnotu domluvíte po telefonu, poukaz si vyzvednete přímo v salonu.</p>
+      <a class="btn btn-main" href="tel:+420775047731">Domluvit poukaz</a>
+    </div>
+    <svg class="gift" viewBox="0 0 520 300" role="img" aria-label="Ilustrace dárkového poukazu">
+      <g transform="rotate(-4 260 150)">
+        <rect x="40" y="40" width="440" height="220" rx="22" fill="#F4EDE3"/>
+        <path d="M40 200 C120 170 200 230 300 200 S440 170 480 196 V238 a22 22 0 0 1 -22 22 H62 a22 22 0 0 1 -22 -22Z" fill="#E9E4F2"/>
+        <path d="M40 214 C120 186 200 244 300 214 S440 186 480 210" fill="none" stroke="#5B8C85" stroke-width="1.6"/>
+        <rect x="340" y="40" width="26" height="220" fill="#5B8C85"/>
+        <path d="M353 118 C330 86 300 92 306 112 C312 130 340 124 353 118 C366 124 394 130 400 112 C406 92 376 86 353 118Z" fill="none" stroke="#3B2A3A" stroke-width="2.2"/>
+        <circle cx="353" cy="118" r="7" fill="#3B2A3A"/>
+        <text x="74" y="96" font-family="Outfit, sans-serif" font-size="13" letter-spacing="2.5" fill="#3F6B65">DÁRKOVÝ POUKAZ</text>
+        <text x="74" y="140" font-family="Lora, Georgia, serif" font-size="34" fill="#3B2A3A">Salon Mária</text>
+        <text x="74" y="170" font-family="Lora, Georgia, serif" font-style="italic" font-size="18" fill="#5E4A5C">hodina jen pro Vás</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="sec" id="jak" aria-labelledby="jak-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Jak to probíhá</p>
+      <h2 id="jak-h">Od telefonu k lehkým nohám ve třech krocích</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Zavoláte</h3><p>Na <a href="tel:+420775047731">775 047 731</a> řeknete, o co máte zájem. Domluvíme termín, který Vám sedí.</p></li>
+      <li class="step"><h3>Přijdete na Jarošovu</h3><p>Salon najdete na adrese Jarošova 1217/29b v Havířově-Šumbarku. Odložíte kabát a můžete vypnout.</p></li>
+      <li class="step"><h3>Odcházíte odpočatá</h3><p>S novým účesem, upravenými chodidly nebo uvolněnými zády. Další termín domluvíme rovnou na místě. <span class="uk">ukázkový text</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Časté otázky</p>
+      <h2 id="faq-h">Na co se klientky ptají</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Musím se objednat předem?</summary><p>Ano. Termíny domlouváme po telefonu na čísle 775 047 731, případně e-mailem na salonmaria1@seznam.cz.</p></details>
+      <details><summary>Můžu si dát v jeden den střih i pedikúru?</summary><p>Řekněte to při objednání a pokusíme se služby naplánovat za sebou, ať nemusíte chodit dvakrát. <span class="uk">ukázkový text</span></p></details>
+      <details><summary>Jak se připravit na lymfatickou masáž přístrojem?</summary><p>Vezměte si pohodlné oblečení, před masáží se nepřejídejte a pijte dost vody. Pokud se léčíte s žilami nebo srdcem, poraďte se předem s lékařem. <span class="uk">ukázkový text</span></p></details>
+      <details><summary>Kolik stojí jednotlivé služby?</summary><p>Ceny zatím nezveřejňujeme. Rádi Vám je řekneme po telefonu při domlouvání termínu.</p></details>
+      <details><summary>Prodáváte dárkové poukazy?</summary><p>Poukaz na vybranou službu Vám připravíme po telefonické domluvě. <span class="uk">ukázkový text</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap contact-grid">
+    <div style="min-width:0">
+      <div class="sec-head" style="margin-bottom:20px">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="kontakt-h">Zavolejte a domluvíme termín</h2>
+      </div>
+      <dl class="c-list">
+        <div class="c-row"><dt>Telefon</dt><dd><a class="c-big" href="tel:+420775047731">775 047 731</a></dd></div>
+        <div class="c-row"><dt>E-mail</dt><dd><a href="mailto:salonmaria1@seznam.cz">salonmaria1@seznam.cz</a></dd></div>
+        <div class="c-row"><dt>Adresa</dt><dd>Jarošova 1217/29b<br>Havířov-Šumbark<br><a href="https://mapy.cz/zakladni?q=Jaro%C5%A1ova%201217%2F29b%2C%20Hav%C3%AD%C5%99ov-%C5%A0umbark" target="_blank" rel="noopener">Ukázat na Mapy.cz</a></dd></div>
+        <div class="c-row"><dt>Otevřeno</dt><dd>Termín po telefonické domluvě</dd></div>
+        <div class="c-row"><dt>Facebook</dt><dd><a href="https://www.facebook.com/MariaHavirov/" target="_blank" rel="noopener">facebook.com/MariaHavirov</a></dd></div>
+      </dl>
+    </div>
+    <form class="form" id="f" novalidate>
+      <h3>Požádat o termín</h3>
+      <div class="row2">
+        <label for="f-name">Jméno<input id="f-name" name="name" autocomplete="name" placeholder="Jana Nováková"></label>
+        <label for="f-tel">Telefon<input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="777 123 456"></label>
+      </div>
+      <label for="f-svc">O co máte zájem<select id="f-svc" name="svc">
+        <option>Kadeřnictví</option><option>Pedikúra</option><option>Masáž</option><option>Lymfatická masáž přístrojem</option><option>Dárkový poukaz</option>
+      </select></label>
+      <label for="f-msg">Kdy se Vám to hodí<textarea id="f-msg" name="msg" placeholder="Např. úterý odpoledne nebo čtvrtek ráno"></textarea></label>
+      <button class="btn btn-main" type="submit">Odeslat žádost</button>
+      <p class="form-msg" id="f-out" hidden>Tohle je jen návrh webu, formulář zatím nic neodesílá. Termín si prosím domluvte na čísle <a href="tel:+420775047731">775 047 731</a>.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Salon Mária – kadeřnictví, pedikúra a masáže · Jarošova 1217/29b, Havířov-Šumbark · IČO 47173076</span>
+    <span>Nezávazný návrh webu, není to oficiální stránka firmy Salon Mária. Hodnocení převzato z <a href="https://www.facebook.com/MariaHavirov/" target="_blank" rel="noopener">Facebooku</a>.</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+420775047731">Zavolat</a>
+  <a class="btn btn-main" href="tel:+420775047731">Objednat se</a>
+</div>
+
+
+<script>
+(function(){
+  var data={
+    vlasy:{k:"Vlasy",t:"Kadeřnictví",p:"Nový střih, osvěžení barvy nebo jen foukaná před oslavou. Probereme, co Vám sedí, a nikam nespěcháme.",l:[["Střih a foukaná","cena na dotaz"],["Barvení a melír","cena na dotaz"],["Úprava na slavnostní příležitost","cena na dotaz"]],b:"Objednat se ke kadeřnici"},
+    telo:{k:"Tělo",t:"Masáže a lymfatická masáž přístrojem",p:"Ruční masáž uvolní ztuhlá záda a šíji. Přístrojová lymfatická masáž pomáhá nohám, které jsou po celém dni na nohou těžké a oteklé.",l:[["Masáž zad a šíje","cena na dotaz"],["Lymfatická masáž přístrojem","cena na dotaz"]],b:"Objednat se na masáž"},
+    chodidla:{k:"Chodidla",t:"Pedikúra",p:"Úprava nehtů, odstranění ztvrdlé kůže a promazání chodidel. Odcházíte s nohama, které se těší do sandálů.",l:[["Pedikúra","cena na dotaz"],["Úprava nehtů na nohou","cena na dotaz"]],b:"Objednat se na pedikúru"}
+  };
+  var zones=document.querySelectorAll('.fig .zone'),tabs=document.querySelectorAll('.zone-tab');
+  var card=document.getElementById('svc-card');
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function show(z){
+    var d=data[z]; if(!d) return;
+    zones.forEach(function(g){g.classList.toggle('on',g.getAttribute('data-zone')===z);g.setAttribute('aria-pressed',g.getAttribute('data-zone')===z?'true':'false')});
+    tabs.forEach(function(t){t.setAttribute('aria-selected',t.getAttribute('data-zone')===z?'true':'false')});
+    document.getElementById('svc-kicker').textContent=d.k;
+    document.getElementById('svc-title').textContent=d.t;
+    document.getElementById('svc-text').textContent=d.p;
+    document.getElementById('svc-btn').textContent=d.b;
+    document.getElementById('svc-list').innerHTML=d.l.map(function(r){return '<li><span>'+esc(r[0])+'</span><span>'+esc(r[1])+'</span></li>'}).join('');
+    card.setAttribute('aria-labelledby','tab-'+z);
+    card.style.animation='none'; void card.offsetWidth; card.style.animation='';
+  }
+  zones.forEach(function(g){
+    g.addEventListener('click',function(){show(g.getAttribute('data-zone'))});
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(g.getAttribute('data-zone'))}});
+  });
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-zone'))})});
+  show('telo');
+
+  var f=document.getElementById('f'),out=document.getElementById('f-out');
+  f.addEventListener('submit',function(e){e.preventDefault();out.hidden=false;out.scrollIntoView({block:'nearest',behavior:'smooth'})});
+})();
+</script>
+</body>
+</html>

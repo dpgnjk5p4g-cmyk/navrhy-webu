@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Autoservis Karviná – Bolsoncar Boleslav Foltyn | návrh webu</title>
+<meta name="description" content="Autoservis v Karviné-Hranicích: opravy brzd a výfuků, základní diagnostika evropských vozů, montáž a přihlášení tažného zařízení, geometrie podvozku. FERODO brzdový specialista Boleslav Foltyn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Boleslav Foltyn – autoservis (Bolsoncar)","description":"Opravy brzdové soustavy a výfuků, základní diagnostika pro evropské vozy, montáž a přihlášení tažného zařízení, geometrie podvozku.","telephone":"+420777620373","email":"bolsoncar@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Mickiewiczova 141/66","addressLocality":"Karviná-Hranice","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"70247234"},"sameAs":["https://www.firmy.cz/detail/1987720-boleslav-foltyn-autoservis-karvina-hranice.html","https://bolsoncar.webnode.cz/"]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Layout: ocelová plocha s brzdovým kotoučem, přes ni světlá karta; pod ní interaktivní podvozek, služby, zima, postup, objednávka, FAQ, kontakt */
+:root{
+  --steel:#1E3A5F; --steel-deep:#152B47; --ember:#D9480F; --ember-ink:#A8380B;
+  --paper:#F4F1EC; --smoke:#6B7280; --smoke-ink:#565C66; --ink:#17212E; --white:#FFFFFF; --line:#DCD6CC;
+  --display:"Rajdhani","Arial Narrow",Arial,sans-serif; --body:"Roboto",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--white)}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0;color:var(--steel)}
+h2{font-size:clamp(1.9rem,1.4rem + 2vw,2.7rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0}
+a{color:var(--ember-ink)}
+:focus-visible{outline:3px solid var(--ember);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;color:var(--ember-ink)}
+.demo{display:inline-block;vertical-align:middle;font:500 .68rem/1 var(--body);letter-spacing:.04em;text-transform:uppercase;background:#FFF3C4;color:#5A4500;border:1px solid #E6CF7A;border-radius:3px;padding:3px 5px;margin-left:6px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:4px;font:700 1.1rem/1 var(--display);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-primary{background:var(--ember-ink);color:var(--white)}
+.btn-primary:hover{background:#8E2F09}
+.btn-ghost{background:transparent;color:var(--steel);border-color:var(--steel)}
+.btn-ghost:hover{background:var(--steel);color:var(--white)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* banner + header */
+.proto{background:var(--ink);color:#F4F1EC;font-size:.82rem;text-align:center;padding-block:7px}
+.proto strong{color:#FFB38A}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--steel)}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font:700 1.45rem/1 var(--display);letter-spacing:.06em}
+.brand small{display:block;font:500 .72rem/1.2 var(--body);color:var(--smoke-ink);letter-spacing:.02em}
+.top nav{display:none;gap:22px}
+.top nav a{color:var(--ink);text-decoration:none;font:600 1.02rem var(--display);letter-spacing:.04em;text-transform:uppercase}
+.top nav a:hover{color:var(--ember-ink)}
+.tel-top{display:inline-flex;align-items:center;gap:6px;font:700 1.15rem/1 var(--display);color:var(--steel);text-decoration:none;white-space:nowrap}
+.tel-top svg{width:18px;height:18px;color:var(--ember-ink)}
+@media (min-width:900px){.top nav{display:flex}}
+
+/* hero */
+.hero{position:relative;background:var(--steel);overflow:hidden;padding-block:22px 26px}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:8px;background:repeating-linear-gradient(-45deg,var(--ember) 0 14px,var(--steel-deep) 14px 28px)}
+.disc{position:absolute;right:-90px;top:-70px;width:330px;height:330px;opacity:.95}
+.disc .rot{transform-origin:200px 200px;animation:spin 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes spin{from{transform:rotate(-140deg)}to{transform:rotate(0)}}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:18px}
+.card{background:var(--paper);border-radius:6px;padding:20px 18px 18px;box-shadow:0 18px 40px rgba(10,20,35,.35);max-width:620px;margin-top:92px;border-top:6px solid var(--ember)}
+.card .eyebrow{font-size:.82rem}
+.card h1{font-size:clamp(2.3rem,1.6rem + 3.6vw,4rem);font-weight:700;margin:6px 0 10px;color:var(--steel)}
+.card h1 span{color:var(--ember-ink)}
+.card p.lead{font-size:1rem;color:var(--ink)}
+.card .actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;font-size:.88rem;color:var(--smoke-ink)}
+.badge-row span{display:inline-flex;align-items:center;gap:6px}
+.badge-row i{width:8px;height:8px;background:var(--ember);border-radius:50%;display:inline-block}
+@media (min-width:520px){.card .actions{grid-template-columns:auto auto;justify-content:start}}
+@media (min-width:900px){
+  .hero{padding-block:64px 72px}
+  .disc{right:4%;top:50%;transform:translateY(-50%);width:520px;height:520px}
+  .card{margin-top:0;padding:34px 36px 30px}
+}
+
+/* sections */
+section{padding-block:56px}
+.sec-head{display:grid;gap:10px;max-width:720px;margin-bottom:28px}
+.sec-head p{color:var(--smoke-ink)}
+
+/* chassis */
+.chassis{background:var(--white);border-block:1px solid var(--line)}
+.ch-grid{display:grid;gap:22px}
+.ch-stage{background:var(--steel);border-radius:6px;padding:14px;position:relative}
+.ch-stage svg{display:block;width:100%;height:auto}
+.hs{cursor:pointer}
+.hs circle.dot{fill:var(--ember);stroke:var(--white);stroke-width:3}
+.hs circle.ring{fill:none;stroke:var(--ember);stroke-width:2;opacity:.8;transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+.hs.on circle.dot{fill:var(--white);stroke:var(--ember);stroke-width:5}
+.hs text{font:700 15px var(--display);fill:var(--white);letter-spacing:.06em}
+@keyframes pulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.part{transition:fill .25s,stroke .25s}
+.part.lit{stroke:var(--ember)!important}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font:600 1rem/1 var(--display);letter-spacing:.03em;padding:11px 14px;border-radius:999px;border:2px solid #5F7899;background:transparent;color:var(--white);cursor:pointer;min-height:44px}
+.chip[aria-pressed="true"]{background:var(--ember-ink);border-color:var(--ember-ink)}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px 20px;display:grid;gap:12px;align-content:start;min-width:0}
+.panel .tag{font:700 .85rem var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--ember-ink)}
+.panel h3{font-size:1.7rem}
+.panel .sym{font-size:.95rem;color:var(--smoke-ink);border-left:3px solid var(--ember);padding-left:12px}
+.panel .msg{background:var(--white);border:1px dashed #B9B2A6;border-radius:4px;padding:10px 12px;font-size:.95rem;word-break:break-word}
+.panel .msg b{display:block;font:700 .78rem var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--smoke-ink);margin-bottom:4px}
+.panel .acts{display:flex;flex-wrap:wrap;gap:10px}
+.panel .small{font-size:.85rem;color:var(--smoke-ink)}
+.linkbtn{background:none;border:0;padding:0;color:var(--ember-ink);font:500 .9rem var(--body);text-decoration:underline;cursor:pointer}
+@media (min-width:900px){.ch-grid{grid-template-columns:1.45fr 1fr;align-items:start}}
+
+/* services */
+.svc{display:grid;gap:14px}
+.svc article{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;grid-template-columns:52px 1fr;gap:4px 16px;align-items:start}
+.svc article svg{grid-row:span 2;width:52px;height:52px}
+.svc article h3{align-self:center}
+.svc article p{color:var(--ink);font-size:.98rem}
+.price-note{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;background:var(--steel);color:var(--white);border-radius:6px;padding:18px 20px}
+.price-note p{font:600 1.3rem/1.2 var(--display);flex:1 1 240px}
+.price-note .btn-primary{background:var(--ember-ink)}
+@media (min-width:700px){.svc{grid-template-columns:1fr 1fr}}
+@media (min-width:1050px){.svc{grid-template-columns:repeat(3,1fr)}}
+
+/* trust */
+.trust{background:var(--steel);color:var(--paper)}
+.trust h2{color:var(--white)}
+.trust .sec-head p{color:#C9D3E0}
+.tr-grid{display:grid;gap:18px}
+.ferodo{border:2px solid var(--ember);border-radius:6px;padding:22px;display:grid;gap:10px}
+.ferodo .big{font:700 clamp(2rem,1.5rem + 2vw,2.8rem)/1 var(--display);color:var(--white);letter-spacing:.02em}
+.ferodo .big span{color:#FF8A57}
+.ferodo p{color:#DCE3EC}
+.facts{display:grid;gap:12px;list-style:none;margin:0;padding:0}
+.facts li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;color:#E6EBF2}
+.facts li svg{width:24px;height:24px;color:#FF8A57;margin-top:2px}
+.photo{border:2px dashed #5F7899;border-radius:6px;min-height:200px;display:grid;place-items:center;text-align:center;color:#C9D3E0;padding:20px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px)}
+.photo b{display:block;font:700 1.3rem var(--display);color:var(--white)}
+@media (min-width:900px){.tr-grid{grid-template-columns:1fr 1fr 1fr}}
+
+/* winter */
+.winter .grid{display:grid;gap:14px}
+.winter .item{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;gap:8px}
+.winter .item .k{font:700 2.4rem/1 var(--display);color:var(--steel);font-variant-numeric:tabular-nums}
+.winter .item .k small{font-size:1.1rem;color:var(--smoke-ink);margin-left:4px}
+.winter .item.ours{background:var(--steel);border-color:var(--steel);color:var(--white)}
+.winter .item.ours .k,.winter .item.ours h3{color:var(--white)}
+.winter .item.ours p{color:#DCE3EC}
+.winter .item.ours a{color:#FFB38A}
+.winter .src{font-size:.82rem;color:var(--smoke-ink);margin-top:14px}
+@media (min-width:700px){.winter .grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1050px){.winter .grid{grid-template-columns:repeat(4,1fr)}}
+
+/* steps */
+.steps{display:grid;gap:14px;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{position:relative;background:var(--white);border:1px solid var(--line);border-radius:6px;padding:20px 20px 20px 74px;min-height:96px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:40px;height:40px;border-radius:50%;background:var(--steel);color:var(--white);display:grid;place-items:center;font:700 1.4rem var(--display)}
+.steps li h3{margin-bottom:4px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* form */
+.order{background:var(--white);border-block:1px solid var(--line)}
+.o-grid{display:grid;gap:24px}
+form{display:grid;gap:14px;min-width:0}
+label{display:grid;gap:6px;font:600 1rem var(--display);letter-spacing:.03em;color:var(--steel)}
+input,select,textarea{font:400 1rem var(--body);color:var(--ink);background:var(--paper);border:1px solid #B9B2A6;border-radius:4px;padding:12px;min-height:48px;width:100%}
+textarea{min-height:96px;resize:vertical}
+.f2{display:grid;gap:14px}
+@media (min-width:600px){.f2{grid-template-columns:1fr 1fr}}
+.out{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px;display:grid;gap:10px}
+.out pre{white-space:pre-wrap;word-break:break-word;font:400 .95rem/1.5 var(--body);margin:0}
+.side{background:var(--steel);color:var(--white);border-radius:6px;padding:22px;display:grid;gap:10px;align-content:start}
+.side h3{color:var(--white)}
+.side .num{font:700 2rem/1 var(--display);color:var(--white);text-decoration:none;letter-spacing:.02em}
+.side p{color:#DCE3EC}
+@media (min-width:900px){.o-grid{grid-template-columns:1.4fr 1fr}}
+
+/* faq */
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:6px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 50px 16px 18px;font:700 1.2rem/1.25 var(--display);color:var(--steel);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:12px;font:700 1.6rem var(--display);color:var(--ember-ink)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 18px;color:var(--ink)}
+
+/* contact */
+.contact{background:var(--steel-deep);color:var(--paper)}
+.contact h2{color:var(--white)}
+.c-grid{display:grid;gap:20px}
+.c-list{display:grid;gap:14px;margin:0}
+.c-list div{display:grid;gap:2px}
+.c-list dt{font:700 .85rem var(--display);letter-spacing:.12em;text-transform:uppercase;color:#AFC0D4}
+.c-list dd{margin:0;font-size:1.1rem;color:var(--white)}
+.c-list a{color:var(--white)}
+.maplink{display:grid;place-items:center;text-align:center;gap:10px;border-radius:6px;min-height:220px;text-decoration:none;color:var(--white);background:
+ linear-gradient(0deg,rgba(21,43,71,.55),rgba(21,43,71,.55)),
+ repeating-linear-gradient(90deg,transparent 0 46px,rgba(255,255,255,.08) 46px 48px),
+ repeating-linear-gradient(0deg,transparent 0 46px,rgba(255,255,255,.08) 46px 48px),#24466F;border:1px solid #3B5C85;padding:20px}
+.maplink b{font:700 1.4rem var(--display)}
+.maplink span{display:inline-block;background:var(--ember-ink);padding:10px 16px;border-radius:4px;font:700 1rem var(--display);letter-spacing:.06em;text-transform:uppercase}
+@media (min-width:900px){.c-grid{grid-template-columns:1fr 1fr}}
+footer{background:var(--ink);color:#C5CCD6;font-size:.85rem;padding-block:22px}
+footer a{color:#FFB38A}
+
+/* sticky mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--white);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));box-shadow:0 -6px 18px rgba(0,0,0,.08)}
+.mbar .btn{min-height:48px;font-size:1rem;padding:0 10px}
+@media (min-width:900px){.mbar{display:none}}
+</style>
+</head>
+<body>
+
+<div class="proto"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy <strong>Boleslav Foltyn – autoservis (Bolsoncar)</strong></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Bolsoncar – úvod">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#1E3A5F"/><circle cx="20" cy="20" r="11" fill="none" stroke="#F4F1EC" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="#F4F1EC"/><path d="M29 8a17 17 0 0 1 6 9l-8 2a9 9 0 0 0-3-5z" fill="#D9480F"/></svg>
+      <span><b>BOLSONCAR</b><small>Boleslav Foltyn · autoservis</small></span>
+    </a>
+    <nav aria-label="Hlavní menu">
+      <a href="#podvozek">Co Vás trápí</a><a href="#sluzby">Služby</a><a href="#zima">Před zimou</a><a href="#objednat">Objednat</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-top" href="tel:+420777620373"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>777 620 373</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <svg class="disc" viewBox="0 0 400 400" aria-hidden="true">
+    <g class="rot">
+      <circle cx="200" cy="200" r="190" fill="#2A4C78"/>
+      <circle cx="200" cy="200" r="172" fill="none" stroke="#3E6394" stroke-width="2"/>
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#35587F" stroke-width="22" stroke-dasharray="6 14"/>
+      <g fill="#1E3A5F">
+        <circle cx="200" cy="70" r="7"/><circle cx="292" cy="108" r="7"/><circle cx="330" cy="200" r="7"/><circle cx="292" cy="292" r="7"/><circle cx="200" cy="330" r="7"/><circle cx="108" cy="292" r="7"/><circle cx="70" cy="200" r="7"/><circle cx="108" cy="108" r="7"/>
+        <circle cx="250" cy="80" r="5"/><circle cx="320" cy="150" r="5"/><circle cx="320" cy="250" r="5"/><circle cx="250" cy="320" r="5"/><circle cx="150" cy="320" r="5"/><circle cx="80" cy="250" r="5"/><circle cx="80" cy="150" r="5"/><circle cx="150" cy="80" r="5"/>
+      </g>
+      <circle cx="200" cy="200" r="92" fill="#1E3A5F"/>
+      <circle cx="200" cy="200" r="82" fill="#264670"/>
+      <g fill="#1E3A5F"><circle cx="200" cy="150" r="10"/><circle cx="248" cy="185" r="10"/><circle cx="230" cy="240" r="10"/><circle cx="170" cy="240" r="10"/><circle cx="152" cy="185" r="10"/></g>
+      <circle cx="200" cy="200" r="28" fill="#152B47"/>
+    </g>
+    <path d="M318 46a190 190 0 0 1 70 96l-58 22a128 128 0 0 0-46-66z" fill="#D9480F"/>
+    <path d="M330 72l30 52" stroke="#A8380B" stroke-width="6" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap">
+    <div class="card">
+      <p class="eyebrow">Karviná-Hranice · FERODO brzdový specialista</p>
+      <h1 id="h1">Brzdy a výfuky v <span>Karviné</span></h1>
+      <p class="lead">Opravujeme brzdovou soustavu včetně diagnostiky ABS a výfuky. K tomu základní diagnostika evropských vozů, tažné zařízení s přihlášením a geometrie podvozku.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#objednat">Objednat servis</a>
+        <a class="btn btn-ghost" href="tel:+420777620373"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 777 620 373</a>
+      </div>
+      <div class="badge-row"><span><i></i>Mickiewiczova 141/66</span><span><i></i>Termín dle telefonické domluvy</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="chassis" id="podvozek" aria-labelledby="ch-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Ukažte, kde to drhne</p>
+      <h2 id="ch-h">Klepněte na místo, které Vás na autě trápí</h2>
+      <p>Uvidíte, co s tím uděláme, a rovnou si připravíte telefonát nebo SMS s popisem závady.</p>
+    </div>
+    <div class="ch-grid">
+      <div class="ch-stage">
+        <svg viewBox="0 0 640 330" role="img" aria-labelledby="svgt">
+          <title id="svgt">Pohled na podvozek osobního auta zespodu: brzdy, výfuk, tažné zařízení, geometrie a diagnostika</title>
+          <text x="20" y="28" font-family="Rajdhani,Arial,sans-serif" font-weight="700" font-size="13" fill="#AFC0D4" letter-spacing="2">PŘEDEK</text>
+          <text x="560" y="28" font-family="Rajdhani,Arial,sans-serif" font-weight="700" font-size="13" fill="#AFC0D4" letter-spacing="2">ZÁĎ</text>
+          <!-- body -->
+          <rect x="70" y="62" width="470" height="206" rx="70" fill="#264670" stroke="#5F7899" stroke-width="2"/>
+          <rect x="118" y="96" width="374" height="138" rx="24" fill="#1F3D62"/>
+          <!-- axles -->
+          <rect x="130" y="160" width="8" height="10" fill="#5F7899"/>
+          <line class="part" id="p-geo-axle" x1="150" y1="88" x2="150" y2="242" stroke="#7D93B0" stroke-width="7" stroke-linecap="round"/>
+          <line x1="450" y1="88" x2="450" y2="242" stroke="#7D93B0" stroke-width="7" stroke-linecap="round"/>
+          <!-- engine -->
+          <rect x="100" y="120" width="90" height="90" rx="10" fill="#33557F" stroke="#5F7899" stroke-width="2"/>
+          <rect x="196" y="140" width="40" height="50" rx="6" fill="#2D4E78" stroke="#5F7899" stroke-width="2"/>
+          <!-- driveshaft / tunnel -->
+          <rect x="236" y="158" width="200" height="14" rx="7" fill="#2D4E78"/>
+          <!-- exhaust -->
+          <path class="part" id="p-exh" d="M170 205 C 200 238, 240 236, 270 232 L 470 232 C 510 232, 530 236, 556 236" fill="none" stroke="#9AA9BC" stroke-width="9" stroke-linecap="round"/>
+          <rect class="part" id="p-exh-m" x="300" y="218" width="96" height="28" rx="14" fill="#5F7899" stroke="#9AA9BC" stroke-width="3"/>
+          <rect class="part" id="p-exh-r" x="486" y="220" width="40" height="24" rx="12" fill="#5F7899" stroke="#9AA9BC" stroke-width="3"/>
+          <!-- tow hitch -->
+          <path class="part" id="p-tow" d="M540 165 L 596 165" stroke="#9AA9BC" stroke-width="10" stroke-linecap="round"/>
+          <circle class="part" cx="606" cy="165" r="11" fill="#9AA9BC" stroke="#9AA9BC" stroke-width="2"/>
+          <!-- wheels -->
+          <g id="wheels">
+            <rect x="122" y="44" width="58" height="34" rx="8" fill="#0F1F33"/>
+            <rect x="122" y="252" width="58" height="34" rx="8" fill="#0F1F33"/>
+            <rect x="422" y="44" width="58" height="34" rx="8" fill="#0F1F33"/>
+            <rect x="422" y="252" width="58" height="34" rx="8" fill="#0F1F33"/>
+            <rect class="part" id="p-brk" x="135" y="74" width="32" height="10" rx="3" fill="#D9480F" stroke="#D9480F"/>
+            <rect class="part" x="135" y="246" width="32" height="10" rx="3" fill="#D9480F" stroke="#D9480F"/>
+            <rect class="part" x="435" y="74" width="32" height="10" rx="3" fill="#D9480F" stroke="#D9480F"/>
+            <rect class="part" x="435" y="246" width="32" height="10" rx="3" fill="#D9480F" stroke="#D9480F"/>
+          </g>
+          <!-- geometry guides on front wheel -->
+          <g id="p-geo" opacity=".55">
+            <line x1="100" y1="300" x2="210" y2="300" stroke="#AFC0D4" stroke-width="2" stroke-dasharray="6 5"/>
+            <line x1="112" y1="306" x2="196" y2="292" stroke="#FF8A57" stroke-width="2"/>
+          </g>
+          <!-- hotspots -->
+          <g class="hs" data-k="brzdy" tabindex="0" role="button" aria-label="Brzdy"><circle class="ring" cx="151" cy="60" r="16"/><circle class="dot" cx="151" cy="60" r="12"/><text x="176" y="36">BRZDY</text></g>
+          <g class="hs" data-k="diagnostika" tabindex="0" role="button" aria-label="Diagnostika"><circle class="ring" cx="145" cy="165" r="16"/><circle class="dot" cx="145" cy="165" r="12"/><text x="196" y="128">DIAGNOSTIKA</text></g>
+          <g class="hs" data-k="geometrie" tabindex="0" role="button" aria-label="Geometrie podvozku"><circle class="ring" cx="151" cy="270" r="16"/><circle class="dot" cx="151" cy="270" r="12"/><text x="214" y="318">GEOMETRIE</text></g>
+          <g class="hs" data-k="vyfuk" tabindex="0" role="button" aria-label="Výfuk"><circle class="ring" cx="348" cy="232" r="16"/><circle class="dot" cx="348" cy="232" r="12"/><text x="318" y="292">VÝFUK</text></g>
+          <g class="hs" data-k="tazne" tabindex="0" role="button" aria-label="Tažné zařízení"><circle class="ring" cx="606" cy="165" r="16"/><circle class="dot" cx="606" cy="165" r="12"/><text x="510" y="128">TAŽNÉ</text></g>
+        </svg>
+        <div class="chips" role="group" aria-label="Vyberte část auta">
+          <button class="chip" type="button" data-k="brzdy">Brzdy</button>
+          <button class="chip" type="button" data-k="vyfuk">Výfuk</button>
+          <button class="chip" type="button" data-k="tazne">Tažné zařízení</button>
+          <button class="chip" type="button" data-k="geometrie">Geometrie</button>
+          <button class="chip" type="button" data-k="diagnostika">Diagnostika</button>
+        </div>
+      </div>
+      <div class="panel" aria-live="polite">
+        <p class="tag" id="pn-tag">Brzdová soustava</p>
+        <h3 id="pn-h">Brzdy, které zastaví včas</h3>
+        <p id="pn-t"></p>
+        <p class="sym" id="pn-s"></p>
+        <div class="msg"><b>Připravená zpráva</b><span id="pn-m"></span></div>
+        <div class="acts">
+          <a class="btn btn-primary" id="pn-sms" href="sms:+420777620373">Poslat SMS</a>
+          <a class="btn btn-ghost" href="tel:+420777620373">Zavolat</a>
+        </div>
+        <p class="small">Číslo: <strong>777 620 373</strong> · <button class="linkbtn" type="button" id="pn-copy">Zkopírovat text zprávy</button></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="sv-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Služby</p>
+      <h2 id="sv-h">Na co se v dílně specializujeme</h2>
+      <p>Hlavní činností autoservisu Bolsoncar jsou opravy brzdové a výfukové soustavy.</p>
+    </div>
+    <div class="svc">
+      <article>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="#1E3A5F"/><circle cx="26" cy="26" r="9" fill="#F4F1EC"/><path d="M38 9a22 22 0 0 1 8 11l-9 3a12 12 0 0 0-4-6z" fill="#D9480F"/></svg>
+        <h3>Opravy brzdové soustavy</h3>
+        <p>Destičky, kotouče a další díly brzd včetně diagnostiky ABS systému – jako FERODO brzdový specialista.</p>
+      </article>
+      <article>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><rect x="4" y="20" width="44" height="14" rx="7" fill="#1E3A5F"/><rect x="14" y="16" width="20" height="22" rx="8" fill="#D9480F"/><circle cx="46" cy="27" r="3" fill="#F4F1EC"/></svg>
+        <h3>Opravy výfuků</h3>
+        <p>Opravíme výfukovou soustavu, když auto začne hlučet, drnčet pod podlahou nebo je cítit výfukové plyny.</p>
+      </article>
+      <article>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><rect x="6" y="10" width="40" height="30" rx="4" fill="#1E3A5F"/><path d="M12 30l7-8 6 5 8-11 7 9" fill="none" stroke="#D9480F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="40" width="12" height="5" fill="#1E3A5F"/></svg>
+        <h3>Základní diagnostika</h3>
+        <p>Připojíme diagnostiku k evropským vozům a zjistíme, proč svítí kontrolka nebo co auto hlásí.</p>
+      </article>
+      <article>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M4 30h26" stroke="#1E3A5F" stroke-width="7" stroke-linecap="round"/><path d="M30 30c6 0 8-6 8-10" fill="none" stroke="#1E3A5F" stroke-width="5"/><circle cx="40" cy="15" r="7" fill="#D9480F"/></svg>
+        <h3>Tažné zařízení</h3>
+        <p>Tažné zařízení namontujeme i přihlásíme, takže s ním můžete hned vyrazit.</p>
+      </article>
+      <article>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><rect x="16" y="6" width="20" height="40" rx="6" fill="#1E3A5F"/><path d="M6 46L46 6" stroke="#D9480F" stroke-width="3" stroke-dasharray="4 4"/><path d="M26 2v48" stroke="#F4F1EC" stroke-width="2"/></svg>
+        <h3>Geometrie podvozku</h3>
+        <p>Seřídíme geometrii, když auto táhne do strany, volant stojí nakřivo nebo se pneumatiky sjíždějí nerovnoměrně.</p>
+      </article>
+      <article>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="#D9480F"/><path d="M17 27l6 6 12-14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>FERODO brzdový specialista</h3>
+        <p>Opravy brzdové soustavy jsou hlavní činností autoservisu Bolsoncar.</p>
+      </article>
+    </div>
+    <div class="price-note">
+      <p>Cenu Vám řekneme předem, ještě než začneme. <span class="demo">ukázkový text</span></p>
+      <a class="btn btn-primary" href="tel:+420777620373">Zavolat 777 620 373</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" style="color:#FFB38A">Proč Bolsoncar</p>
+      <h2 id="tr-h">Dílna, která dělá hlavně brzdy</h2>
+      <p>Brzdová soustava včetně ABS a výfuky jsou hlavní činností autoservisu.</p>
+    </div>
+    <div class="tr-grid">
+      <div class="ferodo">
+        <p class="big">FERODO<br><span>brzdový specialista</span></p>
+        <p>Označení, které autoservis Bolsoncar uvádí na svém webu. Brzdová soustava včetně diagnostiky ABS je jeho hlavní činností.</p>
+      </div>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Specializace na brzdy včetně diagnostiky ABS a na výfuky.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Otevírací doba dle telefonické domluvy: termín si domluvíte na 777 620 373.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Dílna v Karviné-Hranicích, Mickiewiczova 141/66.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Živnostník, IČO 70247234.</span></li>
+      </ul>
+      <div class="photo"><div><b>Sem přijde Vaše fotka</b>dílna, zvedák, auto na brzdách</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="winter" id="zima" aria-labelledby="zi-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Před zimou</p>
+      <h2 id="zi-h">Co by měl řidič vědět, než napadne sníh</h2>
+      <p>Obecná pravidla a jedna věc, kterou za Vás zkontrolujeme v dílně.</p>
+    </div>
+    <div class="grid">
+      <div class="item"><p class="k">1. 11.<small>– 31. 3.</small></p><h3>Zimní pneumatiky</h3><p>V tomto období jsou povinné, když jsou na silnici zimní podmínky: sníh, led nebo námraza.</p></div>
+      <div class="item"><p class="k">4<small>mm</small></p><h3>Hloubka dezénu</h3><p>Minimální hloubka dezénu zimních pneumatik u osobních aut. Méně už zimní pneumatika podle pravidel není.</p></div>
+      <div class="item"><p class="k">Sůl</p><h3>Výfuk a podvozek</h3><p>Posypová sůl a vlhko urychlují korozi kovových dílů pod autem, výfuk nevyjímaje.</p></div>
+      <div class="item ours"><p class="k">Brzdy</p><h3>Kontrola brzd u nás</h3><p>Na kluzké silnici rozhoduje každý metr brzdné dráhy. Brzdy Vám před zimou prohlédneme a opravíme. <a href="#objednat">Objednat kontrolu</a></p></div>
+    </div>
+    <p class="src">Zimní pneumatiky a dezén: obecně platná pravidla silničního provozu v ČR. Autoservis Bolsoncar přezouvání neuvádí.</p>
+  </div>
+</section>
+
+<section aria-labelledby="st-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Jak to probíhá</p>
+      <h2 id="st-h">Od telefonu k opravenému autu ve třech krocích <span class="demo">ukázkový text</span></h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo pošlete SMS</h3><p>Popíšete, co auto dělá: piští, táhne do strany, hlučí výfuk nebo svítí kontrolka.</p></li>
+      <li><h3>Domluvíme termín</h3><p>Řekneme Vám, kdy auto přivézt, a cenu opravy ještě předtím, než se do ní pustíme.</p></li>
+      <li><h3>Opravíme a vysvětlíme</h3><p>Při předání ukážeme, co se měnilo, a odjíždíte s autem, které brzdí, jak má.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="order" id="objednat" aria-labelledby="or-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Objednat servis</p>
+      <h2 id="or-h">Napište, co autu je. Připravíme Vám zprávu.</h2>
+      <p>Formulář nic neodesílá. Po vyplnění se otevře SMS nebo e-mail s hotovým textem, který jen potvrdíte.</p>
+    </div>
+    <div class="o-grid">
+      <form id="f" novalidate>
+        <div class="f2">
+          <label for="f-car">Vůz (značka, model, rok)<input id="f-car" name="car" placeholder="např. Škoda Octavia 2014" autocomplete="off"></label>
+          <label for="f-what">Co potřebujete<select id="f-what" name="what">
+            <option>Opravit brzdy</option><option>Opravit výfuk</option><option>Základní diagnostiku</option><option>Tažné zařízení – montáž a přihlášení</option><option>Geometrii podvozku</option><option>Kontrolu brzd před zimou</option>
+          </select></label>
+        </div>
+        <label for="f-note">Co auto dělá<textarea id="f-note" name="note" placeholder="např. při brzdění piští přední kola"></textarea></label>
+        <div class="f2">
+          <label for="f-name">Jméno<input id="f-name" name="name" autocomplete="name"></label>
+          <label for="f-tel">Telefon pro zpětné zavolání<input id="f-tel" name="tel" type="tel" autocomplete="tel"></label>
+        </div>
+        <div class="f2">
+          <button class="btn btn-primary" type="submit" data-via="sms">Připravit SMS</button>
+          <button class="btn btn-ghost" type="submit" data-via="mail">Připravit e-mail</button>
+        </div>
+        <div class="out" id="out" hidden>
+          <pre id="out-t"></pre>
+          <p class="small" style="font-size:.88rem;color:#565C66">Pokud se aplikace neotevřela, zkopírujte text a pošlete ho na 777 620 373 nebo bolsoncar@seznam.cz. <button class="linkbtn" type="button" id="out-copy">Zkopírovat</button></p>
+        </div>
+      </form>
+      <aside class="side">
+        <h3>Rychlejší je zavolat</h3>
+        <a class="num" href="tel:+420777620373">777 620 373</a>
+        <p>Otevírací doba: dle telefonické domluvy.</p>
+        <p>Boleslav Foltyn, Mickiewiczova 141/66, Karviná-Hranice</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="fq-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Časté otázky</p><h2 id="fq-h">Na co se řidiči ptají</h2></div>
+    <details><summary>Jak poznám, že je potřeba řešit brzdy?</summary><p>Typické signály jsou pískání nebo skřípění při brzdění, chvění volantu či pedálu, delší brzdná dráha, auto, které při brzdění uhýbá do strany, a rozsvícená kontrolka brzd nebo ABS. Kterýkoli z nich stojí za kontrolu.</p></details>
+    <details><summary>Výfuk je hlasitější než dřív. Musím to řešit hned?</summary><p>Hlasitější nebo drnčící výfuk bývá známkou prasklého či prorezlého dílu. Spaliny pak mohou unikat jinudy, než mají, proto ho nechte prohlédnout co nejdřív.</p></details>
+    <details><summary>Musí se tažné zařízení po montáži přihlásit?</summary><p>Ano, dodatečně namontované tažné zařízení se zapisuje do dokladů vozidla. U nás zařídíme montáž i přihlášení.</p></details>
+    <details><summary>Kdy je potřeba seřídit geometrii?</summary><p>Když auto táhne na jednu stranu, volant při jízdě rovně nestojí rovně nebo se pneumatiky sjíždějí jen na jedné hraně. Geometrii se vyplatí zkontrolovat i po výměně dílů řízení či podvozku.</p></details>
+    <details><summary>Kdy můžu přijet?</summary><p>Otevírací doba je dle telefonické domluvy. Zavolejte na 777 620 373 a domluvíme termín, který Vám sedí.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="ct-h">
+  <div class="wrap c-grid">
+    <div>
+      <p class="eyebrow" style="color:#FFB38A">Kontakt</p>
+      <h2 id="ct-h" style="margin:8px 0 22px">Boleslav Foltyn – autoservis Bolsoncar</h2>
+      <dl class="c-list">
+        <div><dt>Telefon</dt><dd><a href="tel:+420777620373">777 620 373</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:bolsoncar@seznam.cz">bolsoncar@seznam.cz</a></dd></div>
+        <div><dt>Adresa</dt><dd>Mickiewiczova 141/66, Karviná-Hranice</dd></div>
+        <div><dt>Otevírací doba</dt><dd>Dle telefonické domluvy</dd></div>
+        <div><dt>Katalog</dt><dd><a href="https://www.firmy.cz/detail/1987720-boleslav-foltyn-autoservis-karvina-hranice.html" target="_blank" rel="noopener">Záznam na Firmy.cz</a></dd></div>
+      </dl>
+    </div>
+    <a class="maplink" href="https://mapy.cz/zakladni?q=Mickiewiczova%20141%2F66%2C%20Karvin%C3%A1-Hranice" target="_blank" rel="noopener">
+      <div><b>Mickiewiczova 141/66</b><br>Karviná-Hranice<br><br><span>Otevřít v Mapy.cz</span></div>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Boleslav Foltyn – autoservis (Bolsoncar) · IČO 70247234 · Nezávazný návrh webu, nejde o oficiální stránku firmy. Texty označené „ukázkový text“ je potřeba s firmou ověřit.</div></footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+420777620373">Zavolat</a>
+  <a class="btn btn-primary" href="#objednat">Objednat servis</a>
+</div>
+
+<script>
+(function(){
+  var D={
+    brzdy:{tag:"Brzdová soustava",h:"Brzdy, které zastaví včas",t:"Opravíme brzdovou soustavu včetně diagnostiky ABS systému. Jsme FERODO brzdový specialista, brzdy jsou naše hlavní práce.",s:"Kdy volat: pískání, chvění volantu při brzdění, delší brzdná dráha, kontrolka ABS.",m:"Dobrý den, potřebuji opravit brzdy. Vůz: ",parts:["p-brk"]},
+    vyfuk:{tag:"Výfuková soustava",h:"Výfuk bez děr a drnčení",t:"Opravujeme výfukovou soustavu. Opravy výfuků jsou spolu s brzdami hlavní činností autoservisu.",s:"Kdy volat: výfuk je hlasitější než dřív, něco drnčí pod autem nebo je cítit výfukové plyny.",m:"Dobrý den, potřebuji opravit výfuk. Vůz: ",parts:["p-exh","p-exh-m","p-exh-r"]},
+    tazne:{tag:"Tažné zařízení",h:"Montáž i přihlášení",t:"Tažné zařízení namontujeme a přihlásíme, takže s ním můžete legálně jezdit s vozíkem.",s:"Hodí se, když plánujete vozík, karavan nebo nosič kol na tažné.",m:"Dobrý den, chtěl(a) bych namontovat a přihlásit tažné zařízení. Vůz: ",parts:["p-tow"]},
+    geometrie:{tag:"Geometrie podvozku",h:"Auto pojede rovně",t:"Seřídíme geometrii podvozku, aby auto drželo stopu a pneumatiky se sjížděly rovnoměrně.",s:"Kdy volat: auto táhne do strany, volant stojí nakřivo, pneumatiky se sjíždějí jen na jedné hraně.",m:"Dobrý den, potřebuji seřídit geometrii. Vůz: ",parts:["p-geo-axle"]},
+    diagnostika:{tag:"Diagnostika",h:"Co Vám auto hlásí",t:"Základní diagnostika pro evropské vozy: přečteme, co řídicí jednotka hlásí, a řekneme, co dál.",s:"Kdy volat: svítí kontrolka motoru, ABS nebo jiná výstraha na palubní desce.",m:"Dobrý den, potřebuji základní diagnostiku. Vůz: ",parts:[]}
+  };
+  var cur="brzdy";
+  function $(id){return document.getElementById(id)}
+  function show(k){
+    var d=D[k]; if(!d) return; cur=k;
+    $("pn-tag").textContent=d.tag; $("pn-h").textContent=d.h; $("pn-t").textContent=d.t; $("pn-s").textContent=d.s;
+    $("pn-m").textContent=d.m+"…";
+    $("pn-sms").href="sms:+420777620373?body="+encodeURIComponent(d.m);
+    document.querySelectorAll(".chip").forEach(function(c){c.setAttribute("aria-pressed",c.dataset.k===k?"true":"false")});
+    document.querySelectorAll(".hs").forEach(function(h){h.classList.toggle("on",h.dataset.k===k)});
+    document.querySelectorAll(".part").forEach(function(p){p.classList.remove("lit")});
+    d.parts.forEach(function(id){var e=$(id); if(e) e.classList.add("lit")});
+  }
+  document.querySelectorAll(".chip,.hs").forEach(function(el){
+    el.addEventListener("click",function(){show(el.dataset.k)});
+    el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();show(el.dataset.k)}});
+  });
+  function copy(text,btn){
+    var done=function(){var o=btn.textContent;btn.textContent="Zkopírováno";setTimeout(function(){btn.textContent=o},1600)};
+    try{navigator.clipboard.writeText(text).then(done,function(){})}catch(e){}
+  }
+  $("pn-copy").addEventListener("click",function(){copy(D[cur].m,this)});
+  show("brzdy");
+
+  var f=$("f"),via="sms";
+  f.querySelectorAll("button[type=submit]").forEach(function(b){b.addEventListener("click",function(){via=b.dataset.via})});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var t="Dobrý den, objednávám servis: "+$("f-what").value+".";
+    if($("f-car").value.trim()) t+="\nVůz: "+$("f-car").value.trim();
+    if($("f-note").value.trim()) t+="\nPopis: "+$("f-note").value.trim();
+    if($("f-name").value.trim()) t+="\nJméno: "+$("f-name").value.trim();
+    if($("f-tel").value.trim()) t+="\nTelefon: "+$("f-tel").value.trim();
+    $("out-t").textContent=t; $("out").hidden=false;
+    var href= via==="sms" ? "sms:+420777620373?body="+encodeURIComponent(t) : "mailto:bolsoncar@seznam.cz?subject="+encodeURIComponent("Objednávka servisu")+"&body="+encodeURIComponent(t);
+    var a=document.createElement("a"); a.href=href; document.body.appendChild(a); a.click(); a.remove();
+  });
+  $("out-copy").addEventListener("click",function(){copy($("out-t").textContent,this)});
+})();
+</script>
+</body>
+</html>
+</body>
+</html>

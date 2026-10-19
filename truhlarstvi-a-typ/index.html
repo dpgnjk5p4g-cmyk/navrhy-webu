@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – TRUHLÁŘSTVÍ A-typ</title>
+<meta name="description" content="Truhlářství A-typ, Ostrava-Stará Bělá: kuchyně na míru s 3D návrhem a montáží, vestavěné skříně a nábytek na zakázku pro domácnosti i firmy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TRUHLÁŘSTVÍ A-typ",
+  "legalName": "A-typ Morava s.r.o.",
+  "taxID": "26848732",
+  "description": "Truhlářství a nábytek na zakázku: kuchyně s 3D návrhem a montáží, vestavěné skříně, obývací pokoje, dětské pokoje, ložnice, koupelny, kancelářský nábytek a vybavení prodejen a kaváren.",
+  "telephone": "+420605264251",
+  "email": "rydrych1@seznam.cz",
+  "url": "http://www.atypmorava.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Junácká 404/129",
+    "addressLocality": "Ostrava-Stará Bělá",
+    "postalCode": "724 00",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "11:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "12:15", "closes": "15:00"}
+  ]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --paper:#F2F1EC;
+  --paper-2:#E9E7DF;
+  --white:#FFFFFF;
+  --ink:#1C1F22;
+  --ink-2:#4A4F54;
+  --coral:#D2492F;        /* dekor, kóty, velké plochy bez malého textu */
+  --coral-deep:#BE4029;   /* tlačítka s bílým textem (5,3:1) a text na papíru (4,7:1) */
+  --coral-press:#A63621;
+  --oak:#C9A46B;
+  --oak-soft:#E6D4B4;
+  --oak-ink:#7A5C2E;      /* text v dubovém tónu na papíru (5,5:1) */
+  --line:#CFCBBF;
+  --f-head:"Bricolage Grotesque", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --f-body:Literata, Georgia, "Times New Roman", serif;
+  --gutter:clamp(16px, 4vw, 48px);
+  --max:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{max-width:100%;display:block}
+a{color:var(--coral-deep)}
+h1,h2,h3,h4{font-family:var(--f-head);line-height:1.05;margin:0;color:var(--ink);letter-spacing:-.02em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.demo{display:inline-block;font-family:var(--f-head);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);border:1px dashed #8C8A80;padding:1px 6px;border-radius:3px;vertical-align:middle;white-space:nowrap;line-height:1.5;background:var(--paper)}
+.eyebrow{font-family:var(--f-head);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--oak-ink);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--coral)}
+.sec{padding:clamp(64px,9vw,120px) 0}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(32px,5vw,56px);max-width:760px}
+.sec-head h2{font-size:clamp(32px,5.2vw,58px);font-weight:800}
+.sec-head p{color:var(--ink-2);margin:0;font-size:18px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-head);font-weight:600;font-size:17px;text-decoration:none;padding:15px 22px;border-radius:4px;border:2px solid transparent;cursor:pointer;line-height:1.1;min-height:52px;transition:background .15s, transform .15s}
+.btn-primary{background:var(--coral-deep);color:#fff}
+.btn-primary:hover{background:var(--coral-press)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* top strip */
+.strip{background:var(--ink);color:var(--paper);font-family:var(--f-head);font-size:13px;text-align:center;padding:8px 16px;line-height:1.35}
+.strip strong{color:var(--oak)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:30;background:rgba(242,241,236,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2) blur(6px)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo-mark{width:36px;height:36px;flex:none}
+.logo b{font-family:var(--f-head);font-weight:800;font-size:20px;letter-spacing:-.02em;display:block;line-height:1}
+.logo small{font-family:var(--f-head);font-size:10.5px;letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--ink-2);display:block;margin-top:3px}
+.nav{display:none;gap:26px}
+.nav a{font-family:var(--f-head);font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--coral-deep)}
+.hdr-tel{font-family:var(--f-head);font-weight:700;font-size:16px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.hdr-tel svg{width:18px;height:18px;color:var(--coral-deep)}
+.hdr-tel span.lbl{display:none}
+@media (min-width:980px){.nav{display:flex}.hdr-tel span.lbl{display:inline;font-weight:400;color:var(--ink-2);font-size:13px}}
+
+/* HERO */
+.hero{position:relative;padding:28px 0 36px;overflow:hidden;background:
+  linear-gradient(var(--paper),var(--paper)) padding-box;}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(28,31,34,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,31,34,.05) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+.hero .wrap{position:relative}
+.hero-loc{font-family:var(--f-head);font-size:14px;font-weight:600;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-bottom:22px}
+.hero-loc .pin{display:inline-flex;align-items:center;gap:6px;color:var(--ink)}
+.hero-loc .pin svg{width:16px;height:16px;color:var(--coral-deep)}
+.drawing{position:relative;padding:30px 0 20px 30px;max-width:1040px}
+.dim-h{position:absolute;top:0;left:30px;right:0;height:14px}
+.dim-h::before{content:"";position:absolute;left:0;right:0;top:7px;height:1.5px;background:var(--coral)}
+.dim-h i{position:absolute;top:0;width:1.5px;height:14px;background:var(--coral)}
+.dim-h i:first-child{left:0}.dim-h i:last-of-type{right:0}
+.dim-h i::after{content:"";position:absolute;left:-5px;top:2px;width:11px;height:1.5px;background:var(--coral);transform:rotate(-45deg);top:6px}
+.dim-h span{position:absolute;left:50%;top:-4px;transform:translateX(-50%);background:var(--paper);padding:0 8px;font-family:var(--f-head);font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--coral-deep);white-space:nowrap}
+.dim-v{position:absolute;left:0;top:30px;bottom:20px;width:14px}
+.dim-v::before{content:"";position:absolute;top:0;bottom:0;left:7px;width:1.5px;background:var(--coral)}
+.dim-v i{position:absolute;left:0;height:1.5px;width:14px;background:var(--coral)}
+.dim-v i:first-child{top:0}.dim-v i:last-of-type{bottom:0}
+.dim-v i::after{content:"";position:absolute;left:1px;top:0;width:11px;height:1.5px;background:var(--coral);transform:rotate(-45deg)}
+.dim-v span{position:absolute;top:50%;left:7px;transform:translate(-50%,-50%) rotate(-90deg);background:var(--paper);padding:0 6px;font-family:var(--f-head);font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--coral-deep);white-space:nowrap}
+.hero h1{font-size:clamp(42px,11.5vw,124px);font-weight:800;line-height:.92;letter-spacing:-.045em}
+.hero h1 .oak{color:var(--oak-ink);font-weight:400;font-style:normal}
+.hero h1 .mm{display:inline-block;font-size:.28em;letter-spacing:.02em;vertical-align:top;margin-top:.35em;color:var(--coral-deep);font-weight:600;border:1.5px solid var(--coral);padding:.1em .35em;border-radius:3px;transform:translateY(-.1em)}
+.hero-lead{max-width:640px;font-size:clamp(17px,2.2vw,20px);margin:22px 0 22px;color:var(--ink)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-cta .tel-text{font-family:var(--f-head);font-size:14px;color:var(--ink-2)}
+.hero-facts{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.hero-facts li{display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.hero-facts li b{font-family:var(--f-head);font-size:12px;letter-spacing:.1em;color:var(--oak-ink);min-width:34px}
+@media (min-width:760px){.hero{padding:56px 0 64px}.drawing{padding:40px 0 30px 46px}.dim-h{left:46px}.dim-v{bottom:30px;top:40px}.hero-facts{grid-template-columns:repeat(3,1fr);gap:0 28px}.hero-facts li{border-bottom:0}}
+@media (max-width:420px){.hero-facts li:nth-child(3){display:none}}
+
+/* services */
+.svc-grid{display:grid;gap:0;border-top:2px solid var(--ink)}
+.svc{display:grid;grid-template-columns:56px 1fr;gap:4px 18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.svc .ico{grid-row:span 3;width:56px;height:56px;background:var(--white);border:1.5px solid var(--ink);border-radius:3px;display:grid;place-items:center;position:relative}
+.svc .ico::after{content:"";position:absolute;right:-6px;bottom:-6px;width:56px;height:56px;border:1.5px solid var(--oak);border-radius:3px;z-index:-1}
+.svc .ico svg{width:34px;height:34px}
+.svc h3{font-size:22px;font-weight:700;line-height:1.15}
+.svc p{margin:0;color:var(--ink-2);font-size:16px}
+.svc .price{font-family:var(--f-head);font-size:13px;font-weight:600;color:var(--ink);margin-top:6px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.svc .price::before{content:"";width:14px;height:1.5px;background:var(--coral)}
+@media (min-width:760px){.svc-grid{grid-template-columns:1fr 1fr;column-gap:48px}}
+@media (min-width:1100px){.svc-grid{grid-template-columns:1fr 1fr 1fr}}
+.svc-note{margin-top:22px;font-size:15px;color:var(--ink-2)}
+
+/* konfigurátor */
+.cfg{background:var(--ink);color:var(--paper)}
+.cfg .sec-head h2{color:var(--paper)}
+.cfg .sec-head p{color:#C9C7BF}
+.cfg .eyebrow{color:var(--oak)}
+.cfg-box{display:grid;gap:16px}
+.cfg-box{grid-template-areas:"tabs" "stage" "info"}.cfg-tabs{grid-area:tabs;margin-bottom:0}.cfg-stage{grid-area:stage}.cfg-info{grid-area:info}
+@media (min-width:960px){.cfg-box{grid-template-columns:1.35fr 1fr;grid-template-areas:"stage tabs" "stage info";grid-template-rows:auto 1fr;gap:20px 32px;align-items:start}.cfg-stage{align-self:stretch}}
+.cfg-stage{display:flex;align-items:center;background:#24282C;border:1px solid #3A3F44;border-radius:4px;position:relative;padding:12px}
+.cfg-stage::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(242,241,236,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(242,241,236,.05) 1px,transparent 1px);background-size:20px 20px;pointer-events:none;border-radius:4px}
+.cfg-stage svg{width:100%;height:auto;position:relative;flex:1}
+.cfg-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:20px}
+.cfg-tab{font-family:var(--f-head);font-weight:800;font-size:22px;background:transparent;color:var(--paper);border:1.5px solid #5B6166;border-radius:4px;padding:10px 4px 8px;cursor:pointer;line-height:1;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:64px}
+.cfg-tab small{font-weight:400;font-size:12px;color:#C9C7BF}
+.cfg-tab svg{width:26px;height:26px}
+.cfg-tab[aria-selected="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.cfg-tab[aria-selected="true"] small{color:var(--ink-2)}
+.cfg-tab:hover{border-color:var(--oak)}
+.cfg-info h3{font-size:clamp(28px,4vw,40px);color:var(--paper);font-weight:800;margin-bottom:10px}
+.cfg-info p{color:#DEDCD4}
+.cfg-spec{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:0;border-top:1px solid #3A3F44}
+.cfg-spec li{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #3A3F44;font-size:15.5px}
+.cfg-spec li b{font-family:var(--f-head);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--oak)}
+.cfg-3d{display:flex;gap:14px;align-items:flex-start;background:#2B3034;border-left:3px solid var(--coral);padding:14px 16px;border-radius:0 4px 4px 0;font-size:15.5px;color:var(--paper);margin-bottom:18px}
+.cfg-3d svg{width:30px;height:30px;flex:none;color:var(--oak)}
+.cfg .demo{background:transparent;color:#C9C7BF;border-color:#8C8A80}
+.cfg .btn-ghost{color:var(--paper);border-color:var(--paper)}
+.cfg .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+.kbox{transition:opacity .35s ease, transform .35s ease}
+.kbox.out{opacity:0;transform:translateY(-14px)}
+
+/* proč my */
+.why-grid{display:grid;gap:24px}
+@media (min-width:860px){.why-grid{grid-template-columns:1.1fr 1fr;gap:56px}}
+.why-list{list-style:none;margin:0;padding:0;counter-reset:w}
+.why-list li{counter-increment:w;display:grid;grid-template-columns:54px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.why-list li:first-child{border-top:2px solid var(--ink)}
+.why-list li::before{content:counter(w,decimal-leading-zero);font-family:var(--f-head);font-weight:800;font-size:28px;color:var(--coral-deep);line-height:1}
+.why-list h3{font-size:21px;margin-bottom:6px}
+.why-list p{margin:0;color:var(--ink-2);font-size:16px}
+.trust{background:var(--white);border:1.5px solid var(--ink);border-radius:4px;padding:26px;position:relative;align-self:start}
+.trust::after{content:"";position:absolute;inset:10px -10px -10px 10px;border:1.5px solid var(--oak);border-radius:4px;z-index:-1}
+.trust h3{font-size:24px;margin-bottom:12px}
+.trust .big{font-family:var(--f-head);font-weight:800;font-size:64px;line-height:1;color:var(--ink);letter-spacing:-.04em}
+.trust .big small{font-size:18px;font-weight:600;letter-spacing:0;color:var(--ink-2);margin-left:6px}
+.trust ul{padding-left:20px;margin:16px 0 0;font-size:16px}
+.trust li{margin-bottom:6px}
+
+/* realizace */
+.gal{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.ph{position:relative;background:var(--paper-2);border:1.5px dashed #8C8A80;border-radius:3px;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;overflow:hidden}
+.ph.wide{grid-column:span 2;aspect-ratio:16/10}
+.ph svg.bg{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.ph::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(rgba(233,231,223,0),#E9E7DF 55%);z-index:0}
+.ph b,.ph span,.ph em{z-index:1}
+.ph b{position:relative;font-family:var(--f-head);font-size:16px;font-weight:700;line-height:1.2}
+.ph span{position:relative;font-size:13.5px;color:var(--ink-2);line-height:1.35}
+.ph em{position:relative;font-style:normal;font-family:var(--f-head);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:4px}
+@media (min-width:860px){.gal{grid-template-columns:repeat(4,1fr)}.ph.wide{grid-column:span 2;aspect-ratio:auto}.ph.tall{grid-row:span 2;aspect-ratio:auto}}
+
+/* proces */
+.proc{background:var(--oak-soft)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.step{position:relative;padding:26px 0 26px 72px;border-top:1.5px solid var(--ink)}
+.step:last-child{border-bottom:1.5px solid var(--ink)}
+.step .n{position:absolute;left:0;top:24px;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--f-head);font-weight:800;font-size:22px}
+.step h3{font-size:26px;margin-bottom:8px}
+.step p{margin:0;color:var(--ink);font-size:16.5px}
+.step .arrow{display:none}
+@media (min-width:900px){
+  .steps{grid-template-columns:repeat(3,1fr);gap:0 28px}
+  .step{padding:90px 0 8px 0;border-bottom:0!important;border-top:1.5px solid var(--ink)}
+  .step .n{top:20px}
+  .step .arrow{display:block;position:absolute;top:44px;left:66px;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--ink) 0 8px,transparent 8px 14px)}
+  .step:last-child .arrow{display:none}
+}
+.proc-note{margin-top:28px;font-size:15.5px;color:var(--ink)}
+
+/* poptávka */
+.ask-grid{display:grid;gap:32px}
+@media (min-width:900px){.ask-grid{grid-template-columns:.85fr 1.15fr;gap:56px}}
+.call-card{background:var(--coral-deep);color:#fff;border-radius:4px;padding:26px;align-self:start}
+.call-card h3{color:#fff;font-size:24px;margin-bottom:10px}
+.call-card p{color:#fff}
+.call-card a.num{display:block;font-family:var(--f-head);font-weight:800;font-size:clamp(34px,6vw,46px);color:#fff;text-decoration:none;letter-spacing:-.02em;line-height:1.05;margin:4px 0 10px}
+.call-card .sub{font-size:15px;margin:0}
+.call-card .sub a{color:#fff}
+form.ask{display:grid;gap:16px;background:var(--white);border:1.5px solid var(--ink);border-radius:4px;padding:clamp(18px,3vw,30px)}
+.f-row{display:grid;gap:16px}
+@media (min-width:600px){.f-row{grid-template-columns:1fr 1fr}}
+label{font-family:var(--f-head);font-weight:600;font-size:14px;display:grid;gap:6px;color:var(--ink)}
+input,select,textarea{font:inherit;font-family:var(--f-body);font-size:16px;color:var(--ink);background:var(--paper);border:1.5px solid #8C8A80;border-radius:3px;padding:12px;width:100%;min-height:48px}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--ink);background:#fff}
+fieldset{border:0;padding:0;margin:0}
+legend{font-family:var(--f-head);font-weight:600;font-size:14px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;align-items:center;gap:8px;font-weight:600;border:1.5px solid #8C8A80;border-radius:3px;padding:8px 12px;cursor:pointer;min-height:44px;background:var(--paper)}
+.chips input{width:18px;height:18px;min-height:0;accent-color:var(--coral-deep);margin:0}
+.form-msg{display:none;background:var(--ink);color:var(--paper);padding:14px 16px;border-radius:3px;font-size:15.5px}
+.form-msg.show{display:block}
+.small{font-size:14px;color:var(--ink-2);margin:0}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-top:1.5px solid var(--ink);padding:0}
+.faq details:last-child{border-bottom:1.5px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--f-head);font-weight:700;font-size:clamp(19px,2.4vw,23px);padding:20px 44px 20px 0;position:relative;line-height:1.25}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:16px;height:16px;margin-top:-8px;background:linear-gradient(var(--coral-deep),var(--coral-deep)) center/16px 2px no-repeat,linear-gradient(var(--coral-deep),var(--coral-deep)) center/2px 16px no-repeat;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 0 22px;color:var(--ink-2);font-size:16.5px}
+.faq .a p{margin:0 0 .6em}
+
+/* kontakt */
+.contact{background:var(--ink);color:var(--paper)}
+.contact h2{color:var(--paper)}
+.contact .eyebrow{color:var(--oak)}
+.c-grid{display:grid;gap:28px}
+@media (min-width:860px){.c-grid{grid-template-columns:1.1fr 1fr 1fr}}
+.c-block h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--oak);font-weight:600;margin-bottom:10px}
+.c-block p{color:#E6E4DC;font-size:16.5px}
+.c-block a{color:var(--paper)}
+.c-big{font-family:var(--f-head);font-weight:800;font-size:clamp(30px,5vw,44px);text-decoration:none;color:var(--paper)!important;letter-spacing:-.02em;display:inline-block;line-height:1.1}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:6px 0;border-bottom:1px solid #3A3F44;color:#E6E4DC}
+.hours td:last-child{text-align:right}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-head);font-weight:600;font-size:14px;margin:12px 0 0;padding:6px 10px;border:1px solid #5B6166;border-radius:3px;color:var(--paper)}
+.status i{width:9px;height:9px;border-radius:50%;background:#8C8A80}
+.status.open i{background:#6FCF8E}
+.status.closed i{background:var(--coral)}
+.contact .btn-ghost{color:var(--paper);border-color:var(--paper)}
+.contact .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+.foot{border-top:1px solid #3A3F44;margin-top:48px;padding-top:22px;font-size:14px;color:#B9B7AF;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* mobile call bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.4fr 1fr;gap:10px;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.mbar .btn{min-height:50px;padding:10px 12px;font-size:16px}
+.mbar .btn-ghost{color:var(--paper);border-color:#8C8A80}
+@media (min-width:900px){.mbar{display:none}}
+</style>
+
+<div class="strip">Nezávazný návrh webu – <strong>není to oficiální stránka firmy TRUHLÁŘSTVÍ A-typ</strong></div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="TRUHLÁŘSTVÍ A-typ – úvod">
+      <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect x="1" y="1" width="34" height="34" rx="3" fill="#1C1F22"/><path d="M9 27 L18 8 L27 27" fill="none" stroke="#F2F1EC" stroke-width="3" stroke-linejoin="round"/><path d="M12.5 20.5 H23.5" stroke="#D2492F" stroke-width="3"/></svg>
+      <span><b>A-typ</b><small>Truhlářství · Stará Bělá</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#sluzby">Služby</a>
+      <a href="#kuchyne">Tvar kuchyně</a>
+      <a href="#realizace">Realizace</a>
+      <a href="#postup">Jak to probíhá</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="hdr-tel" href="tel:+420605264251">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+      <span class="lbl">Zavolejte:</span> 605 264 251
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero-loc">
+      <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ostrava-Stará Bělá</span>
+      <span>Truhlářství a nábytek na zakázku</span>
+    </div>
+    <div class="drawing">
+      <div class="dim-h" aria-hidden="true"><i></i><i></i><span>MÍRA VAŠÍ STĚNY · mm</span></div>
+      <div class="dim-v" aria-hidden="true"><i></i><i></i><span>900 mm</span></div>
+      <h1 id="hero-h">Kuchyně a&nbsp;skříně přesně <span class="oak">na&nbsp;Vaše</span> milimetry<span class="mm">mm</span></h1>
+    </div>
+    <p class="hero-lead">Zaměříme Váš prostor, nakreslíme <strong>3D návrh kuchyně</strong> a teprve potom vyrábíme a montujeme. Vestavěné skříně, ložnice, dětské pokoje i vybavení prodejen z dílny v Ostravě-Staré Bělé.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#poptavka">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+        Zavolat nebo poptat
+      </a>
+      <a class="btn btn-ghost" href="tel:+420605264251">605 264 251</a>
+    </div>
+    <ul class="hero-facts">
+      <li><b>01</b><span>3D návrh kuchyně dostanete před výrobou</span></li>
+      <li><b>02</b><span>Zaměření přímo u Vás na místě</span></li>
+      <li><b>03</b><span>Vzorky materiálů a kování v provozovně</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="sluzby" aria-labelledby="sluzby-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Co pro Vás vyrobíme</div>
+      <h2 id="sluzby-h">Nábytek na zakázku do domu, bytu i firmy</h2>
+      <p>Všechno níže vyrábíme na míru konkrétnímu prostoru. Ceny nezveřejňujeme paušálně – odvíjí se od rozměrů, materiálu a kování. <span class="demo">popisy: ukázkový text</span></p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><rect x="4" y="18" width="32" height="16"/><path d="M4 22h32M20 22v12M14 27h2M24 27h2"/><rect x="6" y="5" width="28" height="8"/><circle cx="12" cy="19.8" r="1" fill="#D2492F" stroke="none"/><circle cx="17" cy="19.8" r="1" fill="#D2492F" stroke="none"/></svg></div>
+        <h3>Kuchyně s 3D návrhem a montáží</h3>
+        <p>Kuchyňská linka na míru včetně 3D návrhu, výroby a montáže – dodáme i elektrospotřebiče a zapojíme je.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><rect x="5" y="4" width="30" height="32"/><path d="M15 4v32M25 4v32M5 12h10M12 20v4M18 20v4M28 20v4"/></svg></div>
+        <h3>Vestavěné skříně</h3>
+        <p>Skříň od podlahy ke stropu, do podkroví, výklenku nebo předsíně – žádné mrtvé místo nad ní ani vedle ní.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><path d="M4 30V14M36 30V22M4 22h32v6H4"/><rect x="7" y="16" width="9" height="6"/><path d="M4 30v4M36 30v4"/></svg></div>
+        <h3>Ložnice a postele</h3>
+        <p>Postel s úložným prostorem, noční stolky a skříně v jednom dekoru, aby ložnice působila jako celek.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><rect x="4" y="22" width="32" height="10"/><path d="M4 27h32M16 22v10M26 22v10"/><rect x="8" y="6" width="10" height="12"/><path d="M24 10h12M24 16h12"/></svg></div>
+        <h3>Obývací pokoje</h3>
+        <p>Obývací stěny, TV sestavy a knihovny navržené podle rozměrů stěny, oken a zásuvek.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><path d="M5 34V10h12v24M5 18h12M5 26h12"/><rect x="21" y="22" width="15" height="12"/><path d="M21 18h15"/><circle cx="28.5" cy="10" r="4" stroke="#D2492F"/></svg></div>
+        <h3>Dětské pokoje</h3>
+        <p>Psací stůl, postel a úložné prostory, které se vejdou i do menšího pokoje a vydrží dětské zacházení.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><rect x="6" y="20" width="28" height="13"/><path d="M6 20h28M20 20v13"/><path d="M14 20v-4h12v4"/><rect x="12" y="4" width="16" height="9"/><path d="M20 13v3" stroke="#D2492F"/></svg></div>
+        <h3>Koupelnový nábytek</h3>
+        <p>Skříňky pod umyvadlo a vysoké skříně do koupelny přesně mezi obklady a instalace.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><path d="M3 34h34M6 34V18h28v16"/><path d="M3 18 8 8h24l5 10"/><rect x="11" y="23" width="8" height="11"/><rect x="23" y="23" width="8" height="6"/></svg></div>
+        <h3>Kanceláře, prodejny a kavárny</h3>
+        <p>Kancelářský nábytek, pulty, regály a vybavení prodejen a kaváren pro firmy i instituce.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><path d="M6 30V20a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v10"/><path d="M4 22h4v8h24v-8h4v10H4z"/><path d="M10 16v-4a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v4"/></svg></div>
+        <h3>Čalouněný nábytek</h3>
+        <p>Čalouněné lavice, sedáky a čela postelí, které ladí s ostatním nábytkem na míru.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+      <article class="svc">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#1C1F22" stroke-width="2" aria-hidden="true"><path d="M4 34h32M4 34l8-8h24M12 26l8-8h16M20 18l8-8h8"/><path d="M8 34l8-8M16 34l8-8M24 34l8-8" stroke="#C9A46B"/></svg></div>
+        <h3>Plovoucí podlahy, schodiště, dveře</h3>
+        <p>Plovoucí podlahy, vnitřní dveře, schodiště a pergoly – aby k novému nábytku sedělo i okolí.</p>
+        <div class="price">cena na dotaz</div>
+      </article>
+    </div>
+    <p class="svc-note">Ke kuchyni na přání zajistíme i elektroinstalaci, obklady a vodoinstalaci, takže nemusíte shánět další řemeslníky.</p>
+  </div>
+</section>
+
+<section class="sec cfg" id="kuchyne" aria-labelledby="cfg-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Konfigurátor tvaru kuchyně</div>
+      <h2 id="cfg-h">I, L, U, nebo s&nbsp;ostrůvkem?</h2>
+      <p>Klikněte na tvar a podívejte se, jak se kuchyně přestaví a do jakého prostoru se hodí. Přesný návrh pak nakreslíme ve 3D podle Vašeho zaměření.</p>
+    </div>
+    <div class="cfg-box">
+        <div class="cfg-tabs" role="tablist" aria-label="Tvar kuchyně">
+          <button class="cfg-tab" role="tab" aria-selected="true" data-shape="I" aria-controls="cfg-panel">I<small>rovná</small></button>
+          <button class="cfg-tab" role="tab" aria-selected="false" data-shape="L" aria-controls="cfg-panel">L<small>rohová</small></button>
+          <button class="cfg-tab" role="tab" aria-selected="false" data-shape="U" aria-controls="cfg-panel">U<small>do tvaru U</small></button>
+          <button class="cfg-tab" role="tab" aria-selected="false" data-shape="O" aria-controls="cfg-panel"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 4h20"/><rect x="7" y="14" width="12" height="7"/></svg><small>ostrůvek</small></button>
+        </div>
+      <div class="cfg-stage">
+        <svg id="kitchen" viewBox="100 -20 460 405" role="img" aria-labelledby="kitchen-t">
+          <title id="kitchen-t">Izometrický náčrt kuchyně – tvar I</title>
+          <g id="room"></g>
+          <g id="units"></g>
+          <g id="dims"></g>
+        </svg>
+      </div>
+      <div class="cfg-info">
+        
+        <div id="cfg-panel" role="tabpanel" aria-live="polite">
+          <h3 id="cfg-name">Rovná kuchyně – tvar I</h3>
+          <p id="cfg-desc"></p>
+          <ul class="cfg-spec">
+            <li><b>Hodí se pro</b><span id="cfg-for"></span></li>
+            <li><b>Prostor</b><span id="cfg-space"></span></li>
+            <li><b>Pozor na</b><span id="cfg-watch"></span></li>
+          </ul>
+          <p class="small" style="color:#C9C7BF;margin:-6px 0 16px">Rozměry jsou orientační obecné rady, ne závazný návrh.</p>
+        </div>
+        <div class="cfg-3d">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 3 28 10v12l-12 7-12-7V10z"/><path d="M4 10l12 7 12-7M16 17v12"/></svg>
+          <span><strong>3D návrh dostanete před výrobou.</strong> Po zaměření Vám kuchyni nakreslíme ve 3D – uvidíte rozmístění skříněk, spotřebičů i dekor a měníme, dokud nesedí. Teprve pak se řeže první deska.</span>
+        </div>
+        <a class="btn btn-primary" id="cfg-cta" href="#poptavka">Chci kuchyni tvaru I – poptat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="proc" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Proč A-typ</div>
+      <h2 id="why-h">Řemeslník, který Vám nejdřív ukáže, co vyrobí</h2>
+    </div>
+    <div class="why-grid">
+      <ol class="why-list">
+        <li><div><h3>Návrh vidíte dřív, než zaplatíte výrobu</h3><p>U kuchyní kreslíme 3D návrh. Rozhodujete podle obrázku Vaší kuchyně, ne podle katalogu.</p></div></li>
+        <li><div><h3>Materiály si osaháte u nás</h3><p>V provozovně ve Staré Bělé máme vzorky materiálů a vystavené kuchyňské linky s různým kováním. Návštěvu si prosím domluvte předem.</p></div></li>
+        <li><div><h3>Kuchyně včetně spotřebičů a řemesel kolem</h3><p>Dodáme a zapojíme elektrospotřebiče, na přání zajistíme elektroinstalaci, obklady i vodoinstalaci.</p></div></li>
+        <li><div><h3>Pro domácnosti, firmy i instituce</h3><p>Od dětského pokoje po vybavení prodejny, kavárny, skladu nebo kanceláře.</p></div></li>
+      </ol>
+      <aside class="trust" aria-label="Hodnocení zákazníků">
+        <h3>Co říkají zákazníci</h3>
+        <div class="big">3<small>hodnocení na Firmy.cz</small></div>
+        <ul>
+          <li>Zákazníci zmiňují spolehlivost, vstřícnost a rychlou montáž.</li>
+          <li>Nejnovější hodnocení je z 30. 12. 2020.</li>
+        </ul>
+        <p style="margin:16px 0 0"><a href="https://www.firmy.cz/detail/636539-truhlarstvi-a-typ-ostrava-stara-bela.html" target="_blank" rel="noopener">Přečíst hodnocení na Firmy.cz →</a></p>
+        <p class="small" style="margin-top:14px">Firma A-typ Morava s.r.o., IČO 26848732</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="realizace" aria-labelledby="real-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Realizace</div>
+      <h2 id="real-h">Hotové zakázky</h2>
+      <p>Místa pro fotky skutečných realizací – nejlépe vždy celek a jeden detail (kování, spoj, dekor).</p>
+    </div>
+    <div class="gal">
+      <figure class="ph wide tall" style="margin:0">
+        <svg class="bg" viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#C9A46B" stroke-width="1"><path d="M0 80h200M20 80v40M60 80v40M100 80v40M140 80v40M180 80v40"/><rect x="20" y="20" width="160" height="30"/><path d="M60 20v30M100 20v30M140 20v30"/></g></svg>
+        <em>Sem přijde Vaše fotka</em><b>Kuchyně na míru</b><span>celkový záběr linky + porovnání s 3D návrhem</span>
+      </figure>
+      <figure class="ph" style="margin:0">
+        <svg class="bg" viewBox="0 0 100 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#C9A46B"><rect x="15" y="10" width="70" height="105"/><path d="M38 10v105M62 10v105"/></g></svg>
+        <em>Sem přijde Vaše fotka</em><b>Vestavěná skříň</b><span>otevřená, ať je vidět vnitřní uspořádání</span>
+      </figure>
+      <figure class="ph" style="margin:0">
+        <svg class="bg" viewBox="0 0 100 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#C9A46B"><path d="M10 90h80v20H10zM10 90V60h20v30"/></g></svg>
+        <em>Sem přijde Vaše fotka</em><b>Ložnice</b><span>postel a skříně v jednom dekoru</span>
+      </figure>
+      <figure class="ph" style="margin:0">
+        <svg class="bg" viewBox="0 0 100 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#C9A46B"><rect x="10" y="70" width="80" height="30"/><rect x="25" y="20" width="50" height="35"/></g></svg>
+        <em>Sem přijde Vaše fotka</em><b>Obývací stěna</b><span>TV sestava, knihovna</span>
+      </figure>
+      <figure class="ph" style="margin:0">
+        <svg class="bg" viewBox="0 0 100 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#C9A46B"><path d="M5 100h90M15 100V60h70v40M5 60l10-15h70l10 15"/></g></svg>
+        <em>Sem přijde Vaše fotka</em><b>Prodejna nebo kavárna</b><span>pult, regály, vybavení provozu</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec proc" id="postup" aria-labelledby="proc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--ink)">Jak probíhá zakázka</div>
+      <h2 id="proc-h">Zaměření → 3D návrh → výroba a montáž</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="n">1</span><span class="arrow" aria-hidden="true"></span><h3>Zaměření</h3><p>Zavoláte nebo pošlete poptávku. Domluvíme termín a technik u Vás přesně zaměří místnost – stěny, okna, odpady i zásuvky.</p></li>
+      <li class="step"><span class="n">2</span><span class="arrow" aria-hidden="true"></span><h3>3D návrh</h3><p>Nakreslíme návrh, u kuchyní ve 3D. Vyberete materiály, dekor a kování – vzorky si můžete prohlédnout v provozovně.</p></li>
+      <li class="step"><span class="n">3</span><h3>Výroba a montáž</h3><p>Nábytek vyrobíme na míru a namontujeme. U kuchyní zapojíme spotřebiče, na přání zajistíme i elektro, obklady a vodu.</p></li>
+    </ol>
+    <p class="proc-note">Termíny výroby a montáže se domlouvají podle rozsahu zakázky. <span class="demo">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="sec" id="poptavka" aria-labelledby="ask-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Poptávka</div>
+      <h2 id="ask-h">Zavolejte, nebo nám napište, co potřebujete</h2>
+      <p>Stačí přibližné rozměry a co chcete vyrobit. Ozveme se a domluvíme zaměření.</p>
+    </div>
+    <div class="ask-grid">
+      <div class="call-card">
+        <h3>Nejrychleji po telefonu</h3>
+        <p style="margin:0">Po–Pá 8:00–15:00 (polední pauza 11:30–12:15)</p>
+        <a class="num" href="tel:+420605264251">605 264 251</a>
+        <p class="sub">Objednávky také na <a href="tel:+420596769903">596 769 903</a><br>E-mail: <a href="mailto:rydrych1@seznam.cz">rydrych1@seznam.cz</a></p>
+      </div>
+      <form class="ask" id="ask-form" novalidate>
+        <div class="f-row">
+          <label>Jméno<input name="jmeno" autocomplete="name" required></label>
+          <label>Telefon<input name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        </div>
+        <label>E-mail (nepovinné)<input name="email" type="email" autocomplete="email"></label>
+        <fieldset>
+          <legend>Co chcete vyrobit</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="co" value="kuchyne" id="chk-kuchyne">Kuchyně</label>
+            <label><input type="checkbox" name="co" value="skrin">Vestavěná skříň</label>
+            <label><input type="checkbox" name="co" value="pokoj">Pokoj / ložnice</label>
+            <label><input type="checkbox" name="co" value="firma">Pro firmu</label>
+            <label><input type="checkbox" name="co" value="jine">Něco jiného</label>
+          </div>
+        </fieldset>
+        <div class="f-row">
+          <label>Tvar kuchyně<select name="tvar" id="sel-tvar"><option value="">nevím / netýká se</option><option value="I">I – rovná</option><option value="L">L – rohová</option><option value="U">U</option><option value="O">s ostrůvkem</option></select></label>
+          <label>Přibližné rozměry místnosti<input name="rozmery" placeholder="např. 3,6 × 2,8 m"></label>
+        </div>
+        <label>Zpráva<textarea name="zprava" placeholder="Kde to bude (obec), co si představujete, kdy by se to hodilo…"></textarea></label>
+        <button class="btn btn-primary" type="submit">Odeslat poptávku</button>
+        <div class="form-msg" id="form-msg" role="status">Děkujeme. Tohle je jen návrh webu, takže se nic neodeslalo. Na skutečném webu by poptávka přišla e-mailem truhlářství.</div>
+        <p class="small">Údaje použijeme jen k vyřízení poptávky.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Časté otázky</div>
+      <h2 id="faq-h">Na co se nás ptáte</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Kolik stojí kuchyně na míru?</summary>
+        <div class="a"><p>Cena závisí hlavně na délce linky, materiálu dvířek a pracovní desky, kování a spotřebičích. Proto ji počítáme až podle zaměření a návrhu – jednotnou cenu za metr by nešlo poctivě slíbit.</p></div>
+      </details>
+      <details>
+        <summary>Uvidím kuchyni dřív, než se začne vyrábět?</summary>
+        <div class="a"><p>Ano. Ke kuchyni připravujeme 3D návrh, na kterém vidíte rozmístění skříněk, spotřebičů i dekor. Výroba začíná až po jeho odsouhlasení.</p></div>
+      </details>
+      <details>
+        <summary>Můžu si prohlédnout materiály a kování?</summary>
+        <div class="a"><p>Ano, v provozovně v Junácké ulici ve Staré Bělé máme vzorky materiálů a vystavené kuchyňské linky s různým kováním. Často jsme ale na montážích, proto si návštěvu domluvte předem telefonem.</p></div>
+      </details>
+      <details>
+        <summary>Dodáte a zapojíte i spotřebiče?</summary>
+        <div class="a"><p>Ano, ke kuchyni dodáme a zapojíme elektrospotřebiče. Na přání zajistíme i elektroinstalaci, obklady a vodoinstalaci.</p></div>
+      </details>
+      <details>
+        <summary>Jak dlouho trvá výroba?</summary>
+        <div class="a"><p>Záleží na rozsahu a vytížení dílny – termín Vám řekneme konkrétně při objednávce, podle zvoleného materiálu. <span class="demo">ukázkový text</span></p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Kontakt</div>
+      <h2 id="kontakt-h">Truhlářství A-typ, Stará Bělá</h2>
+    </div>
+    <div class="c-grid">
+      <div class="c-block">
+        <h3>Telefon</h3>
+        <a class="c-big" href="tel:+420605264251">605 264 251</a>
+        <p style="margin-top:10px">Objednávky: <a href="tel:+420596769903">596 769 903</a><br>E-mail: <a href="mailto:rydrych1@seznam.cz">rydrych1@seznam.cz</a></p>
+      </div>
+      <div class="c-block">
+        <h3>Provozovna</h3>
+        <p>Junácká 404/129<br>724 00 Ostrava-Stará Bělá</p>
+        <a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=Jun%C3%A1ck%C3%A1%20404%2F129%2C%20724%2000%20Ostrava-Star%C3%A1%20B%C4%9Bl%C3%A1" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+        <p class="small" style="color:#B9B7AF;margin-top:14px">A-typ Morava s.r.o. · IČO 26848732</p>
+      </div>
+      <div class="c-block">
+        <h3>Provozní doba</h3>
+        <table class="hours">
+          <tr><td>Po–Pá</td><td>8:00–11:30, 12:15–15:00</td></tr>
+          <tr><td>So–Ne</td><td>zavřeno</td></tr>
+        </table>
+        <div class="status" id="status" hidden><i></i><span></span></div>
+        <p style="margin-top:12px;font-size:15px">Často jsme na montážích – návštěvu provozovny si prosím předem domluvte telefonem.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Nezávazný návrh webu – není to oficiální stránka firmy TRUHLÁŘSTVÍ A-typ.</span>
+      <span>Údaje: Firmy.cz a atypmorava.cz</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="tel:+420605264251">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+    605 264 251
+  </a>
+  <a class="btn btn-ghost" href="#poptavka">Poptat</a>
+</div>
+
+<script>
+(function(){
+  /* ---------- izometrická kuchyně ---------- */
+  var NS='http://www.w3.org/2000/svg';
+  var S=58, OX=300, OY=150, C=Math.cos(Math.PI/6), Sn=0.5;
+  function P(x,y,z){return [(OX+(x-y)*C*S).toFixed(1),(OY+(x+y)*Sn*S-z*S).toFixed(1)];}
+  function poly(pts,fill,stroke,sw,parent,extra){
+    var e=document.createElementNS(NS,'polygon');
+    e.setAttribute('points',pts.map(function(p){return P(p[0],p[1],p[2]).join(',');}).join(' '));
+    e.setAttribute('fill',fill);e.setAttribute('stroke',stroke||'#1C1F22');e.setAttribute('stroke-width',sw||1.2);e.setAttribute('stroke-linejoin','round');
+    if(extra)for(var k in extra)e.setAttribute(k,extra[k]);
+    parent.appendChild(e);return e;
+  }
+  function line(a,b,stroke,sw,parent,dash){
+    var e=document.createElementNS(NS,'line');var p=P(a[0],a[1],a[2]),q=P(b[0],b[1],b[2]);
+    e.setAttribute('x1',p[0]);e.setAttribute('y1',p[1]);e.setAttribute('x2',q[0]);e.setAttribute('y2',q[1]);
+    e.setAttribute('stroke',stroke);e.setAttribute('stroke-width',sw||1);if(dash)e.setAttribute('stroke-dasharray',dash);
+    parent.appendChild(e);return e;
+  }
+  function text(pt,str,parent,anchor,rot){
+    var e=document.createElementNS(NS,'text');var p=P(pt[0],pt[1],pt[2]);
+    e.setAttribute('x',p[0]);e.setAttribute('y',p[1]);e.setAttribute('fill','#F2F1EC');e.setAttribute('font-size','13');
+    e.setAttribute('font-family','Bricolage Grotesque, Segoe UI, Arial, sans-serif');e.setAttribute('font-weight','600');
+    e.setAttribute('text-anchor',anchor||'middle');if(rot)e.setAttribute('transform','rotate('+rot+' '+p[0]+' '+p[1]+')');
+    e.textContent=str;parent.appendChild(e);return e;
+  }
+  var RW=4.2, RD=3.6, RH=2.5;
+  // místnost
+  var room=document.getElementById('room');
+  poly([[0,0,0],[RW,0,0],[RW,RD,0],[0,RD,0]],'#2E3337','#4A5055',1,room);
+  for(var i=0.6;i<RW;i+=0.6)line([i,0,0],[i,RD,0],'#3A3F44',1,room);
+  for(var j=0.6;j<RD;j+=0.6)line([0,j,0],[RW,j,0],'#3A3F44',1,room);
+  poly([[0,0,0],[RW,0,0],[RW,0,RH],[0,0,RH]],'#33383C','#4A5055',1,room);
+  poly([[0,0,0],[0,RD,0],[0,RD,RH],[0,0,RH]],'#2A2E32','#4A5055',1,room);
+  // okno na pravé zadní stěně
+  poly([[2.6,0,1.25],[3.6,0,1.25],[3.6,0,2.15],[2.6,0,2.15]],'#3E4A52','#6B747B',1,room);
+
+  // skříňka: x0,y0 (zadní roh), w (v ose x), d (v ose y), z0, h, typ
+  function box(g,x0,y0,w,d,z0,h,kind,facing){
+    var x1=x0+w,y1=y0+d,z1=z0+h;
+    var front=kind==='wall'?'#E9E7DF':'#F2F1EC', side='#C9C7BF', top=kind==='wall'?'#D9D7CF':'#C9A46B';
+    poly([[x0,y0,z1],[x1,y0,z1],[x1,y1,z1],[x0,y1,z1]],top,'#1C1F22',1.2,g);
+    poly([[x0,y1,z0],[x1,y1,z0],[x1,y1,z1],[x0,y1,z1]],facing==='y'?front:side,'#1C1F22',1.2,g);
+    poly([[x1,y0,z0],[x1,y1,z0],[x1,y1,z1],[x1,y0,z1]],facing==='x'?front:side,'#1C1F22',1.2,g);
+    // dvířka
+    var top2=kind==='wall'?z1:z1-0.04;
+    if(facing==='y'){
+      for(var a=x0+0.6;a<x1-0.05;a+=0.6)line([a,y1,z0+0.02],[a,y1,top2],'#1C1F22',0.9,g);
+      if(kind==='base'){line([x0,y1,z1-0.2],[x1,y1,z1-0.2],'#1C1F22',0.6,g);}
+    } else if(facing==='x'){
+      for(var b=y0+0.6;b<y1-0.05;b+=0.6)line([x1,b,z0+0.02],[x1,b,top2],'#1C1F22',0.9,g);
+      if(kind==='base'){line([x1,y0,z1-0.2],[x1,y1,z1-0.2],'#1C1F22',0.6,g);}
+    }
+  }
+  function hob(g,x,y){poly([[x,y,0.905],[x+0.55,y,0.905],[x+0.55,y+0.45,0.905],[x,y+0.45,0.905]],'#1C1F22','#1C1F22',1,g);}
+  function sink(g,x,y){poly([[x,y,0.905],[x+0.5,y,0.905],[x+0.5,y+0.38,0.905],[x,y+0.38,0.905]],'#9AA3A8','#1C1F22',1,g);}
+  function sinkX(g,x,y){poly([[x,y,0.905],[x+0.38,y,0.905],[x+0.38,y+0.5,0.905],[x,y+0.5,0.905]],'#9AA3A8','#1C1F22',1,g);}
+
+  var SHAPES={
+    I:{name:'Rovná kuchyně – tvar I',
+      desc:'Všechno na jedné stěně: skříňky, dřez, varná deska i lednice. Nejjednodušší a nejlevnější tvar na výrobu.',
+      forr:'Úzké kuchyně, garsonky, kuchyňský kout v obývacím pokoji.',
+      space:'Stěna zhruba od 2,4 m; u 3,6 m a víc už je pohodlná.',
+      watch:'Při delší lince chodíte mezi dřezem a lednicí víc kroků.',
+      dim:3.6, build:function(g){
+        box(g,0.3,0,3.6,0.6,0,0.9,'base','y');
+        box(g,0.3,0,1.8,0.35,1.45,0.7,'wall','y');
+        sink(g,0.6,0.1);hob(g,2.6,0.08);
+      }},
+    L:{name:'Rohová kuchyně – tvar L',
+      desc:'Linka po dvou navazujících stěnách. Volný zbytek místnosti zůstane pro jídelní stůl.',
+      forr:'Rohové místnosti a kuchyně s jídelním stolem.',
+      space:'Každé rameno zhruba od 1,8 m; místnost cca od 2,5 × 2,5 m.',
+      watch:'Roh: vyplatí se otočné nebo výsuvné kování, aby nezůstal mrtvý.',
+      dim:3.6, build:function(g){
+        box(g,0,0,0.6,3.0,0,0.9,'base','x');
+        box(g,0.6,0,3.0,0.6,0,0.9,'base','y');
+        box(g,0,0,0.35,2.4,1.45,0.7,'wall','x');
+        box(g,0.35,0,1.6,0.35,1.45,0.7,'wall','y');
+        sinkX(g,0.08,1.6);hob(g,2.4,0.08);
+      }},
+    U:{name:'Kuchyně do tvaru U',
+      desc:'Linka po třech stranách – nejvíc pracovní plochy a úložného prostoru, všechno máte na dosah.',
+      forr:'Uzavřené kuchyně, kde chcete maximum úložného místa.',
+      space:'Místnost zhruba od 2,4 × 2,4 m; mezi protilehlými linkami nechte asi 120 cm.',
+      watch:'Dva rohy navíc – kování do rohů výrazně ovlivní pohodlí.',
+      dim:3.6, build:function(g){
+        box(g,0,0,0.6,3.0,0,0.9,'base','x');
+        box(g,0.6,0,3.0,0.6,0,0.9,'base','y');
+        box(g,0,0,0.35,2.4,1.45,0.7,'wall','x');
+        box(g,3.0,0.6,0.6,2.4,0,0.9,'base','x');
+        sinkX(g,0.08,1.4);hob(g,1.6,0.08);hob(g,3.03,1.6);
+      }},
+    O:{name:'Kuchyně s ostrůvkem',
+      desc:'Linka u stěny a samostatný ostrůvek uprostřed – na vaření, přípravu i sezení s barovými židlemi.',
+      forr:'Otevřené prostory propojené s obývacím pokojem nebo jídelnou.',
+      space:'Volný průchod kolem ostrůvku aspoň 100–120 cm; místnost cca od 4 × 3,5 m.',
+      watch:'Varná deska nebo dřez v ostrůvku znamená přívody vedené v podlaze.',
+      dim:3.6, build:function(g){
+        box(g,0,0,0.6,2.4,0,0.9,'base','x');
+        box(g,0.6,0,3.0,0.6,0,0.9,'base','y');
+        box(g,0,0,0.35,1.8,1.45,0.7,'wall','x');
+        box(g,1.2,1.7,1.8,0.9,0,0.9,'base','x');
+        sinkX(g,0.08,1.2);hob(g,1.8,1.92);
+      }}
+  };
+  var units=document.getElementById('units'), dims=document.getElementById('dims');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function drawDims(sh){
+    while(dims.firstChild)dims.removeChild(dims.firstChild);
+    var c='#D2492F';
+    // kóta podél zadní stěny (nad linkou)
+    var y=0,z=RH+0.22;
+    var xa=sh==='I'?0.3:0, xb=sh==='I'?3.9:3.6;
+    line([xa,y,z],[xb,y,z],c,1.5,dims);
+    line([xa,y,z-0.12],[xa,y,z+0.12],c,1.5,dims);line([xb,y,z-0.12],[xb,y,z+0.12],c,1.5,dims);line([xa,y,RH],[xa,y,z],c,0.8,dims,'3 3');line([xb,y,RH],[xb,y,z],c,0.8,dims,'3 3');
+    var mm=Math.round((xb-xa)*1000);
+    text([(xa+xb)/2,y,z+0.1],mm.toLocaleString('cs-CZ')+' mm',dims,'middle',30);
+    // výška 900 mm
+    var X=RW+0.25;
+    line([X,0,0],[X,0,0.9],c,1.5,dims);
+    line([X-0.1,0,0],[X+0.1,0,0],c,1.5,dims);line([X-0.1,0,0.9],[X+0.1,0,0.9],c,1.5,dims);
+    text([X+0.12,0,0.45],'900',dims,'start');
+  }
+  function render(sh,animate){
+    var g=document.createElementNS(NS,'g');g.setAttribute('class','kbox'+(animate&&!reduce?' out':''));
+    SHAPES[sh].build(g);
+    while(units.firstChild)units.removeChild(units.firstChild);
+    units.appendChild(g);drawDims(sh);
+    if(animate&&!reduce){requestAnimationFrame(function(){requestAnimationFrame(function(){g.setAttribute('class','kbox');});});}
+    var d=SHAPES[sh];
+    document.getElementById('cfg-name').textContent=d.name;
+    document.getElementById('cfg-desc').textContent=d.desc;
+    document.getElementById('cfg-for').textContent=d.forr;
+    document.getElementById('cfg-space').textContent=d.space;
+    document.getElementById('cfg-watch').textContent=d.watch;
+    document.getElementById('kitchen-t').textContent='Izometrický náčrt kuchyně – '+d.name;
+    var labels={I:'tvaru I',L:'tvaru L',U:'tvaru U',O:'s ostrůvkem'};
+    var cta=document.getElementById('cfg-cta');cta.textContent='Chci kuchyni '+labels[sh]+' – poptat';cta.setAttribute('data-shape',sh);
+  }
+  var tabs=[].slice.call(document.querySelectorAll('.cfg-tab'));
+  tabs.forEach(function(t,idx){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.setAttribute('aria-selected','false');x.tabIndex=-1;});
+      t.setAttribute('aria-selected','true');t.tabIndex=0;render(t.getAttribute('data-shape'),true);
+    });
+    t.addEventListener('keydown',function(e){
+      var n=null;if(e.key==='ArrowRight')n=tabs[(idx+1)%tabs.length];if(e.key==='ArrowLeft')n=tabs[(idx-1+tabs.length)%tabs.length];
+      if(n){e.preventDefault();n.focus();n.click();}
+    });
+    t.tabIndex=idx===0?0:-1;
+  });
+  render('I',false);
+  document.getElementById('cfg-cta').addEventListener('click',function(){
+    var s=this.getAttribute('data-shape');document.getElementById('sel-tvar').value=s;document.getElementById('chk-kuchyne').checked=true;
+  });
+
+  /* ---------- formulář ---------- */
+  document.getElementById('ask-form').addEventListener('submit',function(e){
+    e.preventDefault();var m=document.getElementById('form-msg');m.classList.add('show');m.focus&&m.focus();
+  });
+
+  /* ---------- provozní doba (Europe/Prague) ---------- */
+  try{
+    var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var o={};parts.forEach(function(p){o[p.type]=p.value;});
+    var wd=['Mon','Tue','Wed','Thu','Fri'].indexOf(o.weekday)>=0;
+    var m=parseInt(o.hour,10)%24*60+parseInt(o.minute,10);
+    var st=document.getElementById('status'),sp=st.querySelector('span'),txt,open=false;
+    if(wd&&m>=480&&m<690){open=true;txt='Teď otevřeno · do 11:30';}
+    else if(wd&&m>=735&&m<900){open=true;txt='Teď otevřeno · do 15:00';}
+    else if(wd&&m>=690&&m<735){txt='Polední pauza · znovu od 12:15';}
+    else if(wd&&m<480){txt='Teď zavřeno · otevíráme v 8:00';}
+    else{txt='Teď zavřeno · otevíráme v pracovní den v 8:00';}
+    sp.textContent=txt;st.className='status '+(open?'open':'closed');st.hidden=false;
+  }catch(err){}
+})();
+</script>
+</body>
+</html>

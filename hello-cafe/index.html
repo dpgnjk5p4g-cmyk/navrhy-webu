@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Hello café | kavárna Havířov</title>
+<meta name="description" content="Hello café – stylová kavárna v Havířově-Podlesí na Dlouhé třídě. Káva i s sebou, snídaně, domácí dezerty a nápoje. Otevřeno denně.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Sora:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Hello café","telephone":"+420703666725","email":"hellocafehavirov@gmail.com",
+"address":{"@type":"PostalAddress","streetAddress":"Dlouhá třída 1591/95a","addressLocality":"Havířov","postalCode":"736 01","addressCountry":"CZ"},
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"19:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"19:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"13:00","closes":"19:00"}]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  /* layout: mobil první, jeden sloupec 390 px → od 860 px dvousloupcový hero a mřížky, max. šířka 1120 px */
+  --yolk:#F4B526; --yolk-soft:#FCE7A8; --coffee:#3E2416; --coffee-2:#6B4430; --cloud:#D3E5F3; --cloud-deep:#2F5D80; --milk:#FCFAF5;
+  --bg:var(--milk); --surface:#FFFFFF; --text:var(--coffee); --muted:#5E4334; --line:#E9DFD2;
+  --btn-bg:var(--coffee); --btn-text:var(--milk); --accent-bg:var(--yolk); --accent-text:var(--coffee);
+  --sky:var(--cloud); --sky-text:#22394D; --banner-bg:var(--coffee); --banner-text:#FCE7A8;
+  --cup:#FFFFFF; --cup-line:var(--coffee); --steam:#7A9CB8;
+  --f-display:"Shrikhand","Cooper Black","Georgia",serif;
+  --f-body:"Sora",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:22px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1E140E; --surface:#2A1D15; --text:#FBF4E8; --muted:#D9C8B6; --line:#4A3427;
+    --btn-bg:var(--yolk); --btn-text:#2A170C; --accent-bg:var(--yolk); --accent-text:#2A170C;
+    --sky:#22384A; --sky-text:#E3EEF7; --banner-bg:#F4B526; --banner-text:#2A170C;
+    --cup:#FBF4E8; --cup-line:#2A170C; --steam:#A9C6DE;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1E140E; --surface:#2A1D15; --text:#FBF4E8; --muted:#D9C8B6; --line:#4A3427;
+  --btn-bg:var(--yolk); --btn-text:#2A170C; --accent-bg:var(--yolk); --accent-text:#2A170C;
+  --sky:#22384A; --sky-text:#E3EEF7; --banner-bg:#F4B526; --banner-text:#2A170C;
+  --cup:#FBF4E8; --cup-line:#2A170C; --steam:#A9C6DE;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--f-body);-webkit-text-size-adjust:100%;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cloud-deep);outline-offset:3px;border-radius:6px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) :focus-visible{outline-color:var(--yolk)}}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.ukazka{display:inline-block;font:600 11px/1 var(--f-body);letter-spacing:.04em;text-transform:uppercase;background:var(--sky);color:var(--sky-text);padding:4px 7px;border-radius:999px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.banner{background:var(--banner-bg);color:var(--banner-text);font-size:13px;text-align:center;padding:8px 16px;line-height:1.4}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.brand{font:400 24px/1 var(--f-display);text-decoration:none;color:var(--text)}
+.brand span{color:var(--coffee-2)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand span{color:var(--yolk)}}
+nav.links{display:none;gap:22px;font-weight:600;font-size:15px}
+nav.links a{text-decoration:none}
+nav.links a:hover{text-decoration:underline;text-underline-offset:4px}
+.tel-top{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;background:var(--accent-bg);color:var(--accent-text);padding:9px 14px;border-radius:999px;font-size:15px;white-space:nowrap}
+.tel-top svg{width:16px;height:16px}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,var(--sky) 0 38%,transparent 38.2%),var(--bg);padding:26px 0 34px}
+.hero-grid{display:grid;gap:10px;align-items:center}
+.hello{font:400 clamp(54px,15.5vw,132px)/.98 var(--f-display);margin:0;letter-spacing:-.01em}
+.hello .y{color:var(--coffee-2);display:block}
+.hello .y em{font-style:normal;background:linear-gradient(transparent 62%,var(--yolk) 62% 92%,transparent 92%);padding:0 .06em}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hello .y{color:var(--yolk)} :root:not([data-theme="light"]) .hello .y em{background:none}}
+:root[data-theme="dark"] .hello .y{color:var(--yolk)}
+.lead{font-size:17px;margin:14px 0 0;max-width:34ch}
+.lead strong{font-weight:700}
+.status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:16px 0 0;font-size:15px}
+.pill{display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--surface);border:1.5px solid var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;background:#2E8B57;box-shadow:0 0 0 3px color-mix(in srgb,#2E8B57 25%,transparent)}
+.pill.closed .dot{background:#B5452E;box-shadow:0 0 0 3px color-mix(in srgb,#B5452E 25%,transparent)}
+.hours-mini{color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 22px;border-radius:999px;font:700 16px/1 var(--f-body);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-main{background:var(--btn-bg);color:var(--btn-text)}
+.btn-alt{background:var(--accent-bg);color:var(--accent-text)}
+.btn-ghost{background:transparent;color:var(--text);border-color:currentColor}
+.btn svg{width:18px;height:18px}
+.btn:hover{transform:translateY(-1px)}
+.cupbox{position:absolute;right:-8px;top:8px;width:118px;pointer-events:none}
+.cupbox svg{width:100%;height:auto;display:block}
+.steam path{fill:none;stroke:var(--steam);stroke-width:5;stroke-linecap:round;animation:rise 3.2s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.9s}
+.steam path:nth-child(3){animation-delay:1.8s}
+@keyframes rise{0%{transform:translateY(10px);opacity:0}30%{opacity:.95}100%{transform:translateY(-16px);opacity:0}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .steam path{animation:none;opacity:.9;transform:none}
+  .btn:hover{transform:none}
+}
+
+section{padding:56px 0}
+.kicker{font:700 13px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+h2{font:400 clamp(32px,8vw,52px)/1.08 var(--f-display);margin:0 0 14px}
+h3{font:700 19px/1.3 var(--f-body);margin:0 0 6px}
+p{margin:0 0 12px}
+.sub{color:var(--muted);max-width:60ch}
+
+/* NABÍDKA – přepínač */
+.offer{background:var(--yolk-soft)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .offer{background:#2A1D15}}
+:root[data-theme="dark"] .offer{background:#2A1D15}
+.offer-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px}
+.now{font-size:14px;font-weight:600;color:var(--muted)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--surface);padding:6px;border-radius:999px;border:1.5px solid var(--line);margin:18px 0 22px;max-width:560px}
+.tab{appearance:none;border:0;background:transparent;color:var(--text);font:700 15px/1.1 var(--f-body);padding:12px 6px;border-radius:999px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
+.tab small{font-weight:400;font-size:11.5px;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--btn-bg);color:var(--btn-text)}
+.tab[aria-selected="true"] small{color:inherit;opacity:.85}
+.panel{background:var(--surface);border-radius:var(--r);border:1.5px solid var(--line);padding:22px;display:grid;gap:20px}
+.panel[hidden]{display:none}
+.panel-top{display:flex;gap:16px;align-items:center}
+.panel-ico{flex:0 0 72px;height:72px;border-radius:50%;background:var(--sky);display:grid;place-items:center}
+.panel-ico svg{width:46px;height:46px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .panel-ico{background:var(--cloud)}}
+:root[data-theme="dark"] .panel-ico{background:var(--cloud)}
+:root[data-theme="dark"] .hello .y em{background:none}
+.panel-title{font:400 28px/1.1 var(--f-display);margin:0}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.items li{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1.5px dashed var(--line)}
+.items li:first-child{border-top:0;padding-top:0}
+.items .price{font-weight:700;white-space:nowrap;font-size:14px}
+.items p{margin:2px 0 0;color:var(--muted);font-size:15px}
+.note{font-size:14px;color:var(--muted);margin:16px 0 0}
+
+/* foto */
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.ph{aspect-ratio:4/5;border-radius:var(--r);background:
+  repeating-linear-gradient(-45deg,var(--sky) 0 14px,color-mix(in srgb,var(--sky) 70%,var(--bg)) 14px 28px);display:grid;place-items:center;text-align:center;font-weight:700;font-size:14px;color:var(--sky-text);padding:12px}
+.ph:first-child{grid-column:1/-1;aspect-ratio:16/9}
+
+/* důvěra */
+.trust-grid{display:grid;gap:14px}
+.score{background:var(--btn-bg);color:var(--btn-text);border-radius:var(--r);padding:24px;display:flex;gap:18px;align-items:center;text-decoration:none}
+.score b{font:400 64px/1 var(--f-display)}
+.score span{display:block}
+.score .u{text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:9px 14px;font-weight:600;font-size:15px}
+.chips svg{width:18px;height:18px;flex:none}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:22px}
+
+/* kroky */
+.steps{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:20px 20px 20px 78px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:18px;top:18px;width:44px;height:44px;border-radius:50%;background:var(--accent-bg);color:var(--accent-text);font:400 24px/44px var(--f-display);text-align:center}
+.steps p{margin:0;color:var(--muted)}
+
+/* kontakt */
+.contact{background:var(--sky);color:var(--sky-text)}
+.contact .kicker,.contact .sub{color:inherit;opacity:.9}
+.c-grid{display:grid;gap:14px;margin-top:20px}
+.c-card{background:var(--bg);color:var(--text);border-radius:var(--r);padding:22px}
+.c-card a.big{font:700 24px/1.2 var(--f-body);text-decoration:none;display:inline-block;margin:2px 0 10px}
+.c-card a.big:hover{text-decoration:underline}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:9px 0;border-top:1.5px dashed var(--line)}
+.hours tr:first-child td{border-top:0}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:var(--coffee-2)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hours tr.today td{color:var(--yolk)}}
+:root[data-theme="dark"] .hours tr.today td{color:var(--yolk)}
+.hours tr.today td:first-child::after{content:" · dnes";font-weight:400}
+.linkrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+
+/* FAQ */
+details{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:0 18px;margin-top:10px}
+summary{cursor:pointer;font-weight:700;padding:16px 28px 16px 0;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font:400 26px/1 var(--f-display)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:6px}
+
+footer{padding:34px 0 120px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+footer .brand{font-size:28px;display:inline-block;margin-bottom:8px}
+
+.callbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:8px}
+.callbar a{flex:1;box-shadow:0 8px 24px rgba(30,20,14,.28)}
+
+@media (min-width:860px){
+  .wrap{padding:0 32px}
+  nav.links{display:flex}
+  .hero{padding:56px 0 70px}
+  .hero-grid{grid-template-columns:1.35fr 1fr;gap:30px}
+  .cupbox{position:static;width:100%;max-width:380px;justify-self:end}
+  .lead{font-size:19px}
+  section{padding:88px 0}
+  .panel{grid-template-columns:260px 1fr;padding:32px;align-items:start}
+  .panel-top{flex-direction:column;align-items:flex-start}
+  .panel-ico{flex-basis:auto;width:110px;height:110px}
+  .panel-ico svg{width:68px;height:68px}
+  .panel-title{font-size:36px}
+  .photos{grid-template-columns:2fr 1fr 1fr}
+  .ph{aspect-ratio:1/1}
+  .ph:first-child{grid-column:auto;aspect-ratio:auto}
+  .trust-grid{grid-template-columns:1fr 1.4fr;align-items:stretch}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .steps li{padding:84px 22px 22px}
+  .c-grid{grid-template-columns:1fr 1fr 1fr}
+  .callbar{display:none}
+  footer{padding-bottom:40px}
+}
+</style>
+
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Hello café</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Hello <span>café</span></a>
+    <nav class="links" aria-label="Hlavní navigace">
+      <a href="#nabidka">Nabídka</a><a href="#rezervace">Rezervace</a><a href="#kontakt">Kontakt</a><a href="#otazky">Otázky</a>
+    </nav>
+    <a class="tel-top" href="tel:+420703666725" aria-label="Zavolat 703 666 725">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>703 666 725</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h" style="padding-bottom:34px">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="hello" id="hero-h">Hello,<span class="y"><em>Podlesí!</em></span></h1>
+      <p class="lead"><strong>Stylová kavárna na Podlesí</strong> – káva i s sebou, snídaně, domácí dezerty a nápoje. Najdete nás na Dlouhé třídě 1591/95a v Havířově.</p>
+      <div class="status">
+        <span class="pill" id="statusPill"><span class="dot" aria-hidden="true"></span><span id="statusText">Po–Pá 7–19</span></span>
+        <span class="hours-mini">Po–Pá 7–19 · So 8–19 · Ne 13–19</span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-main" href="#nabidka">Zobrazit nabídku
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+        <a class="btn btn-alt" href="tel:+420703666725">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zavolat</a>
+      </div>
+    </div>
+    <div class="cupbox" aria-hidden="true">
+      <svg viewBox="0 0 240 260">
+        <g class="steam">
+          <path d="M92 92c-14-14 12-22 0-38s10-24 0-38"/>
+          <path d="M122 96c-14-14 12-22 0-38s10-24 0-38"/>
+          <path d="M152 92c-14-14 12-22 0-38s10-24 0-38"/>
+        </g>
+        <ellipse cx="120" cy="236" rx="96" ry="16" fill="#F4B526"/>
+        <path d="M44 120h152l-14 86a26 26 0 0 1-26 22H84a26 26 0 0 1-26-22z" fill="var(--cup)" stroke="var(--cup-line)" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M194 136c26 0 34 14 30 28s-18 24-40 22" fill="none" stroke="var(--cup-line)" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="120" cy="120" rx="76" ry="10" fill="#6B4430" stroke="var(--cup-line)" stroke-width="6"/>
+        <path d="M86 168c6 10 14 14 34 14s28-4 34-14" fill="none" stroke="var(--cup-line)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="96" cy="152" r="5" fill="var(--cup-line)"/><circle cx="144" cy="152" r="5" fill="var(--cup-line)"/>
+        <path d="M60 140l6 4M180 140l-6 4" stroke="#F4B526" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="nabidka" aria-labelledby="nab-h">
+  <div class="wrap">
+    <div class="offer-head">
+      <div>
+        <p class="kicker">Nabídka</p>
+        <h2 id="nab-h">Co Vám dnes nabídneme</h2>
+      </div>
+      <p class="now" id="nowLine">Zvolte část dne.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Nabídka podle denní doby">
+      <button class="tab" role="tab" id="t-rano" aria-controls="p-rano" aria-selected="true">Ráno<small>snídaně</small></button>
+      <button class="tab" role="tab" id="t-odpo" aria-controls="p-odpo" aria-selected="false" tabindex="-1">Odpoledne<small>dezerty</small></button>
+      <button class="tab" role="tab" id="t-kdy" aria-controls="p-kdy" aria-selected="false" tabindex="-1">Kdykoli<small>nápoje</small></button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-rano" aria-labelledby="t-rano">
+      <div class="panel-top">
+        <div class="panel-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#3E2416" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="34" r="20" fill="#FCFAF5"/><circle cx="32" cy="34" r="9" fill="#F4B526"/><path d="M8 12v14M8 12v8a4 4 0 0 0 8 0v-8M12 26v26M56 12c-5 0-6 8-6 14h6v26"/></svg></div>
+        <div><h3 class="panel-title">Ráno</h3><p class="sub" style="margin:4px 0 0">Snídaně u nás a káva i s sebou</p></div>
+      </div>
+      <ul class="items">
+        <li><div><h3>Snídaně</h3><p>Posaďte se a dejte si snídani v klidu, než se rozjede den. <span class="ukazka">ukázkový text</span></p></div><span class="price">cena na dotaz</span></li>
+        <li><div><h3>Káva s sebou</h3><p>Cestou do práce se stavte pro kávu do ruky – otevíráme ve všední dny už v 7:00.</p></div><span class="price">cena na dotaz</span></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="p-odpo" aria-labelledby="t-odpo" hidden>
+      <div class="panel-top">
+        <div class="panel-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#3E2416" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M10 50h44V34L10 24z" fill="#FCFAF5"/><path d="M10 34l44 6" stroke="#F4B526" stroke-width="5"/><path d="M10 24l44 10"/><circle cx="40" cy="20" r="5" fill="#F4B526"/></svg></div>
+        <div><h3 class="panel-title">Odpoledne</h3><p class="sub" style="margin:4px 0 0">Domácí dezerty ke kávě</p></div>
+      </div>
+      <ul class="items">
+        <li><div><h3>Domácí dezerty</h3><p>Dezerty a zákusky si připravujeme sami. Co je dnes ve vitríně, Vám rádi řekneme po telefonu. <span class="ukazka">ukázkový text</span></p></div><span class="price">cena na dotaz</span></li>
+        <li><div><h3>Káva k dezertu</h3><p>Odpolední zastávka na kávu a něco sladkého – v neděli otevíráme ve 13:00.</p></div><span class="price">cena na dotaz</span></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="p-kdy" aria-labelledby="t-kdy" hidden>
+      <div class="panel-top">
+        <div class="panel-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#3E2416" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M18 14h28l-4 40H22z" fill="#FCFAF5"/><path d="M20 30h24l-2 22H22z" fill="#D3E5F3"/><path d="M36 14l6-8h6"/></svg></div>
+        <div><h3 class="panel-title">Kdykoli</h3><p class="sub" style="margin:4px 0 0">Káva a nápoje po celou otevírací dobu</p></div>
+      </div>
+      <ul class="items">
+        <li><div><h3>Káva</h3><p>Na místě i s sebou, od rána do 19:00.</p></div><span class="price">cena na dotaz</span></li>
+        <li><div><h3>Nápoje</h3><p>Teplé i studené nápoje pro ty, kdo kávu zrovna nechtějí. <span class="ukazka">ukázkový text</span></p></div><span class="price">cena na dotaz</span></li>
+      </ul>
+    </div>
+    <p class="note">Aktuální nabídku a ceny sdílíme na <a href="https://www.instagram.com/hello_cafe_havirov/" rel="noopener">Instagramu @hello_cafe_havirov</a>.</p>
+
+    <div class="photos" aria-label="Místa pro fotografie">
+      <div class="ph">Sem přijde Vaše fotka<br>(interiér kavárny)</div>
+      <div class="ph">Sem přijde Vaše fotka<br>(snídaně)</div>
+      <div class="ph">Sem přijde Vaše fotka<br>(dezert)</div>
+    </div>
+  </div>
+</section>
+
+<section id="proc" aria-labelledby="proc-h">
+  <div class="wrap">
+    <p class="kicker">Proč k nám</p>
+    <h2 id="proc-h">Hosté nám dávají plný počet</h2>
+    <div class="trust-grid">
+      <a class="score" href="https://www.firmy.cz/detail/13680032-hello-cafe-havirov-podlesi.html" rel="noopener">
+        <b>5,0</b>
+        <span>z 5 podle 22 hodnocení<span class="u">na Firmy.cz →</span></span>
+      </a>
+      <div class="card">
+        <h3>Co u nás najdete</h3>
+        <p class="sub">Podle našeho profilu na Firmy.cz:</p>
+        <ul class="chips">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor"/></svg>Wi-Fi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>Platba kartou</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M5 21h14M12 3l-7 7h14z"/></svg>Posezení venku</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="10" r="2.2"/><circle cx="9" cy="5.5" r="2.2"/><circle cx="15" cy="5.5" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M12 11c3 0 6 4.5 6 7 0 2-2 2.5-3 2.5S13 20 12 20s-2 .5-3 .5-3-.5-3-2.5c0-2.5 3-7 6-7z"/></svg>Pejsci vítáni</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/></svg>Klimatizace</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rezervace" aria-labelledby="rez-h" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Rezervace</p>
+    <h2 id="rez-h">Jak si zamluvit stůl</h2>
+    <p class="sub">Rezervace přijímáme telefonicky. Stačí jeden hovor.</p>
+    <ol class="steps">
+      <li><h3>Zavolejte nám</h3><p>Na <a href="tel:+420703666725"><strong>703 666 725</strong></a> během otevírací doby.</p></li>
+      <li><h3>Řekněte čas a počet osob</h3><p>Ozvěte se ideálně den předem, ať Vám stůl připravíme. <span class="ukazka">ukázkový text</span></p></li>
+      <li><h3>Přijďte na Dlouhou třídu</h3><p>Hello café, Dlouhá třída 1591/95a, Havířov-Podlesí. Káva už bude čekat.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="kon-h">
+  <div class="wrap">
+    <p class="kicker">Kontakt</p>
+    <h2 id="kon-h">Kde nás najdete</h2>
+    <div class="c-grid">
+      <div class="c-card">
+        <h3>Zavolejte nebo napište</h3>
+        <a class="big" href="tel:+420703666725">703 666 725</a><br>
+        <a href="mailto:hellocafehavirov@gmail.com">hellocafehavirov@gmail.com</a>
+        <div class="linkrow" style="margin-top:16px">
+          <a class="btn btn-main" href="tel:+420703666725">Zavolat</a>
+          <a class="btn btn-ghost" href="mailto:hellocafehavirov@gmail.com">Napsat e-mail</a>
+        </div>
+      </div>
+      <div class="c-card">
+        <h3>Otevírací doba</h3>
+        <table class="hours" aria-label="Otevírací doba">
+          <tr data-d="1,2,3,4,5"><td>Pondělí – pátek</td><td>7:00 – 19:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>8:00 – 19:00</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>13:00 – 19:00</td></tr>
+        </table>
+      </div>
+      <div class="c-card">
+        <h3>Adresa</h3>
+        <p>Dlouhá třída 1591/95a<br>736 01 Havířov-Podlesí</p>
+        <div class="linkrow">
+          <a class="btn btn-alt" href="https://mapy.cz/zakladni?q=Dlouh%C3%A1%20t%C5%99%C3%ADda%201591%2F95a%2C%20736%2001%20Hav%C3%AD%C5%99ov" rel="noopener">Otevřít na Mapy.cz</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/hello_cafe_havirov/" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="otazky" aria-labelledby="faq-h">
+  <div class="wrap" style="max-width:820px">
+    <p class="kicker">Časté otázky</p>
+    <h2 id="faq-h">Než se k nám vydáte</h2>
+    <details><summary>Můžu si kávu vzít s sebou?</summary><p>Ano, kávu Vám připravíme i s sebou. Ve všední dny otevíráme už v 7:00.</p></details>
+    <details><summary>Dá se u Vás rezervovat stůl?</summary><p>Ano, telefonicky na čísle 703 666 725.</p></details>
+    <details><summary>Můžu přijít se psem?</summary><p>Ano, pejsci jsou u nás vítáni.</p></details>
+    <details><summary>Dá se platit kartou?</summary><p>Ano, u nás zaplatíte kartou.</p></details>
+    <details><summary>Kdy máte otevřeno o víkendu?</summary><p>V sobotu od 8:00 do 19:00, v neděli od 13:00 do 19:00.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top">Hello <span>café</span></a>
+    <p>Kavárna · Dlouhá třída 1591/95a, Havířov-Podlesí · <a href="tel:+420703666725">703 666 725</a> · <a href="mailto:hellocafehavirov@gmail.com">hellocafehavirov@gmail.com</a></p>
+    <p>Nezávazný návrh webu – není to oficiální stránka firmy Hello café. Ilustrace jsou vlastní, bez fotografií firmy.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-main" href="tel:+420703666725">Zavolat 703 666 725</a>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function select(t,focus){
+    tabs.forEach(function(x){
+      var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      var k=e.key, n=null;
+      if(k==='ArrowRight')n=tabs[(i+1)%tabs.length];
+      if(k==='ArrowLeft')n=tabs[(i+tabs.length-1)%tabs.length];
+      if(k==='Home')n=tabs[0]; if(k==='End')n=tabs[tabs.length-1];
+      if(n){e.preventDefault();select(n,true)}
+    });
+  });
+  // otevírací doba: 0=ne … 6=so, v minutách
+  var H={0:[780,1140],1:[420,1140],2:[420,1140],3:[420,1140],4:[420,1140],5:[420,1140],6:[480,1140]};
+  var DN=['v neděli','v pondělí','v úterý','ve středu','ve čtvrtek','v pátek','v sobotu'];
+  var d,m;
+  try{
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday);
+    m=parseInt(o.hour,10)*60+parseInt(o.minute,10);
+  }catch(e){var n=new Date();d=n.getDay();m=n.getHours()*60+n.getMinutes();}
+  if(d<0)return;
+  function hm(x){return Math.floor(x/60)+':'+('0'+x%60).slice(-2)}
+  var open=m>=H[d][0]&&m<H[d][1], txt;
+  if(open){txt='Teď otevřeno · do '+hm(H[d][1])}
+  else if(m<H[d][0]){txt='Teď zavřeno · otevíráme v '+hm(H[d][0])}
+  else{var nd=(d+1)%7;txt='Teď zavřeno · otevíráme '+(nd===0?'v neděli':'zítra')+' v '+hm(H[nd][0])}
+  var pill=document.getElementById('statusPill');
+  document.getElementById('statusText').textContent=txt;
+  if(!open)pill.classList.add('closed');
+  var idx=!open?2:(m<660?0:1);
+  select(tabs[idx]);
+  var part=['ráno','odpoledne','kdykoli'][idx];
+  document.getElementById('nowLine').textContent=(open?(idx===0?'Dobré ráno! Máme otevřeno.':'Hezké odpoledne! Máme otevřeno.'):'Teď máme zavřeno – nápoje si dáte kdykoli během otevírací doby.');
+  [].forEach.call(document.querySelectorAll('.hours tr'),function(r){
+    if(r.getAttribute('data-d').split(',').indexOf(String(d))>-1)r.classList.add('today');
+  });
+})();
+</script>
+</body>
+</html>

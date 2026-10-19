@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – AXWELL salon pro psy</title>
+<meta name="description" content="Salon pro psy AXWELL v Kopřivnici a Novém Jičíně: kompletní úprava psů, trimování, výstavní příprava a handling. Malá plemena od 650 Kč. Objednejte termín na 728 137 345.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"AXWELL – salon pro psy",
+  "description":"Salon pro psy: kompletní úprava psů, trimování, handling a poradenství.",
+  "founder":{"@type":"Person","name":"Soňa Axmanová"},
+  "telephone":"+420728137345",
+  "email":"axwellkennel@gmail.com",
+  "url":"https://axwell.eu",
+  "priceRange":"od 650 Kč",
+  "openingHours":"Mo-Fr 09:00-16:00",
+  "address":{"@type":"PostalAddress","streetAddress":"Česká 867/35","postalCode":"742 21","addressLocality":"Kopřivnice","addressCountry":"CZ"},
+  "department":[{
+    "@type":"LocalBusiness",
+    "name":"AXWELL – salon pro psy, Nový Jičín",
+    "telephone":"+420728137345",
+    "address":{"@type":"PostalAddress","streetAddress":"K Nemocnici 6","addressLocality":"Nový Jičín","addressCountry":"CZ"}
+  }]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --navy:#14213D;
+  --navy-2:#1C2D52;
+  --brass:#C9A24E;
+  --brass-light:#D2B26A;
+  --brass-ink:#7A5A1C;
+  --ivory:#F8F4E8;
+  --ivory-2:#ECE6D6;
+  --dove:#E4E7EC;
+  --dove-mid:#B9C0CD;
+  --slate:#4F5A6E;
+  --white:#FFFFFF;
+  --gutter:clamp(16px,4vw,48px);
+  --maxw:1180px;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--navy);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;text-wrap:balance;margin:0;color:var(--navy);letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.demo{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.3;padding:2px 7px;border:1px dashed var(--brass-ink);color:var(--brass-ink);background:var(--ivory);border-radius:3px;vertical-align:middle;white-space:nowrap}
+.on-dark .demo,.demo.on-dark{border-color:var(--brass-light);color:var(--brass-light);background:transparent}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-ink)}
+.on-dark .eyebrow{color:var(--brass-light)}
+
+/* banner */
+.proposal{background:var(--brass);color:var(--navy);font-size:13px;font-weight:600;text-align:center;padding:7px 16px;line-height:1.35}
+
+/* header */
+.top{background:var(--ivory);border-bottom:1px solid var(--ivory-2);position:sticky;top:0;z-index:30}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.brand b{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.08em}
+.brand small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);line-height:1.2}
+.nav{display:none;gap:26px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--navy)}
+.nav a:hover{color:var(--brass-ink)}
+.tel-head{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;color:var(--navy);padding:8px 12px;border:1.5px solid var(--navy);border-radius:999px;white-space:nowrap}
+.tel-head svg{width:16px;height:16px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:16px;text-decoration:none;padding:14px 22px;border-radius:4px;border:2px solid transparent;cursor:pointer;line-height:1.2}
+.btn-primary{background:var(--navy);color:var(--ivory)}
+.btn-primary:hover{background:var(--navy-2)}
+.btn-brass{background:var(--brass);color:var(--navy)}
+.btn-brass:hover{background:var(--brass-light)}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-ghost-light{background:transparent;color:var(--ivory);border-color:var(--ivory)}
+
+/* hero */
+.hero{padding:22px 0 40px;position:relative}
+.hero .wrap{display:grid;gap:12px}
+.hero h1{font-size:clamp(33px,8.4vw,64px);font-weight:600;margin:10px 0 12px}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--brass-ink)}
+.hero .lead{font-size:17px;color:var(--slate);max-width:34em}
+.hero .lead strong{color:var(--navy)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px;font-size:14px;color:var(--slate)}
+.hero-facts span{display:inline-flex;align-items:center;gap:6px}
+.hero-facts i{width:7px;height:7px;background:var(--brass);transform:rotate(45deg);display:inline-block}
+.hero-art{position:relative;margin-top:8px}
+.hero-art .frame{position:relative;background:var(--navy);border-radius:2px;padding:20px;aspect-ratio:1/1;overflow:hidden}
+.hero-art .frame::before{content:"";position:absolute;inset:10px;border:1px solid rgba(210,178,106,.45)}
+.hero-art svg{position:relative;width:100%;height:100%}
+.hero-art .cap{margin-top:10px;font-family:var(--serif);font-style:italic;color:var(--slate);font-size:15px}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:64px 0}
+.sec-head{max-width:640px;margin-bottom:32px}
+.sec-head h2{font-size:clamp(28px,5.6vw,44px);margin:8px 0 12px}
+.sec-head p{color:var(--slate)}
+
+/* pricing */
+.price-band{background:var(--white);border-top:1px solid var(--ivory-2);border-bottom:1px solid var(--ivory-2)}
+.sizes{display:grid;gap:0;border-top:2px solid var(--navy)}
+.size{display:grid;grid-template-columns:56px 1fr;gap:4px 16px;padding:20px 0;border-bottom:1px solid var(--dove-mid);align-items:start}
+.size svg{grid-row:span 3;width:56px;height:56px;color:var(--navy)}
+.size h3{font-size:22px}
+.size .ex{font-size:14px;color:var(--slate)}
+.size .pr{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--navy)}
+.size .pr small{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--slate)}
+.included{margin-top:28px;background:var(--ivory);border-left:4px solid var(--brass);padding:20px}
+.included h3{font-size:20px;margin-bottom:10px}
+.included ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.included li{font-size:14px;font-weight:500;background:var(--white);border:1px solid var(--ivory-2);padding:6px 10px;border-radius:2px}
+.extras{display:grid;gap:10px;margin-top:20px;font-size:15px;color:var(--slate)}
+.extras b{color:var(--navy)}
+.services{display:grid;gap:14px;margin-top:40px}
+.svc{padding:18px 0 18px 18px;border-left:2px solid var(--dove-mid)}
+.svc h3{font-size:20px;margin-bottom:4px}
+.svc p{font-size:15px;color:var(--slate)}
+.svc .p{margin-top:6px;font-size:14px;font-weight:700;color:var(--navy)}
+
+/* show */
+.show{background:var(--navy);color:var(--ivory)}
+.show h2,.show h3{color:var(--ivory)}
+.show .sec-head p{color:var(--dove-mid)}
+.show-grid{display:grid;gap:32px;align-items:start}
+.trust{display:grid;gap:18px}
+.trust div{border-top:1px solid rgba(210,178,106,.45);padding-top:14px}
+.trust b{font-family:var(--serif);font-size:28px;color:var(--brass-light);display:block;line-height:1.1}
+.trust span{font-size:15px;color:var(--dove-mid)}
+.trust a{color:var(--brass-light)}
+.card{position:relative;background:var(--ivory);color:var(--navy);padding:28px 22px 24px;border-radius:2px;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.card::before{content:"";position:absolute;inset:8px;border:1px solid var(--brass);pointer-events:none}
+.card .no{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-ink);font-weight:700;border-bottom:1px dashed var(--brass-ink);padding-bottom:10px;margin-bottom:14px;padding-right:56px}
+.card h3{font-size:26px;color:var(--navy);margin-bottom:4px}
+.card .sub{font-size:14px;color:var(--slate);margin-bottom:14px}
+.card ol{margin:0;padding:0;list-style:none;counter-reset:c}
+.card li{counter-increment:c;display:grid;grid-template-columns:30px 1fr;gap:8px;padding:9px 0;border-bottom:1px solid var(--ivory-2);font-size:15px}
+.card li::before{content:counter(c,decimal-leading-zero);font-family:var(--serif);font-weight:700;color:var(--brass-ink)}
+.card .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-top:16px}
+.card .foot b{font-family:var(--serif);font-size:18px}
+.ribbon{position:absolute;top:-14px;right:20px;width:46px;height:70px}
+
+/* steps */
+.steps{display:grid;gap:0;counter-reset:s}
+.step{position:relative;padding:0 0 28px 64px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--brass-light);font-family:var(--serif);font-size:22px;font-weight:700;display:grid;place-items:center}
+.step::after{content:"";position:absolute;left:21px;top:50px;bottom:6px;width:2px;background:var(--dove-mid)}
+.step:last-child::after{display:none}
+.step h3{font-size:21px;margin-bottom:6px;padding-top:8px}
+.step p{color:var(--slate);font-size:16px}
+
+/* photos */
+.photos{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.ph{position:relative;background:var(--dove);border:1px solid var(--dove-mid);min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;overflow:hidden;
+  background-image:repeating-linear-gradient(135deg,transparent 0 14px,rgba(79,90,110,.08) 14px 15px)}
+.ph:first-child{grid-column:1/-1;min-height:240px}
+.ph svg{position:absolute;top:14px;right:14px;width:34px;height:34px;color:var(--slate)}
+.ph b{font-family:var(--serif);font-size:18px;color:var(--navy);line-height:1.2}
+.ph span{font-size:13px;color:var(--slate)}
+
+/* faq */
+.faq{border-top:2px solid var(--navy)}
+.faq details{border-bottom:1px solid var(--dove-mid)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--serif);font-size:19px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:26px;line-height:1;color:var(--brass-ink)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 18px;color:var(--slate);max-width:60ch}
+
+/* contact */
+.contact{background:var(--white);border-top:1px solid var(--ivory-2)}
+.contact-grid{display:grid;gap:32px}
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;background:var(--dove);padding:4px;border-radius:999px;width:100%;max-width:420px}
+.switch button{font-family:var(--sans);font-size:15px;font-weight:700;border:0;background:transparent;color:var(--navy);padding:11px 10px;border-radius:999px;cursor:pointer}
+.switch button[aria-selected="true"]{background:var(--navy);color:var(--ivory)}
+.loc{margin-top:18px;border:1px solid var(--ivory-2);background:var(--ivory);padding:22px}
+.loc h3{font-size:26px;margin-bottom:6px}
+.loc .addr{font-size:17px;margin-bottom:14px}
+.loc dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0 0 18px;font-size:15px}
+.loc dt{color:var(--slate)}
+.loc dd{margin:0;font-weight:600}
+.loc .acts{display:flex;flex-wrap:wrap;gap:10px}
+.loc .note{font-size:14px;color:var(--slate);margin-top:14px}
+.minimap{margin-top:16px;height:120px;background:var(--dove);position:relative;overflow:hidden;border:1px solid var(--dove-mid)}
+.minimap svg{width:100%;height:100%}
+form{display:grid;gap:14px}
+label{font-size:14px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;color:var(--navy);background:var(--white);border:1.5px solid var(--dove-mid);border-radius:3px;padding:12px;width:100%}
+textarea{min-height:96px;resize:vertical}
+.row2{display:grid;gap:14px}
+.form-msg{display:none;background:var(--navy);color:var(--ivory);padding:14px;font-size:15px}
+.form-msg.show{display:block}
+
+footer{background:var(--navy);color:var(--dove-mid);padding:40px 0 calc(100px + env(safe-area-inset-bottom,0px));font-size:14px}
+footer .wrap{display:grid;gap:18px}
+footer b{font-family:var(--serif);color:var(--ivory);font-size:20px;letter-spacing:.08em}
+footer a{color:var(--brass-light)}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:var(--navy);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px rgba(20,33,61,.25)}
+.mbar a{padding:12px 10px;font-size:15px}
+
+@media (min-width:760px){
+  .row2{grid-template-columns:1fr 1fr}
+  .sizes{grid-template-columns:repeat(2,1fr);column-gap:40px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .photos{grid-template-columns:repeat(3,1fr)}
+  .ph:first-child{grid-column:span 2;grid-row:span 2;min-height:360px}
+}
+@media (min-width:1000px){
+  body{font-size:18px}
+  .nav{display:flex}
+  .hero{padding:56px 0 80px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero-art{margin-top:0}
+  .hero-art .frame{aspect-ratio:4/5}
+  .sec{padding:96px 0}
+  .sizes{grid-template-columns:repeat(4,1fr);column-gap:28px}
+  .size{grid-template-columns:1fr;padding:26px 0}
+  .size svg{grid-row:auto;margin-bottom:8px}
+  .services{grid-template-columns:repeat(4,1fr)}
+  .show-grid{grid-template-columns:1fr 1fr;gap:72px}
+  .steps{grid-template-columns:repeat(3,1fr);gap:36px}
+  .step{padding:64px 0 0}
+  .step::after{left:56px;right:0;top:21px;bottom:auto;width:auto;height:2px}
+  .contact-grid{grid-template-columns:1.1fr .9fr;gap:64px}
+  .mbar{display:none}
+  footer{padding-bottom:40px}
+  footer .wrap{grid-template-columns:2fr 1fr 1fr}
+}
+@media (max-width:420px){
+  .brand small{display:none}
+  .tel-head{padding:7px 10px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+
+
+<div class="proposal" role="note">Nezávazný návrh webu – není to oficiální stránka firmy AXWELL – Soňa Axmanová</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#uvod" aria-label="AXWELL salon pro psy – na začátek">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2 32 17 17 32 2 17Z" fill="none" stroke="#C9A24E" stroke-width="1.6"/><path d="M11 22c2-6 4-10 6-10s4 4 6 10" fill="none" stroke="#14213D" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span><b>AXWELL</b><small>salon pro psy</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#cenik">Služby a ceník</a>
+      <a href="#vystavy">Výstavy a handling</a>
+      <a href="#navsteva">Jak to probíhá</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-head" href="tel:+420728137345" aria-label="Zavolat na 728 137 345">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      728 137 345
+    </a>
+  </div>
+</header>
+
+<main id="uvod">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Salon pro psy · Kopřivnice &amp; Nový Jičín</p>
+      <h1>Upravený pes, na&nbsp;kterého se <em>budete rádi dívat</em></h1>
+      <p class="lead">Kompletní úprava, trimování a výstavní příprava podle <strong>typu srsti a standardu plemene</strong>. Stříhá chovatelka s&nbsp;výstavní praxí. Malá plemena <strong>od 650 Kč</strong>.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#kontakt">Objednat termín</a>
+        <a class="btn btn-ghost" href="#cenik">Ceník</a>
+      </div>
+      <div class="hero-facts">
+        <span><i></i>Po–Pá 9:00–16:00</span>
+        <span><i></i>2 provozovny</span>
+        <span><i></i>tel. 728 137 345</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="frame">
+        <svg viewBox="0 0 400 440" role="img" aria-label="Linková kresba profilu retrívra s výstavní rozetou">
+          <g fill="none" stroke="#F8F4E8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <!-- muzzle, skull, crest of neck -->
+            <path d="M40 165c28-8 60-16 92-24 8-2 14-8 20-12 20-9 46-15 70-16 22-1 36 4 46 12 28 22 52 62 66 112 12 44 18 96 22 199"/>
+            <!-- lip, jaw, throat, chest -->
+            <path d="M42 180c6 8 14 12 24 13l70 3c22 1 40 6 54 18 14 14 20 34 20 60 0 36-6 66-22 98-8 18-12 40-12 68"/>
+            <!-- mouth -->
+            <path d="M64 192c20-2 40-2 56 1"/>
+            <!-- stop -->
+            <path d="M132 141c6 2 12 4 16 9" stroke-width="1.5"/>
+            <!-- ear -->
+            <path d="M204 128c22-12 50-6 54 22 4 30-6 58-28 66-20 6-32-14-32-40 0-20 0-38 6-48z"/>
+            <path d="M216 144c-2 20 0 40 8 58M232 140c2 20 2 42-2 62M246 150c2 16 0 32-6 46" stroke-width="1.2" opacity=".7"/>
+            <!-- cheek -->
+            <path d="M150 174c12 6 22 16 28 30" stroke-width="1.3" opacity=".6"/>
+            <!-- feathering: neck and chest -->
+            <path d="M318 250c8 12 10 26 6 40M332 300c8 12 10 28 6 42M340 356c7 12 9 26 5 40M206 330c-8 10-12 22-10 36M190 378c-8 10-12 24-10 38M176 410c-6 8-8 18-6 28" stroke-width="1.3" opacity=".6"/>
+          </g>
+          <ellipse cx="44" cy="171" rx="8" ry="7" fill="#F8F4E8"/>
+          <path d="M140 150c7-7 17-7 24 0-7 6-17 6-24 0z" fill="#F8F4E8"/>
+          <!-- show lead -->
+          <path d="M214 250c34 10 74 6 112-14" fill="none" stroke="#D2B26A" stroke-width="2" stroke-dasharray="1 5" stroke-linecap="round"/>
+          <!-- rosette -->
+          <g transform="translate(276 300)">
+            <path d="M-12 22-24 84-12 74-4 88 2 26z" fill="#C9A24E"/>
+            <path d="M10 22 26 82 12 74 6 88-4 26z" fill="#B08A3E"/>
+            <g fill="#C9A24E">
+              <circle r="30"/>
+            </g>
+            <g fill="none" stroke="#14213D" stroke-width="1.4">
+              <circle r="30" stroke-dasharray="3 3"/>
+              <circle r="19"/>
+            </g>
+            <circle r="17" fill="#14213D"/>
+            <path d="M0-9 2.6-3 9-3 4 1 6 7.5 0 4-6 7.5-4 1-9-3-2.6-3Z" fill="#D2B26A"/>
+          </g>
+          </svg>
+      </div>
+      <p class="cap">Flat Coated Retriever – plemeno, u kterého jsme začínali</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec price-band" id="cenik">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Služby a ceník</p>
+      <h2>Cena podle velikosti psa, bez překvapení</h2>
+      <p>Ceník je orientační. Konečnou cenu domluvíme při setkání podle stavu srsti – dřív, než začneme stříhat.</p>
+    </div>
+
+    <div class="sizes">
+      <div class="size">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#C9A24E" stroke-width="1.5"/><circle cx="28" cy="30" r="7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Malá plemena</h3>
+        <p class="ex">jorkšír, biewer, maltézák, boloňský psík, trpasličí pudl</p>
+        <p class="pr">od 650 Kč</p>
+      </div>
+      <div class="size">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#C9A24E" stroke-width="1.5"/><circle cx="28" cy="29" r="11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Střední plemena</h3>
+        <p class="ex">střední pudl, americký a anglický kokršpaněl, retrívr</p>
+        <p class="pr">od 950 Kč</p>
+      </div>
+      <div class="size">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#C9A24E" stroke-width="1.5"/><circle cx="28" cy="28" r="15.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Velká plemena</h3>
+        <p class="ex">bernský salašnický pes, bernardýn</p>
+        <p class="pr">od 1 600 Kč</p>
+      </div>
+      <div class="size">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#C9A24E" stroke-width="1.5"/><circle cx="28" cy="28" r="20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Obří plemena</h3>
+        <p class="ex">irský vlkodav, afghánský chrt</p>
+        <p class="pr">od 2 500 Kč</p>
+      </div>
+    </div>
+
+    <div class="included">
+      <h3>Každá kompletní úprava obsahuje</h3>
+      <ul>
+        <li>rozčesání srsti</li><li>2× koupel v šamponu</li><li>balzám s kondicionérem</li><li>vyfoukání</li><li>střihovou úpravu</li><li>zkrácení drápků</li><li>čištění uší</li>
+      </ul>
+    </div>
+    <div class="extras">
+      <p><b>Silně zacuchaná srst nebo blechy:</b> příplatek +50&nbsp;%.</p>
+      <p><b>Jen drápky:</b> 50 Kč.</p>
+    </div>
+
+    <div class="services">
+      <div class="svc">
+        <h3>Kompletní úprava</h3>
+        <p>Koupel, vyfoukání a střih podle typu srsti a standardu plemene.</p>
+        <p class="p">od 650 Kč dle velikosti</p>
+      </div>
+      <div class="svc">
+        <h3>Trimování</h3>
+        <p>Ruční vytrhání odumřelé srsti u hrubosrstých plemen, aby srst zůstala pevná a barevná.</p>
+        <p class="p">cena na dotaz <span class="demo">ukázkový text</span></p>
+      </div>
+      <div class="svc">
+        <h3>Handling a výstavní úprava</h3>
+        <p>Příprava psa na výstavu a předvedení v kruhu – to, čemu se věnujeme u vlastních psů.</p>
+        <p class="p">cena na dotaz <span class="demo">ukázkový text</span></p>
+      </div>
+      <div class="svc">
+        <h3>Poradenství</h3>
+        <p>Jak pečovat o srst mezi návštěvami a jak psa připravit na první úpravu.</p>
+        <p class="p">cena na dotaz <span class="demo">ukázkový text</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec show on-dark" id="vystavy">
+  <div class="wrap show-grid">
+    <div>
+      <div class="sec-head">
+        <p class="eyebrow">Výstavní příprava a handling</p>
+        <h2>Víme, jak má pes vypadat před rozhodčím</h2>
+        <p>Salon vede Bc. Soňa Axmanová, chovatelka Flat Coated Retrieverů. Výstavní úpravu se učila na vlastních psech – a postupně začala stříhat i další plemena.</p>
+      </div>
+      <div class="trust">
+        <div><b>od roku 2012</b><span>se věnuje plemeni Flat Coated Retriever a jeho výstavní úpravě</span></div>
+        <div><b>BEST IN SHOW</b><span>tituly psů z chovatelské stanice Axwell na klubových i mezinárodních výstavách</span></div>
+        <div><b>rekvalifikace + certifikáty</b><span>kurz Střihačka psů (salon Argos), certifikáty pro výstavní úpravu zlatého a flat coated retrívra, trimování a perličkové SPA. Zdroj: <a href="https://axwell.eu" rel="noopener">axwell.eu</a></span></div>
+      </div>
+    </div>
+
+    <article class="card" aria-labelledby="card-t">
+      <svg class="ribbon" viewBox="0 0 46 70" aria-hidden="true"><path d="M14 30 6 68l9-6 6 8 3-38z" fill="#C9A24E"/><path d="M32 30l8 38-9-6-6 8-3-38z" fill="#B08A3E"/><circle cx="23" cy="22" r="20" fill="#C9A24E"/><circle cx="23" cy="22" r="12" fill="#14213D"/></svg>
+      <p class="no"><span>Výstavní kartička</span><span>č. 01</span></p>
+      <h3 id="card-t">Příprava na výstavu</h3>
+      <p class="sub">Co pro Vašeho psa uděláme před výstavou <span class="demo">ukázkový text</span></p>
+      <ol>
+        <li>Konzultace: plemeno, standard a termín výstavy</li>
+        <li>Koupel a vyfoukání srsti</li>
+        <li>Výstavní střih nebo trimování podle standardu</li>
+        <li>Úprava tlapek, drápků a uší</li>
+        <li>Tipy na údržbu srsti do dne výstavy</li>
+        <li>Handling – předvedení v kruhu po domluvě</li>
+      </ol>
+      <div class="foot">
+        <b>cena na dotaz</b>
+        <a class="btn btn-primary" href="#kontakt">Objednat termín</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="navsteva">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Jak probíhá návštěva</p>
+      <h2>Tři kroky od telefonu k upravenému psovi</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Zavoláte a domluvíme termín</h3>
+        <p>Na úpravu se objednává předem na čísle 728 137 345. Řekněte nám plemeno a vyberte Kopřivnici nebo Nový Jičín.</p>
+      </div>
+      <div class="step">
+        <h3>Seznámíme se se psem i srstí</h3>
+        <p>Při první návštěvě se pes rozkouká a probereme, jaký střih chcete. Podle stavu srsti řekneme cenu i čas.</p>
+      </div>
+      <div class="step">
+        <h3>Koupel, střih a předání</h3>
+        <p>Psa nemusíte koupat doma – koupel je součástí úpravy a při ní odhalíme i případné kožní potíže nebo parazity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec price-band" aria-labelledby="foto-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Galerie</p>
+      <h2 id="foto-t">Podívejte se, jak pracujeme</h2>
+    </div>
+    <div class="photos">
+      <div class="ph">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <b>Sem přijde Vaše fotka</b><span>před a po úpravě – stejný pes, stejný úhel</span>
+      </div>
+      <div class="ph">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <b>Sem přijde Vaše fotka</b><span>salon v Kopřivnici nebo Novém Jičíně</span>
+      </div>
+      <div class="ph">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <b>Sem přijde Vaše fotka</b><span>pes ve výstavním kruhu</span>
+      </div>
+      <div class="ph">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <b>Sem přijde Vaše fotka</b><span>trimování – detail práce</span>
+      </div>
+      <div class="ph">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <b>Sem přijde Vaše fotka</b><span>Soňa při práci</span>
+      </div>
+      <div class="ph">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <b>Sem přijde Vaše fotka</b><span>koupel a vyfoukání srsti</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Časté otázky</p>
+      <h2>Na co se nás majitelé ptají</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Kolik bude úprava mého psa stát?</summary>
+        <p>Záleží na velikosti psa: malá plemena od 650 Kč, střední od 950 Kč, velká od 1 600 Kč a obří od 2 500 Kč. Přesnou cenu řekneme při setkání podle stavu srsti.</p>
+      </details>
+      <details>
+        <summary>Jak dlouho úprava trvá?</summary>
+        <p>Délka závisí hlavně na stavu srsti. Pokud pes není vykoupaný, nejdřív ho vykoupeme a připravíme – trvá to déle, ale výsledek je kvalitnější.</p>
+      </details>
+      <details>
+        <summary>Mám psa vykoupat doma před návštěvou?</summary>
+        <p>Nemusíte. Dvojí koupel v šamponu a balzám jsou součástí každé kompletní úpravy.</p>
+      </details>
+      <details>
+        <summary>Proč se platí příplatek za zacuchanou srst?</summary>
+        <p>Rozčesání silně zacuchané srsti nebo ošetření psa s blechami je výrazně delší ruční práce. Příplatek je +50&nbsp;% a vždy Vám ho řekneme předem.</p>
+      </details>
+      <details>
+        <summary>Připravíte psa i na výstavu?</summary>
+        <p>Ano. Výstavní úprava a handling vycházejí z vlastní chovatelské a výstavní praxe. Termín si domluvte s dostatečným předstihem před výstavou.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="sec-head">
+        <p class="eyebrow">Kontakt a provozovny</p>
+        <h2>Vyberte salon, který máte blíž</h2>
+        <p>Objednávky termínů přijímáme telefonicky na <a href="tel:+420728137345"><strong>728 137 345</strong></a>.</p>
+      </div>
+      <div class="switch" role="tablist" aria-label="Provozovna">
+        <button type="button" role="tab" id="tab-kop" aria-controls="loc-kop" aria-selected="true">Kopřivnice</button>
+        <button type="button" role="tab" id="tab-nj" aria-controls="loc-nj" aria-selected="false" tabindex="-1">Nový Jičín</button>
+      </div>
+
+      <div class="loc" id="loc-kop" role="tabpanel" aria-labelledby="tab-kop">
+        <h3>Kopřivnice</h3>
+        <p class="addr">Česká 867/35, 742 21 Kopřivnice</p>
+        <dl>
+          <dt>Telefon</dt><dd><a href="tel:+420728137345">728 137 345</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:axwellkennel@gmail.com">axwellkennel@gmail.com</a></dd>
+          <dt>Otevřeno</dt><dd>Po–Pá 9:00–16:00, jen na objednávku</dd>
+        </dl>
+        <div class="acts">
+          <a class="btn btn-primary" href="tel:+420728137345">Zavolat a objednat</a>
+          <a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=%C4%8Cesk%C3%A1%20867%2F35%2C%20Kop%C5%99ivnice" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+        </div>
+        <div class="minimap" aria-hidden="true"><svg viewBox="0 0 400 120" preserveAspectRatio="xMidYMid slice"><path d="M0 80 400 50M120 0 160 120M260 0 230 120M0 20 400 100" stroke="#FFFFFF" stroke-width="10" fill="none"/><path d="M0 80 400 50" stroke="#B9C0CD" stroke-width="1"/><g transform="translate(196 58)"><path d="M0 0c-9-11-14-18-14-25a14 14 0 0 1 28 0c0 7-5 14-14 25z" fill="#14213D"/><circle cy="-25" r="5" fill="#C9A24E"/></g></svg></div>
+      </div>
+
+      <div class="loc" id="loc-nj" role="tabpanel" aria-labelledby="tab-nj" hidden>
+        <h3>Nový Jičín</h3>
+        <p class="addr">K Nemocnici 6, Nový Jičín</p>
+        <dl>
+          <dt>Telefon</dt><dd><a href="tel:+420728137345">728 137 345</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:axwellkennel@gmail.com">axwellkennel@gmail.com</a></dd>
+          <dt>Otevřeno</dt><dd>Po–Pá 9:00–16:00, jen na objednávku</dd>
+        </dl>
+        <div class="acts">
+          <a class="btn btn-primary" href="tel:+420728137345">Zavolat a objednat</a>
+          <a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=K%20Nemocnici%206%2C%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+        </div>
+        <p class="note">Salon v Novém Jičíně funguje od října 2022.</p>
+        <div class="minimap" aria-hidden="true"><svg viewBox="0 0 400 120" preserveAspectRatio="xMidYMid slice"><path d="M0 40 400 70M90 120 150 0M300 120 280 0" stroke="#FFFFFF" stroke-width="10" fill="none"/><g transform="translate(214 70)"><path d="M0 0c-9-11-14-18-14-25a14 14 0 0 1 28 0c0 7-5 14-14 25z" fill="#14213D"/><circle cy="-25" r="5" fill="#C9A24E"/></g></svg></div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="font-size:24px;margin-bottom:6px">Nebo nám napište</h3>
+      <p style="color:#4F5A6E;font-size:15px;margin-bottom:16px">Ozveme se Vám s návrhem termínu.</p>
+      <form id="form" novalidate>
+        <div class="row2">
+          <label>Vaše jméno<input name="jmeno" autocomplete="name" required></label>
+          <label>Telefon<input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        </div>
+        <div class="row2">
+          <label>Velikost psa
+            <select name="velikost"><option>Malé plemeno</option><option>Střední plemeno</option><option>Velké plemeno</option><option>Obří plemeno</option></select>
+          </label>
+          <label>Provozovna
+            <select name="misto" id="misto"><option>Kopřivnice</option><option>Nový Jičín</option></select>
+          </label>
+        </div>
+        <label>Plemeno a co si přejete<textarea name="zprava" placeholder="např. kokršpaněl, kompletní úprava, nejlépe ve čtvrtek"></textarea></label>
+        <button class="btn btn-brass" type="submit">Objednat termín</button>
+        <p class="form-msg" id="form-msg" role="status">Toto je jen ukázka – v hotovém webu zpráva odejde přímo do Vašeho e-mailu.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>AXWELL</b>
+      <p style="margin-top:8px">Salon pro psy – Bc. Soňa Axmanová. Kompletní úprava, trimování, handling a poradenství v Kopřivnici a Novém Jičíně. Chovatelská stanice Flat Coated Retriever Axwell – <a href="https://axwell.eu" rel="noopener">axwell.eu</a>.</p>
+    </div>
+    <div>
+      <p><a href="tel:+420728137345">728 137 345</a><br><a href="mailto:axwellkennel@gmail.com">axwellkennel@gmail.com</a></p>
+    </div>
+    <div>
+      <p>Česká 867/35, Kopřivnice<br>K Nemocnici 6, Nový Jičín</p>
+      <p style="margin-top:8px">© 2026 AXWELL</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost-light" href="tel:+420728137345">Volat 728 137 345</a>
+  <a class="btn btn-brass" href="#kontakt">Objednat termín</a>
+</div>
+
+<script>
+(function(){
+  var tabs=[document.getElementById('tab-kop'),document.getElementById('tab-nj')];
+  var sel=document.getElementById('misto');
+  function pick(i,focus){
+    tabs.forEach(function(t,j){
+      var on=i===j;
+      t.setAttribute('aria-selected',on?'true':'false');
+      t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(sel) sel.selectedIndex=i;
+    if(focus) tabs[i].focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){pick(i)});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();pick(i?0:1,true)}
+    });
+  });
+  if(sel) sel.addEventListener('change',function(){pick(sel.selectedIndex)});
+  var f=document.getElementById('form');
+  f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').classList.add('show')});
+})();
+</script>
+</body>
+</html>

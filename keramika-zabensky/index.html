@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – KERAMIKA-ŽABENSKÝ</title>
+<meta name="description" content="Výrobce zahradní, dárkové a užitkové keramiky v Dobré u Frýdku-Místku. Velkoobchod pro zahradní centra a prodejny dárků v ČR i na Slovensku, hrnky s nápisy, zakázková výroba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"KERAMIKA-ŽABENSKÝ",
+  "description":"Výroba a prodej zahradní, dárkové a užitkové keramiky.",
+  "founder":{"@type":"Person","name":"Luděk Žabenský"},
+  "address":{"@type":"PostalAddress","streetAddress":"Dobrá 911","postalCode":"739 51","addressLocality":"Dobrá","addressCountry":"CZ"},
+  "telephone":["+420777182766","+421949265696"],
+  "email":"keramika-zabensky@seznam.cz",
+  "url":"https://keramika-zabensky.estranky.cz/",
+  "sameAs":["https://www.firmy.cz/detail/12866613-keramika-zabensky-dobra.html"]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  --engoba:#FFFFFF;        /* bílá engoba */
+  --engoba-2:#F3F5F5;      /* šedavá engoba */
+  --kamen:#2F3537;         /* kamenná šedá – text */
+  --kamen-2:#5B6467;       /* kamenná šedá – doplňkový text */
+  --linka:#D5DADB;
+  --glazura:#0B6F70;       /* tyrkysová glazura (text, tlačítka) */
+  --glazura-svetla:#3FB5B0;/* tyrkys jen pro dekor */
+  --glazura-tint:#DDF0EE;
+  --hlina:#A3401F;         /* pálená hlína / cihlová */
+  --hlina-tint:#F7E6DF;
+  --tma:#1F2A2C;
+  --tma-text:#E6ECEC;
+  --tma-akcent:#8FDCD6;
+  --serif:"DM Serif Display",Georgia,serif;
+  --sans:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(16px,4vw,48px);
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--engoba);color:var(--kamen);font-family:var(--sans);font-size:17px;line-height:1.6;margin:0;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;color:var(--kamen)}
+p{margin:0 0 1em}
+a{color:var(--glazura)}
+:focus-visible{outline:3px solid var(--hlina);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.demo{display:inline-block;font:500 11px/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase;background:#FFF4CC;color:#5C4600;border:1px solid #E5CF7A;border-radius:3px;padding:2px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* banner návrhu */
+.navrh{background:var(--kamen);color:#FFFFFF;font-size:13px;line-height:1.4;text-align:center;padding:7px var(--gut)}
+
+/* hlavička */
+.head{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linka)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--kamen)}
+.logo b{font:400 21px/1 var(--serif);letter-spacing:.01em}
+.logo small{display:block;font:500 10.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--kamen-2);margin-top:3px}
+.nav{display:none;gap:22px}
+.nav a{color:var(--kamen);text-decoration:none;font-size:15px;font-weight:500}
+.nav a:hover{color:var(--glazura)}
+.tel-head{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--glazura);font-weight:600;font-size:15px;white-space:nowrap}
+.tel-head svg{flex:none}
+@media(min-width:960px){.nav{display:flex}}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 16px/1.2 var(--sans);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-hlina{background:var(--hlina);color:#FFFFFF}
+.btn-hlina:hover{background:#8C3518}
+.btn-obrys{background:var(--engoba);color:var(--glazura);border-color:var(--glazura)}
+.btn-obrys:hover{background:var(--glazura-tint)}
+.btn-glazura{background:var(--glazura);color:#FFFFFF}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--engoba);padding:22px 0 0}
+.hero .eyebrow{font:600 12.5px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--hlina);margin:0 0 12px}
+.hero h1{font-size:clamp(42px,11.2vw,148px);letter-spacing:-.01em;line-height:.98;position:relative;z-index:2}
+.hero h1 em{font-style:italic;color:var(--glazura)}
+.hero h1 .hl{color:var(--hlina)}
+.hero-row{display:grid;gap:18px;position:relative;z-index:2;margin-top:16px}
+.hero-lead{font-size:17px;max-width:34em;color:var(--kamen);margin:0}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+.hero-cta .btn{flex:1 1 auto}
+.hero-tel{font-size:14px;color:var(--kamen-2);margin:0}
+.hero-tel a{color:var(--kamen);font-weight:600}
+.kruh{position:absolute;z-index:1;pointer-events:none;right:-120px;top:70px;width:280px;opacity:.26}
+.hero-pas{margin-top:28px;border-top:1px solid var(--linka);border-bottom:1px solid var(--linka);background:var(--engoba-2)}
+.hero-pas ul{list-style:none;margin:0;padding:14px 0;display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14.5px;color:var(--kamen)}
+.hero-pas li{display:flex;align-items:center;gap:8px}
+.hero-pas li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--glazura-svetla);box-shadow:0 0 0 3px var(--glazura-tint)}
+@media(min-width:760px){
+  .hero{padding-top:48px}
+  .kruh{width:520px;right:-90px;top:-30px;opacity:1}
+  .hero-row{grid-template-columns:1.1fr .9fr;align-items:end;gap:40px;margin-top:28px}
+  .hero-cta .btn{flex:0 0 auto}
+}
+@media(min-width:1100px){.kruh{width:560px;right:-120px;top:-40px}.hero h1{font-size:clamp(80px,8.4vw,124px);max-width:min(980px,72vw)}}
+
+/* sekce obecně */
+section{scroll-margin-top:70px}
+.sek{padding:72px 0}
+.sek-sede{background:var(--engoba-2)}
+.nad{display:grid;gap:14px;margin-bottom:34px}
+.nad .cislo{font:600 12.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--hlina)}
+.nad h2{font-size:clamp(34px,6vw,64px)}
+.nad p{max-width:40em;color:var(--kamen-2);margin:0;font-size:17px}
+@media(min-width:900px){.nad{grid-template-columns:1fr 1fr;align-items:end;gap:40px}}
+
+/* sortiment */
+.sort{display:grid;gap:0;border-top:2px solid var(--kamen)}
+.pol{display:grid;grid-template-columns:52px 1fr;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--linka);align-items:start}
+.pol svg{grid-row:span 3;width:52px;height:52px}
+.pol h3{font-size:24px;line-height:1.15}
+.pol p{margin:0;font-size:15.5px;color:var(--kamen-2)}
+.pol .cena{font-size:14px;font-weight:600;color:var(--glazura);display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:4px}
+.prid{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:500;color:var(--kamen);font-size:14px;border:1.5px solid var(--linka);border-radius:999px;padding:6px 12px 6px 8px;background:var(--engoba);min-height:36px}
+.prid input{width:18px;height:18px;accent-color:var(--hlina);margin:0}
+.prid:has(input:checked){border-color:var(--hlina);background:var(--hlina-tint);color:#6E2A13}
+@media(min-width:760px){
+  .sort{grid-template-columns:1fr 1fr;column-gap:48px}
+}
+@media(min-width:1100px){.sort{grid-template-columns:1fr 1fr 1fr}}
+.kody{margin-top:28px;display:flex;gap:14px;align-items:flex-start;background:var(--engoba-2);border-left:4px solid var(--glazura);padding:16px 18px;font-size:15.5px}
+.kody b{white-space:nowrap;font-family:var(--serif);font-weight:400;font-size:20px;color:var(--glazura)}
+
+/* velkoobchod */
+.vo{display:grid;gap:28px}
+.vo-karta{background:var(--engoba);border:1px solid var(--linka);padding:24px;position:relative}
+.vo-karta h3{font-size:28px;margin-bottom:10px}
+.vo-karta .vlajka{position:absolute;top:0;left:24px;width:46px;height:6px}
+.vo-karta ul{margin:0;padding-left:20px}
+.vo-karta li{margin-bottom:6px}
+.vo-velky{background:var(--glazura);color:#FFFFFF;padding:28px 24px;display:grid;gap:12px;align-content:start}
+.vo-velky h3{color:#FFFFFF;font-size:30px}
+.vo-velky p{margin:0}
+.vo-velky .btn{background:#FFFFFF;color:var(--glazura);justify-self:start}
+@media(min-width:900px){.vo{grid-template-columns:1fr 1fr 1fr}}
+
+/* zakázky a nápisy */
+.zak{display:grid;gap:32px;align-items:center}
+.hrnek-demo{background:var(--engoba-2);padding:28px 20px;display:grid;justify-items:center;gap:16px}
+.hrnek-demo svg{width:100%;max-width:340px;height:auto}
+.prepinac{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.prepinac button{font:500 14px var(--sans);border:1.5px solid var(--kamen-2);background:var(--engoba);color:var(--kamen);border-radius:999px;padding:8px 14px;cursor:pointer;min-height:40px}
+.prepinac button[aria-pressed="true"]{background:var(--kamen);color:#FFFFFF;border-color:var(--kamen)}
+.zak ul{padding-left:20px;margin:0 0 1.2em}
+.zak li{margin-bottom:6px}
+@media(min-width:900px){.zak{grid-template-columns:1fr 1fr;gap:64px}}
+
+/* kroky */
+.kroky{display:grid;gap:0;counter-reset:k;list-style:none;margin:0;padding:0}
+.kroky li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--linka)}
+.kroky li::before{counter-increment:k;content:counter(k);font:400 54px/1 var(--serif);color:var(--hlina)}
+.kroky h3{font-size:24px;margin-bottom:6px}
+.kroky p{margin:0;color:var(--kamen-2)}
+@media(min-width:900px){.kroky{grid-template-columns:repeat(3,1fr);gap:40px}.kroky li{grid-template-columns:1fr;border-top:2px solid var(--kamen)}}
+
+/* košík */
+.kosik-sek{background:var(--tma);color:var(--tma-text)}
+.kosik-sek .nad h2{color:#FFFFFF}
+.kosik-sek .nad p{color:#C9D3D4}
+.kosik-sek .nad .cislo{color:var(--tma-akcent)}
+.kosik{display:grid;gap:28px}
+.vyber{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;border:0}
+.vyber legend,.pole label,.pole .lab{font:600 13px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--tma-akcent);margin-bottom:10px;padding:0}
+.pole .chip{text-transform:none;letter-spacing:0;font:400 15px var(--sans);color:var(--tma-text);margin:0;padding:8px 16px 8px 10px}
+.chip{display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:1.5px solid #4A585B;border-radius:999px;padding:8px 14px 8px 10px;font-size:15px;color:var(--tma-text);min-height:42px;transition:background .15s,border-color .15s}
+.chip input{width:18px;height:18px;margin:0;accent-color:var(--glazura-svetla)}
+.chip:has(input:checked){background:#0F4F50;border-color:var(--tma-akcent);color:#FFFFFF}
+.pole{display:grid;gap:16px;margin-top:22px}
+.pole > div{display:grid;gap:0}
+.pole input[type=text],.pole select,.pole textarea{font:400 16px var(--sans);background:#2A3739;color:#FFFFFF;border:1.5px solid #4A585B;border-radius:6px;padding:11px 12px;width:100%}
+.pole fieldset{border:0;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
+@media(min-width:620px){.pole{grid-template-columns:1fr 1fr}.pole .cela{grid-column:1/-1}}
+.list{background:#FFFFFF;color:var(--kamen);padding:22px 20px 20px;position:relative;align-self:start}
+.list::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px;background:radial-gradient(circle at 10px 10px,#FFFFFF 6px,transparent 6.5px) 0 0/20px 20px repeat-x}
+.list h3{font-size:26px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.list .pocet{font:600 14px var(--sans);color:var(--hlina);white-space:nowrap}
+.list pre{white-space:pre-wrap;word-wrap:break-word;font:400 14.5px/1.55 var(--sans);background:var(--engoba-2);border:1px dashed #AEB7B9;padding:14px;margin:12px 0 14px;min-height:220px;color:var(--kamen)}
+.list .akce{display:flex;flex-wrap:wrap;gap:10px}
+.list .akce .btn{flex:1 1 180px;min-height:48px;font-size:15px}
+.hlaska{margin:12px 0 0;font-size:14px;color:var(--glazura);font-weight:500;min-height:1.4em}
+@media(min-width:960px){.kosik{grid-template-columns:1.15fr .85fr;gap:48px}.list{position:sticky;top:84px}}
+
+/* fotomísta */
+.foto{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.fm{position:relative;min-height:170px;display:flex;align-items:flex-end;padding:14px;overflow:hidden;color:var(--kamen)}
+.fm svg.vz{position:absolute;inset:0;width:100%;height:100%}
+.fm span{position:relative;background:#FFFFFF;padding:8px 10px;font-size:13.5px;line-height:1.35;max-width:95%}
+.fm span b{display:block;font-weight:600}
+.fm.a{grid-column:1/-1;min-height:240px;background:var(--glazura-tint)}
+.fm.b{background:var(--hlina-tint)}
+.fm.c{background:#E4E8E9}
+.fm.d{grid-column:1/-1;background:var(--glazura-tint)}
+@media(min-width:900px){.foto{grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px}.fm.a{grid-column:1;grid-row:1/3}.fm.d{grid-column:2/4}}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--linka);padding:4px 0}
+.faq details:last-child{border-bottom:1px solid var(--linka)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;font:500 18px/1.35 var(--sans)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--glazura);background:linear-gradient(var(--glazura),var(--glazura)) center/12px 2px no-repeat,linear-gradient(var(--glazura),var(--glazura)) center/2px 12px no-repeat}
+.faq details[open] summary::after{background:linear-gradient(var(--glazura),var(--glazura)) center/12px 2px no-repeat}
+.faq details p{margin:0 0 18px;color:var(--kamen-2);max-width:44em}
+
+/* kontakt */
+.kontakt{display:grid;gap:32px}
+.kontakt h2{font-size:clamp(38px,7vw,84px)}
+.k-radky{display:grid;gap:0;border-top:2px solid var(--kamen)}
+.k-radky div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--linka);font-size:16px}
+.k-radky dt{font-weight:600;color:var(--kamen-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-top:3px}
+.k-radky dd{margin:0;word-break:break-word}
+.k-radky a{font-weight:500}
+.velky-tel{font:400 clamp(34px,8vw,56px)/1.1 var(--serif);color:var(--hlina);text-decoration:none;display:inline-block;margin:6px 0 18px}
+@media(min-width:900px){.kontakt{grid-template-columns:1fr 1fr;gap:64px}}
+
+footer{background:var(--engoba-2);border-top:1px solid var(--linka);padding:28px 0 100px;font-size:14px;color:var(--kamen-2)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media(min-width:760px){footer{padding-bottom:28px}}
+
+/* mobilní lišta */
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#FFFFFF;border-top:1px solid var(--linka);padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 18px rgba(31,42,44,.08)}
+.lista .btn{min-height:48px;padding:0 10px;font-size:15px}
+@media(min-width:760px){.lista{display:none}}
+
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:no-preference){
+  .kruh .tocit{transform-origin:300px 470px;animation:toc 40s linear infinite}
+  @keyframes toc{to{transform:rotate(360deg)}}
+}
+</style>
+
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy KERAMIKA-ŽABENSKÝ</div>
+
+<header class="head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="KERAMIKA-ŽABENSKÝ – na začátek">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 15c1 12 6 19 14 19s13-7 14-19" fill="none" stroke="#0B6F70" stroke-width="3" stroke-linecap="round"/><path d="M4.5 14.6c5 1.6 26 1.8 31-.2" fill="none" stroke="#A3401F" stroke-width="3" stroke-linecap="round"/><path d="M12 22c4 1.4 12 1.3 16-.2M14 28c3 .9 9 .8 12-.2" fill="none" stroke="#3FB5B0" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span><b>Keramika Žabenský</b><small>Dobrá u Frýdku-Místku</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#sortiment">Sortiment</a>
+      <a href="#velkoobchod">Velkoobchod</a>
+      <a href="#napisy">Nápisy a zakázky</a>
+      <a href="#kosik">Poptávkový košík</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-head" href="tel:+420777182766"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor"/></svg>777 182 766</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <svg class="kruh" viewBox="0 0 600 640" aria-hidden="true">
+    <!-- hrnčířský kruh s miskou, ručně působící tahy -->
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g class="tocit">
+        <ellipse cx="300" cy="470" rx="250" ry="250" stroke="#DDF0EE" stroke-width="44"/>
+        <path d="M300 238c128 2 230 104 231 233-1 127-104 231-232 230-127 1-230-104-231-232 2-126 105-229 232-231z" stroke="#3FB5B0" stroke-width="2.2"/>
+        <path d="M300 286c102 0 184 82 185 184 0 101-83 184-186 184-101-1-183-83-183-185 0-100 83-183 184-183z" stroke="#3FB5B0" stroke-width="1.4" stroke-dasharray="3 9"/>
+        <path d="M301 330c78-1 140 62 140 140 1 77-62 140-141 140-77-1-139-63-139-141 1-76 63-139 140-139z" stroke="#0B6F70" stroke-width="1.6" opacity=".55"/>
+        <path d="M120 470c40-6 80 4 120-3M360 466c45 6 80-2 122 3" stroke="#A3401F" stroke-width="2" opacity=".5"/>
+      </g>
+      <!-- miska -->
+      <path d="M150 300c6 74 62 122 150 122s144-48 150-122" fill="#FFFFFF" stroke="#2F3537" stroke-width="3.2"/>
+      <path d="M150 300c40 15 260 16 300 0" fill="#FFFFFF" stroke="#2F3537" stroke-width="3.2"/>
+      <path d="M152 300c41-16 255-17 296 0" stroke="#2F3537" stroke-width="2"/>
+      <path d="M156 318c28 72 70 96 144 96 70 0 118-28 142-96" fill="#0B6F70" opacity=".92"/>
+      <path d="M160 322c46 12 236 12 280-2" stroke="#FFFFFF" stroke-width="2.4" opacity=".7"/>
+      <path d="M180 352c40 10 200 10 238-2M205 382c30 7 152 7 186-1" stroke="#8FDCD6" stroke-width="2"/>
+      <path d="M232 422c18 10 118 10 136 0l-6 16c-24 8-100 8-124 0z" fill="#A3401F"/>
+      <!-- ruce/kapky glazury -->
+      <path d="M330 404c2 14 6 22 2 30-4 6-10 2-9-6 1-8 5-14 7-24z" fill="#0B6F70"/>
+      <path d="M262 408c1 9 4 14 1 19-3 4-7 1-6-4 1-5 3-9 5-15z" fill="#0B6F70"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Výrobce keramiky · Dobrá u Frýdku-Místku</p>
+    <h1 id="h1">Vodníci, sovy <span class="hl">&amp;</span> hrnky <em>s&nbsp;nápisem</em> přímo od&nbsp;výrobce</h1>
+    <div class="hero-row">
+      <p class="hero-lead">Vyrábíme zahradní, dárkovou a užitkovou keramiku. Zásobujeme zahradní centra a prodejny dárků v Česku i na Slovensku – velkoobchodní ceník Vám pošleme na vyžádání.</p>
+      <div>
+        <div class="hero-cta">
+          <a class="btn btn-hlina" href="#kosik">Vyžádat velkoobchodní ceník</a>
+          <a class="btn btn-obrys" href="tel:+420777182766">Zavolat</a>
+        </div>
+        <p class="hero-tel" style="margin-top:10px">Volejte <a href="tel:+420777182766">+420 777 182 766</a> · SK <a href="tel:+421949265696">+421 949 265 696</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-pas">
+    <div class="wrap">
+      <ul>
+        <li>Vlastní výroba</li>
+        <li>Materiál dovážený z Německa</li>
+        <li>Výhradní dovozce moravské zahradní keramiky na Slovensko</li>
+        <li>Nápisy česky i slovensky</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="sortiment" aria-labelledby="h-sort">
+  <div class="wrap">
+    <div class="nad">
+      <div><span class="cislo">01 · Sortiment</span><h2 id="h-sort">Od trpaslíka po medník</h2></div>
+      <p>Velkoobchodní ceník zasíláme obchodníkům na vyžádání. Zaškrtněte, co Vás zajímá – kategorie se rovnou přidají do <a href="#kosik">poptávkového košíku</a>. <span class="demo">ukázkový text</span></p>
+    </div>
+    <div class="sort" id="sortList"></div>
+    <div class="kody">
+      <b>S / P</b>
+      <div>Každý výrobek má svůj objednávací kód. Písmeno <strong>P</strong> značí výrobek v přírodní barvě, <strong>S</strong> výrobek barevný. Objednávat můžete i přes náš objednávací list v Excelu.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-sede" id="velkoobchod" aria-labelledby="h-vo">
+  <div class="wrap">
+    <div class="nad">
+      <div><span class="cislo">02 · Pro obchody a zahradní centra</span><h2 id="h-vo">Plné regály na jaro, léto i Vánoce</h2></div>
+      <p>Dodáváme prodejnám dárků, zahradním centrům a květinářstvím v České republice i na Slovensku. Jako výhradní dovozce zahradní keramiky z Moravy na Slovensko jsme slovenským obchodníkům blízko.</p>
+    </div>
+    <div class="vo">
+      <div class="vo-karta">
+        <svg class="vlajka" viewBox="0 0 46 6" aria-hidden="true"><rect width="15.3" height="6" fill="#FFFFFF" stroke="#D5DADB"/><rect x="15.3" width="15.3" height="6" fill="#A3401F"/><rect x="30.6" width="15.4" height="6" fill="#0B6F70"/></svg>
+        <h3>Česká republika</h3>
+        <ul>
+          <li>Velkoobchodní ceník na vyžádání</li>
+          <li>Platba převodem, na dobírku nebo hotově v provozovně v Dobré</li>
+          <li>Záloha předem se nevyžaduje</li>
+          <li>Nápisy na hrncích a korbelech v češtině</li>
+        </ul>
+      </div>
+      <div class="vo-karta">
+        <svg class="vlajka" viewBox="0 0 46 6" aria-hidden="true"><rect width="46" height="6" fill="#0B6F70"/><rect width="23" height="6" fill="#A3401F"/></svg>
+        <h3>Slovensko</h3>
+        <ul>
+          <li>Výhradní dovoz zahradní keramiky vyrobené na Moravě</li>
+          <li>Plátcům DPH nezapočítáváme DPH, neplátcům účtujeme 21 %</li>
+          <li>Nápisy na hrncích a korbelech ve slovenštině</li>
+          <li>Slovenská linka <a href="tel:+421949265696">+421 949 265 696</a></li>
+        </ul>
+      </div>
+      <div class="vo-velky">
+        <h3>Ceník do Vaší schránky</h3>
+        <p>Napište nám, čím se zabýváte a co chcete mít na prodejně. Pošleme velkoobchodní ceník s objednávacími kódy.</p>
+        <a class="btn" href="#kosik">Sestavit poptávku</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="napisy" aria-labelledby="h-nap">
+  <div class="wrap">
+    <div class="zak">
+      <div class="hrnek-demo">
+        <svg viewBox="0 0 340 260" role="img" aria-labelledby="hrnekT">
+          <title id="hrnekT">Ilustrace hrnku s nápisem</title>
+          <path d="M248 92c40-4 58 20 54 48-4 30-30 44-58 40" fill="none" stroke="#2F3537" stroke-width="14" stroke-linecap="round"/>
+          <path d="M248 92c40-4 58 20 54 48-4 30-30 44-58 40" fill="none" stroke="#0B6F70" stroke-width="8" stroke-linecap="round"/>
+          <path d="M60 52c2 70 4 130 10 170 2 14 14 22 28 22h124c14 0 26-8 28-22 6-40 8-100 10-170z" fill="#0B6F70" stroke="#2F3537" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M60 52c40 10 180 10 200 0" fill="none" stroke="#2F3537" stroke-width="3"/>
+          <path d="M66 70c40 9 168 9 190 0" fill="none" stroke="#8FDCD6" stroke-width="2"/>
+          <path d="M68 200c40 9 166 9 186 0" fill="none" stroke="#8FDCD6" stroke-width="2"/>
+          <ellipse cx="160" cy="135" rx="78" ry="44" fill="#FFFFFF"/>
+          <text id="napisHrnek" x="160" y="132" text-anchor="middle" font-family="DM Serif Display,Georgia,serif" font-size="24" fill="#A3401F">Dědovi</text>
+          <text id="napisHrnek2" x="160" y="156" text-anchor="middle" font-family="Rubik,sans-serif" font-size="12" fill="#2F3537">s láskou</text>
+          <path d="M44 246c60 6 230 6 254 0" fill="none" stroke="#D5DADB" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="prepinac" role="group" aria-label="Ukázka nápisu">
+          <button type="button" aria-pressed="true" data-a="Dědovi" data-b="s láskou">česky</button>
+          <button type="button" aria-pressed="false" data-a="Pre deda" data-b="s láskou">slovensky</button>
+          <button type="button" aria-pressed="false" data-a="Váš nápis" data-b="na zakázku">na zakázku</button>
+        </div>
+        <span class="demo">ukázkový text</span>
+      </div>
+      <div>
+        <div class="nad" style="grid-template-columns:1fr;margin-bottom:20px"><div><span class="cislo">03 · Zakázky a nápisy</span><h2 id="h-nap">Hrnek, který mluví česky i slovensky</h2></div></div>
+        <p>Hrnky, korbely a užitkovou keramiku vyrábíme s nápisy českými i slovenskými. Kromě stálého sortimentu nabízíme také zakázkovou výrobu, točenou keramiku, mysliveckou keramiku a výrobky z hnědé kameniny.</p>
+        <ul>
+          <li>Hrnky a korbely s nápisy – hotové motivy pro prodejny dárků</li>
+          <li>Myslivecká keramika – dárky pro myslivce a myslivecké spolky</li>
+          <li>Zakázková výroba – nápis, motiv nebo série podle Vašeho zadání</li>
+        </ul>
+        <p style="color:var(--kamen-2);font-size:15.5px">Minimální počet kusů a termín zakázky domluvíme individuálně podle náročnosti. <span class="demo">ukázkový text</span></p>
+        <a class="btn btn-hlina" href="#kosik">Poptat zakázku</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-sede" id="postup" aria-labelledby="h-post">
+  <div class="wrap">
+    <div class="nad">
+      <div><span class="cislo">04 · Spolupráce</span><h2 id="h-post">Od ceníku k plnému regálu ve 3 krocích</h2></div>
+    </div>
+    <ol class="kroky">
+      <li><div><h3>Vyžádáte si ceník</h3><p>Zavolejte nebo nám pošlite poptávku. Ceník s objednávacími kódy Vám zašleme e-mailem.</p></div></li>
+      <li><div><h3>Vyberete podle kódů</h3><p>Výrobky najdete v katalogu pod objednávacími kódy (P – přírodní, S – barevné). Stačí vyplnit objednávací list.</p></div></li>
+      <li><div><h3>Převezmete zboží</h3><p>Zboží doručíme na Vaši adresu, nebo si ho vyzvednete v Dobré. Platíte převodem, na dobírku či hotově.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sek kosik-sek" id="kosik" aria-labelledby="h-kos">
+  <div class="wrap">
+    <div class="nad">
+      <div><span class="cislo">05 · Poptávkový košík</span><h2 id="h-kos">Zaškrtněte, co chcete prodávat. Poptávku napíšeme za Vás.</h2></div>
+      <p>Vyberte kategorie a pár údajů. Hned vedle (na telefonu pod formulářem) vznikne hotový text poptávky, který stačí zkopírovat do e-mailu.</p>
+    </div>
+    <div class="kosik">
+      <form id="kosikForm" novalidate>
+        <fieldset class="vyber" id="chips"><legend>Kategorie sortimentu</legend></fieldset>
+        <div class="pole">
+          <div>
+            <label for="typ">Jste</label>
+            <select id="typ">
+              <option>zahradní centrum</option>
+              <option>prodejna dárků</option>
+              <option>květinářství</option>
+              <option>jiný obchod</option>
+              <option>koncový zákazník</option>
+            </select>
+          </div>
+          <div>
+            <span class="lab" style="display:block">Země</span>
+            <fieldset><legend class="sr">Země</legend>
+              <label class="chip"><input type="radio" name="zeme" value="CZ" checked>Česko</label>
+              <label class="chip"><input type="radio" name="zeme" value="SK">Slovensko</label>
+            </fieldset>
+          </div>
+          <div>
+            <label for="firma">Firma / jméno</label>
+            <input type="text" id="firma" placeholder="např. Zahradnictví Novák" autocomplete="organization">
+          </div>
+          <div>
+            <label for="mesto">Město</label>
+            <input type="text" id="mesto" placeholder="např. Ostrava" autocomplete="address-level2">
+          </div>
+          <div class="cela">
+            <label for="pozn">Poznámka (nápis na hrnek, termín, množství)</label>
+            <textarea id="pozn" rows="3" placeholder="např. 30 hrnků s nápisem „Pro babičku“ do konce listopadu"></textarea>
+          </div>
+        </div>
+      </form>
+      <div class="list" aria-live="polite">
+        <h3>Vaše poptávka <span class="pocet" id="pocet">0 kategorií</span></h3>
+        <pre id="text"></pre>
+        <div class="akce">
+          <button type="button" class="btn btn-hlina" id="kopir">Zkopírovat text</button>
+          <button type="submit" form="kosikForm" class="btn btn-obrys">Odeslat poptávku</button>
+        </div>
+        <p class="hlaska" id="hlaska"></p>
+        <p style="font-size:13.5px;color:var(--kamen-2);margin:4px 0 0">E-mail: <a href="mailto:keramika-zabensky@seznam.cz">keramika-zabensky@seznam.cz</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="fotky" aria-labelledby="h-foto">
+  <div class="wrap">
+    <div class="nad">
+      <div><span class="cislo">06 · Z dílny</span><h2 id="h-foto">Výrobky, které se na regálu ztratí jen s kupcem</h2></div>
+      <p>Místo pro skutečné fotografie Vašich výrobků a dílny.</p>
+    </div>
+    <div class="foto">
+      <div class="fm a"><svg class="vz" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#3FB5B0" stroke-width="1.5" opacity=".6"><circle cx="300" cy="90" r="40"/><circle cx="300" cy="90" r="70"/><circle cx="300" cy="90" r="100"/><circle cx="300" cy="90" r="130"/></g></svg><span><b>Sem přijde Vaše fotka</b>vodník nebo skřítek v trávě u jezírka</span></div>
+      <div class="fm b"><svg class="vz" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#A3401F" stroke-width="1.2" opacity=".35"><path d="M0 40q50-20 100 0t100 0M0 80q50-20 100 0t100 0M0 120q50-20 100 0t100 0"/></g></svg><span><b>Sem přijde Vaše fotka</b>ruce u hrnčířského kruhu</span></div>
+      <div class="fm c"><svg class="vz" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#5B6467" opacity=".18"><circle cx="40" cy="40" r="6"/><circle cx="100" cy="40" r="6"/><circle cx="160" cy="40" r="6"/><circle cx="70" cy="90" r="6"/><circle cx="130" cy="90" r="6"/></g></svg><span><b>Sem přijde Vaše fotka</b>hrnek s nápisem zblízka</span></div>
+      <div class="fm d"><svg class="vz" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g stroke="#0B6F70" stroke-width="1.4" opacity=".35"><path d="M0 60h400M0 130h400"/></g></svg><span><b>Sem přijde Vaše fotka</b>regál s Vaší keramikou v zahradním centru</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-sede" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="nad"><div><span class="cislo">07 · Časté otázky</span><h2 id="h-faq">Na co se obchodníci ptají</h2></div></div>
+    <div class="faq">
+      <details><summary>Jaký je minimální odběr?</summary><p>Minimální odběr domluvíme individuálně podle sortimentu a místa dodání. <span class="demo">ukázkový text</span></p></details>
+      <details><summary>Jak zboží dopravujete a kolik stojí doprava?</summary><p>Zboží doručujeme na adresu uvedenou v objednávce, případně si ho můžete vyzvednout v provozovně v Dobré. Cenu dopravy domluvíme individuálně. <span class="demo">ukázkový text</span></p></details>
+      <details><summary>Dodáváte i na Slovensko? Jak je to s DPH?</summary><p>Ano, jsme výhradním dovozcem zahradní keramiky z Moravy na Slovensko. Slovenským obchodníkům, kteří jsou plátci DPH, DPH nezapočítáváme; neplátcům účtujeme DPH ve výši 21 %.</p></details>
+      <details><summary>Jak můžu zaplatit?</summary><p>Hotově v provozovně v Dobré 911, na dobírku při převzetí, nebo bankovním převodem. Zálohu předem nevyžadujeme.</p></details>
+      <details><summary>Co znamenají písmena S a P u kódu výrobku?</summary><p>Udávají, zda je výrobek v přírodní barvě (P), nebo zda je vyhotoven barevně (S). Kód najdete u každé fotografie výrobku i v ceníku.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="kontakt" aria-labelledby="h-kon">
+  <div class="wrap kontakt">
+    <div>
+      <span class="cislo" style="font:600 12.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--hlina)">08 · Kontakt</span>
+      <h2 id="h-kon" style="margin-top:12px">Zavolejte, ceník pošleme</h2>
+      <a class="velky-tel" href="tel:+420777182766">777 182 766</a>
+      <div class="hero-cta">
+        <a class="btn btn-hlina" href="#kosik">Vyžádat velkoobchodní ceník</a>
+        <a class="btn btn-obrys" href="https://mapy.cz/zakladni?q=Dobr%C3%A1%20911%2C%20739%2051%20Dobr%C3%A1" target="_blank" rel="noopener">Ukázat na Mapy.cz</a>
+      </div>
+    </div>
+    <dl class="k-radky">
+      <div><dt>Firma</dt><dd>KERAMIKA-ŽABENSKÝ, Luděk Žabenský</dd></div>
+      <div><dt>Telefon CZ</dt><dd><a href="tel:+420777182766">+420 777 182 766</a></dd></div>
+      <div><dt>Telefon SK</dt><dd><a href="tel:+421949265696">+421 949 265 696</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:keramika-zabensky@seznam.cz">keramika-zabensky@seznam.cz</a><br><a href="mailto:ludvikzab@seznam.cz">ludvikzab@seznam.cz</a></dd></div>
+      <div><dt>Adresa</dt><dd>Dobrá 911, 739 51 Dobrá<br><a href="https://mapy.cz/zakladni?q=Dobr%C3%A1%20911%2C%20739%2051%20Dobr%C3%A1" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></dd></div>
+      <div><dt>Návštěva</dt><dd>Návštěvu provozovny si prosím domluvte telefonicky. <span class="demo">ukázkový text</span></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© KERAMIKA-ŽABENSKÝ · Dobrá 911, 739 51</span>
+    <span>Údaje o firmě: <a href="https://www.firmy.cz/detail/12866613-keramika-zabensky-dobra.html" target="_blank" rel="noopener">Firmy.cz</a></span>
+  </div>
+</footer>
+
+<div class="lista">
+  <a class="btn btn-obrys" href="tel:+420777182766">Zavolat 777 182 766</a>
+  <a class="btn btn-hlina" href="#kosik">Chci ceník</a>
+</div>
+
+<script>
+(function(){
+  var K=[
+    {id:"vodnici",n:"Vodníci a skřítci",d:"Vodníci, skřítci a trpaslíci k jezírku i do záhonu.",i:"v"},
+    {id:"zviratka",n:"Domácí zvířátka",d:"Kohouti, slepice a další zvířata ze dvora.",i:"k"},
+    {id:"les",n:"Lesní zvířátka, sovy a ptáci",d:"Ježci, sovy a ptáci, kteří oživí zahradu i balkon.",i:"s"},
+    {id:"psi",n:"Psi a kočky",d:"Oblíbené dárky pro majitele domácích mazlíčků.",i:"p"},
+    {id:"zaby",n:"Žáby, želvy a šneci",d:"Drobná zahradní keramika k jezírku a skalce.",i:"z"},
+    {id:"osaz",n:"Osazovací nádoby a zvířátka",d:"Nádoby, zvířátka a kameny připravené k osázení.",i:"o"},
+    {id:"dekor",n:"Hřiby, plotovky a slunce",d:"Hřiby, ozdoby na plot, slunce a závěsné dekorace.",i:"h"},
+    {id:"sezona",n:"Sezónní keramika",d:"Jarní dekorace, andělé a Vánoce, Halloween a sněhuláci.",i:"a"},
+    {id:"kamenina",n:"Hnědá kamenina",d:"Medníky a dózy na potraviny z hnědé kameniny.",i:"d"},
+    {id:"majolika",n:"Majolika a červená keramika",d:"Majolika, majolikové dózy a červená keramika s puntíky.",i:"m"},
+    {id:"kvetinace",n:"Květináče a obaly",d:"Květinové obaly a květináče pro interiér i venku.",i:"f"},
+    {id:"hrnky",n:"Hrnky a korbely s nápisy",d:"Užitková keramika s nápisy v češtině i slovenštině.",i:"r"},
+    {id:"mysl",n:"Myslivecká keramika",d:"Keramika s mysliveckými motivy pro myslivce a spolky.",i:"j"},
+    {id:"zakazka",n:"Zakázková a točená keramika",d:"Točená keramika a výroba podle Vašeho zadání.",i:"t"}
+  ];
+  var IK={
+    v:'<path d="M14 40c0-12 5-22 12-22s12 10 12 22z" fill="#0B6F70"/><path d="M26 6l-9 15h18z" fill="#A3401F"/><circle cx="26" cy="23" r="5" fill="#F7E6DF" stroke="#2F3537" stroke-width="1.5"/><path d="M8 44c12 3 30 3 36 0" stroke="#2F3537" stroke-width="2" fill="none" stroke-linecap="round"/>',
+    k:'<path d="M14 38c-2-10 4-20 14-20 6 0 9 4 12 2l2 8c-2 6-6 12-14 12-6 0-12-1-14-2z" fill="#A3401F"/><path d="M24 18c0-5 2-8 5-9 1 3 3 5 1 8" fill="#0B6F70"/><circle cx="34" cy="22" r="1.6" fill="#FFFFFF"/><path d="M10 44h32" stroke="#2F3537" stroke-width="2" stroke-linecap="round"/>',
+    s:'<path d="M14 40c-1-14 3-26 12-26s13 12 12 26z" fill="#0B6F70"/><circle cx="21" cy="24" r="5" fill="#FFFFFF"/><circle cx="31" cy="24" r="5" fill="#FFFFFF"/><circle cx="21" cy="24" r="2" fill="#2F3537"/><circle cx="31" cy="24" r="2" fill="#2F3537"/><path d="M24 30l2 3 2-3z" fill="#A3401F"/>',
+    p:'<path d="M12 42c0-10 4-18 14-18s14 8 14 18z" fill="#A3401F"/><path d="M16 26l2-10 6 7M36 26l-2-10-6 7" fill="#A3401F"/><circle cx="21" cy="31" r="1.6" fill="#FFFFFF"/><circle cx="31" cy="31" r="1.6" fill="#FFFFFF"/>',
+    z:'<ellipse cx="26" cy="32" rx="16" ry="10" fill="#0B6F70"/><circle cx="18" cy="22" r="5" fill="#0B6F70"/><circle cx="34" cy="22" r="5" fill="#0B6F70"/><circle cx="18" cy="22" r="2" fill="#FFFFFF"/><circle cx="34" cy="22" r="2" fill="#FFFFFF"/><path d="M19 34c4 3 10 3 14 0" stroke="#FFFFFF" stroke-width="1.6" fill="none"/>',
+    o:'<path d="M10 18h32l-4 24H14z" fill="#A3401F"/><path d="M8 16h36v5H8z" fill="#2F3537"/><path d="M20 16c0-6 2-9 6-10M28 16c1-5 4-8 8-8" stroke="#0B6F70" stroke-width="2.4" fill="none" stroke-linecap="round"/>',
+    h:'<path d="M8 26c0-10 8-16 18-16s18 6 18 16z" fill="#A3401F"/><circle cx="18" cy="18" r="2.4" fill="#FFFFFF"/><circle cx="30" cy="15" r="2" fill="#FFFFFF"/><path d="M20 26h12l-2 16h-8z" fill="#F7E6DF" stroke="#2F3537" stroke-width="1.5"/>',
+    a:'<path d="M26 8l14 30H12z" fill="#0B6F70"/><path d="M26 18l9 20H17z" fill="#3FB5B0"/><rect x="23" y="38" width="6" height="6" fill="#A3401F"/><circle cx="26" cy="7" r="3" fill="#A3401F"/>',
+    d:'<path d="M14 18h24v4c3 2 4 6 4 12 0 6-6 10-16 10S10 40 10 34c0-6 1-10 4-12z" fill="#7A4A2E"/><path d="M12 14h28v5H12z" fill="#2F3537"/><path d="M14 30c6 2 18 2 24 0" stroke="#F7E6DF" stroke-width="1.6" fill="none"/>',
+    m:'<path d="M16 12h20c0 6 6 10 6 20 0 8-7 12-16 12s-16-4-16-12c0-10 6-14 6-20z" fill="#A3401F"/><circle cx="20" cy="28" r="2.2" fill="#FFFFFF"/><circle cx="30" cy="24" r="2.2" fill="#FFFFFF"/><circle cx="28" cy="34" r="2.2" fill="#FFFFFF"/><circle cx="34" cy="31" r="1.8" fill="#FFFFFF"/>',
+    f:'<path d="M12 22h28l-3 20H15z" fill="#0B6F70"/><path d="M10 20h32v4H10z" fill="#2F3537"/><path d="M26 20V8M26 12c-5-4-10-2-10 2 4 1 7 0 10-2zM26 10c4-5 9-4 10 0-4 2-7 2-10 0z" stroke="#3FB5B0" stroke-width="2" fill="#3FB5B0"/>',
+    r:'<path d="M12 12h22v26c0 3-2 5-5 5H17c-3 0-5-2-5-5z" fill="#0B6F70"/><path d="M34 18c6 0 8 4 8 8s-3 8-8 8" stroke="#0B6F70" stroke-width="4" fill="none"/><rect x="15" y="22" width="16" height="9" rx="2" fill="#FFFFFF"/><path d="M18 26.5h10" stroke="#A3401F" stroke-width="2"/>',
+    j:'<path d="M26 44V24" stroke="#2F3537" stroke-width="2.4"/><path d="M26 24c-4-6-10-8-14-6M26 24c4-6 10-8 14-6M20 20l-4-8M32 20l4-8M14 18l-6-4M38 18l6-4" stroke="#A3401F" stroke-width="2.6" fill="none" stroke-linecap="round"/><ellipse cx="26" cy="30" rx="8" ry="10" fill="#7A4A2E"/>',
+    t:'<ellipse cx="26" cy="40" rx="20" ry="5" fill="#D5DADB"/><path d="M14 16c-2 6 0 16 4 22h16c4-6 6-16 4-22" fill="#A3401F"/><path d="M14 16c4 2 20 2 24 0" stroke="#2F3537" stroke-width="2" fill="none"/><path d="M16 24c6 2 14 2 20 0M17 31c5 1.6 13 1.6 18 0" stroke="#F7E6DF" stroke-width="1.4" fill="none"/>'
+  };
+  var sort=document.getElementById('sortList'),chips=document.getElementById('chips');
+  K.forEach(function(k){
+    var d=document.createElement('article');d.className='pol';
+    d.innerHTML='<svg viewBox="0 0 52 52" aria-hidden="true">'+IK[k.i]+'</svg><h3>'+k.n+'</h3><p>'+k.d+'</p><div class="cena">Cena na vyžádání <label class="prid"><input type="checkbox" data-k="'+k.id+'">Do poptávky</label></div>';
+    sort.appendChild(d);
+    var c=document.createElement('label');c.className='chip';
+    c.innerHTML='<input type="checkbox" data-k="'+k.id+'">'+k.n;
+    chips.appendChild(c);
+  });
+  var vybrane={};
+  function sync(id,val){
+    vybrane[id]=val;
+    document.querySelectorAll('input[data-k="'+id+'"]').forEach(function(i){i.checked=val});
+    render();
+  }
+  document.addEventListener('change',function(e){
+    var k=e.target.getAttribute&&e.target.getAttribute('data-k');
+    if(k){sync(k,e.target.checked)}else if(e.target.closest('#kosikForm')){render()}
+  });
+  document.getElementById('kosikForm').addEventListener('input',render);
+  function render(){
+    var sel=K.filter(function(k){return vybrane[k.id]});
+    var n=sel.length;
+    document.getElementById('pocet').textContent=n+(n===1?' kategorie':(n>1&&n<5?' kategorie':' kategorií'));
+    var typ=document.getElementById('typ').value;
+    var zeme=(document.querySelector('input[name=zeme]:checked')||{}).value;
+    var firma=document.getElementById('firma').value.trim();
+    var mesto=document.getElementById('mesto').value.trim();
+    var pozn=document.getElementById('pozn').value.trim();
+    var t='Dobrý den,\n\n';
+    if(typ==='koncový zákazník'){t+='mám zájem o Vaši keramiku'+(mesto?' (jsem z obce '+mesto+')':'')+'.';}
+    else{t+='jsme '+typ+(mesto?' v '+mesto:'')+(zeme==='SK'?' na Slovensku':' v České republice')+' a prosíme o zaslání velkoobchodního ceníku.';}
+    if(n){t+='\n\nZajímají nás tyto kategorie:\n'+sel.map(function(k){return '• '+k.n}).join('\n');}
+    else{t+='\n\n(Zaškrtněte kategorie, které Vás zajímají.)';}
+    if(pozn){t+='\n\nPoznámka: '+pozn;}
+    if(zeme==='SK'&&typ!=='koncový zákazník'){t+='\n\nUveďte prosím také podmínky pro plátce DPH na Slovensku.';}
+    t+='\n\nDěkujeme a těšíme se na spolupráci.\n'+(firma||'[Vaše firma / jméno]');
+    document.getElementById('text').textContent=t;
+  }
+  render();
+  var hl=document.getElementById('hlaska');
+  document.getElementById('kopir').addEventListener('click',function(){
+    var t=document.getElementById('text').textContent;
+    try{navigator.clipboard.writeText(t).then(function(){hl.textContent='Text poptávky je zkopírovaný – vložte ho do e-mailu.'},function(){hl.textContent='Označte text výše a zkopírujte ho ručně.'})}catch(e){hl.textContent='Označte text výše a zkopírujte ho ručně.'}
+  });
+  document.getElementById('kosikForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    hl.textContent='Toto je jen ukázka – v hotovém webu zpráva odejde přímo do Vašeho e-mailu.';
+  });
+  document.querySelectorAll('.prepinac button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.prepinac button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');
+      document.getElementById('napisHrnek').textContent=b.dataset.a;
+      document.getElementById('napisHrnek2').textContent=b.dataset.b;
+    });
+  });
+})();
+</script>
+</body>
+</html>

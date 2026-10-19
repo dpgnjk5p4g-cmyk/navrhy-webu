@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Kadeřnictví Kateřina Rybková | kadeřnictví Opava</title>
+<meta name="description" content="Kadeřnictví Kateřina Rybková v Opavě – dámské, pánské i dětské stříhání, barvení, balayage, trvalá a společenské účesy. Na objednávku v salonu March, Pekařská 69.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Onest:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Kadeřnictví Kateřina Rybková",
+  "telephone":"+420602532084",
+  "email":"katy.rybkova@seznam.cz",
+  "address":{"@type":"PostalAddress","streetAddress":"Pekařská 2804/69","addressLocality":"Opava","addressCountry":"CZ"}
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  /* Layout: magazínová obálka (masthead + svislý portrét), pak jeden sloupec sekcí do 1120 px, na desktopu 2–3 sloupce. */
+  --paper:#FBF8F2; --champagne:#F3ECDF; --champagne-2:#EADFCB;
+  --sage:#4A5E4D; --sage-soft:#DDE4D8; --sage-line:#A7B6A6;
+  --graphite:#26292A; --muted:#5B5F60;
+  --rose:#E6C3BA; --rose-soft:#F4E2DC;
+  --on-sage:#FFFFFF; --line:#D9CFBE;
+  --serif:"Gilda Display","Didot","Bodoni 72","Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:4px; --max:1120px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1E2122; --champagne:#25292A; --champagne-2:#2E3334;
+    --sage:#A9C2AC; --sage-soft:#2C3630; --sage-line:#4F6052;
+    --graphite:#ECE4D6; --muted:#B9B3A8;
+    --rose:#5A4440; --rose-soft:#352B29;
+    --on-sage:#1E2122; --line:#3B4142; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1E2122; --champagne:#25292A; --champagne-2:#2E3334;
+  --sage:#A9C2AC; --sage-soft:#2C3630; --sage-line:#4F6052;
+  --graphite:#ECE4D6; --muted:#B9B3A8;
+  --rose:#5A4440; --rose-soft:#352B29;
+  --on-sage:#1E2122; --line:#3B4142; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--graphite);font:400 17px/1.6 var(--sans);overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.ukazka{display:inline-block;font:600 11px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;background:var(--rose-soft);color:var(--graphite);border:1px dashed var(--muted);padding:1px 7px;border-radius:99px;vertical-align:middle;white-space:nowrap}
+.eyebrow{font:600 12px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:99px;font:600 16px/1 var(--sans);text-decoration:none;border:1.5px solid var(--sage);transition:transform .15s,background .15s}
+.btn-primary{background:var(--sage);color:var(--on-sage)}
+.btn-ghost{color:var(--graphite);background:transparent;border-color:var(--graphite)}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* banner návrhu */
+.navrh{background:var(--graphite);color:var(--paper);font:500 13px/1.4 var(--sans);text-align:center;padding:8px 16px}
+
+/* hlavička */
+.top{border-bottom:1px solid var(--line);background:var(--paper)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
+.mark{font:400 19px/1 var(--serif);text-decoration:none;letter-spacing:.02em}
+.mark small{display:block;font:500 10px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.top nav{display:none;gap:26px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--graphite)}
+.toptel{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;border:1.5px solid var(--sage);color:var(--sage);border-radius:99px;padding:8px 14px}
+.toptel svg{width:16px;height:16px}
+@media (min-width:900px){.top nav{display:flex}}
+
+/* HERO – obálka magazínu */
+.cover{background:var(--champagne);padding:14px 0 40px;border-bottom:1px solid var(--line)}
+.issue{display:flex;justify-content:space-between;gap:10px;font:500 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--graphite);padding-bottom:8px}
+.masthead{font-family:var(--serif);font-size:clamp(52px,16.4vw,188px);line-height:.86;letter-spacing:-.01em;margin:14px 0 0;text-transform:uppercase}
+.masthead span{display:block}
+.masthead span:last-child{text-align:right}
+.dek{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--graphite);border-bottom:1px solid var(--graphite);padding:10px 0;margin-top:14px}
+.dek p{margin:0;font:400 clamp(21px,5.6vw,30px)/1.2 var(--serif)}
+.dek em{font-style:italic;color:var(--sage)}
+.dek small{font-size:14px;color:var(--muted)}
+.cover-grid{display:grid;gap:26px;margin-top:20px}
+.cover-cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cover-cta .tel-text{font-size:15px;color:var(--muted);width:100%}
+.cover-cta .tel-text strong{color:var(--graphite);font-size:18px}
+.lines{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.lines li{border-top:1px solid var(--line);padding-top:12px}
+.lines b{display:block;font:400 22px/1.15 var(--serif)}
+.lines span{font-size:15px;color:var(--muted)}
+.portrait{margin:0}
+.portrait .ph{place-items:end start;padding:14px}
+.portrait .ph .ph-label{margin-bottom:2px}
+.ph{position:relative;aspect-ratio:4/5;background:
+  radial-gradient(120% 80% at 70% 15%,var(--rose) 0,transparent 60%),
+  linear-gradient(160deg,var(--sage-soft),var(--champagne-2));
+  border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.ph svg.sil{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:78%;height:auto;color:var(--sage);opacity:.55}
+.ph .ph-label{position:relative;z-index:1;font:600 13px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;background:var(--paper);color:var(--graphite);padding:8px 12px;border-radius:99px;border:1px solid var(--line)}
+.ph .cl{position:absolute;left:14px;top:14px;right:14px;font-family:var(--serif);font-size:20px;line-height:1.1;color:var(--graphite)}
+.ph .cl i{display:block;font:600 11px/1.3 var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+.ph .barcode{position:absolute;right:14px;bottom:14px;background:var(--paper);padding:6px 6px 3px;border:1px solid var(--line)}
+.portrait figcaption{font-size:13px;color:var(--muted);margin-top:8px;padding-left:10px;border-left:2px solid var(--sage)}
+.portrait figcaption b{color:var(--graphite);font-weight:600}
+@media (min-width:900px){
+  .cover{padding:18px 0 56px}
+  .masthead{margin-top:18px}
+  .cover-grid{grid-template-columns:1fr 1.05fr 1fr;align-items:start;gap:40px;margin-top:32px}
+  .cover-grid .portrait{order:2}
+  .cover-grid .col-a{order:1}
+  .cover-grid .col-b{order:3}
+}
+
+/* sekce */
+section{padding:64px 0}
+.sec-head{margin-bottom:30px;max-width:720px}
+.sec-head h2{font-size:clamp(34px,8vw,54px);margin:10px 0 12px}
+.sec-head p{color:var(--muted);margin:0}
+.alt{background:var(--champagne)}
+
+/* služby a ceny */
+.price{border-top:2px solid var(--graphite)}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:23px}
+.row p{grid-column:1/-1;margin:0;color:var(--muted);font-size:15.5px}
+.row .amt{font:600 17px/1.3 var(--sans);white-space:nowrap;align-self:baseline}
+.row .amt small{font-weight:400;color:var(--muted);font-size:13px}
+.price-note{font-size:14px;color:var(--muted);margin-top:16px}
+.svc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding:0;list-style:none}
+.svc-tags li{border:1px solid var(--sage-line);background:var(--sage-soft);border-radius:99px;padding:6px 14px;font-size:14.5px}
+@media (min-width:900px){
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+  .price-grid .price + .price{border-top:2px solid var(--graphite)}
+}
+
+/* o mně + důvěra */
+.about{display:grid;gap:28px}
+.about .quote{font:400 clamp(26px,6.4vw,38px)/1.2 var(--serif)}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.facts li{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);padding:14px;border-radius:var(--r)}
+.facts svg{width:28px;height:28px;color:var(--sage)}
+.facts b{display:block;font-weight:600}
+.facts span{font-size:15px;color:var(--muted)}
+@media (min-width:900px){.about{grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}}
+
+/* časová osa domluvy */
+.steps{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:0}
+.step{position:relative;display:grid;grid-template-columns:56px 1fr;gap:16px;padding-bottom:30px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:27px;top:56px;bottom:0;width:2px;background:repeating-linear-gradient(var(--sage) 0 6px,transparent 6px 12px)}
+.step:last-child::before{display:none}
+.dot{width:56px;height:56px;border-radius:50%;background:var(--sage);color:var(--on-sage);display:grid;place-items:center;position:relative;z-index:1}
+.dot svg{width:24px;height:24px}
+.step .n{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+.step h3{font-size:25px;margin:6px 0 8px}
+.step p{margin:0;color:var(--muted)}
+.step .bubble{display:inline-block;margin-top:10px;background:var(--paper);border:1px solid var(--line);border-radius:14px 14px 14px 2px;padding:8px 12px;font-size:15px;color:var(--graphite)}
+.alt .step .bubble{background:var(--paper)}
+.when{margin-top:34px;display:grid;gap:12px;grid-template-columns:1fr;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--sage);padding:18px;border-radius:var(--r)}
+.when b{font:400 24px/1.2 var(--serif)}
+.when p{margin:0;color:var(--muted)}
+@media (min-width:900px){
+  .steps{grid-template-columns:repeat(3,1fr);gap:28px}
+  .step{grid-template-columns:1fr;padding-bottom:0}
+  .step::before{left:62px;right:-28px;top:27px;bottom:auto;width:auto;height:2px;background:repeating-linear-gradient(90deg,var(--sage) 0 6px,transparent 6px 12px)}
+  .when{grid-template-columns:auto 1fr auto;align-items:center;gap:24px}
+}
+
+/* kartička příprava */
+.prep{display:grid;gap:28px}
+.card{background:var(--rose-soft);border:1px solid var(--line);border-radius:6px;padding:26px 22px;position:relative}
+.card h3{font-size:27px;margin:8px 0 16px}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.check li{display:grid;grid-template-columns:24px 1fr;gap:12px;font-size:16px}
+.check svg{width:22px;height:22px;color:var(--sage);margin-top:2px}
+@media (min-width:900px){.prep{grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}}
+
+/* galerie */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gal figure{margin:0}
+.gal .ph{aspect-ratio:3/4}
+.gal .ph .ph-label{font-size:10.5px;padding:6px 10px;text-align:center;margin:0 8px}
+.gal figure:first-child{grid-column:span 2}.gal figure:first-child .ph{aspect-ratio:16/10}
+.gal figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+@media (min-width:900px){.gal{grid-template-columns:repeat(4,1fr);gap:18px}.gal figure:nth-child(1){grid-row:span 2;grid-column:auto}.gal figure:nth-child(1) .ph{aspect-ratio:auto;height:calc(100% - 30px)}}
+
+/* kontakt */
+.contact{display:grid;gap:24px}
+.cbox{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.cbox dl{margin:0;display:grid;gap:16px}
+.cbox dt{font:600 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.cbox dd{margin:4px 0 0;font-size:18px}
+.cbox dd a{text-decoration-color:var(--sage-line);text-underline-offset:3px}
+.bigtel{font:400 clamp(36px,10vw,56px)/1 var(--serif);text-decoration:none;display:inline-block;margin:8px 0 18px}
+.cbtns{display:flex;flex-wrap:wrap;gap:10px}
+.map{position:relative;aspect-ratio:16/10;background:var(--sage-soft);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:block;text-decoration:none}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map span{position:absolute;left:12px;bottom:12px;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-weight:600;font-size:14px}
+@media (min-width:900px){.contact{grid-template-columns:1.1fr 1fr;gap:40px;align-items:stretch}.map{aspect-ratio:auto;height:100%;min-height:320px}}
+
+/* FAQ */
+.faq details{max-width:800px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;font:400 22px/1.25 var(--serif);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font:400 28px/1 var(--sans);color:var(--sage)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--muted);margin:0 0 18px}
+
+footer{background:var(--graphite);color:var(--paper);padding:40px 0 30px;font-size:14px}
+footer .wrap{display:grid;gap:10px}
+footer .fmark{font:400 30px/1 var(--serif)}
+footer a{color:var(--paper)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer{background:#141617;color:#ECE4D6}:root:not([data-theme="light"]) footer a{color:#ECE4D6}:root:not([data-theme="light"]) .navrh{background:#ECE4D6;color:#1E2122}}
+:root[data-theme="dark"] footer{background:#141617;color:#ECE4D6}
+
+/* mobilní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center;box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+.callbar .btn{flex:1;min-height:50px}
+.callbar .num{font-size:13px;line-height:1.3;color:var(--muted)}
+.callbar .num b{display:block;color:var(--graphite);font-size:16px}
+@media (min-width:900px){.callbar{display:none}}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+
+
+<div class="navrh" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Kadeřnictví Kateřina Rybková</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#uvod">K. Rybková<small>Kadeřnictví Opava</small></a>
+    <nav aria-label="Hlavní menu">
+      <a href="#sluzby">Služby a ceník</a>
+      <a href="#objednani">Objednání</a>
+      <a href="#prace">Práce</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="toptel" href="tel:+420602532084" aria-label="Zavolat 602 532 084">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      602 532 084
+    </a>
+  </div>
+</header>
+
+<main id="uvod">
+  <!-- HERO: obálka magazínu -->
+  <section class="cover" aria-labelledby="hero-title" style="padding-top:14px">
+    <div class="wrap">
+      <div class="issue"><span>Opava · Pekařská 69</span><span>Na objednávku</span></div>
+      <h1 class="masthead" id="hero-title"><span>Kateřina</span><span>Rybková</span></h1>
+      <div class="dek">
+        <p>Kadeřnice v Opavě, <em>na objednávku</em></p>
+        <small>Dámské · pánské · dětské · salon March</small>
+      </div>
+
+      <div class="cover-grid">
+        <div class="col-a">
+          <p style="font-size:17px;margin:0 0 18px">Stříhání, barvení, melír, balayage, trvalá i společenské účesy. Termín si domluvíme po telefonu – přesně podle toho, kdy se hodí Vám.</p>
+          <div class="cover-cta">
+            <a class="btn btn-primary" href="tel:+420602532084">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              Objednat se
+            </a>
+            <a class="btn btn-ghost" href="#sluzby">Ceník</a>
+            <p class="tel-text" style="margin:4px 0 0">Telefon: <strong>602 532 084</strong></p>
+          </div>
+        </div>
+
+        <figure class="portrait">
+          <div class="ph">
+            <div class="cl"><i>Téma čísla</i>Balayage, které dorůstá hezky</div>
+            <svg class="sil" viewBox="0 0 200 220" aria-hidden="true"><path fill="currentColor" d="M100 28c-30 0-50 22-50 54 0 26-4 46-16 66 14 8 30 10 44 8l44 0c14 2 30 0 44-8-12-20-16-40-16-66 0-32-20-54-50-54z"/><ellipse cx="100" cy="88" rx="27" ry="34" fill="var(--champagne)"/><path fill="currentColor" d="M73 80c6-22 22-30 40-28 10 2 16 8 18 18-16-2-34 0-58 10z" /><rect x="90" y="116" width="20" height="26" fill="var(--champagne)"/><path fill="currentColor" opacity=".75" d="M24 220c4-44 36-66 76-66s72 22 76 66z"/></svg>
+            <span class="ph-label">Sem přijde Vaše fotka</span>
+            <svg class="barcode" width="64" height="30" viewBox="0 0 64 30" aria-hidden="true"><g fill="#26292A"><rect x="0" width="2" height="24"/><rect x="4" width="1" height="24"/><rect x="7" width="3" height="24"/><rect x="12" width="1" height="24"/><rect x="15" width="2" height="24"/><rect x="19" width="1" height="24"/><rect x="22" width="3" height="24"/><rect x="27" width="1" height="24"/><rect x="30" width="2" height="24"/><rect x="34" width="1" height="24"/><rect x="37" width="3" height="24"/><rect x="42" width="2" height="24"/><rect x="46" width="1" height="24"/><rect x="49" width="3" height="24"/><rect x="54" width="1" height="24"/><rect x="57" width="2" height="24"/><rect x="61" width="3" height="24"/></g><text x="32" y="30" font-size="6" text-anchor="middle" fill="#26292A" font-family="Onest,sans-serif">602 532 084</text></svg>
+          </div>
+          <figcaption><b>Na obálce:</b> Kateřina Rybková, kadeřnice ze salonu March v Opavě.</figcaption>
+        </figure>
+
+        <div class="col-b">
+          <ul class="lines">
+            <li><b>Od dětí po svatbu</b><span>Dětské stříhání od 70 Kč, společenské účesy od 600 Kč</span></li>
+            <li><b>Barva, melír, trvalá</b><span>Vždy včetně střihu a foukané</span></li>
+            <li><b>Termín podle Vás</b><span>Pevná otevírací doba není – stačí zavolat</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLUŽBY A CENY -->
+  <section id="sluzby" aria-labelledby="sluzby-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Ceník</span>
+        <h2 id="sluzby-h">Služby a ceny</h2>
+        <p>„Ceny jsou orientační a liší se dle délky.“ Výslednou cenu podle délky a hustoty Vašich vlasů Vám řeknu už při telefonické domluvě. <span class="ukazka">popisy služeb: ukázkový text</span></p>
+      </div>
+      <div class="price-grid">
+        <div class="price">
+          <div class="row"><h3>Dámské stříhání</h3><span class="amt"><small>od</small> 120 Kč</span><p>Střih podle tvaru obličeje a toho, kolik času ráno chcete vlasům věnovat.</p></div>
+          <div class="row"><h3>Pánské stříhání</h3><span class="amt"><small>od</small> 110 Kč</span><p>Klasický i úpravnější pánský střih, strojkem nebo nůžkami.</p></div>
+          <div class="row"><h3>Dětské stříhání</h3><span class="amt"><small>od</small> 70 Kč</span><p>V klidu a bez spěchu, aby se dítě na křesle cítilo dobře.</p></div>
+          <div class="row"><h3>Společenské a svatební účesy</h3><span class="amt"><small>od</small> 600 Kč</span><p>Účes na svatbu, ples nebo oslavu – domluvíme se dopředu, ideálně i na zkoušce.</p></div>
+        </div>
+        <div class="price">
+          <div class="row"><h3>Barvení + střih + foukaná</h3><span class="amt"><small>od</small> 600 Kč</span><p>Celoplošná barva nebo odrost, zakončená střihem a foukanou.</p></div>
+          <div class="row"><h3>Melír + střih + foukaná</h3><span class="amt"><small>od</small> 600 Kč</span><p>Prosvětlené pramínky, které vlasům dodají hloubku.</p></div>
+          <div class="row"><h3>Trvalá + střih + foukaná</h3><span class="amt"><small>od</small> 600 Kč</span><p>Vlny nebo objem pro vlasy, které samy nedrží tvar.</p></div>
+          <div class="row"><h3>Balayage / Ombré</h3><span class="amt"><small>od</small> 1 200 Kč</span><p>Ručně malované přechody, které dorůstají nenápadně.</p></div>
+        </div>
+      </div>
+      <p class="price-note">Dále nabízím: mytí a foukanou a regeneraci vlasů – cena na dotaz.</p>
+      <ul class="svc-tags" aria-label="Všechny služby">
+        <li>Stříhání</li><li>Barvení</li><li>Melírování</li><li>Balayage</li><li>Trvalá</li><li>Foukaná</li><li>Regenerace</li><li>Společenské účesy</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- O MNĚ / DŮVĚRA -->
+  <section class="alt" id="o-mne" aria-labelledby="omne-h">
+    <div class="wrap about">
+      <div>
+        <span class="eyebrow">Vaše kadeřnice</span>
+        <h2 id="omne-h" class="quote" style="margin:12px 0 16px">„Nabízím veškeré profesionální kadeřnické služby.“</h2>
+        <p style="color:var(--muted)">Stříhám sama, jednu klientku či klienta po druhé. Žádná recepce, žádné přebíhání – v křesle jste jen Vy a já, v salonu March v Opavě-Předměstí. <span class="ukazka">ukázkový text</span></p>
+      </div>
+      <ul class="facts">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg>
+          <div><b>Dámy, pánové i děti</b><span>Celá rodina u jedné kadeřnice.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg>
+          <div><b>Balayage a barvení</b><span>Od jemného melíru po malované přechody.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <div><b>Termín podle domluvy</b><span>Bez pevných hodin – přizpůsobíme se Vám.</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DOMLUVA VE 3 KROCÍCH -->
+  <section id="objednani" aria-labelledby="obj-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Jak to probíhá</span>
+        <h2 id="obj-h">Domluva termínu ve 3 krocích</h2>
+        <p>Pevnou otevírací dobu nemám – pracuji „dle objednávek“. Proto vše začíná krátkým telefonátem.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><span class="n">Krok 1</span><h3>Zavoláte</h3><p>Na číslo <a href="tel:+420602532084"><strong>602 532 084</strong></a>. Když zrovna stříhám, ozvu se Vám zpátky. <span class="ukazka">ukázkový text</span></p><span class="bubble">„Dobrý den, chtěla bych se objednat…“</span></div>
+        </li>
+        <li class="step">
+          <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg></span>
+          <div><span class="n">Krok 2</span><h3>Řeknete, co si přejete</h3><p>Službu, délku vlasů a kdy se Vám to hodí. Podle toho Vám řeknu orientační cenu a čas.</p><span class="bubble">„Balayage, vlasy pod ramena.“</span></div>
+        </li>
+        <li class="step">
+          <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><span class="n">Krok 3</span><h3>Přijdete do salonu</h3><p>Salon March, Pekařská 2804/69, Opava-Předměstí. V domluvený čas je křeslo připravené jen pro Vás.</p><span class="bubble">Termín máte domluvený.</span></div>
+        </li>
+      </ol>
+      <div class="when">
+        <b>Otevírací doba: dle objednávek</b>
+        <p>Konkrétní den a hodinu si domluvíme po telefonu nebo e-mailem.</p>
+        <a class="btn btn-primary" href="tel:+420602532084">Objednat se</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PŘÍPRAVA K BARVENÍ -->
+  <section class="alt" aria-labelledby="prep-h">
+    <div class="wrap prep">
+      <div class="sec-head" style="margin:0">
+        <span class="eyebrow">Před barvou</span>
+        <h2 id="prep-h">Jdete na barvu nebo balayage?</h2>
+        <p>Pár drobností, které si můžete připravit předem. Ušetří čas v křesle a výsledek pak víc odpovídá Vaší představě.</p>
+      </div>
+      <div class="card">
+        <span class="ukazka">ukázkový text</span>
+        <h3>Co si připravit k barvení / balayage</h3>
+        <ul class="check">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span>2–3 fotky odstínu, který se Vám líbí – a klidně i jednu, který ne.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span>Čím jste barvila naposledy: domácí barva, henna, tónovací šampon.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span>Vlasy umyté den až dva předem, bez lakových a olejových přípravků.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span>U balayage počítejte s delší návštěvou – přesný čas řekneme při domluvě.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span>Pohodlné tričko, které nevadí přetahovat přes hlavu.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="prace" aria-labelledby="prace-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Z křesla</span>
+        <h2 id="prace-h">Ukázky práce</h2>
+        <p>Místo pro Vaše fotky – před a po, z boku i zezadu.</p>
+      </div>
+      <div class="gal">
+        <figure><div class="ph"><span class="ph-label">Sem přijde Vaše fotka</span></div><figcaption>Balayage</figcaption></figure>
+        <figure><div class="ph"><span class="ph-label">Sem přijde Vaše fotka</span></div><figcaption>Svatební účes</figcaption></figure>
+        <figure><div class="ph"><span class="ph-label">Sem přijde Vaše fotka</span></div><figcaption>Melír</figcaption></figure>
+        <figure><div class="ph"><span class="ph-label">Sem přijde Vaše fotka</span></div><figcaption>Dámský střih</figcaption></figure>
+        <figure><div class="ph"><span class="ph-label">Sem přijde Vaše fotka</span></div><figcaption>Trvalá</figcaption></figure>
+        <figure><div class="ph"><span class="ph-label">Sem přijde Vaše fotka</span></div><figcaption>Pánský střih</figcaption></figure>
+        <figure><div class="ph"><span class="ph-label">Sem přijde Vaše fotka</span></div><figcaption>Společenský účes</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="alt" id="kontakt" aria-labelledby="kontakt-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Kontakt a objednání</span>
+        <h2 id="kontakt-h">Zavolejte, domluvíme se</h2>
+      </div>
+      <div class="contact">
+        <div class="cbox">
+          <span class="eyebrow">Telefon</span><br>
+          <a class="bigtel" href="tel:+420602532084">602 532 084</a>
+          <div class="cbtns" style="margin-bottom:24px">
+            <a class="btn btn-primary" href="tel:+420602532084">Objednat se</a>
+            <a class="btn btn-ghost" href="mailto:katy.rybkova@seznam.cz">Napsat e-mail</a>
+          </div>
+          <dl>
+            <div><dt>E-mail</dt><dd><a href="mailto:katy.rybkova@seznam.cz">katy.rybkova@seznam.cz</a></dd></div>
+            <div><dt>Adresa</dt><dd>Salon March<br>Pekařská 2804/69, Opava-Předměstí<br><a href="https://mapy.cz/zakladni?q=Peka%C5%99sk%C3%A1%202804%2F69%2C%20Opava" target="_blank" rel="noopener">Otevřít na Mapy.cz</a></dd></div>
+            <div><dt>Otevírací doba</dt><dd>Dle objednávek – termín po telefonické domluvě</dd></div>
+          </dl>
+        </div>
+        <a class="map" href="https://mapy.cz/zakladni?q=Peka%C5%99sk%C3%A1%202804%2F69%2C%20Opava" target="_blank" rel="noopener" aria-label="Zobrazit adresu Pekařská 2804/69, Opava na Mapy.cz">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="300" fill="var(--sage-soft)"/>
+            <g stroke="var(--paper)" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 90 L410 130"/><path d="M120 -10 L160 310"/><path d="M-10 230 Q200 200 410 250"/><path d="M290 -10 L260 310"/></g>
+            <g stroke="var(--sage-line)" stroke-width="1" fill="none"><path d="M-10 90 L410 130"/><path d="M120 -10 L160 310"/></g>
+            <path d="M200 150c0-18 14-30 28-30s28 12 28 30c0 22-28 48-28 48s-28-26-28-48z" fill="var(--sage)"/><circle cx="228" cy="150" r="9" fill="var(--paper)"/>
+          </svg>
+          <span>Pekařská 69 · Mapy.cz →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section aria-labelledby="faq-h">
+    <div class="wrap faq">
+      <div class="sec-head">
+        <span class="eyebrow">Časté otázky</span>
+        <h2 id="faq-h">Než zavoláte</h2>
+      </div>
+      <details><summary>Jakou máte otevírací dobu?</summary><p>Pevnou otevírací dobu nemám, pracuji dle objednávek. Den a čas si domluvíme po telefonu na 602 532 084.</p></details>
+      <details><summary>Kde salon najdu?</summary><p>V salonu March na adrese Pekařská 2804/69, Opava-Předměstí. Odkaz na mapu najdete v kontaktech.</p></details>
+      <details><summary>Stříháte i pány a děti?</summary><p>Ano. Pánské stříhání od 110 Kč, dětské od 70 Kč.</p></details>
+      <details><summary>Proč je u ceny „od“?</summary><p>Ceny jsou orientační a liší se dle délky vlasů. Přesnou částku pro Vaše vlasy Vám řeknu při domluvě termínu.</p></details>
+      <details><summary>Děláte účesy na svatbu nebo ples?</summary><p>Ano, společenské a svatební účesy od 600 Kč. Termín je dobré domluvit s předstihem.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fmark">Kateřina Rybková</span>
+    <span>Kadeřnictví Opava · Pekařská 2804/69 (salon March) · <a href="tel:+420602532084">602 532 084</a> · <a href="mailto:katy.rybkova@seznam.cz">katy.rybkova@seznam.cz</a></span>
+    <span>IČO 88527409 · © 2026</span>
+    <span style="opacity:.8">Nezávazný návrh webu – není to oficiální stránka firmy.</span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <span class="num">Objednání<b>602 532 084</b></span>
+  <a class="btn btn-primary" href="tel:+420602532084">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    Objednat se
+  </a>
+</div>
+</body>
+</html>

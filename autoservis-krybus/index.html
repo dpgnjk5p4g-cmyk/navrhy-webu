@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Autoservis Opava – Autoservis Krybus | návrh webu</title>
+<meta name="description" content="Autoservis v Opavě – Autoservis Krybus, Těšínská 1023/29, Opava-Předměstí: opravy aut všech značek se specializací na Renault, diagnostika, příprava na STK, karoserie a lak, výfuky, pneuservis, tažná zařízení a půjčovna přívěsných vozíků. Po–Pá 7–16.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Russo+One&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Autoservis Krybus",
+  "telephone": "+420608755394",
+  "email": "autoserviskdk@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "86909916"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Těšínská 1023/29",
+    "addressLocality": "Opava",
+    "postalCode": "746 01",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "07:00",
+    "closes": "16:00"
+  }]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/*
+  KONCEPT ROZLOŽENÍ – „dílna u Těšínské“
+  1) Pruh návrhu, lepkavá hlavička s telefonem.
+  2) Hero na asfaltu: otevírací doba + živý stav nahoře, velký nadpis přes celou šířku, „Objednat servis“.
+  3) Výstražný pruh (olejová žlutá × asfalt) jako předěl dílny.
+  4) Interaktivní bokorys auta: klik na bod = co s tím servis udělá + objednání.
+  5) Služby (dílenská šedá), ceník úkonů, sezónní přezouvání (žlutý pás), značky, půjčovna vozíků,
+     důvěra, 3 kroky, časté otázky, kontakt s formulářem, patička. Na mobilu pevný pruh „Zavolat“.
+*/
+:root{
+  --asfalt:#1D2023;
+  --asfalt-2:#2A2E32;
+  --asfalt-3:#3A3F44;
+  --karmin:#B42318;
+  --karmin-tmava:#8F1B12;
+  --seda:#ECEDEA;
+  --seda-2:#DCDDD8;
+  --bila:#FFFFFF;
+  --olej:#E3B23C;
+  --olej-svetla:#F3D98F;
+  --text:#1D2023;
+  --text-2:#4A4F55;
+  --text-inv:#ECEDEA;
+  --text-inv-2:#B9BCBF;
+  --linka:#C9CBC5;
+  --ok:#3FB87F;
+  --font-nadpis:"Russo One","Arial Black","Segoe UI",system-ui,sans-serif;
+  --font-text:"Noto Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --r:10px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--seda);color:var(--text);font-family:var(--font-text);font-size:1.0625rem;line-height:1.6}
+.page{overflow-x:clip}
+h1,h2,h3{font-family:var(--font-nadpis);font-weight:400;line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.75rem,4.2vw,2.75rem);margin-bottom:.45em}
+h3{font-size:1.2rem;line-height:1.25}
+p{margin:0 0 1em;max-width:65ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--olej);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(56px,8vw,104px)}
+.kicker{display:inline-block;font-family:var(--font-nadpis);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--karmin);margin-bottom:.75rem}
+.lead{font-size:1.125rem;color:var(--text-2)}
+.ukazka{display:inline-block;vertical-align:middle;font-family:var(--font-text);font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.3;padding:2px 7px;border-radius:999px;background:var(--olej-svetla);color:var(--asfalt);border:1px dashed var(--asfalt);margin-left:6px;white-space:nowrap}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:50px;padding:.75em 1.35em;border-radius:var(--r);font-family:var(--font-nadpis);font-size:1.02rem;letter-spacing:.02em;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,transform .15s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-hl{background:var(--karmin);color:var(--bila)}
+.btn-hl:hover{background:var(--karmin-tmava)}
+.btn-ob{background:transparent;color:var(--text-inv);border-color:var(--text-inv-2)}
+.btn-ob:hover{border-color:var(--olej);color:var(--olej)}
+.btn-tm{background:var(--asfalt);color:var(--seda)}
+.btn-tm:hover{background:var(--asfalt-3)}
+
+/* pruh návrhu */
+.navrh{background:var(--olej);color:var(--asfalt);font-size:.85rem;font-weight:600;text-align:center;padding-block:8px}
+
+/* hlavička */
+.hlavicka{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--asfalt);color:var(--text-inv);border-bottom:3px solid var(--karmin)}
+.hlavicka .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text-inv);margin-right:auto}
+.znacka svg{width:34px;height:34px;flex:none}
+.znacka b{white-space:nowrap;font-family:var(--font-nadpis);font-weight:400;font-size:clamp(1rem,4.4vw,1.15rem);letter-spacing:.02em;line-height:1}
+.znacka small{display:block;font-size:.72rem;color:var(--text-inv-2);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.menu{display:none;gap:22px;font-size:.95rem}
+.menu a{text-decoration:none;color:var(--text-inv-2)}
+.menu a:hover{color:var(--olej)}
+.tel-h{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;color:var(--asfalt);background:var(--olej);padding:9px 12px;border-radius:8px;font-size:.95rem;white-space:nowrap}
+.tel-h svg{width:18px;height:18px}
+@media (min-width:980px){.menu{display:flex}}
+
+/* hero */
+.hero{background:var(--asfalt);color:var(--text-inv);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--asfalt-2) 1px,transparent 1px),linear-gradient(90deg,var(--asfalt-2) 1px,transparent 1px);background-size:44px 44px;opacity:.55;pointer-events:none}
+.hero .wrap{position:relative;padding-block:22px 40px}
+.provoz{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:.92rem;color:var(--text-inv-2);margin-bottom:18px}
+.stav{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--text-inv);background:var(--asfalt-2);border:1px solid var(--asfalt-3);padding:5px 12px;border-radius:999px}
+.stav i{width:10px;height:10px;border-radius:50%;background:var(--text-inv-2);display:inline-block}
+.stav.otevreno i{background:var(--ok);box-shadow:0 0 0 4px rgba(63,184,127,.22)}
+.stav.zavreno i{background:var(--karmin)}
+.provoz strong{color:var(--olej);font-weight:700}
+.hero h1{font-size:clamp(2.35rem,8.4vw,6.6rem);letter-spacing:-.005em;line-height:1.02;max-width:none}
+.hero h1 span{color:var(--olej);display:block}
+.hero-text{font-size:1.08rem;color:var(--text-inv-2);margin:18px 0 22px;max-width:60ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-fakta{display:none}
+@media (min-width:760px){
+  .hero .wrap{padding-block:48px 72px}
+  .hero-fakta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:48px;background:var(--asfalt-3);border:1px solid var(--asfalt-3);border-radius:var(--r);overflow:hidden}
+  .hero-fakta div{background:var(--asfalt);padding:16px 18px;font-size:.92rem;color:var(--text-inv-2)}
+  .hero-fakta b{display:block;font-family:var(--font-nadpis);font-weight:400;color:var(--text-inv);font-size:1.05rem;margin-bottom:2px}
+}
+.vystraha{height:14px;background:repeating-linear-gradient(-45deg,var(--olej) 0 18px,var(--asfalt) 18px 36px)}
+
+/* bokorys */
+.auto-sekce{background:var(--asfalt-2);color:var(--text-inv)}
+.auto-sekce .kicker{color:var(--olej)}
+.auto-sekce .lead{color:var(--text-inv-2)}
+.auto-grid{display:grid;gap:28px;margin-top:28px}
+.auto-svg{width:calc(100% + 16px);margin-left:-8px;height:auto;display:block}
+.hs{cursor:pointer}
+.hs .bod{fill:var(--karmin);stroke:var(--bila);stroke-width:3}
+.hs .kruh{fill:none;stroke:var(--karmin);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:puls 2.2s ease-out infinite}
+.hs text{font-family:var(--font-nadpis);font-size:15px;fill:var(--bila);pointer-events:none}
+.hs:hover .bod,.hs:focus-visible .bod{fill:var(--karmin-tmava)}
+.hs.aktivni .bod{fill:var(--olej);stroke:var(--asfalt)}
+.hs.aktivni text{fill:var(--asfalt)}
+.hs:focus{outline:none}
+.hs:focus-visible .bod{stroke:var(--olej);stroke-width:5}
+@keyframes puls{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.1);opacity:0}}
+.cipy{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cip{font:600 .9rem var(--font-text);color:var(--text-inv);background:transparent;border:1px solid var(--asfalt-3);border-radius:999px;padding:8px 13px;cursor:pointer;min-height:40px}
+.cip b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--karmin);color:var(--bila);font-size:.75rem;margin-right:6px}
+.cip[aria-pressed="true"]{background:var(--olej);color:var(--asfalt);border-color:var(--olej)}
+.cip[aria-pressed="true"] b{background:var(--asfalt);color:var(--olej)}
+.panel{background:var(--asfalt);border:1px solid var(--asfalt-3);border-top:4px solid var(--olej);border-radius:var(--r);padding:24px}
+.panel h3{font-size:1.5rem;color:var(--olej);margin-bottom:10px}
+.panel ul{margin:0 0 18px;padding-left:1.1em;color:var(--text-inv-2)}
+.panel li{margin-bottom:4px}
+.panel p{color:var(--text-inv)}
+.panel .cislo{font-family:var(--font-nadpis);font-size:.8rem;letter-spacing:.14em;color:var(--text-inv-2);text-transform:uppercase;display:block;margin-bottom:6px}
+@media (min-width:980px){.auto-grid{grid-template-columns:1.55fr 1fr;align-items:center}}
+
+/* služby */
+.sluzby-grid{display:grid;gap:14px;margin-top:32px}
+.karta{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:10px;position:relative}
+.karta .ik{width:44px;height:44px;border-radius:8px;background:var(--asfalt);display:grid;place-items:center}
+.karta .ik svg{width:26px;height:26px}
+.karta p{margin:0;color:var(--text-2);font-size:1rem}
+.karta .cena{margin-top:auto;padding-top:10px;border-top:1px dashed var(--linka);font-weight:700;font-size:.95rem;color:var(--asfalt)}
+.karta.hlavni{background:var(--asfalt);color:var(--text-inv);border-color:var(--asfalt)}
+.karta.hlavni p{color:var(--text-inv-2)}
+.karta.hlavni .cena{color:var(--olej);border-color:var(--asfalt-3)}
+.karta.hlavni .ik{background:var(--karmin)}
+@media (min-width:640px){.sluzby-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.sluzby-grid{grid-template-columns:repeat(3,1fr)}.karta.hlavni{grid-row:span 2}}
+
+/* ceník */
+.cenik-sekce{background:var(--bila)}
+.cenik-grid{display:grid;gap:32px}
+.tab{width:100%;border-collapse:collapse;font-size:1rem}
+.tab th,.tab td{text-align:left;padding:14px 8px;border-bottom:1px solid var(--linka);vertical-align:top}
+.tab th{font-family:var(--font-nadpis);font-weight:400;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2)}
+.tab td:last-child,.tab th:last-child{text-align:right;white-space:nowrap}
+.tab td small{display:block;color:var(--text-2);font-size:.88rem}
+.pozn{font-size:.9rem;color:var(--text-2);margin-top:14px}
+@media (min-width:900px){.cenik-grid{grid-template-columns:1fr 1.4fr}}
+
+.cena-pas{display:grid;gap:20px;align-items:center;padding-block:clamp(40px,6vw,64px)}
+.cena-pas h2{margin-bottom:.3em}
+.cena-pas .lead{margin:0}
+@media (min-width:860px){.cena-pas{grid-template-columns:1fr auto}}
+/* sezóna */
+.sezona{background:var(--olej);color:var(--asfalt)}
+.sezona .wrap{display:grid;gap:24px;align-items:center}
+.sezona .kicker{color:var(--asfalt)}
+.sezona p{color:var(--asfalt)}
+.sezona h2 em{font-style:normal;color:var(--karmin-tmava)}
+.dezen{width:100%;max-width:220px;height:auto;justify-self:center}
+.sez-body{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 20px;padding:0;list-style:none;font-weight:600}
+.sez-body li::before{content:"■ ";color:var(--karmin-tmava)}
+@media (min-width:860px){.sezona .wrap{grid-template-columns:1.5fr 1fr}.dezen{max-width:340px}}
+
+/* značky */
+.znacky{display:grid;gap:16px;margin-top:28px}
+.renault{background:var(--asfalt);color:var(--text-inv);border-radius:var(--r);padding:28px 28px 46px;position:relative;overflow:hidden}
+.renault::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:repeating-linear-gradient(-45deg,var(--olej) 0 14px,var(--asfalt) 14px 28px)}
+.renault .slovo{font-family:var(--font-nadpis);font-size:clamp(2.6rem,9vw,4.6rem);line-height:1;color:var(--olej);letter-spacing:.04em}
+.renault p{color:var(--text-inv-2);margin-top:12px}
+.modely{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.modely span{border:1px solid var(--asfalt-3);border-radius:6px;padding:5px 10px;font-size:.9rem;color:var(--text-inv)}
+.ostatni{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:28px}
+.ostatni .slovo{font-family:var(--font-nadpis);font-size:clamp(1.6rem,5vw,2.4rem);line-height:1.1}
+@media (min-width:860px){.znacky{grid-template-columns:1.4fr 1fr}}
+
+/* půjčovna */
+.vozik-sekce{background:var(--asfalt);color:var(--text-inv)}
+.vozik-sekce .kicker{color:var(--olej)}
+.vozik-sekce .lead{color:var(--text-inv-2)}
+.vozik-grid{display:grid;gap:28px;margin-top:28px}
+.vozik-svg{width:100%;max-width:460px;height:auto}
+.vtab{width:100%;border-collapse:collapse}
+.vtab caption{text-align:left;font-family:var(--font-nadpis);color:var(--olej);font-size:1.05rem;padding:14px 0 6px}
+.vtab td{padding:11px 4px;border-bottom:1px solid var(--asfalt-3);color:var(--text-inv)}
+.vtab td:last-child{text-align:right;font-weight:700;white-space:nowrap;color:var(--olej)}
+.vtab td small{color:var(--text-inv-2);font-size:.86rem}
+.vozik-sekce .pozn{color:var(--text-inv-2)}
+.vozik-sekce .ukazka{background:var(--olej);border-color:var(--asfalt)}
+@media (min-width:900px){.vozik-grid{grid-template-columns:1fr 1.2fr;align-items:start}}
+
+/* důvěra + kroky */
+.duvera-grid{display:grid;gap:14px;margin-top:28px}
+.fakt{background:var(--bila);border-left:5px solid var(--karmin);border-radius:6px;padding:20px 22px}
+.fakt b{display:block;font-family:var(--font-nadpis);font-weight:400;font-size:1.15rem;margin-bottom:4px}
+.fakt p{margin:0;color:var(--text-2);font-size:.98rem}
+.fakt a{color:var(--karmin);font-weight:600}
+@media (min-width:760px){.duvera-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.duvera-grid{grid-template-columns:repeat(4,1fr)}}
+.foto{margin-top:20px;border:2px dashed var(--text-2);border-radius:var(--r);min-height:200px;display:grid;place-items:center;text-align:center;padding:20px;color:var(--text-2);background:repeating-linear-gradient(45deg,transparent 0 14px,rgba(29,32,35,.04) 14px 28px)}
+.foto b{display:block;font-family:var(--font-nadpis);font-weight:400;color:var(--asfalt);font-size:1.1rem}
+.kroky{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:14px;counter-reset:k}
+.kroky li{counter-increment:k;background:var(--asfalt);color:var(--text-inv);border-radius:var(--r);padding:24px 22px 22px 84px;position:relative;min-height:110px}
+.kroky li::before{content:counter(k);position:absolute;left:20px;top:20px;width:46px;height:46px;border-radius:8px;background:var(--olej);color:var(--asfalt);font-family:var(--font-nadpis);font-size:1.5rem;display:grid;place-items:center}
+.kroky b{display:block;font-family:var(--font-nadpis);font-weight:400;font-size:1.15rem;margin-bottom:4px}
+.kroky p{margin:0;color:var(--text-inv-2);font-size:.98rem}
+@media (min-width:900px){.kroky{grid-template-columns:repeat(3,1fr)}}
+
+/* FAQ */
+.faq-sekce{background:var(--bila)}
+.faq{margin-top:24px;border-top:1px solid var(--linka)}
+.faq details{border-bottom:1px solid var(--linka)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;font-weight:700;font-size:1.06rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:12px;font-family:var(--font-nadpis);font-size:1.6rem;color:var(--karmin)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--text-2);padding-bottom:6px}
+
+/* kontakt */
+.kontakt-grid{display:grid;gap:28px;margin-top:28px}
+.kontakty{background:var(--asfalt);color:var(--text-inv);border-radius:var(--r);padding:26px}
+.kontakty dl{margin:0;display:grid;gap:16px}
+.kontakty dt{font-family:var(--font-nadpis);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-inv-2)}
+.kontakty dd{margin:2px 0 0;font-size:1.05rem}
+.kontakty a{color:var(--text-inv)}
+.kontakty .velky{font-family:var(--font-nadpis);font-size:1.6rem;color:var(--olej);text-decoration:none}
+.kontakty .mala{font-size:.88rem;color:var(--text-inv-2)}
+.kontakty .btn{margin-top:20px;width:100%}
+.form{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:26px;display:grid;gap:14px}
+.form h3{font-size:1.4rem}
+.pole{display:grid;gap:6px}
+.pole label{font-weight:600;font-size:.95rem}
+.pole input,.pole select,.pole textarea{font:inherit;font-size:1rem;color:var(--text);background:var(--seda);border:1px solid var(--text-2);border-radius:8px;padding:12px;min-height:48px;width:100%}
+.pole textarea{min-height:110px;resize:vertical}
+.dvojice{display:grid;gap:14px}
+@media (min-width:560px){.dvojice{grid-template-columns:1fr 1fr}}
+.hlaska{display:none;background:var(--olej-svetla);border:1px solid var(--asfalt);border-radius:8px;padding:12px 14px;font-weight:600}
+.hlaska.ukaz{display:block}
+@media (min-width:900px){.kontakt-grid{grid-template-columns:1fr 1.3fr}}
+
+/* patička */
+.paticka{background:var(--asfalt);color:var(--text-inv-2);font-size:.9rem;padding-block:28px 110px}
+.paticka a{color:var(--text-inv)}
+.paticka .wrap{display:grid;gap:8px}
+@media (min-width:760px){.paticka{padding-bottom:32px}}
+
+/* pevný pruh na mobilu */
+.volat{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--asfalt);border-top:3px solid var(--karmin);padding:10px max(12px,env(safe-area-inset-right,0px)) 10px max(12px,env(safe-area-inset-left,0px));padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:1.2fr 1fr;gap:10px}
+.volat .btn{min-height:48px;font-size:.95rem;padding:.6em .8em}
+@media (min-width:760px){.volat{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+
+<div class="page">
+
+<div class="navrh"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Krybus</div></div>
+
+<header class="hlavicka">
+  <div class="wrap">
+    <a class="znacka" href="#top" aria-label="Autoservis Krybus – nahoru">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#B42318"/><path d="M27.5 9.5a7 7 0 0 0-8.6 8.9L10 27.3a2.4 2.4 0 1 0 3.4 3.4l8.9-8.9a7 7 0 0 0 8.9-8.6l-4 4-3.6-.8-.8-3.6z" fill="#ECEDEA"/></svg>
+      <span><b>Autoservis Krybus</b><small>Opava · Těšínská</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní nabídka">
+      <a href="#auto">Co opravujeme</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#cenik">Cena</a>
+      <a href="#voziky">Půjčovna vozíků</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-h" href="tel:+420608755394"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>608 755 394</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="provoz">
+      <span class="stav" id="stav"><i></i><span id="stav-text">Po–Pá 7:00–16:00</span></span>
+      <span>Otevřeno <strong>Po–Pá 7–16</strong> · Těšínská 1023/29, Opava-Předměstí</span>
+    </div>
+    <h1 id="h1">Autoservis v Opavě. <span>Renault známe nazpaměť.</span></h1>
+    <p class="hero-text">Opravujeme auta všech značek, specializujeme se na vozy Renault. Diagnostika, příprava na STK, karoserie a lak, motory, převodovky, výfuky a brzdy – a k tomu půjčovna přívěsných vozíků.</p>
+    <div class="hero-cta">
+      <a class="btn btn-hl" href="#objednat">Objednat servis
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 5l7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6z"/></svg></a>
+      <a class="btn btn-ob" href="tel:+420608755394">Zavolat 608 755 394</a>
+    </div>
+    <div class="hero-fakta">
+      <div><b>Specializace Renault</b>a opravy aut všech značek</div>
+      <div><b>Karoserie a lak</b>opravy havarovaných vozů</div>
+      <div><b>STK a emise</b>příprava včetně zajištění</div>
+      <div><b>Přívěsné vozíky</b>bržděné i nebržděné</div>
+    </div>
+  </div>
+</section>
+<div class="vystraha" aria-hidden="true"></div>
+
+<section class="auto-sekce band" id="auto" aria-labelledby="h-auto">
+  <div class="wrap">
+    <span class="kicker">Co na autu opravujeme</span>
+    <h2 id="h-auto">Klepněte na místo, které Vás trápí</h2>
+    <p class="lead">Každý bod ukáže, co s ním u nás v dílně uděláme. Pak stačí jedno tlačítko a máte rozepsanou objednávku.</p>
+    <div class="auto-grid">
+      <div>
+        <svg class="auto-svg" viewBox="0 0 820 300" role="group" aria-label="Bokorys osobního auta s body servisu">
+          <line x1="20" y1="256" x2="800" y2="256" stroke="#3A3F44" stroke-width="3" stroke-dasharray="14 10"/>
+          <!-- karoserie -->
+          <path d="M58 214 L56 170 Q58 146 96 138 L238 120 Q296 74 382 64 L548 62 Q598 66 652 116 L724 132 Q756 140 760 172 L762 214 Z" fill="#ECEDEA" stroke="#ECEDEA" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M58 214 L56 190 L762 190 L762 214 Z" fill="#DCDDD8"/>
+          <!-- okna -->
+          <path d="M258 122 Q306 86 378 78 L440 76 L440 124 Z" fill="#3A3F44"/>
+          <path d="M456 76 L544 75 Q584 80 622 118 L456 124 Z" fill="#3A3F44"/>
+          <!-- dveře a linky -->
+          <path d="M448 76 L448 200 M300 126 L300 196 Q300 204 310 204 L440 204" fill="none" stroke="#9A9D98" stroke-width="2"/>
+          <path d="M600 126 L604 200" fill="none" stroke="#9A9D98" stroke-width="2"/>
+          <rect x="400" y="140" width="26" height="6" rx="3" fill="#9A9D98"/>
+          <rect x="560" y="140" width="26" height="6" rx="3" fill="#9A9D98"/>
+          <!-- světla -->
+          <path d="M58 158 Q60 146 90 142 L96 160 Z" fill="#E3B23C"/>
+          <path d="M760 150 L742 146 L742 170 L761 170 Z" fill="#B42318"/>
+          <!-- podběhy -->
+          <circle cx="172" cy="214" r="58" fill="#2A2E32"/>
+          <circle cx="634" cy="214" r="58" fill="#2A2E32"/>
+          <!-- kola -->
+          <g><circle cx="172" cy="214" r="46" fill="#1D2023"/><circle cx="172" cy="214" r="26" fill="#9A9D98"/><circle cx="172" cy="214" r="18" fill="none" stroke="#B42318" stroke-width="6" stroke-dasharray="40 200"/><circle cx="172" cy="214" r="7" fill="#1D2023"/></g>
+          <g><circle cx="634" cy="214" r="46" fill="#1D2023"/><circle cx="634" cy="214" r="26" fill="#9A9D98"/><circle cx="634" cy="214" r="7" fill="#1D2023"/></g>
+          <!-- výfuk a tažné -->
+          <rect x="676" y="222" width="70" height="10" rx="5" fill="#9A9D98"/>
+          <path d="M762 200 L786 200 L786 188" fill="none" stroke="#9A9D98" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="786" cy="182" r="8" fill="#9A9D98"/>
+          <!-- převodovka (naznačená) -->
+          <rect x="226" y="198" width="80" height="22" rx="4" fill="#9A9D98" opacity=".7"/>
+
+          <g class="hs" data-id="motor" tabindex="0" role="button" aria-label="1 Motor a diagnostika"><circle class="kruh" cx="140" cy="160" r="17"/><circle class="bod" cx="140" cy="160" r="17"/><text x="140" y="165.5" text-anchor="middle">1</text></g>
+          <g class="hs" data-id="prevodovka" tabindex="0" role="button" aria-label="2 Převodovka"><circle class="kruh" cx="266" cy="209" r="17"/><circle class="bod" cx="266" cy="209" r="17"/><text x="266" y="214.5" text-anchor="middle">2</text></g>
+          <g class="hs" data-id="brzdy" tabindex="0" role="button" aria-label="3 Brzdy a pneu"><circle class="kruh" cx="172" cy="214" r="17"/><circle class="bod" cx="172" cy="214" r="17"/><text x="172" y="219.5" text-anchor="middle">3</text></g>
+          <g class="hs" data-id="karoserie" tabindex="0" role="button" aria-label="4 Karoserie a lak"><circle class="kruh" cx="380" cy="166" r="17"/><circle class="bod" cx="380" cy="166" r="17"/><text x="380" y="171.5" text-anchor="middle">4</text></g>
+          <g class="hs" data-id="stk" tabindex="0" role="button" aria-label="5 Příprava na STK"><circle class="kruh" cx="300" cy="104" r="17"/><circle class="bod" cx="300" cy="104" r="17"/><text x="300" y="109.5" text-anchor="middle">5</text></g>
+          <g class="hs" data-id="vyfuk" tabindex="0" role="button" aria-label="6 Výfuk"><circle class="kruh" cx="712" cy="250" r="17"/><circle class="bod" cx="712" cy="250" r="17"/><text x="712" y="255.5" text-anchor="middle">6</text></g>
+          <g class="hs" data-id="tazne" tabindex="0" role="button" aria-label="7 Tažné zařízení"><circle class="kruh" cx="786" cy="150" r="17"/><circle class="bod" cx="786" cy="150" r="17"/><text x="786" y="155.5" text-anchor="middle">7</text></g>
+        </svg>
+        <div class="cipy" id="cipy">
+          <button type="button" class="cip" data-id="motor" aria-pressed="false"><b>1</b>Motor</button>
+          <button type="button" class="cip" data-id="prevodovka" aria-pressed="false"><b>2</b>Převodovka</button>
+          <button type="button" class="cip" data-id="brzdy" aria-pressed="false"><b>3</b>Brzdy a pneu</button>
+          <button type="button" class="cip" data-id="karoserie" aria-pressed="false"><b>4</b>Karoserie</button>
+          <button type="button" class="cip" data-id="stk" aria-pressed="false"><b>5</b>STK</button>
+          <button type="button" class="cip" data-id="vyfuk" aria-pressed="false"><b>6</b>Výfuk</button>
+          <button type="button" class="cip" data-id="tazne" aria-pressed="false"><b>7</b>Tažné</button>
+        </div>
+      </div>
+      <div class="panel" id="panel" aria-live="polite">
+        <span class="cislo" id="p-cislo">Bod 1 ze 7</span>
+        <h3 id="p-nadpis">Motor a diagnostika</h3>
+        <p id="p-text">Svítí kontrolka, motor cuká nebo nejde naplno? Začneme diagnostikou a pak opravíme motor i elektroniku.</p>
+        <ul id="p-seznam"><li>diagnostika motoru a elektroniky</li><li>opravy motorů</li><li>klimatizace</li><li>servisní a běžné opravy</li></ul>
+        <a class="btn btn-hl" id="p-btn" href="#objednat" data-sluzba="motor">Objednat: motor a diagnostika</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <span class="kicker">Služby</span>
+    <h2 id="h-sluzby">Všechno kolem auta na jedné adrese v Opavě</h2>
+    <p class="lead">Mechanika, karoserie, lak, pneu i STK – nemusíte auto vozit po třech dílnách.</p>
+    <div class="sluzby-grid">
+      <article class="karta hlavni">
+        <div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#ECEDEA" d="M7 6h6v2h2l2 3h2v-2h2v8h-2v-2h-2l-2 3H9l-2-3H5v3H3V9h2v2h2V8h0z"/></svg></div>
+        <h3>Mechanické opravy, specializace Renault</h3>
+        <p>Opravujeme vozy všech značek, na Renaulty se specializujeme. Servisní a běžné opravy, motory, převodovky a brzdy.</p>
+        <p>K tomu zajistíme náhradní díly a sklo servis.</p>
+      </article>
+      <article class="karta">
+        <div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E3B23C" d="M3 5h18v11H3zm2 2v7h14V7zm1 13h12v-2H6zm2-9h2l1-2 2 4 1-2h2v1h-1.4L12 15l-2-4-.4 1H8z"/></svg></div>
+        <h3>Diagnostika a elektronika</h3>
+        <p>Načteme chyby z řídicí jednotky a dohledáme příčinu, ne jen kontrolku.</p>
+      </article>
+      <article class="karta">
+        <div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E3B23C" d="M12 2l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4zM5 16h14v2H5zm2 4h10v2H7z"/></svg></div>
+        <h3>Příprava na STK a emise</h3>
+        <p>Auto připravíme na STK a emise včetně zajištění vlastního provedení.</p>
+      </article>
+      <article class="karta">
+        <div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E3B23C" d="M4 15l2-6h12l2 6v4h-2v-2H6v2H4zm3-4l-1 3h12l-1-3zM14 2l3 3-6 6H8V8z"/></svg></div>
+        <h3>Karosářské a lakýrnické práce</h3>
+        <p>Opravy havarovaných vozů a lakování karoserií.</p>
+      </article>
+      <article class="karta">
+        <div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#E3B23C" stroke-width="3"/><circle cx="12" cy="12" r="3" fill="#E3B23C"/></svg></div>
+        <h3>Pneuservis a geometrie</h3>
+        <p>Prodej nových i použitých pneumatik, kompletní údržba pneu a seřízení geometrie.</p>
+      </article>
+      <article class="karta">
+        <div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E3B23C" d="M2 11h12a3 3 0 0 1 3 3h3v4h-3a3 3 0 0 1-3 3H2v-3h10v-4H2z"/></svg></div>
+        <h3>Výfuky</h3>
+        <p>Prodej a montáž výfuků; díl vybereme podle typu Vašeho vozu.</p>
+      </article>
+      <article class="karta">
+        <div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E3B23C" d="M3 14h10v-3h3v3h2a3 3 0 1 1 0 2h-2v3h-3v-3H3z"/></svg></div>
+        <h3>Tažná zařízení</h3>
+        <p>Prodej a montáž tažných zařízení včetně STK a zápisu do technického průkazu.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cenik-sekce" id="cenik" aria-labelledby="h-cenik">
+  <div class="wrap cena-pas">
+    <div>
+      <span class="kicker">Cena</span>
+      <h2 id="h-cenik">Cenu Vám řekneme předem, ještě než začneme.</h2>
+      <p class="lead">Zavolejte, popište, co auto dělá, a dozvíte se, kolik oprava bude stát. <span class="ukazka">ukázkový text</span></p>
+    </div>
+    <a class="btn btn-hl" href="tel:+420608755394"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zavolat 608 755 394</a>
+  </div>
+</section>
+
+<section class="sezona band" id="pneu" aria-labelledby="h-sezona">
+  <div class="wrap">
+    <div>
+      <span class="kicker" id="sez-kicker">Sezónní přezouvání</span>
+      <h2 id="h-sezona">Přezujte včas – <em id="sez-co">na zimu i na léto</em></h2>
+      <p id="sez-text">Zimní výbava je povinná od 1. listopadu do 31. března, pokud je na silnici sníh, led nebo námraza. Pneumatiky Vám vyměníme, zkontrolujeme a když je potřeba, prodáme nové i použité.</p>
+      <ul class="sez-body"><li>nové i použité pneu</li><li>kompletní údržba pneu</li><li>geometrie</li></ul>
+      <a class="btn btn-tm" href="#objednat" data-sluzba="pneu">Objednat přezutí</a>
+    </div>
+    <svg class="dezen" viewBox="0 0 300 300" aria-hidden="true">
+      <circle cx="150" cy="150" r="140" fill="#1D2023"/>
+      <circle cx="150" cy="150" r="140" fill="none" stroke="#1D2023" stroke-width="10" stroke-dasharray="18 10"/>
+      <circle cx="150" cy="150" r="88" fill="#3A3F44"/>
+      <circle cx="150" cy="150" r="70" fill="#ECEDEA"/>
+      <g fill="#3A3F44"><circle cx="150" cy="110" r="9"/><circle cx="188" cy="138" r="9"/><circle cx="174" cy="182" r="9"/><circle cx="126" cy="182" r="9"/><circle cx="112" cy="138" r="9"/></g>
+      <circle cx="150" cy="150" r="16" fill="#B42318"/>
+      <g fill="none" stroke="#2A2E32" stroke-width="8">
+        <path d="M150 14 L150 54"/><path d="M286 150 L246 150"/><path d="M150 286 L150 246"/><path d="M14 150 L54 150"/>
+        <path d="M54 54 L82 82"/><path d="M246 54 L218 82"/><path d="M246 246 L218 218"/><path d="M54 246 L82 218"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="band" id="znacky" aria-labelledby="h-znacky">
+  <div class="wrap">
+    <span class="kicker">Značky</span>
+    <h2 id="h-znacky">Renault je naše specializace. Ostatní značky taky opravíme.</h2>
+    <div class="znacky">
+      <div class="renault">
+        <div class="slovo">RENAULT</div>
+        <p>Specializace na vozy Renault, jak ji firma uvádí na svém webu i na Firmy.cz.</p>
+      </div>
+      <div class="ostatni">
+        <div class="slovo">+ všechny ostatní značky</div>
+        <p style="margin-top:12px;color:var(--text-2)">Nejezdíte Renaultem? Nevadí. Opravujeme vozy všech značek – mechanika, karoserie, lak, výfuky i tažná zařízení.</p>
+        <a class="btn btn-hl" href="#objednat">Objednat servis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vozik-sekce band" id="voziky" aria-labelledby="h-voziky">
+  <div class="wrap">
+    <span class="kicker">Půjčovna přívěsných vozíků</span>
+    <h2 id="h-voziky">Stěhujete, vezete dřevo nebo starý nábytek? Půjčte si vozík.</h2>
+    <p class="lead">Bržděné i nebržděné přívěsy, s plachtou i bez. Při pronájmu na víc než 3 dny sleva dle dohody.</p>
+    <div class="vozik-grid">
+      <div>
+        <svg class="vozik-svg" viewBox="0 0 460 230" aria-hidden="true">
+          <line x1="10" y1="206" x2="450" y2="206" stroke="#3A3F44" stroke-width="3" stroke-dasharray="12 8"/>
+          <path d="M70 60 L370 60 L370 150 L70 150 Z" fill="#B42318"/>
+          <path d="M70 60 L370 60 L370 72 L70 72 Z" fill="#8F1B12"/>
+          <path d="M60 40 Q220 0 380 40 L380 62 L60 62 Z" fill="#3A3F44"/>
+          <path d="M60 150 L380 150 L380 162 L60 162 Z" fill="#9A9D98"/>
+          <path d="M60 156 L10 170" stroke="#9A9D98" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="12" cy="170" r="8" fill="#E3B23C"/>
+          <circle cx="220" cy="176" r="30" fill="#1D2023" stroke="#2A2E32" stroke-width="6"/>
+          <circle cx="220" cy="176" r="12" fill="#9A9D98"/>
+          <rect x="350" y="100" width="18" height="10" rx="2" fill="#E3B23C"/>
+          <g stroke="#8F1B12" stroke-width="3"><path d="M130 72 V150"/><path d="M200 72 V150"/><path d="M270 72 V150"/><path d="M340 72 V150"/></g>
+        </svg>
+        <div class="foto" style="border-color:var(--text-inv-2);color:var(--text-inv-2);background:none"><div><b style="color:var(--text-inv)">Sem přijde Vaše fotka</b>vozíky seřazené před dílnou na Těšínské – zákazník hned vidí, co si půjčuje</div></div>
+      </div>
+      <div>
+        <table class="vtab">
+          <caption>Přívěsy nebrzděné (délka ložné plochy)</caption>
+          <tbody>
+            <tr><td>2,0 m <small>bez plachty</small></td><td>150 Kč</td></tr>
+            <tr><td>2,5 m <small>bez plachty</small></td><td>200 Kč</td></tr>
+            <tr><td>2,0 m <small>s plachtou</small></td><td>200 Kč</td></tr>
+            <tr><td>2,5 m <small>s plachtou</small></td><td>300 Kč</td></tr>
+          </tbody>
+        </table>
+        <table class="vtab">
+          <caption>Přívěsy bržděné</caption>
+          <tbody>
+            <tr><td>jednoosý 3,0 m <small>bez plachty</small></td><td>400 Kč/den</td></tr>
+            <tr><td>jednoosý 3,3 m <small>s plachtou</small></td><td>500 Kč/den</td></tr>
+          </tbody>
+        </table>
+        <p class="pozn">Ceny za 1 den, převzaté z ceníku na Vašem současném webu (platný od 1. 1. 2008, včetně tehdejší DPH). Před spuštěním webu je společně aktualizujeme. Pronajímatel může požadovat zálohu do výše hodnoty přívěsu.</p>
+        <a class="btn btn-hl" href="tel:+420608755394">Rezervovat vozík: 608 755 394</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="duvera" aria-labelledby="h-duvera">
+  <div class="wrap">
+    <span class="kicker">Proč k nám</span>
+    <h2 id="h-duvera">Poctivá dílna, kterou si můžete ověřit</h2>
+    <div class="duvera-grid">
+      <div class="fakt"><b>Specializace na Renault</b><p>Uvedená na Vašem webu i v katalogu Firmy.cz – a přitom opravujeme vozy všech značek.</p></div>
+      <div class="fakt"><b>Vše pod jednou střechou</b><p>Mechanika, diagnostika, karoserie, lak, pneu, výfuky, tažná zařízení, STK i půjčovna vozíků.</p></div>
+      <div class="fakt"><b>Po–Pá 7–16, nebo dle dohody</b><p>Když Vám pracovní doba nevyhovuje, domluvíme se individuálně.</p></div>
+      <div class="fakt"><b>Živnostník s IČO 86909916</b><p>Za prací stojí konkrétní člověk. Záznam najdete na <a href="https://www.firmy.cz/detail/2448237-autoservis-krybus-opava-predmesti.html" rel="noopener">Firmy.cz</a>.</p></div>
+    </div>
+    <div class="foto"><div><b>Sem přijde Vaše fotka</b>dílna s autem na zvedáku a mechanikem při práci – lidé chtějí vidět, komu svěří auto</div></div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0" aria-labelledby="h-kroky">
+  <div class="wrap">
+    <span class="kicker">Jak to probíhá</span>
+    <h2 id="h-kroky">Od telefonátu k opravenému autu ve 3 krocích</h2>
+    <ol class="kroky">
+      <li><b>Zavoláte nebo napíšete</b><p>Popíšete, co auto dělá, nebo vyplníte krátkou objednávku níže. Domluvíme termín.</p></li>
+      <li><b>Přivezete auto na Těšínskou</b><p>Podíváme se na něj, uděláme diagnostiku a před opravou Vám řekneme, co je potřeba a kolik to bude stát.</p></li>
+      <li><b>Vyzvednete hotové auto</b><p>Zavoláme, až bude hotovo, a vysvětlíme, co se měnilo.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="faq-sekce band" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <span class="kicker">Časté otázky</span>
+    <h2 id="h-faq">Na co se řidiči ptají nejčastěji</h2>
+    <div class="faq">
+      <details open><summary>Opravujete jen Renaulty?</summary><p>Ne. Renault je naše specializace, ale opravujeme osobní auta všech značek.</p></details>
+      <details><summary>Musím se na servis objednat předem?</summary><p>Vyplatí se to – zavolejte na 608 755 394 nebo vyplňte objednávku a domluvíme termín, kdy na Vaše auto bude čas.</p></details>
+      <details><summary>Pomůžete mi s technickou kontrolou?</summary><p>Ano. Auto připravíme na STK a emise a zajistíme i samotné provedení kontroly. U tažného zařízení vyřídíme také STK a zápis do technického průkazu.</p></details>
+      <details><summary>Kdy musím přezout na zimní pneumatiky?</summary><p>Zimní výbava je povinná od 1. listopadu do 31. března, když je na silnici souvislá vrstva sněhu, led nebo námraza (nebo se dá očekávat). Hloubka dezénu zimních pneu musí být u osobních aut aspoň 4 mm.</p></details>
+      <details><summary>Jaký řidičák potřebuji na půjčený vozík?</summary><p>Lehký přívěs do 750 kg utáhnete se skupinou B. U těžšího přívěsu rozhoduje hmotnost celé soupravy – do 3 500 kg stačí B, do 4 250 kg je potřeba rozšíření B96, nad to skupina BE. Rádi Vám poradíme, který vozík se k Vašemu autu hodí.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <span class="kicker">Kontakt a objednání</span>
+    <h2 id="h-kontakt">Přijeďte na Těšínskou, nebo nám zavolejte</h2>
+    <div class="kontakt-grid">
+      <div class="kontakty">
+        <dl>
+          <div><dt>Telefon</dt><dd><a class="velky" href="tel:+420608755394">608 755 394</a></dd>
+            <dd class="mala">Na původním webu je pro autoservis uvedeno i číslo 602 894 759 – před spuštěním ověříme, zda platí.</dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:autoserviskdk@seznam.cz">autoserviskdk@seznam.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Těšínská 1023/29<br>746 01 Opava-Předměstí</dd></div>
+          <div><dt>Otevírací doba</dt><dd>Pondělí–pátek 7:00–16:00<br><span class="mala">nebo dle individuální dohody · víkend zavřeno</span></dd></div>
+          <div><dt>IČO</dt><dd>86909916</dd></div>
+        </dl>
+        <a class="btn btn-ob" href="https://mapy.cz/zakladni?q=T%C4%9B%C5%A1%C3%ADnsk%C3%A1%201023%2F29%2C%20Opava" rel="noopener">Navigovat na Mapy.cz</a>
+      </div>
+      <form class="form" id="objednat" novalidate>
+        <h3>Objednat servis</h3>
+        <p style="margin:0;color:var(--text-2);font-size:.95rem">Ozveme se Vám zpět a domluvíme termín.</p>
+        <div class="dvojice">
+          <div class="pole"><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required></div>
+          <div class="pole"><label for="f-telefon">Telefon</label><input id="f-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div class="dvojice">
+          <div class="pole"><label for="f-auto">Značka a model auta</label><input id="f-auto" name="auto" type="text" placeholder="např. Renault Clio 1.2"></div>
+          <div class="pole"><label for="f-sluzba">Co potřebujete</label>
+            <select id="f-sluzba" name="sluzba">
+              <option value="servis">Servis / běžná oprava</option>
+              <option value="motor">Motor a diagnostika</option>
+              <option value="prevodovka">Převodovka</option>
+              <option value="brzdy">Brzdy</option>
+              <option value="pneu">Přezutí / pneuservis</option>
+              <option value="karoserie">Karoserie a lak</option>
+              <option value="stk">Příprava na STK</option>
+              <option value="vyfuk">Výfuk</option>
+              <option value="tazne">Tažné zařízení</option>
+              <option value="vozik">Půjčení vozíku</option>
+            </select></div>
+        </div>
+        <div class="pole"><label for="f-termin">Kdy by se Vám to hodilo</label><input id="f-termin" name="termin" type="date"></div>
+        <div class="pole"><label for="f-zprava">Co auto dělá</label><textarea id="f-zprava" name="zprava" placeholder="např. při brzdění pípá, svítí kontrolka motoru…"></textarea></div>
+        <button class="btn btn-hl" type="submit" id="f-odeslat">Odeslat objednávku</button>
+        <div class="hlaska" id="f-hlaska" role="status">Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Na hotovém webu objednávka přijde rovnou na autoserviskdk@seznam.cz.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="paticka">
+  <div class="wrap">
+    <div><strong style="color:var(--text-inv)">Autoservis Krybus</strong> · Těšínská 1023/29, Opava-Předměstí · IČO 86909916 · <a href="tel:+420608755394">608 755 394</a></div>
+    <div>Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Krybus. Údaje z katalogu Firmy.cz a z původního webu firmy.</div>
+  </div>
+</footer>
+
+<div class="volat" aria-label="Rychlý kontakt">
+  <a class="btn btn-hl" href="tel:+420608755394"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>608 755 394</a>
+  <a class="btn btn-ob" href="#objednat">Objednat</a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  /* Živý stav – jen podle ověřené otevírací doby Po–Pá 7:00–16:00 (čas v Opavě) */
+  var stav=document.getElementById('stav'),stavText=document.getElementById('stav-text');
+  function praha(){
+    try{
+      var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+      var o={};p.forEach(function(x){o[x.type]=x.value;});
+      var dny={Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:0};
+      return {d:dny[o.weekday],m:parseInt(o.hour,10)*60+parseInt(o.minute,10)};
+    }catch(e){var n=new Date();return {d:n.getDay(),m:n.getHours()*60+n.getMinutes()};}
+  }
+  function obnov(){
+    var t=praha(),vsedni=t.d>=1&&t.d<=5,otevreno=vsedni&&t.m>=420&&t.m<960;
+    stav.classList.toggle('otevreno',otevreno);stav.classList.toggle('zavreno',!otevreno);
+    if(otevreno){stavText.textContent='Teď otevřeno · do 16:00';}
+    else if(vsedni&&t.m<420){stavText.textContent='Zavřeno · otevíráme dnes v 7:00';}
+    else if(t.d>=1&&t.d<=4){stavText.textContent='Zavřeno · otevíráme zítra v 7:00';}
+    else{stavText.textContent='Zavřeno · otevíráme v pondělí v 7:00';}
+  }
+  obnov();setInterval(obnov,60000);
+
+  /* Sezónní pás podle měsíce */
+  var mes=new Date().getMonth()+1,co=document.getElementById('sez-co'),kick=document.getElementById('sez-kicker');
+  if(mes>=9&&mes<=12||mes<=1){co.textContent='na zimu, než napadne sníh';kick.textContent='Teď je čas na zimní pneu';}
+  else if(mes>=2&&mes<=5){co.textContent='na léto, jakmile skončí mrazy';kick.textContent='Teď je čas na letní pneu';}
+
+  /* Interaktivní bokorys */
+  var data={
+    motor:{n:'Motor a diagnostika',t:'Svítí kontrolka, motor cuká nebo nejde naplno? Začneme diagnostikou a pak opravíme motor i elektroniku.',s:['diagnostika motoru a elektroniky','opravy motorů','klimatizace','servisní a běžné opravy'],b:'motor a diagnostika'},
+    prevodovka:{n:'Převodovka',t:'Drhne řazení, převodovka hučí nebo spojka prokluzuje? Opravujeme převodovky osobních aut.',s:['opravy převodovek','servisní a běžné opravy','náhradní díly'],b:'převodovka'},
+    brzdy:{n:'Brzdy a pneumatiky',t:'Brzdy pískají, auto při brzdění táhne do strany nebo jsou pneu sjeté? Opravíme brzdy a postaráme se o kola.',s:['opravy brzd','prodej nových i použitých pneu','kompletní údržba pneu','geometrie'],b:'brzdy a pneu'},
+    karoserie:{n:'Karoserie a lak',t:'Po nehodě, po ťukanci na parkovišti nebo s rezavým lemem – karoserii opravíme a nalakujeme.',s:['opravy havarovaných vozů','lakování karoserií','sklo servis'],b:'karoserie a lak'},
+    stk:{n:'Příprava na STK',t:'Blíží se technická? Auto připravíme na STK a emise včetně zajištění vlastního provedení.',s:['příprava na STK','měření emisí – zajistíme','oprava závad před kontrolou'],b:'příprava na STK'},
+    vyfuk:{n:'Výfuk',t:'Výfuk bouchá, rachotí nebo je prorezlý? Prodáme a namontujeme nový díl podle typu Vašeho vozu.',s:['prodej výfuků','montáž výfuků'],b:'výfuk'},
+    tazne:{n:'Tažné zařízení',t:'Chcete tahat vozík nebo karavan? Tažné zařízení prodáme, namontujeme a vyřídíme STK včetně zápisu do technického průkazu.',s:['prodej a montáž','STK a zápis do TP','a vozík si u nás můžete rovnou půjčit'],b:'tažné zařízení'}
+  };
+  var poradi=['motor','prevodovka','brzdy','karoserie','stk','vyfuk','tazne'];
+  var hs=document.querySelectorAll('.hs'),cipy=document.querySelectorAll('.cip');
+  var pC=document.getElementById('p-cislo'),pN=document.getElementById('p-nadpis'),pT=document.getElementById('p-text'),pS=document.getElementById('p-seznam'),pB=document.getElementById('p-btn');
+  function vyber(id){
+    var d=data[id];if(!d)return;
+    pC.textContent='Bod '+(poradi.indexOf(id)+1)+' ze 7';
+    pN.textContent=d.n;pT.textContent=d.t;
+    pS.innerHTML='';d.s.forEach(function(x){var li=document.createElement('li');li.textContent=x;pS.appendChild(li);});
+    pB.textContent='Objednat: '+d.b;pB.setAttribute('data-sluzba',id);
+    hs.forEach(function(g){var a=g.getAttribute('data-id')===id;g.classList.toggle('aktivni',a);g.setAttribute('aria-pressed',a?'true':'false');});
+    cipy.forEach(function(c){c.setAttribute('aria-pressed',c.getAttribute('data-id')===id?'true':'false');});
+  }
+  hs.forEach(function(g){
+    g.addEventListener('click',function(){vyber(g.getAttribute('data-id'));});
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();vyber(g.getAttribute('data-id'));}});
+  });
+  cipy.forEach(function(c){c.addEventListener('click',function(){vyber(c.getAttribute('data-id'));});});
+  vyber('motor');
+
+  /* Předvyplnění služby ve formuláři */
+  var sel=document.getElementById('f-sluzba');
+  document.querySelectorAll('[data-sluzba]').forEach(function(a){
+    a.addEventListener('click',function(){var v=a.getAttribute('data-sluzba');if(sel.querySelector('option[value="'+v+'"]'))sel.value=v;});
+  });
+
+  /* Formulář – jen ukázka */
+  var form=document.getElementById('objednat'),hl=document.getElementById('f-hlaska');
+  form.addEventListener('submit',function(e){e.preventDefault();hl.classList.add('ukaz');hl.focus&&hl.setAttribute('tabindex','-1');hl.focus();});
+})();
+</script>
+</body>
+</html>
