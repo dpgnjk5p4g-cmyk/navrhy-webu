@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Kadeřnictví Barbora Staníková</title>
+<meta name="description" content="Kadeřnictví Barbora Staníková, Havířov-Prostřední Suchá: dámské a pánské střihy, barvení, melír, úprava vousů a obočí. Pouze na objednání, tel. 722 787 840.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Marcellus&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Kadeřnictví Barbora Staníková",
+  "telephone": "+420722787840",
+  "email": "stanikova.barbora@gmail.com",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "03853063"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dělnická 769/64",
+    "addressLocality": "Havířov-Prostřední Suchá",
+    "postalCode": "735 64",
+    "addressCountry": "CZ"
+  },
+  "paymentAccepted": "Cash",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "10:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "12:30", "closes": "16:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday"], "opens": "11:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday"], "opens": "12:30", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "12:30", "closes": "15:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "12:30", "closes": "13:00"}
+  ]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Koncept rozložení: světlý mandlový papír, kakaové písmo a dva kakaové pásy (Průvodce objednáním, Kontakt).
+   Hero = velká typografie Marcellus + jemná linková kresba nůžek a hřebene. Starorůžová jen jako akcent,
+   pro text ztmavená na #7E4253 (kontrast 5,5 : 1 na mandlové). Zlatavá jen na tmavém pozadí a v linkách. */
+:root{
+  --kakao:#2A2220;
+  --kakao-2:#3A2F2C;
+  --mandle:#EADBC8;
+  --mandle-svetla:#F6EEE4;
+  --papir:#FBF7F1;
+  --ruze:#B57B8A;
+  --ruze-text:#7E4253;
+  --ruze-svetla:#D9B9C1;
+  --zlato:#C59B4B;
+  --text:#2A2220;
+  --text-tlumeny:#5E4F49;
+  --text-na-tmave:#EADBC8;
+  --text-na-tmave-tlumeny:#BFAE9C;
+  --linka:#D6C4AD;
+  --linka-tmava:#4E423E;
+  --bila:#FFFFFF;
+  --ukazka-bg:#FFF1C9;
+  --ukazka-text:#6B4E00;
+  --stin:0 1px 2px rgba(42,34,32,.06),0 8px 24px rgba(42,34,32,.08);
+  --r:18px;
+  --f-nadpis:"Marcellus","Georgia","Times New Roman",serif;
+  --f-text:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--papir);color:var(--text);font-family:var(--f-text);font-size:17px;line-height:1.6}
+.page{overflow-x:clip}
+h1,h2,h3{font-family:var(--f-nadpis);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,5vw,46px)}
+h3{font-size:22px}
+p{margin:0 0 1em;max-width:65ch}
+a{color:var(--ruze-text)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,label:focus-within{outline:3px solid var(--ruze-text);outline-offset:3px;border-radius:8px}
+.tmavy a:focus-visible,.tmavy button:focus-visible,.tmavy input:focus-visible,.tmavy label:focus-within,.tmavy textarea:focus-visible{outline-color:var(--zlato)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pas{padding-block:72px}
+@media (min-width:860px){.pas{padding-block:104px}}
+.nadtitulek{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ruze-text);margin:0 0 12px}
+.tmavy .nadtitulek{color:var(--zlato)}
+.ukazka{display:inline-block;vertical-align:middle;font-family:var(--f-text);font-size:11px;font-weight:600;letter-spacing:.02em;line-height:1.4;padding:1px 7px;border-radius:99px;background:var(--ukazka-bg);color:var(--ukazka-text);white-space:nowrap}
+
+/* Banner */
+.banner{background:var(--kakao);color:var(--text-na-tmave);font-size:13.5px;text-align:center}
+.banner .wrap{padding-block:8px}
+.banner strong{color:var(--zlato);font-weight:600}
+
+/* Hlavička */
+.hlavicka{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(251,247,241,.94);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--linka)}
+.hlavicka .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);min-width:0}
+.logo svg{flex:none}
+.logo span{font-family:var(--f-nadpis);font-size:19px;line-height:1.1}
+.logo small{display:block;font-family:var(--f-text);font-size:12px;color:var(--text-tlumeny);letter-spacing:.04em}
+.menu{display:none;gap:22px;font-size:15px}
+.menu a{color:var(--text);text-decoration:none}
+.menu a:hover{color:var(--ruze-text)}
+@media (min-width:980px){.menu{display:flex}}
+.tel-hlavicka{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;text-decoration:none;font-weight:600;color:var(--bila);background:var(--ruze-text);padding:10px 16px;border-radius:99px;font-size:15px}
+.tel-hlavicka:hover{background:var(--kakao)}
+@media (max-width:420px){.tel-hlavicka .txt{display:none}.tel-hlavicka{padding:10px 12px}}
+
+/* Tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 17px/1.2 var(--f-text);text-decoration:none;border-radius:99px;padding:15px 24px;border:2px solid transparent;cursor:pointer;min-height:52px}
+.btn-hlavni{background:var(--ruze-text);color:var(--bila)}
+.btn-hlavni:hover{background:var(--kakao)}
+.btn-obrys{background:transparent;color:var(--text);border-color:var(--text)}
+.btn-obrys:hover{background:var(--kakao);color:var(--mandle)}
+.btn-zlato{background:var(--zlato);color:var(--kakao)}
+.btn-zlato:hover{background:var(--mandle)}
+.btn-svetly-obrys{background:transparent;color:var(--text-na-tmave);border-color:var(--text-na-tmave-tlumeny)}
+.btn-svetly-obrys:hover{border-color:var(--zlato);color:var(--zlato)}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(180deg,var(--mandle-svetla),var(--papir));border-bottom:1px solid var(--linka)}
+.hero .wrap{position:relative;display:grid;gap:28px;padding-block:28px 40px}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1.4fr .8fr;align-items:center;padding-block:80px 96px}}
+.hero h1{font-size:clamp(38px,10.5vw,72px);letter-spacing:-.01em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--ruze-text)}
+.hero .perex{font-size:18px;color:var(--text-tlumeny);margin-bottom:20px;max-width:36ch}
+.hero .tlacitka{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.hodnoceni{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:10px 16px 10px 12px;box-shadow:var(--stin)}
+.hodnoceni .skore{font-family:var(--f-nadpis);font-size:40px;line-height:1;color:var(--ruze-text)}
+.hodnoceni .hvezdy{color:var(--zlato);letter-spacing:2px;font-size:15px;line-height:1}
+.hodnoceni .popis{font-size:14px;line-height:1.35}
+.hodnoceni .popis b{font-weight:600}
+.hodnoceni:hover{border-color:var(--ruze-text)}
+.hero-kresba{display:none}
+@media (min-width:860px){.hero-kresba{display:block;justify-self:center;width:100%;max-width:420px}}
+.hero-kresba svg{width:100%;height:auto;display:block}
+.hodnoceni-radek{display:flex;align-items:center;gap:12px}
+.hero-mini{flex:none;width:44px;height:44px}
+@media (min-width:860px){.hero-mini{display:none}}
+.hero-fakta{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--text-tlumeny)}
+.hero-fakta li{display:flex;align-items:center;gap:6px}
+.hero-fakta svg{color:var(--ruze-text);flex:none}
+
+/* Průvodce */
+.tmavy{background:var(--kakao);color:var(--text-na-tmave)}
+.tmavy p{color:var(--text-na-tmave-tlumeny)}
+.tmavy .veta-box p,.tmavy .formular p{color:var(--text-tlumeny)}
+.tmavy .veta-box .veta{color:var(--kakao)}
+.tmavy .veta-box .nadtitulek{color:var(--ruze-text)}
+.pruvodce-hlava{display:grid;gap:10px;margin-bottom:32px}
+.pruvodce{display:grid;gap:22px}
+@media (min-width:900px){.pruvodce{grid-template-columns:1.05fr 1fr;gap:32px;align-items:start}}
+.krok{background:var(--kakao-2);border:1px solid var(--linka-tmava);border-radius:var(--r);padding:20px}
+.krok + .krok{margin-top:14px}
+.krok-nadpis{display:flex;align-items:baseline;gap:10px;margin:0 0 14px;font-family:var(--f-text);font-weight:600;font-size:16px;color:var(--text-na-tmave)}
+.krok-nadpis .c{font-family:var(--f-nadpis);color:var(--zlato);font-size:22px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0}
+.volby{display:flex;flex-wrap:wrap;gap:8px}
+.volba{position:relative}
+.volba input{position:absolute;opacity:0;width:1px;height:1px}
+.volba span{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:99px;border:1.5px solid var(--linka-tmava);color:var(--text-na-tmave);font-size:15px;cursor:pointer;user-select:none;min-height:44px}
+.volba span:hover{border-color:var(--text-na-tmave-tlumeny)}
+.volba input:checked + span{background:var(--zlato);border-color:var(--zlato);color:var(--kakao);font-weight:600}
+.volba input:focus-visible + span{outline:3px solid var(--zlato);outline-offset:2px}
+.volba input:disabled + span{opacity:.45;cursor:not-allowed}
+.delky{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.delky .volba span{flex-direction:column;justify-content:flex-end;border-radius:14px;width:100%;padding:12px 6px 10px;text-align:center;font-size:14px;gap:6px}
+.delky svg{display:block;color:inherit}
+.poznamka-delka{font-size:14px;margin:10px 0 0;color:var(--text-na-tmave-tlumeny)}
+.veta-box{position:sticky;top:90px;background:var(--mandle);color:var(--kakao);border-radius:var(--r);padding:24px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.veta-box .nadtitulek{color:var(--ruze-text)}
+.veta{font-family:var(--f-nadpis);font-size:clamp(22px,3.2vw,28px);line-height:1.35;margin:0 0 18px;max-width:none;color:var(--kakao);min-height:4.2em}
+.veta mark{background:transparent;color:var(--ruze-text);border-bottom:2px solid var(--ruze)}
+.veta-akce{display:flex;flex-wrap:wrap;gap:10px}
+.veta-akce .btn{flex:1 1 160px}
+.veta-stav{font-size:14px;color:var(--text-tlumeny);margin:12px 0 0;min-height:1.4em}
+.veta-tip{font-size:14px;color:var(--text-tlumeny);margin:14px 0 0;padding-top:14px;border-top:1px solid var(--linka)}
+@media (max-width:899px){.veta-box{position:static}}
+
+/* Služby */
+.sluzby-mrizka{display:grid;gap:16px;margin-top:32px}
+@media (min-width:700px){.sluzby-mrizka{grid-template-columns:1fr 1fr}}
+.sluzba-skupina{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:24px;box-shadow:var(--stin)}
+.sluzba-skupina h3{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.sluzba-skupina h3 svg{color:var(--ruze-text);flex:none}
+.sluzba-skupina > p{color:var(--text-tlumeny);font-size:15.5px}
+.cenik{width:100%;border-collapse:collapse;font-size:15.5px}
+.cenik th,.cenik td{text-align:left;padding:11px 0;border-top:1px solid var(--linka);vertical-align:top}
+.cenik th{font-weight:600}
+.cenik th small{display:block;font-weight:400;color:var(--text-tlumeny);font-size:14px;line-height:1.45;margin-top:2px}
+.cenik td{text-align:right;white-space:nowrap;color:var(--ruze-text);font-weight:600;padding-left:12px}
+.cenik thead th{border-top:0;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tlumeny);font-weight:600;padding-top:4px}
+.cenik thead th:last-child{text-align:right}
+.sluzby-pozn{margin-top:18px;font-size:15px;color:var(--text-tlumeny)}
+
+/* Jak to probíhá */
+.kroky{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:16px;counter-reset:k}
+@media (min-width:800px){.kroky{grid-template-columns:repeat(3,1fr)}}
+.kroky li{position:relative;padding:22px 22px 22px 22px;border-top:2px solid var(--kakao);background:var(--mandle-svetla);border-radius:0 0 var(--r) var(--r)}
+.kroky li::before{counter-increment:k;content:"0" counter(k);font-family:var(--f-nadpis);font-size:40px;color:var(--ruze-text);display:block;line-height:1;margin-bottom:10px}
+.kroky h3{margin-bottom:6px}
+.kroky p{margin:0;color:var(--text-tlumeny);font-size:15.5px}
+
+/* Kadeřnice + galerie */
+.kaderice{display:grid;gap:28px;align-items:center}
+@media (min-width:860px){.kaderice{grid-template-columns:.85fr 1.15fr;gap:56px}}
+.foto{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;border-radius:var(--r);background:
+  repeating-linear-gradient(135deg,transparent 0 14px,rgba(181,123,138,.10) 14px 15px),var(--mandle);
+  border:1.5px dashed var(--ruze);color:var(--text-tlumeny);padding:18px;font-size:14px;line-height:1.4}
+.foto b{color:var(--kakao);font-weight:600;font-size:15px}
+.foto svg{color:var(--ruze-text)}
+.foto-portret{aspect-ratio:4/3}
+@media (min-width:860px){.foto-portret{aspect-ratio:4/5}}
+.citat-blok{border-left:3px solid var(--zlato);padding-left:18px;margin:22px 0}
+.galerie-nadpis{margin-top:56px}
+.galerie{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:160px;gap:12px;margin-top:20px}
+@media (min-width:860px){.galerie{grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}}
+.galerie .foto.siroka{grid-column:span 2}
+@media (max-width:420px){.galerie .foto{font-size:12.5px;padding:10px}.galerie .foto b{font-size:13.5px}}
+
+/* Otevírací doba + praktické */
+.dvojice{display:grid;gap:20px}
+@media (min-width:860px){.dvojice{grid-template-columns:1fr 1fr;gap:28px}}
+.karta{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:24px;box-shadow:var(--stin)}
+.stav{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;padding:6px 12px;border-radius:99px;background:var(--mandle-svetla);margin-bottom:14px}
+.stav .tecka{width:10px;height:10px;border-radius:50%;background:var(--text-tlumeny)}
+.stav.otevreno .tecka{background:#2F7A4B}
+.stav.otevreno{color:#24603A}
+.hodiny{width:100%;border-collapse:collapse;font-size:16px}
+.hodiny th,.hodiny td{padding:10px 0;border-top:1px solid var(--linka);text-align:left;font-weight:400}
+.hodiny th{font-weight:600;width:34%}
+.hodiny td{text-align:right;font-variant-numeric:tabular-nums}
+.hodiny tr.dnes th,.hodiny tr.dnes td{color:var(--ruze-text);font-weight:600}
+.hodiny .zavreno{color:var(--text-tlumeny)}
+.mala{font-size:14px;color:var(--text-tlumeny);margin:14px 0 0}
+.prakticke{list-style:none;padding:0;margin:0;display:grid;gap:16px}
+.prakticke li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.prakticke .ik{width:44px;height:44px;border-radius:12px;background:var(--mandle);display:grid;place-items:center;color:var(--ruze-text)}
+.prakticke b{display:block;font-weight:600}
+.prakticke span{color:var(--text-tlumeny);font-size:15.5px}
+
+/* FAQ */
+.faq{margin-top:28px;display:grid;gap:10px;max-width:820px}
+.faq details{background:var(--bila);border:1px solid var(--linka);border-radius:14px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:22px;top:50%;width:10px;height:10px;border-right:2px solid var(--ruze-text);border-bottom:2px solid var(--ruze-text);transform:translateY(-70%) rotate(45deg)}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{padding:0 20px 18px;margin:0;color:var(--text-tlumeny)}
+
+/* Kontakt */
+.kontakt{display:grid;gap:28px}
+@media (min-width:900px){.kontakt{grid-template-columns:1fr 1fr;gap:48px}}
+.kontakt-seznam{list-style:none;padding:0;margin:24px 0;display:grid;gap:14px}
+.kontakt-seznam li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.kontakt-seznam svg{color:var(--zlato);margin-top:3px}
+.kontakt-seznam a{color:var(--text-na-tmave);font-weight:600;overflow-wrap:anywhere}
+.kontakt-seznam .velky{font-family:var(--f-nadpis);font-size:30px;font-weight:400;text-decoration:none;line-height:1.1}
+.kontakt-seznam small{display:block;color:var(--text-na-tmave-tlumeny);font-size:14px}
+.formular{background:var(--mandle-svetla);color:var(--kakao);border-radius:var(--r);padding:24px}
+.formular h3{margin-bottom:6px}
+.formular p{color:var(--text-tlumeny);font-size:15px}
+.pole{display:grid;gap:6px;margin-bottom:14px}
+.pole label{font-weight:600;font-size:15px}
+.pole input,.pole select,.pole textarea{font:inherit;font-size:16px;color:var(--kakao);background:var(--bila);border:1.5px solid var(--linka);border-radius:12px;padding:12px 14px;width:100%}
+.pole textarea{min-height:90px;resize:vertical}
+.pole input:focus,.pole select:focus,.pole textarea:focus{border-color:var(--ruze-text)}
+.formular .btn{width:100%}
+.hlaska{display:none;margin-top:14px;padding:14px;border-radius:12px;background:var(--bila);border:1.5px solid var(--ruze-text);font-size:15px;color:var(--kakao)}
+.hlaska.viditelna{display:block}
+
+/* Patička */
+.paticka{background:var(--kakao);color:var(--text-na-tmave-tlumeny);font-size:14px;border-top:1px solid var(--linka-tmava)}
+.paticka .wrap{padding-block:28px calc(100px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.paticka a{color:var(--text-na-tmave)}
+@media (min-width:860px){.paticka .wrap{padding-block:28px}}
+
+/* Mobilní pruh */
+.pruh{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--kakao);border-top:1px solid var(--linka-tmava);padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center}
+.pruh a{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--zlato);color:var(--kakao);text-decoration:none;font-weight:700;border-radius:99px;min-height:50px;font-size:17px}
+.pruh span{color:var(--text-na-tmave-tlumeny);font-size:13px;line-height:1.25;max-width:6.5em}
+@media (min-width:860px){.pruh{display:none}}
+</style>
+
+<div class="page">
+
+<div class="banner" role="note"><div class="wrap"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Kadeřnictví Barbora Staníková</div></div>
+
+<header class="hlavicka">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Kadeřnictví Barbora Staníková – úvod">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="none" stroke="#7E4253" stroke-width="1.2"/><text x="17" y="22.5" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="15" fill="#2A2220">BS</text></svg>
+      <span>Barbora Staníková<small>Kadeřnictví · Prostřední Suchá</small></span>
+    </a>
+    <nav class="menu" aria-label="Hlavní menu">
+      <a href="#pruvodce">Objednání</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#kadernice">Kadeřnice</a>
+      <a href="#hodiny">Otevírací doba</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-hlavicka" href="tel:+420722787840" aria-label="Zavolat 722 787 840">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      <span class="txt">722 787 840</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-nadpis">
+  <div class="wrap">
+    <div>
+      <p class="nadtitulek">Dámské a pánské kadeřnictví · Havířov</p>
+      <h1 id="hero-nadpis">Vaše kadeřnice v&nbsp;<em>Prostřední Suché.</em></h1>
+      <p class="perex">Střih, barvení a melír pro ženy, střih, vousy a obočí pro muže. Na Dělnické 64, vždy na objednání – zavolejte a domluvíme termín.</p>
+      <div class="tlacitka">
+        <a class="btn btn-hlavni" href="tel:+420722787840">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Objednat se
+        </a>
+        <a class="btn btn-obrys" href="#pruvodce">Co říct do telefonu?</a>
+      </div>
+      <div class="hodnoceni-radek">
+      <a class="hodnoceni" href="https://www.firmy.cz/detail/12935305-kadernictvi-barbora-stanikova-havirov-prostredni-sucha.html" target="_blank" rel="noopener">
+        <span class="skore">5,0</span>
+        <span class="popis"><span class="hvezdy" aria-hidden="true">★★★★★</span><br><b>„Fantastické“ ze 17 hodnocení</b><br>na Firmy.cz – přečtěte si je</span>
+      </a>
+        <svg class="hero-mini" viewBox="0 0 120 120" aria-hidden="true">
+          <g fill="none" stroke="#B57B8A" stroke-width="2" stroke-linecap="round">
+            <circle cx="34" cy="94" r="13"/><circle cx="80" cy="98" r="13"/>
+            <path d="M42 83 L98 14"/><path d="M74 86 L36 14"/>
+          </g>
+          <circle cx="62" cy="58" r="3" fill="#C59B4B"/>
+        </svg>
+      </div>
+      <ul class="hero-fakta">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>Dělnická 769/64</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Po–Pá, jen na objednání</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2" fill="currentColor"/><path d="M12 7v6h5l2 6M12 10h5M9 11a6 6 0 1 0 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Bezbariérový přístup</li>
+      </ul>
+    </div>
+    <div class="hero-kresba" aria-hidden="true">
+      <svg viewBox="0 0 420 460">
+        <circle cx="210" cy="230" r="190" fill="#EADBC8"/>
+        <circle cx="210" cy="230" r="172" fill="none" stroke="#C59B4B" stroke-width="1" stroke-dasharray="2 7"/>
+        <!-- hřeben -->
+        <g transform="rotate(-24 210 230)" fill="none" stroke="#2A2220" stroke-width="2" stroke-linecap="round">
+          <rect x="70" y="150" width="280" height="34" rx="8"/>
+          <path d="M84 184v58M98 184v58M112 184v58M126 184v58M140 184v58M154 184v58M168 184v58M182 184v58M196 184v58M210 184v58M224 184v44M238 184v44M252 184v44M266 184v44M280 184v44M294 184v44M308 184v44M322 184v44M336 184v44"/>
+        </g>
+        <!-- nůžky -->
+        <g fill="none" stroke="#7E4253" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="160" cy="356" rx="32" ry="24" transform="rotate(-30 160 356)"/>
+          <ellipse cx="256" cy="376" rx="32" ry="24" transform="rotate(20 256 376)"/>
+          <path d="M178 334 L322 96 L330 104 L192 340"/>
+          <path d="M240 354 L170 92 L180 90 L254 352"/>
+        </g>
+        <circle cx="216" cy="268" r="6" fill="#C59B4B"/>
+        <!-- pramen vlasů -->
+        <path d="M60 300 C 110 250, 90 190, 150 150 S 230 80, 260 40" fill="none" stroke="#B57B8A" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M70 312 C 124 262, 104 200, 164 160 S 246 92, 280 50" fill="none" stroke="#B57B8A" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="pas tmavy" id="pruvodce" aria-labelledby="pruvodce-nadpis">
+  <div class="wrap">
+    <div class="pruvodce-hlava">
+      <p class="nadtitulek">Průvodce objednáním</p>
+      <h2 id="pruvodce-nadpis">Nevíte, jak to říct do telefonu? Sestavíme Vám větu.</h2>
+      <p>Kadeřnictví pracuje jen na objednání. Když hned řeknete, o co jde a jak dlouhé máte vlasy, domluvíte termín za pár vteřin.</p>
+    </div>
+    <div class="pruvodce">
+      <form id="pruvodce-form" novalidate>
+        <div class="krok">
+          <fieldset>
+            <legend class="krok-nadpis"><span class="c">1</span> Co si přejete? <span style="font-weight:400;color:var(--text-na-tmave-tlumeny)">(můžete víc)</span></legend>
+            <div class="volby" id="volby-sluzby">
+              <label class="volba"><input type="checkbox" id="sl-damsky" name="sluzba" value="damsky" checked><span>Dámský střih</span></label>
+              <label class="volba"><input type="checkbox" id="sl-barveni" name="sluzba" value="barveni"><span>Barvení</span></label>
+              <label class="volba"><input type="checkbox" id="sl-melir" name="sluzba" value="melir"><span>Melír</span></label>
+              <label class="volba"><input type="checkbox" id="sl-pansky" name="sluzba" value="pansky"><span>Pánský střih</span></label>
+              <label class="volba"><input type="checkbox" id="sl-vousy" name="sluzba" value="vousy"><span>Úprava vousů</span></label>
+              <label class="volba"><input type="checkbox" id="sl-oboci" name="sluzba" value="oboci"><span>Úprava obočí</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="krok" id="krok-delka">
+          <fieldset>
+            <legend class="krok-nadpis"><span class="c">2</span> Jak dlouhé máte vlasy?</legend>
+            <div class="volby delky">
+              <label class="volba"><input type="radio" id="dl-kratke" name="delka" value="kratke"><span>
+                <svg width="40" height="44" viewBox="0 0 40 44" aria-hidden="true"><circle cx="20" cy="18" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 16c1-8 19-9 20 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8 44c1-8 6-11 12-11s11 3 12 11" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+                Krátké</span></label>
+              <label class="volba"><input type="radio" id="dl-ramena" name="delka" value="ramena" checked><span>
+                <svg width="40" height="44" viewBox="0 0 40 44" aria-hidden="true"><circle cx="20" cy="18" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 26c-2-14 4-18 10-18s12 4 10 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8 44c1-8 6-11 12-11s11 3 12 11" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+                Po ramena</span></label>
+              <label class="volba"><input type="radio" id="dl-dlouhe" name="delka" value="dlouhe"><span>
+                <svg width="40" height="44" viewBox="0 0 40 44" aria-hidden="true"><circle cx="20" cy="18" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 42c-4-24 3-34 11-34s15 10 11 34" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 44c1-6 4-10 8-10s7 4 8 10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+                Dlouhé</span></label>
+            </div>
+            <p class="poznamka-delka" id="delka-pozn">Délka pomůže odhadnout, kolik času si na Vás má Barbora vyhradit.</p>
+          </fieldset>
+        </div>
+        <div class="krok">
+          <fieldset>
+            <legend class="krok-nadpis"><span class="c">3</span> Kdy se Vám to hodí?</legend>
+            <div class="volby">
+              <label class="volba"><input type="radio" id="kdy-kdykoli" name="kdy" value="kdykoli" checked><span>Je mi to jedno</span></label>
+              <label class="volba"><input type="radio" id="kdy-dopo" name="kdy" value="dopoledne"><span>Spíš dopoledne</span></label>
+              <label class="volba"><input type="radio" id="kdy-odpo" name="kdy" value="odpoledne"><span>Spíš odpoledne</span></label>
+            </div>
+            <div class="volby" style="margin-top:10px">
+              <label class="volba"><input type="radio" id="mluvi-zena" name="mluvi" value="zena" checked><span>Mluvím za sebe (žena)</span></label>
+              <label class="volba"><input type="radio" id="mluvi-muz" name="mluvi" value="muz"><span>Mluvím za sebe (muž)</span></label>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+
+      <div class="veta-box" aria-live="polite">
+        <p class="nadtitulek">Řekněte do telefonu</p>
+        <p class="veta" id="veta">Dobrý den, chtěla bych se objednat na dámský střih, vlasy mám po ramena. Kdy byste měla volno?</p>
+        <div class="veta-akce">
+          <a class="btn btn-hlavni" href="tel:+420722787840" id="btn-zavolat">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            Zavolat 722 787 840
+          </a>
+          <button class="btn btn-obrys" type="button" id="btn-kopirovat">Kopírovat větu</button>
+        </div>
+        <p class="veta-stav" id="veta-stav" role="status"></p>
+        <p class="veta-tip">Tip: v pracovní době může Barbora zrovna stříhat. Když to nevezme, zkuste to znovu za chvíli – nebo větu zkopírujte a pošlete jako SMS. <span class="ukazka">ukázkový text</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pas" id="sluzby" aria-labelledby="sluzby-nadpis">
+  <div class="wrap">
+    <p class="nadtitulek">Služby a ceny</p>
+    <h2 id="sluzby-nadpis">Pro ženy i pro muže, pod jednou střechou</h2>
+    <p style="margin-top:14px;color:var(--text-tlumeny)">U dámských služeb záleží cena na délce a hustotě vlasů – proto ji Barbora řekne při objednání. Platí se v hotovosti.</p>
+    <div class="sluzby-mrizka">
+      <article class="sluzba-skupina">
+        <h3><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="21" r="4"/><circle cx="18" cy="23" r="4"/><path d="M11 18 24 4M16 19 20 4"/></g></svg>Dámské</h3>
+        <p>Střih, barva a melír podle toho, jak dlouhé vlasy máte.</p>
+        <table class="cenik">
+          <thead><tr><th scope="col">Služba</th><th scope="col">Cena</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Dámský střih – krátké vlasy<small>Úprava tvaru nebo nový krátký účes. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+            <tr><th scope="row">Dámský střih – po ramena<small>Zastřižení konečků i výraznější změna délky. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+            <tr><th scope="row">Dámský střih – dlouhé vlasy<small>Střih se zachováním délky, kterou nechcete ztratit. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+            <tr><th scope="row">Barvení<small>Celá barva nebo odrost – cena podle délky vlasů. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+            <tr><th scope="row">Melír<small>Zesvětlené pramínky pro živější odstín. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="sluzba-skupina">
+        <h3><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="6" width="22" height="6" rx="2"/><path d="M6 12v9M9 12v9M12 12v9M15 12v9M18 12v6M21 12v6"/></g></svg>Pánské</h3>
+        <p>Střih, zkrácení vousů a úprava obočí – vše při jedné návštěvě.</p>
+        <table class="cenik">
+          <thead><tr><th scope="col">Služba</th><th scope="col">Cena</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Pánský střih<small>Klasický i kratší střih, upravený na míru. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+            <tr><th scope="row">Úprava vousů<small>Zkrácení a zarovnání vousů. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+            <tr><th scope="row">Úprava pánského obočí<small>Zkrácení přerostlých chloupků, aby obočí nepůsobilo neupraveně. <span class="ukazka">ukázkový text</span></small></th><td>na dotaz</td></tr>
+          </tbody>
+        </table>
+        <p class="sluzby-pozn">Přicházíte s partnerkou? Řekněte to při objednání, ať víte, s čím počítat. <span class="ukazka">ukázkový text</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pas" style="background:var(--bila);border-block:1px solid var(--linka)" aria-labelledby="jak-nadpis">
+  <div class="wrap">
+    <p class="nadtitulek">Jak to probíhá</p>
+    <h2 id="jak-nadpis">Od zavolání po hotový účes</h2>
+    <ol class="kroky">
+      <li><h3>Zavoláte</h3><p>Na 722 787 840 řeknete službu a délku vlasů – pomůže Vám Průvodce objednáním výše.</p></li>
+      <li><h3>Domluvíte termín</h3><p>Kadeřnictví funguje jen na objednání, takže v čase, který si domluvíte, je křeslo připravené pro Vás.</p></li>
+      <li><h3>Přijdete na Dělnickou</h3><p>Řeknete, co si přejete, a odcházíte s hotovým účesem. Platí se v hotovosti.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="pas" id="kadernice" aria-labelledby="kadernice-nadpis">
+  <div class="wrap">
+    <div class="kaderice">
+      <div class="foto foto-portret">
+        <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <b>Sem přijde Vaše fotka</b>
+        Barbora u křesla v salonu – přirozené světlo, klidně s nůžkami v ruce.
+      </div>
+      <div>
+        <p class="nadtitulek">Kadeřnice</p>
+        <h2 id="kadernice-nadpis">Barbora Staníková</h2>
+        <p style="margin-top:16px">Dámské i pánské kadeřnictví v Prostřední Suché vede Barbora sama. Objednáváte se přímo u ní – kdo Vám zvedne telefon, ten Vás i ostříhá. <span class="ukazka">ukázkový text</span></p>
+        <div class="citat-blok">
+          <p style="margin:0">V hodnoceních na Firmy.cz zákazníci nejčastěji chválí vstřícný a milý přístup, rychlou domluvu termínu a výsledek podle svého přání.</p>
+        </div>
+        <p style="color:var(--text-tlumeny)">Sem může Barbora napsat pár vět o sobě – jak dlouho stříhá a co ji na práci baví. <span class="ukazka">ukázkový text</span></p>
+        <a class="btn btn-hlavni" href="tel:+420722787840">Objednat se u Barbory</a>
+      </div>
+    </div>
+
+    <h3 class="galerie-nadpis">Galerie prací</h3>
+    <div class="galerie" aria-label="Galerie prací – místa pro fotky">
+      <div class="foto siroka"><b>Sem přijde Vaše fotka</b>Dámský střih po ramena – pohled zezadu</div>
+      <div class="foto"><b>Sem přijde Vaše fotka</b>Melír – detail pramenů</div>
+      <div class="foto"><b>Sem přijde Vaše fotka</b>Barvení – před a po</div>
+      <div class="foto"><b>Sem přijde Vaše fotka</b>Pánský střih z profilu</div>
+      <div class="foto"><b>Sem přijde Vaše fotka</b>Úprava vousů</div>
+      <div class="foto siroka"><b>Sem přijde Vaše fotka</b>Interiér salonu a vstup na Dělnické</div>
+    </div>
+  </div>
+</section>
+
+<section class="pas" id="hodiny" style="background:var(--mandle-svetla);border-block:1px solid var(--linka)" aria-labelledby="hodiny-nadpis">
+  <div class="wrap">
+    <p class="nadtitulek">Otevírací doba a praktické info</p>
+    <h2 id="hodiny-nadpis" style="margin-bottom:28px">Kdy a jak k nám</h2>
+    <div class="dvojice">
+      <div class="karta">
+        <div class="stav" id="stav"><span class="tecka"></span><span id="stav-text">Otevírací doba</span></div>
+        <table class="hodiny">
+          <caption class="mala" style="caption-side:bottom;text-align:left">Pouze na objednání v otevírací době. Polední pauza 12:00–12:30. Zdroj: <a href="https://www.firmy.cz/detail/12935305-kadernictvi-barbora-stanikova-havirov-prostredni-sucha.html" target="_blank" rel="noopener">Firmy.cz</a></caption>
+          <tbody>
+            <tr data-den="1"><th scope="row">Pondělí</th><td>10:00–12:00, 12:30–16:30</td></tr>
+            <tr data-den="2"><th scope="row">Úterý</th><td>11:00–12:00, 12:30–17:00</td></tr>
+            <tr data-den="3"><th scope="row">Středa</th><td>11:00–12:00, 12:30–17:00</td></tr>
+            <tr data-den="4"><th scope="row">Čtvrtek</th><td>10:00–12:00, 12:30–15:30</td></tr>
+            <tr data-den="5"><th scope="row">Pátek</th><td>10:00–12:00, 12:30–13:00</td></tr>
+            <tr data-den="6"><th scope="row">Sobota</th><td class="zavreno">zavřeno</td></tr>
+            <tr data-den="0"><th scope="row">Neděle</th><td class="zavreno">zavřeno</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="karta">
+        <ul class="prakticke">
+          <li><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8 2v4M16 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9 15l2 2 4-4"/></svg></span><div><b>Jen na objednání</b><span>Bez objednání se nechodí – zavolejte předem a termín si domluvte.</span></div></li>
+          <li><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2" fill="currentColor"/><path d="M12 7v6h5l2 6M12 10h5M9 11a6 6 0 1 0 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><b>Bezbariérový přístup</b><span>Firmy.cz uvádí provozovnu jako bezbariérovou.</span></div></li>
+          <li><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><div><b>Platba v hotovosti</b><span>Kartou zaplatit nelze, vezměte si s sebou hotovost.</span></div></li>
+          <li><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 16V8h3.5a2.5 2.5 0 0 1 0 5H9" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><div><b>Parkování</b><span>Podle Firmy.cz je u provozovny k dispozici parkování.</span></div></li>
+          <li><span class="ik"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg></span><div><b>Dělnická 769/64, Prostřední Suchá</b><span><a href="https://mapy.cz/zakladni?q=D%C4%9Blnick%C3%A1%20769%2F64%2C%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pas" aria-labelledby="faq-nadpis">
+  <div class="wrap">
+    <p class="nadtitulek">Časté otázky</p>
+    <h2 id="faq-nadpis">Než zavoláte</h2>
+    <div class="faq">
+      <details><summary>Můžu přijít bez objednání?</summary><p>Ne, kadeřnictví pracuje pouze na objednání v otevírací době. Zavolejte na 722 787 840 a termín si domluvte.</p></details>
+      <details><summary>Kolik bude stát můj střih nebo barva?</summary><p>U dámských služeb závisí cena hlavně na délce a hustotě vlasů a na množství barvy. Řekněte při objednání, co si přejete a jak dlouhé vlasy máte – cenu Vám Barbora sdělí předem.</p></details>
+      <details><summary>Můžu zaplatit kartou?</summary><p>Ne, platí se pouze v hotovosti.</p></details>
+      <details><summary>Mám před barvením přijít s umytými vlasy?</summary><p>Obecně platí, že se vlasy den nebo dva před barvením nemusí mýt. Pokud si nejste jistí, zeptejte se při objednání – Barbora Vám řekne, jak to má ráda.</p></details>
+      <details><summary>Stříháte i muže a upravujete vousy?</summary><p>Ano. Kromě pánského střihu nabízí kadeřnictví zkrácení vousů a úpravu pánského obočí.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="pas tmavy" id="kontakt" aria-labelledby="kontakt-nadpis">
+  <div class="wrap">
+    <div class="kontakt">
+      <div>
+        <p class="nadtitulek">Objednání a kontakt</p>
+        <h2 id="kontakt-nadpis">Zavolejte a domluvíme termín</h2>
+        <ul class="kontakt-seznam">
+          <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><div><a class="velky" href="tel:+420722787840">722 787 840</a><small>Nejlépe v otevírací době, Po–Pá</small></div></li>
+          <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><div><a href="mailto:stanikova.barbora@gmail.com">stanikova.barbora@gmail.com</a></div></li>
+          <li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg><div><a href="https://mapy.cz/zakladni?q=D%C4%9Blnick%C3%A1%20769%2F64%2C%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Dělnická 769/64, 735 64 Havířov-Prostřední Suchá</a><small>Bezbariérový přístup · parkování</small></div></li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a class="btn btn-zlato" href="tel:+420722787840">Objednat se</a>
+          <a class="btn btn-svetly-obrys" href="https://mapy.cz/zakladni?q=D%C4%9Blnick%C3%A1%20769%2F64%2C%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Navigovat</a>
+        </div>
+        <p style="margin-top:22px;font-size:14px">IČO 03853063</p>
+      </div>
+      <form class="formular" id="formular" novalidate>
+        <h3>Nedovoláte se? Necháme Vám zavolat zpět</h3>
+        <p>Vyplňte, co potřebujete, a Barbora se Vám ozve, až bude mít volnou chvíli. <span class="ukazka">ukázkový text</span></p>
+        <div class="pole"><label for="f-jmeno">Jméno</label><input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required></div>
+        <div class="pole"><label for="f-telefon">Telefon</label><input id="f-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        <div class="pole"><label for="f-sluzba">Služba</label>
+          <select id="f-sluzba" name="sluzba">
+            <option>Dámský střih</option><option>Barvení</option><option>Melír</option><option>Pánský střih</option><option>Úprava vousů</option><option>Úprava obočí</option>
+          </select></div>
+        <div class="pole"><label for="f-zprava">Poznámka (délka vlasů, kdy se Vám hodí)</label><textarea id="f-zprava" name="zprava"></textarea></div>
+        <button class="btn btn-hlavni" type="submit" id="f-odeslat">Chci, aby mi Barbora zavolala</button>
+        <div class="hlaska" id="f-hlaska" role="status">Toto je ukázka formuláře v návrhu webu – nic se neodeslalo. Na hotovém webu by žádost dorazila Barboře e-mailem.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="paticka">
+  <div class="wrap">
+    <span>Kadeřnictví Barbora Staníková · Dělnická 769/64, Havířov-Prostřední Suchá · IČO 03853063</span>
+    <span>Nezávazný návrh webu · hodnocení a údaje z <a href="https://www.firmy.cz/detail/12935305-kadernictvi-barbora-stanikova-havirov-prostredni-sucha.html" target="_blank" rel="noopener">Firmy.cz</a></span>
+  </div>
+</footer>
+
+<div class="pruh">
+  <span>Jen na objednání</span>
+  <a href="tel:+420722787840"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>Zavolat 722 787 840</a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  /* ---------- Průvodce objednáním ---------- */
+  var form = document.getElementById("pruvodce-form");
+  var vetaEl = document.getElementById("veta");
+  var stavEl = document.getElementById("veta-stav");
+  var krokDelka = document.getElementById("krok-delka");
+  var delkaPozn = document.getElementById("delka-pozn");
+  var NAZVY = {damsky:"dámský střih", barveni:"barvení", melir:"melír", pansky:"pánský střih", vousy:"úpravu vousů", oboci:"úpravu obočí"};
+  var PORADI = ["damsky","barveni","melir","pansky","vousy","oboci"];
+  var DAMSKE = {damsky:1, barveni:1, melir:1};
+  var DELKY = {kratke:"krátké vlasy", ramena:"vlasy po ramena", dlouhe:"dlouhé vlasy"};
+  var DELKY_VETA = {kratke:"vlasy mám krátké", ramena:"vlasy mám po ramena", dlouhe:"vlasy mám dlouhé"};
+  var posledniVeta = "";
+
+  function hodnota(name){
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : "";
+  }
+  function spojit(seznam){
+    if (seznam.length <= 1) return seznam.join("");
+    return seznam.slice(0, -1).join(", ") + " a " + seznam[seznam.length - 1];
+  }
+  function esc(t){ return t.replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+
+  function sestavit(){
+    var vybrane = PORADI.filter(function(k){ var i = form.querySelector('input[name="sluzba"][value="' + k + '"]'); return i && i.checked; });
+    var zena = hodnota("mluvi") === "zena";
+    var kdy = hodnota("kdy");
+    var delka = hodnota("delka");
+    var potrebaDelky = vybrane.some(function(k){ return DAMSKE[k]; });
+    krokDelka.style.opacity = potrebaDelky ? "1" : ".55";
+    Array.prototype.forEach.call(krokDelka.querySelectorAll("input"), function(i){ i.disabled = !potrebaDelky; });
+    delkaPozn.textContent = potrebaDelky
+      ? "Délka pomůže odhadnout, kolik času si na Vás má Barbora vyhradit."
+      : "U pánských služeb délku řešit nemusíte.";
+
+    if (!vybrane.length){
+      vetaEl.textContent = "Vyberte aspoň jednu službu a věta se sestaví sama.";
+      posledniVeta = "";
+      return;
+    }
+    var sl = spojit(vybrane.map(function(k){ return NAZVY[k]; }));
+    var castiTxt = ["Dobrý den, " + (zena ? "chtěla" : "chtěl") + " bych se objednat na " + sl];
+    var castiHtml = ["Dobrý den, " + (zena ? "chtěla" : "chtěl") + " bych se objednat na <mark>" + esc(sl) + "</mark>"];
+    if (potrebaDelky && delka){
+      castiTxt[0] += ", " + DELKY_VETA[delka];
+      castiHtml[0] += ", <mark>" + esc(DELKY_VETA[delka]) + "</mark>";
+    }
+    var konec;
+    if (kdy === "dopoledne") konec = "Hodilo by se mi to spíš dopoledne. Kdy byste měla volno?";
+    else if (kdy === "odpoledne") konec = "Hodilo by se mi to spíš odpoledne. Kdy byste měla volno?";
+    else konec = "Kdy byste měla volno?";
+    posledniVeta = castiTxt[0] + ". " + konec;
+    vetaEl.innerHTML = castiHtml[0] + ". " + esc(konec);
+    stavEl.textContent = "";
+  }
+
+  form.addEventListener("change", sestavit);
+  form.addEventListener("submit", function(e){ e.preventDefault(); });
+
+  function hlaska(t){ stavEl.textContent = t; }
+  function fallbackKopie(text){
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.top = "-1000px";
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  document.getElementById("btn-kopirovat").addEventListener("click", function(){
+    if (!posledniVeta){ hlaska("Nejdřív vyberte službu."); return; }
+    var text = posledniVeta;
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){ hlaska("Zkopírováno – můžete větu vložit do SMS."); }, function(){
+        hlaska(fallbackKopie(text) ? "Zkopírováno – můžete větu vložit do SMS." : "Kopírování se nepovedlo, větu si prosím označte ručně.");
+      });
+    } else {
+      hlaska(fallbackKopie(text) ? "Zkopírováno – můžete větu vložit do SMS." : "Kopírování se nepovedlo, větu si prosím označte ručně.");
+    }
+  });
+  sestavit();
+
+  /* ---------- Otevřeno / zavřeno (jen ověřená otevírací doba z Firmy.cz) ---------- */
+  var HODINY = {
+    1:[["10:00","12:00"],["12:30","16:30"]],
+    2:[["11:00","12:00"],["12:30","17:00"]],
+    3:[["11:00","12:00"],["12:30","17:00"]],
+    4:[["10:00","12:00"],["12:30","15:30"]],
+    5:[["10:00","12:00"],["12:30","13:00"]],
+    6:[], 0:[]
+  };
+  function min(t){ var p = t.split(":"); return (+p[0]) * 60 + (+p[1]); }
+  function pragueNow(){
+    try {
+      var parts = new Intl.DateTimeFormat("en-GB", {timeZone:"Europe/Prague", weekday:"short", hour:"2-digit", minute:"2-digit", hourCycle:"h23"}).formatToParts(new Date());
+      var o = {}; parts.forEach(function(p){ o[p.type] = p.value; });
+      var dny = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
+      return {den: dny[o.weekday], m: (+o.hour) * 60 + (+o.minute)};
+    } catch (e) { var d = new Date(); return {den: d.getDay(), m: d.getHours() * 60 + d.getMinutes()}; }
+  }
+  var ted = pragueNow();
+  var radek = document.querySelector('.hodiny tr[data-den="' + ted.den + '"]');
+  if (radek) radek.classList.add("dnes");
+  var stav = document.getElementById("stav"), stavText = document.getElementById("stav-text");
+  var dnes = HODINY[ted.den] || [];
+  var otevreno = dnes.some(function(i){ return ted.m >= min(i[0]) && ted.m < min(i[1]); });
+  if (otevreno){
+    stav.classList.add("otevreno");
+    stavText.textContent = "Teď je otevřeno – jen na objednání";
+  } else {
+    var dalsi = dnes.filter(function(i){ return min(i[0]) > ted.m; })[0];
+    stavText.textContent = dalsi ? "Teď zavřeno · dnes znovu od " + dalsi[0] : "Teď zavřeno";
+  }
+
+  /* ---------- Ukázkový formulář ---------- */
+  var f = document.getElementById("formular");
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("f-hlaska").classList.add("viditelna");
+  });
+})();
+</script>
+</body>
+</html>
