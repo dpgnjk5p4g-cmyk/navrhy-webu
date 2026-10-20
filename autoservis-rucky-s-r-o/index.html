@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Rucký</title>
+<meta name="description" content="Autoservis a pneuservis Rucký, Národních mučedníků 594, Frýdek-Místek: opravy tuzemských i zahraničních aut, pneuservis, klimatizace, příprava na STK, geometrie, opravy motorů, autozámky a skla. Po–Pá 7–16, So 9–12.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;800;900&family=Red+Hat+Text:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Autoservis Rucký, s.r.o.",
+  "telephone": "+420608320115",
+  "email": "autoservis.rucky@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "28578171"},
+  "address": {"@type": "PostalAddress", "streetAddress": "Národních mučedníků 594", "addressLocality": "Frýdek-Místek", "postalCode": "738 01", "addressCountry": "CZ"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "16:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:00"}
+  ]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: plakátový nápis přes celou šířku s pásem služeb jako cedule nad vraty dílny; sobota jako razítko; kalkulačka STK; sezónní přezutí; kontakt */
+:root{
+  --navy:#102A43; --coral:#FF5A36; --coral-ink:#C2381A; --sand:#F5EFE6; --mist:#D9E2EC; --paper:#FFFFFF;
+  --ink:#102A43; --muted:#4A5B6E; --line:#D8D2C8; --hero-bg:#102A43; --hero-fg:#F5EFE6;
+  --display:"Red Hat Display",system-ui,-apple-system,"Segoe UI",sans-serif; --body:"Red Hat Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --sand:#0D1824; --paper:#14212F; --mist:#1D2F42; --ink:#EEF2F6; --muted:#A8B6C5; --line:#2A3B4E; --coral-ink:#FF8A6E; --hero-bg:#08131E; color-scheme:dark}}
+:root[data-theme="dark"]{--sand:#0D1824; --paper:#14212F; --mist:#1D2F42; --ink:#EEF2F6; --muted:#A8B6C5; --line:#2A3B4E; --coral-ink:#FF8A6E; --hero-bg:#08131E; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.02;text-wrap:balance}
+h2{font-size:clamp(30px,4.6vw,48px);font-weight:900;letter-spacing:-.02em}
+h3{font-size:20px;font-weight:800}
+p{margin:0}
+a{color:var(--coral-ink)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.demo{display:inline-block;font:700 11px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;background:var(--mist);color:var(--ink);padding:3px 6px;border-radius:3px;margin-left:6px;vertical-align:middle}
+.banner{background:var(--coral);color:#1A0A05;font-weight:700;font-size:14px;text-align:center;padding-block:8px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--hero-bg);color:var(--hero-fg);border-bottom:1px solid rgba(255,255,255,.08)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--hero-bg)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:12px}
+.logo{font:900 22px/1 var(--display);letter-spacing:-.01em;color:var(--hero-fg);text-decoration:none}
+.logo small{display:block;font:500 12px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.top nav{display:flex;gap:22px;font-size:15px}
+.top nav a{color:var(--hero-fg);text-decoration:none;opacity:.85}
+@media (max-width:860px){.top nav{display:none}}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 17px/1 var(--body);padding:15px 22px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px}
+.btn-coral{background:var(--coral);color:#1A0A05}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+.btn-sm{padding:10px 16px;font-size:15px}
+/* hero */
+.hero{background:var(--hero-bg);color:var(--hero-fg);padding-block:40px 0;position:relative;overflow:hidden}
+.hero .kicker{font:700 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+.hero h1{font-size:clamp(44px,8.4vw,112px);font-weight:900;letter-spacing:-.035em;margin-block:14px 18px;max-width:11.5em}
+.hero h1 span{color:var(--coral)}
+.hero-row{display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center;justify-content:space-between}
+.hero .lead{max-width:36em;font-size:19px;color:#C9D4DF}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.stamp{position:absolute;right:max(16px,calc((100vw - 1180px)/2 + 16px));bottom:96px;width:150px;height:150px;border-radius:50%;border:3px dashed var(--coral);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-10deg);color:var(--hero-fg)}
+.stamp b{font:900 30px/1 var(--display);color:var(--coral)}
+.stamp span{font:700 13px/1.3 var(--body);text-transform:uppercase;letter-spacing:.08em}
+@media (max-width:1000px){.stamp{position:static;transform:rotate(-4deg);width:auto;height:auto;border-radius:12px;padding:10px 16px;flex-direction:row;gap:10px;display:inline-flex;margin-top:4px}}
+.sign{margin-top:40px;background:var(--coral);color:#1A0A05;overflow:hidden;white-space:nowrap}
+.sign .track{display:inline-flex;gap:0;animation:run 38s linear infinite;padding-block:14px}
+.sign span{font:800 18px/1 var(--display);text-transform:uppercase;letter-spacing:.04em;padding-inline:22px;border-right:2px solid rgba(26,10,5,.25)}
+@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.sign .track{animation:none;white-space:normal;flex-wrap:wrap}}
+/* sections */
+section{padding-block:64px}
+.head{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;align-items:end;margin-bottom:28px}
+.head p{max-width:34em;color:var(--muted)}
+.svc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;counter-reset:x}
+.svc{display:grid;grid-template-columns:48px 1fr;gap:4px 16px;padding-block:18px;border-top:2px solid var(--line)}
+.svc svg{grid-row:span 2;width:40px;height:40px;color:var(--coral-ink)}
+.svc p{color:var(--muted);font-size:16px}
+@media (max-width:760px){.svc-list{grid-template-columns:1fr}}
+.note{margin-top:20px;font-size:16px;color:var(--muted)}
+/* STK */
+.stk{background:var(--paper);border-block:1px solid var(--line)}
+.stk-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+@media (max-width:900px){.stk-grid{grid-template-columns:1fr}}
+.form{display:flex;flex-direction:column;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px;font-weight:700}
+.field select{font:500 17px var(--body);padding:12px;border:2px solid var(--line);border-radius:10px;background:var(--sand);color:var(--ink)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);border-radius:999px;overflow:hidden}
+.seg button{font:700 15px var(--body);padding:12px 8px;border:0;background:transparent;color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--sand)}
+.disc{position:relative;background:var(--mist);border-radius:20px;padding:28px;display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center}
+@media (max-width:520px){.disc{grid-template-columns:1fr;justify-items:start}}
+.disc svg{width:150px;height:150px}
+.disc .when{font:900 clamp(34px,5vw,48px)/1 var(--display)}
+.disc .left{font-weight:700;margin-top:6px}
+.disc .hint{color:var(--muted);font-size:15px;margin-top:10px}
+.disc .cta{margin-top:16px}
+.warn{color:var(--coral-ink)}
+/* tyres */
+.tyre{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+@media (max-width:860px){.tyre{grid-template-columns:1fr}}
+.count{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+.count div{background:var(--navy);color:#F5EFE6;border-radius:14px;padding:14px 18px;min-width:110px}
+.count b{display:block;font:900 40px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--coral)}
+.facts{display:grid;gap:10px;margin-top:18px}
+.facts li{list-style:none;padding-left:28px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:var(--coral)}
+.facts{padding:0}
+.tread{width:100%;max-width:380px;justify-self:center}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.step i{font:900 15px/1 var(--display);font-style:normal;color:var(--coral-ink);letter-spacing:.1em}
+.step p{color:var(--muted)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.photos{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);align-items:stretch;gap:14px;margin-top:28px}
+.ph{min-width:0;min-height:200px;max-width:100%;border:2px dashed var(--line);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-weight:700;background:radial-gradient(circle at 30% 30%,var(--mist),transparent 70%),var(--paper);padding:10px}
+.ph small{font-weight:500}
+@media (max-width:760px){.photos{grid-template-columns:1fr 1fr}.photos .ph:first-child{grid-column:span 2}}
+/* trust */
+.trust{background:var(--navy);color:#F5EFE6}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.tgrid div{border-top:3px solid var(--coral);padding-top:14px}
+.tgrid b{display:block;font:900 26px/1.1 var(--display);margin-bottom:6px}
+.tgrid p{color:#C9D4DF;font-size:16px}
+@media (max-width:860px){.tgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.tgrid{grid-template-columns:1fr}}
+/* faq */
+.faq{display:grid;gap:10px;max-width:840px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+summary{font-weight:700;font-size:18px;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+/* contact */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:860px){.cgrid{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.now td{font-weight:800;color:var(--coral-ink)}
+.status{font-weight:800}
+footer{background:var(--hero-bg);color:#B9C6D3;font-size:14px;padding-block:26px 100px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:25;display:none;gap:8px;background:var(--hero-bg);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.callbar a{flex:1}
+@media (max-width:860px){.callbar{display:flex}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Rucký, s.r.o.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">RUCKÝ<small>autoservis · pneuservis</small></a>
+    <nav aria-label="Hlavní"><a href="#sluzby">Služby</a><a href="#stk">STK</a><a href="#prezuti">Přezutí</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="btn btn-coral btn-sm" href="tel:+420608320115"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>608 320 115</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="kicker">Autoservis a pneuservis · Frýdek-Místek</p>
+    <h1 id="h1">Celé auto pod jednou střechou. <span>Ve Frýdku.</span></h1>
+    <div class="hero-row">
+      <p class="lead">Opravy tuzemských i zahraničních aut, pneuservis, klimatizace, geometrie, příprava na STK, motory, skla i autozámky. Na Národních mučedníků 594.</p>
+      <div class="cta">
+        <a class="btn btn-coral" href="tel:+420608320115"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 608 320 115</a>
+        <a class="btn btn-ghost" href="#objednat">Objednat servis</a>
+      </div>
+    </div>
+    <div class="stamp" aria-label="Otevřeno i v sobotu 9 až 12"><span>i v sobotu</span><b>9–12</b><span>Po–Pá 7–16</span></div>
+  </div>
+  <div class="sign" aria-hidden="true"><div class="track">
+    <span>Opravy všech značek</span><span>Pneuservis</span><span>Klimatizace</span><span>Příprava na STK</span><span>Geometrie</span><span>Opravy motorů</span><span>Výměna skel</span><span>Autozámky</span><span>Otevírání vozidel</span><span>Čištění interiéru</span>
+    <span>Opravy všech značek</span><span>Pneuservis</span><span>Klimatizace</span><span>Příprava na STK</span><span>Geometrie</span><span>Opravy motorů</span><span>Výměna skel</span><span>Autozámky</span><span>Otevírání vozidel</span><span>Čištění interiéru</span>
+  </div></div>
+</section>
+
+<section id="sluzby" aria-labelledby="h-s">
+  <div class="wrap">
+    <div class="head"><h2 id="h-s">S čím Vám pomůžeme</h2><p>Nemusíte jezdit z dílny do dílny. Servis, pneu, skla i STK vyřešíte na jedné adrese.</p></div>
+    <div class="svc-list">
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M26 6a8 8 0 0 0-9 11L6 28l6 6 11-11a8 8 0 0 0 11-9l-5 5-5-1-1-5z"/></svg><h3>Opravy aut všech značek</h3><p>Tuzemská i zahraniční auta, od drobných oprav po motor.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="6"/><path d="M20 6v8M20 26v8M6 20h8M26 20h8"/></svg><h3>Pneuservis</h3><p>Přezutí pneumatik na zimu i na léto.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 4v32M6 12l28 16M6 28l28-16"/><path d="M16 6l4 4 4-4M16 34l4-4 4 4"/></svg><h3>Servis klimatizací</h3><p>Aby v létě chladila a v zimě nemlžila okna.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="7" y="6" width="26" height="28" rx="3"/><path d="M13 16l4 4 8-8M13 26h14"/></svg><h3>Příprava na STK</h3><p>Auto před technickou projdeme a opravíme, co je potřeba.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M8 32L20 8l12 24M12 24h16"/></svg><h3>Geometrie</h3><p>Seřízení kol, aby auto netáhlo do strany a pneu se nesjížděly.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="6" y="14" width="22" height="16" rx="2"/><path d="M28 18h6v8h-6M12 14v-4h10v4"/></svg><h3>Opravy motorů</h3><p>Diagnostika závady a oprava motoru.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 30L10 10h20l4 20z"/><path d="M15 16l4 6 3-3 4 5"/></svg><h3>Výměna skel</h3><p>Prasklé čelní nebo boční sklo vyměníme.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="13" cy="20" r="7"/><path d="M20 20h16M30 20v6M35 20v4"/></svg><h3>Autozámky a otevírání vozidel</h3><p>Zabouchnuté klíče nebo zlobící zámek. Zavolejte.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M8 30c2-8 6-12 12-12s10 4 12 12M14 12l2-6M26 12l-2-6M20 10V4"/></svg><h3>Čištění interiéru</h3><p>Sedačky, koberce a palubní deska jako nové.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="6" y="8" width="28" height="26" rx="3"/><path d="M6 16h28M14 4v8M26 4v8"/></svg><h3>Sobota dopoledne</h3><p>Otevřeno i v sobotu 9–12, když přes týden nestihnete.</p></div>
+    </div>
+    <p class="note">Cenu opravy Vám řekneme po prohlídce auta nebo po telefonu.<span class="demo">ukázkový text</span></p>
+  </div>
+</section>
+
+<section id="stk" class="stk" aria-labelledby="h-stk">
+  <div class="wrap">
+    <div class="head"><h2 id="h-stk">Kdy Vám končí STK?</h2><p>Vyberte, kdy bylo auto naposledy na technické. Spočítáme, do kdy musíte znovu, a připravíme auto, aby prošlo.</p></div>
+    <div class="stk-grid">
+      <div class="form">
+        <div class="seg" role="group" aria-label="Typ auta">
+          <button type="button" id="mode-used" aria-pressed="true">Auto už bylo na STK</button>
+          <button type="button" id="mode-new" aria-pressed="false">Nové auto</button>
+        </div>
+        <div class="pair">
+          <label class="field" for="stk-m"><span id="lbl">Měsíc poslední STK</span><select id="stk-m"></select></label>
+          <label class="field" for="stk-y">Rok<select id="stk-y"></select></label>
+        </div>
+        <p class="note" style="margin:0">Osobní auto jede na první STK do 4 let od první registrace, pak každé 2 roky. Přesné datum máte v technickém průkazu nebo na protokolu.</p>
+      </div>
+      <div class="disc" aria-live="polite">
+        <svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="70" fill="var(--paper)" stroke="var(--navy)" stroke-width="4"/><circle id="ring" cx="75" cy="75" r="56" fill="none" stroke="var(--coral)" stroke-width="14" stroke-dasharray="352" stroke-dashoffset="0" transform="rotate(-90 75 75)"/><text id="ring-t" x="75" y="84" text-anchor="middle" font-family="Red Hat Display, sans-serif" font-weight="900" font-size="28" fill="var(--ink)">–</text></svg>
+        <div>
+          <p>Další STK nejpozději do</p>
+          <p class="when" id="when">–</p>
+          <p class="left" id="left"></p>
+          <p class="hint">Na přípravu se objednejte aspoň 2 týdny předem.<span class="demo">ukázkový text</span></p>
+          <div class="cta"><a class="btn btn-coral btn-sm" href="tel:+420608320115">Objednat přípravu na STK</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prezuti" aria-labelledby="h-p">
+  <div class="wrap tyre">
+    <div>
+      <h2 id="h-p">Přezutí na zimu</h2>
+      <p class="note" style="font-size:18px;color:var(--ink)">Pneuservis máme přímo v dílně. Zavolejte a domluvte termín, ať nečekáte na první sníh.</p>
+      <div class="count" aria-live="polite"><div><b id="cd-d">–</b>dní do 1. 11.</div></div>
+      <ul class="facts">
+        <li>Zimní pneumatiky jsou povinné od 1. 11. do 31. 3., když je na silnici zimní počasí.</li>
+        <li>Hloubka dezénu zimní pneumatiky musí být u osobního auta aspoň 4 mm.</li>
+        <li>Při přezutí zkontrolujeme dezén i stav pneumatik.<span class="demo">ukázkový text</span></li>
+      </ul>
+      <div class="cta" style="margin-top:20px"><a class="btn btn-coral" href="tel:+420608320115">Objednat přezutí</a></div>
+    </div>
+    <svg class="tread" viewBox="0 0 300 300" role="img" aria-label="Ilustrace zimní pneumatiky">
+      <circle cx="150" cy="150" r="140" fill="#1B2B3C"/>
+      <g stroke="#2E445B" stroke-width="10">
+        <path d="M150 12v40M150 248v40M12 150h40M248 150h40M52 52l28 28M220 220l28 28M52 248l28-28M220 80l28-28"/>
+      </g>
+      <circle cx="150" cy="150" r="92" fill="#D9E2EC"/>
+      <circle cx="150" cy="150" r="70" fill="#9FB3C8"/>
+      <g fill="#102A43"><circle cx="150" cy="110" r="8"/><circle cx="188" cy="138" r="8"/><circle cx="174" cy="184" r="8"/><circle cx="126" cy="184" r="8"/><circle cx="112" cy="138" r="8"/></g>
+      <circle cx="150" cy="150" r="16" fill="#FF5A36"/>
+      <g fill="#FFFFFF" opacity=".9"><path d="M244 40l6 10h-12zM262 74l4 7h-8zM40 250l6 10H34z"/></g>
+    </svg>
+  </div>
+</section>
+
+<section id="objednat" aria-labelledby="h-j" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-j">Jak to u nás probíhá</h2></div>
+    <div class="steps">
+      <div class="step"><i>KROK 1</i><h3>Zavoláte</h3><p>Řeknete, co auto dělá nebo co potřebujete. Domluvíme termín, i na sobotu dopoledne.</p></div>
+      <div class="step"><i>KROK 2</i><h3>Prohlédneme auto</h3><p>Najdeme závadu a řekneme, co je potřeba udělat a kolik to bude stát.<span class="demo">ukázkový text</span></p></div>
+      <div class="step"><i>KROK 3</i><h3>Vyzvednete hotové</h3><p>Ozveme se, až bude auto hotové. Přezutí nebo geometrii zvládnete na jednu návštěvu.<span class="demo">ukázkový text</span></p></div>
+    </div>
+    <div class="photos">
+      <div class="ph">Sem přijde Vaše fotka<small>dílna nebo vjezd do servisu</small></div>
+      <div class="ph">Sem přijde Vaše fotka<small>pneuservis</small></div>
+      <div class="ph">Sem přijde Vaše fotka<small>tým</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="h-t">
+  <div class="wrap">
+    <div class="head"><h2 id="h-t">Proč Rucký</h2></div>
+    <div class="tgrid">
+      <div><b>Všechny značky</b><p>Opravujeme tuzemská i zahraniční auta.</p></div>
+      <div><b>10 služeb v 1 dílně</b><p>Od pneuservisu po autozámky a skla.</p></div>
+      <div><b>Sobota 9–12</b><p>Otevřeno i v sobotu dopoledne.</p></div>
+      <div><b>s.r.o.</b><p>Autoservis Rucký, s.r.o., IČO 28578171 (údaj z <a style="color:#F5EFE6" href="https://www.firmy.cz/detail/2594430-autoservis-rucky-frydek-mistek-frydek.html" target="_blank" rel="noopener">Firmy.cz</a>).</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-f">
+  <div class="wrap">
+    <div class="head"><h2 id="h-f">Časté otázky</h2></div>
+    <div class="faq">
+      <details open><summary>Opravujete i zahraniční auta?</summary><p>Ano. Opravujeme všechny typy tuzemských i zahraničních aut.</p></details>
+      <details><summary>Zabouchl jsem si klíče v autě. Pomůžete?</summary><p>Otevírání vozidel a opravy autozámků děláme. Zavolejte na 608 320 115.</p></details>
+      <details><summary>Máte otevřeno i v sobotu?</summary><p>Ano, v sobotu od 9 do 12. Ve všední dny od 7 do 16.</p></details>
+      <details><summary>Připravíte auto na STK?</summary><p>Ano. Auto projdeme a opravíme, co by na technické neprošlo.</p></details>
+      <details><summary>Kdy přezout na zimní?</summary><p>Zimní pneumatiky jsou povinné od 1. 11. do 31. 3. za zimních podmínek. Termín domluvte raději v říjnu.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" aria-labelledby="h-k" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-k">Kde nás najdete</h2></div>
+    <div class="cgrid">
+      <div class="card">
+        <p class="status" id="status"></p>
+        <table class="hours" aria-label="Otevírací doba">
+          <tr data-d="1"><td>Pondělí</td><td>7:00–16:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>7:00–16:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>7:00–16:00</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>7:00–16:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>7:00–16:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>9:00–12:00</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <a class="btn btn-coral" href="tel:+420608320115">Zavolat 608 320 115</a>
+        <p><b>Adresa:</b> Národních mučedníků 594, 738 01 Frýdek-Místek</p>
+        <p><b>E-mail:</b> <a href="mailto:autoservis.rucky@seznam.cz">autoservis.rucky@seznam.cz</a></p>
+        <div class="cta">
+          <a class="btn btn-ghost btn-sm" href="https://mapy.cz/zakladni?q=N%C3%A1rodn%C3%ADch%20mu%C4%8Dedn%C3%ADk%C5%AF%20594%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=N%C3%A1rodn%C3%ADch%20mu%C4%8Dedn%C3%ADk%C5%AF%20594%2C%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Autoservis Rucký, s.r.o. · IČO 28578171 · Národních mučedníků 594, 738 01 Frýdek-Místek</span><span>Návrh webu: Weby na míru</span></div></footer>
+<div class="callbar"><a class="btn btn-coral btn-sm" href="tel:+420608320115">Zavolat</a><a class="btn btn-ghost btn-sm" style="color:#F5EFE6" href="#objednat">Objednat servis</a></div>
+
+<script>
+(function(){
+  var months=['leden','únor','březen','duben','květen','červen','červenec','srpen','září','říjen','listopad','prosinec'];
+  var mSel=document.getElementById('stk-m'), ySel=document.getElementById('stk-y');
+  var now=new Date(), Y=now.getFullYear();
+  months.forEach(function(m,i){var o=document.createElement('option');o.value=i;o.textContent=m;mSel.appendChild(o)});
+  for(var y=Y;y>=Y-5;y--){var o=document.createElement('option');o.value=y;o.textContent=y;ySel.appendChild(o)}
+  mSel.value=Math.max(0,now.getMonth()-1); ySel.value=Y-2+1;
+  var isNew=false, bUsed=document.getElementById('mode-used'), bNew=document.getElementById('mode-new');
+  function calc(){
+    bUsed.setAttribute('aria-pressed',isNew?'false':'true'); bNew.setAttribute('aria-pressed',isNew?'true':'false');
+    document.getElementById('lbl').textContent=isNew?'Měsíc první registrace':'Měsíc poslední STK';
+    var m=+mSel.value, y=+ySel.value+(isNew?4:2);
+    var due=new Date(y,m+1,0);
+    var diff=(due.getFullYear()-now.getFullYear())*12+(due.getMonth()-now.getMonth());
+    document.getElementById('when').textContent=months[m]+' '+y;
+    var left=document.getElementById('left'), rt=document.getElementById('ring-t'), ring=document.getElementById('ring');
+    var total=isNew?48:24, frac=Math.max(0,Math.min(1,diff/total));
+    ring.setAttribute('stroke-dashoffset',String(352*(1-frac)));
+    if(diff<0){left.textContent='STK už propadla. Zavolejte, připravíme auto co nejdřív.';left.className='left warn';rt.textContent='!';}
+    else if(diff<=2){left.textContent='Zbývá '+(diff===0?'méně než měsíc':diff+(diff===1?' měsíc':' měsíce'))+'. Je čas se objednat.';left.className='left warn';rt.textContent=diff;}
+    else {left.textContent='Zbývá '+diff+(diff<5?' měsíce':' měsíců')+'.';left.className='left';rt.textContent=diff;}
+  }
+  mSel.addEventListener('change',calc); ySel.addEventListener('change',calc);
+  bUsed.addEventListener('click',function(){isNew=false;calc()}); bNew.addEventListener('click',function(){isNew=true;calc()});
+  calc();
+  // odpočet do 1. 11.
+  var t=new Date(Y,10,1); if(now>t) t=new Date(Y+1,10,1);
+  document.getElementById('cd-d').textContent=Math.ceil((t-now)/86400000);
+  // otevírací doba
+  var wd=now.getDay(), h=now.getHours()+now.getMinutes()/60, row=document.querySelector('[data-d="'+wd+'"]'); if(row) row.classList.add('now');
+  var open=(wd>=1&&wd<=5&&h>=7&&h<16)||(wd===6&&h>=9&&h<12);
+  document.getElementById('status').textContent=open?'Teď máme otevřeno.':'Teď máme zavřeno. Zavolejte v otevírací době.';
+})();
+</script>
+</body>
+</html>

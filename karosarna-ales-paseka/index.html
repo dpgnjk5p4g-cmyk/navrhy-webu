@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Karosárna – Aleš Paseka</title>
+<meta name="description" content="Karosárna Aleš Paseka, Foksova 420/21, Ostrava-Nová Bělá: rovnání karoserie na stolici i spotem, opravy koroze a plastů, lakování, výměna výfuků, vyřízení pojistných událostí včetně bezhotovostní platby, náhradní vozidlo. Po–Pá 8–17.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@600;800&family=Sofia+Sans:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "Karosárna – Aleš Paseka",
+  "telephone": "+420732258516",
+  "email": "alespaseka@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "42783909"},
+  "address": {"@type": "PostalAddress", "streetAddress": "Foksova 420/21", "addressLocality": "Ostrava-Nová Bělá", "postalCode": "724 00", "addressCountry": "CZ"},
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"}],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "5", "bestRating": "5"}
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: dílenský list – dělený hero (text + SVG auto, jehož promáčklina se vyrovná), pak služby, nástroj „Kde je škoda?“, postup pojistné události, kontakt */
+:root{
+  --ink:#1C1F24; --pearl:#F4F2EE; --paper:#FFFFFF; --teal:#0E7C86; --teal-ink:#0A5F67; --yellow:#F5C518;
+  --muted:#565C66; --line:#DCD8D0; --soft:#E7EEEE; --on-dark:#F4F2EE; --dark:#1C1F24; --dark-2:#2A2F36;
+  --display:"Sofia Sans Condensed","Arial Narrow",Arial,sans-serif; --body:"Sofia Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ink:#ECEAE5; --pearl:#15181C; --paper:#1D2126; --teal:#3CC4CF; --teal-ink:#6FD6DE; --yellow:#F5C518;
+  --muted:#A9AFB8; --line:#343A42; --soft:#1F2A2C; --on-dark:#F4F2EE; --dark:#0E1013; --dark-2:#22272D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#ECEAE5; --pearl:#15181C; --paper:#1D2126; --teal:#3CC4CF; --teal-ink:#6FD6DE; --yellow:#F5C518;
+  --muted:#A9AFB8; --line:#343A42; --soft:#1F2A2C; --on-dark:#F4F2EE; --dark:#0E1013; --dark-2:#22272D; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--pearl);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:22px;font-weight:800}
+p{margin:0}
+a{color:var(--teal-ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,label:focus-within{outline:3px solid var(--yellow);outline-offset:2px}
+.demo{display:inline-block;font:600 11px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;background:var(--yellow);color:#1C1F24;padding:3px 6px;border-radius:3px;vertical-align:middle;margin-left:6px}
+.banner{background:var(--yellow);color:#1C1F24;font-size:14px;font-weight:700;text-align:center;padding-block:8px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--dark);color:var(--on-dark)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--dark)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em;color:var(--on-dark);text-decoration:none}
+.logo span{color:var(--yellow)}
+.top nav{display:flex;gap:20px;font-size:15px}
+.top nav a{color:var(--on-dark);text-decoration:none;opacity:.85}
+.top nav a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 17px/1 var(--body);padding:15px 20px;border-radius:6px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--yellow);color:#1C1F24}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-small{padding:10px 14px;font-size:15px}
+.btn svg{width:20px;height:20px;flex:none}
+@media (max-width:820px){.top nav{display:none}}
+/* hero */
+.hero{background:var(--dark);color:var(--on-dark);padding-block:40px 56px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.eyebrow{font:700 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
+.hero h1{font-size:clamp(40px,5.6vw,64px);font-weight:800;margin-block:14px 16px;letter-spacing:-.015em}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero .lead{font-size:19px;max-width:34em;color:#D8D6D0}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:15px;color:#D8D6D0}
+.facts b{color:var(--on-dark)}
+.facts a{color:var(--on-dark)}
+.car{width:100%;max-width:560px;justify-self:end}
+.car .dent{animation:dent 1.6s 0.8s ease forwards}
+.car .smooth{opacity:0;animation:show 1.6s 0.8s ease forwards}
+.car .spark{opacity:0;animation:spark 1.2s 0.6s ease}
+@keyframes dent{to{opacity:0}}
+@keyframes show{to{opacity:1}}
+@keyframes spark{30%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.car .dent{animation:none;opacity:0}.car .smooth{animation:none;opacity:1}.car .spark{display:none}}
+@media (max-width:820px){.hero{padding-block:28px 36px}.hero .wrap{grid-template-columns:1fr;gap:20px}.car{max-width:420px;justify-self:center;order:2}.hero .lead{font-size:17px}}
+/* sections */
+section{padding-block:64px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin-bottom:28px}
+.sec-head p{max-width:36em;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.svc{background:var(--paper);padding:22px 20px;display:flex;flex-direction:column;gap:8px}
+.svc svg{width:38px;height:38px;color:var(--teal)}
+.svc p{color:var(--muted);font-size:15.5px}
+@media (max-width:980px){.services{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.services{grid-template-columns:1fr}}
+.price-note{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;font-size:16px}
+/* tool */
+.tool{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tool-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:start}
+@media (max-width:900px){.tool-grid{grid-template-columns:1fr}}
+.topview{width:100%;max-width:520px;display:block;margin:0 auto}
+.zone{cursor:pointer;fill:var(--soft);stroke:var(--ink);stroke-width:2;transition:fill .2s}
+.zone:hover{fill:#CFE3E4}
+.zone.on{fill:var(--yellow)}
+.zone.on:hover{fill:#F7D24A}
+.zone:focus-visible{outline:none;stroke:var(--yellow);stroke-width:5}
+.zlabel{font:700 15px var(--body);fill:var(--ink);pointer-events:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font:600 15px var(--body);border:2px solid var(--line);background:var(--pearl);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.panel{display:flex;flex-direction:column;gap:16px}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+.seg button{font:700 15px var(--body);padding:12px 8px;border:0;background:transparent;color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--pearl)}
+.check{display:flex;gap:10px;align-items:center;font-weight:600}
+.check input{width:22px;height:22px;accent-color:var(--teal)}
+.ticket{background:var(--pearl);border:2px dashed var(--line);border-radius:8px;padding:16px;font-size:16px;white-space:pre-wrap;min-height:120px}
+.ticket-actions{display:flex;flex-wrap:wrap;gap:10px}
+.copied{font-size:14px;color:var(--teal-ink);font-weight:700}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{border-top:4px solid var(--teal);padding-top:16px;display:flex;flex-direction:column;gap:8px}
+.step .n{font:800 44px/1 var(--display);color:var(--teal)}
+.step p{color:var(--muted)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+/* before after */
+.ba{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ph{aspect-ratio:4/3;max-width:100%;border-radius:8px;background:repeating-linear-gradient(135deg,var(--soft) 0 14px,var(--paper) 14px 28px);border:2px dashed var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--muted);font-weight:700;text-align:center;padding:12px}
+.ph small{font-weight:500}
+@media (max-width:760px){.ba{grid-template-columns:1fr 1fr}.ba .ph:last-child{display:none}}
+/* trust */
+.trust{background:var(--dark);color:var(--on-dark)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.tcell{display:flex;flex-direction:column;gap:6px}
+.big{font:800 56px/1 var(--display);color:var(--yellow)}
+.tcell p{color:#CFCCC6}
+.tcell a{color:var(--on-dark)}
+@media (max-width:760px){.trust-grid{grid-template-columns:1fr}}
+/* faq */
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+summary{font-weight:700;cursor:pointer;font-size:18px}
+details p{margin-top:10px;color:var(--muted)}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:8px;font-variant-numeric:tabular-nums}
+.row:last-child{border-bottom:0}
+.today{font-weight:700;color:var(--teal-ink)}
+.mapbox{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+.mapbox svg{display:block;width:100%;height:auto}
+.mapbox .links{display:flex;flex-wrap:wrap;gap:10px;padding:16px}
+footer{background:var(--dark);color:#BFBCB6;font-size:14px;padding-block:28px 100px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:25;display:none;gap:8px;background:var(--dark);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.callbar a{flex:1;justify-content:center}
+@media (max-width:820px){.callbar{display:flex}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Karosárna – Aleš Paseka</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">KAROSÁRNA <span>PASEKA</span></a>
+    <nav aria-label="Hlavní"><a href="#sluzby">Služby</a><a href="#skoda">Kde je škoda?</a><a href="#pojistka">Pojistná událost</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="btn btn-call btn-small" href="tel:+420732258516"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>732 258 516</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Karosárna · Ostrava-Nová Bělá</p>
+      <h1 id="h1">Bouračka? Opravu <em>i pojišťovnu</em> vyřídíme za Vás.</h1>
+      <p class="lead">Rovnání karoserie na stolici i spotem, opravy koroze a plastů, lakování a výměna výfuků. Pojistnou událost vyřídíme včetně bezhotovostní platby a zajistíme náhradní vozidlo.</p>
+      <div class="cta">
+        <a class="btn btn-call" href="tel:+420732258516"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 732 258 516</a>
+        <a class="btn btn-line" href="#skoda">Poptat opravu</a>
+      </div>
+      <div class="facts">
+        <span><b>4,8</b> z 5 hodnocení na <a href="https://www.firmy.cz/detail/2402382-karosarna-ales-paseka-ostrava-nova-bela.html" target="_blank" rel="noopener">Firmy.cz</a></span>
+        <span><b>Po–Pá 8–17</b>, jindy po domluvě</span>
+        <span><b>Náhradní vozidlo</b></span>
+      </div>
+    </div>
+    <svg class="car" viewBox="0 0 560 300" role="img" aria-label="Ilustrace auta, jehož promáčklé dveře se vyrovnají">
+      <defs>
+        <linearGradient id="paint" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#18A2AE"/><stop offset="1" stop-color="#0A5F67"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FC9CF"/><stop offset="1" stop-color="#42656B"/></linearGradient>
+      </defs>
+      <rect x="0" y="252" width="560" height="6" rx="3" fill="#2A2F36"/>
+      <rect x="40" y="262" width="80" height="4" rx="2" fill="#F5C518"/><rect x="170" y="262" width="80" height="4" rx="2" fill="#F5C518"/><rect x="300" y="262" width="80" height="4" rx="2" fill="#F5C518"/><rect x="430" y="262" width="80" height="4" rx="2" fill="#F5C518"/>
+      <path d="M40 210 L52 160 Q60 140 90 136 L170 128 L222 82 Q232 74 250 72 L372 72 Q392 72 404 84 L452 130 L500 140 Q526 146 528 170 L530 210 Q530 222 518 222 L52 222 Q40 222 40 210Z" fill="url(#paint)"/>
+      <path d="M236 92 Q242 86 254 86 L300 86 L300 128 L196 128Z" fill="url(#glass)"/>
+      <path d="M314 86 L366 86 Q380 86 390 96 L424 128 L314 128Z" fill="url(#glass)"/>
+      <line x1="306" y1="86" x2="306" y2="214" stroke="#0A4A50" stroke-width="3"/>
+      <line x1="196" y1="132" x2="196" y2="214" stroke="#0A4A50" stroke-width="3"/>
+      <line x1="430" y1="132" x2="430" y2="214" stroke="#0A4A50" stroke-width="3" opacity=".6"/>
+      <rect x="270" y="146" width="22" height="6" rx="3" fill="#0A4A50"/><rect x="396" y="146" width="22" height="6" rx="3" fill="#0A4A50"/>
+      <!-- promáčklina na dveřích -->
+      <g class="dent"><path d="M318 160 Q346 186 372 166 Q392 196 360 204 Q334 210 318 192Z" fill="#06393E" opacity=".85"/><path d="M326 172 Q350 190 366 176" stroke="#7FD3DA" stroke-width="2" fill="none"/></g>
+      <g class="smooth"><path d="M322 168 Q360 160 410 168" stroke="#BDEFF3" stroke-width="5" stroke-linecap="round" fill="none" opacity=".7"/></g>
+      <g class="spark"><circle cx="350" cy="182" r="22" fill="#F5C518" opacity=".5"/><path d="M350 156v52M324 182h52M332 164l36 36M368 164l-36 36" stroke="#F5C518" stroke-width="3"/></g>
+      <rect x="512" y="160" width="18" height="12" rx="3" fill="#F5C518"/>
+      <rect x="40" y="166" width="14" height="12" rx="3" fill="#E04848"/>
+      <g><circle cx="140" cy="222" r="38" fill="#14171B"/><circle cx="140" cy="222" r="18" fill="#9AA3AD"/><circle cx="140" cy="222" r="6" fill="#14171B"/></g>
+      <g><circle cx="430" cy="222" r="38" fill="#14171B"/><circle cx="430" cy="222" r="18" fill="#9AA3AD"/><circle cx="430" cy="222" r="6" fill="#14171B"/></g>
+    </svg>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-sluzby">Co pro Vaše auto uděláme</h2><p>Od drobného ťuknutí na parkovišti po škodu po nehodě. Všechno v jedné dílně v Nové Bělé.</p></div>
+    <div class="services">
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 26h32M8 26l4-10h16l4 10M12 30v4M28 30v4"/><path d="M14 10l6-6 6 6" /></svg><h3>Karosářské práce</h3><p>Výměny a opravy dílů karoserie po nehodě i po letech provozu.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 30h32M8 30V18h24v12M14 18v-6h12v6"/><circle cx="20" cy="24" r="2"/></svg><h3>Rovnání na stolici i spotem</h3><p>Pokřivenou karoserii srovnáme na rovnací stolici, menší promáčkliny spotem.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 28c6-2 8-10 14-10s8 8 14 10"/><circle cx="14" cy="14" r="2"/><circle cx="26" cy="12" r="1.6"/><circle cx="21" cy="8" r="1.2"/></svg><h3>Opravy koroze</h3><p>Rez na prazích, blatnících nebo dveřích odstraníme dřív, než se rozleze.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="14" width="30" height="12" rx="6"/><path d="M14 20h12"/></svg><h3>Opravy plastů</h3><p>Prasklý nárazník nebo kryt často opravíme bez nákupu nového dílu.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M8 30l14-14M22 16l4-8 6 6-8 4"/><path d="M6 34h6"/></svg><h3>Lakování</h3><p>Opravené díly nalakujeme, aby nebylo poznat, kde byla škoda.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 22h18c4 0 6 2 6 4h8"/><circle cx="34" cy="26" r="2"/><path d="M8 18c2-2 4 0 6-2"/></svg><h3>Výměna výfuku</h3><p>Hlučný nebo prorezlý výfuk vyměníme.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M10 6h14l6 6v22H10z"/><path d="M15 20h10M15 26h10M15 14h6"/></svg><h3>Pojistné události</h3><p>Vyřídíme je za Vás, včetně bezhotovostní platby od pojišťovny.</p></div>
+      <div class="svc"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 26l3-8h24l3 8v6H5z"/><circle cx="12" cy="30" r="2"/><circle cx="28" cy="30" r="2"/><path d="M20 4v8M16 8l4 4 4-4"/></svg><h3>Náhradní vozidlo a díly</h3><p>Po dobu opravy zajistíme náhradní auto. Prodáváme i náhradní díly.</p></div>
+    </div>
+    <p class="price-note">Cenu opravy se dozvíte po prohlídce auta nebo po zaslání fotek.<span class="demo">ukázkový text</span></p>
+  </div>
+</section>
+
+<section id="skoda" class="tool" aria-labelledby="h-skoda">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-skoda">Kde je škoda?</h2><p>Klikněte na místo na autě a vyberte, co se stalo. Složíme z toho zprávu, kterou nám pošlete SMS nebo přečtete do telefonu.</p></div>
+    <div class="tool-grid">
+      <div>
+        <svg class="topview" viewBox="0 0 520 260" role="group" aria-label="Auto shora, klikací části">
+          <rect x="20" y="40" width="480" height="180" rx="70" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 6"/>
+          <path class="zone" data-z="Přední nárazník" tabindex="0" role="button" aria-label="Přední nárazník" d="M440 60 Q500 70 500 130 Q500 190 440 200 L430 200 L430 60Z"/>
+          <path class="zone" data-z="Kapota a přední blatníky" tabindex="0" role="button" aria-label="Kapota a přední blatníky" d="M340 60 L430 60 L430 200 L340 200Z"/>
+          <path class="zone" data-z="Přední dveře" tabindex="0" role="button" aria-label="Přední dveře" d="M250 60 L340 60 L340 200 L250 200Z"/>
+          <path class="zone" data-z="Zadní dveře" tabindex="0" role="button" aria-label="Zadní dveře" d="M160 60 L250 60 L250 200 L160 200Z"/>
+          <path class="zone" data-z="Zadní blatníky a víko kufru" tabindex="0" role="button" aria-label="Zadní blatníky a víko kufru" d="M90 60 L160 60 L160 200 L90 200Z"/>
+          <path class="zone" data-z="Zadní nárazník" tabindex="0" role="button" aria-label="Zadní nárazník" d="M90 60 L80 60 Q24 70 24 130 Q24 190 80 200 L90 200Z"/>
+          <path class="zone" data-z="Prahy" tabindex="0" role="button" aria-label="Prahy" d="M160 200 L340 200 L340 222 L160 222Z"/>
+          <path class="zone" data-z="Výfuk" tabindex="0" role="button" aria-label="Výfuk" d="M30 226 L90 226 L90 240 L30 240Z"/>
+          <text class="zlabel" x="465" y="134" text-anchor="middle">PŘED</text>
+          <text class="zlabel" x="385" y="134" text-anchor="middle">kapota</text>
+          <text class="zlabel" x="295" y="134" text-anchor="middle">dveře</text>
+          <text class="zlabel" x="205" y="134" text-anchor="middle">dveře</text>
+          <text class="zlabel" x="125" y="134" text-anchor="middle">kufr</text>
+          <text class="zlabel" x="56" y="134" text-anchor="middle">ZAD</text>
+          <text class="zlabel" x="250" y="216" text-anchor="middle">práh</text>
+          <text class="zlabel" x="60" y="256" text-anchor="middle">výfuk</text>
+        </svg>
+        <div class="chips" role="group" aria-label="Co se stalo">
+          <button class="chip" type="button" aria-pressed="false" data-c="promáčklina">Promáčklina</button>
+          <button class="chip" type="button" aria-pressed="false" data-c="škrábanec">Škrábanec</button>
+          <button class="chip" type="button" aria-pressed="false" data-c="rez">Rez</button>
+          <button class="chip" type="button" aria-pressed="false" data-c="prasklý plast">Prasklý plast</button>
+          <button class="chip" type="button" aria-pressed="false" data-c="škoda po nehodě">Po nehodě</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="seg" role="group" aria-label="Kdo platí">
+          <button type="button" id="pay-ins" aria-pressed="true">Platí pojišťovna</button>
+          <button type="button" id="pay-self" aria-pressed="false">Platím sám</button>
+        </div>
+        <label class="check"><input type="checkbox" id="need-car"> Potřebuji náhradní vozidlo</label>
+        <div class="ticket" id="ticket" aria-live="polite"></div>
+        <div class="ticket-actions">
+          <button class="btn btn-call btn-small" type="button" id="copy">Zkopírovat zprávu</button>
+          <a class="btn btn-line btn-small" href="tel:+420732258516">Zavolat 732 258 516</a>
+          <span class="copied" id="copied" hidden>Zkopírováno. Vložte ji do SMS na 732 258 516.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pojistka" aria-labelledby="h-poj">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-poj">Pojistná událost bez běhání</h2><p>Po nehodě máte dost starostí. Papíry s pojišťovnou vyřídíme my.</p></div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Zavolejte nám</h3><p>Řekněte, co se stalo a u které pojišťovny je škoda nahlášená. Domluvíme termín, kdy auto přivezete.</p></div>
+      <div class="step"><span class="n">2</span><h3>Pojišťovnu řešíme my</h3><p>Vyřídíme pojistnou událost a zajistíme náhradní vozidlo, abyste zůstali v pohybu.</p></div>
+      <div class="step"><span class="n">3</span><h3>Opravíme a nalakujeme</h3><p>Auto vyzvednete opravené. Při bezhotovostní platbě zaplatí opravu přímo pojišťovna.<span class="demo">ukázkový text</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-prace" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-prace">Před a po opravě</h2><p>Tady uvidí zákazníci Vaši práci. Stačí pár fotek z telefonu.</p></div>
+    <div class="ba">
+      <div class="ph">Sem přijde Vaše fotka<small>auto před opravou</small></div>
+      <div class="ph">Sem přijde Vaše fotka<small>stejné auto po opravě</small></div>
+      <div class="ph">Sem přijde Vaše fotka<small>dílna a rovnací stolice</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="h-duvera">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-duvera">Proč k nám</h2></div>
+    <div class="trust-grid">
+      <div class="tcell"><span class="big">4,8</span><p>z 5 hodnocení na <a href="https://www.firmy.cz/detail/2402382-karosarna-ales-paseka-ostrava-nova-bela.html" target="_blank" rel="noopener">Firmy.cz</a>. Zákazníci chválí rychlou a kvalitní výměnu nárazníku a dobrou komunikaci.</p></div>
+      <div class="tcell"><span class="big">1</span><p>dílna na všechno: rovnání, plasty, koroze, lak, výfuk i díly. Auto nemusíte vozit jinam.</p></div>
+      <div class="tcell"><span class="big">0 Kč</span><p>hotově u pojistné události: platbu vyřídíme bezhotovostně s pojišťovnou.<span class="demo">ukázkový text</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-faq">Na co se často ptáte</h2></div>
+    <div class="faq">
+      <details open><summary>Musím jednat s pojišťovnou sám?</summary><p>Nemusíte. Pojistnou událost vyřídíme za Vás, včetně bezhotovostní platby.</p></details>
+      <details><summary>Budu mít čím jezdit, než bude auto hotové?</summary><p>Zajistíme Vám náhradní vozidlo. Podmínky Vám řekneme při domluvě termínu.<span class="demo">ukázkový text</span></p></details>
+      <details><summary>Opravíte i rez na prazích a blatnících?</summary><p>Ano, opravy koroze patří k naší běžné práci. Čím dřív auto přivezete, tím menší oprava.</p></details>
+      <details><summary>Můžu přijet po práci nebo o víkendu?</summary><p>Otevřeno máme ve všední dny 8:00–17:00. Mimo tuto dobu se dá domluvit po telefonu.</p></details>
+      <details><summary>Prodáváte i náhradní díly?</summary><p>Ano, náhradní díly prodáváme. Zavolejte, jaký díl potřebujete.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" aria-labelledby="h-kontakt" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-kontakt">Kontakt a cesta k nám</h2></div>
+    <div class="contact-grid">
+      <div class="card">
+        <a class="btn btn-call" href="tel:+420732258516" style="justify-content:center">Zavolat 732 258 516</a>
+        <div class="row"><span>E-mail</span><a href="mailto:alespaseka@seznam.cz">alespaseka@seznam.cz</a></div>
+        <div class="row"><span>Adresa</span><span>Foksova 420/21, 724 00 Ostrava-Nová Bělá</span></div>
+        <div class="row" data-d="1"><span>Pondělí – pátek</span><span>8:00–17:00</span></div>
+        <div class="row" data-d="6"><span>Sobota, neděle</span><span>po telefonické domluvě</span></div>
+        <p id="nowline" class="today"></p>
+      </div>
+      <div class="mapbox">
+        <svg viewBox="0 0 480 260" role="img" aria-label="Schematická mapka: Nová Bělá na jihu Ostravy">
+          <rect width="480" height="260" fill="var(--soft)"/>
+          <path d="M0 70 Q140 40 240 90 T480 70" stroke="var(--paper)" stroke-width="16" fill="none"/>
+          <path d="M120 260 Q170 160 250 130 T420 0" stroke="var(--paper)" stroke-width="12" fill="none"/>
+          <path d="M0 200 Q200 180 480 210" stroke="var(--line)" stroke-width="6" fill="none"/>
+          <text x="20" y="40" font-family="Sofia Sans, sans-serif" font-size="14" font-weight="700" fill="var(--muted)">OSTRAVA-JIH ↑</text>
+          <text x="330" y="240" font-family="Sofia Sans, sans-serif" font-size="14" font-weight="700" fill="var(--muted)">→ Frýdek-Místek</text>
+          <circle cx="250" cy="130" r="14" fill="var(--teal)"/><circle cx="250" cy="130" r="5" fill="#fff"/>
+          <rect x="268" y="112" width="150" height="36" rx="6" fill="var(--ink)"/>
+          <text x="280" y="135" font-family="Sofia Sans, sans-serif" font-size="15" font-weight="700" fill="var(--pearl)">Foksova 420/21</text>
+        </svg>
+        <div class="links">
+          <a class="btn btn-line btn-small" href="https://mapy.cz/zakladni?q=Foksova%20420%2F21%20Ostrava%20Nov%C3%A1%20B%C4%9Bl%C3%A1" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+          <a class="btn btn-line btn-small" href="https://www.google.com/maps/search/?api=1&query=Foksova%20420%2F21%2C%20Ostrava-Nov%C3%A1%20B%C4%9Bl%C3%A1" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Karosárna – Aleš Paseka · IČO 42783909 · Foksova 420/21, 724 00 Ostrava-Nová Bělá</span>
+    <span>Návrh webu: Weby na míru</span>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn-call btn-small" href="tel:+420732258516">Zavolat</a><a class="btn btn-line btn-small" style="color:var(--on-dark)" href="#skoda">Poptat opravu</a></div>
+
+<script>
+(function(){
+  var zones=[].slice.call(document.querySelectorAll('.zone'));
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var ins=document.getElementById('pay-ins'), self=document.getElementById('pay-self');
+  var car=document.getElementById('need-car'), t=document.getElementById('ticket');
+  var picked=['Přední dveře'], what=['promáčklina'], insurance=true;
+  function sync(){
+    zones.forEach(function(z){z.classList.toggle('on',picked.indexOf(z.dataset.z)>-1)});
+    chips.forEach(function(c){c.setAttribute('aria-pressed',what.indexOf(c.dataset.c)>-1?'true':'false')});
+    ins.setAttribute('aria-pressed',insurance?'true':'false'); self.setAttribute('aria-pressed',insurance?'false':'true');
+    var msg='Dobrý den, prosím o opravu auta.\n';
+    msg+='Místo: '+(picked.length?picked.join(', '):'zatím nevybráno')+'\n';
+    msg+='Co se stalo: '+(what.length?what.join(', '):'zatím nevybráno')+'\n';
+    msg+=insurance?'Platba: přes pojišťovnu (pojistná událost)\n':'Platba: platím sám\n';
+    if(car.checked) msg+='Potřebuji náhradní vozidlo.\n';
+    msg+='Značka a model auta: …\nKdy můžu auto přivézt: …';
+    t.textContent=msg;
+  }
+  function tog(arr,v){var i=arr.indexOf(v); if(i>-1) arr.splice(i,1); else arr.push(v);}
+  zones.forEach(function(z){
+    z.addEventListener('click',function(){tog(picked,z.dataset.z);sync()});
+    z.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog(picked,z.dataset.z);sync()}});
+  });
+  chips.forEach(function(c){c.addEventListener('click',function(){tog(what,c.dataset.c);sync()})});
+  ins.addEventListener('click',function(){insurance=true;sync()});
+  self.addEventListener('click',function(){insurance=false;sync()});
+  car.addEventListener('change',sync);
+  document.getElementById('copy').addEventListener('click',function(){
+    var ok=document.getElementById('copied');
+    function sel(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(t.textContent).then(function(){ok.hidden=false},function(){sel();ok.hidden=false;ok.textContent='Text je označený, zkopírujte ho a vložte do SMS na 732 258 516.'});}catch(e){sel();}
+  });
+  sync();
+  // dnešní otevírací doba (jen z ověřených hodin Po–Pá 8–17)
+  var d=new Date(), wd=d.getDay(), h=d.getHours()+d.getMinutes()/60, n=document.getElementById('nowline');
+  if(wd>=1&&wd<=5){ n.textContent = (h>=8&&h<17)?'Teď máme otevřeno, do 17:00.':'Teď máme zavřeno. Otevíráme ve všední den v 8:00.'; document.querySelector('[data-d="1"]').classList.add('today'); }
+  else { n.textContent='O víkendu po telefonické domluvě.'; document.querySelector('[data-d="6"]').classList.add('today'); }
+})();
+</script>
+</body>
+</html>

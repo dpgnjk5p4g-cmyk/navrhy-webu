@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Martin Ostrý</title>
+<meta name="description" content="Autoservis Martin Ostrý, Sukova 1573/1, Ostrava-Hulváky: opravy silničních vozidel, karosářské a mechanické práce, příprava a provedení STK, výměna autoskel, klimatizace, půjčení aut a přívěsných vozíků. Po–Pá 7:00–16:30.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;700&family=Instrument+Sans:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Autoservis Martin Ostrý",
+  "telephone": "+420608720020",
+  "email": "martinostry@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "48414280"},
+  "address": {"@type": "PostalAddress", "streetAddress": "Sukova 1573/1", "addressLocality": "Ostrava-Hulváky", "postalCode": "709 00", "addressCountry": "CZ"},
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "16:30"}]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: garážová vrata – hero s typografií vlevo a SVG vraty, která se po načtení vytáhnou nahoru; pak tabule „Co dnes potřebujete?“ se třemi záložkami (oprava / STK / půjčovna), služby, kontakt */
+:root{
+  --teal:#0F5257; --teal-ink:#0B3F43; --cream:#F2E3BC; --paper:#FBF7EE; --card:#FFFFFF; --coal:#1A1A1A; --rust:#B5562B; --rust-ink:#93421F;
+  --ink:#1A1A1A; --muted:#55595C; --line:#E2D8C2; --band:#0F5257; --band-fg:#FBF7EE;
+  --display:"Bai Jamjuree","Trebuchet MS",system-ui,sans-serif; --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#111816; --card:#18211F; --ink:#F1EDE3; --muted:#B3B8B4; --line:#2B3633; --teal-ink:#8FD3D7; --rust-ink:#E58A5F; --band:#0B3B3F; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#111816; --card:#18211F; --ink:#F1EDE3; --muted:#B3B8B4; --line:#2B3633; --teal-ink:#8FD3D7; --rust-ink:#E58A5F; --band:#0B3B3F; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;line-height:1.05;text-wrap:balance}
+h2{font-size:clamp(30px,4.4vw,44px);letter-spacing:-.01em}
+h3{font-size:21px}
+p{margin:0}
+a{color:var(--teal-ink)}
+:focus-visible{outline:3px solid var(--rust);outline-offset:2px}
+.demo{display:inline-block;font:700 11px/1.2 var(--body);text-transform:uppercase;letter-spacing:.06em;background:var(--cream);color:#3A2E12;padding:3px 6px;border-radius:2px;margin-left:6px;vertical-align:middle}
+.banner{background:var(--cream);color:#3A2E12;font-weight:700;font-size:14px;text-align:center;padding-block:8px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:2px solid var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:10px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 19px/1.1 var(--display)}
+.logo i{display:grid;place-items:center;width:38px;height:38px;background:var(--teal);color:var(--cream);font-style:normal;font-size:18px;border-radius:4px}
+.top nav{display:flex;gap:22px;font-size:15px}
+.top nav a{color:var(--ink);text-decoration:none}
+@media (max-width:860px){.top nav{display:none}}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 17px/1 var(--body);padding:15px 22px;border-radius:4px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px}
+.btn-rust{background:var(--rust);color:#FFF8EE}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-line{border-color:currentColor;background:transparent;color:inherit}
+.btn-sm{padding:10px 15px;font-size:15px}
+/* hero */
+.hero{padding-block:44px 52px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+@media (max-width:860px){.hero{padding-block:26px 36px}.hero .wrap{grid-template-columns:1fr;gap:22px}}
+.tag{display:inline-flex;gap:8px;align-items:center;font:700 14px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--rust-ink)}
+.tag::before{content:"";width:28px;height:3px;background:var(--rust)}
+.hero h1{font-size:clamp(40px,5.6vw,68px);letter-spacing:-.02em;margin-block:14px 18px}
+.hero h1 .u{background:linear-gradient(transparent 62%,var(--cream) 62%);padding-inline:2px}
+.lead{font-size:19px;color:var(--muted);max-width:32em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.open{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-weight:600;font-size:15.5px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--muted);margin-right:6px}
+.dot.on{background:#2E9D5A}
+.garage{width:100%;max-width:500px;justify-self:center}
+.garage .door{animation:lift 1.6s .5s cubic-bezier(.6,.05,.3,1) forwards}
+@keyframes lift{to{transform:translateY(-196px)}}
+@media (prefers-reduced-motion:reduce){.garage .door{animation:none;transform:translateY(-196px)}}
+/* board */
+.board{background:var(--band);color:var(--band-fg);padding-block:60px}
+.board h2{color:var(--band-fg)}
+.board .sub{color:#CFE1DF;margin-top:8px;max-width:38em}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:26px}
+.tabs button{font:700 16px/1.2 var(--display);padding:16px 10px;border:2px solid #4D8A8E;background:transparent;color:var(--band-fg);border-radius:4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px}
+.tabs button svg{width:34px;height:34px}
+.tabs button[aria-selected="true"]{background:var(--cream);color:#1A1A1A;border-color:var(--cream)}
+.pane{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px;background:#0B3F43;border-radius:6px;padding:26px}
+@media (max-width:820px){.pane{grid-template-columns:1fr;padding:20px}}
+.pane ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.pane li{padding-left:24px;position:relative}
+.pane li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:3px;background:var(--cream)}
+.pane .field{display:flex;flex-direction:column;gap:6px;font-weight:600;margin-top:12px}
+.pane input,.pane select{font:500 16px var(--body);padding:11px;border-radius:4px;border:2px solid #4D8A8E;background:#FBF7EE;color:#1A1A1A}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sms{background:#FBF7EE;color:#1A1A1A;border-radius:4px;padding:14px;white-space:pre-wrap;font-size:15.5px;margin-top:14px;min-height:110px}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;align-items:center}
+.copied{font-weight:700;color:var(--cream)}
+/* services */
+section.pad{padding-block:64px}
+.head{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;align-items:end;margin-bottom:26px}
+.head p{color:var(--muted);max-width:34em}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:900px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.svc{grid-template-columns:1fr}}
+.s{background:var(--card);border:2px solid var(--line);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.s .ic{width:44px;height:44px;border-radius:4px;background:var(--cream);display:grid;place-items:center;color:var(--teal)}
+.s .ic svg{width:28px;height:28px}
+.s p{color:var(--muted);font-size:16px}
+.note{margin-top:18px;color:var(--muted);font-size:16px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);border-radius:6px;overflow:hidden}
+.st{padding:22px;border-right:2px solid var(--ink);display:flex;flex-direction:column;gap:8px;background:var(--card)}
+.st:last-child{border-right:0}
+.st b{font:700 15px var(--display);color:var(--rust-ink);letter-spacing:.08em}
+.st p{color:var(--muted)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}.st{border-right:0;border-bottom:2px solid var(--ink)}.st:last-child{border-bottom:0}}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.ph{min-width:0;min-height:190px;border:2px dashed var(--line);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-weight:700;padding:10px;background:repeating-linear-gradient(0deg,var(--card) 0 22px,var(--paper) 22px 24px)}
+.ph small{font-weight:500}
+@media (max-width:640px){.photos{grid-template-columns:1fr 1fr}.photos .ph:last-child{display:none}}
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.t{border-left:4px solid var(--rust);padding:6px 0 6px 16px}
+.t b{display:block;font:700 22px/1.2 var(--display);margin-bottom:4px}
+.t p{color:var(--muted);font-size:16px}
+@media (max-width:760px){.trust{grid-template-columns:1fr}}
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:var(--card);border:2px solid var(--line);border-radius:6px;padding:15px 18px}
+summary{font-weight:700;font-size:18px;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+.card{background:var(--card);border:2px solid var(--line);border-radius:6px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.hrow{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:8px;font-variant-numeric:tabular-nums}
+.hrow.now{font-weight:700;color:var(--rust-ink)}
+footer{background:var(--coal);color:#C9C6BD;font-size:14px;padding-block:26px 100px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:25;display:none;gap:8px;background:var(--coal);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.callbar a{flex:1}
+@media (max-width:860px){.callbar{display:flex}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Martin Ostrý</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><i>MO</i>Autoservis Ostrý</a>
+    <nav aria-label="Hlavní"><a href="#potrebuji">Objednat</a><a href="#sluzby">Služby</a><a href="#stk">STK</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="btn btn-rust btn-sm" href="tel:+420608720020"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>608 720 020</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <span class="tag">Autoservis · Ostrava-Hulváky</span>
+      <h1 id="h1">Oprava, <span class="u">STK</span> i&nbsp;vozík. Všechno v&nbsp;Hulvákách.</h1>
+      <p class="lead">Mechanické a karosářské opravy, příprava i provedení STK, autoskla a klimatizace. Půjčíme Vám auto nebo přívěsný vozík.</p>
+      <div class="cta">
+        <a class="btn btn-rust" href="tel:+420608720020"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Zavolat 608 720 020</a>
+        <a class="btn btn-line" href="#potrebuji">Objednat servis</a>
+      </div>
+      <div class="open"><span><span class="dot" id="dot"></span><span id="state">Po–Pá 7:00–16:30</span></span><span>Sukova 1573/1, Ostrava</span></div>
+    </div>
+    <svg class="garage" viewBox="0 0 500 360" role="img" aria-label="Garážová vrata se vytáhnou a odhalí auto na zvedáku">
+      <rect x="20" y="20" width="460" height="330" rx="6" fill="#0F5257"/>
+      <path d="M10 40 L250 0 L490 40 L490 60 L10 60Z" fill="#1A1A1A"/>
+      <rect x="160" y="16" width="180" height="30" rx="3" fill="#F2E3BC"/>
+      <text x="250" y="37" text-anchor="middle" font-family="Bai Jamjuree, sans-serif" font-weight="700" font-size="17" fill="#1A1A1A">AUTOSERVIS</text>
+      <clipPath id="opening"><rect x="60" y="90" width="380" height="250"/></clipPath>
+      <g clip-path="url(#opening)">
+        <rect x="60" y="90" width="380" height="250" fill="#E9DFC8"/>
+        <rect x="60" y="300" width="380" height="40" fill="#CFC3A6"/>
+        <rect x="96" y="140" width="14" height="160" fill="#B5562B"/><rect x="390" y="140" width="14" height="160" fill="#B5562B"/>
+        <rect x="104" y="218" width="292" height="10" fill="#1A1A1A"/>
+        <path d="M130 214 L144 182 Q150 172 166 170 L208 166 L236 140 Q242 134 254 134 L320 134 Q332 134 340 142 L364 166 L376 170 Q388 174 388 190 L388 214Z" fill="#B5562B"/>
+        <path d="M244 146 L286 146 L286 166 L222 166Z M296 146 L326 146 L346 166 L296 166Z" fill="#F2E3BC" opacity=".85"/>
+        <circle cx="180" cy="214" r="20" fill="#1A1A1A"/><circle cx="180" cy="214" r="8" fill="#9AA0A3"/>
+        <circle cx="340" cy="214" r="20" fill="#1A1A1A"/><circle cx="340" cy="214" r="8" fill="#9AA0A3"/>
+        <g stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"><path d="M410 110 L430 110 M420 100 L420 130"/></g>
+        <rect x="72" y="104" width="54" height="22" rx="3" fill="#1A1A1A"/><text x="99" y="120" text-anchor="middle" font-family="Bai Jamjuree, sans-serif" font-size="12" font-weight="700" fill="#F2E3BC">STK</text>
+        <!-- vozík -->
+        <rect x="296" y="268" width="96" height="26" rx="2" fill="#0F5257"/><line x1="296" y1="282" x2="268" y2="290" stroke="#1A1A1A" stroke-width="5"/><circle cx="344" cy="300" r="10" fill="#1A1A1A"/>
+        <g class="door">
+          <rect x="60" y="90" width="380" height="250" fill="#D9D2C1"/>
+          <g fill="#BDB49F"><rect x="60" y="120" width="380" height="4"/><rect x="60" y="152" width="380" height="4"/><rect x="60" y="184" width="380" height="4"/><rect x="60" y="216" width="380" height="4"/><rect x="60" y="248" width="380" height="4"/><rect x="60" y="280" width="380" height="4"/><rect x="60" y="312" width="380" height="4"/></g>
+          <rect x="225" y="318" width="50" height="10" rx="5" fill="#1A1A1A"/>
+        </g>
+      </g>
+      <rect x="54" y="84" width="392" height="10" fill="#1A1A1A"/>
+    </svg>
+  </div>
+</section>
+
+<section id="potrebuji" class="board" aria-labelledby="h-b">
+  <div class="wrap">
+    <h2 id="h-b">Co dnes potřebujete?</h2>
+    <p class="sub">Vyberte jednu možnost. Připravíme zprávu, kterou pošlete SMS na 608 720 020, nebo ji přečtete do telefonu.</p>
+    <div class="tabs" role="tablist" aria-label="Co potřebujete">
+      <button role="tab" id="t-oprava" aria-selected="true" aria-controls="pane"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M26 6a8 8 0 0 0-9 11L6 28l6 6 11-11a8 8 0 0 0 11-9l-5 5-5-1-1-5z"/></svg>Opravit auto</button>
+      <button role="tab" id="t-stk" aria-selected="false" aria-controls="pane"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><rect x="7" y="6" width="26" height="28" rx="3"/><path d="M13 18l4 4 8-8M13 28h14"/></svg>Projít STK</button>
+      <button role="tab" id="t-pujc" aria-selected="false" aria-controls="pane"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><rect x="12" y="14" width="24" height="12" rx="1"/><path d="M12 22H4"/><circle cx="24" cy="30" r="4"/></svg>Půjčit vozík nebo auto</button>
+    </div>
+    <div class="pane" id="pane" role="tabpanel" aria-live="polite">
+      <div>
+        <h3 id="p-title"></h3>
+        <ul id="p-list"></ul>
+      </div>
+      <div>
+        <div id="p-fields"></div>
+        <div class="sms" id="sms"></div>
+        <div class="acts">
+          <button class="btn btn-rust btn-sm" type="button" id="copy">Zkopírovat zprávu</button>
+          <a class="btn btn-line btn-sm" href="tel:+420608720020">Zavolat</a>
+          <span class="copied" id="ok" hidden>Zkopírováno. Vložte do SMS na 608 720 020.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" class="pad" aria-labelledby="h-s">
+  <div class="wrap">
+    <div class="head"><h2 id="h-s">Služby</h2><p>Servis v Hulvákách, který auto opraví, připraví na technickou a v případě potřeby Vám půjčí jiné.</p></div>
+    <div class="svc">
+      <div class="s"><span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M26 6a8 8 0 0 0-9 11L6 28l6 6 11-11a8 8 0 0 0 11-9l-5 5-5-1-1-5z"/></svg></span><h3>Mechanické opravy</h3><p>Opravy silničních vozidel, od podvozku po motor.</p></div>
+      <div class="s"><span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 28l4-10h24l4 10v4H4z"/><path d="M14 12l6-6 6 6"/></svg></span><h3>Karosářské práce</h3><p>Opravy karoserie po nehodě nebo po letech provozu.</p></div>
+      <div class="s" id="stk"><span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><rect x="7" y="6" width="26" height="28" rx="3"/><path d="M13 18l4 4 8-8"/></svg></span><h3>Příprava a provedení STK</h3><p>Auto připravíme na technickou kontrolu a STK zajistíme.</p></div>
+      <div class="s"><span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 30L10 10h20l4 20z"/><path d="M15 16l4 6 3-3 4 5"/></svg></span><h3>Výměna autoskel</h3><p>Prasklé čelní nebo boční sklo vyměníme.</p></div>
+      <div class="s"><span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 4v32M6 12l28 16M6 28l28-16"/></svg></span><h3>Klimatizace</h3><p>Plnění a opravy klimatizací.</p></div>
+      <div class="s"><span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><rect x="12" y="14" width="24" height="12" rx="1"/><path d="M12 22H4"/><circle cx="24" cy="30" r="4"/></svg></span><h3>Půjčovna aut a vozíků</h3><p>Zapůjčení automobilů a přívěsných vozíků, třeba na stěhování.</p></div>
+    </div>
+    <p class="note">Cenu opravy Vám řekneme po prohlídce auta.<span class="demo">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="pad" aria-labelledby="h-j" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-j">Jak to probíhá</h2></div>
+    <div class="steps">
+      <div class="st"><b>1 · TELEFON</b><h3>Domluvíme termín</h3><p>Zavoláte nebo pošlete SMS z tabule výše. Řekneme, kdy auto přivézt.</p></div>
+      <div class="st"><b>2 · DÍLNA</b><h3>Opravíme auto</h3><p>Když auto zůstane v dílně déle, můžete si půjčit jiné.<span class="demo">ukázkový text</span></p></div>
+      <div class="st"><b>3 · PŘEDÁNÍ</b><h3>Vyzvednete hotové</h3><p>Ozveme se, až bude hotovo. Vyzvednout můžete ve všední den do 16:30.</p></div>
+    </div>
+    <div class="photos">
+      <div class="ph">Sem přijde Vaše fotka<small>dílna v Sukově ulici</small></div>
+      <div class="ph">Sem přijde Vaše fotka<small>přívěsný vozík k zapůjčení</small></div>
+      <div class="ph">Sem přijde Vaše fotka<small>Martin Ostrý při práci</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" aria-labelledby="h-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-t">Proč k nám</h2></div>
+    <div class="trust">
+      <div class="t"><b>Oprava i STK na jedné adrese</b><p>Nemusíte auto vozit z dílny na stanici a zpět.</p></div>
+      <div class="t"><b>Půjčovna na místě</b><p>Auto nebo přívěsný vozík půjčíme přímo v servisu.</p></div>
+      <div class="t"><b>Konkrétní člověk</b><p>Martin Ostrý, IČO 48414280 (údaj z <a href="https://www.firmy.cz/detail/1972786-autoservis-martin-ostry-ostrava-hulvaky.html" target="_blank" rel="noopener">Firmy.cz</a>).</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" aria-labelledby="h-f" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-f">Časté otázky</h2></div>
+    <div class="faq">
+      <details open><summary>Uděláte i samotnou STK?</summary><p>Ano. Nabízíme přípravu i provedení STK.</p></details>
+      <details><summary>Můžu si půjčit vozík na víkend?</summary><p>Přívěsné vozíky půjčujeme. Termín a podmínky domluvíte po telefonu, vyzvednutí je v otevírací době.<span class="demo">ukázkový text</span></p></details>
+      <details><summary>Nefouká mi klimatizace. Pomůžete?</summary><p>Ano, klimatizace plníme i opravujeme.</p></details>
+      <details><summary>Kdy máte otevřeno?</summary><p>Pondělí až pátek 7:00–16:30. O státních svátcích se otevírací doba může lišit.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="pad" aria-labelledby="h-k" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-k">Kontakt</h2></div>
+    <div class="contact">
+      <div class="card">
+        <a class="btn btn-rust" href="tel:+420608720020">Zavolat 608 720 020</a>
+        <p><b>E-mail:</b> <a href="mailto:martinostry@seznam.cz">martinostry@seznam.cz</a></p>
+        <p><b>Adresa:</b> Sukova 1573/1, 709 00 Ostrava-Hulváky</p>
+        <div class="cta" style="margin-top:4px">
+          <a class="btn btn-line btn-sm" href="https://mapy.cz/zakladni?q=Sukova%201573%2F1%20Ostrava" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&query=Sukova%201573%2F1%2C%20Ostrava-Hulv%C3%A1ky" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Otevírací doba</h3>
+        <div class="hrow" data-d="w"><span>Pondělí – pátek</span><span>7:00–16:30</span></div>
+        <div class="hrow" data-d="e"><span>Sobota, neděle</span><span>zavřeno</span></div>
+        <p class="note" style="margin:0">O státních svátcích se může lišit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Autoservis Martin Ostrý · IČO 48414280 · Sukova 1573/1, 709 00 Ostrava-Hulváky</span><span>Návrh webu: Weby na míru</span></div></footer>
+<div class="callbar"><a class="btn btn-rust btn-sm" href="tel:+420608720020">Zavolat</a><a class="btn btn-line btn-sm" style="color:#FBF7EE" href="#potrebuji">Objednat servis</a></div>
+
+<script>
+(function(){
+  var data={
+    oprava:{title:'Oprava auta',list:['Mechanické opravy silničních vozidel','Karosářské práce','Výměna autoskel','Plnění a opravy klimatizací'],
+      fields:'<label class="field" for="f-car">Auto (značka a model)<input id="f-car" placeholder="např. Škoda Octavia"></label><label class="field" for="f-what">Co auto dělá<select id="f-what"><option>Zvláštní zvuk nebo vibrace</option><option>Svítí kontrolka</option><option>Poškozená karoserie</option><option>Prasklé sklo</option><option>Nefouká klimatizace</option><option>Jiné, popíšu do telefonu</option></select></label>'},
+    stk:{title:'STK',list:['Příprava auta na technickou kontrolu','Provedení STK','Opravy, které by STK neprošly'],
+      fields:'<label class="field" for="f-car">Auto (značka a model)<input id="f-car" placeholder="např. Ford Focus"></label><label class="field" for="f-what">Kdy končí STK<input id="f-what" type="month"></label>'},
+    pujc:{title:'Půjčení vozíku nebo auta',list:['Přívěsné vozíky','Automobily','Vyzvednutí v otevírací době Po–Pá 7:00–16:30'],
+      fields:'<label class="field" for="f-car">Co si chci půjčit<select id="f-car"><option>Přívěsný vozík</option><option>Automobil</option></select></label><div class="pair"><label class="field" for="f-what">Od<input id="f-what" type="date"></label><label class="field" for="f-to">Do<input id="f-to" type="date"></label></div>'}
+  };
+  var cur='oprava', tabs={oprava:'t-oprava',stk:'t-stk',pujc:'t-pujc'};
+  function fmt(v){if(!v)return '…'; var p=v.split('-'); return p.length===3?(+p[2])+'. '+(+p[1])+'. '+p[0]:(+p[1])+'/'+p[0];}
+  function msg(){
+    var c=document.getElementById('f-car'), w=document.getElementById('f-what'), to=document.getElementById('f-to');
+    var car=c&&c.value?c.value:'…', what=w?w.value:'';
+    var m='Dobrý den, ';
+    if(cur==='oprava') m+='prosím o termín opravy.\nAuto: '+car+'\nProblém: '+(what||'…')+'\nKdy můžu přijet: …';
+    if(cur==='stk') m+='prosím o přípravu a provedení STK.\nAuto: '+car+'\nSTK končí: '+fmt(what)+'\nKdy můžu přijet: …';
+    if(cur==='pujc') m+='chtěl bych si půjčit: '+car+'\nOd: '+fmt(what)+'\nDo: '+fmt(to&&to.value)+'\nJméno: …';
+    document.getElementById('sms').textContent=m;
+  }
+  function show(k){
+    cur=k;
+    Object.keys(tabs).forEach(function(t){document.getElementById(tabs[t]).setAttribute('aria-selected',t===k?'true':'false')});
+    document.getElementById('p-title').textContent=data[k].title;
+    document.getElementById('p-list').innerHTML=data[k].list.map(function(x){return '<li>'+x+'</li>'}).join('');
+    document.getElementById('p-fields').innerHTML=data[k].fields;
+    document.getElementById('p-fields').querySelectorAll('input,select').forEach(function(e){e.addEventListener('input',msg);e.addEventListener('change',msg)});
+    msg();
+  }
+  Object.keys(tabs).forEach(function(k){document.getElementById(tabs[k]).addEventListener('click',function(){show(k)})});
+  document.getElementById('copy').addEventListener('click',function(){
+    var t=document.getElementById('sms'), ok=document.getElementById('ok');
+    function sel(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);ok.hidden=false;ok.textContent='Text je označený, zkopírujte ho do SMS na 608 720 020.';}
+    try{navigator.clipboard.writeText(t.textContent).then(function(){ok.hidden=false},sel)}catch(e){sel()}
+  });
+  show('oprava');
+  var d=new Date(), wd=d.getDay(), h=d.getHours()+d.getMinutes()/60, open=wd>=1&&wd<=5&&h>=7&&h<16.5;
+  document.getElementById('dot').classList.toggle('on',open);
+  document.getElementById('state').textContent=open?'Teď otevřeno, do 16:30':'Teď zavřeno · Po–Pá 7:00–16:30';
+  document.querySelector(wd>=1&&wd<=5?'[data-d="w"]':'[data-d="e"]').classList.add('now');
+})();
+</script>
+</body>
+</html>
