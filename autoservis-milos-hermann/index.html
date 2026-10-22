@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Miloš Hermann</title>
+<meta name="description" content="Autoservis Miloš Hermann, Kunovice u Vsetína: mechanické a elektroopravy aut, příprava vozů a zajištění STK, diagnostika řídicích jednotek. Volejte 776 881 087.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800;900&family=Overpass+Mono:wght@500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Autoservis Miloš Hermann","telephone":"+420776881087","email":"m.hermann@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Kunovice 127","postalCode":"756 44","addressLocality":"Kunovice","addressCountry":"CZ"},"geo":{"@type":"GeoCoordinates","latitude":49.446096,"longitude":17.808849},"description":"Nabídka mechanických a elektrooprav automobilů. Příprava vozů a zajištění STK. Provádění diagnostiky řídících jednotek.","taxID":"66731593"}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Layout: STK známka – kruhová nálepka s měsíci nese hero, kalkulačka „Kdy Vám končí STK?“ je srdce stránky; petrolejová + razítková červená */
+:root{
+  --petrol:#0E3B43; --petrol-2:#155664; --tyrkys:#2BB3A3; --razitko:#B83A30; --papir:#F7F7F2; --karta:#FFFFFF;
+  --ink:#122429; --muted:#4A5E63; --line:#D3DCDA; --on-dark:#EEF6F5; --tag:#E8EFEE; --ok:#1F7A4D; --warn:#A86A00;
+  --f-display:"Overpass","Trebuchet MS",system-ui,sans-serif;
+  --f-mono:"Overpass Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --petrol:#0A2B31; --petrol-2:#124651; --tyrkys:#3CCAB9; --razitko:#E0675C; --papir:#0E1A1D; --karta:#152428;
+  --ink:#E4EEEE; --muted:#9FB4B6; --line:#27403F; --on-dark:#EEF6F5; --tag:#1B2F33; --ok:#4CC28A; --warn:#E3A93C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --petrol:#0A2B31; --petrol-2:#124651; --tyrkys:#3CCAB9; --razitko:#E0675C; --papir:#0E1A1D; --karta:#152428;
+  --ink:#E4EEEE; --muted:#9FB4B6; --line:#27403F; --on-dark:#EEF6F5; --tag:#1B2F33; --ok:#4CC28A; --warn:#E3A93C; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papir);color:var(--ink);font:400 17px/1.6 var(--f-display);padding-bottom:84px}
+h1,h2,h3{line-height:1.05;text-wrap:balance;margin:0;font-weight:900;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.navrh{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
+.uk{display:inline-block;font:700 10.5px/1.5 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;background:var(--tag);color:var(--muted);border:1px dashed var(--line);border-radius:4px;padding:0 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.top{background:var(--petrol);color:var(--on-dark);border-bottom:1px solid rgba(255,255,255,.08)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font-weight:900;font-size:19px;line-height:1.1}
+.logo span{display:block;font:500 12px/1.3 var(--f-mono);letter-spacing:.08em;opacity:.8;text-transform:uppercase}
+.top a{font:700 15px/1 var(--f-mono);text-decoration:none;background:rgba(255,255,255,.1);padding:9px 12px;border-radius:6px;white-space:nowrap}
+.hero{background:var(--petrol);color:var(--on-dark);padding-block:24px 40px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:10px;background:repeating-linear-gradient(90deg,var(--razitko) 0 26px,var(--on-dark) 26px 52px);opacity:.9}
+.hero .wrap{display:grid;gap:26px;align-items:center}
+.hero h1{font-size:clamp(36px,7vw,64px)}
+.hero h1 em{font-style:normal;color:var(--tyrkys)}
+.hero p{margin:12px 0 0;max-width:33em;color:#CFE2E0;font-size:18px}
+.note{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.08);border-left:4px solid var(--tyrkys);padding:10px 12px;border-radius:0 8px 8px 0;font-size:15px;margin-top:16px;max-width:34em}
+.note b{color:#fff}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:800 17px/1 var(--f-display);text-decoration:none;border-radius:8px;padding:15px 20px;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--razitko);color:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:var(--on-dark);background:transparent}
+.btn-line{border-color:var(--line);color:var(--ink);background:transparent}
+.btn:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--tyrkys);outline-offset:2px}
+.stk{width:min(320px,80vw);aspect-ratio:1;max-width:100%;justify-self:center}
+.stk svg{width:100%;height:100%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stk .ring{transform-origin:150px 150px;animation:spin 60s linear infinite}
+@media (prefers-reduced-motion:reduce){.stk .ring{animation:none}}
+section{padding-block:56px}
+.eyebrow{font:700 13px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--razitko);margin:0 0 10px}
+h2{font-size:clamp(28px,4.6vw,44px)}
+.lead{color:var(--muted);max-width:38em;margin:10px 0 0}
+.svc{display:grid;gap:0;margin-top:26px;border-top:2px solid var(--ink)}
+.svc article{display:grid;grid-template-columns:56px 1fr;gap:4px 14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.svc .n{font:700 14px/1 var(--f-mono);color:var(--razitko);padding-top:6px}
+.svc h3{font-size:22px;font-weight:800}
+.svc p{grid-column:2;margin:0;color:var(--muted)}
+/* kalkulačka */
+.calc{background:var(--tag);border-block:1px solid var(--line)}
+.calc .wrap{display:grid;gap:26px}
+.panel{background:var(--karta);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:16px}
+.tabs{display:flex;gap:6px;background:var(--tag);padding:4px;border-radius:10px}
+.tabs button{flex:1;font:700 15px/1.2 var(--f-display);border:0;border-radius:8px;padding:10px 8px;background:transparent;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--karta);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label.f{display:grid;gap:6px;font-weight:600;font-size:15px}
+select,input[type=text]{font:inherit;font-size:16px;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--papir);color:var(--ink);width:100%}
+.result{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;border-radius:12px;padding:16px;border:2px solid var(--line)}
+.result .badge{font:900 34px/1 var(--f-display);font-variant-numeric:tabular-nums}
+.result .badge small{display:block;font:700 12px/1.2 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.result p{margin:0}
+.result.ok{border-color:var(--ok)}.result.ok .badge{color:var(--ok)}
+.result.soon{border-color:var(--warn)}.result.soon .badge{color:var(--warn)}
+.result.late{border-color:var(--razitko)}.result.late .badge{color:var(--razitko)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;gap:6px;align-items:center;border:1.5px solid var(--line);border-radius:999px;padding:7px 12px;font-size:15px;cursor:pointer}
+.chips input{accent-color:var(--razitko)}
+.chips label:has(input:checked){border-color:var(--razitko)}
+.msg{font:500 14.5px/1.55 var(--f-mono);white-space:pre-wrap;background:var(--papir);border:1.5px dashed var(--razitko);border-radius:10px;padding:14px;overflow-wrap:anywhere}
+.small{font-size:14px;color:var(--muted);margin:0}
+.rule{font:500 14px/1.5 var(--f-mono);color:var(--muted);border-left:3px solid var(--tyrkys);padding-left:12px;margin-top:14px}
+.steps{display:grid;gap:14px;margin-top:24px}
+.step{background:var(--karta);border:1px solid var(--line);border-radius:12px;padding:18px}
+.step .k{font:700 13px/1 var(--f-mono);color:var(--razitko);letter-spacing:.08em}
+.step h3{font-size:20px;font-weight:800;margin:8px 0 4px}
+.step p{margin:0;color:var(--muted);font-size:16px}
+.trust{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.trust div{background:var(--karta);border:1px solid var(--line);border-radius:10px;padding:14px}
+.trust b{display:block;font:900 22px/1.1 var(--f-display)}
+.trust span{font-size:14px;color:var(--muted)}
+.photo{display:grid;place-items:center;text-align:center;border:2px dashed var(--line);border-radius:12px;min-height:200px;color:var(--muted);font-weight:700;background:var(--tag);padding:16px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{font-weight:800;font-size:18px;cursor:pointer}
+.faq p{margin:8px 0 0;color:var(--muted)}
+.contact{display:grid;gap:18px;margin-top:22px}
+.box{background:var(--karta);border:1px solid var(--line);border-radius:12px;padding:20px}
+.phone{font:900 34px/1 var(--f-display);text-decoration:none;color:var(--ink)}
+.map{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;max-width:100%;background:var(--tag)}
+.map svg{width:100%;height:100%;display:block}
+footer{background:var(--petrol);color:#BFD3D1;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-block:24px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--petrol);display:flex;gap:8px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+.sticky .btn{flex:1}
+@media (min-width:760px){
+  body{padding-bottom:0}.sticky{display:none}
+  .hero .wrap{grid-template-columns:1.25fr .75fr}
+  .calc .wrap{grid-template-columns:.85fr 1.15fr;align-items:start}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .two{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+  .contact{grid-template-columns:1fr 1fr}
+}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Miloš Hermann</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Miloš Hermann<span>Autoservis · Kunovice</span></div>
+  <a href="tel:+420776881087">776 881 087</a>
+</div></div>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Připravím Vaše auto na STK. <em>A STK zajistím.</em></h1>
+    <p>Mechanické a elektroopravy aut, diagnostika řídicích jednotek a příprava na technickou. Autoservis v Kunovicích u Vsetína.</p>
+    <div class="cta">
+      <a class="btn btn-call" href="tel:+420776881087">Zavolat 776 881 087</a>
+      <a class="btn btn-ghost" href="#stk">Kdy mi končí STK?</a>
+    </div>
+    <div class="note"><span aria-hidden="true">☎</span><span><b>Než přijedete, zavolejte.</b> Nemohu zaručit stálou otevírací dobu, doporučuji kontakt na telefonu.</span></div>
+  </div>
+  <div class="stk" aria-hidden="true">
+    <svg viewBox="0 0 300 300">
+      <circle cx="150" cy="150" r="146" fill="var(--on-dark)"/>
+      <g class="ring" font-family="Overpass Mono,monospace" font-weight="700" font-size="17" fill="var(--petrol)" text-anchor="middle">
+        <text x="150" y="38">12</text><text x="206" y="53" >1</text><text x="247" y="94">2</text><text x="262" y="156">3</text><text x="247" y="216">4</text><text x="206" y="257">5</text><text x="150" y="272">6</text><text x="94" y="257">7</text><text x="53" y="216">8</text><text x="38" y="156">9</text><text x="53" y="94">10</text><text x="94" y="53">11</text>
+      </g>
+      <circle cx="150" cy="150" r="96" fill="var(--tyrkys)"/>
+      <circle cx="150" cy="150" r="96" fill="none" stroke="var(--petrol)" stroke-width="3" stroke-dasharray="6 6"/>
+      <text x="150" y="140" text-anchor="middle" font-family="Overpass,sans-serif" font-weight="900" font-size="54" fill="var(--petrol)">STK</text>
+      <text x="150" y="176" text-anchor="middle" font-family="Overpass Mono,monospace" font-weight="700" font-size="15" fill="var(--petrol)">PŘÍPRAVA</text>
+      <text x="150" y="196" text-anchor="middle" font-family="Overpass Mono,monospace" font-weight="700" font-size="15" fill="var(--petrol)">+ ZAJIŠTĚNÍ</text>
+      <path d="M150 20 l10 26 h-20z" fill="var(--razitko)"/>
+    </svg>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <p class="eyebrow">Co dělám</p>
+  <h2>Tři věci, se kterými za mnou jezdíte</h2>
+  <div class="svc">
+    <article><span class="n">01</span><h3>Mechanické a elektroopravy</h3><p>Opravy automobilů – mechanika i elektrika na jednom místě.</p></article>
+    <article><span class="n">02</span><h3>Příprava vozů a zajištění STK</h3><p>Auto připravím na technickou kontrolu a STK zajistím, abyste nemuseli jezdit dvakrát.</p></article>
+    <article><span class="n">03</span><h3>Diagnostika řídicích jednotek</h3><p>Když svítí kontrolka nebo auto dělá, co nemá, přečtu chyby z řídicích jednotek a řeknu, co dál.</p></article>
+  </div>
+  <p class="lead"><b>Cena?</b> Řeknu Vám ji předem po telefonu, podle auta a toho, co potřebuje. <span class="uk">ukázkový text</span></p>
+</div></section>
+
+<section class="calc" id="stk"><div class="wrap">
+  <div>
+    <p class="eyebrow">Kdy Vám končí STK?</p>
+    <h2>Spočítejte si to za 10 vteřin</h2>
+    <p class="lead">Zadejte měsíc z osvědčení nebo datum první registrace. Uvidíte, kolik času zbývá – a zpráva pro mě se složí sama.</p>
+    <p class="rule">Osobní auto jede na STK poprvé 4 roky po první registraci, potom každé 2 roky.</p>
+  </div>
+  <div class="panel">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="t1" aria-selected="true">Znám platnost STK</button>
+      <button type="button" role="tab" id="t2" aria-selected="false">Auto je nové</button>
+    </div>
+    <div class="row2">
+      <label class="f"><span id="lab">Platnost STK do – měsíc</span><select id="m"></select></label>
+      <label class="f">Rok<select id="y"></select></label>
+    </div>
+    <div class="result" id="res" aria-live="polite"><div class="badge" id="badge"></div><p id="rtext"></p></div>
+    <div>
+      <p class="small" style="margin-bottom:8px"><b>Co ještě potřebujete?</b></p>
+      <div class="chips">
+        <label><input type="checkbox" id="c1" value="mechanickou opravu"> Mechanickou opravu</label>
+        <label><input type="checkbox" id="c2" value="elektroopravu"> Elektroopravu</label>
+        <label><input type="checkbox" id="c3" value="diagnostiku řídicích jednotek"> Diagnostiku</label>
+      </div>
+    </div>
+    <label class="f">Auto (značka, model)<input type="text" id="auto" placeholder="např. Škoda Fabia 2016"></label>
+    <div class="msg" id="msg"></div>
+    <div class="cta" style="margin-top:0">
+      <a class="btn btn-call" id="sms" href="sms:+420776881087">Poslat SMS</a>
+      <button class="btn btn-line" type="button" id="copy">Zkopírovat</button>
+      <span class="small" id="ok" hidden>Zkopírováno.</span>
+    </div>
+    <p class="small">Výpočet je orientační pro osobní auta. Přesné datum najdete v osvědčení o registraci nebo v protokolu z poslední STK.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Jak to probíhá</p>
+  <h2>Od telefonu po novou známku</h2>
+  <div class="steps">
+    <div class="step"><span class="k">KROK 1</span><h3>Zavoláte mi</h3><p>Domluvíme den, kdy auto přivezete. Termín vždy potvrdím po telefonu.</p></div>
+    <div class="step"><span class="k">KROK 2</span><h3>Připravím auto</h3><p>Zkontroluji, co by na STK neprošlo, a po domluvě to opravím. <span class="uk">ukázkový text</span></p></div>
+    <div class="step"><span class="k">KROK 3</span><h3>Zajistím STK</h3><p>Technickou zařídím za Vás a auto si vyzvednete připravené. <span class="uk">ukázkový text</span></p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap two">
+  <div>
+    <p class="eyebrow">Kdo jsem</p>
+    <h2>Autoservis jednoho člověka</h2>
+    <p class="lead">Auto řeší pořád stejný člověk, který Vám ho i předá. Proto termín domlouvám osobně po telefonu. <span class="uk">ukázkový text</span></p>
+    <div class="trust">
+      <div><b>3 služby</b><span>opravy, STK, diagnostika</span></div>
+      <div><b>Kunovice 127</b><span>756 44, okres Vsetín</span></div>
+      <div><b>IČO 66731593</b><span>živnostník</span></div>
+      <div><b>Termín</b><span>vždy po telefonu</span></div>
+    </div>
+  </div>
+  <div class="photo">Sem přijde Vaše fotka<br>(dílna nebo Vy u auta)</div>
+</div></section>
+
+<section class="faq" style="padding-top:0"><div class="wrap">
+  <p class="eyebrow">Časté otázky</p>
+  <h2>Na co se mě ptáte</h2>
+  <details><summary>Kdy máte otevřeno?</summary><p>Nemohu zaručit stálou otevírací dobu, doporučuji kontakt na tel. 776 881 087.</p></details>
+  <details><summary>Jak často musí auto na STK?</summary><p>Nové osobní auto poprvé 4 roky po první registraci, potom každé 2 roky.</p></details>
+  <details><summary>Opravujete i elektriku?</summary><p>Ano, dělám mechanické i elektroopravy automobilů a diagnostiku řídicích jednotek.</p></details>
+  <details><summary>Co když auto na STK neprojde?</summary><p>Proto ho připravuji předem – co by neprošlo, se opraví ještě před kontrolou. <span class="uk">ukázkový text</span></p></details>
+</div></section>
+
+<section id="kontakt" style="padding-top:0"><div class="wrap">
+  <p class="eyebrow">Kontakt</p>
+  <h2>Zavolejte, domluvíme se</h2>
+  <div class="contact">
+    <div class="box">
+      <a class="phone" href="tel:+420776881087">776 881 087</a>
+      <p><a href="mailto:m.hermann@seznam.cz">m.hermann@seznam.cz</a></p>
+      <p>Autoservis Miloš Hermann<br>Kunovice 127, 756 44</p>
+      <p class="small">Otevírací doba: po telefonické domluvě · IČO 66731593</p>
+      <div class="cta"><a class="btn btn-call" href="tel:+420776881087">Zavolat</a><a class="btn btn-line" href="https://mapy.cz/zakladni?q=Kunovice%20127%2C%20756%2044" target="_blank" rel="noopener">Navigovat (Mapy.cz)</a></div>
+    </div>
+    <a class="map" href="https://mapy.cz/zakladni?q=Kunovice%20127%2C%20756%2044" target="_blank" rel="noopener" aria-label="Otevřít Kunovice 127 na Mapy.cz">
+      <svg viewBox="0 0 400 300" aria-hidden="true"><rect width="400" height="300" fill="var(--tag)"/>
+        <path d="M-10 240 C60 200 120 220 180 170 S300 90 410 110" stroke="var(--line)" stroke-width="16" fill="none"/>
+        <path d="M0 60 C120 90 240 40 400 70" stroke="var(--line)" stroke-width="6" fill="none"/>
+        <path d="M60 300 C90 220 110 140 100 -10" stroke="var(--line)" stroke-width="6" fill="none"/>
+        <g transform="translate(200 120)"><path d="M0 0c-16 0-28 12-28 27 0 21 28 47 28 47s28-26 28-47C28 12 16 0 0 0z" fill="var(--razitko)"/><circle cy="27" r="10" fill="var(--karta)"/></g>
+        <text x="200" y="230" text-anchor="middle" font-family="Overpass,sans-serif" font-weight="800" font-size="18" fill="var(--ink)">Kunovice 127</text>
+      </svg></a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© Autoservis Miloš Hermann · Kunovice 127 · IČO 66731593</span><span>Návrh webu: Weby na míru</span></div></footer>
+<div class="sticky"><a class="btn btn-call" href="tel:+420776881087">Zavolat</a><a class="btn btn-ghost" href="#stk">Kdy mi končí STK?</a></div>
+
+<script>
+(function(){
+  var M=['leden','únor','březen','duben','květen','červen','červenec','srpen','září','říjen','listopad','prosinec'];
+  var now=new Date(), mode=1;
+  var ms=document.getElementById('m'), ys=document.getElementById('y');
+  M.forEach(function(n,i){var o=document.createElement('option');o.value=i;o.textContent=(i+1)+' – '+n;ms.appendChild(o)});
+  function fillYears(){var cy=now.getFullYear(),cur=ys.value;ys.innerHTML='';
+    var from=mode===1?cy-2:cy-5, to=mode===1?cy+3:cy;
+    for(var y=from;y<=to;y++){var o=document.createElement('option');o.value=y;o.textContent=y;ys.appendChild(o)}
+    ys.value=cur&&ys.querySelector('option[value="'+cur+'"]')?cur:(mode===1?cy+1:cy-3);}
+  ms.value=(now.getMonth()+3)%12; fillYears();
+  function tab(n){mode=n;document.getElementById('t1').setAttribute('aria-selected',n===1);document.getElementById('t2').setAttribute('aria-selected',n===2);
+    document.getElementById('lab').textContent=n===1?'Platnost STK do – měsíc':'První registrace – měsíc';fillYears();calc();}
+  document.getElementById('t1').onclick=function(){tab(1)};document.getElementById('t2').onclick=function(){tab(2)};
+  function calc(){
+    var m=+ms.value,y=+ys.value; if(mode===2)y+=4;
+    var end=new Date(y,m+1,0); var days=Math.round((end-now)/864e5);
+    var res=document.getElementById('res'),b=document.getElementById('badge'),t=document.getElementById('rtext');
+    var label=(m+1)+'/'+y;
+    if(days<0){res.className='result late';b.innerHTML='Prošlá<small>od '+label+'</small>';t.textContent='STK je po platnosti. S takovým autem nesmíte jezdit po silnici – zavolejte, domluvíme přípravu co nejdřív.';}
+    else if(days<=60){res.className='result soon';b.innerHTML=days+' dní<small>do '+label+'</small>';t.textContent='Je čas se objednat. Přípravu a STK zvládneme v klidu, když zavoláte teď.';}
+    else{var mo=Math.floor(days/30.4);res.className='result ok';b.innerHTML=mo+' měs.<small>do '+label+'</small>';t.textContent='Času je dost. Ozvěte se zhruba měsíc předem, ať termín vyjde.';}
+    var ex=[].slice.call(document.querySelectorAll('.chips input:checked')).map(function(x){return x.value});
+    var a=document.getElementById('auto').value.trim();
+    var txt='Dobrý den, pane Hermanne, STK mi '+(days<0?'propadla v ':'končí ')+label+'. Chtěl/a bych přípravu a zajištění STK'+(ex.length?' a k tomu '+ex.join(', '):'')+'.'+(a?'\nAuto: '+a+'.':'')+'\nKdy bych mohl/a přijet?';
+    document.getElementById('msg').textContent=txt;
+    document.getElementById('sms').href='sms:+420776881087?body='+encodeURIComponent(txt);
+  }
+  document.querySelector('.calc').addEventListener('input',calc);document.querySelector('.calc').addEventListener('change',calc);
+  document.getElementById('copy').onclick=function(){var el=document.getElementById('msg');
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){document.getElementById('ok').hidden=false},sel)}catch(e){sel()}};
+  calc();
+})();
+</script>
+</body>
+</html>

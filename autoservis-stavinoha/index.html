@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Stavinoha</title>
+<meta name="description" content="Autoservis Stavinoha v Brodku u Přerova: opravy osobních aut, motorek i dodávek a nově rovnání bloku motoru bez demontáže ze stroje. Volejte 732 941 853.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Autoservis Stavinoha","telephone":"+420732941853","email":"stavinohaz@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Havlíčkova 372","postalCode":"751 03","addressLocality":"Brodek u Přerova","addressCountry":"CZ"},"geo":{"@type":"GeoCoordinates","latitude":49.482628,"longitude":17.340397},"description":"Provádíme veškeré opravy osobních automobilů, motorek i dodávek. Nově nabízíme rovnání bloku motoru bez demontáže ze stroje.","taxID":"62298046"}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Layout: garážová vrata – tři vrata (auto, motorka, dodávka) nesou hero i objednávku; lahvově zelená dílna, měděný akcent */
+:root{
+  --dilna:#1E3A2C; --dilna-2:#2C5140; --med:#C2662B; --med-text:#9A4A17; --plech:#EEF1EC; --papir:#FBFCFA;
+  --ink:#16201B; --muted:#4D5B53; --line:#CBD5CE; --on-dark:#F2F5F1; --tag:#E6ECE7;
+  --f-display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --dilna:#14281F; --dilna-2:#21402F; --med:#E08547; --med-text:#F0A06A; --plech:#101814; --papir:#18221D;
+  --ink:#E8EEE9; --muted:#A9B8AE; --line:#2F4237; --on-dark:#F2F5F1; --tag:#22302A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --dilna:#14281F; --dilna-2:#21402F; --med:#E08547; --med-text:#F0A06A; --plech:#101814; --papir:#18221D;
+  --ink:#E8EEE9; --muted:#A9B8AE; --line:#2F4237; --on-dark:#F2F5F1; --tag:#22302A; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--plech);color:var(--ink);font:400 17px/1.6 var(--f-body);padding-bottom:84px}
+h1,h2,h3{font-family:var(--f-display);line-height:1.08;text-wrap:balance;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.navrh{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
+.uk{display:inline-block;font:500 11px/1.4 var(--f-body);letter-spacing:.04em;text-transform:uppercase;background:var(--tag);color:var(--muted);border:1px dashed var(--line);border-radius:4px;padding:1px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.top{background:var(--dilna);color:var(--on-dark)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.logo{font:800 20px/1 var(--f-display);letter-spacing:-.01em}
+.logo small{display:block;font:500 12px/1.3 var(--f-body);letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-top:4px}
+.top a.tel{font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 14px;white-space:nowrap}
+.hero{background:var(--dilna);color:var(--on-dark);padding-block:18px 0;overflow:hidden}
+.hero .wrap{display:grid;gap:22px}
+.hero h1{font-size:clamp(34px,6.4vw,60px);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{color:var(--med)}
+.hero p.lead{font-size:18px;max-width:34em;margin:10px 0 0;color:#D7E0D9}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 17px/1 var(--f-body);text-decoration:none;border-radius:10px;padding:15px 20px;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--med);color:#1A0E05}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:var(--on-dark);background:transparent}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--med);outline-offset:2px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:15px;color:#C9D4CC}
+.facts b{color:var(--on-dark)}
+/* vrata */
+.gates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end;margin-top:6px}
+.gate{position:relative;background:#0F2219;border:0;padding:0;border-radius:10px 10px 0 0;cursor:pointer;color:var(--on-dark);aspect-ratio:3/3.4;max-width:100%;overflow:hidden;text-align:left}
+.gate svg.veh{position:absolute;left:8%;right:8%;bottom:30px;width:84%;height:auto}
+.gate .door{position:absolute;inset:0 0 26px 0;background:repeating-linear-gradient(180deg,#5C6F64 0 11px,#4A5C52 11px 13px);transition:transform .5s ease;transform-origin:top}
+.gate[aria-pressed="true"] .door{transform:translateY(-78%)}
+.gate .lab{position:absolute;left:0;right:0;bottom:0;height:26px;display:flex;align-items:center;justify-content:center;font:700 13px/1 var(--f-body);background:var(--dilna-2);letter-spacing:.02em}
+.gate[aria-pressed="true"] .lab{background:var(--med);color:#1A0E05}
+.gates-hint{font-size:14px;color:#BFCBC3;margin:8px 0 0}
+@media (prefers-reduced-motion:reduce){.gate .door{transition:none}}
+section{padding-block:56px}
+.eyebrow{font:700 13px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--med-text);margin:0 0 10px}
+h2{font-size:clamp(28px,4.6vw,44px);font-weight:800;letter-spacing:-.015em}
+.novinka{background:var(--papir);border-bottom:1px solid var(--line)}
+.novinka .wrap{display:grid;gap:18px;align-items:center}
+.novinka h2{font-size:clamp(24px,4vw,36px)}
+.novinka p{margin:8px 0 0;max-width:40em;color:var(--muted)}
+.blok{width:100%;max-width:360px;height:auto}
+.svc{display:grid;gap:14px;margin-top:26px}
+.svc article{background:var(--papir);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;grid-template-columns:44px 1fr;gap:4px 14px;align-items:start}
+.svc svg{width:44px;height:44px;grid-row:span 2}
+.svc h3{font-size:21px;font-weight:600}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+.price-note{margin-top:18px;font-size:16px}
+/* objednávka */
+.order{background:var(--dilna);color:var(--on-dark)}
+.order .wrap{display:grid;gap:24px}
+.order .eyebrow{color:var(--med)}
+.order p.sub{color:#CBD6CE;max-width:36em}
+.form{background:var(--papir);color:var(--ink);border-radius:14px;padding:20px;display:grid;gap:16px}
+.form fieldset{border:0;margin:0;padding:0;display:grid;gap:8px}
+.form legend{font-weight:700;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);border-radius:999px;padding:8px 12px;font-size:15px;cursor:pointer;background:var(--plech)}
+.chips input{accent-color:var(--med)}
+.chips label:has(input:checked){border-color:var(--med);background:var(--tag)}
+.form input[type=text],.form select{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--plech);color:var(--ink)}
+.msg{background:var(--plech);border:1.5px dashed var(--med);border-radius:10px;padding:14px;font:500 15px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;min-height:60px;overflow-wrap:anywhere}
+.form .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.form .btn-call{color:#1A0E05}
+.btn-line{border:2px solid var(--line);background:transparent;color:var(--ink)}
+.small{font-size:14px;color:var(--muted)}
+.steps{display:grid;gap:14px;margin-top:24px;counter-reset:s}
+.steps li{list-style:none;background:var(--papir);border:1px solid var(--line);border-radius:12px;padding:18px 18px 18px 64px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--dilna);color:var(--on-dark);display:grid;place-items:center;font:800 16px/1 var(--f-display)}
+.steps ol{padding:0;margin:0}
+.steps h3{font-size:19px;font-weight:600;margin-bottom:4px}
+.steps p{margin:0;color:var(--muted);font-size:16px}
+.zima{background:var(--papir);border-block:1px solid var(--line)}
+.zima .grid{display:grid;gap:14px;margin-top:20px}
+.zima .card{border-left:4px solid var(--med);padding:4px 0 4px 14px}
+.zima .big{font:800 34px/1 var(--f-display);color:var(--med-text)}
+.trust{display:grid;gap:12px;margin-top:22px}
+.trust div{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px}
+.trust dt{font-weight:700;min-width:120px}
+.trust dd{margin:0;color:var(--muted)}
+dl{margin:0}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{font-weight:700;cursor:pointer;font-size:18px}
+.faq p{margin:8px 0 0;color:var(--muted)}
+.contact{display:grid;gap:20px;margin-top:22px}
+.contact .box{background:var(--papir);border:1px solid var(--line);border-radius:12px;padding:20px}
+.contact .phone{font:800 32px/1.1 var(--f-display);color:var(--ink);text-decoration:none}
+.map{position:relative;border-radius:12px;overflow:hidden;background:var(--tag);border:1px solid var(--line);aspect-ratio:4/3;max-width:100%}
+.map svg{width:100%;height:100%;display:block}
+.photo{display:grid;place-items:center;border:2px dashed var(--line);border-radius:12px;min-height:180px;color:var(--muted);font-weight:600;background:repeating-linear-gradient(45deg,transparent 0 14px,var(--tag) 14px 15px)}
+footer{background:var(--dilna);color:#C9D4CC;font-size:14px}
+footer .wrap{padding-block:26px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--dilna);display:flex;gap:8px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.sticky a{flex:1;justify-content:center}
+@media (min-width:760px){
+  body{padding-bottom:0}.sticky{display:none}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:end}
+  .hero .copy{padding-bottom:40px}
+  .novinka .wrap{grid-template-columns:1.4fr 1fr}
+  .svc{grid-template-columns:1fr 1fr}
+  .order .wrap{grid-template-columns:.8fr 1.2fr;align-items:start}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .zima .grid{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1fr 1fr}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Stavinoha</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Stavinoha<small>Autoservis · Brodek u Přerova</small></div>
+  <a class="tel" href="tel:+420732941853">732 941 853</a>
+</div></div>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div class="copy">
+    <h1>Auto, motorka i dodávka. <span>Opravíme všechno.</span></h1>
+    <p class="lead">Provádíme veškeré opravy osobních automobilů, motorek i dodávek – v dílně na Havlíčkově ulici v Brodku u Přerova.</p>
+    <div class="cta">
+      <a class="btn btn-call" href="tel:+420732941853">Zavolat 732 941 853</a>
+      <a class="btn btn-ghost" href="#objednat">Objednat opravu</a>
+    </div>
+    <div class="facts"><span><b>Havlíčkova 372</b>, Brodek u Přerova</span><span>Novinka: <b>rovnání bloku motoru</b></span></div>
+  </div>
+  <div>
+    <div class="gates" role="group" aria-label="Vyberte, s čím přijedete">
+      <button class="gate" type="button" data-veh="osobní auto" aria-pressed="false">
+        <svg class="veh" viewBox="0 0 120 54" aria-hidden="true"><path d="M8 40h104v-8l-10-4-16-14H44L28 28 12 30 8 34z" fill="#D9E2DB"/><path d="M47 18h16v10H36zM67 18h16l10 10H67z" fill="#7FA392"/><circle cx="32" cy="42" r="9" fill="#16201B"/><circle cx="32" cy="42" r="4" fill="#C2662B"/><circle cx="90" cy="42" r="9" fill="#16201B"/><circle cx="90" cy="42" r="4" fill="#C2662B"/></svg>
+        <span class="door"></span><span class="lab">Osobní auto</span></button>
+      <button class="gate" type="button" data-veh="motorka" aria-pressed="false">
+        <svg class="veh" viewBox="0 0 120 54" aria-hidden="true"><circle cx="26" cy="40" r="12" fill="none" stroke="#D9E2DB" stroke-width="5"/><circle cx="94" cy="40" r="12" fill="none" stroke="#D9E2DB" stroke-width="5"/><path d="M26 40l20-16h22l10 10h16M58 24l-6-10h-8M78 34l-8-12" fill="none" stroke="#D9E2DB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect x="50" y="20" width="22" height="8" rx="4" fill="#C2662B"/></svg>
+        <span class="door"></span><span class="lab">Motorka</span></button>
+      <button class="gate" type="button" data-veh="dodávka" aria-pressed="false">
+        <svg class="veh" viewBox="0 0 120 54" aria-hidden="true"><path d="M6 42V12h74l16 12 18 6v12z" fill="#D9E2DB"/><path d="M82 15h8l14 12H82z" fill="#7FA392"/><circle cx="28" cy="43" r="9" fill="#16201B"/><circle cx="28" cy="43" r="4" fill="#C2662B"/><circle cx="92" cy="43" r="9" fill="#16201B"/><circle cx="92" cy="43" r="4" fill="#C2662B"/></svg>
+        <span class="door"></span><span class="lab">Dodávka</span></button>
+    </div>
+    <p class="gates-hint">Klepněte na vrata – s čím přijedete, se rovnou propíše do objednávky.</p>
+  </div>
+</div></div>
+
+<section class="novinka"><div class="wrap">
+  <div>
+    <p class="eyebrow">Nově v dílně</p>
+    <h2>Rovnání bloku motoru bez demontáže ze stroje</h2>
+    <p>Nově nabízíme rovnání bloku motoru bez demontáže ze stroje. Motor tak nemusí ven a stroj se vrátí do práce dřív. <span class="uk">ukázkový text</span></p>
+    <div class="cta"><a class="btn btn-call" href="tel:+420732941853">Zeptat se na rovnání bloku</a></div>
+  </div>
+  <svg class="blok" viewBox="0 0 220 150" role="img" aria-label="Ilustrace bloku motoru s měřidlem">
+    <rect x="30" y="40" width="150" height="80" rx="6" fill="var(--dilna-2)"/>
+    <g fill="var(--plech)"><circle cx="62" cy="62" r="13"/><circle cx="96" cy="62" r="13"/><circle cx="130" cy="62" r="13"/><circle cx="164" cy="62" r="0"/></g>
+    <rect x="40" y="88" width="130" height="8" rx="4" fill="var(--med)"/>
+    <path d="M20 132h180" stroke="var(--muted)" stroke-width="2" stroke-dasharray="4 5"/>
+    <path d="M30 128 Q105 118 180 128" stroke="var(--med)" stroke-width="3" fill="none"/>
+    <text x="110" y="24" text-anchor="middle" font-family="Hanken Grotesk,sans-serif" font-size="13" font-weight="700" fill="var(--muted)">srovnáno na místě</text>
+  </svg>
+</div></section>
+
+<section id="sluzby"><div class="wrap">
+  <p class="eyebrow">Co opravujeme</p>
+  <h2>Jedna dílna na všechno, co má motor a kola</h2>
+  <div class="svc">
+    <article><svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="10" fill="var(--tag)"/><path d="M8 28h28v-5l-6-2-5-6H17l-5 6-4 1z" fill="var(--dilna-2)"/><circle cx="15" cy="29" r="4" fill="var(--med)"/><circle cx="30" cy="29" r="4" fill="var(--med)"/></svg>
+      <h3>Osobní automobily</h3><p>Veškeré opravy osobních aut, ať jde o motor, podvozek nebo elektriku. <span class="uk">ukázkový text</span></p></article>
+    <article><svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="10" fill="var(--tag)"/><circle cx="12" cy="29" r="6" fill="none" stroke="var(--dilna-2)" stroke-width="3"/><circle cx="32" cy="29" r="6" fill="none" stroke="var(--dilna-2)" stroke-width="3"/><path d="M12 29l8-8h8l4 8" fill="none" stroke="var(--med)" stroke-width="3"/></svg>
+      <h3>Motorky</h3><p>Opravy motorek, ať jste na jaře hned na silnici.</p></article>
+    <article><svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="10" fill="var(--tag)"/><path d="M6 30V13h22l6 6 5 2v9z" fill="var(--dilna-2)"/><circle cx="14" cy="30" r="4" fill="var(--med)"/><circle cx="32" cy="30" r="4" fill="var(--med)"/></svg>
+      <h3>Dodávky</h3><p>Opravy dodávek, aby Vaše práce nestála kvůli autu déle, než je nutné.</p></article>
+    <article><svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="10" fill="var(--tag)"/><rect x="8" y="14" width="28" height="16" rx="3" fill="var(--dilna-2)"/><path d="M8 34q14-4 28 0" stroke="var(--med)" stroke-width="3" fill="none"/></svg>
+      <h3>Rovnání bloku motoru</h3><p>Novinka: rovnání bloku motoru bez demontáže ze stroje.</p></article>
+  </div>
+  <p class="price-note"><b>Kolik to bude stát?</b> Cenu Vám řekneme předem, ještě než se do opravy pustíme. <span class="uk">ukázkový text</span></p>
+</div></section>
+
+<section class="order" id="objednat"><div class="wrap">
+  <div>
+    <p class="eyebrow">Objednat opravu</p>
+    <h2>Popište závadu za 20 vteřin</h2>
+    <p class="sub">Vyberte vozidlo a co dělá. Zpráva se složí sama – pošlete ji SMS na 732 941 853, nebo si ji přečtěte do telefonu, až zavoláte.</p>
+  </div>
+  <form class="form" id="f" novalidate>
+    <fieldset><legend>S čím přijedete?</legend>
+      <div class="chips" id="veh">
+        <label><input type="radio" name="veh" id="v1" value="osobní auto" checked> Osobní auto</label>
+        <label><input type="radio" name="veh" id="v2" value="motorka"> Motorka</label>
+        <label><input type="radio" name="veh" id="v3" value="dodávka"> Dodávka</label>
+      </div></fieldset>
+    <fieldset><legend>Co se děje?</legend>
+      <div class="chips">
+        <label><input type="checkbox" id="p1" value="nechce nastartovat"> Nechce nastartovat</label>
+        <label><input type="checkbox" id="p2" value="svítí kontrolka" checked> Svítí kontrolka</label>
+        <label><input type="checkbox" id="p3" value="klepe nebo hučí"> Klepe nebo hučí</label>
+        <label><input type="checkbox" id="p4" value="brzdy"> Brzdy</label>
+        <label><input type="checkbox" id="p5" value="výfuk"> Výfuk</label>
+        <label><input type="checkbox" id="p6" value="rovnání bloku motoru"> Rovnání bloku motoru</label>
+        <label><input type="checkbox" id="p7" value="jiná závada"> Něco jiného</label>
+      </div></fieldset>
+    <div class="two">
+      <label>Značka a model<input type="text" id="model" placeholder="např. Škoda Octavia 2012" value=""></label>
+      <label>Kdy by se Vám to hodilo?<select id="kdy"><option>co nejdřív</option><option>tento týden</option><option>příští týden</option><option>je to jedno</option></select></label>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+    <div class="row">
+      <a class="btn btn-call" id="sms" href="sms:+420732941853">Poslat SMS</a>
+      <button class="btn btn-line" type="button" id="copy">Zkopírovat text</button>
+      <span class="small" id="copied" hidden>Zkopírováno.</span>
+    </div>
+    <p class="small">Nic se neodesílá samo – SMS odchází z Vašeho telefonu.</p>
+  </form>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Jak to probíhá</p>
+  <h2>Od telefonu po hotové auto</h2>
+  <div class="steps"><ol>
+    <li><h3>Zavoláte nebo pošlete SMS</h3><p>Řeknete, co vozidlo dělá. Domluvíme den, kdy ho přivezete.</p></li>
+    <li><h3>Podíváme se a řekneme cenu</h3><p>Než začneme opravovat, víte, co se bude dělat a kolik to stojí. <span class="uk">ukázkový text</span></p></li>
+    <li><h3>Zavoláme, že je hotovo</h3><p>Vyzvednete si opravené auto, motorku nebo dodávku. <span class="uk">ukázkový text</span></p></li>
+  </ol></div>
+</div></section>
+
+<section class="zima"><div class="wrap">
+  <p class="eyebrow">Před zimou</p>
+  <h2>Zimní pneumatiky jsou povinné od 1. listopadu</h2>
+  <div class="grid">
+    <div class="card"><div class="big">1. 11. – 31. 3.</div><p>V tomto období musíte mít zimní pneumatiky, pokud je na silnici sníh, led nebo námraza.</p></div>
+    <div class="card"><div class="big">4 mm</div><p>Nejmenší hloubka dezénu zimní pneumatiky u osobního auta.</p></div>
+    <div class="card"><div class="big">Brzdy a baterie</div><p>Mráz odhalí slabou baterii i opotřebené brzdy. Ať Vás to nezaskočí – nechte auto zkontrolovat včas. <span class="uk">ukázkový text</span></p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap two">
+  <div>
+    <p class="eyebrow">Proč k nám</p>
+    <h2>Místní dílna, kterou najdete i bez navigace</h2>
+    <dl class="trust">
+      <div><dt>Opravujeme</dt><dd>osobní auta, motorky i dodávky</dd></div>
+      <div><dt>Novinka</dt><dd>rovnání bloku motoru bez demontáže ze stroje</dd></div>
+      <div><dt>Adresa</dt><dd>Havlíčkova 372, 751 03 Brodek u Přerova</dd></div>
+      <div><dt>IČO</dt><dd>62298046</dd></div>
+      <div><dt>Cena</dt><dd>řekneme předem <span class="uk">ukázkový text</span></dd></div>
+    </dl>
+  </div>
+  <div class="photo">Sem přijde Vaše fotka dílny</div>
+</div></section>
+
+<section class="faq" style="padding-top:0"><div class="wrap">
+  <p class="eyebrow">Časté otázky</p>
+  <h2>Na co se lidé ptají</h2>
+  <details><summary>Opravujete i motorky a dodávky?</summary><p>Ano. Provádíme veškeré opravy osobních automobilů, motorek i dodávek.</p></details>
+  <details><summary>Co znamená rovnání bloku motoru bez demontáže?</summary><p>Blok motoru se srovná přímo na stroji, takže motor nemusí ven. Ušetříte čas i práci s vytahováním motoru. <span class="uk">ukázkový text</span></p></details>
+  <details><summary>Musím se předem objednat?</summary><p>Nejlépe zavolejte na 732 941 853 nebo pošlete SMS. Domluvíme den, kdy vozidlo přivezete. <span class="uk">ukázkový text</span></p></details>
+  <details><summary>Kdy máte otevřeno?</summary><p>Otevírací dobu doplníme podle Vás. Do té doby platí: zavolejte a domluvíme se. <span class="uk">ukázkový text</span></p></details>
+</div></section>
+
+<section id="kontakt" style="padding-top:0"><div class="wrap">
+  <p class="eyebrow">Kontakt</p>
+  <h2>Autoservis Stavinoha, Brodek u Přerova</h2>
+  <div class="contact">
+    <div class="box">
+      <a class="phone" href="tel:+420732941853">732 941 853</a>
+      <p><a href="mailto:stavinohaz@seznam.cz">stavinohaz@seznam.cz</a></p>
+      <p>Havlíčkova 372<br>751 03 Brodek u Přerova</p>
+      <p class="small">IČO 62298046</p>
+      <div class="cta"><a class="btn btn-call" href="tel:+420732941853">Zavolat</a><a class="btn btn-line" href="https://mapy.cz/zakladni?q=Havl%C3%AD%C4%8Dkova%20372%20Brodek%20u%20P%C5%99erova" target="_blank" rel="noopener">Navigovat (Mapy.cz)</a></div>
+    </div>
+    <a class="map" href="https://mapy.cz/zakladni?q=Havl%C3%AD%C4%8Dkova%20372%20Brodek%20u%20P%C5%99erova" target="_blank" rel="noopener" aria-label="Otevřít polohu na Mapy.cz">
+      <svg viewBox="0 0 400 300" aria-hidden="true"><rect width="400" height="300" fill="var(--tag)"/>
+        <path d="M-10 210 C80 190 140 230 220 200 S350 150 410 170" stroke="var(--line)" stroke-width="18" fill="none"/>
+        <path d="M150 -10 C170 80 160 160 190 310" stroke="var(--line)" stroke-width="12" fill="none"/>
+        <path d="M0 90 H400" stroke="var(--line)" stroke-width="6"/>
+        <g transform="translate(196 140)"><path d="M0 0c-16 0-28 12-28 27 0 21 28 47 28 47s28-26 28-47C28 12 16 0 0 0z" fill="var(--med)"/><circle cy="27" r="10" fill="var(--papir)"/></g>
+        <text x="200" y="250" text-anchor="middle" font-family="Hanken Grotesk,sans-serif" font-weight="700" font-size="17" fill="var(--ink)">Havlíčkova 372</text>
+      </svg></a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© Autoservis Stavinoha · Havlíčkova 372, Brodek u Přerova · IČO 62298046</span><span>Návrh webu: Weby na míru</span></div></footer>
+
+<div class="sticky"><a class="btn btn-call" href="tel:+420732941853">Zavolat</a><a class="btn btn-ghost" href="#objednat">Objednat opravu</a></div>
+
+<script>
+(function(){
+  var f=document.getElementById('f'),msg=document.getElementById('msg'),sms=document.getElementById('sms');
+  function build(){
+    var v=(f.querySelector('input[name=veh]:checked')||{}).value||'vozidlo';
+    var p=[].slice.call(f.querySelectorAll('input[type=checkbox]:checked')).map(function(x){return x.value});
+    var m=document.getElementById('model').value.trim();
+    var k=document.getElementById('kdy').value;
+    var t='Dobrý den, potřebuji opravu – '+v+(m?' ('+m+')':'')+'.\n'+(p.length?'Co se děje: '+p.join(', ')+'.\n':'')+'Hodilo by se mi to '+k+'. Jakou cenu a termín byste mi navrhl?';
+    msg.textContent=t; sms.href='sms:+420732941853?body='+encodeURIComponent(t);
+  }
+  f.addEventListener('input',build); f.addEventListener('change',build);
+  document.querySelectorAll('.gate').forEach(function(g){g.addEventListener('click',function(){
+    document.querySelectorAll('.gate').forEach(function(o){o.setAttribute('aria-pressed',o===g?'true':'false')});
+    var r=f.querySelector('input[name=veh][value="'+g.dataset.veh+'"]'); if(r){r.checked=true;build();}
+  })});
+  document.querySelector('.gate').setAttribute('aria-pressed','true');
+  document.getElementById('copy').addEventListener('click',function(){
+    var done=function(){document.getElementById('copied').hidden=false};
+    try{navigator.clipboard.writeText(msg.textContent).then(done,function(){sel()})}catch(e){sel()}
+    function sel(){var r=document.createRange();r.selectNodeContents(msg);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+  });
+  build();
+})();
+</script>
+</body>
+</html>
