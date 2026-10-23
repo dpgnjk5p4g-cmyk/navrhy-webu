@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoopravna Ducháček</title>
+<meta name="description" content="Autoopravna Ducháček, Hlavní 182, Dolní Bojanovice: opravy osobních aut. Popište, co auto dělá, a domluvte opravu na tel. 721 901 788.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Karla:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Autoopravna Ducháček","telephone":"+420721901788","email":"mareduch@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Hlavní 182","addressLocality":"Dolní Bojanovice","postalCode":"696 17","addressCountry":"CZ"}}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: obří typografický nápis, pod ním „Co slyšíte?“ – zvukové vlny příznaků */
+:root{
+  --modra:#1E3D59; --modra2:#16304A; --signal:#FF6E40; --signal-tx:#B23F17;
+  --papir:#F5F0E1; --ocel:#9DB4C0; --tx:#1A2530; --sed:#56606A; --linka:#DED6C2; --bila:#FFFDF8;
+  --display:"Archivo Black","Arial Black",sans-serif; --body:"Karla",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--papir);color:var(--tx);font:17px/1.6 var(--body);padding-bottom:76px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4.4vw,42px)}
+a{color:inherit}
+.demo{display:inline-block;font:700 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#111;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:16px;border-bottom:2px solid var(--tx)}
+.logo{font:400 18px/1 var(--display);letter-spacing:.01em}
+.logo small{display:block;font:500 13px/1.4 var(--body);color:var(--sed)}
+.toptel{font-weight:700;text-decoration:none;white-space:nowrap}
+.hero .wrap{padding-block:34px 44px}
+.hero h1{overflow-wrap:break-word;font-size:clamp(38px,10vw,120px);letter-spacing:-.025em;line-height:.92}
+.hero h1 span{color:var(--signal-tx);display:block;font-size:.78em;margin-top:.12em}
+.hero .pod{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;margin-top:26px;align-items:end}
+.hero p{margin:0;font-size:19px;max-width:44ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 17px/1 var(--body);text-decoration:none;border-radius:99px;padding:16px 20px;border:2px solid var(--tx);cursor:pointer;background:transparent;color:var(--tx)}
+.btn-s{background:var(--signal);border-color:var(--signal);color:#1B0A03}
+.btn-m{background:var(--modra);border-color:var(--modra);color:#fff}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.upoz{display:flex;gap:12px;align-items:flex-start;background:var(--bila);border:2px solid var(--tx);border-radius:12px;padding:14px 16px;margin-top:22px;max-width:640px}
+.upoz b{display:block}
+section{padding-block:56px}
+.lead{color:var(--sed);max-width:60ch;margin:10px 0 0}
+.zvuk{background:var(--modra);color:#fff}
+.zvuk .lead{color:#C9D6DF}
+.zbox{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:26px}
+.prizn{display:grid;gap:10px}
+.prizn button{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;text-align:left;background:var(--modra2);color:#fff;border:2px solid #2E5576;border-radius:12px;padding:12px 14px;font:500 16px/1.3 var(--body);cursor:pointer}
+.prizn button b{display:block;font-weight:700;font-size:17px}
+.prizn button[aria-pressed="true"]{border-color:var(--signal);background:#24486A}
+.prizn svg{width:96px;height:36px}
+.vlna{fill:none;stroke:var(--ocel);stroke-width:2.5;stroke-linecap:round}
+[aria-pressed="true"] .vlna{stroke:var(--signal)}
+@media (prefers-reduced-motion:no-preference){[aria-pressed="true"] .vlna{animation:hraj 1.2s linear infinite}@keyframes hraj{from{stroke-dashoffset:0}to{stroke-dashoffset:-60}}}
+.vlna{stroke-dasharray:60 0}
+.karta{background:var(--bila);color:var(--tx);border-radius:16px;padding:22px}
+.karta h3{font-size:24px;margin-bottom:8px}
+.karta .co{color:var(--sed);margin:0 0 14px}
+.karta label{display:block;font-weight:700;font-size:14px;margin:12px 0 6px}
+.karta input,.karta select{width:100%;font:500 16px var(--body);padding:11px 12px;border:2px solid var(--linka);border-radius:10px;background:#fff;color:var(--tx)}
+.karta pre{white-space:pre-wrap;font:15px/1.5 var(--body);background:#F1ECDD;border-radius:10px;padding:14px;margin:16px 0}
+.orient{font-size:13px;color:var(--sed);margin-top:10px}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:28px 0 0;padding:0;list-style:none}
+.kroky li{border-top:2px solid var(--tx);padding-top:14px}
+.kroky .c{font:400 44px/1 var(--display);color:var(--signal-tx)}
+.kroky b{display:block;font-size:20px;margin:6px 0 4px}
+.kroky span{color:var(--sed)}
+.dva{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.fakt{border-bottom:1px solid var(--linka);padding-block:12px;display:grid;grid-template-columns:100px 1fr;gap:12px}
+.fakt b{font:400 26px/1 var(--display);color:var(--modra)}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:8px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.foto{border:2px dashed #A9B6BE;border-radius:16px;display:grid;place-items:center;min-height:220px;color:var(--sed);font-weight:700;text-align:center;padding:16px;background:#EDE7D5}
+footer{border-top:2px solid var(--tx);font-size:14px;color:var(--sed)}
+footer .wrap{padding-block:24px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--papir);border-top:2px solid var(--tx);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista a{flex:1;justify-content:center}
+@media (max-width:840px){
+  .hero .pod,.zbox,.dva,.kontakt{grid-template-columns:1fr}
+  .kroky{grid-template-columns:1fr}
+  .lista{display:flex}
+  .toptel{display:none}
+  .hero p{font-size:17px}
+  .prizn button{grid-template-columns:70px 1fr}
+  .prizn svg{width:70px}
+}
+@media (min-width:841px){body{padding-bottom:0}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Autoopravna Ducháček</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Autoopravna Ducháček<small>Hlavní 182, Dolní Bojanovice</small></div>
+  <a class="toptel" href="tel:+420721901788">☎ 721 901 788</a>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <h1>Opravím Vaše auto.<span>Tady v Bojanovicích.</span></h1>
+  <div class="pod">
+    <p>„Zaměřuji se na opravy osobních vozidel.“ Zavolejte nebo napište, co auto dělá, a domluvíme se, kdy ho přivezete.</p>
+    <div class="btns">
+      <a class="btn btn-s" href="tel:+420721901788">☎ Zavolat 721 901 788</a>
+      <a class="btn" href="#zvuk">Popsat závadu</a>
+    </div>
+  </div>
+  <div class="upoz">
+    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#FF6E40"/><path d="M14 7v8M14 19v2" stroke="#1B0A03" stroke-width="3" stroke-linecap="round"/></svg>
+    <div><b>Než přijedete, zavolejte.</b>Dílnu mám v Dolních Bojanovicích, Hlavní 182. Otevírací dobu doplníme podle Vás.<span class="demo">ukázkový text</span></div>
+  </div>
+</div></div>
+
+<section class="zvuk" id="zvuk"><div class="wrap">
+  <h2>Co slyšíte?</h2>
+  <p class="lead">Auto se často ozve dřív, než se pokazí. Vyberte zvuk, který slyšíte, a z popisu vznikne SMS, kterou mi pošlete. Rady jsou obecné a orientační, přesnou příčinu zjistím až na autě.</p>
+  <div class="zbox">
+    <div class="prizn" id="prizn">
+      <button type="button" aria-pressed="true" data-z="Pískání při brzdění" data-r="Často opotřebené brzdové destičky nebo kotouče. Brzdy nenechávejte na později."><svg viewBox="0 0 96 36" aria-hidden="true"><path class="vlna" d="M2 18 Q6 4 10 18 T18 18 T26 18 T34 18 T42 18 T50 18 T58 18 T66 18 T74 18 T82 18 T90 18"/></svg><span><b>Pískání při brzdění</b>ostrý vysoký tón</span></button>
+      <button type="button" aria-pressed="false" data-z="Klepání z podvozku na nerovnostech" data-r="Může jít o čepy, silentbloky, tyčky stabilizátoru nebo tlumiče."><svg viewBox="0 0 96 36" aria-hidden="true"><path class="vlna" d="M2 18 H14 L18 4 L22 30 L26 18 H40 L44 4 L48 30 L52 18 H66 L70 4 L74 30 L78 18 H94"/></svg><span><b>Klepání z podvozku</b>na výmolech a retardérech</span></button>
+      <button type="button" aria-pressed="false" data-z="Hučení za jízdy, sílí s rychlostí" data-r="Typicky ložisko kola, někdy nerovnoměrně ojeté pneumatiky."><svg viewBox="0 0 96 36" aria-hidden="true"><path class="vlna" d="M2 18 C 14 8, 22 8, 34 18 S 58 28, 70 18 S 88 8, 94 18"/></svg><span><b>Hučení za jízdy</b>sílí s rychlostí</span></button>
+      <button type="button" aria-pressed="false" data-z="Cvakání při zatáčení" data-r="Často homokinetický kloub, hlavně když cvaká při plném rejdu."><svg viewBox="0 0 96 36" aria-hidden="true"><path class="vlna" d="M2 18 H20 V8 H24 V18 H44 V8 H48 V18 H68 V8 H72 V18 H94"/></svg><span><b>Cvakání v zatáčce</b>hlavně při plném rejdu</span></button>
+      <button type="button" aria-pressed="false" data-z="Skřípání nebo drhnutí při řazení" data-r="Může to být spojka nebo převodovka. Čím dřív, tím levnější oprava bývá."><svg viewBox="0 0 96 36" aria-hidden="true"><path class="vlna" d="M2 18 L8 12 L12 24 L18 10 L22 26 L28 12 L32 22 L40 14 L46 24 L52 10 L58 26 L64 12 L70 22 L78 14 L84 24 L94 18"/></svg><span><b>Skřípání při řazení</b>drhne nebo nejde zařadit</span></button>
+    </div>
+    <form class="karta" onsubmit="return false">
+      <h3 id="zn">Pískání při brzdění</h3>
+      <p class="co" id="rada"></p>
+      <label for="auto">Auto</label>
+      <input id="auto" value="Octavia II, 1.9 TDI" autocomplete="off">
+      <label for="kdy">Kdy se to děje</label>
+      <select id="kdy"><option>pořád</option><option>jen za studena</option><option>jen za tepla</option><option>občas</option></select>
+      <pre id="sms"></pre>
+      <div class="btns">
+        <a class="btn btn-s" id="smsb" href="#">Poslat SMS</a>
+        <a class="btn btn-m" href="tel:+420721901788">☎ Zavolat</a>
+      </div>
+      <p class="orient">Číslo dílny: <b style="user-select:all">721 901 788</b> · rady jsou orientační, nejsou diagnózou</p>
+    </form>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Jak to u mě probíhá</h2>
+  <ol class="kroky">
+    <li><div class="c">1</div><b>Napíšete nebo zavoláte</b><span>Popíšete, co auto dělá. Domluvíme den, kdy ho přivezete.</span></li>
+    <li><div class="c">2</div><b>Podívám se na auto</b><span>Zjistím příčinu a řeknu Vám, co oprava obnáší a kolik bude stát.<span class="demo">ukázkový text</span></span></li>
+    <li><div class="c">3</div><b>Opravím a zavolám</b><span>Jakmile je hotovo, ozvu se. Auto si vyzvednete v Bojanovicích.</span></li>
+  </ol>
+</div></section>
+
+<section style="background:#EDE7D5"><div class="wrap dva">
+  <div>
+    <h2>Před zimou</h2>
+    <p class="lead">Zima prověří baterii, brzdy i pneumatiky. Když auto zlobí už teď, ozvěte se dřív, než v mrazu nenastartuje.</p>
+  </div>
+  <div>
+    <div class="fakt"><b>1. 11.</b><span>od tohoto dne do 31. 3. platí povinnost zimních pneumatik, když jsou na silnici zimní podmínky</span></div>
+    <div class="fakt"><b>4 mm</b><span>nejmenší hloubka dezénu zimní pneumatiky u osobního auta</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap dva">
+  <div>
+    <h2>Proč ke mně</h2>
+    <div class="fakt"><b>1</b><span>člověk, se kterým mluvíte i který auto opravuje</span></div>
+    <div class="fakt"><b>Osobní</b><span>auta: na ně se zaměřuji</span></div>
+    <div class="fakt"><b>IČO</b><span>15568326, Hlavní 182, Dolní Bojanovice</span></div>
+  </div>
+  <div>
+    <h2>Časté otázky</h2>
+    <details open><summary>Musím se objednat?</summary><p>Ano, než přijedete, zavolejte nebo napište. Domluvíme den, kdy auto přivezete.</p></details>
+    <details><summary>Opravujete i dodávky?</summary><p>Zaměřuji se na osobní auta. O ostatním se domluvíme po telefonu.</p></details>
+    <details><summary>Kolik oprava stojí?</summary><p>Záleží na závadě. Cenu Vám řeknu, až se na auto podívám, ještě než začnu.<span class="demo">ukázkový text</span></p></details>
+  </div>
+</div></section>
+
+<section style="background:var(--bila);border-top:2px solid var(--tx)" id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kontakt</h2>
+    <p style="font-size:19px;margin:16px 0 6px"><b>Autoopravna Ducháček</b><br>Hlavní 182, 696 17 Dolní Bojanovice</p>
+    <p style="margin:0">Tel.: <a href="tel:+420721901788"><b>721 901 788</b></a><br>E-mail: <a href="mailto:mareduch@seznam.cz">mareduch@seznam.cz</a></p>
+    <p style="margin:12px 0 18px">Otevírací doba: doplníme podle Vás<span class="demo">ukázkový text</span><br>Než přijedete, zavolejte.</p>
+    <a class="btn btn-m" href="https://mapy.cz/zakladni?q=Hlavn%C3%AD%20182%20Doln%C3%AD%20Bojanovice" target="_blank" rel="noopener">Ukázat na mapě</a>
+  </div>
+  <div class="foto">Sem přijde Vaše fotka<br>dílny nebo Vás při práci</div>
+</div></section>
+
+<footer><div class="wrap">Autoopravna Ducháček · IČO 15568326 · Hlavní 182, 696 17 Dolní Bojanovice · 721 901 788</div></footer>
+<div class="lista"><a class="btn btn-s" href="tel:+420721901788">☎ Zavolat</a><a class="btn" href="#zvuk">Popsat závadu</a></div>
+
+<script>
+(function(){
+  var g=document.getElementById("prizn"),cur=g.querySelector("[aria-pressed=true]");
+  g.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(g.children,function(x){x.setAttribute("aria-pressed",x===b)});cur=b;upd()});
+  function upd(){
+    document.getElementById("zn").textContent=cur.dataset.z;
+    document.getElementById("rada").textContent=cur.dataset.r;
+    var t="Dobrý den, auto: "+document.getElementById("auto").value+".\nCo slyším: "+cur.dataset.z.toLowerCase()+", "+document.getElementById("kdy").value+".\nKdy bych mohl/a auto přivézt? Děkuji.";
+    document.getElementById("sms").textContent=t;
+    document.getElementById("smsb").href="sms:+420721901788?body="+encodeURIComponent(t);
+  }
+  document.getElementById("auto").addEventListener("input",upd);document.getElementById("kdy").addEventListener("change",upd);upd();
+})();
+</script>
+</body>
+</html>

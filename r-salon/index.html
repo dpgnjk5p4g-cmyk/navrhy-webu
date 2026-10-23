@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – R-salon</title>
+<meta name="description" content="R-salon, dámské a pánské kadeřnictví ve Fryštátu: barvení, ombré, balayage, melír, společenské a svatební účesy, přípravky L'Oréal Professionnel. Fryštátská 55, Karviná. Tel. 607 618 772.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"R-salon","telephone":"+420607618772","email":"r.wojaczkova@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Fryštátská 2059/55","addressLocality":"Karviná-Fryštát","postalCode":"733 01","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"8","bestRating":"5"}}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: oválné zrcadlo salonu v hero, pod ním pramen vlasů, na kterém si zákaznice vyzkouší techniku */
+:root{
+  --espresso:#2B2024; --sampan:#EFE4D6; --zlata:#A47E3B; --zlata-tx:#7A5A22;
+  --ruze:#8C5A6E; --krem:#FBF7F2; --tx:#2B2024; --sed:#6A5C5F; --linka:#E3D6C6; --bila:#fff;
+  --display:"Cormorant Garamond",Georgia,serif; --body:"Jost",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--krem);color:var(--tx);font:17px/1.65 var(--body);padding-bottom:76px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,5vw,54px)}
+a{color:inherit}
+.demo{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#111;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top{background:var(--espresso);color:var(--sampan)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.logo{font:600 26px/1 var(--display);letter-spacing:.06em}
+.logo small{display:block;font:400 12px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#C9B9A5;margin-top:4px}
+.toptel{font-weight:500;text-decoration:none;white-space:nowrap;letter-spacing:.04em}
+.hero{background:var(--espresso);color:var(--sampan);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding-block:28px 56px}
+.zrcadlo{position:relative;aspect-ratio:3/4;max-width:400px;width:100%;justify-self:center;border-radius:50%;border:10px solid var(--zlata);box-shadow:0 0 0 2px #6B5124,inset 0 0 0 2px #6B5124;background:radial-gradient(ellipse at 35% 30%,#5A464C,#2E2327 70%);display:grid;place-items:center;overflow:hidden}
+.zrcadlo svg{width:78%;height:auto}
+.zrcadlo::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.13) 42%,transparent 54%)}
+.hero .eye{font:500 13px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:#D7B977}
+.hero h1{font-size:clamp(46px,7vw,86px);margin:14px 0 16px}
+.hero h1 i{color:#D7B977}
+.hero p{color:#D9CDBF;max-width:44ch;margin:0 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 16px/1 var(--body);letter-spacing:.03em;text-decoration:none;border-radius:2px;padding:16px 20px;border:1.5px solid currentColor;cursor:pointer;background:transparent}
+.btn-z{background:#D7B977;border-color:#D7B977;color:#2B2024}
+.btn-e{background:var(--espresso);border-color:var(--espresso);color:var(--sampan)}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #D7B977;outline-offset:2px}
+.hodiny{margin-top:18px;font-size:15px;color:#C9B9A5}
+.hodiny b{color:var(--sampan);font-weight:500}
+section{padding-block:60px}
+.lead{color:var(--sed);max-width:60ch;margin:12px 0 0}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:30px}
+.polozka{display:flex;align-items:baseline;gap:10px;padding-block:14px;border-bottom:1px solid var(--linka)}
+.polozka h3{font-size:26px}
+.polozka span{flex:1;border-bottom:1px dotted #C5B39C;transform:translateY(-6px)}
+.polozka em{font-style:normal;font-size:14px;color:var(--zlata-tx);white-space:nowrap}
+.polozka+p{margin:6px 0 0;color:var(--sed);font-size:15px}
+.pramen{background:var(--sampan)}
+.pbox{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;margin-top:28px;align-items:center}
+.pbox svg{width:100%;max-width:360px;height:auto;justify-self:center;display:block}
+.tech{display:flex;flex-wrap:wrap;gap:8px}
+.tech button{font:500 15px var(--body);letter-spacing:.03em;border:1.5px solid var(--espresso);background:transparent;color:var(--espresso);padding:10px 16px;cursor:pointer;border-radius:99px}
+.tech button[aria-pressed="true"]{background:var(--espresso);color:var(--sampan)}
+.popis h3{font-size:34px;margin:18px 0 6px}
+.popis p{margin:0 0 6px;color:var(--sed)}
+.vzkaz{background:var(--bila);border:1px solid var(--linka);padding:18px;margin-top:16px}
+.vzkaz label{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--sed);margin:0 0 6px}
+.vzkaz select{width:100%;font:400 16px var(--body);padding:10px;border:1px solid var(--linka);background:#fff;color:var(--tx);margin-bottom:12px}
+.vzkaz pre{white-space:pre-wrap;font:15px/1.55 var(--body);margin:0 0 14px;color:var(--tx);background:var(--krem);padding:12px}
+.ples{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.kroky{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:16px}
+.kroky li{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start}
+.kroky .c{font:500 44px/1 var(--display);color:var(--zlata-tx)}
+.kroky b{display:block;font-weight:600}
+.kroky span{color:var(--sed)}
+.duv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px;text-align:center}
+.duv div{padding:24px 16px;border-top:1px solid var(--zlata);border-bottom:1px solid var(--zlata)}
+.duv b{display:block;font:500 40px/1 var(--display);color:var(--zlata-tx)}
+.duv span{font-size:15px;color:var(--sed)}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:500;cursor:pointer}
+details p{margin:8px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:12px}
+.hod td{padding:8px 0;border-bottom:1px solid var(--linka)}
+.hod td:last-child{text-align:right}
+.hod tr.dnes td{font-weight:600}
+.foto{border:1.5px dashed #BFA98B;display:grid;place-items:center;min-height:220px;color:var(--sed);font-weight:500;text-align:center;padding:16px;background:#F4ECE2}
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+footer{background:var(--espresso);color:#C9B9A5;font-size:14px}
+footer .wrap{padding-block:26px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--espresso);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista a{flex:1;justify-content:center}
+.lista .btn-o{color:var(--sampan)}
+@media (max-width:840px){
+  .hero .wrap,.pbox,.ples,.kontakt,.menu{grid-template-columns:1fr}
+  .zrcadlo{max-width:220px;order:-1}
+  .duv{grid-template-columns:1fr}
+  .galerie{grid-template-columns:1fr 1fr}
+  .lista{display:flex}
+  .toptel{display:none}
+  .hero .wrap{gap:18px;padding-block:20px 40px}
+  .pbox svg{max-width:220px}
+}
+@media (min-width:841px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){#vlas path{transition:fill .5s}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy R-salon</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">R-salon<small>Kadeřnictví · Karviná-Fryštát</small></div>
+  <a class="toptel" href="tel:+420607618772">☎ 607 618 772</a>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eye">Dámské a pánské kadeřnictví ve Fryštátu</div>
+    <h1>Barva, která Vám <i>sluší.</i> Účes na ples i svatbu.</h1>
+    <p>Specializujeme se na barvení, ombré a balayage. Pečujeme o vlasy a vlasovou pokožku přípravky L'Oréal Professionnel.</p>
+    <div class="btns">
+      <a class="btn btn-z" href="tel:+420607618772">☎ Zavolat 607 618 772</a>
+      <a class="btn" href="#pramen">Objednat se</a>
+    </div>
+    <div class="hodiny"><b id="stav">Otevírací doba</b> · Út–Pá 9–19, So 9–12</div>
+  </div>
+  <div class="zrcadlo" aria-hidden="true">
+    <svg viewBox="0 0 200 260">
+      <path d="M100 30c-44 0-66 34-64 78 2 40-10 70-24 96 30 10 60 4 74-10-6-24-6-48 0-64h28c6 16 6 40 0 64 14 14 44 20 74 10-14-26-26-56-24-96 2-44-20-78-64-78z" fill="url(#g1)"/>
+      <ellipse cx="100" cy="110" rx="34" ry="44" fill="#E9CDB5"/>
+      <path d="M66 100c6-40 62-52 74-8-20-18-50-22-74 8z" fill="url(#g1)"/>
+      <path d="M84 196c10 8 22 8 32 0v30H84z" fill="#E9CDB5"/>
+      <path d="M50 260c4-30 26-40 50-40s46 10 50 40z" fill="#8C5A6E"/>
+      <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2620"/><stop offset=".55" stop-color="#7A4E32"/><stop offset="1" stop-color="#D9B57E"/></linearGradient></defs>
+    </svg>
+  </div>
+</div></div>
+
+<section id="sluzby"><div class="wrap">
+  <h2>Co pro Vás uděláme</h2>
+  <p class="lead">Tak, jak to o sobě píšeme: společenské a svatební účesy, přípravy na plesy, barvení vlasů, ombré, balayage a střih dámský i pánský. Ceny Vám rádi řekneme po telefonu.</p>
+  <div class="menu">
+    <div><div class="polozka"><h3>Barvení vlasů</h3></div><p>Naše specializace. Odstín vybereme spolu, podle pleti a Vašich přání.</p></div>
+    <div><div class="polozka"><h3>Ombré a balayage</h3></div><p>Plynulý přechod barvy nebo ručně malované prameny, které vypadají přirozeně.</p></div>
+    <div><div class="polozka"><h3>Melír</h3></div><p>Zesvětlené prameny, které vlasům dodají hloubku a světlo.</p></div>
+    <div><div class="polozka"><h3>Střih dámský i pánský</h3></div><p>Klasický střih i změna stylu. Pro dámy i pány.</p></div>
+    <div><div class="polozka"><h3>Společenské a svatební účesy</h3></div><p>Účes na svatbu, pro nevěstu i svatebčany, a příprava na plesy.</p></div>
+    <div><div class="polozka"><h3>Péče o vlasy a pokožku</h3></div><p>Přípravky L'Oréal Professionnel pro vlasy i vlasovou pokožku.</p></div>
+  </div>
+</div></section>
+
+<section class="pramen" id="pramen"><div class="wrap">
+  <h2>Ombré, balayage, nebo melír?</h2>
+  <p class="lead">Vyzkoušejte si na prameni, jak se techniky liší. Z vybrané techniky složíme zprávu, kterou nám pošlete SMS.</p>
+  <div class="pbox">
+    <svg viewBox="0 0 240 420" role="img" aria-label="Pramen vlasů, který mění barvu podle zvolené techniky">
+      <defs>
+        <linearGradient id="ombre" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2620"/><stop offset=".45" stop-color="#4A3024"/><stop offset=".8" stop-color="#B98A55"/><stop offset="1" stop-color="#E2C48E"/></linearGradient>
+        <linearGradient id="prirozena" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2620"/><stop offset="1" stop-color="#5A3A28"/></linearGradient>
+        <linearGradient id="svetla" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2620"/><stop offset=".25" stop-color="#9C7148"/><stop offset="1" stop-color="#E8CFA0"/></linearGradient>
+      </defs>
+      <rect x="96" y="6" width="48" height="22" rx="6" fill="#A47E3B"/>
+      <g id="vlas">
+        <path d="M100 28 C 90 140, 70 260, 60 410 L 80 410 C 92 270, 104 150, 108 28Z" fill="url(#ombre)"/>
+        <path d="M108 28 C 104 150, 100 270, 96 410 L 116 410 C 118 270, 118 150, 116 28Z" fill="url(#ombre)"/>
+        <path d="M116 28 C 120 150, 130 270, 134 410 L 154 410 C 148 270, 132 150, 124 28Z" fill="url(#ombre)"/>
+        <path d="M124 28 C 134 140, 158 260, 172 410 L 192 410 C 176 260, 146 140, 140 28Z" fill="url(#ombre)"/>
+      </g>
+    </svg>
+    <div class="popis">
+      <div class="tech" id="tech">
+        <button type="button" aria-pressed="true" data-t="ombre">Ombré</button>
+        <button type="button" aria-pressed="false" data-t="balayage">Balayage</button>
+        <button type="button" aria-pressed="false" data-t="melir">Melír</button>
+        <button type="button" aria-pressed="false" data-t="barva">Barvení</button>
+      </div>
+      <h3 id="tn">Ombré</h3>
+      <p id="tp"></p>
+      <form class="vzkaz" onsubmit="return false">
+        <label for="delka">Délka vlasů</label>
+        <select id="delka"><option>krátké</option><option selected>po ramena</option><option>dlouhé</option></select>
+        <label for="den">Kdy byste chtěla přijít</label>
+        <select id="den"></select>
+        <pre id="sms"></pre>
+        <div class="btns"><a class="btn btn-e" id="smsb" href="#">Poslat SMS</a><a class="btn" href="tel:+420607618772">☎ Zavolat</a></div>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap ples">
+  <div>
+    <h2>Plesová sezóna a svatby</h2>
+    <p class="lead">Společenské a svatební účesy a přípravy na plesy patří k tomu, co děláme nejraději. Na velký den se objednejte s předstihem, termíny v sobotu dopoledne mizí rychle.<span class="demo">ukázkový text</span></p>
+    <ol class="kroky">
+      <li><span class="c">1</span><div><b>Zavoláte nebo napíšete</b><span>Řeknete nám datum a jaký účes si představujete.</span></div></li>
+      <li><span class="c">2</span><div><b>Domluvíme barvu a účes</b><span>Když chcete změnu barvy, uděláme ji s předstihem, aby se stihla usadit.</span></div></li>
+      <li><span class="c">3</span><div><b>Ve velký den</b><span>Přijdete do salonu na Fryštátské a odcházíte připravená.</span></div></li>
+    </ol>
+  </div>
+  <div class="foto" style="min-height:360px">Sem přijde Vaše fotka<br>svatebního nebo plesového účesu</div>
+</div></section>
+
+<section style="background:var(--bila);border-block:1px solid var(--linka)"><div class="wrap">
+  <h2>Proč k nám</h2>
+  <div class="duv">
+    <div><b>4,4 / 5</b><span>z 8 hodnocení na <a href="https://www.firmy.cz/detail/751185-r-salon-karvina-frystat.html" target="_blank" rel="noopener">Firmy.cz</a></span></div>
+    <div><b>L'Oréal</b><span>přípravky L'Oréal Professionnel pro vlasy i pokožku</span></div>
+    <div><b>Fryštát</b><span>salon v centru Fryštátu, Fryštátská 55</span></div>
+  </div>
+  <div class="galerie">
+    <div class="foto" style="min-height:160px">Sem přijde Vaše fotka<br>ombré</div>
+    <div class="foto" style="min-height:160px">Sem přijde Vaše fotka<br>balayage</div>
+    <div class="foto" style="min-height:160px">Sem přijde Vaše fotka<br>střihu</div>
+    <div class="foto" style="min-height:160px">Sem přijde Vaše fotka<br>salonu</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Časté otázky</h2>
+  <details open><summary>Jaký je rozdíl mezi ombré a balayage?</summary><p>Ombré je plynulý přechod od tmavších kořínků ke světlým konečkům. Balayage jsou ručně malované prameny, které působí jako vlasy zesvětlené sluncem.</p></details>
+  <details><summary>Kolik stojí barvení?</summary><p>Záleží na délce a hustotě vlasů a na technice. Cenu Vám řekneme po telefonu nebo při konzultaci před barvením.</p></details>
+  <details><summary>Stříháte i pány?</summary><p>Ano, jsme dámské i pánské kadeřnictví.</p></details>
+  <details><summary>Dá se platit kartou?</summary><p>Ano, platit můžete i kartou.</p></details>
+</div></section>
+
+<section style="background:var(--sampan)" id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kontakt</h2>
+    <p style="font-size:19px;margin:16px 0 6px"><b>R-salon</b><br>Fryštátská 2059/55, 733 01 Karviná-Fryštát</p>
+    <p style="margin:0">Tel.: <a href="tel:+420607618772"><b>607 618 772</b></a><br>E-mail: <a href="mailto:r.wojaczkova@seznam.cz">r.wojaczkova@seznam.cz</a></p>
+    <table class="hod" id="hod"></table>
+    <p style="margin-top:16px"><a class="btn btn-e" href="https://mapy.cz/zakladni?q=Fry%C5%A1t%C3%A1tsk%C3%A1%202059%2F55%20Karvin%C3%A1" target="_blank" rel="noopener">Ukázat na mapě</a></p>
+  </div>
+  <div class="foto">Sem přijde Vaše fotka<br>salonu nebo vchodu</div>
+</div></section>
+
+<footer><div class="wrap">R-salon · IČO 41398891 · Fryštátská 2059/55, 733 01 Karviná-Fryštát · 607 618 772</div></footer>
+<div class="lista"><a class="btn btn-z" href="tel:+420607618772">☎ Zavolat</a><a class="btn btn-o" href="#pramen">Objednat se</a></div>
+
+<script>
+(function(){
+  var T={ombre:["Ombré","Plynulý přechod od tmavších kořínků ke světlým konečkům. Odrůstá nenápadně.","url(#ombre)"],
+    balayage:["Balayage","Ručně malované prameny, jako by vlasy zesvětlilo slunce. Každý pramen jinak.",null],
+    melir:["Melír","Zesvětlené prameny od kořínků. Dodají vlasům světlo a hloubku.","url(#svetla)"],
+    barva:["Barvení","Jednotná barva od kořínků po konečky. Odstín vybereme spolu.","url(#prirozena)"]};
+  var g=document.getElementById("tech"),cur="ombre",ps=document.querySelectorAll("#vlas path");
+  function paint(){var f=T[cur][2];[].forEach.call(ps,function(p,i){p.setAttribute("fill",f||(i%2?"url(#svetla)":"url(#prirozena)"))})}
+  g.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(g.children,function(x){x.setAttribute("aria-pressed",x===b)});cur=b.dataset.t;upd()});
+  var DNY=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"],SV=["1-1","1-5","8-5","5-7","6-7","28-9","28-10","17-11","24-12","25-12","26-12"];
+  function otev(d){var w=d.getDay();return w>=2&&w<=6&&SV.indexOf(d.getDate()+"-"+(d.getMonth()+1))<0}
+  var sel=document.getElementById("den"),b=new Date();b.setHours(12);var c=0;
+  for(var k=1;k<30&&c<10;k++){var d=new Date(b.getTime()+k*864e5);if(otev(d)){var o=document.createElement("option");o.textContent=DNY[d.getDay()]+" "+d.getDate()+". "+(d.getMonth()+1)+"."+(d.getDay()===6?" (9–12)":"");sel.appendChild(o);c++}}
+  function upd(){
+    document.getElementById("tn").textContent=T[cur][0];document.getElementById("tp").textContent=T[cur][1];paint();
+    var t="Dobrý den, chtěla bych se objednat na: "+T[cur][0].toLowerCase()+".\nDélka vlasů: "+document.getElementById("delka").value+"\nTermín: "+sel.value+"\nMáte prosím volno? Děkuji.";
+    document.getElementById("sms").textContent=t;document.getElementById("smsb").href="sms:+420607618772?body="+encodeURIComponent(t);
+  }
+  document.getElementById("delka").addEventListener("change",upd);sel.addEventListener("change",upd);
+  var n=new Date(),m=n.getHours()*60+n.getMinutes(),w=n.getDay(),on=otev(n)&&m>=540&&m<(w===6?720:1140);
+  document.getElementById("stav").textContent=on?"Teď máme otevřeno":"Teď máme zavřeno";
+  var DL=["Neděle","Pondělí","Úterý","Středa","Čtvrtek","Pátek","Sobota"],r="";
+  [1,2,3,4,5,6,0].forEach(function(i){var v=i===0?"zavřeno":i===1?"po telefonické domluvě":i===6?"9:00–12:00":"9:00–19:00";r+='<tr'+(i===w?' class="dnes"':'')+'><td>'+DL[i]+'</td><td>'+v+'</td></tr>'});
+  document.getElementById("hod").innerHTML=r;
+  upd();
+})();
+</script>
+</body>
+</html>

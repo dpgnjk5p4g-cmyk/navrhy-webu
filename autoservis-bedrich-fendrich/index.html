@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Bedřich Fendrich</title>
+<meta name="description" content="Autoservis Bedřich Fendrich, Dobšická 3550/7, Znojmo: opravy aut, opravy karoserií a příprava na STK. Otevíráme už v 6:30. Tel. 602 364 763.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Autoservis Bedřich Fendrich","telephone":"+420602364763","email":"autoservis.fendrich@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Dobšická 3550/7","addressLocality":"Znojmo","postalCode":"669 02","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"06:30","closes":"11:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"11:35","closes":"15:00"}],"paymentAccepted":"Hotově, platební karta"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: karta přes asfaltovou plochu, visačka na klíče jako formulář */
+:root{
+  --asfalt:#1F2A36; --asfalt2:#2C3A49; --oranz:#D9541E; --oranz-tx:#A93C0F;
+  --papir:#F3F2EE; --bila:#FFFFFF; --sed:#5B6672; --linka:#D9DCD8;
+  --display:"Saira Condensed","Arial Narrow",sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--papir);color:var(--asfalt);font:16px/1.6 var(--body);padding-bottom:76px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,5vw,46px);text-transform:uppercase;letter-spacing:.01em}
+a{color:inherit}
+.demo{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#111;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top{background:var(--asfalt);color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:800 22px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.logo small{display:block;font:500 12px/1.3 var(--body);letter-spacing:.04em;color:#C8D0D8;text-transform:none}
+.toptel{font-weight:600;text-decoration:none;white-space:nowrap;border:1px solid #4A5B6D;border-radius:6px;padding:8px 12px}
+.hero{background:var(--asfalt);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46%,rgba(255,255,255,.06) 46% 54%,transparent 54% 100%);background-size:180px 100%;opacity:.7}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:32px;align-items:center;padding-block:40px 56px}
+.karta{background:var(--bila);color:var(--asfalt);border-radius:14px;padding:28px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.eyebrow{font:600 13px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--oranz-tx)}
+.karta h1{font-size:clamp(40px,7vw,68px);text-transform:uppercase;margin:10px 0 12px}
+.karta p{margin:0 0 18px;color:var(--sed);max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 16px/1 var(--body);text-decoration:none;border-radius:8px;padding:15px 18px;border:2px solid var(--asfalt);cursor:pointer}
+.btn-o{background:var(--oranz);border-color:var(--oranz);color:#fff}
+.btn-g{background:transparent;color:var(--asfalt)}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #F2A65A;outline-offset:2px}
+.cas{display:flex;gap:14px;align-items:center;margin-top:18px;padding-top:16px;border-top:1px dashed var(--linka);font-size:14px;color:var(--sed)}
+.cas b{font:800 30px/1 var(--display);color:var(--asfalt)}
+.stav{display:inline-block;font-size:13px;font-weight:600;border-radius:99px;padding:4px 10px;background:#E7ECEF;color:var(--asfalt)}
+.stav.on{background:#DDF1E1;color:#1E6B34}
+.visacka-art{justify-self:center;max-width:100%}
+section{padding-block:56px}
+.sl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.sl article{background:var(--bila);border:1px solid var(--linka);border-radius:10px;padding:22px}
+.sl h3{font-size:26px;text-transform:uppercase;margin:12px 0 6px}
+.sl p{margin:0;color:var(--sed)}
+.lead{max-width:62ch;color:var(--sed);margin:10px 0 0}
+.tag{background:var(--asfalt);color:#fff}
+.tag .lead{color:#C8D0D8}
+.tagbox{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:26px;align-items:start}
+.tagform{background:#FBF7EC;color:var(--asfalt);border-radius:14px 14px 14px 60px;padding:28px 24px 24px 54px;position:relative}
+.tagform::before{content:"";position:absolute;left:20px;top:28px;width:18px;height:18px;border-radius:50%;background:var(--asfalt);box-shadow:inset 0 0 0 4px #9AA6B2}
+.tagform label{display:block;font:600 13px/1.2 var(--body);letter-spacing:.05em;text-transform:uppercase;margin:14px 0 6px}
+.tagform input,.tagform select{width:100%;font:500 16px var(--body);padding:11px 12px;border:1.5px solid #CFC7B2;border-radius:6px;background:#fff;color:var(--asfalt)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 14px var(--body);border:1.5px solid #CFC7B2;background:#fff;border-radius:99px;padding:9px 13px;cursor:pointer;color:var(--asfalt)}
+.chips button[aria-pressed="true"]{background:var(--asfalt);color:#fff;border-color:var(--asfalt)}
+.vystup{background:var(--asfalt2);border-radius:12px;padding:22px}
+.vystup pre{white-space:pre-wrap;font:15px/1.55 var(--body);margin:0 0 16px;color:#fff}
+.vystup .btn-g{color:#fff;border-color:#fff}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hod td{padding:9px 0;border-bottom:1px solid var(--linka)}
+.hod td:last-child{text-align:right}
+.hod tr.dnes td{font-weight:600}
+.hod .zav{color:var(--oranz-tx);font-weight:600}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px;counter-reset:k}
+.kroky li{list-style:none;background:var(--bila);border-radius:10px;padding:22px;border-top:4px solid var(--oranz)}
+.kroky li::before{counter-increment:k;content:counter(k);font:800 40px/1 var(--display);color:var(--oranz-tx)}
+.kroky h3{font-size:24px;text-transform:uppercase;margin:6px 0}
+.kroky p{margin:0;color:var(--sed)}
+.kroky{padding:0}
+.zima{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.fakt{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid var(--linka);padding-block:12px}
+.fakt b{font:800 34px/1 var(--display);color:var(--oranz-tx);min-width:96px}
+.duv{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.duv div{background:var(--bila);border:1px solid var(--linka);border-radius:10px;padding:18px}
+.duv b{display:block;font:800 22px/1.1 var(--display);text-transform:uppercase}
+.duv span{font-size:14px;color:var(--sed)}
+details{background:var(--bila);border:1px solid var(--linka);border-radius:10px;padding:16px 18px;margin-top:10px}
+summary{font-weight:600;cursor:pointer}
+details p{margin:10px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.foto{border:2px dashed #AEB6BE;border-radius:12px;display:grid;place-items:center;min-height:200px;color:var(--sed);font-weight:600;text-align:center;padding:16px;background:repeating-linear-gradient(45deg,#ECEDEA 0 12px,#F3F2EE 12px 24px)}
+footer{background:var(--asfalt);color:#C8D0D8;font-size:14px}
+footer .wrap{padding-block:28px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--asfalt);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista a{flex:1;justify-content:center}
+@media (max-width:820px){
+  .hero .wrap,.tagbox,.zima,.kontakt{grid-template-columns:1fr}
+  .sl,.kroky{grid-template-columns:1fr}
+  .duv{grid-template-columns:1fr 1fr}
+  .visacka-art{display:none}
+  .lista{display:flex}
+  .toptel{display:none}
+  .karta{padding:22px}
+  .hero .wrap{padding-block:24px 36px}
+}
+@media (min-width:821px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){.kyv{transform-origin:150px 20px;animation:kyv 4s ease-in-out infinite}@keyframes kyv{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Bedřich Fendrich</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Autoservis Fendrich<small>Dobšická 3550/7, Znojmo</small></div>
+  <a class="toptel" href="tel:+420602364763">☎ 602 364 763</a>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="karta">
+    <div class="eyebrow">Autoservis ve Znojmě · opravy · karoserie · STK</div>
+    <h1>Auto nám nechte cestou do práce.</h1>
+    <p>Otevíráme už v 6:30. Opravíme mechaniku i karoserii a připravíme auto na STK. Platit můžete i kartou.</p>
+    <div class="btns">
+      <a class="btn btn-o" href="tel:+420602364763">☎ Zavolat 602 364 763</a>
+      <a class="btn btn-g" href="#visacka">Objednat servis</a>
+    </div>
+    <div class="cas"><b>6:30</b><span>Po, Út, Čt, Pá · ve středu zavřeno<br><span class="stav" id="stav">Otevírací doba</span></span></div>
+  </div>
+  <svg class="visacka-art" width="300" height="360" viewBox="0 0 300 360" role="img" aria-label="Klíče od auta s papírovou visačkou">
+    <g class="kyv">
+      <circle cx="150" cy="20" r="10" fill="none" stroke="#9AA6B2" stroke-width="5"/>
+      <path d="M150 30 L150 70" stroke="#9AA6B2" stroke-width="4"/>
+      <circle cx="150" cy="86" r="18" fill="none" stroke="#C9D1D8" stroke-width="6"/>
+      <rect x="132" y="102" width="36" height="54" rx="10" fill="#0F151C"/>
+      <circle cx="150" cy="122" r="6" fill="#D9541E"/>
+      <path d="M144 156 h12 v58 l-6 6 -6 -6 z" fill="#C9D1D8"/>
+      <path d="M156 172 h8 M156 186 h6 M156 200 h9" stroke="#9AA6B2" stroke-width="3"/>
+      <path d="M150 80 C 100 100, 70 150, 76 190" fill="none" stroke="#E9E2CF" stroke-width="2"/>
+      <g transform="translate(20 188) rotate(-8)">
+        <path d="M0 30 L30 0 H190 V120 H30 L0 90 Z" fill="#FBF7EC"/>
+        <circle cx="26" cy="60" r="7" fill="#1F2A36"/>
+        <text x="50" y="40" font-family="Saira Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="22" fill="#1F2A36">Vaše auto</text>
+        <text x="50" y="70" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#5B6672">Příprava na STK</text>
+        <text x="50" y="94" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#A93C0F">Čtvrtek 6:30</text>
+      </g>
+    </g>
+  </svg>
+</div></div>
+
+<section id="sluzby"><div class="wrap">
+  <h2>Co u nás uděláme</h2>
+  <p class="lead">„Provozuji autoservis. Nabízíme kompletní služby včetně oprav karosérií či přípravy vozidel na STK.“ Cenu Vám řekneme předem, ještě než začneme.<span class="demo">ukázkový text</span></p>
+  <div class="sl">
+    <article>
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#1F2A36"/><path d="M14 28l10-10m-2-4a5 5 0 0 1 7 7l-2-2-3 3 2 2a5 5 0 0 1-7-7" stroke="#F3F2EE" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      <h3>Servis a opravy</h3>
+      <p>Kompletní služby autoservisu: pravidelný servis, opravy mechaniky a výměny dílů.</p>
+    </article>
+    <article>
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#D9541E"/><path d="M10 27h24l-3-7H18l-4 3zM15 27a2.5 2.5 0 1 0 0 .1M29 27a2.5 2.5 0 1 0 0 .1" stroke="#fff" stroke-width="2.2" fill="none" stroke-linejoin="round"/></svg>
+      <h3>Opravy karoserií</h3>
+      <p>Promáčklina, oděrka nebo poškozený plech. Opravu domluvíme po prohlídce auta.</p>
+    </article>
+    <article>
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#1F2A36"/><circle cx="22" cy="22" r="10" fill="none" stroke="#F3F2EE" stroke-width="2.4"/><path d="M17 22l4 4 6-8" stroke="#F2A65A" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+      <h3>Příprava na STK</h3>
+      <p>Auto projdeme před technickou kontrolou a opravíme, co by u STK neprošlo.</p>
+    </article>
+  </div>
+</div></section>
+
+<section class="tag" id="visacka"><div class="wrap">
+  <h2>Visačka na klíče</h2>
+  <p class="lead">Vyplňte visačku, jako byste ji věšeli na klíče. Složíme z ní SMS, kterou pošlete do dílny, nebo si ji přečtete do telefonu. Nabízíme jen dny, kdy máme otevřeno.</p>
+  <div class="tagbox">
+    <form class="tagform" id="tf" onsubmit="return false">
+      <label for="auto">Auto (značka, model)</label>
+      <input id="auto" value="Škoda Fabia 2014" autocomplete="off">
+      <label>Co potřebujete</label>
+      <div class="chips" id="co">
+        <button type="button" aria-pressed="true">Servis / oprava</button>
+        <button type="button" aria-pressed="false">Karoserie</button>
+        <button type="button" aria-pressed="false">Příprava na STK</button>
+      </div>
+      <label for="den">Kdy auto přivezete</label>
+      <select id="den"></select>
+      <label>Část dne</label>
+      <div class="chips" id="pul">
+        <button type="button" aria-pressed="true">Ráno od 6:30</button>
+        <button type="button" aria-pressed="false">Odpoledne od 11:35</button>
+      </div>
+      <label for="pozn">Poznámka</label>
+      <input id="pozn" value="Při brzdění to píská." autocomplete="off">
+    </form>
+    <div class="vystup">
+      <pre id="sms"></pre>
+      <div class="btns">
+        <a class="btn btn-o" id="smsbtn" href="#">Poslat SMS na 602 364 763</a>
+        <button class="btn btn-g" type="button" id="kop">Zkopírovat text</button>
+      </div>
+      <p style="color:#C8D0D8;font-size:14px;margin:14px 0 0">Termín Vám potvrdíme zpět. Číslo dílny: <b style="color:#fff;user-select:all">602 364 763</b></p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Jak to probíhá</h2>
+  <ol class="kroky">
+    <li><h3>Ozvete se</h3><p>Zavoláte nebo pošlete SMS z visačky. Domluvíme den a čas.</p></li>
+    <li><h3>Přivezete auto</h3><p>Od 6:30, ještě před prací. Řekneme Vám, co auto potřebuje a kolik to bude stát.</p></li>
+    <li><h3>Vyzvednete si ho</h3><p>Zavoláme, až bude hotovo. Zaplatíte hotově nebo kartou.</p></li>
+  </ol>
+</div></section>
+
+<section style="background:#E8EAE6"><div class="wrap zima">
+  <div>
+    <div class="eyebrow">Sezóna</div>
+    <h2>Zimní pneumatiky od 1. listopadu</h2>
+    <p class="lead">Před zimou se vyplatí zkontrolovat pneumatiky i brzdy. Přezutí a kontrolu domluvíme na stejný den jako servis.<span class="demo">ukázkový text</span></p>
+  </div>
+  <div>
+    <div class="fakt"><b>1. 11.</b><span>od tohoto dne do 31. 3. platí povinnost zimních pneumatik, když jsou na silnici zimní podmínky</span></div>
+    <div class="fakt"><b>4 mm</b><span>nejmenší hloubka dezénu zimní pneumatiky u osobního auta</span></div>
+    <div class="fakt"><b>St</b><span>ve středu máme zavřeno, objednejte se na pondělí, úterý, čtvrtek nebo pátek</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Proč k nám</h2>
+  <div class="duv">
+    <div><b>Od 6:30</b><span>auto předáte ještě před prací</span></div>
+    <div><b>3 v 1</b><span>mechanika, karoserie a příprava na STK na jednom místě</span></div>
+    <div><b>Kartou</b><span>platba kartou je samozřejmost</span></div>
+    <div><b>IČO 72453028</b><span>živnostník, Dobšická 3550/7, Znojmo</span></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Časté otázky</h2>
+  <details open><summary>Musím se objednat předem?</summary><p>Ano, zavolejte nebo pošlete SMS. Domluvíme den, kdy auto přivezete, a odhadneme, jak dlouho oprava potrvá.</p></details>
+  <details><summary>Kolik bude oprava stát?</summary><p>Cenu Vám řekneme po prohlídce auta, ještě než začneme. Když se během opravy objeví něco dalšího, nejdřív zavoláme.<span class="demo">ukázkový text</span></p></details>
+  <details><summary>Připravíte auto na STK?</summary><p>Ano. Auto projdeme, opravíme to, co by neprošlo, a pak už jen jedete na kontrolu.</p></details>
+  <details><summary>Proč máte polední pauzu 11:00–11:35?</summary><p>Mezi 11:00 a 11:35 je dílna zavřená. Auto můžete přivézt nebo vyzvednout ráno od 6:30 nebo odpoledne do 15:00.</p></details>
+</div></section>
+
+<section style="background:#E8EAE6" id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kontakt</h2>
+    <p style="font-size:18px;margin:16px 0 4px"><b>Autoservis Bedřich Fendrich</b><br>Dobšická 3550/7, 669 02 Znojmo</p>
+    <p style="margin:0 0 16px">Tel.: <a href="tel:+420602364763"><b>602 364 763</b></a><br>E-mail: <a href="mailto:autoservis.fendrich@seznam.cz">autoservis.fendrich@seznam.cz</a></p>
+    <table class="hod" id="hod"></table>
+    <p><a class="btn btn-g" href="https://mapy.cz/zakladni?q=Dob%C5%A1ick%C3%A1%203550%2F7%20Znojmo" target="_blank" rel="noopener">Ukázat na mapě</a></p>
+  </div>
+  <div class="foto">Sem přijde Vaše fotka<br>dílny nebo příjezdu k servisu</div>
+</div></section>
+
+<footer><div class="wrap">Autoservis Bedřich Fendrich · IČO 72453028 · Dobšická 3550/7, 669 02 Znojmo · 602 364 763</div></footer>
+
+<div class="lista"><a class="btn btn-o" href="tel:+420602364763">☎ Zavolat</a><a class="btn btn-g" style="color:#fff;border-color:#fff" href="#visacka">Objednat</a></div>
+
+<script>
+(function(){
+  var DNY=["Ne","Po","Út","St","Čt","Pá","So"],DNYL=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  var OTEV=[1,2,4,5];
+  var SVATKY=["1-1","1-5","8-5","5-7","6-7","28-9","28-10","17-11","24-12","25-12","26-12"];
+  function svatek(d){return SVATKY.indexOf(d.getDate()+"-"+(d.getMonth()+1))>=0}
+  // stav podle ověřené otevírací doby
+  var n=new Date(),m=n.getHours()*60+n.getMinutes(),dw=n.getDay();
+  var on=OTEV.indexOf(dw)>=0&&!svatek(n)&&((m>=390&&m<660)||(m>=695&&m<900));
+  var s=document.getElementById("stav");s.textContent=on?"Teď máme otevřeno":"Teď máme zavřeno";if(on)s.classList.add("on");
+  // tabulka hodin
+  var rows="",ord=[1,2,3,4,5,6,0];
+  ord.forEach(function(i){var o=OTEV.indexOf(i)>=0;rows+='<tr'+(i===dw?' class="dnes"':'')+'><td>'+DNYL[i].charAt(0).toUpperCase()+DNYL[i].slice(1)+'</td><td'+(o?'':' class="zav"')+'>'+(o?'6:30–11:00, 11:35–15:00':'zavřeno')+'</td></tr>'});
+  document.getElementById("hod").innerHTML=rows;
+  // nabídka dnů
+  var sel=document.getElementById("den"),d=new Date();d.setHours(12);var c=0;
+  for(var k=1;k<40&&c<10;k++){var x=new Date(d.getTime()+k*864e5);if(OTEV.indexOf(x.getDay())>=0&&!svatek(x)){var o=document.createElement("option");o.textContent=DNYL[x.getDay()]+" "+x.getDate()+". "+(x.getMonth()+1)+".";sel.appendChild(o);c++}}
+  function chips(id){var g=document.getElementById(id);g.addEventListener("click",function(e){if(e.target.tagName!=="BUTTON")return;[].forEach.call(g.children,function(b){b.setAttribute("aria-pressed",b===e.target)});upd()})}
+  function val(id){var b=document.querySelector("#"+id+" [aria-pressed=true]");return b?b.textContent:""}
+  function upd(){
+    var t="Dobrý den, chtěl/a bych objednat: "+val("co")+".\nAuto: "+document.getElementById("auto").value+"\nPřivezu: "+sel.value+", "+val("pul").toLowerCase()+"\n";
+    var p=document.getElementById("pozn").value.trim();if(p)t+="Poznámka: "+p+"\n";
+    t+="Prosím o potvrzení termínu. Děkuji.";
+    document.getElementById("sms").textContent=t;
+    document.getElementById("smsbtn").href="sms:+420602364763?body="+encodeURIComponent(t);
+  }
+  chips("co");chips("pul");["auto","den","pozn"].forEach(function(i){document.getElementById(i).addEventListener("input",upd)});
+  document.getElementById("kop").addEventListener("click",function(){var t=document.getElementById("sms").textContent,b=this;
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent="Zkopírováno"},function(){sela()})}catch(e){sela()}
+    function sela(){var r=document.createRange();r.selectNodeContents(document.getElementById("sms"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Text je označený"}});
+  upd();
+})();
+</script>
+</body>
+</html>

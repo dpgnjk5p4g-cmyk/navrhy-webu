@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Somr</title>
+<meta name="description" content="Autoservis Somr, náměstí Míru 3, Vracov: opravy aut, servis, měření a seřízení geometrie kol, příprava a provedení STK. Po–Pá 8–12 a 13–17. Tel. 518 628 284.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Autoservis Somr","telephone":"+420518628284","email":"autoservissomr@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"náměstí Míru 3","addressLocality":"Vracov","postalCode":"696 42","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:00","closes":"17:00"}]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: velký nápis přes celou šířku nad měřicí stupnicí geometrie, zakázkový list s průpisem */
+:root{
+  --navy:#0D3B66; --navy2:#0A2E50; --meruna:#F4A259; --meruna-tx:#9A5310;
+  --krem:#FAF7F0; --zel:#3F7A66; --tx:#14202B; --sed:#56616B; --linka:#DCD8CE; --bila:#fff;
+  --display:"Chakra Petch","Arial Narrow",sans-serif; --body:"Work Sans",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--krem);color:var(--tx);font:16px/1.6 var(--body);padding-bottom:76px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4.6vw,44px)}
+a{color:inherit}
+.demo{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#111;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top{background:var(--navy);color:#fff;border-bottom:1px solid #22517F}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:700 20px/1 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.logo small{display:block;font:400 12px/1.4 var(--body);letter-spacing:.02em;color:#B9CBDD;text-transform:none}
+.toptel{font-weight:600;text-decoration:none;white-space:nowrap}
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero .wrap{padding-block:36px 0}
+.hero .kde{font:500 14px/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--meruna)}
+.hero h1{font-size:clamp(44px,9.5vw,118px);letter-spacing:-.01em;margin:12px 0 16px;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--meruna)}
+.hero p{font-size:18px;color:#D3DEE9;max-width:56ch;margin:0 0 22px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 16px/1 var(--body);text-decoration:none;border-radius:4px;padding:15px 18px;border:2px solid transparent;cursor:pointer}
+.btn-m{background:var(--meruna);color:#1B1206}
+.btn-l{border-color:#fff;color:#fff;background:transparent}
+.btn-n{background:var(--navy);color:#fff}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--meruna);outline-offset:2px}
+.hodiny{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin-top:20px;font-size:15px;color:#D3DEE9}
+.stav{font-weight:600;border-radius:99px;padding:4px 10px;background:#22517F;color:#fff;font-size:13px}
+.stav.on{background:#2F7D5D}
+.stupnice{display:block;width:100%;height:auto;margin-top:30px}
+section{padding-block:56px}
+.lead{color:var(--sed);max-width:62ch;margin:10px 0 0}
+.sl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:28px;border-top:2px solid var(--tx)}
+.sl article{padding:20px 18px 22px 0;border-right:1px solid var(--linka)}
+.sl article+article{padding-left:18px}
+.sl article:last-child{border-right:0}
+.sl .n{font:700 13px/1 var(--display);letter-spacing:.1em;color:var(--meruna-tx)}
+.sl h3{font-size:22px;margin:8px 0 6px}
+.sl p{margin:0;color:var(--sed);font-size:15px}
+.list{background:var(--bila);border-block:1px solid var(--linka)}
+.listbox{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;margin-top:26px;align-items:start}
+.zak{border:2px solid var(--tx);background:#fff;font-size:15px}
+.zak .hl{display:flex;justify-content:space-between;gap:8px;background:var(--tx);color:#fff;padding:10px 14px;font:700 14px/1.2 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.zak .row{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--linka)}
+.zak .row>label,.zak .row>span{padding:12px 14px;background:#F4F1E8;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;border-right:1px solid var(--linka)}
+.zak .row>div,.zak .row>input,.zak .row>select{padding:10px 14px;border:0;font:500 16px var(--body);background:#fff;color:var(--tx);width:100%;min-width:0}
+.zak .ck{display:grid;gap:8px}
+.zak .ck label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.zak .ck input{width:20px;height:20px;accent-color:var(--navy);margin-top:2px;flex:none}
+.prupis{background:#E9EFF6;border:2px dashed #7C97B3;padding:20px;position:relative}
+.prupis h3{font-size:18px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);margin-bottom:10px}
+.prupis pre{white-space:pre-wrap;margin:0 0 16px;font:15px/1.55 var(--body);color:#1E3550}
+.prupis .pozn{font-size:14px;color:var(--sed);margin:14px 0 0}
+.tel{font:700 24px/1 var(--display);user-select:all}
+.geo{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.fakt{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:baseline;border-bottom:1px solid var(--linka);padding-block:12px}
+.fakt b{font:700 30px/1 var(--display);color:var(--navy)}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:26px 0 0;padding:0;list-style:none}
+.kroky li{border-left:3px solid var(--meruna);padding:4px 0 4px 16px}
+.kroky b{display:block;font:700 20px/1.2 var(--display);margin-bottom:4px}
+.kroky span{color:var(--sed)}
+.duv{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.duv span{background:var(--bila);border:1px solid var(--linka);border-radius:99px;padding:10px 16px;font-weight:500}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:600;cursor:pointer}
+details p{margin:8px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:10px}
+.hod td{padding:8px 0;border-bottom:1px solid var(--linka)}
+.hod td:last-child{text-align:right}
+.hod tr.dnes td{font-weight:700}
+.foto{border:2px dashed #9FB0C0;display:grid;place-items:center;min-height:220px;color:var(--sed);font-weight:600;text-align:center;padding:16px;background:#EEF2F5}
+footer{background:var(--navy2);color:#B9CBDD;font-size:14px}
+footer .wrap{padding-block:26px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--navy);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista a{flex:1;justify-content:center}
+@media (max-width:860px){
+  .sl{grid-template-columns:1fr 1fr}
+  .sl article:nth-child(2){border-right:0}
+  .sl article:nth-child(3){padding-left:0}
+  .listbox,.geo,.kontakt{grid-template-columns:1fr}
+  .kroky{grid-template-columns:1fr}
+  .lista{display:flex}
+}
+@media (max-width:480px){
+  .sl{grid-template-columns:1fr}
+  .sl article{border-right:0!important;padding-left:0!important;border-bottom:1px solid var(--linka)}
+  .zak .row{grid-template-columns:1fr}
+  .zak .row>label,.zak .row>span{border-right:0;padding:8px 14px}
+  .toptel{display:none}
+  .hero p{font-size:16px}
+}
+@media (min-width:861px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){.ruc{animation:ruc 3.2s ease-out both}@keyframes ruc{from{transform:rotate(-14deg)}60%{transform:rotate(3deg)}to{transform:rotate(0)}}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Somr</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Autoservis Somr<small>náměstí Míru 3, Vracov</small></div>
+  <a class="toptel" href="tel:+420518628284">☎ 518 628 284</a>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="kde">Autoservis na náměstí ve Vracově</div>
+  <h1>Opravy, geometrie <em>i&nbsp;STK.</em></h1>
+  <p>Opravíme auto, seřídíme geometrii kol, připravíme ho na technickou kontrolu a STK s Vámi i provedeme. Všechno na jednom místě.</p>
+  <div class="btns">
+    <a class="btn btn-m" href="tel:+420518628284">☎ Zavolat 518 628 284</a>
+    <a class="btn btn-l" href="#list">Objednat servis</a>
+  </div>
+  <div class="hodiny"><span class="stav" id="stav">Otevírací doba</span><span>Po–Pá 8–12 a 13–17</span></div>
+  <svg class="stupnice" viewBox="0 0 1140 150" role="img" aria-label="Stupnice měření geometrie kol s ručičkou na nule">
+    <rect x="0" y="40" width="1140" height="110" fill="#0A2E50"/>
+    <g fill="#5E86AE">
+      <rect x="570" y="40" width="3" height="46" fill="#F4A259"/>
+    </g>
+    <g id="ticks"></g>
+    <text x="570" y="118" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="22" font-weight="700" fill="#F4A259">0°00′</text>
+    <text x="210" y="118" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="15" fill="#7EA0C2">sbíhavost −</text>
+    <text x="930" y="118" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="15" fill="#7EA0C2">sbíhavost +</text>
+    <g class="ruc" style="transform-origin:571px 150px"><path d="M571 150 L566 60 L571 44 L576 60 Z" fill="#F4A259"/></g>
+  </svg>
+</div></div>
+
+<section id="sluzby"><div class="wrap">
+  <h2>Čtyři věci, které u nás vyřídíte</h2>
+  <p class="lead">Přesně tak, jak to o sobě píšeme: „Opravy silničních vozidel. Servisní práce. Měření a seřízení geometrie kol. Přípravy a provedení STK.“ Cenu Vám řekneme předem.<span class="demo">ukázkový text</span></p>
+  <div class="sl">
+    <article><div class="n">01 · OPRAVY</div><h3>Opravy silničních vozidel</h3><p>Když auto dělá něco, co by nemělo. Podíváme se na to a opravíme.</p></article>
+    <article><div class="n">02 · SERVIS</div><h3>Servisní práce</h3><p>Pravidelná údržba, výměny olejů, filtrů a dalších dílů podle servisního plánu.</p></article>
+    <article><div class="n">03 · GEOMETRIE</div><h3>Měření a seřízení geometrie</h3><p>Auto táhne do strany nebo nerovnoměrně jí pneumatiky? Změříme a seřídíme.</p></article>
+    <article><div class="n">04 · STK</div><h3>Příprava a provedení STK</h3><p>Auto připravíme a technickou kontrolu zajistíme. Nemusíte jezdit jinam.</p></article>
+  </div>
+</div></section>
+
+<section class="list" id="list"><div class="wrap">
+  <h2>Zakázkový list</h2>
+  <p class="lead">Zaškrtněte, co potřebujete. Z listu vznikne tahák k hovoru, nebo ho rovnou pošlete e-mailem. Na pevnou linku SMS nedojde, proto e-mail.</p>
+  <div class="listbox">
+    <form class="zak" onsubmit="return false">
+      <div class="hl"><span>Autoservis Somr · zakázka</span><span id="cislo">Vracov</span></div>
+      <div class="row"><span>Úkon</span>
+        <div class="ck" id="ukony">
+          <label><input type="checkbox" id="u1" checked> Oprava – auto má závadu</label>
+          <label><input type="checkbox" id="u2"> Servisní práce, údržba</label>
+          <label><input type="checkbox" id="u3" checked> Měření a seřízení geometrie</label>
+          <label><input type="checkbox" id="u4"> Příprava a provedení STK</label>
+        </div></div>
+      <div class="row"><label for="vuz">Vozidlo</label><input id="vuz" value="Ford Focus kombi, 2016" autocomplete="off"></div>
+      <div class="row"><label for="popis">Popis</label><input id="popis" value="Po přezutí táhne doprava." autocomplete="off"></div>
+      <div class="row"><label for="den">Termín</label><select id="den"></select></div>
+      <div class="row"><label for="pul">Část dne</label><select id="pul"><option>dopoledne 8–12</option><option>odpoledne 13–17</option></select></div>
+    </form>
+    <div class="prupis">
+      <h3>Průpis – tahák k hovoru</h3>
+      <pre id="out"></pre>
+      <div class="btns">
+        <a class="btn btn-n" href="tel:+420518628284">☎ Zavolat</a>
+        <a class="btn btn-m" id="mail" href="#">Poslat e-mailem</a>
+      </div>
+      <p class="pozn">Telefon: <span class="tel">518 628 284</span><br>E-mail: <span style="user-select:all">autoservissomr@seznam.cz</span></p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap geo">
+  <div>
+    <h2>Přezuto? Zkontrolujte geometrii.</h2>
+    <p class="lead">Od 1. listopadu platí povinnost zimních pneumatik za zimních podmínek. Když auto po přezutí táhne do strany nebo se volant nevrací rovně, je čas na měření geometrie.</p>
+    <p style="margin-top:18px"><a class="btn btn-n" href="#list">Objednat geometrii</a></p>
+  </div>
+  <div>
+    <div class="fakt"><b>1. 11.</b><span>do 31. 3. platí povinnost zimních pneumatik, když jsou na silnici zimní podmínky</span></div>
+    <div class="fakt"><b>4 mm</b><span>nejmenší hloubka dezénu zimní pneumatiky u osobního auta</span></div>
+    <div class="fakt"><b>↗</b><span>auto táhne do strany, křivý volant, pneumatika ojetá jen z jedné strany: znaky, že geometrie nesedí</span></div>
+  </div>
+</div></section>
+
+<section style="background:#F1ECE0"><div class="wrap">
+  <h2>Jak to probíhá</h2>
+  <ol class="kroky">
+    <li><b>Zavoláte nebo napíšete</b><span>Domluvíme den a řekneme, kolik času si auto vezme.</span></li>
+    <li><b>Přivezete auto na náměstí</b><span>Náměstí Míru 3, Vracov. Domluvíme rozsah práce a cenu.</span></li>
+    <li><b>Vyzvednete hotové auto</b><span>Zavoláme, až bude hotovo. U STK dostanete i protokol.</span></li>
+  </ol>
+  <h2 style="margin-top:44px">Proč k nám</h2>
+  <div class="duv">
+    <span>Příprava i STK na jednom místě</span>
+    <span>Měření a seřízení geometrie kol</span>
+    <span>Na náměstí ve Vracově</span>
+    <span>IČO 13683268</span>
+    <span>Po–Pá 8–12 a 13–17</span>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Časté otázky</h2>
+  <details open><summary>Jak dlouho trvá měření a seřízení geometrie?</summary><p>Obvykle je to práce na jednu návštěvu. Přesný čas Vám řekneme, až se domluvíme na termínu.<span class="demo">ukázkový text</span></p></details>
+  <details><summary>Musím na STK jezdit jinam?</summary><p>Ne. Auto u nás připravíme a technickou kontrolu zajistíme.</p></details>
+  <details><summary>Kdy máte otevřeno?</summary><p>Pondělí až pátek 8–12 a 13–17. Ve svátky se otevírací doba může lišit, raději zavolejte.</p></details>
+  <details><summary>Jak se objednám?</summary><p>Zavolejte na 518 628 284 nebo pošlete zakázkový list e-mailem na autoservissomr@seznam.cz.</p></details>
+</div></section>
+
+<section style="background:#fff;border-top:1px solid var(--linka)" id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kontakt</h2>
+    <p style="font-size:18px;margin:16px 0 4px"><b>Autoservis Somr</b><br>náměstí Míru 3, 696 42 Vracov</p>
+    <p style="margin:0">Tel.: <a href="tel:+420518628284"><b>518 628 284</b></a><br>E-mail: <a href="mailto:autoservissomr@seznam.cz">autoservissomr@seznam.cz</a></p>
+    <table class="hod" id="hod"></table>
+    <p style="margin-top:16px"><a class="btn btn-n" href="https://mapy.cz/zakladni?q=n%C3%A1m%C4%9Bst%C3%AD%20M%C3%ADru%203%20Vracov" target="_blank" rel="noopener">Ukázat na mapě</a></p>
+  </div>
+  <div class="foto">Sem přijde Vaše fotka<br>dílny na náměstí</div>
+</div></section>
+
+<footer><div class="wrap">Autoservis Somr · IČO 13683268 · náměstí Míru 3, 696 42 Vracov · 518 628 284</div></footer>
+<div class="lista"><a class="btn btn-m" href="tel:+420518628284">☎ Zavolat</a><a class="btn btn-l" href="#list">Objednat</a></div>
+
+<script>
+(function(){
+  var t="",x;for(x=30;x<=1110;x+=18){var big=(x-570)%90===0;t+='<rect x="'+x+'" y="40" width="'+(big?2:1)+'" height="'+(big?30:16)+'" fill="#5E86AE"/>'}
+  document.getElementById("ticks").innerHTML=t;
+  var DNYL=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  var SV=["1-1","1-5","8-5","5-7","6-7","28-9","28-10","17-11","24-12","25-12","26-12"];
+  function sv(d){return SV.indexOf(d.getDate()+"-"+(d.getMonth()+1))>=0}
+  function prac(d){return d.getDay()>0&&d.getDay()<6&&!sv(d)}
+  var n=new Date(),m=n.getHours()*60+n.getMinutes();
+  var on=prac(n)&&((m>=480&&m<720)||(m>=780&&m<1020));
+  var s=document.getElementById("stav");s.textContent=on?"Teď máme otevřeno":"Teď máme zavřeno";if(on)s.classList.add("on");
+  var r="";[1,2,3,4,5,6,0].forEach(function(i){var o=i>0&&i<6;r+='<tr'+(i===n.getDay()?' class="dnes"':'')+'><td>'+DNYL[i].charAt(0).toUpperCase()+DNYL[i].slice(1)+'</td><td>'+(o?'8:00–12:00, 13:00–17:00':'zavřeno')+'</td></tr>'});
+  document.getElementById("hod").innerHTML=r;
+  var sel=document.getElementById("den"),b=new Date();b.setHours(12);var c=0;
+  for(var k=1;k<30&&c<10;k++){var d=new Date(b.getTime()+k*864e5);if(prac(d)){var o=document.createElement("option");o.textContent=DNYL[d.getDay()]+" "+d.getDate()+". "+(d.getMonth()+1)+".";sel.appendChild(o);c++}}
+  function upd(){
+    var u=[].map.call(document.querySelectorAll("#ukony input:checked"),function(i){return i.parentNode.textContent.trim()});
+    var txt="Dobrý den, chtěl/a bych se objednat.\nÚkon: "+(u.length?u.join("; "):"(vyberte)")+"\nVozidlo: "+document.getElementById("vuz").value+"\nPopis: "+document.getElementById("popis").value+"\nTermín: "+sel.value+", "+document.getElementById("pul").value+"\nOtázka: Kolik to přibližně bude stát a jak dlouho to potrvá?";
+    document.getElementById("out").textContent=txt;
+    document.getElementById("mail").href="mailto:autoservissomr@seznam.cz?subject="+encodeURIComponent("Objednávka servisu – "+document.getElementById("vuz").value)+"&body="+encodeURIComponent(txt);
+  }
+  document.querySelector(".zak").addEventListener("input",upd);document.querySelector(".zak").addEventListener("change",upd);upd();
+})();
+</script>
+</body>
+</html>
