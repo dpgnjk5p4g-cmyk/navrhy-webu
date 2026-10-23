@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Petr Saska, autoservis a autoelektrikář Litohoř</title>
+<meta name="description" content="Petr Saska – autoservis a autoelektrikář v Litohoři u Moravských Budějovic. Alarmy, navigace, autorádia a autoelektronika, opravy aut všech značek. Po–Pá 7:30–18:00, tel. 775 942 925.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700;800&family=Rubik:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Petr Saska – autoservis","description":"Montáže a servis autoelektroniky, alarmů, navigací a audio zařízení. Opravy vozidel všech značek.","telephone":"+420775942925","email":"pesas@seznam.cz","taxID":"65900791","address":{"@type":"PostalAddress","streetAddress":"Litohoř 159","postalCode":"675 44","addressLocality":"Litohoř","addressCountry":"CZ"},"geo":{"@type":"GeoCoordinates","latitude":49.067755,"longitude":15.763422},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"18:00"}]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: hero je čelní panel autorádia – nadpis běží na jantarovém displeji, pod ním ladicí stupnice „Nalaďte si službu“, která složí SMS */
+:root{
+  --panel:#1A1D21; --panel-2:#262A30; --lcd:#FFB547; --lcd-dim:#7A5A2A; --blue:#3A7BD5; --blue-ink:#235BA8;
+  --paper:#F4F2EE; --white:#FFFFFF; --ink:#1B1E22; --muted:#555B63; --line:#D9D6CF;
+  --display:"Oxanium","Segoe UI",system-ui,sans-serif; --body:"Rubik","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 var(--body);padding-bottom:74px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;text-wrap:balance}
+h2{font-size:clamp(28px,4.2vw,42px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+a{color:var(--blue-ink)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.demo{background:#FFF3CF;color:#5A4300;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font:600 11px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF3CF;color:#5A4300;border-radius:4px;padding:1px 6px;vertical-align:middle}
+.bar{background:var(--panel);color:var(--white)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.logo{font:800 19px/1.1 var(--display);letter-spacing:.02em}
+.logo small{display:block;font:500 12px var(--body);color:#B9BEC6;letter-spacing:.04em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:10px;font:700 17px var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn-call{background:var(--lcd);color:#231600}
+.btn-ghost{background:transparent;color:var(--white);border:2px solid #4A5059}
+.btn-blue{background:var(--blue-ink);color:var(--white)}
+.bar .btn{min-height:42px;padding:0 14px;font-size:15px}
+/* hero = autorádio */
+.hero{background:var(--panel);color:var(--white);padding-block:22px 40px}
+.radio{background:linear-gradient(180deg,#30353C,#202328);border-radius:18px;padding:16px;box-shadow:inset 0 1px 0 #454B54,0 18px 40px rgba(0,0,0,.35)}
+.lcd{background:#0E0F0B;border-radius:10px;padding:18px 18px 16px;border:1px solid #3A3F46;position:relative;overflow:hidden}
+.lcd::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 3px);pointer-events:none}
+.lcd .meta{display:flex;justify-content:space-between;font:600 12px var(--display);color:var(--lcd-dim);letter-spacing:.12em;text-transform:uppercase}
+.lcd h1{color:var(--lcd);font-size:clamp(30px,6.4vw,62px);font-weight:800;margin-top:10px;text-shadow:0 0 18px rgba(255,181,71,.35);letter-spacing:.01em}
+.lcd .sub{color:#E9D3AE;margin-top:10px;font-size:clamp(16px,2vw,19px);max-width:60ch}
+.knobs{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:16px}
+.knobs .btns{display:flex;flex-wrap:wrap;gap:10px}
+.knob{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#5A616B,#1D2025 70%);box-shadow:0 2px 6px rgba(0,0,0,.5);flex:none}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;color:#C9CDD3;font-size:15px}
+.facts b{color:var(--white)}
+section{padding-block:56px}
+.lead{color:var(--muted);margin-top:10px;max-width:62ch}
+/* ladička */
+.tuner{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:24px;display:grid;gap:18px}
+.scale{position:relative;height:74px;background:#141619;border-radius:10px;overflow:hidden}
+.scale .ticks{position:absolute;inset:auto 0 10px 0;height:22px;background:repeating-linear-gradient(90deg,#5B616A 0 1px,transparent 1px 12px)}
+.scale .nums{position:absolute;inset:8px 10px auto;display:flex;justify-content:space-between;font:600 11px var(--display);color:#8B919A}
+.needle{position:absolute;top:0;bottom:0;width:3px;background:#FF4B3A;box-shadow:0 0 10px #FF4B3A;transition:left .35s ease;left:10%}
+.stations{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.st{border:2px solid var(--line);background:var(--paper);border-radius:10px;padding:10px 6px;font:600 14px var(--body);color:var(--ink);cursor:pointer;text-align:center;min-height:64px}
+.st small{display:block;font:700 12px var(--display);color:var(--muted);letter-spacing:.05em}
+.st[aria-pressed="true"]{border-color:var(--blue-ink);background:#E6EEF9}
+.st.on::before{content:"● ";color:var(--blue-ink)}
+.readout{display:grid;gap:6px}
+.readout h3{font-size:22px}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.form label{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+.form input,.form select{font:16px var(--body);padding:11px 12px;border:1px solid #BDB9B1;border-radius:8px;background:var(--white);color:var(--ink);min-width:0}
+.sms{background:#EEF0F2;border-radius:12px;padding:14px;font:15px/1.5 var(--body);white-space:pre-wrap;color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+/* služby */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:8px;align-content:start}
+.card svg{width:40px;height:40px}
+.card p{color:var(--muted);font-size:16px}
+.price{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;background:var(--panel);color:var(--white);border-radius:14px;padding:18px 20px}
+.price p{flex:1 1 280px}
+/* zima */
+.winter{background:#E6EEF9}
+.wgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin-top:20px}
+.wlist{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.wlist li{background:var(--white);border-radius:12px;padding:14px 16px;border:1px solid #C9D7EC}
+.wlist b{font-family:var(--display)}
+/* důvěra, kroky */
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.trust div{border-top:3px solid var(--panel);padding-top:12px}
+.trust b{display:block;font:700 18px var(--display)}
+.trust span{color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--panel);color:var(--lcd);font:800 17px var(--display);margin-bottom:10px}
+.photo{border:2px dashed #B7B2A8;border-radius:14px;min-height:200px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:16px;background:repeating-linear-gradient(45deg,#EEEBE5 0 12px,#F4F2EE 12px 24px)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+details+details{margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+.contact{background:var(--panel);color:var(--white)}
+.contact a{color:var(--lcd)}
+.contact a.btn-call{color:#231600}.contact a.btn-ghost{color:var(--white)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid #3A3F46}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--lcd);font-weight:700}
+.mapbox{background:var(--panel-2);border-radius:14px;padding:20px;display:grid;gap:12px;align-content:start}
+.mapbox svg{width:100%;height:auto;max-width:100%}
+footer{background:#111316;color:#9AA0A8;font-size:14px;padding-block:22px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:rgba(26,29,33,.97);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1;min-height:50px}
+@media (max-width:820px){
+  .grid,.trust{grid-template-columns:1fr 1fr}
+  .wgrid,.two,.cgrid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .stations{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sticky{display:flex}
+  .bar .btn-call{display:none}
+}
+@media (max-width:520px){
+  .grid,.trust,.form{grid-template-columns:1fr}
+  .knob{display:none}
+  section{padding-block:44px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Petr Saska – autoservis</div>
+
+<div class="bar" role="banner">
+  <div class="wrap">
+    <div class="logo">PETR SASKA<small>autoservis · autoelektrikář · Litohoř</small></div>
+    <a class="btn btn-call" href="tel:+420775942925">Zavolat 775 942 925</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="radio">
+      <div class="lcd">
+        <div class="meta"><span>Litohoř 159 · Moravskobudějovicko</span><span id="lcdState">Po–Pá 7:30–18:00</span></div>
+        <h1>Alarm, navigace, rádio i oprava auta. U jednoho mechanika.</h1>
+        <p class="sub">Montuji a opravuji autoelektroniku, alarmy, navigace a audio a opravuji auta všech značek. Zavolejte, domluvíme termín.</p>
+      </div>
+      <div class="knobs">
+        <span class="knob" aria-hidden="true"></span>
+        <div class="btns">
+          <a class="btn btn-call" href="tel:+420775942925">Zavolat 775 942 925</a>
+          <a class="btn btn-ghost" href="#naladit">Objednat servis</a>
+        </div>
+        <span class="knob" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="facts">
+      <span><b>Po–Pá</b> 7:30–18:00</span>
+      <span><b>So, Ne</b> po telefonické domluvě</span>
+      <span><b>Všechny značky</b> aut</span>
+    </div>
+  </div>
+</div>
+
+<section id="naladit">
+  <div class="wrap">
+    <h2>Nalaďte si, co potřebujete</h2>
+    <p class="lead">Klepněte na stanici. Z výběru se složí krátká SMS, kterou pošlete jedním dotykem. Odpovím, kdy můžete přijet.</p>
+    <div class="tuner">
+      <div class="scale" aria-hidden="true">
+        <div class="nums"><span>ALARM</span><span>NAVI</span><span>AUDIO</span><span>ELEKTRO</span><span>SERVIS</span></div>
+        <div class="ticks"></div>
+        <div class="needle" id="needle"></div>
+      </div>
+      <div class="stations" id="stations">
+        <button class="st" type="button" data-i="0" aria-pressed="true"><small>01</small>Alarm</button>
+        <button class="st" type="button" data-i="1" aria-pressed="false"><small>02</small>Navigace</button>
+        <button class="st" type="button" data-i="2" aria-pressed="false"><small>03</small>Autorádio a audio</button>
+        <button class="st" type="button" data-i="3" aria-pressed="false"><small>04</small>Autoelektrika</button>
+        <button class="st" type="button" data-i="4" aria-pressed="false"><small>05</small>Oprava auta</button>
+      </div>
+      <div class="readout">
+        <h3 id="stTitle">Alarm</h3>
+        <p id="stText" class="lead" style="margin:0"></p>
+      </div>
+      <div class="form">
+        <label for="car">Auto (značka a model)<input id="car" type="text" placeholder="např. Škoda Octavia 2015" autocomplete="off"></label>
+        <label for="day">Kdy by se Vám hodilo<select id="day"></select></label>
+      </div>
+      <div class="sms" id="sms" aria-live="polite"></div>
+      <div class="actions">
+        <a class="btn btn-blue" id="smsBtn" href="sms:+420775942925">Poslat SMS</a>
+        <button class="btn btn-call" type="button" id="copyBtn">Zkopírovat text</button>
+        <a class="btn btn-call" href="tel:+420775942925" style="background:transparent;border:2px solid var(--line);color:var(--ink)">Raději zavolat</a>
+      </div>
+      <p style="font-size:14px;color:var(--muted)">Číslo pro SMS i hovor: <b>775 942 925</b>. Státní svátky ve výběru nenabízím.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Co pro Vás udělám</h2>
+    <p class="lead">Elektronika a mechanika v jedné dílně. Nemusíte jezdit zvlášť do servisu a zvlášť za elektrikářem.</p>
+    <div class="grid">
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l13 5v9c0 9-6 15-13 18C13 33 7 27 7 18V9z" fill="#1A1D21"/><circle cx="20" cy="18" r="5" fill="#FFB547"/></svg>
+        <h3>Alarmy</h3><p>Montáž a servis autoalarmů.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="9" width="30" height="20" rx="3" fill="#1A1D21"/><path d="M13 24l7-10 7 10z" fill="#3A7BD5"/><rect x="16" y="30" width="8" height="4" fill="#1A1D21"/></svg>
+        <h3>Navigace</h3><p>Montáž a servis navigací do auta.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="12" width="32" height="16" rx="3" fill="#1A1D21"/><rect x="8" y="16" width="16" height="8" rx="1" fill="#FFB547"/><circle cx="30" cy="20" r="3.5" fill="#5A616B"/></svg>
+        <h3>Autorádia a audio</h3><p>Montáž a servis audio zařízení.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M23 3L9 23h9l-3 14 16-21h-9z" fill="#FFB547" stroke="#1A1D21" stroke-width="2" stroke-linejoin="round"/></svg>
+        <h3>Autoelektronika</h3><p>Montáže a servis autoelektroniky.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M27 5a8 8 0 00-9 10L5 28l7 7 13-13a8 8 0 0010-9l-5 5-5-1-1-5z" fill="#1A1D21"/></svg>
+        <h3>Opravy aut</h3><p>Opravy vozidel všech značek.</p>
+      </div>
+      <div class="photo">Sem přijde Vaše fotka<br>(dílna nebo hotová montáž)</div>
+    </div>
+    <div class="price">
+      <p><b>Cenu řekneme předem.</b> Zavolejte nebo pošlete SMS s autem a tím, co potřebujete. Než začnu, víte, kolik zaplatíte.</p>
+      <a class="btn btn-call" href="tel:+420775942925">Zavolat 775 942 925</a>
+    </div>
+  </div>
+</section>
+
+<section class="winter">
+  <div class="wrap">
+    <h2>Od 1. listopadu platí zimní pneumatiky</h2>
+    <div class="wgrid">
+      <ul class="wlist">
+        <li><b>1. 11. – 31. 3.</b><br>Na silnici se zimními podmínkami musí mít osobní auto zimní pneumatiky.</li>
+        <li><b>Hloubka dezénu aspoň 4 mm</b><br>U osobních aut. Méně už zákon nebere jako zimní pneumatiku.</li>
+        <li><b>Zima prověří i elektriku</b><br>Když auto v mrazu špatně startuje nebo zlobí elektronika, zavolejte.</li>
+      </ul>
+      <div class="photo">Sem přijde Vaše fotka</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Jak to probíhá</h2>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo napíšete</h3><p class="lead" style="margin-top:6px">Řeknete, o jaké auto jde a co potřebujete.</p></li>
+      <li><h3>Domluvíme termín a cenu</h3><p class="lead" style="margin-top:6px">Ve všední dny 7:30–18:00, o víkendu po domluvě.</p></li>
+      <li><h3>Přijedete do Litohoře</h3><p class="lead" style="margin-top:6px">Auto opravím nebo zařízení namontuji a vše Vám ukážu.</p></li>
+    </ol>
+    <h2 style="margin-top:56px">Proč k nám</h2>
+    <div class="trust">
+      <div><b>2 v 1</b><span>autoservis i autoelektrikář</span></div>
+      <div><b>Všechny značky</b><span>opravy aut bez omezení na značku</span></div>
+      <div><b>Víkend po domluvě</b><span>i v sobotu a v neděli</span></div>
+      <div><b>IČO 65900791</b><span>živnostník, Litohoř (Firmy.cz)</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Časté otázky</h2>
+      <div style="margin-top:20px">
+        <details><summary>Namontujete i zařízení, které si koupím sám?</summary><p>Zavolejte a řekněte, o jaké zařízení jde. Domluvíme se. <span class="tag">ukázkový text</span></p></details>
+        <details><summary>Opravujete i jiné značky než Škoda?</summary><p>Ano, opravuji vozidla všech značek.</p></details>
+        <details><summary>Můžu přijet v sobotu?</summary><p>V sobotu a v neděli po telefonické domluvě.</p></details>
+        <details><summary>Kolik to bude stát?</summary><p>Záleží na autě a práci. Cenu řeknu předem, ještě než začnu.</p></details>
+      </div>
+    </div>
+    <div class="photo" style="min-height:280px">Sem přijde Vaše fotka<br>(Petr Saska v dílně)</div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="cgrid">
+      <div>
+        <p style="font-size:22px;font-weight:700"><a href="tel:+420775942925">775 942 925</a></p>
+        <p style="margin-top:6px"><a href="mailto:pesas@seznam.cz">pesas@seznam.cz</a></p>
+        <p style="margin-top:6px">Litohoř 159, 675 44</p>
+        <table class="hours" style="margin-top:18px" id="hours">
+          <tr data-d="1"><td>Pondělí</td><td>7:30–18:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>7:30–18:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>7:30–18:00</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>7:30–18:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>7:30–18:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>po telefonické domluvě</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>po telefonické domluvě</td></tr>
+        </table>
+      </div>
+      <div class="mapbox">
+        <svg viewBox="0 0 320 170" role="img" aria-label="Schéma: Litohoř leží asi mezi Moravskými Budějovicemi a Jemnicí">
+          <rect width="320" height="170" rx="10" fill="#1F2328"/>
+          <path d="M10 120 C80 100 120 60 200 70 S300 40 310 30" stroke="#4A5059" stroke-width="6" fill="none"/>
+          <circle cx="170" cy="72" r="9" fill="#FFB547"/><text x="160" y="100" fill="#FFFFFF" font-family="Rubik,sans-serif" font-size="15" font-weight="700">Litohoř 159</text>
+        </svg>
+        <div class="actions">
+          <a class="btn btn-call" href="https://mapy.cz/zakladni?q=Litoho%C5%99%20159" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Litoho%C5%99+159+675+44" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Petr Saska – autoservis · Litohoř 159, 675 44 · IČO 65900791 · Návrh webu od Weby na míru</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-call" href="tel:+420775942925">Zavolat</a>
+  <a class="btn btn-ghost" href="#naladit">Objednat servis</a>
+</div>
+
+<script>
+(function(){
+  var S=[
+    {t:"Alarm",p:"Montáž nového alarmu nebo servis stávajícího. Řekněte mi, jaké máte auto.",s:"montáž/servis alarmu",x:10},
+    {t:"Navigace",p:"Montáž a servis navigace v autě.",s:"montáž/servis navigace",x:30},
+    {t:"Autorádio a audio",p:"Montáž a servis autorádia a audio zařízení.",s:"montáž/servis autorádia nebo audia",x:50},
+    {t:"Autoelektrika",p:"Montáž a servis autoelektroniky.",s:"autoelektrika",x:70},
+    {t:"Oprava auta",p:"Opravy vozidel všech značek.",s:"oprava auta",x:90}
+  ];
+  var sel=[0];
+  var H=["2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08","2027-07-05","2027-07-06","2027-09-28","2027-10-28","2027-11-17"];
+  var D=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  var day=document.getElementById("day"),n=0,d=new Date();
+  var o=document.createElement("option");o.value="co nejdřív";o.textContent="Co nejdřív";day.appendChild(o);
+  while(n<8){d.setDate(d.getDate()+1);var w=d.getDay();if(w===0||w===6||H.indexOf(iso(d))>-1)continue;
+    var op=document.createElement("option");var lab=D[w]+" "+d.getDate()+". "+(d.getMonth()+1)+".";op.value=lab;op.textContent=lab.charAt(0).toUpperCase()+lab.slice(1);day.appendChild(op);n++}
+  var btns=[].slice.call(document.querySelectorAll(".st"));
+  function render(){
+    var last=S[sel[sel.length-1]];
+    document.getElementById("needle").style.left="calc("+last.x+"% - 1px)";
+    document.getElementById("stTitle").textContent=sel.map(function(i){return S[i].t}).join(" + ");
+    document.getElementById("stText").textContent=last.p;
+    btns.forEach(function(b,i){var on=sel.indexOf(i)>-1;b.setAttribute("aria-pressed",on);b.classList.toggle("on",on)});
+    var car=document.getElementById("car").value.trim();
+    var txt="Dobrý den, potřeboval bych: "+sel.map(function(i){return S[i].s}).join(", ")+".\nAuto: "+(car||"(doplňte)")+"\nTermín: "+day.value+"\nDěkuji.";
+    document.getElementById("sms").textContent=txt;
+    document.getElementById("smsBtn").href="sms:+420775942925?body="+encodeURIComponent(txt);
+  }
+  btns.forEach(function(b,i){b.addEventListener("click",function(){var k=sel.indexOf(i);if(k>-1){if(sel.length>1)sel.splice(k,1)}else sel.push(i);render()})});
+  document.getElementById("car").addEventListener("input",render);day.addEventListener("change",render);
+  document.getElementById("copyBtn").addEventListener("click",function(){var t=document.getElementById("sms").textContent,b=this;
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="Zkopírováno"},function(){var r=document.createRange();r.selectNodeContents(document.getElementById("sms"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Text je označený"})});
+  render();
+  var now=new Date(),w=now.getDay(),m=now.getHours()*60+now.getMinutes();
+  var row=document.querySelector('#hours tr[data-d="'+w+'"]');if(row)row.classList.add("today");
+  var open=w>=1&&w<=5&&m>=450&&m<1080&&H.indexOf(iso(now))<0;
+  document.getElementById("lcdState").textContent=open?"Teď otevřeno · do 18:00":"Po–Pá 7:30–18:00";
+})();
+</script>
+</body>
+</html>

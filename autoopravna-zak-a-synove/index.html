@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoopravna Žák a synové, autoservis Dolní Vilémovice</title>
+<meta name="description" content="Autoopravna Žák a synové, Dolní Vilémovice 148 (Třebíčsko). Servis Škoda, Volkswagen a Ford, příprava na STK, měření emisí, servis klimatizací, DEFENT LOCK, přestavby na E85. Po–Pá 7–16, tel. 568 862 180.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Public+Sans:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Autoopravna Žák a synové, s.r.o.","description":"Kompletní servis vozů Škoda, Volkswagen a Ford a příprava na STK. Měření emisí, servis klimatizací, montáž zámků zpátečky DEFENT LOCK, přestavby na Ethanol E85.","telephone":"+420568862180","email":"automotozak@seznam.cz","taxID":"26974258","url":"http://www.automotozak.cz","address":{"@type":"PostalAddress","streetAddress":"Dolní Vilémovice 148","postalCode":"675 52","addressLocality":"Dolní Vilémovice","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"16:00"}],"paymentAccepted":"hotovost, platební karta"}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: hero je rozevřená servisní knížka (vlevo kdo jsme, vpravo razítka značek); srdcem stránky je „Razítko do knížky“ – výběr značky a úkonů, který napíše e-mail nebo tahák k hovoru */
+:root{
+  --wine:#6B2737; --wine-2:#521C29; --stone:#F2EFE9; --sheet:#FFFDF8; --coffee:#2C2420; --steel:#3E7C8C; --steel-ink:#2A5C69;
+  --ink:#2C2420; --muted:#5E544D; --line:#DDD5C9; --stamp:#3E7C8C;
+  --display:"Zilla Slab",Georgia,serif; --body:"Public Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--stone);color:var(--ink);font:17px/1.6 var(--body);padding-bottom:74px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.1;text-wrap:balance;font-weight:700}
+h2{font-size:clamp(30px,4.4vw,46px)}
+h3{font-size:21px}
+p{margin:0}
+a{color:var(--steel-ink)}
+:focus-visible{outline:3px solid var(--steel);outline-offset:2px}
+.demo{background:#FFF3CF;color:#5A4300;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font:600 11px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF3CF;color:#5A4300;border-radius:4px;padding:1px 6px;vertical-align:middle}
+.top{background:var(--wine);color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.brand{font:700 20px/1.1 var(--display)}
+.brand small{display:block;font:500 12px var(--body);opacity:.85;letter-spacing:.05em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;font:700 16px var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn-call{background:#fff;color:var(--wine)}
+.btn-wine{background:var(--wine);color:#fff}
+.btn-line{background:transparent;color:var(--ink);border:2px solid var(--coffee)}
+.top .btn{min-height:42px;font-size:15px;padding:0 16px}
+/* hero knížka */
+.hero{background:var(--wine);padding-block:18px 48px}
+.book{display:grid;grid-template-columns:1fr 1fr;background:var(--sheet);border-radius:6px;box-shadow:0 22px 40px rgba(30,8,14,.35);position:relative}
+.book::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#E6DED2,#CFC4B4,#E6DED2);transform:translateX(-1px)}
+.page{padding:30px 32px;min-width:0}
+.page .eyebrow{font:700 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--steel-ink)}
+.page h1{font-size:clamp(32px,4.6vw,54px);margin-top:10px;color:var(--wine-2)}
+.page .sub{margin-top:14px;color:var(--muted);max-width:44ch}
+.page .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.page .cta .btn-call{background:var(--wine);color:#fff}
+.lined{background:repeating-linear-gradient(180deg,transparent 0 33px,#ECE4D7 33px 34px)}
+.rows{display:grid;gap:0;font-size:15px}
+.rows div{display:flex;justify-content:space-between;gap:10px;height:34px;align-items:flex-end;padding-bottom:4px}
+.rows span:first-child{color:var(--muted)}
+.rows b{font-weight:700}
+.stamps{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.stampc{width:96px;height:96px;border-radius:50%;border:3px solid var(--stamp);color:var(--stamp);display:grid;place-items:center;text-align:center;font:700 14px/1.1 var(--display);transform:rotate(-8deg);opacity:.9;padding:8px}
+.stampc:nth-child(2){transform:rotate(6deg);border-color:var(--wine);color:var(--wine)}
+.stampc:nth-child(3){transform:rotate(-3deg)}
+.stampc small{display:block;font:600 10px var(--body);letter-spacing:.08em}
+section{padding-block:60px}
+.lead{color:var(--muted);margin-top:10px;max-width:62ch}
+/* razítko do knížky */
+.planner{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:26px}
+.panel{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:22px;min-width:0}
+.legend{font:700 13px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:600 15px var(--body);color:var(--ink);cursor:pointer;min-height:44px}
+.chip[aria-pressed="true"]{border-color:var(--wine);background:var(--wine);color:#fff}
+.group+.group{margin-top:20px}
+.field{display:grid;gap:4px;font-size:14px;color:var(--muted);margin-top:16px}
+.field input,.field select{font:16px var(--body);padding:11px 12px;border:1px solid #C9BFB1;border-radius:8px;background:#fff;color:var(--ink);min-width:0}
+.ticket{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:22px;position:relative;min-width:0}
+.ticket h3{color:var(--wine-2)}
+.ticket .stampbox{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;min-height:40px}
+.mini{border:2px solid var(--stamp);color:var(--stamp);border-radius:6px;padding:3px 8px;font:700 13px var(--display);transform:rotate(-2deg)}
+.note{white-space:pre-wrap;background:#F6F2EA;border-radius:8px;padding:14px;margin-top:14px;font-size:15px}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:26px;border-top:2px solid var(--coffee)}
+.svc>div{padding:22px 20px 22px 0;border-bottom:1px solid var(--line);display:grid;gap:6px;align-content:start}
+.svc>div p{color:var(--muted);font-size:16px}
+.svc h3{display:flex;gap:10px;align-items:center}
+.svc svg{width:28px;height:28px;flex:none}
+.price{margin-top:24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:var(--coffee);color:#fff;border-radius:10px;padding:18px 22px}
+.price .btn-call{background:#fff;color:var(--coffee)}
+/* zima */
+.winter{background:var(--coffee);color:#fff}
+.winter .lead{color:#D9CFC4}
+.wrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.wrow div{border:1px solid #4A3E37;border-radius:10px;padding:18px}
+.wrow b{font:700 24px var(--display);display:block;color:#F3C9D2}
+/* důvěra */
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.trust div{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:18px}
+.trust b{display:block;font:700 19px var(--display);color:var(--wine-2)}
+.trust span{color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:26px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border-left:3px solid var(--wine);padding-left:16px}
+.steps li::before{content:"Krok " counter(s);display:block;font:700 13px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--wine);margin-bottom:6px}
+.photo{border:2px dashed #BFB3A3;border-radius:10px;min-height:220px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:16px;background:repeating-linear-gradient(-45deg,#EDE7DD 0 12px,#F2EFE9 12px 24px)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+.contact{background:var(--wine);color:#fff}
+.contact a{color:#fff}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;color:#fff}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{font-weight:700;color:#FFE1E7}
+.mapc{background:var(--wine-2);border-radius:10px;padding:20px;display:grid;gap:14px;align-content:start}
+.mapc .btn{background:#fff;color:var(--wine)}
+footer{background:#2A1016;color:#D8C3C8;font-size:14px;padding-block:22px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:rgba(82,28,41,.97);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1}
+.sticky .btn-line{color:#fff;border-color:#fff}
+@media (max-width:860px){
+  .book{grid-template-columns:1fr}.book::before{display:none}
+  .page+.page{border-top:2px dashed #E1D8CB}
+  .planner,.two,.cgrid{grid-template-columns:1fr}
+  .svc,.wrow,.trust{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .sticky{display:flex}
+  .top .btn{display:none}
+}
+@media (max-width:520px){
+  .svc,.wrow,.trust{grid-template-columns:1fr}
+  .page{padding:22px 20px}
+  .stampc{width:84px;height:84px;font-size:13px}
+  section{padding-block:46px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Autoopravna Žák a synové, s.r.o.</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <div class="brand">Žák a synové<small>Autoopravna · Dolní Vilémovice</small></div>
+    <a class="btn btn-call" href="tel:+420568862180">Zavolat 568 862 180</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="book">
+      <div class="page">
+        <div class="eyebrow">Servisní knížka · Dolní Vilémovice 148</div>
+        <h1>Servis Škoda, Volkswagen a Ford. Na Třebíčsku.</h1>
+        <p class="sub">Kompletní servis, příprava na STK a měření emisí benzínových i naftových motorů. Platit můžete i kartou.</p>
+        <div class="cta">
+          <a class="btn btn-call" href="tel:+420568862180">Zavolat 568 862 180</a>
+          <a class="btn btn-line" href="#objednat">Objednat servis</a>
+        </div>
+      </div>
+      <div class="page lined">
+        <div class="rows">
+          <div><span>Otevřeno</span><b>Po–Pá 7:00–16:00</b></div>
+          <div><span>Značky</span><b>Škoda · VW · Ford</b></div>
+          <div><span>STK</span><b>příprava a emise</b></div>
+          <div><span>Klimatizace</span><b>servis a netěsnosti</b></div>
+        </div>
+        <div class="stamps" aria-hidden="true">
+          <div class="stampc"><span>ŠKODA<small>servis</small></span></div>
+          <div class="stampc"><span>VW<small>servis</small></span></div>
+          <div class="stampc"><span>FORD<small>servis</small></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="objednat">
+  <div class="wrap">
+    <h2>Razítko do servisní knížky</h2>
+    <p class="lead">Vyberte značku a co je potřeba udělat. Napíšeme z toho e-mail do dílny, nebo tahák, ať nic nezapomenete, až budete volat.</p>
+    <div class="planner">
+      <div class="panel">
+        <div class="group">
+          <div class="legend">Značka vozu</div>
+          <div class="chips" id="brands">
+            <button class="chip" type="button" aria-pressed="true">Škoda</button>
+            <button class="chip" type="button" aria-pressed="false">Volkswagen</button>
+            <button class="chip" type="button" aria-pressed="false">Ford</button>
+            <button class="chip" type="button" aria-pressed="false">Jiná značka</button>
+          </div>
+        </div>
+        <div class="group">
+          <div class="legend">Co potřebujete</div>
+          <div class="chips" id="jobs">
+            <button class="chip" type="button" aria-pressed="true">Pravidelný servis</button>
+            <button class="chip" type="button" aria-pressed="false">Příprava na STK</button>
+            <button class="chip" type="button" aria-pressed="false">Měření emisí</button>
+            <button class="chip" type="button" aria-pressed="false">Servis klimatizace</button>
+            <button class="chip" type="button" aria-pressed="false">Přezutí pneumatik</button>
+            <button class="chip" type="button" aria-pressed="false">Zámek zpátečky DEFENT LOCK</button>
+            <button class="chip" type="button" aria-pressed="false">Přestavba na E85</button>
+          </div>
+        </div>
+        <label class="field" for="model">Model a rok (nepovinné)<input id="model" type="text" placeholder="např. Octavia, 2016" autocomplete="off"></label>
+        <label class="field" for="day">Kdy by se Vám hodilo<select id="day"></select></label>
+      </div>
+      <div class="ticket">
+        <h3>Zápis do knížky</h3>
+        <div class="stampbox" id="stampbox"></div>
+        <div class="note" id="note" aria-live="polite"></div>
+        <div class="acts">
+          <a class="btn btn-wine" id="mailBtn" href="mailto:automotozak@seznam.cz">Poslat e-mailem</a>
+          <a class="btn btn-line" href="tel:+420568862180">Zavolat 568 862 180</a>
+        </div>
+        <p style="font-size:14px;color:var(--muted);margin-top:10px">E-mail: automotozak@seznam.cz · Telefon je pevná linka, SMS na ni nedojde. Státní svátky ve výběru nenabízíme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Služby</h2>
+    <div class="svc">
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#6B2737" stroke-width="3"/><path d="M14 7v7l5 3" stroke="#6B2737" stroke-width="3" fill="none"/></svg>Kompletní servis</h3><p>Vozy Škoda, Volkswagen a Ford.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="4" y="5" width="20" height="18" rx="2" fill="none" stroke="#6B2737" stroke-width="3"/><path d="M9 14l3 3 7-7" stroke="#3E7C8C" stroke-width="3" fill="none"/></svg>Příprava na STK</h3><p>Auto připravíme, aby prošlo technickou kontrolou.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 20h7M8 16c0-5 4-9 9-9h3M17 21c3 0 6-2 6-6" stroke="#6B2737" stroke-width="3" fill="none" stroke-linecap="round"/></svg>Měření emisí</h3><p>Pravidelné měření u benzínových i naftových motorů.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3v22M4 8l20 12M24 8L4 20" stroke="#3E7C8C" stroke-width="3" stroke-linecap="round"/></svg>Klimatizace</h3><p>Servis klimatizací a vyhledání netěsností.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="6" y="12" width="16" height="12" rx="2" fill="#6B2737"/><path d="M9 12V8a5 5 0 0110 0v4" stroke="#6B2737" stroke-width="3" fill="none"/></svg>DEFENT LOCK</h3><p>Montáž zámků zpátečky proti krádeži.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3c5 7 8 11 8 15a8 8 0 01-16 0c0-4 3-8 8-15z" fill="#3E7C8C"/></svg>Přestavba na E85</h3><p>Přestavby vozů na Ethanol E85.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#2C2420" stroke-width="4"/><circle cx="14" cy="14" r="4" fill="#2C2420"/></svg>Pneuservis</h3><p>Pneuservisní práce na osobní a dodávkové vozy, prodej pneumatik a disků.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 22l10-10 4 4L9 26H5z" fill="#6B2737"/><path d="M17 4l7 7-3 3-7-7z" fill="#3E7C8C"/></svg>Lakování</h3><p>Lakování vozů.</p></div>
+      <div><h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M6 6h16v16H6z" fill="none" stroke="#2C2420" stroke-width="3"/><path d="M6 12h16M12 6v16" stroke="#2C2420" stroke-width="2"/></svg>Náhradní díly</h3><p>Díly pro vozy Ford, Škoda a Volkswagen.</p></div>
+    </div>
+    <div class="price">
+      <p><b>Cenu řekneme předem.</b> Zavolejte nebo napište značku a úkon, ozveme se s termínem.</p>
+      <a class="btn btn-call" href="tel:+420568862180">Zavolat 568 862 180</a>
+    </div>
+  </div>
+</section>
+
+<section class="winter">
+  <div class="wrap">
+    <h2>Přezutí před 1. listopadem</h2>
+    <p class="lead">Spojte přezutí s podzimní prohlídkou auta, ať jedete do zimy bez starostí.</p>
+    <div class="wrow">
+      <div><b>1. 11. – 31. 3.</b>Za zimních podmínek musí mít osobní auto zimní pneumatiky.</div>
+      <div><b>4 mm</b>Nejmenší hloubka dezénu zimní pneumatiky u osobního auta.</div>
+      <div><b>Klimatizace</b>Funguje i v zimě: odmlžuje skla. Servis a hledání netěsností u nás.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Proč Žák a synové</h2>
+    <div class="trust">
+      <div><b>Ford Service Klub</b><span>certifikát zveřejněný na původním webu firmy</span></div>
+      <div><b>Škoda · VW · Ford</b><span>kompletní servis tří značek</span></div>
+      <div><b>Platba kartou</b><span>podle Firmy.cz</span></div>
+      <div><b>IČO 26974258</b><span>Autoopravna Žák a synové, s.r.o.</span></div>
+    </div>
+    <h2 style="margin-top:56px">Jak to probíhá</h2>
+    <ol class="steps">
+      <li><h3>Ozvete se</h3><p class="lead" style="margin-top:6px">Telefonem nebo e-mailem: značka, model a co je potřeba.</p></li>
+      <li><h3>Domluvíme termín</h3><p class="lead" style="margin-top:6px">Ve všední den mezi 7:00 a 16:00. Cenu víte předem.</p></li>
+      <li><h3>Vyzvednete auto</h3><p class="lead" style="margin-top:6px">Řekneme Vám, co jsme na autě udělali.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Časté otázky</h2>
+      <div style="margin-top:14px">
+        <details><summary>Připravíte auto na STK?</summary><p>Ano. Přípravu na STK a měření emisí děláme pravidelně.</p></details>
+        <details><summary>Opravíte i jinou značku než Škoda, VW a Ford?</summary><p>Zavolejte a domluvíme se. Na tyto tři značky děláme kompletní servis. <span class="tag">ukázkový text</span></p></details>
+        <details><summary>Co je DEFENT LOCK?</summary><p>Mechanický zámek zpátečky. Když je zamčený, auto se nedá rozjet. Montujeme ho.</p></details>
+        <details><summary>Dá se zaplatit kartou?</summary><p>Ano, platit můžete i kartou.</p></details>
+      </div>
+    </div>
+    <div class="photo" style="min-height:300px">Sem přijde Vaše fotka<br>(dílna v Dolních Vilémovicích)</div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="cgrid">
+      <div>
+        <p style="font:700 26px var(--display)"><a href="tel:+420568862180">568 862 180</a></p>
+        <p style="margin-top:6px"><a href="mailto:automotozak@seznam.cz">automotozak@seznam.cz</a></p>
+        <p style="margin-top:6px">Dolní Vilémovice 148, 675 52</p>
+        <table class="hours" style="margin-top:18px" id="hours">
+          <tr data-d="1"><td>Pondělí</td><td>7:00–16:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>7:00–16:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>7:00–16:00</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>7:00–16:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>7:00–16:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>zavřeno</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+        </table>
+        <p style="font-size:14px;margin-top:8px;opacity:.85">Otevírací doba podle Firmy.cz.</p>
+      </div>
+      <div class="mapc">
+        <svg viewBox="0 0 320 160" role="img" aria-label="Dolní Vilémovice na Třebíčsku">
+          <rect width="320" height="160" rx="8" fill="#5E2231"/>
+          <path d="M0 110 C70 90 110 120 170 80 S270 60 320 70" stroke="#8C4A59" stroke-width="7" fill="none"/>
+          <path d="M160 40 l0 40" stroke="#fff" stroke-width="3"/><circle cx="160" cy="36" r="10" fill="#fff"/>
+          <text x="20" y="145" fill="#fff" font-family="Public Sans,sans-serif" font-size="15" font-weight="700">Dolní Vilémovice 148</text>
+        </svg>
+        <div class="acts" style="margin-top:0">
+          <a class="btn" href="https://mapy.cz/zakladni?q=Doln%C3%AD%20Vil%C3%A9movice%20148" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Doln%C3%AD+Vil%C3%A9movice+148" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Autoopravna Žák a synové, s.r.o. · Dolní Vilémovice 148, 675 52 · IČO 26974258 · Návrh webu od Weby na míru</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-call" href="tel:+420568862180">Zavolat</a>
+  <a class="btn btn-line" href="#objednat">Objednat servis</a>
+</div>
+
+<script>
+(function(){
+  var H=["2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08","2027-07-05","2027-07-06","2027-09-28","2027-10-28","2027-11-17"];
+  var D=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  var day=document.getElementById("day"),n=0,d=new Date();
+  [["co nejdřív","Co nejdřív"]].forEach(function(a){var o=document.createElement("option");o.value=a[0];o.textContent=a[1];day.appendChild(o)});
+  while(n<8){d.setDate(d.getDate()+1);var w=d.getDay();if(w===0||w===6||H.indexOf(iso(d))>-1)continue;var lab=D[w]+" "+d.getDate()+". "+(d.getMonth()+1)+".";var o=document.createElement("option");o.value=lab;o.textContent=lab.charAt(0).toUpperCase()+lab.slice(1);day.appendChild(o);n++}
+  function wire(id,multi){var bs=[].slice.call(document.querySelectorAll("#"+id+" .chip"));bs.forEach(function(b){b.addEventListener("click",function(){
+    if(multi){var on=b.getAttribute("aria-pressed")==="true";var cnt=bs.filter(function(x){return x.getAttribute("aria-pressed")==="true"}).length;if(on&&cnt===1)return;b.setAttribute("aria-pressed",!on)}
+    else bs.forEach(function(x){x.setAttribute("aria-pressed",x===b)});render()})});return bs}
+  var brands=wire("brands",false),jobs=wire("jobs",true);
+  function picked(bs){return bs.filter(function(b){return b.getAttribute("aria-pressed")==="true"}).map(function(b){return b.textContent})}
+  function render(){
+    var br=picked(brands)[0],js=picked(jobs),m=document.getElementById("model").value.trim();
+    var sb=document.getElementById("stampbox");sb.innerHTML="";
+    [br].concat(js).forEach(function(t){var s=document.createElement("span");s.className="mini";s.textContent=t;sb.appendChild(s)});
+    var txt="Dobrý den,\nchtěl bych objednat: "+js.join(", ").toLowerCase()+".\nVůz: "+br+(m?" "+m:"")+"\nTermín: "+day.value+"\nDěkuji a prosím o potvrzení termínu.";
+    document.getElementById("note").textContent=txt;
+    document.getElementById("mailBtn").href="mailto:automotozak@seznam.cz?subject="+encodeURIComponent("Objednávka servisu – "+br)+"&body="+encodeURIComponent(txt);
+  }
+  document.getElementById("model").addEventListener("input",render);day.addEventListener("change",render);render();
+  var row=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');if(row)row.classList.add("today");
+})();
+</script>
+</body>
+</html>

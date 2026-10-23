@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Marek Polášek, pneuservis a autoservis Luleč</title>
+<meta name="description" content="Marek Polášek, Luleč 380 (Vyškovsko). Pneuservis a autoservis všech značek, geometrie, klimatizace, autoklempířské práce, příprava na STK, výměna provozních kapalin. Nonstop pohotovost. Tel. 603 347 230.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;800&family=Noto+Sans:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Marek Polášek – pneuservis a autoservis","description":"Pneuservis a autoservis vozidel všech značek, autoklempířské práce, kontrola a plnění klimatizací, geometrie, příprava na STK, výměna provozních kapalin.","telephone":"+420603347230","email":"kemamari@seznam.cz","taxID":"72328746","address":{"@type":"PostalAddress","streetAddress":"Luleč 380","postalCode":"683 03","addressLocality":"Luleč","addressCountry":"CZ"}}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: hero je plechová cedule dílny zavěšená na dvou řetězech s odznakem NONSTOP; výrazný prvek „Co auto dělá?“ – náprava shora, kola se natočí podle příznaku a SMS se složí sama */
+:root{
+  --steel:#233142; --steel-2:#18222F; --amber:#F5B700; --amber-ink:#7A5B00; --fog:#EDEFF2; --white:#FFFFFF; --rust:#B23A2E;
+  --ink:#18202A; --muted:#525C69; --line:#CDD3DB;
+  --display:"Kanit","Arial Narrow",system-ui,sans-serif; --body:"Noto Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fog);color:var(--ink);font:17px/1.55 var(--body);padding-bottom:74px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;text-wrap:balance}
+h2{font-size:clamp(28px,4.2vw,44px);font-weight:800;text-transform:uppercase}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+a{color:var(--steel)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.demo{background:#FFF3CF;color:#5A4300;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font:600 11px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF3CF;color:#5A4300;border-radius:4px;padding:1px 6px;vertical-align:middle}
+.top{background:var(--steel-2);color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:800 19px/1 var(--display);text-transform:uppercase}
+.logo small{display:block;font:500 12px var(--body);color:#AFBACB;text-transform:none;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:8px;font:700 16px var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-steel{background:var(--steel);color:#fff}
+.btn-line{background:transparent;color:#fff;border:2px solid #fff}
+.btn-sline{background:transparent;color:var(--steel);border:2px solid var(--steel)}
+.top .btn{min-height:42px;font-size:15px;padding:0 14px}
+/* hero cedule */
+.hero{background:var(--steel);padding-block:0 44px;color:#fff;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 60px)}
+.chains{display:flex;justify-content:space-between;width:min(760px,86%);margin:0 auto;height:44px}
+.chains i{width:10px;background:repeating-linear-gradient(180deg,#8A96A6 0 8px,transparent 8px 12px);border-radius:4px}
+.sign{max-width:860px;margin:0 auto;background:linear-gradient(180deg,#FBFBF8,#E9EBEE);color:var(--ink);border-radius:10px;padding:30px 30px 26px;box-shadow:0 18px 30px rgba(0,0,0,.35),inset 0 0 0 6px #fff,inset 0 0 0 8px var(--line);position:relative;transform-origin:50% -44px;animation:sway 2.4s ease-out .2s 1 both}
+@keyframes sway{0%{transform:rotate(2.2deg)}35%{transform:rotate(-1.4deg)}65%{transform:rotate(.6deg)}100%{transform:rotate(0)}}
+.sign::before,.sign::after{content:"";position:absolute;top:12px;width:12px;height:12px;border-radius:50%;background:#A7B0BC;box-shadow:inset 0 2px 2px rgba(0,0,0,.3)}
+.sign::before{left:calc(7% + 0px)}.sign::after{right:calc(7% + 0px)}
+.nonstop{position:absolute;right:-12px;top:-22px;background:var(--amber);color:var(--ink);font:800 15px/1 var(--display);padding:8px;border-radius:50%;width:112px;height:112px;z-index:2;display:grid;place-items:center;text-align:center;transform:rotate(10deg);box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.nonstop small{display:block;font:600 9px var(--body);letter-spacing:.04em;margin-top:3px}
+.sign .eyebrow{font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
+.sign h1{font-size:clamp(32px,5.8vw,64px);font-weight:800;text-transform:uppercase;margin-top:8px;color:var(--steel-2);max-width:13em}
+.sign .sub{margin-top:12px;color:var(--muted);max-width:56ch}
+.sign .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px;color:#C7CFDA;font-size:15px}
+.facts b{color:#fff}
+section{padding-block:58px}
+.lead{color:var(--muted);margin-top:10px;max-width:62ch}
+/* náprava */
+.axle{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+.pane{background:var(--white);border-radius:12px;padding:20px;border:1px solid var(--line);min-width:0}
+.pane svg{width:100%;height:auto;display:block}
+.wl,.wr{transition:transform .5s ease;transform-box:fill-box;transform-origin:center}
+.opts{display:grid;gap:8px}
+.op{display:flex;gap:12px;align-items:center;text-align:left;border:2px solid var(--line);background:var(--white);border-radius:10px;padding:12px 14px;font:600 16px var(--body);color:var(--ink);cursor:pointer;min-height:52px}
+.op b{font:800 14px var(--display);width:30px;height:30px;border-radius:6px;background:var(--fog);display:grid;place-items:center;flex:none}
+.op[aria-pressed="true"]{border-color:var(--steel);background:#E4E9F0}
+.op[aria-pressed="true"] b{background:var(--amber)}
+.op.sos{border-color:#E7B4AE}
+.result{margin-top:16px;background:var(--steel);color:#fff;border-radius:12px;padding:18px;display:grid;gap:10px}
+.result .sv{font:600 22px var(--display);color:var(--amber)}
+.result label{display:grid;gap:4px;font-size:14px;color:#C7CFDA}
+.result input{font:16px var(--body);padding:11px 12px;border-radius:8px;border:0;color:var(--ink);background:#fff;min-width:0}
+.sms{background:var(--steel-2);border-radius:8px;padding:12px 14px;white-space:pre-wrap;font-size:15px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.svc div{background:var(--white);border-radius:12px;padding:20px;display:grid;gap:6px;align-content:start;box-shadow:inset 4px 0 0 var(--amber)}
+.svc p{color:var(--muted);font-size:16px}
+.price{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:var(--steel-2);color:#fff;border-radius:12px;padding:18px 22px}
+.winter{background:var(--amber)}
+.winter .lead{color:#3C2E00}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.wgrid div{background:#fff;border-radius:12px;padding:18px}
+.wgrid b{display:block;font:800 28px/1 var(--display);color:var(--steel);margin-bottom:6px}
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.trust div{background:var(--white);border-radius:12px;padding:18px}
+.trust b{display:block;font:600 19px var(--display)}
+.trust span{color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:24px 0 0;padding:0;list-style:none;counter-reset:s;background:var(--white);border-radius:12px;overflow:hidden}
+.steps li{counter-increment:s;padding:20px;border-right:1px solid var(--line)}
+.steps li:last-child{border-right:0}
+.steps li::before{content:counter(s);font:800 40px/1 var(--display);color:var(--amber-ink);display:block;margin-bottom:6px}
+.photo{border:2px dashed #AEB7C3;border-radius:12px;min-height:220px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:16px;background:repeating-linear-gradient(45deg,#E2E6EB 0 12px,#EDEFF2 12px 24px)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+details{background:var(--white);border-radius:10px;padding:14px 18px}
+details+details{margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+.contact{background:var(--steel);color:#fff}
+.contact a{color:var(--amber)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+.hours{width:100%;border-collapse:collapse;color:#fff}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.hours td:last-child{text-align:right}
+.mapc{background:var(--steel-2);border-radius:12px;padding:20px;display:grid;gap:14px;align-content:start}
+.mapc svg{width:100%;height:auto}
+.mapc a.btn-amber{color:var(--ink)}
+.mapc a.btn-line{color:#fff}
+footer{background:#10171F;color:#AFBACB;font-size:14px;padding-block:22px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:rgba(24,34,47,.97);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1}
+@media (max-width:860px){
+  .axle,.two,.cgrid{grid-template-columns:1fr}
+  .svc,.trust,.wgrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}.steps li{border-right:0;border-bottom:1px solid var(--line)}
+  .sticky{display:flex}.top .btn{display:none}
+  .nonstop{right:6px;top:-40px;width:96px;height:96px;font-size:13px}
+  .sign{padding:34px 20px 22px}
+}
+@media (max-width:520px){
+  .svc,.trust,.wgrid{grid-template-columns:1fr}
+  section{padding-block:44px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Marek Polášek – pneuservis a autoservis</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <div class="logo">Marek Polášek<small>pneuservis a autoservis · Luleč 380</small></div>
+    <a class="btn btn-amber" href="tel:+420603347230">Zavolat 603 347 230</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="chains" aria-hidden="true"><i></i><i></i></div>
+    <div class="sign">
+      <div class="nonstop"><span>NONSTOP<small>POHOTOVOST</small></span></div>
+      <div class="eyebrow">Luleč · Vyškovsko</div>
+      <h1>Pneu, servis, plechy i geometrie</h1>
+      <p class="sub">Pneuservis a autoservis všech značek, autoklempířské práce, klimatizace, geometrie a příprava na STK. Termín domluvíme po telefonu.</p>
+      <div class="cta">
+        <a class="btn btn-amber" href="tel:+420603347230">Zavolat 603 347 230</a>
+        <a class="btn btn-sline" href="#objednat">Objednat servis</a>
+      </div>
+    </div>
+    <div class="facts">
+      <span><b>Všední dny</b> podle telefonické domluvy</span>
+      <span><b>Nonstop</b> pohotovost</span>
+      <span><b>Všechny značky</b> aut</span>
+    </div>
+  </div>
+</div>
+
+<section id="objednat">
+  <div class="wrap">
+    <h2>Co auto dělá?</h2>
+    <p class="lead">Vyberte, co se s autem děje. Ukážeme, co pomůže, a složíme SMS. Když auto nejede, volejte rovnou.</p>
+    <div class="axle">
+      <div class="pane">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Přední náprava shora" id="axsvg">
+          <rect width="400" height="300" fill="#FFFFFF"/>
+          <path d="M120 40 h160 q30 0 30 30 v170 q0 30-30 30 h-160 q-30 0-30-30 v-170 q0-30 30-30z" fill="#E4E9F0"/>
+          <line x1="70" y1="100" x2="330" y2="100" stroke="#233142" stroke-width="10"/>
+          <rect class="wl" id="wl" x="38" y="62" width="36" height="76" rx="8" fill="#18202A"/>
+          <rect class="wr" id="wr" x="326" y="62" width="36" height="76" rx="8" fill="#18202A"/>
+          <rect x="38" y="190" width="36" height="76" rx="8" fill="#18202A"/>
+          <rect x="326" y="190" width="36" height="76" rx="8" fill="#18202A"/>
+          <line x1="70" y1="228" x2="330" y2="228" stroke="#233142" stroke-width="10"/>
+          <path id="arrow" d="M200 30 L200 6" stroke="#B23A2E" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <text x="200" y="170" text-anchor="middle" font-family="Kanit,sans-serif" font-size="20" font-weight="600" fill="#233142" id="axlab">Táhne do strany</text>
+        </svg>
+      </div>
+      <div>
+        <div class="opts" id="opts">
+          <button class="op" type="button" aria-pressed="true"><b>1</b>Auto táhne do strany nebo nestojí volant rovně</button>
+          <button class="op" type="button" aria-pressed="false"><b>2</b>Pneumatiky se sjíždějí jen na jedné hraně</button>
+          <button class="op" type="button" aria-pressed="false"><b>3</b>Je čas přezout na zimní</button>
+          <button class="op" type="button" aria-pressed="false"><b>4</b>Klimatizace málo chladí nebo nefouká</button>
+          <button class="op" type="button" aria-pressed="false"><b>5</b>Blíží se STK</button>
+          <button class="op" type="button" aria-pressed="false"><b>6</b>Promáčklina nebo rez na karoserii</button>
+          <button class="op sos" type="button" aria-pressed="false"><b>!</b>Auto nejede, potřebuji pomoc hned</button>
+        </div>
+        <div class="result">
+          <div><small style="color:#C7CFDA">Pomůže</small><div class="sv" id="sv"></div></div>
+          <label for="car">Auto (nepovinné)<input id="car" type="text" placeholder="např. Škoda Fabia" autocomplete="off"></label>
+          <div class="sms" id="sms" aria-live="polite"></div>
+          <div class="acts"><a class="btn btn-amber" id="mainBtn" href="sms:+420603347230">Poslat SMS</a><a class="btn btn-line" href="tel:+420603347230">Zavolat 603 347 230</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Služby</h2>
+    <div class="svc">
+      <div><h3>Pneuservis</h3><p>Přezutí a servis pneumatik všech značek aut.</p></div>
+      <div><h3>Autoservis</h3><p>Servis a opravy vozidel všech značek.</p></div>
+      <div><h3>Geometrie</h3><p>Seřízení geometrie kol, aby auto jelo rovně.</p></div>
+      <div><h3>Klimatizace</h3><p>Kontrola a plnění klimatizací.</p></div>
+      <div><h3>Autoklempířské práce</h3><p>Opravy karoserie.</p></div>
+      <div><h3>STK a provozní kapaliny</h3><p>Příprava na STK, výměna oleje a dalších kapalin.</p></div>
+    </div>
+    <div class="price">
+      <p><b>Cenu řekneme předem.</b> Zavolejte nebo pošlete SMS s autem a závadou.</p>
+      <a class="btn btn-amber" href="tel:+420603347230">Zavolat 603 347 230</a>
+    </div>
+  </div>
+</section>
+
+<section class="winter">
+  <div class="wrap">
+    <h2>Zimní pneu od 1. listopadu</h2>
+    <p class="lead">Přezutí je dobrá chvíle i na kontrolu geometrie. Nerovnoměrně sjeté pneumatiky ji často prozradí.</p>
+    <div class="wgrid">
+      <div><b>1. 11. – 31. 3.</b>Za zimních podmínek musí mít osobní auto zimní pneumatiky.</div>
+      <div><b>4 mm</b>Nejmenší hloubka dezénu zimní pneumatiky u osobního auta.</div>
+      <div><b>Kapaliny</b>Před zimou se vyplatí zkontrolovat nemrznoucí kapalinu v chladiči i ostřikovačích.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Jak to probíhá</h2>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo napíšete</h3><p class="lead" style="margin-top:6px">Auto a co se děje.</p></li>
+      <li><h3>Domluvíme čas</h3><p class="lead" style="margin-top:6px">Ve všední dny podle telefonické domluvy.</p></li>
+      <li><h3>Přijedete do Lulče</h3><p class="lead" style="margin-top:6px">Luleč 380. Cenu znáte předem.</p></li>
+    </ol>
+    <h2 style="margin-top:54px">Proč k nám</h2>
+    <div class="trust">
+      <div><b>Nonstop pohotovost</b><span>uvedeno na Firmy.cz</span></div>
+      <div><b>Vše v jedné dílně</b><span>pneu, servis, klempíř, klima, geometrie</span></div>
+      <div><b>Všechny značky</b><span>bez omezení na značku</span></div>
+      <div><b>IČO 72328746</b><span>Marek Polášek, Luleč</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Časté otázky</h2>
+      <div style="margin-top:18px">
+        <details><summary>Kdy máte otevřeno?</summary><p>Ve všední dny podle telefonické domluvy, o víkendu zavřeno. Pohotovost nonstop.</p></details>
+        <details><summary>Proč auto táhne do strany?</summary><p>Častou příčinou je rozhozená geometrie nebo rozdílný tlak v pneumatikách. Obojí zkontrolujeme.</p></details>
+        <details><summary>Připravíte auto na STK?</summary><p>Ano, přípravu na STK děláme.</p></details>
+        <details><summary>Opravíte i promáčklé dveře?</summary><p>Autoklempířské práce děláme. Pošlete fotku a domluvíme se. <span class="tag">ukázkový text</span></p></details>
+      </div>
+    </div>
+    <div class="photo" style="min-height:300px">Sem přijde Vaše fotka<br>(dílna v Lulči)</div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="cgrid">
+      <div>
+        <p style="font:800 30px var(--display)"><a href="tel:+420603347230">603 347 230</a></p>
+        <p style="margin-top:6px"><a href="mailto:kemamari@seznam.cz">kemamari@seznam.cz</a></p>
+        <p style="margin-top:6px">Luleč 380, 683 03</p>
+        <table class="hours" style="margin-top:16px">
+          <tr><td>Pondělí–pátek</td><td>podle telefonické domluvy</td></tr>
+          <tr><td>Sobota, neděle</td><td>zavřeno</td></tr>
+          <tr><td>Pohotovost</td><td>nonstop</td></tr>
+        </table>
+        <p style="font-size:14px;margin-top:8px;color:#C7CFDA">Podle Firmy.cz.</p>
+      </div>
+      <div class="mapc">
+        <svg viewBox="0 0 320 150" role="img" aria-label="Luleč na Vyškovsku">
+          <rect width="320" height="150" rx="8" fill="#1F2B3A"/>
+          <path d="M0 60 C90 90 180 30 320 80" stroke="#344458" stroke-width="12" fill="none"/>
+          <circle cx="160" cy="62" r="11" fill="#F5B700"/>
+          <text x="20" y="136" fill="#fff" font-family="Noto Sans,sans-serif" font-size="15" font-weight="700">Luleč 380</text>
+        </svg>
+        <div class="acts">
+          <a class="btn btn-amber" href="https://mapy.cz/zakladni?q=Lule%C4%8D%20380" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Lule%C4%8D+380+683+03" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Marek Polášek · Luleč 380, 683 03 · IČO 72328746 · Návrh webu od Weby na míru</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-amber" href="tel:+420603347230">Zavolat</a>
+  <a class="btn btn-line" href="#objednat">Objednat servis</a>
+</div>
+
+<script>
+(function(){
+  var O=[
+    {sv:"Geometrie kol",s:"auto táhne do strany – kontrola geometrie",l:-9,r:9,lab:"Táhne do strany"},
+    {sv:"Geometrie a pneuservis",s:"pneumatiky se sjíždějí na jedné hraně – geometrie",l:7,r:7,lab:"Sjíždí jednu hranu"},
+    {sv:"Pneuservis – přezutí",s:"přezutí na zimní",l:0,r:0,lab:"Přezutí"},
+    {sv:"Kontrola a plnění klimatizace",s:"kontrola a plnění klimatizace",l:0,r:0,lab:"Klimatizace"},
+    {sv:"Příprava na STK",s:"příprava na STK",l:0,r:0,lab:"Příprava na STK"},
+    {sv:"Autoklempířské práce",s:"klempířská oprava karoserie",l:0,r:0,lab:"Karoserie"},
+    {sv:"Nonstop pohotovost – volejte",s:"",l:0,r:0,lab:"Volejte 603 347 230",sos:true}
+  ];
+  var cur=0,bs=[].slice.call(document.querySelectorAll(".op"));
+  function render(){
+    var o=O[cur];bs.forEach(function(b,i){b.setAttribute("aria-pressed",i===cur)});
+    document.getElementById("wl").style.transform="rotate("+o.l+"deg)";document.getElementById("wr").style.transform="rotate("+o.r+"deg)";
+    document.getElementById("axlab").textContent=o.lab;document.getElementById("sv").textContent=o.sv;
+    var c=document.getElementById("car").value.trim(),m=document.getElementById("mainBtn");
+    if(o.sos){document.getElementById("sms").textContent="Když auto nejede, nečekejte na SMS. Zavolejte na 603 347 230 a řekněte, kde jste.";m.textContent="Zavolat hned";m.href="tel:+420603347230";return}
+    var t="Dobrý den, potřeboval bych: "+o.s+"."+(c?"\nAuto: "+c:"")+"\nKdy se můžu stavit? Děkuji.";
+    document.getElementById("sms").textContent=t;m.textContent="Poslat SMS";m.href="sms:+420603347230?body="+encodeURIComponent(t);
+  }
+  bs.forEach(function(b,i){b.addEventListener("click",function(){cur=i;render()})});
+  document.getElementById("car").addEventListener("input",render);render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Pneuservis Štěpánek, pneuservis Hlubočany</title>
+<meta name="description" content="Pneuservis Štěpánek, Hlubočany 80 (Vyškovsko). Přezutí, vyvážení kol, huštění, lepení a prodej pneumatik, servis ventilů TPMS, ekologická likvidace starých pneu. Osobní a lehké užitkové vozy. Tel. 776 254 167.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TireShop","name":"Pneuservis Štěpánek","description":"Pneuservis pro osobní a lehké užitkové vozy včetně vyvážení, huštění a ekologické likvidace ojetých pneumatik. Prodej i lepení pneumatik. Servis ventilů TPMS.","telephone":"+420776254167","email":"pneustepanek@seznam.cz","taxID":"62125052","address":{"@type":"PostalAddress","streetAddress":"Hlubočany 80","postalCode":"682 01","addressLocality":"Hlubočany","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"11:00"}]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: dělený hero – vlevo text, vpravo kolo na vyvažovačce s displejem gramů a žlutým závažím; výrazný prvek „Co cítíte za jízdy?“ přeloží příznak na službu a složí SMS */
+:root{
+  --blue:#22577A; --blue-2:#163E58; --teal:#38A3A5; --teal-ink:#1F6E70; --weight:#FFD166; --base:#F7F7F4; --white:#FFFFFF;
+  --ink:#1C1C28; --muted:#55596A; --line:#D8DBD6;
+  --display:"Unbounded","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--base);color:var(--ink);font:17px/1.6 var(--body);padding-bottom:74px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.12;text-wrap:balance}
+h2{font-size:clamp(24px,3.4vw,36px);font-weight:700;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:700}
+p{margin:0}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.demo{background:#FFF3CF;color:#5A4300;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font:600 11px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF3CF;color:#5A4300;border-radius:4px;padding:1px 6px;vertical-align:middle}
+.top{background:var(--white);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:800 16px/1.1 var(--display);color:var(--blue)}
+.logo small{display:block;font:500 13px var(--body);color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:14px;font:700 16px var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-w{background:var(--weight);color:var(--ink)}
+.btn-line{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.top .btn{min-height:42px;font-size:15px;padding:0 14px}
+/* hero dělený */
+.hero{padding-block:34px 50px;background:linear-gradient(180deg,var(--white),var(--base))}
+.hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.eyebrow{font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--teal-ink)}
+.hero h1{font-size:clamp(30px,4.8vw,54px);font-weight:800;color:var(--blue-2);margin-top:10px}
+.hero .sub{margin-top:14px;color:var(--muted);max-width:50ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chipsrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chipsrow span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600}
+.machine{background:var(--blue-2);border-radius:24px;padding:22px;color:#fff;position:relative}
+.machine svg{width:100%;height:auto;display:block}
+.spin{transform-origin:150px 150px;animation:spin 2.4s cubic-bezier(.2,.7,.3,1) .3s 1 both}
+@keyframes spin{from{transform:rotate(-540deg)}to{transform:rotate(0)}}
+.readouts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.readouts div{background:#0F2D40;border-radius:10px;padding:10px 12px;font-variant-numeric:tabular-nums}
+.readouts small{display:block;color:#9FC3D9;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.readouts b{font:700 24px var(--display);color:var(--weight)}
+.machine .cap{font-size:13px;color:#9FC3D9;margin-top:8px}
+section{padding-block:58px}
+.lead{color:var(--muted);margin-top:10px;max-width:62ch}
+/* příznaky */
+.symp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:24px}
+.sy{background:var(--white);border:2px solid var(--line);border-radius:16px;padding:16px;text-align:left;font:600 16px/1.35 var(--body);color:var(--ink);cursor:pointer;display:grid;gap:10px;align-content:start;min-height:130px}
+.sy svg{width:36px;height:36px}
+.sy[aria-pressed="true"]{border-color:var(--blue);background:#E8F1F7}
+.answer{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.ans{background:var(--white);border-radius:16px;padding:22px;border:1px solid var(--line);min-width:0}
+.ans .svcname{font:700 22px var(--display);color:var(--teal-ink);margin-top:4px}
+.ans p{color:var(--muted);margin-top:8px}
+.send{background:var(--blue);color:#fff;border-radius:16px;padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.send label{display:grid;gap:4px;font-size:14px;color:#CFE2EE}
+.send select,.send input{font:16px var(--body);padding:11px 12px;border-radius:10px;border:0;background:#fff;color:var(--ink);min-width:0}
+.sms{background:var(--blue-2);border-radius:10px;padding:14px;white-space:pre-wrap;font-size:15px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.send .btn-line{color:#fff;border-color:#fff}
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.svc div{background:var(--white);border-radius:16px;padding:20px;display:grid;gap:6px;align-content:start;border:1px solid var(--line)}
+.svc p{color:var(--muted);font-size:16px}
+.svc i{display:block;width:30px;height:8px;border-radius:4px;background:var(--weight)}
+.price{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:#E8F1F7;border-radius:16px;padding:18px 22px}
+.winter{background:var(--blue-2);color:#fff}
+.winter .lead{color:#CFE2EE}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.wgrid div{background:var(--blue);border-radius:16px;padding:18px}
+.wgrid b{display:block;font:800 26px var(--display);color:var(--weight);margin-bottom:6px}
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.trust div{border-bottom:2px solid var(--teal);padding-bottom:12px}
+.trust b{display:block;font:700 16px var(--display)}
+.trust span{color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--weight);font:800 17px var(--display)}
+.photo{border:2px dashed #B9C3C9;border-radius:16px;min-height:220px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:16px;background:repeating-linear-gradient(45deg,#ECEFEC 0 12px,#F7F7F4 12px 24px)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+details{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+details+details{margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+.contact{background:var(--white);border-top:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--teal-ink);font-weight:700}
+.mapc{background:#E8F1F7;border-radius:16px;padding:20px;display:grid;gap:14px;align-content:start}
+.mapc svg{width:100%;height:auto}
+footer{background:var(--blue-2);color:#CFE2EE;font-size:14px;padding-block:22px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1}
+@media (max-width:900px){
+  .hgrid,.answer,.two,.cgrid{grid-template-columns:1fr}
+  .symp{grid-template-columns:1fr 1fr}
+  .svc,.trust,.wgrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .sticky{display:flex}.top .btn{display:none}
+  .machine{max-width:420px}
+}
+@media (max-width:520px){
+  .svc,.trust,.wgrid{grid-template-columns:1fr}
+  .sy{min-height:0}
+  section{padding-block:44px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Pneuservis Štěpánek</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <div class="logo">Pneuservis Štěpánek<small>Hlubočany 80 · Vyškovsko</small></div>
+    <a class="btn btn-blue" href="tel:+420776254167">Zavolat 776 254 167</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap hgrid">
+    <div>
+      <div class="eyebrow">Pneuservis v Hlubočanech</div>
+      <h1>Přezujeme a vyvážíme. Ať se volant netřese.</h1>
+      <p class="sub">Pneuservis pro osobní a lehké užitkové vozy: přezutí, vyvážení kol, huštění, lepení a prodej pneumatik, servis ventilů TPMS.</p>
+      <div class="cta">
+        <a class="btn btn-blue" href="tel:+420776254167">Zavolat 776 254 167</a>
+        <a class="btn btn-line" href="#objednat">Objednat přezutí</a>
+      </div>
+      <div class="chipsrow"><span>Po–Čt 8–17</span><span>Pá 8–16</span><span>So 9–11</span></div>
+    </div>
+    <div class="machine">
+      <svg viewBox="0 0 300 300" role="img" aria-label="Kolo na vyvažovačce se žlutým závažím">
+        <circle cx="150" cy="150" r="140" fill="#0F2D40"/>
+        <g class="spin">
+          <circle cx="150" cy="150" r="118" fill="#1C1C28"/>
+          <circle cx="150" cy="150" r="118" fill="none" stroke="#2C2C3A" stroke-width="14" stroke-dasharray="6 10"/>
+          <circle cx="150" cy="150" r="72" fill="#C9D3DA"/>
+          <g fill="#9AA8B3"><path d="M150 84l10 46h-20z"/><path d="M216 150l-46 10v-20z"/><path d="M150 216l-10-46h20z"/><path d="M84 150l46-10v20z"/></g>
+          <circle cx="150" cy="150" r="20" fill="#22577A"/>
+          <rect x="138" y="76" width="24" height="10" rx="2" fill="#FFD166"/>
+        </g>
+        <path d="M150 4 v22" stroke="#38A3A5" stroke-width="4"/>
+      </svg>
+      <div class="readouts"><div><small>vnitřní</small><b>0 g</b></div><div><small>vnější</small><b>0 g</b></div></div>
+      <p class="cap">Ilustrace: vyvážené kolo ukáže na obou stranách 0 g.</p>
+    </div>
+  </div>
+</div>
+
+<section id="objednat">
+  <div class="wrap">
+    <h2>Co cítíte za jízdy?</h2>
+    <p class="lead">Vyberte, co se s autem děje. Řekneme, co pomůže, a složíme SMS, kterou pošlete jedním dotykem.</p>
+    <div class="symp" id="symp">
+      <button class="sy" type="button" data-i="0" aria-pressed="true"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="none" stroke="#22577A" stroke-width="4"/><path d="M4 18h28" stroke="#22577A" stroke-width="4"/><path d="M1 10l3 3-3 3M35 10l-3 3 3 3" stroke="#38A3A5" stroke-width="2" fill="none"/></svg>Volant se při vyšší rychlosti třese</button>
+      <button class="sy" type="button" data-i="1" aria-pressed="false"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 26c0-10 4-16 10-16s10 6 10 16z" fill="none" stroke="#22577A" stroke-width="3"/><path d="M18 14v7" stroke="#C4161C" stroke-width="3"/><circle cx="18" cy="24" r="1.8" fill="#C4161C"/></svg>Svítí kontrolka tlaku v pneumatikách</button>
+      <button class="sy" type="button" data-i="2" aria-pressed="false"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="13" fill="none" stroke="#22577A" stroke-width="4"/><path d="M26 6l3-3M29 9l3-1" stroke="#38A3A5" stroke-width="3"/></svg>Kolo pomalu ztrácí tlak nebo mám defekt</button>
+      <button class="sy" type="button" data-i="3" aria-pressed="false"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 8h24l-3 22H9z" fill="none" stroke="#22577A" stroke-width="3"/><path d="M12 14v10M18 14v10M24 14v10" stroke="#38A3A5" stroke-width="2"/></svg>Je čas přezout na zimní</button>
+    </div>
+    <div class="answer">
+      <div class="ans">
+        <small style="color:var(--muted);font-weight:600">Pomůže</small>
+        <div class="svcname" id="sn"></div>
+        <p id="sd"></p>
+      </div>
+      <div class="send">
+        <label for="when">Kdy se Vám hodí<select id="when"></select></label>
+        <label for="car">Auto (nepovinné)<input id="car" type="text" placeholder="např. VW Golf" autocomplete="off"></label>
+        <div class="sms" id="sms" aria-live="polite"></div>
+        <div class="acts"><a class="btn btn-w" id="smsBtn" href="sms:+420776254167">Poslat SMS</a><a class="btn btn-line" href="tel:+420776254167">Zavolat</a></div>
+        <p style="font-size:14px;color:#CFE2EE">Číslo: <b style="color:#fff">776 254 167</b>. Státní svátky ve výběru nenabízíme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Služby</h2>
+    <div class="svc">
+      <div><i></i><h3>Přezutí</h3><p>Osobní a lehké užitkové vozy.</p></div>
+      <div><i></i><h3>Vyvážení kol</h3><p>Proti vibracím volantu a nerovnoměrnému sjíždění pneu.</p></div>
+      <div><i></i><h3>Huštění</h3><p>Správný tlak šetří pneumatiky i palivo.</p></div>
+      <div><i></i><h3>Lepení pneumatik</h3><p>Oprava defektu, pokud to pneumatika dovolí.</p></div>
+      <div><i></i><h3>Servis ventilů TPMS</h3><p>Ventily se snímačem tlaku v pneumatikách.</p></div>
+      <div><i></i><h3>Prodej a likvidace</h3><p>Prodej nových pneumatik a ekologická likvidace ojetých.</p></div>
+    </div>
+    <div class="price">
+      <p><b>Cenu řekneme předem.</b> Zavolejte nebo pošlete SMS s autem a rozměrem pneumatik.</p>
+      <a class="btn btn-blue" href="tel:+420776254167">Zavolat 776 254 167</a>
+    </div>
+  </div>
+</section>
+
+<section class="winter">
+  <div class="wrap">
+    <h2>Zimní pneumatiky od 1. listopadu</h2>
+    <p class="lead">Přezutí spojte s vyvážením kol a kontrolou tlaku.</p>
+    <div class="wgrid">
+      <div><b>1. 11. – 31. 3.</b>Za zimních podmínek musí mít osobní auto zimní pneumatiky.</div>
+      <div><b>4 mm</b>Nejmenší hloubka dezénu zimní pneumatiky u osobního auta.</div>
+      <div><b>TPMS</b>Po přezutí kontrolka tlaku občas svítí. Ventily se snímačem umíme.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Jak to probíhá</h2>
+    <ol class="steps">
+      <li><div><h3>Zavoláte nebo napíšete</h3><p class="lead" style="margin-top:4px">Auto a co potřebujete.</p></div></li>
+      <li><div><h3>Domluvíme čas</h3><p class="lead" style="margin-top:4px">Ve všední den nebo v sobotu dopoledne.</p></div></li>
+      <li><div><h3>Přijedete do Hlubočan</h3><p class="lead" style="margin-top:4px">Hlubočany 80. Cenu znáte předem.</p></div></li>
+    </ol>
+    <h2 style="margin-top:54px">Proč k nám</h2>
+    <div class="trust">
+      <div><b>Sobota dopoledne</b><span>So 9–11 podle Firmy.cz</span></div>
+      <div><b>TPMS ventily</b><span>servis snímačů tlaku</span></div>
+      <div><b>Ekologická likvidace</b><span>staré pneu nemusíte vozit jinam</span></div>
+      <div><b>IČO 62125052</b><span>podle Firmy.cz</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Časté otázky</h2>
+      <div style="margin-top:18px">
+        <details><summary>Proč se mi třese volant?</summary><p>Nejčastěji kvůli nevyváženému kolu. Vyvážení to obvykle vyřeší.</p></details>
+        <details><summary>Přezujete i dodávku?</summary><p>Ano, pneuservis děláme pro osobní a lehké užitkové vozy.</p></details>
+        <details><summary>Co se starými pneumatikami?</summary><p>Ekologicky je zlikvidujeme.</p></details>
+        <details><summary>Musím se objednat?</summary><p>Doporučujeme předem zavolat, ať na Vás nemusíte čekat. <span class="tag">ukázkový text</span></p></details>
+      </div>
+    </div>
+    <div class="photo" style="min-height:300px">Sem přijde Vaše fotka<br>(dílna v Hlubočanech)</div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="cgrid">
+      <div>
+        <p style="font:800 26px var(--display);color:var(--blue-2)"><a href="tel:+420776254167" style="text-decoration:none">776 254 167</a></p>
+        <p style="margin-top:6px"><a href="mailto:pneustepanek@seznam.cz">pneustepanek@seznam.cz</a></p>
+        <p style="margin-top:6px">Hlubočany 80, 682 01</p>
+        <table class="hours" style="margin-top:16px" id="hours">
+          <tr data-d="1"><td>Pondělí</td><td>8:00–17:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>8:00–17:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>8:00–17:00</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>8:00–17:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>8:00–16:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>9:00–11:00</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+        </table>
+        <p style="font-size:14px;margin-top:8px;color:var(--muted)">Podle Firmy.cz. O svátcích se doba může lišit, předem zavolejte.</p>
+      </div>
+      <div class="mapc">
+        <svg viewBox="0 0 320 150" role="img" aria-label="Hlubočany u Vyškova">
+          <rect width="320" height="150" rx="12" fill="#D3E4EF"/>
+          <path d="M0 100 C80 60 200 130 320 70" stroke="#FFFFFF" stroke-width="12" fill="none"/>
+          <circle cx="150" cy="92" r="11" fill="#22577A"/><circle cx="150" cy="92" r="4" fill="#FFD166"/>
+          <text x="20" y="34" fill="#163E58" font-family="Manrope,sans-serif" font-size="15" font-weight="700">Hlubočany 80</text>
+        </svg>
+        <div class="acts">
+          <a class="btn btn-blue" href="https://mapy.cz/zakladni?q=Hlubo%C4%8Dany%2080" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Hlubo%C4%8Dany+80+682+01" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Pneuservis Štěpánek · Hlubočany 80, 682 01 · IČO 62125052 · Návrh webu od Weby na míru</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-blue" href="tel:+420776254167">Zavolat</a>
+  <a class="btn btn-line" href="#objednat">Objednat</a>
+</div>
+
+<script>
+(function(){
+  var S=[
+    {n:"Vyvážení kol",d:"Třesoucí se volant při vyšší rychlosti je typický znak nevyváženého kola. Na vyvažovačce doplníme závaží.",s:"vyvážení kol (třese se volant)"},
+    {n:"Huštění a servis TPMS",d:"Zkontrolujeme tlak ve všech kolech. Když je vadný ventil se snímačem tlaku, opravíme ho.",s:"kontrola tlaku, svítí kontrolka TPMS"},
+    {n:"Lepení pneumatiky",d:"Najdeme místo úniku a pneumatiku zalepíme, pokud to její stav dovolí.",s:"lepení pneumatiky (uchází / defekt)"},
+    {n:"Přezutí na zimní",d:"Přezujeme a vyvážíme. Opotřebené pneumatiky ekologicky zlikvidujeme a nové prodáme.",s:"přezutí na zimní"}
+  ];
+  var cur=0,H=["2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08"];
+  var D=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  var w=document.getElementById("when"),n=0,d=new Date();
+  var o0=document.createElement("option");o0.value="co nejdřív";o0.textContent="Co nejdřív";w.appendChild(o0);
+  while(n<8){d.setDate(d.getDate()+1);var k=d.getDay();if(k===0||H.indexOf(iso(d))>-1)continue;var hrs=k===6?"9–11":k===5?"8–16":"8–17";var lab=D[k]+" "+d.getDate()+". "+(d.getMonth()+1)+".";var o=document.createElement("option");o.value=lab;o.textContent=lab.charAt(0).toUpperCase()+lab.slice(1)+" ("+hrs+")";w.appendChild(o);n++}
+  var bs=[].slice.call(document.querySelectorAll(".sy"));
+  function render(){
+    bs.forEach(function(b,i){b.setAttribute("aria-pressed",i===cur)});
+    document.getElementById("sn").textContent=S[cur].n;document.getElementById("sd").textContent=S[cur].d;
+    var c=document.getElementById("car").value.trim();
+    var t="Dobrý den, potřeboval bych: "+S[cur].s+"."+(c?"\nAuto: "+c:"")+"\nTermín: "+w.value+"\nDěkuji.";
+    document.getElementById("sms").textContent=t;document.getElementById("smsBtn").href="sms:+420776254167?body="+encodeURIComponent(t);
+  }
+  bs.forEach(function(b,i){b.addEventListener("click",function(){cur=i;render()})});
+  document.getElementById("car").addEventListener("input",render);w.addEventListener("change",render);render();
+  var row=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');if(row)row.classList.add("today");
+})();
+</script>
+</body>
+</html>

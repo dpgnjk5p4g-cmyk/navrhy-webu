@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Pneuservis KUFI, pneuservis Vyškov</title>
+<meta name="description" content="Pneuservis KUFI – Pavel Kufčák, Brněnská 366/25, Vyškov. Přes 20 let servisu pneumatik: opravy, prořezávání, protektorování a prodej. Přezouváme osobní a nákladní auta i zemědělskou techniku. Tel. 736 225 787.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TireShop","name":"Pneuservis KUFI – Pavel Kufčák","description":"Více jak 20 let servisu pneumatik. Opravy, prořezávání, protektorování a prodej pneumatik. Přezouvání osobních a nákladních aut a zemědělské techniky.","telephone":"+420736225787","email":"kufcak.jakub@gmail.com","taxID":"08762970","address":{"@type":"PostalAddress","streetAddress":"Brněnská 366/25","postalCode":"682 01","addressLocality":"Vyškov","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"08:00","closes":"15:00"}]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: hero nese široký pás dezénu pneumatiky, přes který jde nápis; výrazný prvek „Co k nám vezete?“ – tři kola v poměru velikosti (osobní, nákladní, traktor), každé ukáže své služby a složí SMS */
+:root{
+  --olive:#3B4A1F; --olive-2:#2C3816; --corn:#E8C547; --corn-ink:#7A5F00; --paper:#F1EFE6; --sheet:#FBFAF5; --rubber:#1E1E1E; --rubber-2:#2E2E2C;
+  --ink:#1E1E1E; --muted:#58584E; --line:#D6D2C2;
+  --display:"Alfa Slab One",Rockwell,Georgia,serif; --body:"Barlow","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.55 var(--body);padding-bottom:74px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;line-height:1.08;text-wrap:balance}
+h1,h2{font-family:var(--display);font-weight:400}
+h2{font-size:clamp(28px,4.2vw,44px)}
+h3{font:700 21px var(--body)}
+p{margin:0}
+a{color:var(--olive)}
+:focus-visible{outline:3px solid var(--corn-ink);outline-offset:2px}
+.demo{background:#FFF3CF;color:#5A4300;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font:600 11px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF3CF;color:#5A4300;border-radius:4px;padding:1px 6px;vertical-align:middle}
+.top{background:var(--olive);color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:400 22px/1 var(--display);letter-spacing:.02em}
+.logo small{display:block;font:500 13px var(--body);color:#D9DDC8;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:4px;font:700 17px var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn-corn{background:var(--corn);color:var(--rubber)}
+.btn-dark{background:var(--rubber);color:#fff}
+.btn-line{background:transparent;color:#fff;border:2px solid #fff}
+.btn-oline{background:transparent;color:var(--ink);border:2px solid var(--rubber)}
+.top .btn{min-height:42px;font-size:15px;padding:0 14px}
+/* hero dezén */
+.hero{background:var(--olive);color:#fff;padding-block:28px 0}
+.hero .eyebrow{font:700 14px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--corn)}
+.tread{margin-top:14px;background:var(--rubber);position:relative;overflow:hidden;padding-block:34px}
+.tread::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(60deg,transparent 0 26px,var(--rubber-2) 26px 40px),
+  repeating-linear-gradient(-60deg,transparent 0 26px,#272725 26px 40px);opacity:.9}
+.tread::after{content:"";position:absolute;left:0;right:0;top:50%;height:6px;transform:translateY(-50%);background:var(--rubber);box-shadow:0 -40px 0 var(--rubber),0 40px 0 var(--rubber);opacity:.6}
+.tread h1{position:relative;z-index:1;font-size:clamp(36px,7.4vw,92px);color:#fff;text-shadow:0 3px 0 #000}
+.tread h1 em{font-style:normal;color:var(--corn)}
+.under{padding-block:22px 34px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end}
+.under .sub{color:#E6E9DA;max-width:56ch}
+.under .cta{display:flex;flex-wrap:wrap;gap:10px}
+.badge20{display:inline-grid;place-items:center;width:112px;height:112px;border-radius:50%;background:var(--corn);color:var(--rubber);font:400 30px/0.9 var(--display);text-align:center;flex:none}
+.badge20 small{font:700 10px/1.2 var(--body);display:block;letter-spacing:.06em}
+section{padding-block:58px}
+.lead{color:var(--muted);margin-top:10px;max-width:62ch}
+/* tři kola */
+.wheels{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:18px 30px;margin-top:28px}
+.wh{background:none;border:0;cursor:pointer;display:grid;justify-items:center;gap:10px;font:700 17px var(--body);color:var(--ink);padding:6px}
+.wh svg{display:block}
+.wh[aria-pressed="true"] svg .rim{fill:var(--corn)}
+.wh[aria-pressed="true"] span{background:var(--rubber);color:#fff}
+.wh span{padding:6px 14px;border-radius:999px;border:2px solid var(--rubber)}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:26px}
+.panel{background:var(--sheet);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0}
+.checks{display:grid;gap:8px;margin-top:12px}
+.checks label{display:flex;gap:10px;align-items:center;border:2px solid var(--line);border-radius:6px;padding:10px 12px;cursor:pointer;background:#fff;font-weight:500}
+.checks input{width:20px;height:20px;accent-color:var(--olive)}
+.out{background:var(--olive);color:#fff;border-radius:8px;padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.out label{display:grid;gap:4px;font-size:14px;color:#D9DDC8}
+.out select,.out input{font:16px var(--body);padding:11px 12px;border:0;border-radius:4px;color:var(--ink);background:#fff;min-width:0}
+.sms{background:var(--olive-2);border-radius:6px;padding:14px;white-space:pre-wrap;font-size:16px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.svc div{background:var(--sheet);border-top:6px solid var(--olive);padding:20px;border-radius:0 0 8px 8px;display:grid;gap:6px;align-content:start}
+.svc p{color:var(--muted);font-size:16px}
+.svcphoto{grid-column:span 3}
+.price{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:var(--corn);border-radius:8px;padding:18px 22px}
+.winter{background:var(--rubber);color:#fff}
+.winter .lead{color:#C9C9C1}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.wgrid div{border:2px solid #3A3A37;border-radius:8px;padding:18px}
+.wgrid b{display:block;font:400 30px/1 var(--display);color:var(--corn);margin-bottom:8px}
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.trust div{background:var(--sheet);border-radius:8px;padding:18px}
+.trust b{display:block;font:400 22px var(--display);color:var(--olive)}
+.trust span{color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:18px 0 0;border-top:4px solid var(--rubber)}
+.steps li::before{content:counter(s) ".";font:400 30px var(--display);color:var(--olive);display:block}
+.photo{border:2px dashed #B9B49E;border-radius:8px;min-height:220px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:16px;background:repeating-linear-gradient(45deg,#E8E5D8 0 12px,#F1EFE6 12px 24px)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+details{border-bottom:2px solid var(--line);padding:14px 0}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+.contact{background:var(--olive);color:#fff}
+.contact a{color:var(--corn)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;color:#fff}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--corn);font-weight:700}
+.mapc{background:var(--olive-2);border-radius:8px;padding:20px;display:grid;gap:14px;align-content:start}
+.mapc svg{width:100%;height:auto}
+.mapc a.btn{color:var(--rubber)}
+footer{background:#1B230C;color:#B9BFA6;font-size:14px;padding-block:22px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:rgba(30,30,30,.97);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1}
+@media (max-width:860px){
+  .board,.two,.cgrid{grid-template-columns:1fr}
+  .svc,.trust,.wgrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .svcphoto{grid-column:1/-1}
+  .under{grid-template-columns:1fr}
+  .sticky{display:flex}.top .btn{display:none}
+}
+@media (max-width:520px){
+  .svc,.trust,.wgrid{grid-template-columns:1fr}
+  section{padding-block:44px}
+  .wheels{gap:8px 14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Pneuservis KUFI – Pavel Kufčák</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <div class="logo">KUFI<small>Pneuservis · Brněnská 366/25, Vyškov</small></div>
+    <a class="btn btn-corn" href="tel:+420736225787">Zavolat 736 225 787</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap"><div class="eyebrow">Pneuservis ve Vyškově · přes 20 let</div></div>
+  <div class="tread">
+    <div class="wrap"><h1>Osobák, kamion <em>i&nbsp;traktor.</em> Přezujeme.</h1></div>
+  </div>
+  <div class="wrap under">
+    <div>
+      <p class="sub">Opravy, prořezávání, protektorování a prodej pneumatik. Přezouváme osobní a nákladní auta i zemědělskou techniku. Po, Út, Čt, Pá 8–15, jinak po telefonické domluvě.</p>
+      <div class="cta" style="margin-top:18px">
+        <a class="btn btn-corn" href="tel:+420736225787">Zavolat 736 225 787</a>
+        <a class="btn btn-line" href="#objednat">Objednat přezutí</a>
+      </div>
+    </div>
+    <div class="badge20" aria-label="Více jak 20 let"><span>20+<small>LET<br>V OBORU</small></span></div>
+  </div>
+</div>
+
+<section id="objednat">
+  <div class="wrap">
+    <h2>Co k nám vezete?</h2>
+    <p class="lead">Klepněte na kolo. Ukážeme, co pro něj uděláme, a složíme SMS, kterou pošlete jedním dotykem.</p>
+    <div class="wheels" id="wheels">
+      <button class="wh" type="button" data-v="0" aria-pressed="true">
+        <svg width="96" height="96" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#1E1E1E"/><circle class="rim" cx="50" cy="50" r="26" fill="#BDB8A5"/><circle cx="50" cy="50" r="8" fill="#1E1E1E"/></svg>
+        <span>Osobní auto</span></button>
+      <button class="wh" type="button" data-v="1" aria-pressed="false">
+        <svg width="132" height="132" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#1E1E1E"/><circle class="rim" cx="50" cy="50" r="24" fill="#BDB8A5"/><g fill="#1E1E1E"><circle cx="50" cy="38" r="3"/><circle cx="62" cy="50" r="3"/><circle cx="50" cy="62" r="3"/><circle cx="38" cy="50" r="3"/></g></svg>
+        <span>Nákladní auto</span></button>
+      <button class="wh" type="button" data-v="2" aria-pressed="false">
+        <svg width="172" height="172" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#1E1E1E"/><g stroke="#3A3A37" stroke-width="5">
+          <path d="M50 2 L58 14"/><path d="M84 16 L80 30"/><path d="M98 50 L86 56"/><path d="M84 84 L70 80"/><path d="M50 98 L42 86"/><path d="M16 84 L20 70"/><path d="M2 50 L14 44"/><path d="M16 16 L30 20"/></g>
+          <circle class="rim" cx="50" cy="50" r="28" fill="#BDB8A5"/><circle cx="50" cy="50" r="9" fill="#1E1E1E"/></svg>
+        <span>Zemědělská technika</span></button>
+    </div>
+    <div class="board">
+      <div class="panel">
+        <h3 id="vt">Osobní auto</h3>
+        <div class="checks" id="checks"></div>
+      </div>
+      <div class="out">
+        <label for="when">Kdy<select id="when"></select></label>
+        <label for="size">Rozměr pneu (nepovinné)<input id="size" type="text" placeholder="např. 205/55 R16" autocomplete="off"></label>
+        <div class="sms" id="sms" aria-live="polite"></div>
+        <div class="acts">
+          <a class="btn btn-corn" id="smsBtn" href="sms:+420736225787">Poslat SMS</a>
+          <a class="btn btn-line" href="tel:+420736225787">Zavolat</a>
+        </div>
+        <p style="font-size:14px;color:#D9DDC8">Číslo: <b style="color:#fff">736 225 787</b>. Rozměr najdete na boku pneumatiky.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Služby</h2>
+    <div class="svc">
+      <div><h3>Přezouvání</h3><p>Osobní a nákladní auta i zemědělská technika.</p></div>
+      <div><h3>Opravy pneumatik</h3><p>Defekt opravíme, pokud to pneumatika dovolí.</p></div>
+      <div><h3>Prořezávání</h3><p>Obnovení dezénu prořezáním u pneumatik, které to umožňují.</p></div>
+      <div><h3>Protektorování</h3><p>Nový běhoun na zachovalou kostru pneumatiky.</p></div>
+      <div><h3>Prodej pneumatik</h3><p>Řekněte rozměr, nabídneme.</p></div>
+      <div class="photo svcphoto" style="min-height:150px">Sem přijde Vaše fotka (dílna nebo stroj na přezutí)</div>
+    </div>
+    <div class="price">
+      <p><b>Cenu řekneme předem.</b> Pošlete rozměr a typ vozidla, ozveme se s cenou.</p>
+      <a class="btn btn-dark" href="tel:+420736225787">Zavolat 736 225 787</a>
+    </div>
+  </div>
+</section>
+
+<section class="winter">
+  <div class="wrap">
+    <h2>Zimní pneu od 1. listopadu</h2>
+    <p class="lead">Na podzim je u pneuservisů nejvíc práce. Domluvte si termín dřív, než napadne sníh.</p>
+    <div class="wgrid">
+      <div><b>1. 11. – 31. 3.</b>Za zimních podmínek musí mít osobní auto zimní pneumatiky.</div>
+      <div><b>4 mm</b>Nejmenší hloubka dezénu zimní pneumatiky u osobního auta.</div>
+      <div><b>6 mm</b>U nákladních aut nad 3,5 t je pro zimní pneumatiky na hnací nápravě předepsáno nejméně 6 mm.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Proč KUFI</h2>
+    <div class="trust">
+      <div><b>20+ let</b><span>„Zabýváme se více jak 20 let servisem pneumatik.“</span></div>
+      <div><b>Moderní vybavení</b><span>uvedeno na Firmy.cz</span></div>
+      <div><b>Od osobáku po traktor</b><span>přezujeme i zemědělskou techniku</span></div>
+      <div><b>IČO 08762970</b><span>Pavel Kufčák, Vyškov</span></div>
+    </div>
+    <h2 style="margin-top:54px">Jak to probíhá</h2>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo pošlete SMS</h3><p class="lead" style="margin-top:6px">Typ vozidla, rozměr a co je potřeba.</p></li>
+      <li><h3>Domluvíme termín</h3><p class="lead" style="margin-top:6px">Po, Út, Čt, Pá 8–15. Středa a víkend po domluvě.</p></li>
+      <li><h3>Přijedete na Brněnskou</h3><p class="lead" style="margin-top:6px">Brněnská 366/25, Vyškov.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Časté otázky</h2>
+      <div style="margin-top:14px">
+        <details><summary>Přezujete i traktor nebo bagr?</summary><p>Ano, přezouváme i zemědělskou techniku. Zavolejte, domluvíme se, jak to zařídit.</p></details>
+        <details><summary>Co je protektorování?</summary><p>Na zachovalou kostru pneumatiky se nanese nový běhoun. Pneumatika tak slouží dál.</p></details>
+        <details><summary>Dá se přijet ve středu nebo o víkendu?</summary><p>Ano, po telefonické domluvě.</p></details>
+        <details><summary>Prodáváte i nové pneumatiky?</summary><p>Ano. Pošlete rozměr a nabídneme Vám je.</p></details>
+      </div>
+    </div>
+    <div class="photo" style="min-height:300px">Sem přijde Vaše fotka</div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="cgrid">
+      <div>
+        <p style="font:400 28px var(--display)"><a href="tel:+420736225787">736 225 787</a></p>
+        <p style="margin-top:6px"><a href="mailto:kufcak.jakub@gmail.com">kufcak.jakub@gmail.com</a></p>
+        <p style="margin-top:6px">Brněnská 366/25, 682 01 Vyškov</p>
+        <table class="hours" style="margin-top:16px" id="hours">
+          <tr data-d="1"><td>Pondělí</td><td>8:00–15:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>8:00–15:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>po telefonické domluvě</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>8:00–15:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>8:00–15:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>po telefonické domluvě</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>po telefonické domluvě</td></tr>
+        </table>
+        <p style="font-size:14px;margin-top:8px;color:#D9DDC8">Podle Firmy.cz. O svátcích se doba může lišit.</p>
+      </div>
+      <div class="mapc">
+        <svg viewBox="0 0 320 150" role="img" aria-label="Brněnská ulice ve Vyškově">
+          <rect width="320" height="150" rx="6" fill="#36441C"/>
+          <path d="M0 40 Q160 70 320 120" stroke="#55663A" stroke-width="12" fill="none"/>
+          <circle cx="170" cy="76" r="11" fill="#E8C547"/>
+          <text x="20" y="138" fill="#fff" font-family="Barlow,sans-serif" font-size="15" font-weight="700">Brněnská 366/25, Vyškov</text>
+        </svg>
+        <div class="acts">
+          <a class="btn btn-corn" href="https://mapy.cz/zakladni?q=Brn%C4%9Bnsk%C3%A1%20366%2F25%20Vy%C5%A1kov" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn btn-corn" href="https://www.google.com/maps/search/?api=1&amp;query=Brn%C4%9Bnsk%C3%A1+366%2F25+Vy%C5%A1kov" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Pneuservis KUFI – Pavel Kufčák · Brněnská 366/25, 682 01 Vyškov · IČO 08762970 · Návrh webu od Weby na míru</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-corn" href="tel:+420736225787">Zavolat</a>
+  <a class="btn btn-line" href="#objednat">Objednat</a>
+</div>
+
+<script>
+(function(){
+  var V=[
+    {n:"Osobní auto",o:["Přezutí","Oprava defektu","Prodej nových pneumatik"]},
+    {n:"Nákladní auto",o:["Přezutí","Oprava defektu","Prořezání dezénu","Protektorování","Prodej pneumatik"]},
+    {n:"Zemědělská technika",o:["Přezutí","Oprava pneumatiky","Prodej pneumatik"]}
+  ];
+  var cur=0,H=["2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08"];
+  var D=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  var w=document.getElementById("when"),n=0,d=new Date();
+  var o0=document.createElement("option");o0.value="co nejdřív";o0.textContent="Co nejdřív";w.appendChild(o0);
+  while(n<8){d.setDate(d.getDate()+1);var k=d.getDay();if([1,2,4,5].indexOf(k)<0||H.indexOf(iso(d))>-1)continue;var lab=D[k]+" "+d.getDate()+". "+(d.getMonth()+1)+".";var o=document.createElement("option");o.value=lab;o.textContent=lab.charAt(0).toUpperCase()+lab.slice(1)+" (8–15)";w.appendChild(o);n++}
+  var o2=document.createElement("option");o2.value="středa nebo víkend – domluvíme se";o2.textContent="Středa / víkend – po domluvě";w.appendChild(o2);
+  var whs=[].slice.call(document.querySelectorAll(".wh"));
+  function build(){var c=document.getElementById("checks");c.innerHTML="";V[cur].o.forEach(function(t,i){var l=document.createElement("label");var id="o"+cur+"_"+i;l.setAttribute("for",id);var x=document.createElement("input");x.type="checkbox";x.id=id;x.value=t;x.checked=i===0;x.addEventListener("change",render);l.appendChild(x);l.appendChild(document.createTextNode(t));c.appendChild(l)});document.getElementById("vt").textContent=V[cur].n;render()}
+  function render(){
+    whs.forEach(function(b,i){b.setAttribute("aria-pressed",i===cur)});
+    var sel=[].slice.call(document.querySelectorAll("#checks input:checked")).map(function(x){return x.value.toLowerCase()});
+    var sz=document.getElementById("size").value.trim();
+    var t="Dobrý den, "+V[cur].n.toLowerCase()+": "+(sel.join(", ")||"(vyberte službu)")+(sz?"\nRozměr: "+sz:"")+"\nTermín: "+w.value+"\nDěkuji.";
+    document.getElementById("sms").textContent=t;document.getElementById("smsBtn").href="sms:+420736225787?body="+encodeURIComponent(t);
+  }
+  whs.forEach(function(b,i){b.addEventListener("click",function(){cur=i;build()})});
+  document.getElementById("size").addEventListener("input",render);w.addEventListener("change",render);build();
+  var row=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');if(row)row.classList.add("today");
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Martin Vtípil, autoservis a pneuservis Hlinsko</title>
+<meta name="description" content="Autoservis Martin Vtípil, Poličská 757, Hlinsko. Servis a opravy osobních i užitkových aut, pneuservis, plnění klimatizací, výměna čelních skel, certifikovaná montáž tažných zařízení. Tel. 608 027 511.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@75..150,700..900&family=Commissioner:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Autoservis Martin Vtípil","description":"Servis a opravy osobních a užitkových vozů, pneuservis, plnění klimatizací, výměna čelních skel, certifikovaná montáž tažných zařízení. Distributor aditiv METABOND.","telephone":"+420608027511","email":"autoopravnavm@gmail.com","taxID":"29151007","address":{"@type":"PostalAddress","streetAddress":"Poličská 757","postalCode":"539 01","addressLocality":"Hlinsko","addressCountry":"CZ"}}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+<style>
+/* Layout: hero je pohled zpoza čelního skla (obrys skla, stěrač jednou přejede), výrazný prvek je bokorys auta s klikacími místy – sklo, kola, tažné, klimatizace, motor – který složí SMS */
+:root{
+  --fir:#1D2B1F; --fir-2:#2A3D2D; --glass:#8FB8DE; --glass-2:#C9DDF0; --mist:#E2E8DF; --sheet:#FAFBF8; --red:#C8372D; --red-ink:#A42A21;
+  --ink:#16201A; --muted:#4F5C52; --line:#C9D2C6;
+  --display:"Anybody","Arial Narrow",system-ui,sans-serif; --body:"Commissioner","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mist);color:var(--ink);font:17px/1.55 var(--body);padding-bottom:74px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.02;text-wrap:balance;font-stretch:115%}
+h2{font-size:clamp(28px,4.4vw,46px);font-weight:900;text-transform:uppercase;letter-spacing:-.005em}
+h3{font-size:19px;font-weight:800;font-stretch:100%}
+p{margin:0}
+a{color:var(--red-ink)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.demo{background:#FFF3CF;color:#5A4300;font-size:14px;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{display:inline-block;font:600 11px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF3CF;color:#5A4300;border-radius:4px;padding:1px 6px;vertical-align:middle}
+.top{background:var(--fir);color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:900 18px/1 var(--display);text-transform:uppercase;font-stretch:125%}
+.logo small{display:block;font:500 12px var(--body);color:var(--glass-2);text-transform:none;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:6px;font:700 16px var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn-red{background:var(--red);color:#fff}
+.btn-glass{background:var(--glass);color:var(--fir)}
+.btn-line{background:transparent;color:#fff;border:2px solid var(--glass)}
+.btn-dark{background:var(--fir);color:#fff}
+.top .btn{min-height:42px;font-size:15px;padding:0 14px}
+/* hero čelní sklo */
+.hero{background:var(--fir);padding-block:18px 46px;color:#fff}
+.shield{position:relative;background:linear-gradient(170deg,#36506B 0%,#22384A 55%,#1A2B37 100%);clip-path:polygon(6% 0,94% 0,100% 100%,0 100%);border-radius:28px 28px 8px 8px;padding:40px 9% 30px;overflow:hidden}
+.shield::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0 40%,rgba(255,255,255,.1) 40% 46%,transparent 46% 60%,rgba(255,255,255,.06) 60% 63%,transparent 63%);pointer-events:none}
+.wiper{position:absolute;left:18%;bottom:6px;width:46%;height:5px;background:#0E1612;border-radius:3px;transform-origin:0 50%;transform:rotate(-4deg);animation:wipe 1.8s ease-in-out .6s 1 both}
+@keyframes wipe{0%{transform:rotate(-4deg)}45%{transform:rotate(-78deg)}100%{transform:rotate(-4deg)}}
+.shield .eyebrow{font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--glass-2)}
+.shield h1{font-size:clamp(34px,6.6vw,74px);font-weight:900;text-transform:uppercase;margin-top:10px;position:relative}
+.shield .sub{margin-top:14px;color:#DCE7F2;max-width:52ch;position:relative}
+.shield .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;position:relative}
+.dash{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:15px;color:#C8D3C9}
+.dash b{color:#fff}
+section{padding-block:58px}
+.lead{color:var(--muted);margin-top:10px;max-width:62ch}
+/* bokorys */
+.side{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:24px}
+.carbox{background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+.carbox svg{width:100%;height:auto;display:block}
+.hot{cursor:pointer}
+.hot .ring{fill:#fff;stroke:var(--fir);stroke-width:3}
+.hot text{font:800 15px var(--body);fill:var(--fir);pointer-events:none}
+.hot.on .ring{fill:var(--red);stroke:var(--red)}
+.hot.on text{fill:#fff}
+.hot:focus-visible .ring{stroke:var(--red);stroke-width:5}
+.legendl{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.lbtn{border:2px solid var(--line);background:#fff;border-radius:6px;padding:8px 12px;font:600 15px var(--body);color:var(--ink);cursor:pointer;min-height:44px}
+.lbtn[aria-pressed="true"]{background:var(--fir);border-color:var(--fir);color:#fff}
+.order{background:var(--fir);color:#fff;border-radius:12px;padding:20px;display:grid;gap:12px;align-content:start;min-width:0}
+.order label{display:grid;gap:4px;font-size:14px;color:#C8D3C9}
+.order input,.order select{font:16px var(--body);padding:11px 12px;border-radius:6px;border:0;background:#fff;color:var(--ink);min-width:0}
+.sms{background:var(--fir-2);border-radius:8px;padding:14px;white-space:pre-wrap;font-size:15px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.svc div{background:var(--sheet);border-radius:10px;padding:20px;display:grid;gap:6px;align-content:start;border-bottom:4px solid var(--glass)}
+.svc div.key{border-bottom-color:var(--red)}
+.svc p{color:var(--muted);font-size:16px}
+.price{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:var(--glass-2);border-radius:10px;padding:18px 22px}
+/* zima */
+.winter{background:var(--glass-2)}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.wgrid div{background:#fff;border-radius:10px;padding:18px}
+.wgrid b{display:block;font:900 30px/1 var(--display);color:var(--fir);margin-bottom:6px}
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.trust div{border-left:4px solid var(--fir);padding-left:14px}
+.trust b{display:block;font:800 18px var(--display);font-stretch:100%}
+.trust span{color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--sheet);border-radius:10px;padding:20px;position:relative;overflow:hidden}
+.steps li::after{content:counter(s);position:absolute;right:12px;top:-6px;font:900 70px var(--display);color:var(--glass-2)}
+.steps h3,.steps p{position:relative}
+.photo{border:2px dashed #A9B6A8;border-radius:10px;min-height:220px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:16px;background:repeating-linear-gradient(45deg,#D9E1D6 0 12px,#E2E8DF 12px 24px)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+details{background:var(--sheet);border-radius:10px;padding:14px 18px}
+details+details{margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+.contact{background:var(--fir);color:#fff}
+.contact a{color:var(--glass-2)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+.callfirst{background:var(--fir-2);border-left:4px solid var(--red);border-radius:8px;padding:16px;margin-top:16px}
+.mapc{background:var(--fir-2);border-radius:12px;padding:20px;display:grid;gap:14px;align-content:start}
+.mapc svg{width:100%;height:auto}
+.mapc a.btn{color:var(--fir)}
+footer{background:#111A13;color:#AEB9AF;font-size:14px;padding-block:22px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:rgba(29,43,31,.97);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1}
+@media (max-width:860px){
+  .side,.two,.cgrid{grid-template-columns:1fr}
+  .svc,.trust,.wgrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .sticky{display:flex}.top .btn{display:none}
+  .shield{clip-path:polygon(3% 0,97% 0,100% 100%,0 100%);padding:30px 7% 26px}
+}
+@media (max-width:520px){
+  .svc,.trust,.wgrid{grid-template-columns:1fr}
+  section{padding-block:44px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Martin Vtípil</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <div class="logo">Autoservis Vtípil<small>Poličská 757, Hlinsko</small></div>
+    <a class="btn btn-red" href="tel:+420608027511">Zavolat 608 027 511</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="shield">
+      <div class="eyebrow">Autoservis a pneuservis · Hlinsko</div>
+      <h1>Servis, pneu, skla i tažné. Pod jednou střechou.</h1>
+      <p class="sub">Opravy osobních i užitkových aut, přezutí, plnění klimatizace, výměna čelního skla a certifikovaná montáž tažného zařízení.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="tel:+420608027511">Zavolat 608 027 511</a>
+        <a class="btn btn-glass" href="#objednat">Objednat servis</a>
+      </div>
+      <div class="wiper" aria-hidden="true"></div>
+    </div>
+    <div class="dash">
+      <span><b>Osobní i užitková</b> auta</span>
+      <span><b>Tažná zařízení</b> certifikovaná montáž</span>
+      <span><b>Než přijedete,</b> zavolejte</span>
+    </div>
+  </div>
+</div>
+
+<section id="objednat">
+  <div class="wrap">
+    <h2>Klepněte, co Vás trápí</h2>
+    <p class="lead">Vyberte místo na autě. Z výběru se složí SMS do dílny, kterou pošlete jedním dotykem.</p>
+    <div class="side">
+      <div class="carbox">
+        <svg viewBox="0 0 640 270" role="group" aria-label="Bokorys auta s místy k výběru">
+          <rect x="0" y="0" width="640" height="270" fill="#FAFBF8"/>
+          <path d="M40 190 L60 140 Q70 120 100 118 L210 112 L280 62 Q296 52 320 52 L440 52 Q468 52 486 70 L530 112 L590 122 Q614 128 616 152 L618 190 Z" fill="#1D2B1F"/>
+          <path d="M292 72 L320 64 L420 64 L420 112 L230 112 Z" fill="#8FB8DE"/>
+          <path d="M432 64 L446 64 Q462 64 474 78 L506 112 L432 112 Z" fill="#8FB8DE"/>
+          <rect x="595" y="166" width="34" height="8" rx="3" fill="#7A867C"/><circle cx="632" cy="170" r="6" fill="#7A867C"/>
+          <circle cx="160" cy="194" r="44" fill="#16201A"/><circle cx="160" cy="194" r="20" fill="#9AA79C"/>
+          <circle cx="500" cy="194" r="44" fill="#16201A"/><circle cx="500" cy="194" r="20" fill="#9AA79C"/>
+          <line x1="20" y1="240" x2="620" y2="240" stroke="#C9D2C6" stroke-width="3"/>
+          <g class="hot" data-k="0" tabindex="0" role="button" aria-label="Čelní sklo"><circle class="ring" cx="262" cy="86" r="20"/><text x="262" y="91" text-anchor="middle">1</text></g>
+          <g class="hot" data-k="1" tabindex="0" role="button" aria-label="Kola a pneumatiky"><circle class="ring" cx="160" cy="194" r="20"/><text x="160" y="199" text-anchor="middle">2</text></g>
+          <g class="hot" data-k="2" tabindex="0" role="button" aria-label="Tažné zařízení"><circle class="ring" cx="606" cy="146" r="20"/><text x="606" y="151" text-anchor="middle">3</text></g>
+          <g class="hot" data-k="3" tabindex="0" role="button" aria-label="Klimatizace"><circle class="ring" cx="360" cy="88" r="20"/><text x="360" y="93" text-anchor="middle">4</text></g>
+          <g class="hot" data-k="4" tabindex="0" role="button" aria-label="Motor a servis"><circle class="ring" cx="96" cy="150" r="20"/><text x="96" y="155" text-anchor="middle">5</text></g>
+        </svg>
+        <div class="legendl" id="legend"></div>
+      </div>
+      <div class="order">
+        <label for="veh">Vozidlo<select id="veh"><option>Osobní auto</option><option>Užitkové auto</option></select></label>
+        <label for="car">Značka a model<input id="car" type="text" placeholder="např. Ford Transit 2018" autocomplete="off"></label>
+        <div class="sms" id="sms" aria-live="polite"></div>
+        <div class="acts">
+          <a class="btn btn-red" id="smsBtn" href="sms:+420608027511">Poslat SMS</a>
+          <a class="btn btn-line" href="tel:+420608027511">Zavolat</a>
+        </div>
+        <p style="font-size:14px;color:#C8D3C9">Číslo pro SMS i hovor: <b style="color:#fff">608 027 511</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Služby</h2>
+    <div class="svc">
+      <div><h3>Servis a opravy</h3><p>Osobní i užitková auta.</p></div>
+      <div><h3>Pneuservis</h3><p>Přezutí a servis pneumatik.</p></div>
+      <div><h3>Plnění klimatizací</h3><p>Ať v létě chladí a v zimě odmlžuje skla.</p></div>
+      <div class="key"><h3>Výměna čelních skel</h3><p>Prasklé nebo poškozené sklo vyměníme.</p></div>
+      <div class="key"><h3>Tažná zařízení</h3><p>Montáž s certifikací.</p></div>
+      <div><h3>Aditiva METABOND</h3><p>Jsme distributor aditiv METABOND.</p></div>
+    </div>
+    <div class="price">
+      <p><b>Cenu řekneme předem.</b> Napište, co potřebujete, a ozveme se s cenou a termínem.</p>
+      <a class="btn btn-dark" href="tel:+420608027511">Zavolat 608 027 511</a>
+    </div>
+  </div>
+</section>
+
+<section class="winter">
+  <div class="wrap">
+    <h2>Na Vysočině přichází zima dřív. Přezujte včas.</h2>
+    <div class="wgrid">
+      <div><b>1. 11.</b>Od 1. listopadu do 31. března musí mít osobní auto za zimních podmínek zimní pneumatiky.</div>
+      <div><b>4 mm</b>Nejmenší hloubka dezénu zimní pneumatiky u osobního auta.</div>
+      <div><b>Sklo</b>Malá prasklina v mrazu snadno přeběhne přes celé sklo. Nečekejte s ní.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Jak to probíhá</h2>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo pošlete SMS</h3><p class="lead" style="margin-top:6px">Auto a co potřebujete.</p></li>
+      <li><h3>Domluvíme termín a cenu</h3><p class="lead" style="margin-top:6px">Cenu znáte dopředu.</p></li>
+      <li><h3>Přijedete na Poličskou</h3><p class="lead" style="margin-top:6px">Poličská 757, Hlinsko.</p></li>
+    </ol>
+    <h2 style="margin-top:54px">Proč k nám</h2>
+    <div class="trust">
+      <div><b>6 služeb v jedné dílně</b><span>servis, pneu, klima, skla, tažné, aditiva</span></div>
+      <div><b>Certifikace</b><span>pro montáž tažných zařízení</span></div>
+      <div><b>Užitková auta</b><span>servis i dodávek</span></div>
+      <div><b>IČO 29151007</b><span>podle Firmy.cz</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Časté otázky</h2>
+      <div style="margin-top:18px">
+        <details><summary>Vyměníte čelní sklo i na dodávce?</summary><p>Výměnu čelních skel děláme. Zavolejte s typem auta a domluvíme se. <span class="tag">ukázkový text</span></p></details>
+        <details><summary>Namontujete tažné zařízení?</summary><p>Ano, máme certifikaci pro montáž tažných zařízení.</p></details>
+        <details><summary>Jak dlouho trvá plnění klimatizace?</summary><p>Řekneme Vám při objednání. <span class="tag">ukázkový text</span></p></details>
+        <details><summary>Kdy máte otevřeno?</summary><p>Než přijedete, zavolejte na 608 027 511. Domluvíme čas, kdy na Vás budeme mít volno.</p></details>
+      </div>
+    </div>
+    <div class="photo" style="min-height:300px">Sem přijde Vaše fotka<br>(dílna na Poličské)</div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="cgrid">
+      <div>
+        <p style="font:900 28px var(--display)"><a href="tel:+420608027511">608 027 511</a></p>
+        <p style="margin-top:6px"><a href="mailto:autoopravnavm@gmail.com">autoopravnavm@gmail.com</a></p>
+        <p style="margin-top:6px">Poličská 757, 539 01 Hlinsko</p>
+        <div class="callfirst"><b>Otevírací doba</b><br>Doplníme podle Vás <span class="tag">ukázkový text</span><br>Než přijedete, zavolejte.</div>
+      </div>
+      <div class="mapc">
+        <svg viewBox="0 0 320 150" role="img" aria-label="Poličská ulice v Hlinsku">
+          <rect width="320" height="150" rx="8" fill="#22342A"/>
+          <path d="M-10 120 L330 30" stroke="#3E5446" stroke-width="12"/>
+          <text x="196" y="80" fill="#C9DDF0" font-family="Commissioner,sans-serif" font-size="13" transform="rotate(-15 196 80)">Poličská</text>
+          <circle cx="150" cy="80" r="11" fill="#C8372D"/><text x="20" y="138" fill="#fff" font-family="Commissioner,sans-serif" font-size="15" font-weight="700">Poličská 757, Hlinsko</text>
+        </svg>
+        <div class="acts">
+          <a class="btn btn-glass" href="https://mapy.cz/zakladni?q=Poli%C4%8Dsk%C3%A1%20757%20Hlinsko" target="_blank" rel="noopener">Mapy.cz</a>
+          <a class="btn btn-glass" href="https://www.google.com/maps/search/?api=1&amp;query=Poli%C4%8Dsk%C3%A1+757+Hlinsko" target="_blank" rel="noopener">Google Mapy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Autoservis Martin Vtípil · Poličská 757, 539 01 Hlinsko · IČO 29151007 · Návrh webu od Weby na míru</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-red" href="tel:+420608027511">Zavolat</a>
+  <a class="btn btn-glass" href="#objednat">Objednat servis</a>
+</div>
+
+<script>
+(function(){
+  var P=[{n:"Čelní sklo",s:"výměna čelního skla"},{n:"Kola a pneu",s:"přezutí / pneuservis"},{n:"Tažné zařízení",s:"montáž tažného zařízení"},{n:"Klimatizace",s:"plnění klimatizace"},{n:"Motor a servis",s:"servis / oprava"}];
+  var on=[1];
+  var lg=document.getElementById("legend");
+  P.forEach(function(p,i){var b=document.createElement("button");b.type="button";b.className="lbtn";b.textContent=(i+1)+" "+p.n;b.addEventListener("click",function(){tog(i)});lg.appendChild(b)});
+  var hots=[].slice.call(document.querySelectorAll(".hot"));
+  hots.forEach(function(h){var k=+h.getAttribute("data-k");h.addEventListener("click",function(){tog(k)});h.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tog(k)}})});
+  function tog(i){var x=on.indexOf(i);if(x>-1){if(on.length>1)on.splice(x,1)}else on.push(i);render()}
+  function render(){
+    hots.forEach(function(h){var k=+h.getAttribute("data-k");h.classList.toggle("on",on.indexOf(k)>-1);h.setAttribute("aria-pressed",on.indexOf(k)>-1)});
+    [].slice.call(lg.children).forEach(function(b,i){b.setAttribute("aria-pressed",on.indexOf(i)>-1)});
+    var car=document.getElementById("car").value.trim(),veh=document.getElementById("veh").value;
+    var t="Dobrý den, potřeboval bych: "+on.map(function(i){return P[i].s}).join(", ")+".\nVozidlo: "+veh.toLowerCase()+(car?", "+car:"")+"\nKdy se můžu stavit? Děkuji.";
+    document.getElementById("sms").textContent=t;
+    document.getElementById("smsBtn").href="sms:+420608027511?body="+encodeURIComponent(t);
+  }
+  document.getElementById("car").addEventListener("input",render);document.getElementById("veh").addEventListener("change",render);render();
+})();
+</script>
+</body>
+</html>
