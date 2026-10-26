@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Stolařství F&amp;F</title>
+<meta name="description" content="Stolařství F&amp;F, Frýdecká 927, Šenov: ploty, pergoly, zahradní chatky, podbíjení podhledů, dveře, schody, nábytek z masivu i lamina, restaurování nábytku a řezbářské práce. Tel. 774 859 038.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Stolařství F&F","telephone":"+420774859038","email":"fajkosv@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Frýdecká 927","addressLocality":"Šenov","postalCode":"739 34","addressCountry":"CZ"},"taxID":"44935455","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"08:00","closes":"14:00"}]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: dělený hero – text vlevo, vpravo zahrada, kde se postaví plot, pergola a chatka; hlavní nástroj „Co Vám postavíme?“ s rozměry */
+:root{
+  --orech:#3B2F2A; --orech2:#4E3F37; --jantar:#D98E04; --jantar-tx:#8C5A00;
+  --hoblina:#F4EFE6; --hoblina2:#EAE1D2; --trava:#5E7D4F; --bila:#FFFFFF; --sed:#6A5D55; --linka:#DDD2C1;
+  --display:"Rokkitt",Rockwell,"Roboto Slab",Georgia,serif; --body:"Public Sans",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--hoblina);color:var(--orech);font:16px/1.6 var(--body);padding-bottom:78px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,5.4vw,54px)}
+a{color:inherit}
+.demo{display:inline-block;font:700 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#151515;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:10px;font:800 26px/1 var(--display)}
+.logo small{display:block;font:500 12px/1.3 var(--body);color:var(--sed)}
+.toptel{font-weight:700;text-decoration:none;white-space:nowrap;border:2px solid var(--orech);border-radius:4px;padding:8px 12px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding-block:20px 56px}
+.eyebrow{font:700 12px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--trava)}
+.hero h1{font-size:clamp(44px,7vw,80px);margin:12px 0 14px}
+.hero h1 span{color:var(--jantar-tx)}
+.hero p{margin:0 0 22px;color:var(--sed);max-width:46ch;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 16px/1 var(--body);text-decoration:none;border-radius:4px;padding:15px 18px;border:2px solid var(--orech);cursor:pointer;background:transparent;color:var(--orech)}
+.btn-j{background:var(--jantar);border-color:var(--jantar);color:var(--orech)}
+.btn-o{background:var(--orech);color:#fff}
+.btn:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--trava);outline-offset:2px}
+.stav{display:inline-flex;gap:8px;align-items:center;margin-top:18px;font-size:14px;color:var(--sed)}
+.stav i{width:10px;height:10px;border-radius:50%;background:#B9AC9C}
+.stav.on i{background:var(--trava)}
+.zahrada svg{width:100%;height:auto;display:block}
+section{padding-block:60px}
+.lead{max-width:62ch;color:var(--sed);margin:12px 0 0}
+.pas{background:var(--orech);color:var(--hoblina)}
+.pas h2{color:#fff}
+.pas .lead{color:#D9CDBF}
+.sl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:28px;border-top:1px solid #6A5A50}
+.sl div{padding:20px 18px 20px 0;border-bottom:1px solid #6A5A50;min-width:0}
+.sl h3{font-size:26px;color:#fff}
+.sl p{margin:6px 0 0;color:#D9CDBF;font-size:14.5px}
+.sl span{font:700 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--jantar)}
+.konf{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:26px;align-items:start}
+.karta{background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:22px;min-width:0}
+.karta label{display:block;font:700 12.5px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--jantar-tx);margin:16px 0 8px}
+.karta label:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 14px var(--body);border:1.5px solid var(--linka);background:var(--hoblina);border-radius:4px;padding:9px 12px;cursor:pointer;color:var(--orech)}
+.chips button[aria-pressed="true"]{background:var(--orech);color:#fff;border-color:var(--orech)}
+.rozm{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rozm input,.karta textarea,.karta input[type=text]{width:100%;font:500 16px var(--body);padding:11px 12px;border:1.5px solid var(--linka);border-radius:4px;background:var(--hoblina);color:var(--orech)}
+.karta textarea{min-height:80px;resize:vertical}
+.nahled{background:var(--hoblina2);border-radius:4px;margin-top:16px;padding:10px}
+.nahled svg{width:100%;height:auto;display:block}
+.vypocet{font:700 22px/1.2 var(--display);margin:10px 0 0}
+.vystup{background:var(--orech);color:#fff;border-radius:6px;padding:22px;min-width:0}
+.vystup h3{font-size:30px;margin-bottom:12px}
+.vystup pre{white-space:pre-wrap;font:15px/1.55 var(--body);margin:0 0 16px;background:var(--orech2);border-radius:4px;padding:14px}
+.vystup .btn{color:#fff;border-color:#fff}
+.vystup .btn-j{color:var(--orech);border-color:var(--jantar)}
+.vystup small{display:block;color:#D9CDBF;margin-top:12px}
+.kroky{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:28px 0 0;padding:0;list-style:none}
+.kroky li{border-top:6px solid var(--jantar);background:var(--bila);padding:18px}
+.kroky .n{font:800 40px/1 var(--display);color:var(--jantar-tx)}
+.kroky h3{font-size:24px;margin:6px 0}
+.kroky p{margin:0;color:var(--sed);font-size:15px}
+.duv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.duv div{background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:18px}
+.duv b{display:block;font:800 28px/1 var(--display)}
+.duv span{font-size:15px;color:var(--sed)}
+.galerie{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin-top:22px}
+.foto{border:2px dashed #B9A88F;border-radius:4px;display:grid;place-items:center;min-height:190px;color:var(--sed);font-weight:600;text-align:center;padding:16px;background:repeating-linear-gradient(90deg,#EAE1D2 0 22px,#E3D8C6 22px 24px)}
+details{background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:16px 18px;margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.kontakt p{margin:0 0 12px}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hod td{padding:9px 0;border-bottom:1px solid var(--linka)}
+.hod td:last-child{text-align:right}
+.hod tr.dnes td{font-weight:700}
+footer{background:var(--orech);color:#D9CDBF;font-size:14px}
+footer .wrap{padding-block:28px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--orech);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista .btn{flex:1;color:#fff;border-color:#fff}
+.lista .btn-j{color:var(--orech);border-color:var(--jantar)}
+@media (max-width:900px){.sl{grid-template-columns:1fr 1fr}.kroky{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+  .hero .wrap,.konf,.kontakt,.duv,.galerie{grid-template-columns:1fr}
+  .hero .wrap{gap:12px;padding-block:8px 40px}
+  .zahrada{max-width:420px}
+  .sl,.kroky{grid-template-columns:1fr}
+  .toptel{display:none}
+  .lista{display:flex}
+  section{padding-block:44px}
+}
+@media (min-width:761px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){
+  .stav1{animation:vyrust .7s .1s both}.stav2{animation:vyrust .7s .5s both}.stav3{animation:vyrust .7s .9s both}
+  @keyframes vyrust{from{transform:translateY(14px);opacity:.25}to{transform:none;opacity:1}}
+}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Stolařství F&amp;F</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="4" fill="#3B2F2A"/><circle cx="17" cy="17" r="11" fill="none" stroke="#D98E04" stroke-width="2"/><circle cx="17" cy="17" r="6.5" fill="none" stroke="#D98E04" stroke-width="2"/><circle cx="17" cy="17" r="2" fill="#D98E04"/></svg><div>Stolařství F&amp;F<small>Šenov · Frýdecká 927</small></div></div>
+  <a class="toptel" href="tel:+420774859038">☎ 774 859 038</a>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Stolař v Šenově · zahrada · dům · nábytek</div>
+    <h1>Plot, pergola i skříň. <span>Ze dřeva, na míru.</span></h1>
+    <p>Vyrábíme ploty, pergoly, zahradní chatky, dveře, schody a nábytek z masivu i lamina. Podbijeme podhledy, zrestaurujeme starý nábytek a vyřežeme ozdobu.</p>
+    <div class="btns">
+      <a class="btn btn-o" href="tel:+420774859038">☎ Zavolat 774 859 038</a>
+      <a class="btn btn-j" href="#postavime">Poptat výrobu</a>
+    </div>
+    <div class="stav" id="stav"><i></i><span id="stavT">Po–Pá 8–18, So 8–14</span></div>
+  </div>
+  <div class="zahrada">
+    <svg viewBox="0 0 520 380" role="img" aria-label="Zahrada s dřevěným plotem, pergolou a zahradní chatkou">
+      <rect width="520" height="380" rx="6" fill="#EAE1D2"/>
+      <circle cx="430" cy="70" r="36" fill="#F2C04A" opacity=".8"/>
+      <path d="M0 300C120 280 260 290 520 270V380H0z" fill="#9DB58B"/>
+      <path d="M0 330C160 315 330 325 520 310V380H0z" fill="#5E7D4F"/>
+      <g class="stav3"><!-- chatka -->
+        <path d="M300 300V200l70-50 70 50v100z" fill="#8A5A3C"/>
+        <path d="M290 205l80-62 80 62" fill="none" stroke="#3B2F2A" stroke-width="10" stroke-linejoin="round"/>
+        <g stroke="#6F4A31" stroke-width="2">
+          <path d="M300 220h140M300 240h140M300 260h140M300 280h140"/></g>
+        <rect x="350" y="240" width="40" height="60" fill="#3B2F2A"/><circle cx="383" cy="272" r="2.5" fill="#D98E04"/>
+        <rect x="405" y="215" width="24" height="20" fill="#F4EFE6" stroke="#3B2F2A" stroke-width="3"/>
+      </g>
+      <g class="stav2"><!-- pergola -->
+        <path d="M150 300V190M260 300V190" stroke="#B0763F" stroke-width="10"/>
+        <path d="M135 190h140" stroke="#8A5A3C" stroke-width="12"/>
+        <g stroke="#B0763F" stroke-width="6"><path d="M150 180v10M175 180v10M200 180v10M225 180v10M250 180v10"/></g>
+        <path d="M140 178h130" stroke="#8A5A3C" stroke-width="5"/>
+        <rect x="170" y="260" width="70" height="8" fill="#3B2F2A"/><path d="M178 268v32M232 268v32" stroke="#3B2F2A" stroke-width="5"/>
+      </g>
+      <g class="stav1"><!-- plot -->
+        <path d="M0 296h520" stroke="#8A5A3C" stroke-width="7"/><path d="M0 318h520" stroke="#8A5A3C" stroke-width="7"/>
+        <g fill="#C08A55" stroke="#8A5A3C" stroke-width="2">
+          <path d="M8 340v-62l8-8 8 8v62z"/><path d="M38 340v-62l8-8 8 8v62z"/><path d="M68 340v-62l8-8 8 8v62z"/><path d="M98 340v-62l8-8 8 8v62z"/><path d="M128 340v-62l8-8 8 8v62z"/><path d="M158 340v-62l8-8 8 8v62z"/><path d="M188 340v-62l8-8 8 8v62z"/><path d="M218 340v-62l8-8 8 8v62z"/><path d="M248 340v-62l8-8 8 8v62z"/><path d="M278 340v-62l8-8 8 8v62z"/><path d="M308 340v-62l8-8 8 8v62z"/><path d="M338 340v-62l8-8 8 8v62z"/><path d="M368 340v-62l8-8 8 8v62z"/><path d="M398 340v-62l8-8 8 8v62z"/><path d="M428 340v-62l8-8 8 8v62z"/><path d="M458 340v-62l8-8 8 8v62z"/><path d="M488 340v-62l8-8 8 8v62z"/>
+        </g>
+      </g>
+      <text x="20" y="40" font-family="Rokkitt, Georgia, serif" font-weight="800" font-size="26" fill="#3B2F2A">Šenov</text>
+    </svg>
+  </div>
+</div></div>
+
+<section class="pas" id="sluzby"><div class="wrap">
+  <h2>Co vyrábíme</h2>
+  <p class="lead">Všechno ze dřeva od zahrady po obývák. Cenu Vám řekneme předem podle rozměrů a materiálu.<span class="demo">ukázkový text</span></p>
+  <div class="sl">
+    <div><span>Zahrada</span><h3>Ploty</h3><p>Dřevěné ploty na míru Vašemu pozemku.</p></div>
+    <div><span>Zahrada</span><h3>Pergoly</h3><p>Stín nad terasou nebo posezením.</p></div>
+    <div><span>Zahrada</span><h3>Zahradní chatky</h3><p>Dřevěná chatka do zahrady podle místa, které máte.</p></div>
+    <div><span>Dům</span><h3>Podbíjení podhledů</h3><p>Dřevěné podbití střechy a podhledů.</p></div>
+    <div><span>Dům</span><h3>Dveře a schody</h3><p>Dřevěné dveře a schodiště podle Vašeho domu.</p></div>
+    <div><span>Interiér</span><h3>Nábytek</h3><p>Nábytek z masivu i lamina podle Vašich rozměrů.</p></div>
+    <div><span>Řemeslo</span><h3>Restaurování</h3><p>Opravíme starý nábytek a vrátíme mu původní tvář.</p></div>
+    <div><span>Řemeslo</span><h3>Řezbářství</h3><p>Řezbářské práce, ozdoby a detaily ze dřeva.</p></div>
+  </div>
+</div></section>
+
+<section id="postavime"><div class="wrap">
+  <h2>Co Vám postavíme?</h2>
+  <p class="lead">Vyberte výrobek a zadejte přibližné rozměry. Složíme z toho poptávku, kterou pošlete SMS nebo e-mailem. Fotku místa nebo kusu nábytku pak pošlete na fajkosv@seznam.cz.</p>
+  <div class="konf">
+    <form class="karta" onsubmit="return false">
+      <label>Výrobek</label>
+      <div class="chips" id="vyr"></div>
+      <div id="rozmBox">
+        <label id="rozmL">Rozměry</label>
+        <div class="rozm">
+          <div><input type="number" id="a" min="0.5" max="200" step="0.5" value="12" aria-labelledby="aL"><small id="aL" style="color:var(--sed)">délka (m)</small></div>
+          <div><input type="number" id="b" min="0.5" max="50" step="0.1" value="1.6" aria-labelledby="bL"><small id="bL" style="color:var(--sed)">výška (m)</small></div>
+        </div>
+      </div>
+      <div class="nahled"><svg id="nahled" viewBox="0 0 400 130" role="img" aria-label="Náhled výrobku podle rozměrů"></svg></div>
+      <p class="vypocet" id="vypocet"></p>
+      <label for="mist">Kde (obec)</label>
+      <input type="text" id="mist" value="Šenov" autocomplete="off">
+      <label for="pozn">Poznámka</label>
+      <textarea id="pozn">Dřevo natřít na ořech, termín do jara.</textarea>
+    </form>
+    <div class="vystup">
+      <h3>Vaše poptávka</h3>
+      <pre id="txt"></pre>
+      <div class="btns">
+        <a class="btn btn-j" id="smsbtn" href="#">Poslat SMS na 774 859 038</a>
+        <a class="btn" id="mailbtn" href="#">Poslat e-mailem</a>
+        <button class="btn" type="button" id="kop">Zkopírovat</button>
+      </div>
+      <small>Telefon <b style="color:#fff;user-select:all">774 859 038</b> · e-mail <b style="color:#fff;user-select:all">fajkosv@seznam.cz</b></small>
+    </div>
+  </div>
+</div></section>
+
+<section style="background:var(--hoblina2)"><div class="wrap">
+  <h2>Jak probíhá zakázka</h2>
+  <ol class="kroky">
+    <li><div class="n">1</div><h3>Poptávka</h3><p>Zavoláte nebo pošlete poptávku s rozměry a fotkou.</p></li>
+    <li><div class="n">2</div><h3>Zaměření</h3><p>Přijedeme se podívat a domluvíme materiál i podobu.<span class="demo">ukázkový text</span></p></li>
+    <li><div class="n">3</div><h3>Cena a termín</h3><p>Cenu i termín víte předem, než začneme řezat.<span class="demo">ukázkový text</span></p></li>
+    <li><div class="n">4</div><h3>Výroba a montáž</h3><p>Vyrobíme v dílně v Šenově a postavíme u Vás.<span class="demo">ukázkový text</span></p></li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Proč F&amp;F</h2>
+  <div class="duv">
+    <div><b>8 řemesel</b><span>plot, pergola, chatka, podbití, dveře, schody, nábytek, řezba – jeden stolař</span></div>
+    <div><b>I v sobotu</b><span>dílna je otevřená Po–Pá 8–18 a v sobotu 8–14</span></div>
+    <div><b>IČO 44935455</b><span>Frýdecká 927, 739 34 Šenov</span></div>
+  </div>
+  <div class="galerie">
+    <div class="foto">Sem přijde Vaše fotka<br>hotové pergoly nebo plotu</div>
+    <div class="foto">Sem přijde Vaše fotka<br>nábytku</div>
+    <div class="foto">Sem přijde Vaše fotka<br>řezby</div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Časté otázky</h2>
+  <details open><summary>Uděláte i jeden kus nábytku?</summary><p>Ano, vyrábíme nábytek z masivu i lamina na míru. Pošlete rozměry a představu.</p></details>
+  <details><summary>Opravíte starý nábytek?</summary><p>Ano, zajišťujeme restaurování nábytku. Pošlete fotku a řekneme, co se s ním dá udělat.</p></details>
+  <details><summary>Kolik stojí plot nebo pergola?</summary><p>Záleží na délce, výšce a dřevu. Cenu řekneme po zaměření, ještě než začneme.<span class="demo">ukázkový text</span></p></details>
+  <details><summary>Jezdíte i mimo Šenov?</summary><p>Oblast, kam jezdíme, doplníme podle Vás.<span class="demo">ukázkový text</span></p></details>
+</div></section>
+
+<section style="background:var(--hoblina2)" id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kontakt</h2>
+    <p style="font-size:18px;margin-top:16px"><b>Stolařství F&amp;F</b> – Vladimír Fajkoš<br>Frýdecká 927, 739 34 Šenov</p>
+    <p>Tel.: <a href="tel:+420774859038"><b>774 859 038</b></a><br>E-mail: <a href="mailto:fajkosv@seznam.cz">fajkosv@seznam.cz</a></p>
+    <div class="btns">
+      <a class="btn btn-o" href="tel:+420774859038">☎ Zavolat</a>
+      <a class="btn" href="https://mapy.cz/zakladni?q=Fr%C3%BDdeck%C3%A1%20927%20%C5%A0enov" target="_blank" rel="noopener">Ukázat na Mapy.cz</a>
+    </div>
+  </div>
+  <div>
+    <table class="hod" id="hod"></table>
+    <p style="color:var(--sed);font-size:14px;margin-top:10px">Ve státní svátky se může otevírací doba lišit.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Stolařství F&amp;F · IČO 44935455 · Frýdecká 927, 739 34 Šenov · 774 859 038 · fajkosv@seznam.cz</div></footer>
+
+<div class="lista"><a class="btn" href="tel:+420774859038">☎ Zavolat</a><a class="btn btn-j" href="#postavime">Poptat</a></div>
+
+<script>
+(function(){
+  var DNYL=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  var DOBA={1:[8,18],2:[8,18],3:[8,18],4:[8,18],5:[8,18],6:[8,14]};
+  var SVATKY=["1-1","1-5","8-5","5-7","6-7","28-9","28-10","17-11","24-12","25-12","26-12"];
+  var n=new Date(),dw=n.getDay(),h=n.getHours()+n.getMinutes()/60,sv=SVATKY.indexOf(n.getDate()+"-"+(n.getMonth()+1))>=0;
+  var st=document.getElementById("stav"),stT=document.getElementById("stavT");
+  if(!sv&&DOBA[dw]&&h>=DOBA[dw][0]&&h<DOBA[dw][1]){st.classList.add("on");stT.textContent="Teď je dílna otevřená, do "+DOBA[dw][1]+":00"}
+  else if(sv){stT.textContent="Dnes je svátek – raději zavolejte"}
+  var rows="";[1,2,3,4,5,6,0].forEach(function(i){rows+='<tr'+(i===dw?' class="dnes"':'')+'><td>'+DNYL[i].charAt(0).toUpperCase()+DNYL[i].slice(1)+'</td><td>'+(DOBA[i]?DOBA[i][0]+":00–"+DOBA[i][1]+":00":"zavřeno")+'</td></tr>'});
+  document.getElementById("hod").innerHTML=rows;
+
+  var V={plot:{n:"Plot",a:["délka (m)",12],b:["výška (m)",1.6]},pergola:{n:"Pergola",a:["šířka (m)",4],b:["hloubka (m)",3]},
+    chatka:{n:"Zahradní chatka",a:["šířka (m)",3],b:["hloubka (m)",2.5]},podhled:{n:"Podbití podhledu",a:["délka (m)",10],b:["šířka (m)",0.6]},
+    dvere:{n:"Dveře",a:["šířka (cm)",80],b:["výška (cm)",197]},schody:{n:"Schody",a:["výška patra (cm)",280],b:["šířka (cm)",90]},
+    nabytek:{n:"Nábytek na míru",a:["šířka (cm)",180],b:["výška (cm)",220]},renovace:{n:"Restaurování nábytku",a:null},rezba:{n:"Řezbářská práce",a:null}};
+  var cur="plot",vy=document.getElementById("vyr"),A=document.getElementById("a"),B=document.getElementById("b");
+  Object.keys(V).forEach(function(k){var b=document.createElement("button");b.type="button";b.dataset.k=k;b.textContent=V[k].n;vy.appendChild(b)});
+  vy.addEventListener("click",function(e){if(e.target.tagName!=="BUTTON")return;cur=e.target.dataset.k;nast()});
+  function nast(){[].forEach.call(vy.children,function(b){b.setAttribute("aria-pressed",b.dataset.k===cur)});var v=V[cur];
+    document.getElementById("rozmBox").hidden=!v.a;if(v.a){document.getElementById("aL").textContent=v.a[0];document.getElementById("bL").textContent=v.b[0];A.value=v.a[1];B.value=v.b[1]}upd()}
+  function num(x){return Math.max(0,parseFloat(String(x).replace(",","."))||0)}
+  function f(x){return (Math.round(x*10)/10).toString().replace(".",",")}
+  function kresli(){var s=document.getElementById("nahled"),a=num(A.value),b=num(B.value),g='<rect width="400" height="130" fill="#EAE1D2"/>',info="";
+    if(cur==="plot"){var pole=Math.max(1,Math.ceil(a/2)),w=Math.min(36,360/pole),hh=Math.min(100,30+b*35);
+      for(var i=0;i<pole&&i<60;i++){var x=20+i*w;g+='<rect x="'+x+'" y="'+(118-hh)+'" width="'+Math.max(2,w-3)+'" height="'+hh+'" fill="#C08A55" stroke="#8A5A3C"/>'}
+      g+='<path d="M20 '+(118-hh*0.3)+'H'+(20+Math.min(pole,60)*w)+'M20 '+(118-hh*0.75)+'H'+(20+Math.min(pole,60)*w)+'" stroke="#8A5A3C" stroke-width="3"/>';
+      info=pole+" polí po 2 m · "+f(a*b)+" m² plotu";}
+    else if(cur==="pergola"||cur==="chatka"){var W=Math.min(320,a*45),D=Math.min(80,b*22);
+      g+='<path d="M'+(200-W/2)+' 110 h'+W+' l'+D/2+' -'+D/1.6+' h-'+W+'z" fill="'+(cur==="chatka"?"#8A5A3C":"#D6B48C")+'" stroke="#3B2F2A" stroke-width="2"/>';
+      if(cur==="pergola")for(var j=0;j<=6;j++){var xx=200-W/2+j*W/6;g+='<path d="M'+xx+' 110 l'+D/2+' -'+D/1.6+'" stroke="#8A5A3C" stroke-width="3"/>'}
+      info=f(a*b)+" m² "+(cur==="chatka"?"zastavěné plochy":"pod pergolou");}
+    else if(V[cur].a){var r=b?a/b:1,Hh=100,Ww=Math.min(340,Hh*r);g+='<rect x="'+(200-Ww/2)+'" y="15" width="'+Ww+'" height="'+Hh+'" fill="#C08A55" stroke="#3B2F2A" stroke-width="3"/>';
+      if(cur==="schody"){var st=Math.max(1,Math.round(a/18));g+='<text x="200" y="72" text-anchor="middle" font-family="Public Sans,sans-serif" font-weight="700" font-size="16" fill="#3B2F2A">cca '+st+' schodů po 18 cm</text>';info="Orientačně "+st+" stupňů (výška stupně kolem 18 cm)";}
+      else info=f(a)+" × "+f(b)+" cm";}
+    else{g+='<text x="200" y="72" text-anchor="middle" font-family="Rokkitt,Georgia,serif" font-weight="800" font-size="22" fill="#3B2F2A">Pošlete nám fotku kusu</text>';info="Rozměry nejsou potřeba – stačí fotka";}
+    s.innerHTML=g;document.getElementById("vypocet").textContent=info;return info}
+  function upd(){var info=kresli(),v=V[cur];
+    var t="Dobrý den, poptávám: "+v.n.toLowerCase()+".";
+    if(v.a)t+="\nRozměry: "+v.a[0].replace(/ \(.*/,"")+" "+f(num(A.value))+" "+v.a[0].match(/\((.*)\)/)[1]+", "+v.b[0].replace(/ \(.*/,"")+" "+f(num(B.value))+" "+v.b[0].match(/\((.*)\)/)[1]+" ("+info+")";
+    t+="\nKde: "+document.getElementById("mist").value;
+    var p=document.getElementById("pozn").value.trim();if(p)t+="\nPoznámka: "+p;
+    t+="\nProsím o ozvání a cenu. Děkuji.";
+    document.getElementById("txt").textContent=t;
+    document.getElementById("smsbtn").href="sms:+420774859038?body="+encodeURIComponent(t);
+    document.getElementById("mailbtn").href="mailto:fajkosv@seznam.cz?subject="+encodeURIComponent("Poptávka: "+v.n)+"&body="+encodeURIComponent(t);}
+  [A,B,document.getElementById("mist"),document.getElementById("pozn")].forEach(function(el){el.addEventListener("input",upd)});
+  document.getElementById("kop").addEventListener("click",function(){var t=document.getElementById("txt").textContent,b=this;
+    function sela(){var r=document.createRange();r.selectNodeContents(document.getElementById("txt"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Text je označený"}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent="Zkopírováno"},sela)}catch(e){sela()}});
+  nast();
+})();
+</script>
+</body>
+</html>

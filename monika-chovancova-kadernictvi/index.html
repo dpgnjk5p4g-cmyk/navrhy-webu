@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Monika Chovancová – kadeřnictví</title>
+<meta name="description" content="Kadeřnictví Monika Chovancová, Beskydská 236, Frýdek-Místek: dámské i pánské kadeřnictví, v úterý a ve čtvrtek do 19:00. Objednání na tel. 774 717 472.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Manrope:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Monika Chovancová – kadeřnictví","telephone":"+420774717472","email":"monikachovancova@centrum.cz","address":{"@type":"PostalAddress","streetAddress":"Beskydská 236","addressLocality":"Frýdek-Místek","postalCode":"738 01","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Thursday"],"opens":"13:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Friday"],"opens":"08:00","closes":"15:00"}]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: oblouk (klenuté okno salonu) vedle nadpisu; týdenní rozvrh jako hlavní nástroj „Stihnu to po práci?“ */
+:root{
+  --ink:#233D4D; --ink2:#2F5063; --med:#E8B04B; --med-tx:#8A5F12;
+  --mydlo:#FAF6F1; --pisek:#F1E7DA; --cihla:#9E4A3A; --sed:#5A6670; --linka:#E2D8CB; --bila:#FFFFFF;
+  --display:"Bodoni Moda",Georgia,"Times New Roman",serif; --body:"Manrope",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--mydlo);color:var(--ink);font:16px/1.6 var(--body);padding-bottom:78px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,5vw,48px)}
+h2 em,h1 em{font-style:italic;font-weight:500;color:var(--cihla)}
+a{color:inherit}
+.demo{display:inline-block;font:700 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#151515;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.logo{font:700 22px/1.05 var(--display)}
+.logo small{display:block;font:600 11px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--sed);margin-top:4px}
+.toptel{font-weight:700;text-decoration:none;white-space:nowrap;border:1.5px solid var(--ink);border-radius:99px;padding:8px 14px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:24px 56px}
+.eyebrow{font:700 12px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--med-tx)}
+.hero h1{font-size:clamp(40px,7.4vw,74px);margin:12px 0 16px}
+.hero p{margin:0 0 22px;color:var(--sed);max-width:44ch;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 16px/1 var(--body);text-decoration:none;border-radius:99px;padding:15px 20px;border:2px solid var(--ink);cursor:pointer;background:transparent;color:var(--ink)}
+.btn-p{background:var(--ink);color:#fff}
+.btn-m{background:var(--med);border-color:var(--med);color:var(--ink)}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--cihla);outline-offset:2px}
+.dnesk{display:flex;gap:12px;align-items:center;margin-top:22px;padding:14px 16px;background:var(--bila);border:1px solid var(--linka);border-radius:14px;max-width:440px}
+.dnesk b{font:700 26px/1 var(--display);white-space:nowrap}
+.dnesk span{font-size:14px;color:var(--sed)}
+.oblouk{justify-self:center;width:100%;max-width:380px}
+.oblouk svg{width:100%;height:auto;display:block}
+section{padding-block:60px}
+.lead{max-width:60ch;color:var(--sed);margin:12px 0 0}
+.sl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.sl article{background:var(--bila);border:1px solid var(--linka);border-radius:16px;padding:22px;min-width:0}
+.sl h3{font-size:24px;margin:12px 0 6px}
+.sl p{margin:0;color:var(--sed);font-size:15px}
+.tyden{background:var(--ink);color:#fff}
+.tyden .lead{color:#C9D6DE}
+.tyden h2 em{color:var(--med)}
+.planer{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;margin-top:28px;align-items:start}
+.panel{background:var(--ink2);border-radius:18px;padding:22px;min-width:0}
+.panel label{display:block;font:700 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#C9D6DE;margin-bottom:10px}
+.rng{display:flex;align-items:center;gap:14px}
+.rng input{flex:1;accent-color:var(--med)}
+.rng output{font:700 30px/1 var(--display);color:var(--med);min-width:84px;text-align:right;font-variant-numeric:tabular-nums}
+.dny{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:20px}
+.den{border-radius:12px;padding:10px 6px;text-align:center;background:#284556;border:1.5px solid transparent;min-width:0}
+.den b{display:block;font:700 18px/1 var(--display)}
+.den small{display:block;font-size:11.5px;line-height:1.3;color:#C9D6DE;margin-top:6px}
+.den .bar{height:54px;margin-top:8px;border-radius:6px;background:#203A49;position:relative;overflow:hidden}
+.den .bar i{position:absolute;left:0;right:0;background:#6E8796;border-radius:4px}
+.den.ok{border-color:var(--med);background:#30505F}
+.den.ok .bar i{background:var(--med)}
+.den.tel .bar{background:repeating-linear-gradient(45deg,#203A49 0 6px,#284556 6px 12px)}
+.verdikt{margin:18px 0 0;font-size:16px}
+.verdikt b{color:var(--med)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 14px var(--body);border:1.5px solid #5E7A8A;background:transparent;border-radius:99px;padding:9px 13px;cursor:pointer;color:#fff}
+.chips button[aria-pressed="true"]{background:var(--med);color:var(--ink);border-color:var(--med)}
+.panel select,.panel input[type=text]{width:100%;font:500 16px var(--body);padding:11px 12px;border:1.5px solid #5E7A8A;border-radius:10px;background:#fff;color:var(--ink)}
+.vystup pre{white-space:pre-wrap;font:15px/1.55 var(--body);margin:0 0 16px;color:#fff;background:#1B3242;border-radius:12px;padding:16px}
+.vystup .btn{border-color:#fff;color:#fff}
+.vystup .btn-m{color:var(--ink);border-color:var(--med)}
+.fld{margin-top:16px}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:16px}
+.hod td{padding:10px 0;border-bottom:1px solid var(--linka)}
+.hod td:last-child{text-align:right}
+.hod tr.dnes td{font-weight:700}
+.hod .tl{color:var(--cihla);font-weight:600}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0 0;padding:0;list-style:none}
+.kroky li{background:var(--bila);border-radius:16px;padding:22px;border:1px solid var(--linka)}
+.kroky .n{font:italic 500 44px/1 var(--display);color:var(--cihla)}
+.kroky h3{font-size:22px;margin:8px 0 6px}
+.kroky p{margin:0;color:var(--sed);font-size:15px}
+.duv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.duv div{border-top:2px solid var(--ink);padding-top:14px}
+.duv b{display:block;font:700 22px/1.15 var(--display)}
+.duv span{font-size:15px;color:var(--sed)}
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.foto{border:2px dashed #C5B8A6;border-radius:120px 120px 16px 16px;display:grid;place-items:center;min-height:220px;color:var(--sed);font-weight:600;text-align:center;padding:16px;background:var(--pisek)}
+details{background:var(--bila);border:1px solid var(--linka);border-radius:14px;padding:16px 18px;margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.kontakt p{margin:0 0 12px}
+.mapa{background:var(--pisek);border-radius:18px;padding:22px;min-width:0}
+.mapa svg{width:100%;height:auto;display:block}
+footer{background:var(--ink);color:#C9D6DE;font-size:14px}
+footer .wrap{padding-block:28px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--ink);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista .btn{flex:1;border-color:#fff;color:#fff}
+.lista .btn-m{color:var(--ink);border-color:var(--med)}
+@media (max-width:900px){
+  .sl{grid-template-columns:1fr 1fr}
+  .planer,.kontakt{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;gap:20px;padding-block:12px 40px}
+  .oblouk{max-width:220px;justify-self:center}
+  .kroky,.duv,.galerie{grid-template-columns:1fr}
+  .sl{grid-template-columns:1fr}
+  .dny{grid-template-columns:repeat(3,1fr)}
+  .toptel{display:none}
+  .lista{display:flex}
+  section{padding-block:44px}
+}
+@media (min-width:761px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){.vlna{animation:vlna 5s ease-in-out infinite;transform-origin:50% 0}@keyframes vlna{0%,100%{transform:skewX(0)}50%{transform:skewX(-3deg)}}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Monika Chovancová – kadeřnictví</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Monika Chovancová<small>Kadeřnictví · Místek</small></div>
+  <a class="toptel" href="tel:+420774717472">☎ 774 717 472</a>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Dámské i pánské kadeřnictví · Beskydská 236, Místek</div>
+    <h1>Ke kadeřnici <em>po práci.</em> V úterý i ve čtvrtek do 19:00.</h1>
+    <p>Střih, foukaná i trvalá v Místku. Odpoledne do sedmi, ve středu a v pátek už od osmi ráno. A když se nehodí ani jedno, domluvíme pondělí nebo sobotu po telefonu.</p>
+    <div class="btns">
+      <a class="btn btn-p" href="tel:+420774717472">☎ Zavolat 774 717 472</a>
+      <a class="btn btn-m" href="#tyden">Objednat se</a>
+    </div>
+    <div class="dnesk"><b id="dnesH">Út 13–19</b><span id="dnesT">Dnes mám otevřeno</span></div>
+  </div>
+  <div class="oblouk">
+    <svg viewBox="0 0 380 460" role="img" aria-label="Klenuté okno salonu s křeslem a nůžkami">
+      <defs><clipPath id="ok"><path d="M30 450V190a160 160 0 0 1 320 0v260z"/></clipPath></defs>
+      <path d="M20 456V190a170 170 0 0 1 340 0v266z" fill="#233D4D"/>
+      <g clip-path="url(#ok)">
+        <rect x="0" y="0" width="380" height="460" fill="#F1E7DA"/>
+        <circle cx="270" cy="150" r="70" fill="#E8B04B" opacity=".9"/>
+        <rect x="0" y="330" width="380" height="130" fill="#E2D8CB"/>
+        <g class="vlna"><path d="M120 120c40-30 110-20 120 40 6 40-10 80-20 120" fill="none" stroke="#9E4A3A" stroke-width="10" stroke-linecap="round"/>
+        <path d="M150 110c35-10 80 10 85 60 4 34-6 66-12 96" fill="none" stroke="#C26A56" stroke-width="6" stroke-linecap="round"/></g>
+        <path d="M120 300h150v40H120z" fill="#233D4D"/>
+        <path d="M110 260h170a10 10 0 0 1 10 10v40H100v-40a10 10 0 0 1 10-10z" fill="#2F5063"/>
+        <path d="M190 340v60M150 410h80" stroke="#233D4D" stroke-width="10" stroke-linecap="round"/>
+        <g transform="translate(70 200) rotate(-25)"><circle cx="0" cy="0" r="12" fill="none" stroke="#233D4D" stroke-width="5"/><circle cx="0" cy="34" r="12" fill="none" stroke="#233D4D" stroke-width="5"/><path d="M10 6l60 30M10 28L70 -2" stroke="#233D4D" stroke-width="5" stroke-linecap="round"/></g>
+      </g>
+      <path d="M30 450V190a160 160 0 0 1 320 0v260" fill="none" stroke="#E8B04B" stroke-width="3"/>
+      <text x="190" y="80" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-style="italic" font-size="22" fill="#233D4D">Místek</text>
+    </svg>
+  </div>
+</div></div>
+
+<section id="sluzby" style="background:var(--pisek)"><div class="wrap">
+  <h2>Co pro Vás <em>udělám</em></h2>
+  <p class="lead">Dámské i pánské kadeřnictví v jednom křesle. Cenu Vám řeknu předem, ještě než začneme.<span class="demo">ukázkový text</span></p>
+  <div class="sl">
+    <article>
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#233D4D"/><path d="M12 13c6-5 16-3 16 6 0 5-2 8-3 11M16 12c4 3 6 8 5 18" stroke="#E8B04B" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      <h3>Dámský střih a foukaná</h3>
+      <p>Krátké, polodlouhé i dlouhé vlasy. Poradím, co Vám půjde k obličeji i do rána.</p>
+    </article>
+    <article>
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#9E4A3A"/><path d="M11 17c3-5 15-6 18 0v3H11z" fill="#FAF6F1"/><path d="M13 24h14" stroke="#FAF6F1" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <h3>Pánský střih</h3>
+      <p>Klasika i kratší střih strojkem. Pánové se objednají stejně snadno jako dámy.</p>
+    </article>
+    <article>
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#233D4D"/><path d="M12 12c4 0 4 4 8 4s4-4 8-4M12 20c4 0 4 4 8 4s4-4 8-4M12 28c4 0 4 4 8 4s4-4 8-4" stroke="#E8B04B" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      <h3>Objemová trvalá</h3>
+      <p>Vlasy s objemem, který vydrží celé týdny, a ráno méně práce s foukáním.</p>
+    </article>
+    <article>
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E8B04B"/><path d="M14 28l12-16M24 10l4 3-2 3-4-3z" stroke="#233D4D" stroke-width="2.4" fill="none" stroke-linejoin="round"/></svg>
+      <h3>Barvení<span class="demo">ukázkový text</span></h3>
+      <p>Oživení barvy nebo zakrytí šedin. Odstín vybereme spolu podle Vašich vlasů.</p>
+    </article>
+  </div>
+</div></section>
+
+<section class="tyden" id="tyden"><div class="wrap">
+  <h2>Stihnu to <em>po práci?</em></h2>
+  <p class="lead">Posuňte, kdy končíte v práci. Ukážu Vám, které dny ke mně ještě dojdete, a složím zprávu, kterou mi pošlete jako SMS. Termín Vám pak potvrdím.</p>
+  <div class="planer">
+    <div class="panel">
+      <label for="konec">V práci končím v</label>
+      <div class="rng"><input type="range" id="konec" min="6" max="18" step="0.5" value="15.5" aria-describedby="konecV"><output id="konecV">15:30</output></div>
+      <div class="dny" id="dny"></div>
+      <p class="verdikt" id="verdikt"></p>
+    </div>
+    <div class="panel vystup">
+      <label>Co si přejete</label>
+      <div class="chips" id="co">
+        <button type="button" aria-pressed="true">Dámský střih</button>
+        <button type="button" aria-pressed="false">Pánský střih</button>
+        <button type="button" aria-pressed="false">Trvalá</button>
+        <button type="button" aria-pressed="false">Barvení</button>
+      </div>
+      <div class="fld"><label for="den">Den</label><select id="den"></select></div>
+      <div class="fld"><pre id="sms"></pre></div>
+      <div class="btns">
+        <a class="btn btn-m" id="smsbtn" href="#">Poslat SMS na 774 717 472</a>
+        <button class="btn" type="button" id="kop">Zkopírovat</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap kontakt">
+  <div>
+    <h2>Otevírací <em>doba</em></h2>
+    <p class="lead" style="margin-bottom:16px">Pondělí a sobotu domlouvám podle telefonických objednávek.</p>
+    <table class="hod" id="hod"></table>
+  </div>
+  <div>
+    <h2>Jak to <em>probíhá</em></h2>
+    <ol class="kroky" style="grid-template-columns:1fr">
+      <li><div class="n">1</div><h3>Ozvete se</h3><p>Zavoláte nebo pošlete SMS z rozvrhu výše. Řeknete, co chcete udělat.</p></li>
+      <li><div class="n">2</div><h3>Domluvíme čas</h3><p>Odpoledne do 19:00, dopoledne od 8:00, nebo pondělí či sobota na objednávku.</p></li>
+      <li><div class="n">3</div><h3>Přijdete do křesla</h3><p>Probereme, co Vám sluší, a cenu, ještě než začnu.</p></li>
+    </ol>
+  </div>
+</div></section>
+
+<section style="background:var(--pisek)"><div class="wrap">
+  <h2>Proč <em>ke mně</em></h2>
+  <div class="duv">
+    <div><b>Do 19:00</b><span>v úterý a ve čtvrtek, takže to stihnete i po práci</span></div>
+    <div><b>Dámy i pánové</b><span>celá rodina u jedné kadeřnice v Místku</span></div>
+    <div><b>IČO 74764900</b><span>živnostnice, Beskydská 236, Frýdek-Místek</span></div>
+  </div>
+  <div class="galerie">
+    <div class="foto">Sem přijde Vaše fotka<br>účesu</div>
+    <div class="foto">Sem přijde Vaše fotka<br>salonu</div>
+    <div class="foto">Sem přijde Vaše fotka<br>Vás při práci</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Časté <em>otázky</em></h2>
+  <details open><summary>Musím se objednat předem?</summary><p>Ano, nejlépe telefonem nebo SMS na 774 717 472. Termín Vám potvrdím.</p></details>
+  <details><summary>Dá se přijít v pondělí nebo v sobotu?</summary><p>Ano, tyto dny domlouvám podle telefonických objednávek. Zavolejte a najdeme čas.</p></details>
+  <details><summary>Kolik stojí střih?</summary><p>Cenu Vám řeknu předem podle délky vlasů a toho, co budeme dělat.<span class="demo">ukázkový text</span></p></details>
+  <details><summary>Stříháte i pány?</summary><p>Ano, jsem dámské i pánské kadeřnictví.</p></details>
+</div></section>
+
+<section style="background:var(--pisek)" id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kde mě <em>najdete</em></h2>
+    <p style="font-size:18px;margin-top:16px"><b>Monika Chovancová – kadeřnictví</b><br>Beskydská 236, 738 01 Frýdek-Místek – Místek</p>
+    <p>Tel.: <a href="tel:+420774717472"><b>774 717 472</b></a> <span style="user-select:all;color:var(--sed)">(+420 774 717 472)</span><br>E-mail: <a href="mailto:monikachovancova@centrum.cz">monikachovancova@centrum.cz</a></p>
+    <div class="btns">
+      <a class="btn btn-p" href="https://mapy.cz/zakladni?q=Beskydsk%C3%A1%20236%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Ukázat na Mapy.cz</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Beskydsk%C3%A1%20236%2C%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Google Mapy</a>
+    </div>
+    <p style="margin-top:16px;color:var(--sed)">Kde zaparkovat a kudy vejít, doplníme podle Vás.<span class="demo">ukázkový text</span></p>
+  </div>
+  <div class="mapa">
+    <svg viewBox="0 0 400 260" role="img" aria-label="Schematická poloha salonu v Místku">
+      <rect width="400" height="260" rx="14" fill="#FAF6F1"/>
+      <path d="M-10 180C80 150 140 210 220 170S360 120 410 140" stroke="#BFD3DE" stroke-width="18" fill="none"/>
+      <text x="300" y="118" font-family="Manrope, sans-serif" font-size="12" fill="#5A6670">Ostravice</text>
+      <path d="M60 -10L170 270" stroke="#E2D8CB" stroke-width="14"/>
+      <path d="M0 70H400" stroke="#E2D8CB" stroke-width="12"/>
+      <text x="16" y="60" font-family="Manrope, sans-serif" font-size="12" font-weight="700" fill="#233D4D">Beskydská</text>
+      <circle cx="210" cy="70" r="16" fill="#9E4A3A"/><circle cx="210" cy="70" r="6" fill="#FAF6F1"/>
+      <text x="232" y="66" font-family="Bodoni Moda, Georgia, serif" font-size="16" font-weight="700" fill="#233D4D">č. p. 236</text>
+      <text x="16" y="244" font-family="Manrope, sans-serif" font-size="11" fill="#5A6670">Schéma pro orientaci, přesná poloha v odkazu na mapu</text>
+    </svg>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Monika Chovancová – kadeřnictví · IČO 74764900 · Beskydská 236, 738 01 Frýdek-Místek · 774 717 472</div></footer>
+
+<div class="lista"><a class="btn" href="tel:+420774717472">☎ Zavolat</a><a class="btn btn-m" href="#tyden">Objednat se</a></div>
+
+<script>
+(function(){
+  var DNYL=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"],DNYK=["Ne","Po","Út","St","Čt","Pá","So"];
+  // ověřená doba z Firmy.cz: Út, Čt 13–19; St, Pá 8–15; Po a So dle telefonických objednávek
+  var DOBA={2:[13,19],3:[8,15],4:[13,19],5:[8,15]},TEL=[1,6];
+  var SVATKY=["1-1","1-5","8-5","5-7","6-7","28-9","28-10","17-11","24-12","25-12","26-12"];
+  function svatek(d){return SVATKY.indexOf(d.getDate()+"-"+(d.getMonth()+1))>=0}
+  function hm(h){var m=Math.round((h%1)*60);return Math.floor(h)+":"+(m<10?"0":"")+m}
+  var n=new Date(),dw=n.getDay(),hh=n.getHours()+n.getMinutes()/60;
+  var dH=document.getElementById("dnesH"),dT=document.getElementById("dnesT");
+  if(DOBA[dw]&&!svatek(n)){dH.textContent=DNYK[dw]+" "+DOBA[dw][0]+"–"+DOBA[dw][1];dT.textContent=(hh>=DOBA[dw][0]&&hh<DOBA[dw][1])?"Teď mám otevřeno, zavolejte":"Dnes otevírací doba";}
+  else if(TEL.indexOf(dw)>=0){dH.textContent=DNYK[dw];dT.textContent="Dnes jen na telefonickou objednávku";}
+  else{dH.textContent="Út a Čt";dT.textContent="otevřeno 13:00–19:00, St a Pá 8:00–15:00";}
+  // tabulka
+  var rows="";[1,2,3,4,5,6,0].forEach(function(i){var t=DOBA[i]?DOBA[i][0]+":00–"+DOBA[i][1]+":00":(TEL.indexOf(i)>=0?"na telefonickou objednávku":"zavřeno");
+    rows+='<tr'+(i===dw?' class="dnes"':'')+'><td>'+DNYL[i].charAt(0).toUpperCase()+DNYL[i].slice(1)+'</td><td'+(TEL.indexOf(i)>=0?' class="tl"':'')+'>'+t+'</td></tr>'});
+  document.getElementById("hod").innerHTML=rows;
+  // rozvrh
+  var rng=document.getElementById("konec"),out=document.getElementById("konecV"),dny=document.getElementById("dny"),ver=document.getElementById("verdikt");
+  var ORD=[1,2,3,4,5,6];
+  function kresli(){
+    var k=parseFloat(rng.value),cesta=0.5,ok=[];out.textContent=hm(k);dny.innerHTML="";
+    ORD.forEach(function(i){var el=document.createElement("div");el.className="den";var bar='<div class="bar">';
+      if(DOBA[i]){var a=DOBA[i][0],b=DOBA[i][1];bar+='<i style="top:'+((a-7)/13*100)+'%;bottom:'+(100-(b-7)/13*100)+'%"></i>';
+        var lze=b-(k+cesta)>=1;if(lze){el.classList.add("ok");ok.push(i)}
+        el.innerHTML='<b>'+DNYK[i]+'</b><small>'+a+'–'+b+'</small>'+bar+'</div>';}
+      else{el.classList.add("tel");el.innerHTML='<b>'+DNYK[i]+'</b><small>na telefon</small>'+bar+'</div>';}
+      dny.appendChild(el)});
+    ver.innerHTML=ok.length?'Po práci ke mně stihnete: <b>'+ok.map(function(i){return DNYL[i]}).join(", ")+'</b>.':'Ve všední dny to po '+hm(k)+' nestihnete. <b>Zavolejte, domluvíme pondělí nebo sobotu.</b>';
+    var sel=document.getElementById("den"),c=0,d=new Date();d.setHours(12);sel.innerHTML="";
+    for(var j=1;j<40&&c<8;j++){var x=new Date(d.getTime()+j*864e5),w=x.getDay();if(svatek(x))continue;
+      if(ok.indexOf(w)>=0||(!ok.length&&TEL.indexOf(w)>=0)){var o=document.createElement("option");o.textContent=DNYL[w]+" "+x.getDate()+". "+(x.getMonth()+1)+".";sel.appendChild(o);c++}}
+    upd();
+  }
+  function val(){var b=document.querySelector("#co [aria-pressed=true]");return b?b.textContent:""}
+  function upd(){
+    var sel=document.getElementById("den"),k=parseFloat(rng.value);
+    var t="Dobrý den, chtěl/a bych se objednat: "+val().toLowerCase()+".\nDen: "+(sel.value||"podle domluvy")+"\nV práci končím v "+hm(k)+", přijdu co nejdřív po ní.\nDěkuji za potvrzení termínu.";
+    document.getElementById("sms").textContent=t;
+    document.getElementById("smsbtn").href="sms:+420774717472?body="+encodeURIComponent(t);
+  }
+  document.getElementById("co").addEventListener("click",function(e){if(e.target.tagName!=="BUTTON")return;[].forEach.call(this.children,function(b){b.setAttribute("aria-pressed",b===e.target)});upd()});
+  rng.addEventListener("input",kresli);document.getElementById("den").addEventListener("change",upd);
+  document.getElementById("kop").addEventListener("click",function(){var t=document.getElementById("sms").textContent,b=this;
+    function sela(){var r=document.createRange();r.selectNodeContents(document.getElementById("sms"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Text je označený"}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent="Zkopírováno"},sela)}catch(e){sela()}});
+  kresli();
+})();
+</script>
+</body>
+</html>

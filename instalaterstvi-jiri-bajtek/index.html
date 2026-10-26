@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Instalatérství Jiří Bajtek</title>
+<meta name="description" content="Instalatér, topenář a plynař v Karviné – Jiří Bajtek: servis kondenzačních kotlů Immergas, strojní čištění kanalizace s kamerou, čištění podlahového topení. Tel. 725 717 804.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600&family=Lexend:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Plumber","name":"Instalatérství Jiří Bajtek","telephone":"+420725717804","email":"bajtek.jiri@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Urxova 1525/18","addressLocality":"Karviná","postalCode":"735 06","addressCountry":"CZ"},"taxID":"08416184"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: ilustrace nahoře (řez domem s trubkami), text pod ní; řez je zároveň výběr služby a poptávka */
+:root{
+  --voda:#0F3B5F; --voda2:#174C77; --med:#F28C28; --med-tx:#A9530B;
+  --svetla:#EEF4F7; --bila:#FFFFFF; --grafit:#1B1F24; --sed:#55626E; --linka:#D3DEE5;
+  --display:"Teko","Arial Narrow",sans-serif; --body:"Lexend",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--svetla);color:var(--grafit);font:16px/1.6 var(--body);padding-bottom:78px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:.95;text-wrap:balance;margin:0;letter-spacing:.01em}
+h2{font-size:clamp(40px,6vw,60px);color:var(--voda)}
+a{color:inherit}
+.demo{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#111;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top{background:var(--voda);color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:600 28px/1 var(--display);letter-spacing:.02em}
+.logo small{display:block;font:400 12px/1.3 var(--body);color:#BFD2E2;letter-spacing:.03em}
+.toptel{font-weight:600;text-decoration:none;white-space:nowrap;background:var(--med);color:var(--grafit);border-radius:6px;padding:9px 14px}
+.hero{background:var(--voda);color:#fff;padding-bottom:44px}
+.rez{max-width:1120px;margin:0 auto;padding:8px max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
+.rez svg{width:100%;height:auto;display:block;max-height:340px}
+.hero h1{font-size:clamp(46px,8vw,92px);margin:18px 0 10px}
+.hero h1 span{color:var(--med)}
+.hero p{margin:0 0 20px;color:#D5E3EE;max-width:58ch;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 16px/1 var(--body);text-decoration:none;border-radius:8px;padding:15px 18px;border:2px solid currentColor;cursor:pointer;background:transparent;color:inherit}
+.btn-o{background:var(--med);border-color:var(--med);color:var(--grafit)}
+.btn-v{background:var(--voda);border-color:var(--voda);color:#fff}
+.btn:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #FFC37D;outline-offset:2px}
+.fakta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-size:14px;color:#BFD2E2}
+.fakta b{color:#fff;font-weight:600}
+section{padding-block:60px}
+.lead{max-width:62ch;color:var(--sed);margin:12px 0 0}
+.sl{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:28px}
+.sl button{all:unset;box-sizing:border-box;cursor:pointer;background:var(--bila);border:2px solid var(--linka);border-radius:12px;padding:18px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.sl button:focus-visible{outline:3px solid var(--med);outline-offset:2px}
+.sl button[aria-pressed="true"]{border-color:var(--voda);box-shadow:inset 0 -5px 0 var(--med)}
+.sl h3{font-size:28px;color:var(--voda)}
+.sl p{margin:0;color:var(--sed);font-size:14.5px}
+.sl .ico{width:42px;height:42px}
+.popt{background:var(--bila)}
+.pbox{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:26px;align-items:start}
+.pform label{display:block;font:600 13px/1.2 var(--body);letter-spacing:.04em;text-transform:uppercase;color:var(--voda);margin:16px 0 8px}
+.pform label:first-child{margin-top:0}
+.pform input,.pform textarea{width:100%;font:400 16px var(--body);padding:12px;border:1.5px solid var(--linka);border-radius:8px;background:var(--svetla);color:var(--grafit)}
+.pform textarea{min-height:90px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:500 14px var(--body);border:1.5px solid var(--linka);background:var(--bila);border-radius:99px;padding:9px 13px;cursor:pointer;color:var(--grafit)}
+.chips button[aria-pressed="true"]{background:var(--voda);color:#fff;border-color:var(--voda)}
+.vystup{background:var(--voda);color:#fff;border-radius:14px;padding:22px;min-width:0}
+.vystup h3{font-size:30px;margin-bottom:10px}
+.vystup pre{white-space:pre-wrap;font:15px/1.55 var(--body);margin:0 0 16px;background:var(--voda2);border-radius:10px;padding:14px}
+.vystup small{display:block;color:#BFD2E2;margin-top:12px}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0 0;padding:0;list-style:none}
+.kroky li{background:var(--bila);border-radius:12px;padding:22px;border-left:6px solid var(--med)}
+.kroky .n{font:600 52px/.8 var(--display);color:var(--med-tx)}
+.kroky h3{font-size:28px;margin:8px 0 6px;color:var(--voda)}
+.kroky p{margin:0;color:var(--sed);font-size:15px}
+.duv{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.duv div{background:var(--bila);border:1px solid var(--linka);border-radius:12px;padding:18px}
+.duv b{display:block;font:600 30px/1 var(--display);color:var(--voda)}
+.duv span{font-size:14.5px;color:var(--sed)}
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.foto{border:2px dashed #9FB4C4;border-radius:12px;display:grid;place-items:center;min-height:170px;color:var(--sed);font-weight:500;text-align:center;padding:16px;background:repeating-linear-gradient(-45deg,#E4EDF2 0 12px,#EEF4F7 12px 24px)}
+details{background:var(--bila);border:1px solid var(--linka);border-radius:12px;padding:16px 18px;margin-top:10px}
+summary{font-weight:600;cursor:pointer}
+details p{margin:10px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.kontakt p{margin:0 0 12px}
+footer{background:var(--grafit);color:#B8C3CC;font-size:14px}
+footer .wrap{padding-block:28px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--voda);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));color:#fff}
+.lista .btn{flex:1}
+.hot{cursor:pointer}
+.hot circle.pulz{fill:#F28C28}
+.hot.on circle.pulz{fill:#fff}
+.hot text{font:600 15px Lexend,sans-serif;fill:#fff}
+@media (max-width:980px){.sl{grid-template-columns:1fr 1fr}.duv{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+  .pbox,.kontakt,.kroky,.galerie{grid-template-columns:1fr}
+  .sl{grid-template-columns:1fr}
+  .toptel{display:none}
+  .lista{display:flex}
+  .rez svg{max-height:190px}
+  .hot text{display:none}
+  section{padding-block:44px}
+}
+@media (min-width:761px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){.tok{stroke-dasharray:10 14;animation:tok 1.6s linear infinite}@keyframes tok{to{stroke-dashoffset:-24}}.hot circle.pulz{animation:pz 2s ease-in-out infinite}@keyframes pz{50%{opacity:.55}}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Instalatérství Jiří Bajtek</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Jiří Bajtek<small>Instalatér · topenář · plynař · Karviná</small></div>
+  <a class="toptel" href="tel:+420725717804">☎ 725 717 804</a>
+</div></div>
+
+<div class="hero">
+  <div class="rez">
+    <svg viewBox="0 0 1100 340" role="img" aria-label="Řez domem: kotel, kanalizace, podlahové topení, rozvody vody a plynu. Klepnutím vyberete službu.">
+      <rect width="1100" height="340" fill="#0F3B5F"/>
+      <path d="M150 300V120L420 30l270 90v180z" fill="#174C77"/>
+      <path d="M150 300V120L420 30l270 90" fill="none" stroke="#5E86A8" stroke-width="4"/>
+      <rect x="0" y="300" width="1100" height="40" fill="#0B2D49"/>
+      <path d="M150 210h540" stroke="#3A6A90" stroke-width="3"/>
+      <!-- podlahové topení -->
+      <path class="tok" d="M180 290h480M660 290c12 0 12-10 0-10H180c-12 0-12-10 0-10h480" stroke="#F28C28" stroke-width="3" fill="none" opacity=".85"/>
+      <!-- kotel -->
+      <rect x="560" y="130" width="70" height="66" rx="6" fill="#EEF4F7"/><rect x="574" y="146" width="42" height="10" rx="3" fill="#0F3B5F"/><circle cx="595" cy="176" r="8" fill="#F28C28"/>
+      <path d="M575 196v70M615 196v90" stroke="#F28C28" stroke-width="4"/>
+      <!-- voda a plyn -->
+      <path d="M260 130v80M260 130h120" stroke="#8FC1E3" stroke-width="5"/><path d="M380 130v18" stroke="#8FC1E3" stroke-width="5"/><path d="M370 152h20" stroke="#8FC1E3" stroke-width="5" stroke-linecap="round"/>
+      <path d="M600 120V60" stroke="#FFD24A" stroke-width="5"/>
+      <!-- kanalizace -->
+      <path d="M300 210v100l60 20h740" stroke="#9BAAB6" stroke-width="12" fill="none"/>
+      <g transform="translate(820 330)"><rect x="-26" y="-14" width="52" height="28" rx="6" fill="#EEF4F7"/><circle cx="26" cy="0" r="9" fill="#F28C28"/><circle cx="26" cy="0" r="4" fill="#0F3B5F"/></g>
+      <path d="M846 330l60-20v40z" fill="#F28C28" opacity=".25"/>
+      <g class="hot" data-s="kotel" tabindex="0" role="button" aria-label="Servis kotle Immergas"><circle class="pulz" cx="595" cy="112" r="12"/><text x="640" y="160">Kotel Immergas</text></g>
+      <g class="hot" data-s="kanal" tabindex="0" role="button" aria-label="Čištění kanalizace a kamera"><circle class="pulz" cx="820" cy="296" r="12"/><text x="840" y="290">Kamera v potrubí</text></g>
+      <g class="hot" data-s="podlaha" tabindex="0" role="button" aria-label="Čištění podlahového topení"><circle class="pulz" cx="200" cy="262" r="12"/><text x="220" y="256">Podlahové topení</text></g>
+      <g class="hot" data-s="voda" tabindex="0" role="button" aria-label="Instalatérské práce"><circle class="pulz" cx="260" cy="112" r="12"/><text x="160" y="96">Voda a odpady</text></g>
+      <g class="hot" data-s="plyn" tabindex="0" role="button" aria-label="Plynařské práce"><circle class="pulz" cx="600" cy="48" r="12"/><text x="620" y="54">Plyn</text></g>
+    </svg>
+  </div>
+  <div class="wrap">
+    <h1>Kotel, odpad, topení. <span>Opravím v Karviné.</span></h1>
+    <p>Instalatérské, topenářské a plynárenské práce. Servis kondenzačních kotlů Immergas, strojní čištění kanalizace s kamerou a čištění podlahového topení. Termín domluvíme po telefonu.</p>
+    <div class="btns">
+      <a class="btn btn-o" href="tel:+420725717804">☎ Zavolat 725 717 804</a>
+      <a class="btn" href="#poptavka">Popsat problém</a>
+    </div>
+    <div class="fakta"><span><b>Po–Čt</b> podle telefonické domluvy</span><span><b>IČO</b> 08416184</span><span><b>Karviná</b> – Nové Město</span></div>
+  </div>
+</div>
+
+<section id="sluzby"><div class="wrap">
+  <h2>S čím přijedu</h2>
+  <p class="lead">Klepněte na službu (nebo na tečku v řezu domem nahoře). Rovnou se Vám předvyplní poptávka.</p>
+  <div class="sl" id="sl">
+    <button type="button" data-s="kotel" aria-pressed="true"><svg class="ico" viewBox="0 0 42 42" aria-hidden="true"><rect x="7" y="4" width="28" height="34" rx="4" fill="#0F3B5F"/><rect x="12" y="10" width="18" height="5" rx="2" fill="#EEF4F7"/><circle cx="21" cy="26" r="5" fill="#F28C28"/></svg><h3>Kotle Immergas</h3><p>Servis plynových kondenzačních kotlů značky Immergas.</p></button>
+    <button type="button" data-s="kanal" aria-pressed="false"><svg class="ico" viewBox="0 0 42 42" aria-hidden="true"><path d="M4 26h34" stroke="#9BAAB6" stroke-width="10"/><rect x="8" y="20" width="16" height="12" rx="3" fill="#0F3B5F"/><circle cx="24" cy="26" r="4" fill="#F28C28"/></svg><h3>Kanalizace a kamera</h3><p>Strojní čištění domovní kanalizace a kamerový náhled do odpadů.</p></button>
+    <button type="button" data-s="podlaha" aria-pressed="false"><svg class="ico" viewBox="0 0 42 42" aria-hidden="true"><path d="M6 12h30c4 0 4 6 0 6H6c-4 0-4 6 0 6h30c4 0 4 6 0 6H6" stroke="#F28C28" stroke-width="3" fill="none"/></svg><h3>Podlahové topení</h3><p>Čištění podlahového topení, aby zase rovnoměrně hřálo.</p></button>
+    <button type="button" data-s="voda" aria-pressed="false"><svg class="ico" viewBox="0 0 42 42" aria-hidden="true"><path d="M8 10h18v10M26 20h8" stroke="#0F3B5F" stroke-width="5" fill="none"/><path d="M34 24c0 3-2 6-2 6s-2-3-2-6 2-4 2-4 2 1 2 4z" fill="#8FC1E3"/></svg><h3>Voda a odpady</h3><p>Instalatérské práce: rozvody, baterie, odpady, opravy.</p></button>
+    <button type="button" data-s="plyn" aria-pressed="false"><svg class="ico" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 6c6 8 10 12 10 19a10 10 0 0 1-20 0c0-5 3-8 5-11 1 4 3 5 5 5 0-5-2-8 0-13z" fill="#FFD24A"/></svg><h3>Plyn a topení</h3><p>Topenářské a plynárenské práce.</p></button>
+  </div>
+  <p class="lead" style="margin-top:18px">Ceny nezveřejňuji – cenu řeknu předem, až uvidím, o co jde.<span class="demo">ukázkový text</span></p>
+</div></section>
+
+<section class="popt" id="poptavka"><div class="wrap">
+  <h2>Popište, co se děje</h2>
+  <p class="lead">Z pár kliknutí složím zprávu, kterou mi pošlete jako SMS. Fotku problému pak klidně pošlete MMS nebo e-mailem na bajtek.jiri@seznam.cz.</p>
+  <div class="pbox">
+    <form class="pform" onsubmit="return false">
+      <label>Služba</label>
+      <div class="chips" id="sluzba"></div>
+      <label>Co se děje</label>
+      <div class="chips" id="pr"></div>
+      <label for="kde">Kde (ulice, obec)</label>
+      <input id="kde" value="Karviná-Mizerov" autocomplete="off">
+      <label for="pozn">Poznámka</label>
+      <textarea id="pozn">Byt v 3. patře, nejlépe odpoledne.</textarea>
+    </form>
+    <div class="vystup">
+      <h3>Vaše zpráva</h3>
+      <pre id="sms"></pre>
+      <div class="btns">
+        <a class="btn btn-o" id="smsbtn" href="#">Poslat SMS na 725 717 804</a>
+        <button class="btn" type="button" id="kop">Zkopírovat</button>
+      </div>
+      <small>Číslo: <b style="color:#fff;user-select:all">725 717 804</b> · Ozvu se zpět a domluvíme termín.</small>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Jak to probíhá</h2>
+  <ol class="kroky">
+    <li><div class="n">1</div><h3>Zavoláte nebo napíšete</h3><p>Popíšete problém, případně pošlete fotku. Poradím už po telefonu.</p></li>
+    <li><div class="n">2</div><h3>Domluvíme termín</h3><p>Pondělí až čtvrtek podle domluvy. Cenu řeknu předem.<span class="demo">ukázkový text</span></p></li>
+    <li><div class="n">3</div><h3>Přijedu a opravím</h3><p>U odpadů ukážu záznam z kamery, ať vidíte, co v potrubí bylo.<span class="demo">ukázkový text</span></p></li>
+  </ol>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Proč mně</h2>
+  <div class="duv">
+    <div><b>Kamera</b><span>kamerový náhled do odpadů, žádné hádání, kde je ucpávka</span></div>
+    <div><b>Immergas</b><span>servis kondenzačních kotlů této značky</span></div>
+    <div><b>3. místo</b><span>v kategorii Instalatérství v Karviné na <a href="https://www.firmy.cz/detail/13258509-instalaterstvi-jiri-bajtek-karvina-nove-mesto.html" target="_blank" rel="noopener">Firmy.cz</a></span></div>
+    <div><b>IČO 08416184</b><span>živnostník, Urxova 1525/18, Karviná</span></div>
+  </div>
+  <div class="galerie">
+    <div class="foto">Sem přijde Vaše fotka<br>z práce u kotle</div>
+    <div class="foto">Sem přijde Vaše fotka<br>záběru z kamery</div>
+    <div class="foto">Sem přijde Vaše fotka<br>Vás nebo auta s nářadím</div>
+  </div>
+</div></section>
+
+<section style="background:var(--bila)"><div class="wrap">
+  <h2>Časté otázky</h2>
+  <details open><summary>Kdy se dá domluvit termín?</summary><p>Pondělí až čtvrtek podle telefonické domluvy. Zavolejte na 725 717 804.</p></details>
+  <details><summary>K čemu je kamera v odpadu?</summary><p>Ukáže, kde přesně je ucpávka nebo poškozené potrubí. Pak se čistí nebo opravuje jen to, co je potřeba.</p></details>
+  <details><summary>Jak často servisovat kondenzační kotel?</summary><p>Výrobci obvykle doporučují pravidelnou roční prohlídku. Přesný interval najdete v záručních podmínkách Vašeho kotle.<span class="demo">ukázkový text</span></p></details>
+  <details><summary>Jezdíte i mimo Karvinou?</summary><p>Oblast, kam jezdím, doplníme podle Vás.<span class="demo">ukázkový text</span></p></details>
+</div></section>
+
+<section id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kontakt</h2>
+    <p style="font-size:18px;margin-top:16px"><b>Instalatérství Jiří Bajtek</b><br>Urxova 1525/18, 735 06 Karviná – Nové Město</p>
+    <p>Tel.: <a href="tel:+420725717804"><b>725 717 804</b></a><br>E-mail: <a href="mailto:bajtek.jiri@seznam.cz">bajtek.jiri@seznam.cz</a></p>
+    <p style="color:var(--sed)">Pondělí–čtvrtek podle telefonické domluvy · pátek–neděle zavřeno</p>
+    <div class="btns" style="color:var(--voda)">
+      <a class="btn btn-v" href="tel:+420725717804">☎ Zavolat</a>
+      <a class="btn" href="https://mapy.cz/zakladni?q=Urxova%201525%2F18%20Karvin%C3%A1" target="_blank" rel="noopener">Ukázat na Mapy.cz</a>
+    </div>
+  </div>
+  <div class="foto" style="min-height:240px">„V případě zájmu se na mne můžete obrátit, rád Vám pomůžu a poradím.“<br><br>Sem přijde Vaše fotka</div>
+</div></section>
+
+<footer><div class="wrap">Instalatérství Jiří Bajtek · IČO 08416184 · Urxova 1525/18, 735 06 Karviná · 725 717 804 · bajtek.jiri@seznam.cz</div></footer>
+
+<div class="lista"><a class="btn btn-o" href="tel:+420725717804">☎ Zavolat</a><a class="btn" href="#poptavka">Popsat problém</a></div>
+
+<script>
+(function(){
+  var S={kotel:{n:"Servis kotle Immergas",p:["Pravidelný servis","Kotel hlásí poruchu","Netopí / neohřívá vodu"]},
+    kanal:{n:"Čištění kanalizace / kamera",p:["Ucpaný odpad","Pomalu odtéká","Zápach z odpadu","Chci kamerou zkontrolovat potrubí"]},
+    podlaha:{n:"Čištění podlahového topení",p:["Některé okruhy nehřejí","Topí nerovnoměrně","Preventivní čištění"]},
+    voda:{n:"Instalatérské práce",p:["Kape / teče","Výměna baterie","Nový rozvod nebo odpad"]},
+    plyn:{n:"Plynařské / topenářské práce",p:["Připojení spotřebiče","Úprava rozvodu","Jiné"]}};
+  var cur="kotel",prob=0;
+  var sl=document.getElementById("sl"),sg=document.getElementById("sluzba"),pr=document.getElementById("pr");
+  Object.keys(S).forEach(function(k){var b=document.createElement("button");b.type="button";b.dataset.s=k;b.textContent=S[k].n;sg.appendChild(b)});
+  function vyber(k,scroll){cur=k;prob=0;
+    [].forEach.call(sl.children,function(b){b.setAttribute("aria-pressed",b.dataset.s===k)});
+    [].forEach.call(sg.children,function(b){b.setAttribute("aria-pressed",b.dataset.s===k)});
+    [].forEach.call(document.querySelectorAll(".hot"),function(g){g.classList.toggle("on",g.dataset.s===k)});
+    pr.innerHTML="";S[k].p.forEach(function(t,i){var b=document.createElement("button");b.type="button";b.textContent=t;b.setAttribute("aria-pressed",i===0);pr.appendChild(b)});
+    upd();if(scroll)document.getElementById("poptavka").scrollIntoView({behavior:"smooth"});}
+  sl.addEventListener("click",function(e){var b=e.target.closest("button");if(b)vyber(b.dataset.s,true)});
+  sg.addEventListener("click",function(e){if(e.target.tagName==="BUTTON")vyber(e.target.dataset.s)});
+  pr.addEventListener("click",function(e){if(e.target.tagName!=="BUTTON")return;[].forEach.call(pr.children,function(b,i){b.setAttribute("aria-pressed",b===e.target);if(b===e.target)prob=i});upd()});
+  [].forEach.call(document.querySelectorAll(".hot"),function(g){function go(){vyber(g.dataset.s,true)}g.addEventListener("click",go);g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}})});
+  function upd(){
+    var t="Dobrý den, pane Bajtku, potřeboval/a bych: "+S[cur].n+".\nCo se děje: "+S[cur].p[prob]+"\nKde: "+document.getElementById("kde").value;
+    var p=document.getElementById("pozn").value.trim();if(p)t+="\nPoznámka: "+p;
+    t+="\nKdy by se Vám to hodilo? Děkuji.";
+    document.getElementById("sms").textContent=t;document.getElementById("smsbtn").href="sms:+420725717804?body="+encodeURIComponent(t);}
+  ["kde","pozn"].forEach(function(i){document.getElementById(i).addEventListener("input",upd)});
+  document.getElementById("kop").addEventListener("click",function(){var t=document.getElementById("sms").textContent,b=this;
+    function sela(){var r=document.createRange();r.selectNodeContents(document.getElementById("sms"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Text je označený"}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent="Zkopírováno"},sela)}catch(e){sela()}});
+  vyber("kotel");
+})();
+</script>
+</body>
+</html>
