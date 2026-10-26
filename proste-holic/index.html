@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pánské holičství bez objednání Ostrava centrum | Prostě holič</title>
+<meta name="description" content="Prostě holič, Nádražní 341/19, Moravská Ostrava: pánské stříhání bez objednání a pánská trvalá. Po–Pá 9:00–17:30, tel. 734 673 704.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarberShop","name":"Prostě holič","description":"Pánské stříhání bez objednání v centru Ostravy.","telephone":"+420734673704","email":"lucieslivova@seznam.cz","taxID":"76292762","address":{"@type":"PostalAddress","streetAddress":"Nádražní 341/19","addressLocality":"Ostrava-Moravská Ostrava","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}],"sameAs":["https://www.facebook.com/prosteholic/"]}</script>
+<style>
+/* Prostě holič: Nádražní ulice → hero jako nádražní odjezdová tabule (split-flap), výrazný prvek = „Stihnu to dneska?“ odpočet do zavíračky podle ověřené doby. Ostravsky s humorem. */
+:root{
+  --cerna:#111214; --cerna-2:#1D1F23; --cerna-3:#2A2D33;
+  --zluta:#F5C518; --zluta-tx:#7A5F00;
+  --beton:#E9E7E1; --beton-2:#D6D3CB; --bila:#FFFFFF;
+  --tx:#111214; --tx2:#4A4C51;
+  --f-d:"Anton","Impact","Arial Narrow",sans-serif; --f-t:"Space Grotesk","Segoe UI",Arial,sans-serif; --f-m:"JetBrains Mono",Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--beton);color:var(--tx);font:17px/1.55 var(--f-t)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{margin:0;line-height:1}
+h2{font-family:var(--f-d);font-weight:400;font-size:clamp(34px,5.5vw,60px);text-transform:uppercase;letter-spacing:.01em}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--zluta);outline-offset:2px}
+.navrh{background:var(--zluta);color:var(--cerna);text-align:center;font-size:14px;font-weight:500;padding:8px 12px}
+.stitek{display:inline-block;font:700 11px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;background:#FFF0B8;color:#6B5200;border:1px solid #E5CB6A;border-radius:4px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.lista{position:sticky;top:0;z-index:20;background:var(--cerna);color:#fff}
+.lista .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.znacka{font:400 24px var(--f-d);text-transform:uppercase;text-decoration:none;letter-spacing:.02em}
+.znacka i{font-style:normal;color:var(--zluta)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:0;font:700 17px var(--f-t);text-decoration:none;border:2px solid transparent;cursor:pointer;text-transform:uppercase;letter-spacing:.03em}
+.btn-hl{background:var(--zluta);color:var(--cerna)}
+.btn-hl:hover{background:#FFD84A}
+.btn-ob{border-color:currentColor;background:transparent}
+.btn-ob:hover{background:var(--cerna-3);color:#fff}
+.lista .btn{min-height:42px;padding:0 14px;font-size:15px}
+/* hero = odjezdová tabule */
+.hero{background:var(--cerna);color:#fff;padding-block:40px 56px}
+.hero .nad{font:700 14px var(--f-t);letter-spacing:.12em;text-transform:uppercase;color:var(--zluta)}
+.hero h1{font-family:var(--f-d);font-weight:400;font-size:clamp(60px,12vw,150px);text-transform:uppercase;line-height:.9;margin:10px 0 24px}
+.hero h1 span{color:var(--zluta)}
+.tabule{background:#0A0A0B;border:3px solid var(--cerna-3);border-radius:6px;padding:14px;font-family:var(--f-m);box-shadow:inset 0 0 0 1px #000}
+.tabule .hl,.tabule .rad{display:grid;grid-template-columns:170px 1fr 250px 140px;gap:12px;align-items:center}
+.tabule .hl{font:700 12px var(--f-t);letter-spacing:.1em;text-transform:uppercase;color:#9A9DA4;padding:0 6px 8px;border-bottom:1px solid var(--cerna-3)}
+.tabule .rad{padding:10px 6px;border-bottom:1px solid #1A1B1E}
+.tabule .rad:last-child{border-bottom:0}
+.flap{display:inline-flex;gap:2px;flex-wrap:nowrap}
+.flap b{display:inline-grid;place-items:center;min-width:.9em;padding:3px 2px;background:#1E1F23;color:var(--zluta);font-size:clamp(14px,1.7vw,20px);border-radius:2px;position:relative;line-height:1.1}
+.flap b::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#000}
+.flap.bila b{color:#fff}
+.tabule .stav{font:700 14px var(--f-t);text-transform:uppercase;letter-spacing:.06em}
+.tabule .stav.ok{color:#7BE07B}
+.tabule .stav.ne{color:#FF8A6B}
+.hero .lead{font-size:19px;color:#D7D8DB;max-width:36em;margin-top:22px}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+/* stihnu */
+.stihnu{background:var(--zluta)}
+.stihnu .wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.stihnu p{font-size:18px;margin-top:10px;max-width:30em}
+.hodiny{background:var(--cerna);color:#fff;padding:24px;display:grid;gap:14px}
+.hodiny label{font-weight:700;display:block}
+.hodiny select{width:100%;min-height:48px;font:500 17px var(--f-t);padding:0 12px;background:var(--cerna-2);color:#fff;border:2px solid var(--cerna-3)}
+.hodiny .vys{font:400 clamp(30px,4vw,44px)/1.05 var(--f-d);text-transform:uppercase;color:var(--zluta)}
+.hodiny .mal{color:#C9CBD0;font-size:15px}
+.cara{height:12px;background:var(--cerna-3);position:relative}
+.cara i{position:absolute;top:0;bottom:0;left:0;background:var(--zluta)}
+.cara span{position:absolute;top:-6px;width:3px;height:24px;background:#fff}
+section{padding-block:64px}
+.uvod{max-width:680px;margin-bottom:30px;display:grid;gap:12px}
+.uvod p{color:var(--tx2)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sluzby>div{background:var(--bila);border-top:8px solid var(--cerna);padding:26px;display:grid;gap:12px;align-content:start}
+.sluzby>div:nth-child(2){border-top-color:var(--zluta)}
+.sluzby .cislo{font:400 54px/1 var(--f-d);color:var(--beton-2)}
+.sluzby p{color:var(--tx2)}
+.cena{margin-top:20px;font-weight:500}
+/* slovnik */
+.slovnik{background:var(--cerna);color:#fff}
+.slovnik h2{color:var(--zluta)}
+.slova{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.slova>div{border:2px solid var(--cerna-3);padding:20px;display:grid;gap:6px}
+.slova b{font:400 30px var(--f-d);text-transform:uppercase;color:#fff}
+.slova i{color:var(--zluta);font-style:normal;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.slova p{color:#C9CBD0}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:k}
+.kroky>div{display:grid;gap:8px;border-left:4px solid var(--cerna);padding-left:16px}
+.kroky>div::before{counter-increment:k;content:"0" counter(k);font:400 40px var(--f-d);color:var(--zluta-tx)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{background:var(--bila);padding:14px 16px;border-left:6px solid var(--zluta)}
+.duvera b{display:block}
+details{border-bottom:2px solid var(--beton-2);padding-block:14px}
+summary{cursor:pointer;font-weight:700;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;align-items:start}
+.fotky div{width:100%;aspect-ratio:3/4;border:2px dashed #8E8B83;display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:15px;padding:10px;background:repeating-linear-gradient(45deg,var(--beton) 0 12px,var(--beton-2) 12px 14px)}
+.fotky div:first-child{aspect-ratio:auto;height:100%;min-height:200px}
+.kontakt{background:var(--cerna);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt h2{color:var(--zluta)}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:#9A9DA4}
+.kontakt dd{margin:0;font-weight:500}
+.mapa{background:var(--cerna-2);padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:#000;color:#9A9DA4;font-size:14px;padding-block:24px 100px}
+.mobil{display:none}
+@media (max-width:860px){
+  .tabule .hl{display:none}
+  .tabule .rad{grid-template-columns:1fr auto;gap:6px 10px}
+  .tabule .rad>:nth-child(1){grid-column:1/-1}
+  .tabule .rad>:nth-child(2){grid-column:1/-1}
+  .stihnu .wrap,.sluzby,.slova,.kroky,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .fotky{grid-template-columns:1fr 1fr}
+  .fotky div:first-child{grid-column:1/-1;aspect-ratio:16/9;height:auto;min-height:0}
+  section{padding-block:48px}
+  .hero{padding-block:24px 40px}
+  .hero h1{margin-bottom:16px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;inset:auto 0 0 0;z-index:30;background:var(--cerna);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+  .mobil .btn-ob{color:#fff}
+}
+@media (max-width:480px){.hero .akce .btn{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Prostě holič</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top">Prostě <i>holič</i></a>
+    <a class="btn btn-hl" href="tel:+420734673704" aria-label="Zavolat 734 673 704">☎ <span>734 673 704</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="nad">Nádražní 341/19 · Moravská Ostrava</div>
+    <h1>Prostě <span>holič.</span></h1>
+    <div class="tabule" role="table" aria-label="Tabule služeb">
+      <div class="hl" role="row"><span role="columnheader">Odjezd</span><span role="columnheader">Směr</span><span role="columnheader">Nástupiště</span><span role="columnheader">Stav</span></div>
+      <div class="rad" role="row"><span class="flap" role="cell" data-t="TEĎ"></span><span class="flap bila" role="cell" data-t="PÁNSKÝ STŘIH"></span><span class="flap" role="cell" data-t="NÁDRAŽNÍ 19"></span><span class="stav ok" role="cell" id="st1">bez objednání</span></div>
+      <div class="rad" role="row"><span class="flap" role="cell" data-t="DOMLUVA"></span><span class="flap bila" role="cell" data-t="PÁNSKÁ TRVALÁ"></span><span class="flap" role="cell" data-t="NÁDRAŽNÍ 19"></span><span class="stav ok" role="cell">zavolejte</span></div>
+    </div>
+    <p class="lead">Fajné pánské holičství v centru Ostravy. Přijdete bez objednání, sednete do křesla a za chvilku jedete dál.</p>
+    <div class="akce">
+      <a class="btn btn-hl" href="tel:+420734673704">Zavolat 734 673 704</a>
+      <a class="btn btn-ob" href="#stihnu">Stihnu to dneska?</a>
+    </div>
+  </div>
+</div>
+
+<section class="stihnu" id="stihnu">
+  <div class="wrap">
+    <div>
+      <h2>Stihnu to dneska?</h2>
+      <p>Řekněte, kdy dorazíte, a my Vám řekneme, jestli budeme mít ještě otevřeno. Otevřeno je Po–Pá 9:00–17:30.</p>
+    </div>
+    <div class="hodiny" aria-live="polite">
+      <div><label for="kdy">Dorazím</label>
+        <select id="kdy">
+          <option value="0">hned teď</option>
+          <option value="15">za 15 minut</option>
+          <option value="30">za půl hodiny</option>
+          <option value="60">za hodinu</option>
+          <option value="120">za dvě hodiny</option>
+        </select>
+      </div>
+      <div class="vys" id="vys">…</div>
+      <div class="cara" aria-hidden="true"><i id="cara"></i><span id="ted"></span></div>
+      <div class="mal" id="mal">Na čekání se nehraje – ukazujeme jen otevírací dobu. Když nevíte, zavolejte.</div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Co tu děláme</h2>
+      <p>Žádné složitosti. Pánský střih za rozumné peníze – a pro odvážné i trvalá.</p>
+    </div>
+    <div class="sluzby">
+      <div><span class="cislo">01</span><h3>Pánské stříhání bez objednání</h3><p>Přijdete, kdy se Vám to hodí. Strojek, nůžky, hotovo.</p></div>
+      <div><span class="cislo">02</span><h3>Pánská trvalá</h3><p>Vlny nebo kudrny pro chlapy. Termín si domluvte po telefonu.</p></div>
+    </div>
+    <p class="cena">Cenu řekneme předem – zákazníci chválí poměr ceny a výkonu.</p>
+  </div>
+</section>
+
+<section class="slovnik">
+  <div class="wrap">
+    <div class="uvod"><h2>Ostravský slovníček u holiče</h2><p style="color:#C9CBD0">Abyste věděli, co v křesle říct. <span class="stitek">ukázkový text</span></p></div>
+    <div class="slova">
+      <div><i>když chcete</i><b>„Jen to zaštipni“</b><p>Jen zkrátit, tvar nechat.</p></div>
+      <div><i>když chcete</i><b>„Daj to nakrátko“</b><p>Strojkem, ať je na dlouho klid.</p></div>
+      <div><i>když chcete</i><b>„Fajně, jak minule“</b><p>Stejně jako posledně.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to chodí</h2></div>
+    <div class="kroky">
+      <div><h3>Přijdete</h3><p>Po–Pá mezi 9:00 a 17:30. Objednávat se nemusíte.</p></div>
+      <div><h3>Řeknete, jak to chcete</h3><p>Cenu víte dopředu.</p></div>
+      <div><h3>Jedete dál</h3><p>Nádražní ulice, centrum – hned po ruce.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Z křesla</h2></div>
+    <div class="fotky"><div>Sem přijde vaše fotka<br>(holičství zevnitř)</div><div>Sem přijde vaše fotka<br>(střih)</div><div>Sem přijde vaše fotka<br>(trvalá)</div></div>
+  </div>
+</section>
+
+<section style="background:var(--bila)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:20px">Proč sem</h2>
+      <ul class="duvera">
+        <li><b>Bez objednání</b>Stříháme, kdo přijde, ve všední dny 9:00–17:30.</li>
+        <li><b>Poměr cena / výkon</b>To chválí zákazníci v hodnoceních na <a href="https://www.firmy.cz/detail/13614971-proste-holic-ostrava-moravska-ostrava.html" target="_blank" rel="noopener">Firmy.cz</a>.</li>
+        <li><b>Centrum Ostravy</b>Nádražní 341/19, Moravská Ostrava · IČO 76292762</li>
+        <li><b>Novinky na Facebooku</b><a href="https://www.facebook.com/prosteholic/" target="_blank" rel="noopener">facebook.com/prosteholic</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px;font-size:clamp(30px,4vw,44px)">Časté otázky</h2>
+      <details open><summary>Musím se objednat?</summary><p>Ne. Na pánský střih přijďte bez objednání.</p></details>
+      <details><summary>Děláte opravdu pánskou trvalou?</summary><p>Ano. Termín si domluvte na 734 673 704.</p></details>
+      <details><summary>Do kolika můžu přijít?</summary><p>Zavíráme v 17:30, Po–Pá. O víkendu je zavřeno.</p></details>
+      <details><summary>Kolik to stojí?</summary><p>Cenu řekneme předem, ať víte, na čem jste.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kde nás najdete</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420734673704">734 673 704</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:lucieslivova@seznam.cz">lucieslivova@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Nádražní 341/19, Ostrava-Moravská Ostrava</dd>
+        <dt>Otevřeno</dt><dd>Po–Pá 9:00–17:30</dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/prosteholic/" target="_blank" rel="noopener">Prostě holič</a></dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" fill="#1D1F23"/><path d="M150 0 140 150" stroke="#F5C518" stroke-width="10"/><path d="M0 60 300 50M0 120 300 105" stroke="#2A2D33" stroke-width="6"/><rect x="128" y="64" width="24" height="24" fill="#F5C518"/><text x="160" y="82" fill="#fff" font-family="Space Grotesk,Arial" font-size="13" font-weight="700">Nádražní 19</text></svg>
+      <a class="btn btn-hl" href="https://mapy.cz/zakladni?q=N%C3%A1dra%C5%BEn%C3%AD%20341%2F19%20Ostrava" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Prostě holič · Nádražní 341/19, Ostrava-Moravská Ostrava · IČO 76292762 · 734 673 704</div></footer>
+<div class="mobil"><a class="btn btn-hl" href="tel:+420734673704">Zavolat</a><a class="btn btn-ob" href="#stihnu">Stihnu to?</a></div>
+
+<script>
+(function(){
+  [].forEach.call(document.querySelectorAll('.flap'),function(el){
+    var t=el.dataset.t,h='';for(var i=0;i<t.length;i++)h+=t[i]===' '?'<b style="background:transparent">&nbsp;</b>':'<b>'+t[i]+'</b>';
+    el.innerHTML=h;el.setAttribute('aria-label',t);
+  });
+  var O=540,Z=1050;
+  function hm(m){m=Math.round(m);return Math.floor(m/60)+':'+('0'+m%60).slice(-2)}
+  function upd(){
+    var n=new Date(),d=n.getDay(),m=n.getHours()*60+n.getMinutes()+ +document.getElementById('kdy').value;
+    var v=document.getElementById('vys'),ml=document.getElementById('mal'),st=document.getElementById('st1');
+    var prac=d>=1&&d<=5;
+    if(prac&&m>=O&&m<Z){var z=Z-m;v.textContent='Stihnete! Zavíráme až za '+(z>=60?Math.floor(z/60)+' h '+(z%60)+' min':z+' min')+'.';st.textContent='otevřeno';st.className='stav ok'}
+    else if(prac&&m<O){v.textContent='Otevíráme v 9:00. Pak přijďte.';st.textContent='otevíráme v 9:00';st.className='stav ne'}
+    else{v.textContent=(d===5||d===6||d===0)?'Dneska už ne. V pondělí od 9:00.':'Dneska už ne. Zítra od 9:00.';st.textContent='zavřeno';st.className='stav ne'}
+    var p=Math.max(0,Math.min(1,(m-O)/(Z-O)));
+    document.getElementById('cara').style.width=(prac?p*100:0)+'%';document.getElementById('ted').style.left=(prac?p*100:0)+'%';
+    ml.textContent='Na čekání se nehraje – ukazujeme jen otevírací dobu (dorazíte v '+hm(m%1440)+'). Když nevíte, zavolejte.';
+  }
+  document.getElementById('kdy').addEventListener('change',upd);upd();
+})();
+</script>
+</body>
+</html>

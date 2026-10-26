@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kadeřnictví bez objednání Ostrava-Poruba | Kadeřnictví Divoké Nůžky</title>
+<meta name="description" content="Kadeřnictví Divoké Nůžky, Opavská 821/65, Ostrava-Poruba: stříhání bez objednání, melíry a barvení. Po–Pá 7–19, víkend po domluvě. Důchodci a studenti 10 % sleva na stříhání. Tel. 721 724 891.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Rubik:wght@400;500;700;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Kadeřnictví Divoké Nůžky","description":"Stříhání bez objednání, melíry a barvení v Ostravě-Porubě.","telephone":"+420721724891","email":"divokenuzky@seznam.cz","taxID":"02605252","address":{"@type":"PostalAddress","streetAddress":"Opavská 821/65","addressLocality":"Ostrava-Poruba","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"19:00"}],"sameAs":["https://www.facebook.com/Divokenuzky"]}</script>
+<style>
+/* Divoké Nůžky: obří nápis přes celou šířku, „džungle“ z listů, výrazný prvek = cedule Otevřeno/Zavřeno + slevová kartička. */
+:root{
+  --fuchsie:#C2185B; --fuchsie-tm:#9A1248;
+  --limeta:#C6E35A; --limeta-sv:#EAF5BF;
+  --nocni:#1B1630; --nocni-2:#2A2346;
+  --krem:#FFF8EE; --tx:#1B1630; --tx2:#4D4760; --linka:#E7DDD0;
+  --f-d:"Shrikhand","Georgia",serif; --f-t:"Rubik","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--krem);color:var(--tx);font:17px/1.55 var(--f-t)}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{margin:0;line-height:1.05}
+h2{font-family:var(--f-d);font-weight:400;font-size:clamp(30px,5vw,48px);color:var(--fuchsie)}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--fuchsie);outline-offset:2px}
+.navrh{background:var(--nocni);color:#fff;text-align:center;font-size:14px;padding:8px 12px}
+.stitek{display:inline-block;font:700 11px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;background:#FFF0B8;color:#6B5200;border:1px solid #E5CB6A;border-radius:4px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.lista{position:sticky;top:0;z-index:20;background:var(--krem);border-bottom:2px solid var(--nocni)}
+.lista .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.znacka{font-family:var(--f-d);font-size:22px;text-decoration:none;color:var(--nocni);display:flex;align-items:center;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:700 17px var(--f-t);text-decoration:none;border:2px solid var(--nocni);cursor:pointer}
+.btn-hl{background:var(--fuchsie);color:#fff;border-color:var(--fuchsie)}
+.btn-hl:hover{background:var(--fuchsie-tm)}
+.btn-ob{background:transparent;color:var(--nocni)}
+.btn-ob:hover{background:var(--limeta)}
+.lista .btn{min-height:42px;padding:0 16px;font-size:16px}
+/* hero */
+.hero{background:var(--nocni);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2;padding-block:44px 52px}
+.misto{display:inline-block;background:var(--limeta);color:var(--nocni);font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;transform:rotate(-2deg)}
+.hero h1{font-family:var(--f-d);font-weight:400;font-size:clamp(54px,13vw,168px);line-height:.92;margin:18px 0 6px;letter-spacing:-.01em}
+.hero h1 span{display:block;color:var(--limeta)}
+.hero .lead{font-size:clamp(19px,2.4vw,24px);max-width:30em;color:#EDE8F6;margin-top:14px}
+.hero .lead b{color:#fff}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .btn-ob{color:#fff;border-color:#fff}
+.hero .btn-ob:hover{background:var(--nocni-2)}
+.listy{position:absolute;right:-40px;bottom:-30px;width:min(520px,70vw);z-index:1;opacity:.95;pointer-events:none}
+.nuzky{position:absolute;right:6%;top:30px;width:min(220px,30vw);z-index:1;transform:rotate(18deg)}
+/* cedule */
+.cedule-pas{background:var(--limeta);border-block:2px solid var(--nocni)}
+.cedule-pas .wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding-block:28px}
+.cedule{position:relative;width:240px;padding:26px 18px 18px;background:#fff;border:3px solid var(--nocni);border-radius:16px;text-align:center;box-shadow:6px 6px 0 var(--nocni);transform:rotate(-3deg)}
+.cedule::before{content:"";position:absolute;top:-34px;left:50%;width:90px;height:36px;margin-left:-45px;border:3px solid var(--nocni);border-bottom:0;border-radius:50% 50% 0 0/100% 100% 0 0}
+.cedule b{display:block;font-family:var(--f-d);font-weight:400;font-size:40px;line-height:1;color:var(--fuchsie)}
+.cedule.zavreno b{color:var(--nocni)}
+.cedule small{display:block;margin-top:8px;font-size:15px;color:var(--tx2)}
+.cedule-txt h2{color:var(--nocni);font-size:clamp(26px,4vw,38px)}
+.cedule-txt p{margin-top:8px;font-size:18px;max-width:36em}
+.tyden{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;list-style:none;padding:0}
+.tyden li{background:#fff;border:2px solid var(--nocni);border-radius:10px;padding:6px 10px;font-size:15px;font-weight:500}
+.tyden li.dnes{background:var(--nocni);color:#fff}
+section{padding-block:64px}
+.uvod{max-width:640px;margin-bottom:30px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sluzby>div{background:#fff;border:2px solid var(--nocni);border-radius:22px;padding:24px;display:grid;gap:10px;align-content:start}
+.sluzby>div:nth-child(2){background:var(--limeta-sv)}
+.sluzby svg{width:56px;height:56px}
+.sluzby p{color:var(--tx2)}
+.cena{margin-top:22px;font-size:17px}
+/* sleva */
+.sleva{background:var(--fuchsie);color:#fff}
+.sleva .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.sleva h2{color:#fff}
+.sleva p{color:#FFE3EE;margin-top:10px}
+.prepinac{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.prepinac button{font:700 16px var(--f-t);padding:12px 18px;border-radius:999px;border:2px solid #fff;background:transparent;color:#fff;cursor:pointer;min-height:48px}
+.prepinac button[aria-pressed=true]{background:#fff;color:var(--fuchsie)}
+.karticka{background:var(--krem);color:var(--tx);border-radius:18px;padding:24px;border:3px dashed var(--nocni);display:grid;gap:10px;transform:rotate(1.5deg);max-width:440px;justify-self:center;width:100%}
+.karticka .pct{font-family:var(--f-d);font-size:64px;line-height:1;color:var(--fuchsie)}
+.karticka .co{font-weight:700;font-size:19px}
+.karticka .pozn{font-size:15px;color:var(--tx2)}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:k}
+.kroky>div{display:grid;gap:8px;padding:22px;border-radius:22px;background:#fff;border:2px solid var(--linka)}
+.kroky>div::before{counter-increment:k;content:counter(k);font-family:var(--f-d);font-size:44px;line-height:1;color:var(--fuchsie)}
+.kroky p{color:var(--tx2)}
+/* důvěra */
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.duvera{display:grid;gap:12px;list-style:none;margin:0;padding:0}
+.duvera li{background:#fff;border-left:6px solid var(--limeta);border-radius:12px;padding:14px 16px}
+.duvera b{display:block}
+.skore{font-family:var(--f-d);font-size:44px;color:var(--fuchsie);line-height:1}
+details{border-bottom:2px solid var(--linka);padding-block:14px}
+summary{cursor:pointer;font-weight:700;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.fotky div{width:100%;aspect-ratio:1;border-radius:50% 50% 22px 22px;border:2px dashed var(--fuchsie);display:grid;place-items:center;text-align:center;padding:16px;color:var(--tx2);font-size:15px;background:radial-gradient(circle at 30% 30%,var(--limeta-sv),#fff 70%)}
+/* kontakt */
+.kontakt{background:var(--nocni);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt h2{color:var(--limeta)}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:#BDB5D6}
+.kontakt dd{margin:0;font-weight:500}
+.mapa{background:var(--nocni-2);border-radius:22px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:#120F21;color:#BDB5D6;font-size:14px;padding-block:24px 100px}
+.mobil{display:none}
+@media (max-width:860px){
+  .sluzby,.kroky{grid-template-columns:1fr}
+  .fotky{grid-template-columns:repeat(3,1fr);gap:8px}
+  .fotky div{font-size:12px;padding:6px}
+  .listy{width:220px;opacity:.35}
+  .sleva .wrap,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .cedule-pas .wrap{grid-template-columns:1fr;justify-items:center;text-align:center;padding-top:52px}
+  .tyden{justify-content:center}
+  section{padding-block:48px}
+  .nuzky{display:none}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;inset:auto 0 0 0;z-index:30;background:var(--krem);border-top:2px solid var(--nocni);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:480px){.hero .akce .btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Kadeřnictví Divoké Nůžky</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="7" cy="23" r="5" fill="none" stroke="#C2185B" stroke-width="3"/><circle cx="23" cy="23" r="5" fill="none" stroke="#C2185B" stroke-width="3"/><path d="M10 19 24 2M20 19 6 2" stroke="#1B1630" stroke-width="3" stroke-linecap="round"/></svg>Divoké Nůžky</a>
+    <a class="btn btn-hl" href="tel:+420721724891" aria-label="Zavolat 721 724 891">☎ <span>721 724 891</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <svg class="nuzky" viewBox="0 0 200 200" aria-hidden="true"><circle cx="50" cy="160" r="30" fill="none" stroke="#C6E35A" stroke-width="12"/><circle cx="150" cy="160" r="30" fill="none" stroke="#C6E35A" stroke-width="12"/><path d="M68 136 160 10M132 136 40 10" stroke="#fff" stroke-width="12" stroke-linecap="round"/><circle cx="100" cy="86" r="7" fill="#C2185B"/></svg>
+  <svg class="listy" viewBox="0 0 520 320" aria-hidden="true"><g fill="#C2185B"><path d="M260 320C240 220 300 120 420 70 380 170 330 250 260 320z"/><path d="M330 320C340 240 420 180 520 170 470 250 410 300 330 320z" fill="#9A1248"/></g><g fill="#C6E35A"><path d="M180 320C130 250 140 150 210 80 230 170 220 250 180 320z"/><path d="M420 320c10-50 50-90 100-100-20 50-50 85-100 100z"/></g><path d="M100 320C90 260 40 230 0 230 30 270 60 300 100 320z" fill="#2A2346"/></svg>
+  <div class="wrap">
+    <span class="misto">Ostrava-Poruba · Opavská 65</span>
+    <h1>Divoké<span>Nůžky</span></h1>
+    <p class="lead">Kadeřnictví v Porubě, kam můžete <b>přijít bez objednání</b>. Stříhání, melíry i barvení – Po–Pá od 7 do 19 hodin.</p>
+    <div class="akce">
+      <a class="btn btn-hl" href="tel:+420721724891">Zavolat 721 724 891</a>
+      <a class="btn btn-ob" href="#otevreno">Máte teď otevřeno?</a>
+    </div>
+  </div>
+</div>
+
+<div class="cedule-pas" id="otevreno">
+  <div class="wrap">
+    <div class="cedule" id="cedule" aria-live="polite"><b id="cStav">Otevřeno</b><small id="cKdy">Po–Pá 7:00–19:00</small></div>
+    <div class="cedule-txt">
+      <h2>Stavte se cestou. Objednávat se nemusíte.</h2>
+      <p>Cedule ukazuje stav podle otevírací doby. O víkendu stříháme po domluvě – stačí zavolat.</p>
+      <ul class="tyden" id="tyden">
+        <li data-d="1">Po 7–19</li><li data-d="2">Út 7–19</li><li data-d="3">St 7–19</li><li data-d="4">Čt 7–19</li><li data-d="5">Pá 7–19</li><li data-d="6">So po domluvě</li><li data-d="0">Ne po domluvě</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Co u nás uděláte</h2>
+      <p>Rychle, ochotně a bez okolků. Přijďte, jak se Vám to hodí.</p>
+    </div>
+    <div class="sluzby">
+      <div>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="16" cy="44" r="8" fill="none" stroke="#C2185B" stroke-width="4"/><circle cx="40" cy="44" r="8" fill="none" stroke="#C2185B" stroke-width="4"/><path d="M21 38 44 6M35 38 12 6" stroke="#1B1630" stroke-width="4" stroke-linecap="round"/></svg>
+        <h3>Stříhání bez objednání</h3>
+        <p>Dámské i pánské stříhání. Přijdete, sednete si, odcházíte ostříhaní.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M12 6c0 20 4 34 8 44M22 6c0 20 3 34 6 44M32 6c0 20 2 34 4 44M42 6c0 20 1 34 2 44" stroke="#1B1630" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M22 6c0 20 3 34 6 44M42 6c0 20 1 34 2 44" stroke="#C6E35A" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+        <h3>Melíry</h3>
+        <p>Prosvětlení pramenů. Poradíme i s opravou melíru, který se jinde nepovedl.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><rect x="8" y="22" width="26" height="28" rx="6" fill="#C2185B"/><rect x="14" y="12" width="14" height="12" rx="3" fill="#1B1630"/><path d="M40 10l8 30" stroke="#1B1630" stroke-width="4" stroke-linecap="round"/><path d="M38 6h8v8h-8z" fill="#C6E35A"/></svg>
+        <h3>Barvení</h3>
+        <p>Celé barvení i přeliv. Odstín vybereme spolu před začátkem.</p>
+      </div>
+    </div>
+    <p class="cena">Ceník zatím zveřejněný nemáme – cenu Vám řekneme předem, ještě než začneme. <a href="tel:+420721724891">Zeptejte se po telefonu</a>.</p>
+  </div>
+</section>
+
+<div class="sleva" id="sleva">
+  <section>
+    <div class="wrap">
+      <div>
+        <h2>10 % dolů za stříhání</h2>
+        <p>Důchodci a studenti mají u nás slevu 10 % na stříhání. Vyberte, kdo jste, a ukážeme, co si vzít s sebou.</p>
+        <div class="prepinac" role="group" aria-label="Kdo jste">
+          <button type="button" data-k="duchodce" aria-pressed="true">Jsem v důchodu</button>
+          <button type="button" data-k="student" aria-pressed="false">Studuji</button>
+        </div>
+      </div>
+      <div class="karticka" aria-live="polite">
+        <span class="pct">−10 %</span>
+        <span class="co" id="kCo">na stříhání pro důchodce</span>
+        <span id="kVzit">Vezměte s sebou průkaz, kterým se prokážete.</span>
+        <span class="pozn">Platí na stříhání. <span class="stitek">ukázkový text</span> Jaký průkaz stačí, Vám potvrdíme po telefonu.</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to u nás chodí</h2></div>
+    <div class="kroky">
+      <div><h3>Přijdete</h3><p>V pracovní dny mezi 7. a 19. hodinou. Objednávat se nemusíte.</p></div>
+      <div><h3>Řeknete, co chcete</h3><p>Střih, melír nebo barva. Cenu řekneme dopředu.</p></div>
+      <div><h3>Odcházíte hotoví</h3><p>Rychle a bez zbytečného čekání. Na víkend se domluvíme po telefonu.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Naše práce</h2><p>Místo pro fotky střihů a melírů z Vašeho Facebooku.</p></div>
+    <div class="fotky"><div>Sem přijde vaše fotka<br>(střih)</div><div>Sem přijde vaše fotka<br>(melír)</div><div>Sem přijde vaše fotka<br>(barva)</div></div>
+  </div>
+</section>
+
+<section style="background:#fff;border-block:2px solid var(--linka)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:20px">Proč k nám</h2>
+      <ul class="duvera">
+        <li><span class="skore">4,4</span> <b>z 18 hodnocení na Firmy.cz</b>Zákazníci chválí rychlost, ochotu vzít je bez objednání a opravu melíru. <a href="https://www.firmy.cz/detail/13228904-kadernictvi-divoke-nuzky-ostrava-poruba.html" target="_blank" rel="noopener">Přečíst hodnocení</a></li>
+        <li><b>Otevřeno od sedmi ráno</b>Ostříhat se můžete ještě před prací, nebo až do sedmi večer.</li>
+        <li><b>IČO 02605252</b>Opavská 821/65, Ostrava-Poruba</li>
+        <li><b>Novinky na Facebooku</b><a href="https://www.facebook.com/Divokenuzky" target="_blank" rel="noopener">facebook.com/Divokenuzky</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Musím se objednat?</summary><p>Ne. Ve všední dny od 7 do 19 hodin můžete přijít bez objednání.</p></details>
+      <details><summary>Stříháte i o víkendu?</summary><p>O víkendu po domluvě. Zavolejte na 721 724 891.</p></details>
+      <details><summary>Kdo má slevu?</summary><p>Důchodci a studenti mají 10 % slevu na stříhání.</p></details>
+      <details><summary>Kolik to bude stát?</summary><p>Cenu Vám řekneme předem, podle délky vlasů a toho, co chcete udělat.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kde nás najdete</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420721724891">721 724 891</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:divokenuzky@seznam.cz">divokenuzky@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Opavská 821/65, Ostrava-Poruba</dd>
+        <dt>Otevřeno</dt><dd>Po–Pá 7:00–19:00<br>So–Ne po domluvě</dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/Divokenuzky" target="_blank" rel="noopener">Divoké Nůžky</a></dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="14" fill="#1B1630"/><path d="M0 80 300 60" stroke="#3B3360" stroke-width="12"/><path d="M90 0 120 150M220 0 200 150" stroke="#3B3360" stroke-width="4"/><circle cx="160" cy="70" r="11" fill="#C2185B"/><circle cx="160" cy="70" r="24" fill="none" stroke="#C6E35A" stroke-width="3"/></svg>
+      <a class="btn btn-hl" href="https://mapy.cz/zakladni?q=Opavsk%C3%A1%20821%2F65%20Ostrava-Poruba" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Kadeřnictví Divoké Nůžky · Opavská 821/65, Ostrava-Poruba · IČO 02605252 · 721 724 891</div></footer>
+<div class="mobil"><a class="btn btn-hl" href="tel:+420721724891">Zavolat</a><a class="btn btn-ob" href="#otevreno">Otevřeno?</a></div>
+
+<script>
+(function(){
+  var n=new Date(),d=n.getDay(),m=n.getHours()*60+n.getMinutes();
+  var li=document.querySelector('#tyden li[data-d="'+d+'"]');if(li)li.classList.add('dnes');
+  var c=document.getElementById('cedule'),s=document.getElementById('cStav'),k=document.getElementById('cKdy');
+  if(d>=1&&d<=5&&m>=420&&m<1140){s.textContent='Otevřeno';k.textContent='dnes do 19:00 – přijďte bez objednání';}
+  else if(d>=1&&d<=5&&m<420){c.classList.add('zavreno');s.textContent='Za chvíli';k.textContent='dnes otevíráme v 7:00';}
+  else if(d===0||d===6){c.classList.add('zavreno');s.textContent='Víkend';k.textContent='stříháme po domluvě – zavolejte';}
+  else{c.classList.add('zavreno');s.textContent='Zavřeno';k.textContent=(d===5?'v pondělí':'zítra')+' od 7:00';}
+  var t={duchodce:['na stříhání pro důchodce','Vezměte s sebou průkaz, kterým se prokážete.'],student:['na stříhání pro studenty','Vezměte s sebou studentský průkaz.']};
+  [].forEach.call(document.querySelectorAll('.prepinac button'),function(b){b.addEventListener('click',function(){
+    [].forEach.call(document.querySelectorAll('.prepinac button'),function(x){x.setAttribute('aria-pressed',x===b)});
+    document.getElementById('kCo').textContent=t[b.dataset.k][0];document.getElementById('kVzit').textContent=t[b.dataset.k][1];
+  })});
+})();
+</script>
+</body>
+</html>

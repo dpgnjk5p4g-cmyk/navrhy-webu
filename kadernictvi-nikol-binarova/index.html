@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dámské kadeřnictví Ostrava-Poruba | Kadeřnictví Nikol Binarová</title>
+<meta name="description" content="Dámské kadeřnictví Nikol Binarová, Ivana Sekaniny 1801/9, Ostrava-Poruba. Na objednávku: Po a Pá dopoledne, Út–Čt odpoledne. Tel. 737 475 842.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Kadeřnictví Nikol Binarová","description":"Dámské kadeřnictví na objednávku v Ostravě-Porubě.","telephone":"+420737475842","email":"binarovanikol@seznam.cz","taxID":"65490215","address":{"@type":"PostalAddress","streetAddress":"Ivana Sekaniny 1801/9","addressLocality":"Ostrava-Poruba","addressCountry":"CZ"}}</script>
+<style>
+/* Nikol Binarová: klidné osobní studio. Dělený hero (text + ilustrace týdne slunce/měsíc), výrazný prvek = „Dopoledne, nebo odpoledne?“ půldenní rozvrh, který složí SMS. */
+:root{
+  --bridlice:#3E4A61; --bridlice-tm:#2B3446;
+  --broskev:#F4C7A8; --broskev-sv:#FBE8DB;
+  --mlha:#EEF0F4; --bila:#FFFFFF;
+  --med:#C9783F; --med-tx:#93501F;
+  --tx:#222A38; --tx2:#545D6E; --linka:#D8DCE4;
+  --f-d:"Instrument Serif",Georgia,serif; --f-t:"Schibsted Grotesk","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--mlha);color:var(--tx);font:17px/1.6 var(--f-t)}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{margin:0;font-weight:400;line-height:1.08}
+h1,h2{font-family:var(--f-d)}
+h2{font-size:clamp(34px,5vw,52px)}
+h2 em,h1 em{color:var(--med-tx)}
+h3{font-size:19px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--med);outline-offset:2px}
+.navrh{background:var(--bridlice-tm);color:#fff;text-align:center;font-size:14px;padding:8px 12px}
+.stitek{display:inline-block;font:700 11px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;background:#FFF0B8;color:#6B5200;border:1px solid #E5CB6A;border-radius:4px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.lista{position:sticky;top:0;z-index:20;background:var(--bila);border-bottom:1px solid var(--linka)}
+.lista .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.znacka{text-decoration:none;font:400 26px var(--f-d);line-height:1}
+.znacka small{display:block;font:500 12px var(--f-t);letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;font:700 17px var(--f-t);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-hl{background:var(--bridlice);color:#fff}
+.btn-hl:hover{background:var(--bridlice-tm)}
+.btn-ob{border-color:var(--bridlice);color:var(--bridlice);background:transparent}
+.btn-ob:hover{background:var(--broskev-sv)}
+.lista .btn{min-height:42px;padding:0 14px;font-size:16px}
+.hero{background:var(--bila)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-block:56px}
+.hero .kde{font-weight:500;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)}
+.hero h1{font-size:clamp(46px,7vw,82px);margin:12px 0 16px}
+.hero .lead{font-size:19px;color:var(--tx2);max-width:30em}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .poz{margin-top:16px;font-size:15px;color:var(--tx2)}
+.tyden-il{width:100%;height:auto;max-width:480px;justify-self:end}
+section{padding-block:68px}
+.uvod{max-width:660px;margin-bottom:32px;display:grid;gap:12px}
+.uvod p{color:var(--tx2)}
+/* rozvrh */
+.rozvrh{background:var(--broskev-sv)}
+.ro{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:start}
+.dny{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.den{background:var(--bila);border:2px solid var(--linka);border-radius:16px;padding:14px 8px;text-align:center;cursor:pointer;font:inherit;color:var(--tx);display:grid;gap:6px;justify-items:center;min-height:150px}
+.den b{font:400 30px var(--f-d)}
+.den svg{width:44px;height:44px}
+.den span{font-size:14px;color:var(--tx2)}
+.den[aria-pressed=true]{border-color:var(--bridlice);background:var(--bridlice);color:#fff}
+.den[aria-pressed=true] span{color:#DDE2EC}
+.zprava{background:var(--bila);border-radius:16px;padding:22px;display:grid;gap:14px;border:1px solid var(--linka)}
+.zprava .hl{font:400 26px var(--f-d)}
+.zprava pre{margin:0;white-space:pre-wrap;font:16px/1.55 var(--f-t);background:var(--mlha);border-radius:10px;padding:14px}
+.zprava .pozn{font-size:14px;color:var(--tx2)}
+.volba{display:flex;gap:8px;flex-wrap:wrap}
+.volba label{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:2px solid var(--linka);border-radius:999px;cursor:pointer;font-size:15px;font-weight:500;background:var(--bila)}
+.volba label:has(input:checked){border-color:var(--bridlice);background:#E3E7EF}
+.volba input{accent-color:var(--bridlice)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sluzby>div{display:grid;gap:10px;align-content:start;padding-top:18px;border-top:2px solid var(--bridlice)}
+.sluzby p{color:var(--tx2)}
+.sluzby svg{width:48px;height:48px}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:k}
+.kroky>div{background:var(--bila);border-radius:18px;padding:22px;display:grid;gap:8px}
+.kroky>div::before{counter-increment:k;content:counter(k) ".";font:400 44px/1 var(--f-d);color:var(--med-tx)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.medaile{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--bridlice);color:#fff;border-radius:18px;padding:22px}
+.medaile svg{width:84px;height:84px}
+.medaile b{font:400 30px var(--f-d);display:block}
+.medaile a{color:#fff}
+.duvera{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.duvera li{background:var(--bila);border-radius:12px;padding:12px 16px}
+.duvera b{display:block}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{cursor:pointer;font-weight:700;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.fotky div{width:100%;aspect-ratio:4/5;border-radius:120px 120px 16px 16px;border:2px dashed #9AA4B8;display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:15px;padding:12px;background:var(--bila)}
+.kontakt{background:var(--bridlice-tm);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:#B8C0D0}
+.kontakt dd{margin:0;font-weight:500}
+.mapa{background:var(--bridlice);border-radius:18px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+.mapa .btn{background:var(--broskev);color:var(--tx)}
+footer{background:#1F2633;color:#B8C0D0;font-size:14px;padding-block:24px 100px}
+.mobil{display:none}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:28px 36px;gap:20px}
+  .tyden-il{justify-self:center;max-width:300px;order:-1;display:none}
+  .ro,.sluzby,.kroky,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .dny{gap:6px}
+  .den{padding:10px 2px;min-height:120px}
+  .den b{font-size:24px}
+  .den svg{width:32px;height:32px}
+  .den span{font-size:12px}
+  .fotky{grid-template-columns:repeat(3,1fr);gap:8px}
+  .fotky div{font-size:12px;padding:6px}
+  section{padding-block:48px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;inset:auto 0 0 0;z-index:30;background:var(--bila);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:480px){.hero .akce .btn{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Kadeřnictví Nikol Binarová</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top">Nikol Binarová<small>dámské kadeřnictví</small></a>
+    <a class="btn btn-hl" href="tel:+420737475842" aria-label="Zavolat 737 475 842">☎ <span>737 475 842</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kde">Ostrava-Poruba · Ivana Sekaniny 9</div>
+      <h1>Klidná hodina jen <em>pro Vaše vlasy</em></h1>
+      <p class="lead">Dámské kadeřnictví v Porubě, kde se chodí na objednání. Žádná fronta, žádný spěch – čas máte rezervovaný jen pro sebe.</p>
+      <div class="akce">
+        <a class="btn btn-hl" href="tel:+420737475842">Objednat se: 737 475 842</a>
+        <a class="btn btn-ob" href="#rozvrh">Kdy stříhám?</a>
+      </div>
+      <p class="poz">Po a Pá dopoledne · Út–Čt odpoledne</p>
+    </div>
+    <svg class="tyden-il" viewBox="0 0 480 380" role="img" aria-label="Ilustrace: týden, dopoledne slunce, odpoledne měsíc">
+      <rect x="10" y="20" width="460" height="340" rx="28" fill="#EEF0F4"/>
+      <g font-family="Instrument Serif,Georgia,serif" font-size="30" fill="#222A38" text-anchor="middle">
+        <text x="70" y="78">Po</text><text x="155" y="78">Út</text><text x="240" y="78">St</text><text x="325" y="78">Čt</text><text x="410" y="78">Pá</text>
+      </g>
+      <g>
+        <rect x="35" y="100" width="70" height="230" rx="35" fill="#FBE8DB"/><circle cx="70" cy="150" r="22" fill="#C9783F"/>
+        <rect x="120" y="100" width="70" height="230" rx="35" fill="#3E4A61"/><path d="M168 260a24 24 0 1 1-20-34 18 18 0 0 0 20 34z" fill="#F4C7A8"/>
+        <rect x="205" y="100" width="70" height="230" rx="35" fill="#3E4A61"/><path d="M253 260a24 24 0 1 1-20-34 18 18 0 0 0 20 34z" fill="#F4C7A8"/>
+        <rect x="290" y="100" width="70" height="230" rx="35" fill="#3E4A61"/><path d="M338 260a24 24 0 1 1-20-34 18 18 0 0 0 20 34z" fill="#F4C7A8"/>
+        <rect x="375" y="100" width="70" height="230" rx="35" fill="#FBE8DB"/><circle cx="410" cy="150" r="22" fill="#C9783F"/>
+      </g>
+      <g stroke="#C9783F" stroke-width="3" stroke-linecap="round"><path d="M70 116v-8M70 192v-8M36 150h8M96 150h8M410 116v-8M410 192v-8M376 150h8M436 150h8"/></g>
+    </svg>
+  </div>
+</div>
+
+<section class="rozvrh" id="rozvrh">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Dopoledne, <em>nebo odpoledne?</em></h2>
+      <p>Stříhám v pondělí a v pátek dopoledne, od úterý do čtvrtka odpoledne. Klepněte na den, který se Vám hodí – napíšu se Vám zpátky s konkrétním časem.</p>
+    </div>
+    <div class="ro">
+      <div>
+        <div class="dny" role="group" aria-label="Vyberte den">
+          <button class="den" type="button" data-d="pondělí" data-c="dopoledne" aria-pressed="false"><b>Po</b><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="10" fill="#C9783F"/><path d="M22 4v6M22 34v6M4 22h6M34 22h6" stroke="#C9783F" stroke-width="3" stroke-linecap="round"/></svg><span>dopoledne</span></button>
+          <button class="den" type="button" data-d="úterý" data-c="odpoledne" aria-pressed="true"><b>Út</b><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M30 32a14 14 0 1 1-12-22 11 11 0 0 0 12 22z" fill="#F4C7A8"/></svg><span>odpoledne</span></button>
+          <button class="den" type="button" data-d="středa" data-c="odpoledne" aria-pressed="false"><b>St</b><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M30 32a14 14 0 1 1-12-22 11 11 0 0 0 12 22z" fill="#F4C7A8"/></svg><span>odpoledne</span></button>
+          <button class="den" type="button" data-d="čtvrtek" data-c="odpoledne" aria-pressed="false"><b>Čt</b><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M30 32a14 14 0 1 1-12-22 11 11 0 0 0 12 22z" fill="#F4C7A8"/></svg><span>odpoledne</span></button>
+          <button class="den" type="button" data-d="pátek" data-c="dopoledne" aria-pressed="false"><b>Pá</b><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="10" fill="#C9783F"/><path d="M22 4v6M22 34v6M4 22h6M34 22h6" stroke="#C9783F" stroke-width="3" stroke-linecap="round"/></svg><span>dopoledne</span></button>
+        </div>
+        <p style="margin-top:18px;font-weight:700">Co si přejete?</p>
+        <div class="volba" id="co" style="margin-top:8px">
+          <label><input type="radio" name="co" value="stříhání" checked> stříhání</label>
+          <label><input type="radio" name="co" value="barvení"> barvení</label>
+          <label><input type="radio" name="co" value="poradit, co s vlasy"> nevím, poraďte</label>
+        </div>
+      </div>
+      <div class="zprava" aria-live="polite">
+        <span class="hl">Vaše SMS</span>
+        <pre id="txt"></pre>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn btn-hl" id="sms" href="sms:+420737475842">Poslat SMS</a><a class="btn btn-ob" href="tel:+420737475842">Zavolat</a></div>
+        <p class="pozn">Přesný čas Vám potvrdím zpátky. Svátky a dovolenou domluvíme po telefonu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod"><h2>Péče o vlasy, <em>bez spěchu</em></h2><p>Dámské kadeřnické služby na objednávku. Přesnou nabídku a ceny Vám ráda řeknu po telefonu.</p></div>
+    <div class="sluzby">
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="14" cy="36" r="7" fill="none" stroke="#3E4A61" stroke-width="3"/><circle cx="34" cy="36" r="7" fill="none" stroke="#3E4A61" stroke-width="3"/><path d="M18 31 36 6M30 31 12 6" stroke="#C9783F" stroke-width="3" stroke-linecap="round"/></svg><h3>Stříhání</h3><p>Střih podle tvaru obličeje a toho, jak se o vlasy doma staráte. <span class="stitek">ukázkový text</span></p></div>
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="18" width="20" height="24" rx="5" fill="#3E4A61"/><rect x="14" y="10" width="12" height="10" rx="3" fill="#F4C7A8"/><path d="M36 8v30" stroke="#C9783F" stroke-width="4" stroke-linecap="round"/></svg><h3>Barvení</h3><p>Odstín vybereme spolu před začátkem. <span class="stitek">ukázkový text</span></p></div>
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c10 0 16 8 16 18 0 12-8 18-16 18S8 36 8 24C8 14 14 6 24 6z" fill="#FBE8DB" stroke="#3E4A61" stroke-width="3"/><path d="M16 22h16M16 30h10" stroke="#C9783F" stroke-width="3" stroke-linecap="round"/></svg><h3>Poradenství</h3><p>Co s vlasy dál? Probereme to v klidu u křesla. <span class="stitek">ukázkový text</span></p></div>
+    </div>
+    <p style="margin-top:24px">Cenu Vám řeknu předem. <a href="tel:+420737475842">737 475 842</a></p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><h3>Ozvete se</h3><p>Zavolejte nebo pošlete SMS s dnem, který se Vám hodí.</p></div>
+      <div><h3>Domluvíme čas</h3><p>Dopoledne v Po a Pá, odpoledne v Út–Čt.</p></div>
+      <div><h3>Přijdete na svou hodinu</h3><p>Bez čekání. Čas je jen Váš.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Moje práce</h2></div>
+    <div class="fotky"><div>Sem přijde vaše fotka<br>(střih)</div><div>Sem přijde vaše fotka<br>(barva)</div><div>Sem přijde vaše fotka<br>(salon)</div></div>
+  </div>
+</section>
+
+<section style="background:var(--bila)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:20px">Proč ke mně</h2>
+      <div class="medaile">
+        <svg viewBox="0 0 84 84" aria-hidden="true"><path d="M28 4h28l-8 26H36z" fill="#C9783F"/><circle cx="42" cy="52" r="26" fill="#F4C7A8"/><circle cx="42" cy="52" r="19" fill="none" stroke="#3E4A61" stroke-width="2"/><text x="42" y="62" text-anchor="middle" font-family="Instrument Serif,Georgia,serif" font-size="30" fill="#2B3446">8.</text></svg>
+        <div><b>8. místo</b>v žebříčku dámských kadeřnictví v Ostravě na Firmy.cz. Zákazníci chválí profesionální péči. <a href="https://www.firmy.cz/detail/2034346-kadernictvi-nikol-binarova-ostrava-poruba.html" target="_blank" rel="noopener">Profil na Firmy.cz</a></div>
+      </div>
+      <ul class="duvera">
+        <li><b>Jen na objednávku</b>Žádné čekání ve frontě.</li>
+        <li><b>Živnostnice, IČO 65490215</b>Ivana Sekaniny 1801/9, Ostrava-Poruba</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Musím se objednat?</summary><p>Ano, stříhám jen na objednávku. Zavolejte nebo pošlete SMS na 737 475 842.</p></details>
+      <details><summary>Kdy stříháte?</summary><p>V pondělí a v pátek dopoledne, v úterý, ve středu a ve čtvrtek odpoledne. Přesný čas domluvíme.</p></details>
+      <details><summary>Kolik to bude stát?</summary><p>Záleží na délce vlasů a na tom, co si přejete. Cenu řeknu předem.</p></details>
+      <details><summary>Stříháte i pány?</summary><p>Jsem dámské kadeřnictví. Na ostatní se zeptejte po telefonu.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420737475842">737 475 842</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:binarovanikol@seznam.cz">binarovanikol@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Ivana Sekaniny 1801/9, Ostrava-Poruba</dd>
+        <dt>Kdy</dt><dd>Po a Pá dopoledne<br>Út–Čt odpoledne<br>jen na objednávku</dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="14" fill="#2B3446"/><path d="M0 90C80 70 160 110 300 80M90 0 120 150M220 0 190 150" stroke="#55627D" stroke-width="6" fill="none"/><circle cx="150" cy="88" r="11" fill="#F4C7A8"/><circle cx="150" cy="88" r="24" fill="none" stroke="#F4C7A8" stroke-width="2" opacity=".6"/></svg>
+      <a class="btn" href="https://mapy.cz/zakladni?q=Ivana%20Sekaniny%201801%2F9%20Ostrava-Poruba" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Kadeřnictví Nikol Binarová · Ivana Sekaniny 1801/9, Ostrava-Poruba · IČO 65490215 · 737 475 842</div></footer>
+<div class="mobil"><a class="btn btn-hl" href="tel:+420737475842">Zavolat</a><a class="btn btn-ob" href="#rozvrh">Kdy stříhám?</a></div>
+
+<script>
+(function(){
+  var dny=document.querySelectorAll('.den'),sel=dny[1];
+  function upd(){
+    var co=document.querySelector('input[name=co]:checked').value;
+    var t='Dobrý den, chtěla bych se objednat na '+co+'. Hodilo by se mi '+sel.dataset.d+' '+sel.dataset.c+'. Jaký čas byste měla volný? Děkuji.';
+    document.getElementById('txt').textContent=t;
+    document.getElementById('sms').href='sms:+420737475842?body='+encodeURIComponent(t);
+  }
+  [].forEach.call(dny,function(b){b.addEventListener('click',function(){[].forEach.call(dny,function(x){x.setAttribute('aria-pressed',x===b)});sel=b;upd()})});
+  document.getElementById('co').addEventListener('change',upd);
+  upd();
+})();
+</script>
+</body>
+</html>

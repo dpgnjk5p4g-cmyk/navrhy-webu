@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kadeřnictví Frýdek-Místek od 7 ráno | Kadeřnictví Barbora Mohylová</title>
+<meta name="description" content="Kadeřnictví Barbora Mohylová, 8. pěšího pluku 2380, Frýdek-Místek: dámské, pánské a dětské kadeřnictví, melír, prodej vlasové kosmetiky. Po–Pá 7–18, tel. 608 777 838.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Urbanist:wght@400;600;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Kadeřnictví Barbora Mohylová","description":"Dámské, pánské a dětské kadeřnictví a prodej vlasové kosmetiky ve Frýdku-Místku.","telephone":"+420608777838","email":"baramohylova@seznam.cz","taxID":"65881281","address":{"@type":"PostalAddress","streetAddress":"8. pěšího pluku 2380","addressLocality":"Frýdek-Místek","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"}]}</script>
+<style>
+/* Barbora Mohylová: rodinné kadeřnictví, které otevírá v 7. Hero = karta přes ranní oblohu s vycházejícím sluncem, výrazný prvek = „Rodinný den u kadeřnice“: oblouk dne 7–18, kam přetáhnete příchod, a seznam kdo + co → SMS. */
+:root{
+  --nebe:#2F6FB3; --nebe-tm:#1F4F86;
+  --slunce:#FFB547; --slunce-sv:#FFE7BF;
+  --mrak:#F4F8FC; --bila:#FFFFFF;
+  --broskev:#F58A5B; --broskev-tx:#B04A1E;
+  --tx:#17283D; --tx2:#4A5B70; --linka:#D7E2EE;
+  --f-d:"Sniglet","Comic Sans MS",system-ui,sans-serif; --f-t:"Urbanist","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--mrak);color:var(--tx);font:17px/1.55 var(--f-t)}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{margin:0;line-height:1.1}
+h1,h2{font-family:var(--f-d);font-weight:800}
+h2{font-size:clamp(30px,4.6vw,46px);color:var(--nebe-tm)}
+h3{font-size:20px;font-weight:800}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--broskev);outline-offset:2px}
+.navrh{background:var(--tx);color:#fff;text-align:center;font-size:14px;padding:8px 12px}
+.stitek{display:inline-block;font:800 11px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;background:#FFF0B8;color:#6B5200;border:1px solid #E5CB6A;border-radius:4px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.lista{position:sticky;top:0;z-index:20;background:var(--bila);border-bottom:1px solid var(--linka)}
+.lista .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 19px var(--f-d);line-height:1.1}
+.znacka small{display:block;font:600 12px var(--f-t);color:var(--tx2);letter-spacing:.06em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:16px;font:800 17px var(--f-t);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-hl{background:var(--broskev);color:#2A1206}
+.btn-hl:hover{background:#F79D74}
+.btn-ob{border-color:var(--nebe);color:var(--nebe-tm);background:var(--bila)}
+.btn-ob:hover{background:var(--mrak)}
+.lista .btn{min-height:42px;padding:0 14px;font-size:16px}
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#FFD7A8 0%,#FFE9CC 45%,#E6F1FB 100%);padding-block:56px 64px}
+.hero .obloha{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative}
+.karta{background:var(--bila);border-radius:28px;padding:34px;max-width:600px;box-shadow:0 18px 40px rgba(23,40,61,.12)}
+.karta .kde{display:inline-flex;gap:8px;align-items:center;background:var(--slunce-sv);color:var(--broskev-tx);font-weight:800;font-size:14px;padding:6px 12px;border-radius:999px}
+.karta h1{font-size:clamp(38px,6vw,64px);margin:14px 0;color:var(--tx)}
+.karta h1 span{color:var(--broskev-tx)}
+.karta p{font-size:19px;color:var(--tx2)}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hodinky{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.hodinky span{background:var(--mrak);border-radius:12px;padding:8px 12px;font-weight:600;font-size:15px}
+section{padding-block:64px}
+.uvod{max-width:660px;margin-bottom:30px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sluzby>div{background:var(--bila);border-radius:24px;padding:22px;display:grid;gap:10px;align-content:start;border:2px solid var(--linka)}
+.sluzby svg{width:60px;height:60px}
+.sluzby p{color:var(--tx2);font-size:16px}
+.cena{margin-top:20px}
+/* den */
+.den{background:var(--bila);border-block:1px solid var(--linka)}
+.dd{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.oblouk{background:linear-gradient(180deg,#FFF4E2,#EAF3FC);border-radius:24px;padding:16px 16px 20px;border:1px solid var(--linka)}
+.oblouk svg{width:100%;height:auto;display:block;touch-action:none}
+.oblouk input{width:100%;accent-color:var(--broskev);margin-top:6px;height:32px}
+.cas{font:800 34px var(--f-d);color:var(--nebe-tm);text-align:center}
+.kdo{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.kdo label{display:grid;justify-items:center;gap:6px;padding:12px 6px;border:2px solid var(--linka);border-radius:18px;cursor:pointer;font-weight:800;background:var(--mrak);text-align:center}
+.kdo label:has(input:checked){border-color:var(--broskev);background:var(--slunce-sv)}
+.kdo input{accent-color:var(--broskev)}
+.kdo svg{width:40px;height:40px}
+.co{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.co label{display:inline-flex;gap:6px;align-items:center;padding:8px 12px;border:2px solid var(--linka);border-radius:999px;cursor:pointer;font-weight:600;font-size:15px;background:var(--bila)}
+.co label:has(input:checked){border-color:var(--nebe);background:#E3EEF9}
+.co input{accent-color:var(--nebe)}
+.listek{background:var(--mrak);border-radius:24px;padding:22px;display:grid;gap:14px;border:2px dashed var(--nebe)}
+.listek .hl{font:800 22px var(--f-d);color:var(--nebe-tm)}
+.listek pre{margin:0;white-space:pre-wrap;font:16px/1.5 var(--f-t)}
+.listek .pozn{font-size:14px;color:var(--tx2)}
+.lbl{font-weight:800;margin-top:18px}
+/* kosmetika */
+.police{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.police svg{width:100%;height:auto;max-width:440px}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:k}
+.kroky>div{background:var(--bila);border-radius:24px;padding:22px;display:grid;gap:8px}
+.kroky>div::before{counter-increment:k;content:counter(k);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--slunce);font:800 24px var(--f-d)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{background:var(--bila);border-radius:18px;padding:14px 16px;border:2px solid var(--linka)}
+.duvera b{display:block}
+.duvera li.vyr{background:var(--nebe);color:#fff;border-color:var(--nebe)}
+.duvera li.vyr a{color:#fff}
+details{border-bottom:2px solid var(--linka);padding-block:14px}
+summary{cursor:pointer;font-weight:800;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.fotky div{width:100%;aspect-ratio:4/3;border-radius:24px;border:2px dashed #9DB8D6;display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:15px;padding:10px;background:var(--bila)}
+.kontakt{background:var(--nebe-tm);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt h2{color:#fff}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:#BCD3EC}
+.kontakt dd{margin:0;font-weight:600}
+.mapa{background:var(--nebe);border-radius:24px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:#132F50;color:#BCD3EC;font-size:14px;padding-block:24px 100px}
+.mobil{display:none}
+@media (max-width:860px){
+  .hero{padding-block:24px 36px}
+  .karta{padding:22px}
+  .sluzby{grid-template-columns:1fr 1fr}
+  .dd,.police,.kroky,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .police svg{max-width:300px;justify-self:center}
+  .fotky{grid-template-columns:1fr 1fr}
+  .fotky div:last-child{grid-column:1/-1;aspect-ratio:16/7}
+  section{padding-block:48px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;inset:auto 0 0 0;z-index:30;background:var(--bila);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:480px){.sluzby{grid-template-columns:1fr}.karta .akce .btn{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Kadeřnictví Barbora Mohylová</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="22" r="10" fill="#FFB547"/><path d="M17 4v5M5 10l3 3M29 10l-3 3" stroke="#F58A5B" stroke-width="3" stroke-linecap="round"/><rect x="0" y="24" width="34" height="10" fill="#fff"/></svg><span>Barbora Mohylová<small>kadeřnictví Místek</small></span></a>
+    <a class="btn btn-hl" href="tel:+420608777838" aria-label="Zavolat 608 777 838">☎ <span>608 777 838</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <svg class="obloha" viewBox="0 0 1200 520" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+    <circle cx="960" cy="420" r="150" fill="#FFB547"/>
+    <circle cx="960" cy="420" r="200" fill="#FFB547" opacity=".25"/>
+    <g fill="#fff" opacity=".9"><ellipse cx="820" cy="150" rx="90" ry="28"/><ellipse cx="880" cy="130" rx="60" ry="30"/><ellipse cx="1100" cy="220" rx="80" ry="24"/></g>
+    <path d="M0 470C200 430 400 500 640 460S1000 420 1200 450V520H0z" fill="#E6F1FB"/>
+  </svg>
+  <div class="wrap">
+    <div class="karta">
+      <span class="kde">☀ Frýdek-Místek · otevřeno už od 7:00</span>
+      <h1>Ostříhaná <span>ještě před prací</span></h1>
+      <p>Rodinné kadeřnictví v Místku pro dámy, pány i děti. Otevíráme v sedm ráno a máme do šesti večer – vejdete se, i když se Vám den zrovna nevejde.</p>
+      <div class="akce">
+        <a class="btn btn-hl" href="tel:+420608777838">Objednat se: 608 777 838</a>
+        <a class="btn btn-ob" href="#den">Naplánovat rodinu</a>
+      </div>
+      <div class="hodinky"><span>Po–Pá 7:00–18:00</span><span>8. pěšího pluku 2380</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod"><h2>Jedno kadeřnictví pro celou rodinu</h2><p>Mámu, tátu i děti ostříháme na jeden zátah. A šampon, který Vám sedí, si odnesete rovnou s sebou.</p></div>
+    <div class="sluzby">
+      <div><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M10 50c0-30 40-30 40 0z" fill="#2F6FB3"/><circle cx="30" cy="28" r="13" fill="#FFE7BF"/><path d="M16 26c2-14 26-14 28 0-8-6-20-6-28 0z" fill="#2F6FB3"/></svg><h3>Dámské</h3><p>Střih, foukaná, barva – podle toho, co zrovna potřebujete.</p></div>
+      <div><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="28" r="14" fill="#FFE7BF"/><path d="M16 24c2-12 26-12 28 0-6-4-22-4-28 0z" fill="#17283D"/><path d="M10 60c0-12 9-18 20-18s20 6 20 18" fill="#17283D"/></svg><h3>Pánské</h3><p>Rychlý pánský střih, klidně cestou do práce.</p></div>
+      <div><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="32" r="12" fill="#FFE7BF"/><path d="M18 30c1-11 23-11 24 0-6-4-18-4-24 0z" fill="#F58A5B"/><circle cx="16" cy="26" r="5" fill="#F58A5B"/><circle cx="44" cy="26" r="5" fill="#F58A5B"/></svg><h3>Dětské</h3><p>Pro malé zákazníky i školáky.</p></div>
+      <div><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M14 6c0 22 6 36 10 48M26 6c0 22 4 36 6 48M38 6c0 22 2 36 3 48" stroke="#17283D" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M26 6c0 22 4 36 6 48" stroke="#FFB547" stroke-width="6" fill="none" stroke-linecap="round"/></svg><h3>Melír</h3><p>Zákaznice o něm píšou, že je nejlepší, jaký kdy měly.</p></div>
+    </div>
+    <p class="cena">Cenu Vám řekneme předem – zákaznice v hodnoceních chválí i ji. <a href="tel:+420608777838">608 777 838</a></p>
+  </div>
+</section>
+
+<section class="den" id="den">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Rodinný den u kadeřnice</h2>
+      <p>Posuňte sluníčko na čas, kdy byste přišli, a vyberte, koho vezmete a co chcete. Zpráva se napíše sama – stačí ji poslat.</p>
+    </div>
+    <div class="dd">
+      <div>
+        <div class="oblouk">
+          <svg id="arc" viewBox="0 0 400 210" role="img" aria-label="Oblouk pracovního dne od 7 do 18 hodin">
+            <path d="M30 190A170 170 0 0 1 370 190" fill="none" stroke="#D7E2EE" stroke-width="14" stroke-linecap="round"/>
+            <path id="arcFill" d="" fill="none" stroke="#FFB547" stroke-width="14" stroke-linecap="round"/>
+            <g font-family="Urbanist,Arial" font-size="14" font-weight="800" fill="#4A5B70"><text x="22" y="208">7:00</text><text x="350" y="208">18:00</text><text x="183" y="14">12:30</text></g>
+            <g id="sun"><circle r="22" fill="#FFB547"/><circle r="30" fill="#FFB547" opacity=".3"/></g>
+            <rect x="0" y="190" width="400" height="20" fill="transparent"/>
+          </svg>
+          <div class="cas" id="cas" aria-live="polite">8:00</div>
+          <label for="hod" style="position:absolute;left:-9999px">Čas příchodu</label>
+          <input id="hod" type="range" min="420" max="1020" step="30" value="480">
+        </div>
+        <p class="lbl">Kdo půjde</p>
+        <div class="kdo">
+          <label><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 36c0-20 28-20 28 0z" fill="#2F6FB3"/><circle cx="20" cy="18" r="9" fill="#FFE7BF"/></svg><span><input type="checkbox" value="já" checked> já</span></label>
+          <label><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="17" r="9" fill="#FFE7BF"/><path d="M11 15c1-8 17-8 18 0-4-3-14-3-18 0z" fill="#17283D"/><path d="M6 40c0-9 6-13 14-13s14 4 14 13" fill="#17283D"/></svg><span><input type="checkbox" value="partner"> partner</span></label>
+          <label><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="8" fill="#FFE7BF"/><circle cx="11" cy="17" r="4" fill="#F58A5B"/><circle cx="29" cy="17" r="4" fill="#F58A5B"/><path d="M12 20c1-8 15-8 16 0-4-3-12-3-16 0z" fill="#F58A5B"/></svg><span><input type="checkbox" value="dítě" checked> dítě</span></label>
+        </div>
+        <p class="lbl">Co chceme</p>
+        <div class="co" id="co">
+          <label><input type="checkbox" value="stříhání" checked> stříhání</label>
+          <label><input type="checkbox" value="melír"> melír</label>
+          <label><input type="checkbox" value="barvu"> barvu</label>
+          <label><input type="checkbox" value="poradit s kosmetikou"> poradit s kosmetikou</label>
+        </div>
+      </div>
+      <div class="listek" aria-live="polite">
+        <span class="hl">Vaše SMS</span>
+        <pre id="txt"></pre>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn btn-hl" id="sms" href="sms:+420608777838">Poslat SMS</a><a class="btn btn-ob" href="tel:+420608777838">Zavolat</a></div>
+        <p class="pozn">Čas Vám potvrdíme zpátky. Otevřeno Po–Pá 7:00–18:00.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap police">
+    <div>
+      <h2>Kosmetiku si odnesete rovnou</h2>
+      <p style="margin-top:12px;color:var(--tx2)">V salonu prodáváme kadeřnické potřeby a vlasovou kosmetiku. Poradíme, co se hodí právě k Vašim vlasům, ať účes vydrží i doma.</p>
+    </div>
+    <svg viewBox="0 0 440 240" role="img" aria-label="Ilustrace: police s vlasovou kosmetikou">
+      <rect x="10" y="200" width="420" height="14" rx="4" fill="#1F4F86"/>
+      <rect x="40" y="90" width="56" height="110" rx="14" fill="#2F6FB3"/><rect x="54" y="70" width="28" height="24" rx="4" fill="#17283D"/><rect x="48" y="120" width="40" height="40" rx="6" fill="#fff" opacity=".85"/>
+      <rect x="120" y="120" width="70" height="80" rx="10" fill="#F58A5B"/><rect x="130" y="104" width="50" height="18" rx="4" fill="#17283D"/>
+      <rect x="215" y="60" width="44" height="140" rx="22" fill="#FFB547"/><rect x="228" y="36" width="18" height="28" rx="3" fill="#17283D"/><path d="M246 40h18" stroke="#17283D" stroke-width="6"/>
+      <rect x="285" y="110" width="60" height="90" rx="12" fill="#FFE7BF" stroke="#F58A5B" stroke-width="3"/>
+      <rect x="365" y="140" width="46" height="60" rx="23" fill="#2F6FB3"/>
+    </svg>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><h3>Ozvete se</h3><p>SMS nebo telefon. Klidně už v sedm ráno.</p></div>
+      <div><h3>Přijdete celá rodina</h3><p>Ostříháme jednoho po druhém, cenu víte předem.</p></div>
+      <div><h3>Odnesete si i péči</h3><p>Když chcete, poradíme s kosmetikou na doma.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Naše práce</h2></div>
+    <div class="fotky"><div>Sem přijde vaše fotka<br>(melír)</div><div>Sem přijde vaše fotka<br>(dětský střih)</div><div>Sem přijde vaše fotka<br>(salon a kosmetika)</div></div>
+  </div>
+</section>
+
+<section style="background:var(--bila);border-top:1px solid var(--linka)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:20px">Proč k nám</h2>
+      <ul class="duvera">
+        <li class="vyr"><b>„Nejlepší melír, jaký jsem kdy měla“</b>Tak hodnotí zákaznice na Firmy.cz – a chválí i cenu. <a href="https://www.firmy.cz/detail/12802153-kadernictvi-barbora-mohylova-frydek-mistek-mistek.html" target="_blank" rel="noopener">Profil na Firmy.cz</a></li>
+        <li><b>Otevřeno už od 7:00</b>a každý všední den až do 18:00.</li>
+        <li><b>Živnostnice, IČO 65881281</b>8. pěšího pluku 2380, Frýdek-Místek</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Stihnu to před prací?</summary><p>Ve všední dny otevíráme už v 7:00. Domluvte si čas po telefonu nebo SMS.</p></details>
+      <details><summary>Stříháte i děti a pány?</summary><p>Ano, jsme dámské, pánské i dětské kadeřnictví.</p></details>
+      <details><summary>Můžu si u vás koupit šampon?</summary><p>Ano, prodáváme kadeřnické potřeby a vlasovou kosmetiku.</p></details>
+      <details><summary>Kolik to bude stát?</summary><p>Cenu řekneme předem podle délky vlasů a služby.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420608777838">608 777 838</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:baramohylova@seznam.cz">baramohylova@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>8. pěšího pluku 2380, Frýdek-Místek</dd>
+        <dt>Otevřeno</dt><dd>Po–Pá 7:00–18:00</dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="18" fill="#1F4F86"/><path d="M0 60C100 90 200 40 300 70M140 0 160 150" stroke="#3E7CC0" stroke-width="8" fill="none"/><circle cx="150" cy="68" r="12" fill="#FFB547"/><circle cx="150" cy="68" r="24" fill="none" stroke="#FFB547" stroke-width="2" opacity=".6"/></svg>
+      <a class="btn btn-hl" href="https://mapy.cz/zakladni?q=8.%20p%C4%9B%C5%A1%C3%ADho%20pluku%202380%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Kadeřnictví Barbora Mohylová · 8. pěšího pluku 2380, Frýdek-Místek · IČO 65881281 · 608 777 838</div></footer>
+<div class="mobil"><a class="btn btn-hl" href="tel:+420608777838">Zavolat</a><a class="btn btn-ob" href="#den">Naplánovat</a></div>
+
+<script>
+(function(){
+  var cx=200,cy=190,r=170,h=document.getElementById('hod');
+  function pt(v){var a=Math.PI*(1-(v-420)/660);return [cx+r*Math.cos(a),cy-r*Math.sin(a)]}
+  function hm(v){return Math.floor(v/60)+':'+('0'+v%60).slice(-2)}
+  function upd(){
+    var v=+h.value,p=pt(v);
+    document.getElementById('sun').setAttribute('transform','translate('+p[0]+' '+p[1]+')');
+    document.getElementById('arcFill').setAttribute('d','M30 190A170 170 0 0 1 '+p[0].toFixed(1)+' '+p[1].toFixed(1));
+    document.getElementById('cas').textContent=hm(v);
+    var kdo=[].map.call(document.querySelectorAll('.kdo input:checked'),function(e){return e.value});
+    var co=[].map.call(document.querySelectorAll('#co input:checked'),function(e){return e.value});
+    var t;
+    if(!kdo.length)t='Vyberte, kdo půjde.';
+    else{
+      t='Dobrý den, rád(a) bych se objednal(a) ke kadeřnici. Přijde: '+kdo.join(', ')+'.'+(co.length?' Chceme: '+co.join(', ')+'.':'')+' Hodilo by se nám kolem '+hm(v)+'. Který den máte volno? Děkuji.';
+    }
+    document.getElementById('txt').textContent=t;
+    document.getElementById('sms').href='sms:+420608777838?body='+encodeURIComponent(t);
+  }
+  var svg=document.getElementById('arc'),drag=false;
+  function fromEv(e){var b=svg.getBoundingClientRect(),x=(e.clientX-b.left)/b.width*400,y=(e.clientY-b.top)/b.height*210;var a=Math.atan2(cy-y,x-cx);a=Math.max(0,Math.min(Math.PI,a<-Math.PI/2?Math.PI:a));var v=420+(1-a/Math.PI)*660;h.value=Math.round(v/30)*30;upd()}
+  svg.addEventListener('pointerdown',function(e){drag=true;svg.setPointerCapture(e.pointerId);fromEv(e)});
+  svg.addEventListener('pointermove',function(e){if(drag)fromEv(e)});
+  svg.addEventListener('pointerup',function(){drag=false});
+  h.addEventListener('input',upd);
+  [].forEach.call(document.querySelectorAll('.kdo input,#co input'),function(i){i.addEventListener('change',upd)});
+  upd();
+})();
+</script>
+</body>
+</html>

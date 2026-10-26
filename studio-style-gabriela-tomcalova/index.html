@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Svatební a společenské účesy Ostrava-Vítkovice | Studio Style – Gabriela Tomčalová</title>
+<meta name="description" content="Studio Style – Gabriela Tomčalová, Mírová 163/29, Ostrava-Vítkovice: stříhání, barvení, melírování, svatební a společenské účesy, poradenství v péči o vlasy. Po, Út, Čt, Pá 8–16, St 8–12. Tel. 776 097 443.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bellefair&family=Mulish:wght@400;600;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Studio Style – Gabriela Tomčalová","description":"Kadeřnické studio v Ostravě-Vítkovicích: stříhání, barvení, melírování, svatební a společenské účesy.","telephone":"+420776097443","email":"tomcalova01@seznam.cz","taxID":"73815004","address":{"@type":"PostalAddress","streetAddress":"Mírová 163/29","addressLocality":"Ostrava-Vítkovice","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"08:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"08:00","closes":"12:00"}]}</script>
+<style>
+/* Studio Style: klidná elegance pro velké dny. Hero = svatební oznámení (papírová karta s ražbou) přes šalvějovou plochu, výrazný prvek = „Kdy máte svůj den?“ – datum akce → odpočet a plán zkoušky účesu a barvy, který složí SMS. */
+:root{
+  --salvej:#7D9C8A; --salvej-tm:#4E6B5B; --salvej-sv:#E3ECE6;
+  --slonovina:#FBF8F1; --papir:#FFFDF8;
+  --meruzalka:#C4797A; --meruzalka-tx:#9B4F51;
+  --tx:#26302B; --tx2:#56615B; --linka:#DDE3DD;
+  --f-d:"Bellefair",Garamond,Georgia,serif; --f-t:"Mulish","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--slonovina);color:var(--tx);font:17px/1.6 var(--f-t)}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{margin:0;font-weight:400;line-height:1.1}
+h1,h2{font-family:var(--f-d)}
+h2{font-size:clamp(34px,5vw,52px)}
+h3{font-size:19px;font-weight:800}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--meruzalka);outline-offset:2px}
+.navrh{background:var(--salvej-tm);color:#fff;text-align:center;font-size:14px;padding:8px 12px}
+.stitek{display:inline-block;font:800 11px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;background:#FFF0B8;color:#6B5200;border:1px solid #E5CB6A;border-radius:4px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.lista{position:sticky;top:0;z-index:20;background:var(--slonovina);border-bottom:1px solid var(--linka)}
+.lista .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.znacka{text-decoration:none;font:400 26px var(--f-d);line-height:1;letter-spacing:.04em}
+.znacka small{display:block;font:600 12px var(--f-t);letter-spacing:.14em;text-transform:uppercase;color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font:800 16px var(--f-t);letter-spacing:.04em;text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-hl{background:var(--salvej-tm);color:#fff}
+.btn-hl:hover{background:#3E5749}
+.btn-ob{border-color:var(--salvej-tm);color:var(--salvej-tm);background:transparent}
+.btn-ob:hover{background:var(--salvej-sv)}
+.lista .btn{min-height:42px;padding:0 14px;font-size:15px}
+.hero{background:var(--salvej);padding-block:56px;position:relative;overflow:hidden}
+.hero svg.vetvicka{position:absolute;width:340px;opacity:.35;pointer-events:none}
+.hero svg.v1{left:-60px;top:-40px;transform:rotate(20deg)}
+.hero svg.v2{right:-60px;bottom:-60px;transform:rotate(200deg)}
+.oznameni{position:relative;max-width:620px;margin:0 auto;background:var(--papir);padding:clamp(28px,5vw,52px);text-align:center;box-shadow:0 20px 50px rgba(38,48,43,.25);outline:1px solid var(--linka);outline-offset:-14px}
+.oznameni .kde{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--tx2)}
+.oznameni h1{font-size:clamp(40px,6.5vw,68px);margin:14px 0 6px}
+.oznameni .amp{font:400 34px var(--f-d);color:var(--meruzalka-tx);display:block;margin:4px 0}
+.oznameni p.lead{font-size:18px;color:var(--tx2);max-width:28em;margin:14px auto 0}
+.oddel{display:flex;align-items:center;gap:12px;justify-content:center;margin:20px auto 0;color:var(--meruzalka)}
+.oddel::before,.oddel::after{content:"";height:1px;width:60px;background:var(--linka)}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;justify-content:center}
+.oznameni .doba{margin-top:16px;font-size:15px;color:var(--tx2)}
+section{padding-block:68px}
+.uvod{max-width:640px;margin-bottom:32px;display:grid;gap:12px}
+.uvod p{color:var(--tx2)}
+.uvod.st{margin-inline:auto;text-align:center}
+/* den D */
+.denD{background:var(--papir);border-block:1px solid var(--linka)}
+.dd{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:start}
+.formular{display:grid;gap:18px}
+.formular label{font-weight:800;display:block;margin-bottom:6px}
+.formular input[type=date]{width:100%;min-height:48px;font:600 17px var(--f-t);padding:0 12px;border:1.5px solid var(--linka);border-radius:10px;background:var(--slonovina);color:var(--tx)}
+.typy{display:flex;flex-wrap:wrap;gap:8px}
+.typy label{margin:0;display:inline-flex;gap:6px;align-items:center;padding:8px 14px;border:1.5px solid var(--linka);border-radius:999px;cursor:pointer;font-weight:600;font-size:15px;background:var(--slonovina)}
+.typy label:has(input:checked){border-color:var(--salvej-tm);background:var(--salvej-sv)}
+.typy input{accent-color:var(--salvej-tm)}
+.odpocet{text-align:center;padding:18px;border-radius:14px;background:var(--salvej-sv)}
+.odpocet b{display:block;font:400 64px/1 var(--f-d);color:var(--salvej-tm)}
+.odpocet span{color:var(--tx2)}
+.osa{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.osa::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:2px;background:var(--linka)}
+.osa li{position:relative;padding:0 0 18px 46px}
+.osa li::before{content:"";position:absolute;left:6px;top:4px;width:20px;height:20px;border-radius:50%;background:var(--papir);border:2px solid var(--salvej)}
+.osa li.hl::before{background:var(--meruzalka);border-color:var(--meruzalka)}
+.osa li.pryc{opacity:.45}
+.osa b{display:block}
+.osa small{color:var(--tx2);font-size:15px}
+.sms{background:var(--slonovina);border:1px dashed var(--salvej-tm);border-radius:12px;padding:16px;white-space:pre-wrap;font-size:16px}
+.pozn{font-size:14px;color:var(--tx2)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--tx);border-bottom:1px solid var(--tx)}
+.sluzby>div{padding:24px 16px;display:grid;gap:10px;align-content:start;justify-items:center;text-align:center;border-left:1px solid var(--linka)}
+.sluzby>div:first-child{border-left:0}
+.sluzby svg{width:48px;height:48px}
+.sluzby p{color:var(--tx2);font-size:15px}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:k}
+.kroky>div{display:grid;gap:8px;text-align:center;justify-items:center}
+.kroky>div::before{counter-increment:k;content:counter(k,upper-roman);font:400 40px/1 var(--f-d);color:var(--meruzalka-tx)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{background:var(--papir);padding:14px 18px;border:1px solid var(--linka)}
+.duvera b{display:block;font:400 22px var(--f-d)}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{cursor:pointer;font-weight:800;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;align-items:start}
+.fotky div{width:100%;aspect-ratio:3/4;display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:15px;padding:12px;background:var(--papir);border:1px solid var(--linka);outline:1px dashed var(--salvej);outline-offset:-10px}
+.fotky div:nth-child(2){aspect-ratio:4/4.2}
+.rozvrh{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:18px}
+.rozvrh div{background:var(--salvej-tm);color:#fff;border-radius:8px;padding:10px 4px;text-align:center;font-size:14px}
+.rozvrh div b{display:block;font:400 22px var(--f-d)}
+.rozvrh div.kr{background:var(--meruzalka)}
+.kontakt{background:var(--salvej-tm);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt .wrap>*{min-width:0}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:#D3E0D8}
+.kontakt dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.mapa{background:#3E5749;border-radius:14px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+.mapa .btn{background:var(--papir);color:var(--salvej-tm)}
+footer{background:#33473C;color:#D3E0D8;font-size:14px;padding-block:24px 100px}
+.mobil{display:none}
+@media (max-width:860px){
+  .hero{padding-block:28px 36px}
+  .hero svg.vetvicka{width:200px}
+  .oznameni{outline-offset:-8px}
+  .dd,.kroky,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .sluzby{grid-template-columns:1fr 1fr}
+  .sluzby>div{border-left:0;border-top:1px solid var(--linka)}
+  .sluzby>div:last-child{grid-column:1/-1}
+  .fotky{grid-template-columns:1fr 1fr}
+  .fotky div:nth-child(2){grid-column:1/-1;order:-1;aspect-ratio:16/10}
+  section{padding-block:48px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;inset:auto 0 0 0;z-index:30;background:var(--slonovina);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:480px){.oznameni .akce .btn{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Studio Style – Gabriela Tomčalová</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top">Studio Style<small>Gabriela Tomčalová</small></a>
+    <a class="btn btn-hl" href="tel:+420776097443" aria-label="Zavolat 776 097 443">☎ <span>776 097 443</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <svg class="vetvicka v1" viewBox="0 0 300 300" aria-hidden="true"><path d="M20 280C100 200 160 120 280 20" stroke="#E3ECE6" stroke-width="4" fill="none"/><g fill="#E3ECE6"><ellipse cx="80" cy="210" rx="30" ry="12" transform="rotate(-50 80 210)"/><ellipse cx="120" cy="190" rx="30" ry="12" transform="rotate(20 120 190)"/><ellipse cx="150" cy="130" rx="30" ry="12" transform="rotate(-50 150 130)"/><ellipse cx="190" cy="110" rx="30" ry="12" transform="rotate(20 190 110)"/><ellipse cx="220" cy="60" rx="30" ry="12" transform="rotate(-50 220 60)"/></g></svg>
+  <svg class="vetvicka v2" viewBox="0 0 300 300" aria-hidden="true"><path d="M20 280C100 200 160 120 280 20" stroke="#E3ECE6" stroke-width="4" fill="none"/><g fill="#E3ECE6"><ellipse cx="80" cy="210" rx="30" ry="12" transform="rotate(-50 80 210)"/><ellipse cx="120" cy="190" rx="30" ry="12" transform="rotate(20 120 190)"/><ellipse cx="150" cy="130" rx="30" ry="12" transform="rotate(-50 150 130)"/><ellipse cx="190" cy="110" rx="30" ry="12" transform="rotate(20 190 110)"/></g></svg>
+  <div class="wrap">
+    <div class="oznameni">
+      <div class="kde">Ostrava-Vítkovice · Mírová 29</div>
+      <h1>Studio Style<span class="amp">&amp;</span>Váš velký den</h1>
+      <p class="lead">Svatební a společenské účesy, stříhání, barvení a melír. Kadeřnické studio Gabriely Tomčalové ve Vítkovicích.</p>
+      <div class="oddel" aria-hidden="true">✿</div>
+      <div class="akce">
+        <a class="btn btn-hl" href="tel:+420776097443">Objednat se: 776 097 443</a>
+        <a class="btn btn-ob" href="#den">Kdy máte svůj den?</a>
+      </div>
+      <p class="doba">Po, Út, Čt, Pá 8–16 · St 8–12</p>
+    </div>
+  </div>
+</div>
+
+<section class="denD" id="den">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Kdy máte svůj den?</h2>
+      <p>Svatba, ples, maturita nebo rodinná oslava. Zadejte datum a uvidíte, kdy je dobré přijít na zkoušku účesu a kdy na barvu – a rovnou se objednáte.</p>
+    </div>
+    <div class="dd">
+      <div class="formular">
+        <div><label for="datum">Datum akce</label><input type="date" id="datum"></div>
+        <div>
+          <label>Jaká to je akce</label>
+          <div class="typy" id="typ">
+            <label><input type="radio" name="t" value="svatba" checked> svatba</label>
+            <label><input type="radio" name="t" value="ples"> ples</label>
+            <label><input type="radio" name="t" value="maturita"> maturita</label>
+            <label><input type="radio" name="t" value="oslava"> oslava</label>
+          </div>
+        </div>
+        <div class="odpocet" aria-live="polite"><b id="dni">–</b><span id="dniTxt">dní do Vašeho dne</span></div>
+      </div>
+      <div style="display:grid;gap:16px">
+        <ol class="osa" id="osa"></ol>
+        <div class="sms" id="txt" aria-live="polite"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn btn-hl" id="sms" href="sms:+420776097443">Poslat SMS</a><a class="btn btn-ob" href="tel:+420776097443">Zavolat</a></div>
+        <p class="pozn">Lhůty jsou orientační doporučení <span class="stitek">ukázkový text</span>. Konkrétní plán a termíny domluvíme osobně. Pokud připadne Váš den na neděli, raději zavolejte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod st"><h2>Co pro Vás udělám</h2><p>Cenu Vám řeknu předem, podle délky vlasů a toho, co si přejete.</p></div>
+    <div class="sluzby">
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="22" r="14" fill="none" stroke="#4E6B5B" stroke-width="2"/><path d="M14 18c4-10 16-10 20 0" stroke="#C4797A" stroke-width="3" fill="none"/><circle cx="24" cy="8" r="4" fill="#C4797A"/><circle cx="16" cy="11" r="3" fill="#7D9C8A"/><circle cx="32" cy="11" r="3" fill="#7D9C8A"/></svg><h3>Svatební účesy</h3><p>Účes, který vydrží obřad, focení i tanec.</p></div>
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4c10 6 10 18 0 22-10-4-10-16 0-22z" fill="#C4797A"/><path d="M24 26v18" stroke="#4E6B5B" stroke-width="2"/><path d="M14 44h20" stroke="#4E6B5B" stroke-width="2"/></svg><h3>Společenské účesy</h3><p>Ples, maturita, oslava nebo divadlo.</p></div>
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="13" cy="36" r="6" fill="none" stroke="#4E6B5B" stroke-width="2"/><circle cx="35" cy="36" r="6" fill="none" stroke="#4E6B5B" stroke-width="2"/><path d="M17 31 36 6M31 31 12 6" stroke="#C4797A" stroke-width="2.5" stroke-linecap="round"/></svg><h3>Stříhání</h3><p>Střih, který se dobře nosí i doma.</p></div>
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6c0 20 4 32 6 38M20 6c0 20 2 32 3 38M30 6c0 20 1 32 1 38M40 6c0 20-1 32-2 38" stroke="#4E6B5B" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M20 6c0 20 2 32 3 38M40 6c0 20-1 32-2 38" stroke="#C4797A" stroke-width="4" fill="none" stroke-linecap="round"/></svg><h3>Barvení a melír</h3><p>Barva i prosvětlení pramenů.</p></div>
+      <div><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32v20H22l-8 8v-8H8z" fill="none" stroke="#4E6B5B" stroke-width="2" stroke-linejoin="round"/><path d="M15 20h18M15 26h11" stroke="#C4797A" stroke-width="2.5" stroke-linecap="round"/></svg><h3>Poradenství</h3><p>Jak o vlasy pečovat, aby vypadaly dobře každý den.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod st"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><h3>Ozvete se s datem</h3><p>Řeknete, jaká akce Vás čeká a jaký účes si představujete.</p></div>
+      <div><h3>Zkouška účesu</h3><p>U svatby vyzkoušíme účes předem, ať v den D nic nepřekvapí.</p></div>
+      <div><h3>Váš den</h3><p>Přijdete v domluvený čas a odcházíte připravená.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Účesy ze studia</h2></div>
+    <div class="fotky"><div>Sem přijde vaše fotka<br>(společenský účes)</div><div>Sem přijde vaše fotka<br>(svatební účes)</div><div>Sem přijde vaše fotka<br>(barva)</div></div>
+  </div>
+</section>
+
+<section style="background:var(--papir);border-top:1px solid var(--linka)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:20px">Proč do Studia Style</h2>
+      <ul class="duvera">
+        <li><b>Svatební a společenské účesy</b>Specialita studia vedle běžného stříhání a barvení.</li>
+        <li><b>Poradenství v péči o vlasy</b>Odejdete i s radou, jak účes udržet.</li>
+        <li><b>Živnostnice, IČO 73815004</b>Mírová 163/29, Ostrava-Vítkovice · <a href="https://www.firmy.cz/detail/2454851-studio-style-gabriela-tomcalova-ostrava-vitkovice.html" target="_blank" rel="noopener">profil na Firmy.cz</a></li>
+      </ul>
+      <div class="rozvrh" aria-label="Otevírací doba">
+        <div><b>Po</b>8–16</div><div><b>Út</b>8–16</div><div class="kr"><b>St</b>8–12</div><div><b>Čt</b>8–16</div><div><b>Pá</b>8–16</div>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Jak dlouho předem se objednat na svatební účes?</summary><p>Čím dřív, tím lépe – zvlášť v sezóně svateb. Zavolejte, jakmile znáte datum.</p></details>
+      <details><summary>Děláte zkoušku účesu?</summary><p>Zkoušku domluvíme po telefonu, ať v den svatby víte, co čekat.</p></details>
+      <details><summary>Kdy máte otevřeno?</summary><p>Pondělí, úterý, čtvrtek a pátek 8–16, ve středu 8–12.</p></details>
+      <details><summary>Kolik stojí společenský účes?</summary><p>Záleží na délce vlasů a náročnosti účesu. Cenu řeknu předem.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420776097443">776 097 443</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:tomcalova01@seznam.cz">tomcalova01@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Mírová 163/29, Ostrava-Vítkovice</dd>
+        <dt>Otevřeno</dt><dd>Po, Út, Čt, Pá 8:00–16:00<br>St 8:00–12:00</dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="14" fill="#33473C"/><path d="M0 50C90 70 200 30 300 60M0 120 300 110M120 0 150 150" stroke="#5E7C6B" stroke-width="6" fill="none"/><circle cx="142" cy="92" r="11" fill="#C4797A"/><circle cx="142" cy="92" r="24" fill="none" stroke="#E3ECE6" stroke-width="2"/></svg>
+      <a class="btn" href="https://mapy.cz/zakladni?q=M%C3%ADrov%C3%A1%20163%2F29%20Ostrava-V%C3%ADtkovice" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Studio Style – Gabriela Tomčalová · Mírová 163/29, Ostrava-Vítkovice · IČO 73815004 · 776 097 443</div></footer>
+<div class="mobil"><a class="btn btn-hl" href="tel:+420776097443">Zavolat</a><a class="btn btn-ob" href="#den">Můj den</a></div>
+
+<script>
+(function(){
+  var inp=document.getElementById('datum'),dnes=new Date();dnes.setHours(0,0,0,0);
+  var def=new Date(dnes);def.setDate(def.getDate()+60);
+  function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  inp.value=iso(def);inp.min=iso(dnes);
+  var dnyN=['neděle','pondělí','úterý','středa','čtvrtek','pátek','sobota'];
+  /* svátky 2026–2027 (pevné + Velikonoce) */
+  var sv=['01-01','05-01','05-08','07-05','07-06','09-28','10-28','11-17','12-24','12-25','12-26','2026-04-03','2026-04-06','2027-03-26','2027-03-29'];
+  function svatek(d){var s=iso(d);return sv.indexOf(s.slice(5))>=0||sv.indexOf(s)>=0}
+  function prac(d){var x=new Date(d);while(x.getDay()===0||x.getDay()===6||svatek(x))x.setDate(x.getDate()-1);return x}
+  function fmt(d){return dnyN[d.getDay()]+' '+d.getDate()+'. '+(d.getMonth()+1)+'.'}
+  function dniTvar(n){return n===1?'den':(n>=2&&n<=4?'dny':'dní')}
+  function upd(){
+    var t=document.querySelector('input[name=t]:checked').value;
+    var a=new Date(inp.value+'T00:00:00');if(isNaN(a))return;
+    var n=Math.round((a-dnes)/864e5);
+    document.getElementById('dni').textContent=n<0?'–':n;
+    document.getElementById('dniTxt').textContent=n<0?'datum už proběhlo':dniTvar(n)+' do Vašeho dne ('+fmt(a)+')';
+    var kroky=[];
+    if(t==='svatba'){var z=new Date(a);z.setDate(z.getDate()-28);kroky.push(['Zkouška účesu',prac(z),'asi měsíc předem – vyzkoušíme účes i s doplňky'])}
+    else{var z2=new Date(a);z2.setDate(z2.getDate()-14);kroky.push(['Porada k účesu',prac(z2),'krátce probereme, co si představujete'])}
+    var b=new Date(a);b.setDate(b.getDate()-7);kroky.push(['Barva nebo melír',prac(b),'zhruba týden předem, ať barva „sedne“']);
+    var o=new Date(a);var w=o.getDay();if(w===0||svatek(o))kroky.push(['Účes v den akce',a,'v neděli a o svátcích po domluvě – zavolejte']);else kroky.push(['Účes v den akce',a,w===3?'ve středu stihneme dopoledne do 12:00':(w===6?'v sobotu po domluvě':'čas domluvíme podle obřadu nebo začátku akce')]);
+    document.getElementById('osa').innerHTML=kroky.map(function(k,i){return '<li class="'+(i===kroky.length-1?'hl':'')+(k[1]<dnes?' pryc':'')+'"><b>'+k[0]+' – '+fmt(k[1])+'</b><small>'+k[2]+(k[1]<dnes?' (už nestihneme, domluvíme jinak)':'')+'</small></li>'}).join('');
+    var txt='Dobrý den, '+(t==='svatba'?'mám svatbu':'čeká mě '+(t==='ples'?'ples':(t==='maturita'?'maturita':'oslava')))+' '+a.getDate()+'. '+(a.getMonth()+1)+'. '+a.getFullYear()+'. Chtěla bych se objednat na '+(t==='svatba'?'svatební':'společenský')+' účes'+(t==='svatba'?' a zkoušku účesu kolem '+fmt(kroky[0][1]):'')+'. Máte volno? Děkuji.';
+    document.getElementById('txt').textContent=txt;
+    document.getElementById('sms').href='sms:+420776097443?body='+encodeURIComponent(txt);
+  }
+  inp.addEventListener('change',upd);inp.addEventListener('input',upd);document.getElementById('typ').addEventListener('change',upd);upd();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Holičství Ostrava-Mariánské Hory | Holičství Prima</title>
+<meta name="description" content="Holičství Prima, Slévárenská 437/2, Ostrava-Mariánské Hory: pánské, dětské i dámské stříhání. Objednaní mají přednost. Po–Pá 8–17, tel. 737 777 282.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Hanken+Grotesk:wght@400;600;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Holičství Prima","description":"Pánské, dětské i dámské stříhání v Ostravě-Mariánských Horách.","telephone":"+420737777282","email":"primaholicka@seznam.cz","taxID":"72973650","address":{"@type":"PostalAddress","streetAddress":"Slévárenská 437/2","addressLocality":"Ostrava-Mariánské Hory","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"9"}}</script>
+<style>
+/* Prima: retro sousedské holičství. Karta přes mátovou plochu s holičskou tyčí, výrazný prvek = „Kdo půjde stříhat?“ počítadlo rodiny → SMS. */
+:root{
+  --mata:#BFE3D0; --mata-sv:#E6F4EC;
+  --uhel:#23262B; --uhel-2:#363A41;
+  --rajce:#D9472B; --rajce-tx:#A8321B;
+  --papir:#FAF7F0; --tx:#23262B; --tx2:#50545B; --linka:#DCD8CE;
+  --f-d:"Arvo",Rockwell,Georgia,serif; --f-t:"Hanken Grotesk","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--papir);color:var(--tx);font:17px/1.55 var(--f-t)}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--f-d);margin:0;line-height:1.12}
+h2{font-size:clamp(28px,4vw,40px)}
+h3{font-size:20px}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rajce);outline-offset:2px}
+.navrh{background:var(--uhel);color:#fff;text-align:center;font-size:14px;padding:8px 12px}
+.stitek{display:inline-block;font:700 11px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;background:#FFF0B8;color:#6B5200;border:1px solid #E5CB6A;border-radius:4px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.lista{position:sticky;top:0;z-index:20;background:var(--papir);border-bottom:1px solid var(--linka)}
+.lista .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 20px var(--f-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font:800 17px var(--f-t);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-hl{background:var(--rajce);color:#fff}
+.btn-hl:hover{background:var(--rajce-tx)}
+.btn-ob{border-color:var(--uhel);color:var(--uhel);background:#fff}
+.btn-ob:hover{background:var(--mata-sv)}
+.lista .btn{min-height:42px;padding:0 14px;font-size:16px}
+/* hero */
+.hero{background:var(--mata);position:relative;overflow:hidden;padding-block:56px}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(35,38,43,.05) 46px 48px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center}
+.karta{background:#fff;border:2px solid var(--uhel);border-radius:14px;padding:34px;box-shadow:10px 10px 0 var(--uhel);max-width:620px}
+.karta .kde{font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--rajce-tx)}
+.karta h1{font-size:clamp(34px,5.4vw,58px);margin:10px 0 14px}
+.karta p{font-size:19px;color:var(--tx2)}
+.karta .akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.karta .doba{margin-top:16px;font-size:15px;color:var(--tx2)}
+.tyc{width:110px;height:auto}
+.tyc .pruhy{animation:toc 3s linear infinite}
+@keyframes toc{to{transform:translateY(-56px)}}
+/* pásek faktů */
+.fakta{background:var(--uhel);color:#fff}
+.fakta ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.fakta li{padding:18px 16px;border-left:1px solid var(--uhel-2);font-size:15px;color:#C9CDD3}
+.fakta li:first-child{border-left:0}
+.fakta b{display:block;font:700 20px var(--f-d);color:#fff}
+section{padding-block:64px}
+.uvod{max-width:640px;margin-bottom:30px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--uhel);border-radius:14px;overflow:hidden;background:#fff}
+.sluzby>div{padding:26px 22px;display:grid;gap:10px;align-content:start;border-left:2px solid var(--uhel)}
+.sluzby>div:first-child{border-left:0}
+.sluzby svg{width:64px;height:64px}
+.sluzby p{color:var(--tx2)}
+.cena{margin-top:18px}
+/* počítadlo */
+.rodina{background:var(--mata-sv);border-block:1px solid var(--linka)}
+.poc{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.lidi{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.clovek{background:#fff;border:2px solid var(--uhel);border-radius:12px;padding:16px;display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:center}
+.clovek svg{width:56px;height:56px}
+.clovek b{display:block;font:700 18px var(--f-d)}
+.ovl{display:flex;align-items:center;gap:10px;margin-top:6px}
+.ovl button{width:44px;height:44px;border-radius:50%;border:2px solid var(--uhel);background:var(--papir);font:800 22px var(--f-t);cursor:pointer;color:var(--uhel)}
+.ovl button:hover{background:var(--mata)}
+.ovl output{font:700 22px var(--f-d);min-width:24px;text-align:center}
+.listek{background:#fff;border:2px dashed var(--uhel);border-radius:12px;padding:20px;display:grid;gap:14px}
+.listek .hl{font:700 14px var(--f-t);letter-spacing:.08em;text-transform:uppercase;color:var(--rajce-tx)}
+.listek pre{margin:0;white-space:pre-wrap;font:16px/1.5 var(--f-t)}
+.listek .pozn{font-size:14px;color:var(--tx2)}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:k}
+.kroky>div{display:grid;gap:8px}
+.kroky>div::before{counter-increment:k;content:counter(k);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--rajce);color:#fff;font:700 24px var(--f-d)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hvezdy{background:var(--uhel);color:#fff;border-radius:14px;padding:26px;display:grid;gap:8px}
+.hvezdy .c{font:700 64px/1 var(--f-d);color:var(--mata)}
+.hvezdy a{color:#fff}
+.duvera{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.duvera li{background:#fff;border:1px solid var(--linka);border-radius:10px;padding:12px 14px}
+.duvera b{display:block}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{cursor:pointer;font-weight:800;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:start}
+.fotky div{width:100%;aspect-ratio:4/3;border:2px dashed #8FB9A3;border-radius:10px;display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:15px;padding:10px;background:var(--mata-sv)}
+.kontakt{background:var(--uhel);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:#AEB4BC}
+.kontakt dd{margin:0;font-weight:600}
+.mapa{background:var(--uhel-2);border-radius:14px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:#17191D;color:#AEB4BC;font-size:14px;padding-block:24px 100px}
+.mobil{display:none}
+@media (max-width:860px){
+  .hero{padding-block:28px 36px}
+  .hero .wrap{grid-template-columns:1fr}
+  .tyc{display:none}
+  .karta{padding:22px;box-shadow:6px 6px 0 var(--uhel)}
+  .sluzby,.kroky,.poc,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .sluzby>div{border-left:0;border-top:2px solid var(--uhel)}
+  .sluzby>div:first-child{border-top:0}
+  .fakta ul{grid-template-columns:1fr}
+  .fakta li{border-left:0;border-top:1px solid var(--uhel-2);padding-block:12px}
+  .fotky{grid-template-columns:1fr 1fr}
+  section{padding-block:48px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;inset:auto 0 0 0;z-index:30;background:var(--papir);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:480px){.lidi{grid-template-columns:1fr}.karta .akce .btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){.tyc .pruhy{animation:none}}
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Holičství Prima</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><svg width="22" height="34" viewBox="0 0 22 34" aria-hidden="true"><rect x="3" y="3" width="16" height="28" rx="8" fill="#fff" stroke="#23262B" stroke-width="2"/><path d="M4 10l14-5M4 18l14-5M4 26l14-5" stroke="#D9472B" stroke-width="3"/></svg>Holičství Prima</a>
+    <a class="btn btn-hl" href="tel:+420737777282" aria-label="Zavolat 737 777 282">☎ <span>737 777 282</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="karta">
+      <div class="kde">Mariánské Hory · Slévárenská 437/2</div>
+      <h1>Poctivé stříhání pro celou rodinu</h1>
+      <p>Pánské, dětské i dámské stříhání v Mariánských Horách. Kdo se objedná předem, má přednost.</p>
+      <div class="akce">
+        <a class="btn btn-hl" href="tel:+420737777282">Objednat se: 737 777 282</a>
+        <a class="btn btn-ob" href="#rodina">Kdo půjde stříhat?</a>
+      </div>
+      <p class="doba">Po–Pá 8:00–17:00</p>
+    </div>
+    <svg class="tyc" viewBox="0 0 110 360" role="img" aria-label="Točící se holičská tyč">
+      <defs><clipPath id="sklo"><rect x="25" y="50" width="60" height="250" rx="30"/></clipPath>
+      <pattern id="pr" width="60" height="56" patternUnits="userSpaceOnUse"><rect width="60" height="56" fill="#fff"/><path d="M-10 30 70 -10v18L-10 48z" fill="#D9472B"/><path d="M-10 58 70 18v10L-10 68z" fill="#23262B"/></pattern></defs>
+      <rect x="15" y="20" width="80" height="30" rx="10" fill="#23262B"/><rect x="15" y="300" width="80" height="30" rx="10" fill="#23262B"/><circle cx="55" cy="14" r="12" fill="#23262B"/>
+      <g clip-path="url(#sklo)"><rect class="pruhy" x="25" y="50" width="60" height="320" fill="url(#pr)"/></g>
+      <rect x="25" y="50" width="60" height="250" rx="30" fill="none" stroke="#23262B" stroke-width="3"/>
+      <rect x="35" y="60" width="8" height="220" rx="4" fill="#fff" opacity=".5"/>
+    </svg>
+  </div>
+</div>
+
+<div class="fakta">
+  <div class="wrap">
+    <ul>
+      <li><b>4,9 z 5</b>9 hodnocení na Firmy.cz</li>
+      <li><b>Po–Pá 8–17</b>každý pracovní den</li>
+      <li><b>Objednaní mají přednost</b>stačí zavolat</li>
+    </ul>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Stříháme pány, děti i dámy</h2>
+      <p>Jedno holičství pro celou rodinu, kousek od domova.</p>
+    </div>
+    <div class="sluzby">
+      <div>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="30" r="18" fill="#BFE3D0"/><path d="M14 26c2-12 34-14 36 0-6-4-30-4-36 0z" fill="#23262B"/><path d="M14 64c0-12 8-18 18-18s18 6 18 18" fill="#23262B"/></svg>
+        <h3>Pánské stříhání</h3>
+        <p>Klasický i krátký střih strojkem a nůžkami.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="34" r="14" fill="#BFE3D0"/><path d="M18 32c0-12 28-14 28 0-4-4-24-4-28 0z" fill="#D9472B"/><path d="M18 64c0-9 6-14 14-14s14 5 14 14" fill="#D9472B"/></svg>
+        <h3>Dětské stříhání</h3>
+        <p>Pro kluky i holky. Klidně ve stejný den jako táta nebo máma.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 50c0-30 40-30 40 0z" fill="#23262B"/><circle cx="32" cy="30" r="14" fill="#BFE3D0"/><path d="M18 28c2-12 26-12 28 0-8-6-20-6-28 0z" fill="#23262B"/><path d="M14 64c0-10 8-14 18-14s18 4 18 14" fill="#D9472B"/></svg>
+        <h3>Dámské stříhání</h3>
+        <p>Úprava střihu i nový tvar. Poradíme, co Vám bude sedět.</p>
+      </div>
+    </div>
+    <p class="cena">Ceny řekneme předem po telefonu. <a href="tel:+420737777282">737 777 282</a></p>
+  </div>
+</section>
+
+<section class="rodina" id="rodina">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Kdo půjde stříhat?</h2>
+      <p>Přidejte, koho vezmete s sebou. Text pro objednání se napíše sám – pošlete ho jako SMS nebo si ho přečtěte do telefonu. Objednaní mají přednost.</p>
+    </div>
+    <div class="poc">
+      <div class="lidi">
+        <div class="clovek"><svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="22" r="12" fill="#BFE3D0"/><path d="M16 18c2-9 22-10 24 0-5-3-19-3-24 0z" fill="#23262B"/><path d="M10 56c0-12 8-18 18-18s18 6 18 18" fill="#23262B"/></svg><div><b>Pán</b><div class="ovl"><button type="button" data-k="pan" data-z="-1" aria-label="Ubrat pána">−</button><output id="o-pan">1</output><button type="button" data-k="pan" data-z="1" aria-label="Přidat pána">+</button></div></div></div>
+        <div class="clovek"><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M12 44c0-26 32-26 32 0z" fill="#23262B"/><circle cx="28" cy="24" r="11" fill="#BFE3D0"/><path d="M10 56c0-10 8-14 18-14s18 4 18 14" fill="#D9472B"/></svg><div><b>Dáma</b><div class="ovl"><button type="button" data-k="dama" data-z="-1" aria-label="Ubrat dámu">−</button><output id="o-dama">0</output><button type="button" data-k="dama" data-z="1" aria-label="Přidat dámu">+</button></div></div></div>
+        <div class="clovek"><svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="10" fill="#BFE3D0"/><path d="M18 26c1-9 19-10 20 0-5-3-15-3-20 0z" fill="#23262B"/><path d="M16 56c0-8 5-12 12-12s12 4 12 12" fill="#23262B"/></svg><div><b>Kluk</b><div class="ovl"><button type="button" data-k="kluk" data-z="-1" aria-label="Ubrat kluka">−</button><output id="o-kluk">1</output><button type="button" data-k="kluk" data-z="1" aria-label="Přidat kluka">+</button></div></div></div>
+        <div class="clovek"><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M16 46c0-22 24-22 24 0z" fill="#D9472B"/><circle cx="28" cy="28" r="10" fill="#BFE3D0"/><path d="M16 56c0-8 5-12 12-12s12 4 12 12" fill="#D9472B"/></svg><div><b>Holka</b><div class="ovl"><button type="button" data-k="holka" data-z="-1" aria-label="Ubrat holku">−</button><output id="o-holka">0</output><button type="button" data-k="holka" data-z="1" aria-label="Přidat holku">+</button></div></div></div>
+      </div>
+      <div class="listek" aria-live="polite">
+        <span class="hl">Vaše zpráva</span>
+        <pre id="txt"></pre>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a class="btn btn-hl" id="sms" href="sms:+420737777282">Poslat SMS</a>
+          <a class="btn btn-ob" href="tel:+420737777282">Raději zavolám</a>
+        </div>
+        <p class="pozn">Termín Vám potvrdíme zpět. Otevřeno Po–Pá 8–17.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><h3>Zavoláte nebo napíšete</h3><p>Řeknete, kolik vás přijde. Objednaní mají přednost.</p></div>
+      <div><h3>Domluvíme čas</h3><p>V pracovní dny mezi 8. a 17. hodinou.</p></div>
+      <div><h3>Přijdete a jdete na řadu</h3><p>Bez dlouhého čekání v čekárně.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Z holičského křesla</h2></div>
+    <div class="fotky"><div>Sem přijde vaše fotka<br>(holičství zevnitř)</div><div>Sem přijde vaše fotka<br>(pánský střih)</div><div>Sem přijde vaše fotka<br>(dětský střih)</div></div>
+  </div>
+</section>
+
+<section style="background:#fff;border-block:1px solid var(--linka)">
+  <div class="wrap dvoj">
+    <div>
+      <div class="hvezdy">
+        <span class="c">4,9</span>
+        <b>z 5 podle 9 hodnocení na Firmy.cz</b>
+        <span>Zákazníci píšou o vždy naprosté spokojenosti.</span>
+        <a href="https://www.firmy.cz/detail/1311569-holicstvi-prima-ostrava-marianske-hory.html" target="_blank" rel="noopener">Přečíst hodnocení</a>
+      </div>
+      <ul class="duvera">
+        <li><b>Holičství v sousedství</b>Slévárenská 437/2, Ostrava-Mariánské Hory</li>
+        <li><b>IČO 72973650</b>podle katalogu Firmy.cz</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Musím se objednat?</summary><p>Nemusíte, ale objednaní mají přednost. Zavolejte na 737 777 282.</p></details>
+      <details><summary>Stříháte i děti?</summary><p>Ano, stříháme pány, děti i dámy.</p></details>
+      <details><summary>Kdy máte otevřeno?</summary><p>Pondělí až pátek od 8 do 17 hodin.</p></details>
+      <details><summary>Kolik stojí střih?</summary><p>Cenu Vám řekneme předem po telefonu.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420737777282">737 777 282</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:primaholicka@seznam.cz">primaholicka@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Slévárenská 437/2, Ostrava-Mariánské Hory</dd>
+        <dt>Otevřeno</dt><dd>Po–Pá 8:00–17:00</dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="10" fill="#363A41"/><path d="M0 100 300 70M60 0 110 150M230 0 240 150" stroke="#50545B" stroke-width="8"/><circle cx="150" cy="84" r="11" fill="#D9472B"/><circle cx="150" cy="84" r="24" fill="none" stroke="#BFE3D0" stroke-width="3"/></svg>
+      <a class="btn btn-hl" href="https://mapy.cz/zakladni?q=Sl%C3%A9v%C3%A1rensk%C3%A1%20437%2F2%20Ostrava" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Holičství Prima · Slévárenská 437/2, Ostrava-Mariánské Hory · IČO 72973650 · 737 777 282</div></footer>
+<div class="mobil"><a class="btn btn-hl" href="tel:+420737777282">Zavolat</a><a class="btn btn-ob" href="#rodina">Kdo půjde?</a></div>
+
+<script>
+(function(){
+  var p={pan:1,dama:0,kluk:1,holka:0};
+  var tv={pan:['pána','pány','pánů'],dama:['dámu','dámy','dám'],kluk:['kluka','kluky','kluků'],holka:['holku','holky','holek']};
+  function sk(n,f){return n===1?f[0]:(n>=2&&n<=4?f[1]:f[2])}
+  function upd(){
+    var c=[];for(var k in p){document.getElementById('o-'+k).textContent=p[k];if(p[k])c.push(p[k]+' '+sk(p[k],tv[k]))}
+    var t=c.length?'Dobrý den, chtěl(a) bych objednat na stříhání '+c.join(', ')+'. Kdy by se to hodilo? Děkuji.':'Přidejte aspoň jednoho člověka.';
+    document.getElementById('txt').textContent=t;
+    document.getElementById('sms').href='sms:+420737777282?body='+encodeURIComponent(t);
+  }
+  [].forEach.call(document.querySelectorAll('.ovl button'),function(b){b.addEventListener('click',function(){var k=b.dataset.k;p[k]=Math.max(0,Math.min(6,p[k]+ +b.dataset.z));upd()})});
+  upd();
+})();
+</script>
+</body>
+</html>

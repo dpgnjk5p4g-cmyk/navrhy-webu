@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kadeřnictví Ostrava-Hrabůvka do 19 hodin | Michaela Komeiserová</title>
+<meta name="description" content="Michaela Komeiserová – Kadeřnictví, Dr. Martínka 1617/10, Ostrava-Hrabůvka: dámské, dětské a pánské kadeřnictví, prodlužování vlasů. Po–Pá 9–19, tel. 732 252 974.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Kumbh+Sans:wght@400;600;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Michaela Komeiserová – Kadeřnictví","description":"Dámské, dětské a pánské kadeřnictví a prodlužování vlasů v Ostravě-Hrabůvce.","telephone":"+420732252974","email":"michaelakomeiserova@seznam.cz","taxID":"86969013","address":{"@type":"PostalAddress","streetAddress":"Dr. Martínka 1617/10","addressLocality":"Ostrava-Hrabůvka","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"}]}</script>
+<style>
+/* Komeiserová: večerní kadeřnictví na sídlišti. Dělený hero (text + panelák v podvečer, rozsvícené okno salonu), výrazný prvek = „Večerní okénko“: den + čas 15:00–18:00 jako rozsvícená okna paneláku + kdo → SMS. */
+:root{
+  --indigo:#1F2250; --indigo-2:#2C3070; --indigo-3:#3A3F8A;
+  --jantar:#FFC34D; --jantar-sv:#FFF1CF;
+  --mata:#9EE6CF; --mata-tx:#1D6B55;
+  --svetla:#F6F6FB; --bila:#FFFFFF;
+  --tx:#1A1C3A; --tx2:#4E5175; --linka:#DCDDEB;
+  --f-d:"Righteous","Trebuchet MS",sans-serif; --f-t:"Kumbh Sans","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--svetla);color:var(--tx);font:17px/1.55 var(--f-t)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{margin:0;line-height:1.08}
+h1,h2{font-family:var(--f-d);font-weight:400}
+h2{font-size:clamp(30px,4.6vw,46px)}
+h3{font-size:20px;font-weight:800}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--jantar);outline-offset:2px}
+.navrh{background:#111332;color:#fff;text-align:center;font-size:14px;padding:8px 12px}
+.stitek{display:inline-block;font:800 11px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;background:#FFF0B8;color:#6B5200;border:1px solid #E5CB6A;border-radius:4px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.lista{position:sticky;top:0;z-index:20;background:var(--indigo);color:#fff}
+.lista .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.znacka{text-decoration:none;font:400 20px var(--f-d);line-height:1.1}
+.znacka small{display:block;font:600 12px var(--f-t);letter-spacing:.1em;text-transform:uppercase;color:var(--mata)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:8px;font:800 17px var(--f-t);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-hl{background:var(--jantar);color:var(--indigo)}
+.btn-hl:hover{background:#FFD47A}
+.btn-ob{border-color:var(--mata);color:var(--mata);background:transparent}
+.btn-ob:hover{background:var(--indigo-2)}
+.btn-sv{border-color:var(--indigo);color:var(--indigo);background:var(--bila)}
+.btn-sv:hover{background:var(--jantar-sv)}
+.lista .btn{min-height:42px;padding:0 14px;font-size:16px}
+.hero{background:linear-gradient(180deg,#1F2250 0%,#3A3F8A 70%,#7C6FB0 100%);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:end;padding-top:48px}
+.hero .txt{padding-bottom:56px}
+.hero .kde{font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--mata)}
+.hero h1{font-size:clamp(42px,6.4vw,76px);margin:12px 0 16px}
+.hero h1 span{color:var(--jantar)}
+.hero .lead{font-size:19px;color:#E2E3F5;max-width:32em}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .doba{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:rgba(255,255,255,.1);padding:8px 14px;border-radius:999px;font-weight:600}
+.hero .doba i{width:10px;height:10px;border-radius:50%;background:var(--jantar);box-shadow:0 0 10px var(--jantar)}
+.panel{width:100%;height:auto;display:block;max-width:500px;justify-self:end}
+.panel .okno{transition:fill .3s}
+section{padding-block:64px}
+.uvod{max-width:660px;margin-bottom:30px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sluzby>div{background:var(--bila);border-radius:14px;padding:22px;display:grid;gap:10px;align-content:start;border-bottom:6px solid var(--indigo-3)}
+.sluzby>div:nth-child(4){border-bottom-color:var(--jantar)}
+.sluzby svg{width:52px;height:52px}
+.sluzby p{color:var(--tx2);font-size:16px}
+/* večerní okénko */
+.okenko{background:var(--indigo);color:#fff}
+.okenko .uvod p{color:#C9CBE8}
+.ok{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.budova{background:#2A2D66;border-radius:14px;padding:18px;display:grid;gap:12px}
+.patro{display:grid;grid-template-columns:70px repeat(7,1fr);gap:6px;align-items:center}
+.patro .lb{font-weight:800;font-size:14px;color:#C9CBE8}
+.patro button{aspect-ratio:1/1.1;border-radius:4px;border:2px solid #45498F;background:#1A1C45;color:#8E92C7;font:700 12px var(--f-t);cursor:pointer;padding:0;min-height:36px}
+.patro button:hover{border-color:var(--mata)}
+.patro button[aria-pressed=true]{background:var(--jantar);color:var(--indigo);border-color:var(--jantar);box-shadow:0 0 16px rgba(255,195,77,.6)}
+.hlav{display:grid;grid-template-columns:70px repeat(7,1fr);gap:6px;font-size:12px;color:#C9CBE8;text-align:center;font-weight:700}
+.vyber-kdo{display:flex;flex-wrap:wrap;gap:8px}
+.vyber-kdo label{display:inline-flex;gap:6px;align-items:center;padding:8px 12px;border:2px solid #45498F;border-radius:999px;cursor:pointer;font-weight:600;font-size:15px}
+.vyber-kdo label:has(input:checked){border-color:var(--mata);background:#2C3070}
+.vyber-kdo input{accent-color:var(--mata)}
+.listek{background:var(--jantar-sv);color:var(--tx);border-radius:14px;padding:22px;display:grid;gap:14px}
+.listek .hl{font:400 24px var(--f-d)}
+.listek pre{margin:0;white-space:pre-wrap;font:16px/1.5 var(--f-t)}
+.listek .pozn{font-size:14px;color:var(--tx2)}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:k}
+.kroky>div{display:grid;gap:8px;background:var(--bila);border-radius:14px;padding:22px}
+.kroky>div::before{counter-increment:k;content:counter(k);font:400 42px/1 var(--f-d);color:var(--indigo-3)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{background:var(--bila);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.duvera li::before{content:"";width:40px;height:40px;border-radius:8px;background:var(--mata) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M12 21l6 6 11-13' fill='none' stroke='%231D6B55' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+.duvera b{display:block}
+details{border-bottom:2px solid var(--linka);padding-block:14px}
+summary{cursor:pointer;font-weight:800;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:start}
+.fotky div{width:100%;aspect-ratio:1;border-radius:14px;border:2px dashed #A6A9D3;display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:14px;padding:8px;background:var(--bila)}
+.kontakt{background:var(--indigo);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt h2{color:var(--jantar)}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:#C9CBE8}
+.kontakt dd{margin:0;font-weight:600;overflow-wrap:anywhere;min-width:0}
+.kontakt .wrap>*{min-width:0}
+.mapa{background:var(--indigo-2);border-radius:14px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:#111332;color:#C9CBE8;font-size:14px;padding-block:24px 100px}
+.mobil{display:none}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:28px;gap:0}
+  .hero .txt{padding-bottom:20px}
+  .panel{justify-self:center;max-width:280px}
+  .sluzby{grid-template-columns:1fr 1fr}
+  .ok,.kroky,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .patro,.hlav{grid-template-columns:44px repeat(7,1fr);gap:4px}
+  .patro .lb{font-size:12px}
+  .patro button{font-size:10px;min-height:32px}
+  .fotky{grid-template-columns:1fr 1fr}
+  section{padding-block:48px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;inset:auto 0 0 0;z-index:30;background:var(--indigo);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:480px){.sluzby{grid-template-columns:1fr}.hero .akce .btn{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Michaela Komeiserová – Kadeřnictví</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top">Michaela Komeiserová<small>kadeřnictví Hrabůvka</small></a>
+    <a class="btn btn-hl" href="tel:+420732252974" aria-label="Zavolat 732 252 974">☎ <span>732 252 974</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="txt">
+      <div class="kde">Ostrava-Hrabůvka · Dr. Martínka 10</div>
+      <h1>Po práci? <span>Pořád svítíme.</span></h1>
+      <p class="lead">Dámské, dětské i pánské kadeřnictví a prodlužování vlasů. Každý všední den až do sedmi večer – stihnete to po práci i po kroužku s dětmi.</p>
+      <div class="akce">
+        <a class="btn btn-hl" href="tel:+420732252974">Objednat se: 732 252 974</a>
+        <a class="btn btn-ob" href="#okenko">Vybrat večerní čas</a>
+      </div>
+      <div class="doba"><i aria-hidden="true"></i> Po–Pá 9:00–19:00</div>
+    </div>
+    <svg class="panel" viewBox="0 0 500 420" role="img" aria-label="Ilustrace: panelový dům v podvečer s rozsvíceným oknem kadeřnictví v přízemí">
+      <circle cx="420" cy="70" r="34" fill="#FFF1CF"/><circle cx="434" cy="60" r="30" fill="#2E3274"/>
+      <g fill="#fff" opacity=".7"><circle cx="60" cy="40" r="2"/><circle cx="140" cy="90" r="1.5"/><circle cx="330" cy="30" r="2"/><circle cx="260" cy="70" r="1.5"/></g>
+      <rect x="60" y="110" width="380" height="310" fill="#262A60"/>
+      <rect x="60" y="110" width="380" height="12" fill="#1A1C45"/>
+      <g id="okna"></g>
+      <rect x="110" y="340" width="280" height="80" fill="#1A1C45"/>
+      <rect x="130" y="352" width="160" height="56" rx="4" fill="#FFC34D"/>
+      <g fill="#1F2250"><circle cx="175" cy="378" r="10"/><path d="M160 408c0-14 6-20 15-20s15 6 15 20z"/><path d="M205 370c10-10 24-8 30 4l-6 2c-4-6-12-8-20-2z"/><circle cx="222" cy="384" r="9"/><path d="M208 408c0-12 6-16 14-16s14 4 14 16z"/></g>
+      <rect x="300" y="352" width="70" height="68" fill="#3A3F8A"/><circle cx="360" cy="388" r="3" fill="#FFC34D"/>
+      <rect x="130" y="330" width="160" height="16" rx="3" fill="#9EE6CF"/><text x="210" y="342" text-anchor="middle" font-family="Kumbh Sans,Arial" font-weight="800" font-size="11" fill="#1F2250">KADEŘNICTVÍ · DO 19:00</text>
+    </svg>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod"><h2>Pro celou rodinu</h2><p>Ostříháme Vás, děti i partnera. A když chcete víc délky nebo objemu, prodloužíme vlasy.</p></div>
+    <div class="sluzby">
+      <div><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M8 44c0-26 36-26 36 0z" fill="#3A3F8A"/><circle cx="26" cy="24" r="11" fill="#FFF1CF"/><path d="M14 22c2-12 22-12 24 0-7-5-17-5-24 0z" fill="#3A3F8A"/></svg><h3>Dámské</h3><p>Střih a úprava vlasů podle Vašich představ.</p></div>
+      <div><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="28" r="10" fill="#FFF1CF"/><path d="M16 26c1-10 19-10 20 0-5-3-15-3-20 0z" fill="#1D6B55"/><circle cx="14" cy="22" r="4" fill="#9EE6CF"/><circle cx="38" cy="22" r="4" fill="#9EE6CF"/></svg><h3>Dětské</h3><p>I po škole a kroužcích – máme do sedmi.</p></div>
+      <div><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="22" r="11" fill="#FFF1CF"/><path d="M15 19c1-10 21-10 22 0-5-3-17-3-22 0z" fill="#1A1C3A"/><path d="M8 52c0-11 8-16 18-16s18 5 18 16" fill="#1A1C3A"/></svg><h3>Pánské</h3><p>Rychlý střih, klidně cestou z práce.</p></div>
+      <div><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M14 4c0 20 2 34 4 46M24 4c0 20 1 34 2 46M34 4c0 20 0 34 0 46" stroke="#3A3F8A" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M18 30c0 8 0 14 0 20M26 30v20M34 30v20" stroke="#FFC34D" stroke-width="5" stroke-linecap="round"/></svg><h3>Prodlužování vlasů</h3><p>Délka a objem navíc. Možnosti probereme osobně.</p></div>
+    </div>
+    <p style="margin-top:20px">Cenu Vám řekneme předem, podle délky vlasů a služby. <a href="tel:+420732252974">732 252 974</a></p>
+  </div>
+</section>
+
+<section class="okenko" id="okenko">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Večerní okénko</h2>
+      <p>Každé okno je jeden den a čas. Rozsviťte to, které se Vám hodí – my se ozveme, jestli je volné. Zavíráme v 19:00, poslední časy jsou proto do 18:00.</p>
+    </div>
+    <div class="ok">
+      <div class="budova">
+        <div class="hlav" aria-hidden="true"><span></span><span>15:00</span><span>15:30</span><span>16:00</span><span>16:30</span><span>17:00</span><span>17:30</span><span>18:00</span></div>
+        <div id="patra"></div>
+        <p style="font-weight:700;margin-top:6px">Kdo přijde</p>
+        <div class="vyber-kdo" id="kdo">
+          <label><input type="radio" name="kdo" value="dámský střih" checked> já – dámský střih</label>
+          <label><input type="radio" name="kdo" value="dětský střih"> dítě</label>
+          <label><input type="radio" name="kdo" value="pánský střih"> partner</label>
+          <label><input type="radio" name="kdo" value="konzultaci k prodlužování vlasů"> prodlužování</label>
+        </div>
+      </div>
+      <div class="listek" aria-live="polite">
+        <span class="hl">Vaše SMS</span>
+        <pre id="txt"></pre>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn btn-sv" style="background:var(--indigo);color:#fff;border-color:var(--indigo)" id="sms" href="sms:+420732252974">Poslat SMS</a><a class="btn btn-sv" href="tel:+420732252974">Zavolat</a></div>
+        <p class="pozn">Okna neukazují obsazenost – volný čas Vám potvrdíme zpátky. Dopoledne od 9:00 se objednáte stejně.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><h3>Pošlete SMS nebo zavoláte</h3><p>Den, čas a co chcete udělat.</p></div>
+      <div><h3>Potvrdíme termín</h3><p>Po–Pá od 9 do 19 hodin. Cenu víte předem.</p></div>
+      <div><h3>Přijdete po práci</h3><p>Dr. Martínka 10, Hrabůvka – kousek od domova.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Naše práce</h2></div>
+    <div class="fotky"><div>Sem přijde vaše fotka<br>(dámský střih)</div><div>Sem přijde vaše fotka<br>(prodloužení)</div><div>Sem přijde vaše fotka<br>(dětský střih)</div><div>Sem přijde vaše fotka<br>(salon)</div></div>
+  </div>
+</section>
+
+<section style="background:var(--bila)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:20px">Proč k nám</h2>
+      <ul class="duvera">
+        <li><div><b>Každý všední den do 19:00</b>Po–Pá 9:00–19:00, i když končíte v práci pozdě.</div></li>
+        <li><div><b>Celá rodina na jednom místě</b>Dámské, dětské i pánské kadeřnictví.</div></li>
+        <li><div><b>Prodlužování vlasů</b>Kromě běžného stříhání.</div></li>
+        <li><div><b>Živnostnice, IČO 86969013</b>Dr. Martínka 1617/10, Ostrava-Hrabůvka · <a href="https://www.firmy.cz/detail/2476216-michaela-komeiserova-kadernictvi-ostrava-hrabuvka.html" target="_blank" rel="noopener">profil na Firmy.cz</a></div></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Do kolika máte otevřeno?</summary><p>Každý všední den do 19:00. Otevíráme v 9:00.</p></details>
+      <details><summary>Prodlužujete vlasy?</summary><p>Ano. Možnosti, délku i cenu probereme na konzultaci.</p></details>
+      <details><summary>Stříháte i děti a pány?</summary><p>Ano, jsme dámské, dětské i pánské kadeřnictví.</p></details>
+      <details><summary>Musím se objednat?</summary><p>Doporučujeme to, ať na Vás máme čas. Stačí SMS nebo telefon na 732 252 974.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420732252974">732 252 974</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:michaelakomeiserova@seznam.cz">michaelakomeiserova@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Dr. Martínka 1617/10, Ostrava-Hrabůvka</dd>
+        <dt>Otevřeno</dt><dd>Po–Pá 9:00–19:00</dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="14" fill="#1A1C45"/><g fill="#2C3070"><rect x="20" y="20" width="60" height="30"/><rect x="100" y="20" width="80" height="30"/><rect x="200" y="20" width="80" height="30"/><rect x="20" y="100" width="100" height="30"/><rect x="200" y="100" width="80" height="30"/></g><path d="M0 75h300" stroke="#3A3F8A" stroke-width="10"/><circle cx="160" cy="112" r="11" fill="#FFC34D"/><circle cx="160" cy="112" r="22" fill="none" stroke="#9EE6CF" stroke-width="2"/></svg>
+      <a class="btn btn-hl" href="https://mapy.cz/zakladni?q=Dr.%20Mart%C3%ADnka%201617%2F10%20Ostrava-Hrab%C5%AFvka" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Michaela Komeiserová – Kadeřnictví · Dr. Martínka 1617/10, Ostrava-Hrabůvka · IČO 86969013 · 732 252 974</div></footer>
+<div class="mobil"><a class="btn btn-hl" href="tel:+420732252974">Zavolat</a><a class="btn btn-ob" href="#okenko">Večerní čas</a></div>
+
+<script>
+(function(){
+  /* okna na paneláku v hero */
+  var g='',c=['#FFC34D','#3A3F8A','#2C3070','#FFF1CF'];
+  for(var r=0;r<5;r++)for(var s=0;s<7;s++){var x=82+s*50,y=136+r*40;g+='<rect class="okno" x="'+x+'" y="'+y+'" width="34" height="24" rx="2" fill="'+c[(r*7+s*3)%4===0?0:((r+s)%3===0?3:1)]+'"/>'}
+  document.getElementById('okna').innerHTML=g;
+  /* večerní okénko */
+  var dny=[['Po','pondělí'],['Út','úterý'],['St','středu'],['Čt','čtvrtek'],['Pá','pátek']],casy=['15:00','15:30','16:00','16:30','17:00','17:30','18:00'];
+  var h='';dny.forEach(function(d,i){h+='<div class="patro"><span class="lb">'+d[0]+'</span>';casy.forEach(function(t,j){h+='<button type="button" data-d="'+i+'" data-t="'+t+'" aria-pressed="'+(i===1&&j===4)+'" aria-label="'+d[1]+' '+t+'">'+t.replace(':00','').replace(':30','½')+'</button>'});h+='</div>'});
+  var P=document.getElementById('patra');P.innerHTML=h;P.style.display='grid';P.style.gap='6px';
+  var sel=P.querySelector('[aria-pressed=true]');
+  function upd(){
+    var co=document.querySelector('input[name=kdo]:checked').value;
+    var t='Dobrý den, chtěla bych se objednat na '+co+'. Hodilo by se mi v '+dny[+sel.dataset.d][1]+' kolem '+sel.dataset.t+'. Máte volno? Případně jiný večer. Děkuji.';
+    document.getElementById('txt').textContent=t;
+    document.getElementById('sms').href='sms:+420732252974?body='+encodeURIComponent(t);
+  }
+  P.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;sel.setAttribute('aria-pressed','false');b.setAttribute('aria-pressed','true');sel=b;upd()});
+  document.getElementById('kdo').addEventListener('change',upd);
+  upd();
+})();
+</script>
+</body>
+</html>
