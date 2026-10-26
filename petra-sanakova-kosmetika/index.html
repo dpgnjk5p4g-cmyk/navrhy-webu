@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kosmetika Petřvald – diagnostika pleti a péče na míru | Petra Sanaková</title>
+<meta name="description" content="Petra Sanaková – kosmetika v Petřvaldu, Gen. Svobody 1010: diagnostika a hloubkové čištění pleti, omlazení, světelná terapie, depilace. Kontakt e-mailem petra.sanakova@seznam.cz.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Reddit+Sans:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Petra Sanaková – kosmetika","description":"Personalizované kosmetické služby s poradenstvím: diagnostika a hloubkové čištění pleti, omlazení pleti, světelná terapie, depilace.","email":"petra.sanakova@seznam.cz","taxID":"72986646","paymentAccepted":"platební karta","address":{"@type":"PostalAddress","streetAddress":"Gen. Svobody 1010","addressLocality":"Petřvald","addressCountry":"CZ"}}</script>
+<style>
+/* Petra Sanaková – odborný, „laboratorní“ směr: modrošedá + korálová, bílá. Hero = výrazná typografie s tlačítky (bez ilustrace), velká citace v kurzivě. Výrazný prvek: diagnostický dotazník pleti → e-mail. */
+:root{
+  --noc:#1E2B3A; --modr:#3D5A80; --mlha:#E6EDF4; --mlha2:#CBD8E5; --koral:#E07A5F; --koral-tx:#A3452C;
+  --bila:#fff; --pozadi:#F8FAFC; --tx:#1B2430; --tx2:#4E5B69; --linka:#DCE3EA;
+  --f-disp:"Libre Baskerville","Georgia",serif; --f-text:"Reddit Sans","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--pozadi);color:var(--tx);font-family:var(--f-text);font-size:17px;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--f-disp);line-height:1.2;margin:0;text-wrap:balance;font-weight:400}
+h2{font-size:clamp(26px,3.4vw,38px)}
+h3{font-size:19px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--koral);outline-offset:2px}
+.navrh{background:var(--tx);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.stitek{display:inline-block;font:700 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF1CC;color:#6B4E0E;border:1px solid #E5C77A;border-radius:4px;padding:4px 6px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+.lista{background:var(--bila);border-bottom:1px solid var(--linka);position:sticky;top:0;z-index:20}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.znacka{text-decoration:none;display:flex;align-items:center;gap:10px}
+.znacka .ps{width:38px;height:38px;border-radius:50%;background:var(--noc);color:#fff;display:grid;place-items:center;font:italic 700 16px var(--f-disp)}
+.znacka b{display:block;font-size:17px}
+.znacka small{display:block;font-size:13px;color:var(--tx2)}
+.nav{display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:4px;font:700 16px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-hl{background:var(--koral);color:#2A0F07}
+.btn-hl:hover{background:#E88D74}
+.btn-tm{background:var(--noc);color:#fff}
+.btn-ob{border-color:var(--noc);color:var(--noc);background:transparent}
+.lista .btn{min-height:42px;padding:0 16px}
+/* hero */
+.hero{padding-block:72px 56px;border-bottom:1px solid var(--linka);background:linear-gradient(var(--pozadi),var(--pozadi)) padding-box,repeating-linear-gradient(90deg,transparent 0 79px,var(--mlha) 79px 80px)}
+.hero{background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(203,216,229,.45) 79px 80px),var(--pozadi)}
+.hero .misto{display:inline-flex;gap:8px;align-items:center;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--modr)}
+.hero .misto::before{content:"";width:28px;height:2px;background:var(--koral)}
+.hero h1{font-size:clamp(38px,7vw,84px);margin:18px 0 0;max-width:12em;letter-spacing:-.01em}
+.hero h1 em{color:var(--koral-tx)}
+.hero .radek{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;margin-top:30px;align-items:end}
+.hero .lead{font-size:19px;color:var(--tx2);max-width:32em}
+.hero .akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.vlastnosti{list-style:none;margin:0;padding:0;border-top:2px solid var(--noc)}
+.vlastnosti li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--linka);font-size:16px}
+.vlastnosti li span:last-child{color:var(--tx2);text-align:right}
+section{padding-block:72px}
+.uvod{max-width:620px;margin-bottom:34px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--koral-tx)}
+/* služby jako protokol */
+.prot{background:var(--bila);border:1px solid var(--linka);border-radius:6px}
+.prot>div{display:grid;grid-template-columns:70px 1fr 1.4fr;gap:20px;padding:22px 24px;border-top:1px solid var(--linka);align-items:start}
+.prot>div:first-child{border-top:0}
+.prot .n{font:italic 400 28px var(--f-disp);color:var(--modr)}
+.prot p{color:var(--tx2)}
+.cenapozn{margin-top:22px;color:var(--tx2)}
+/* diagnostika */
+.diag{background:var(--noc);color:#fff}
+.diag h2{color:#fff}
+.diag .uvod p{color:#C8D4E1}
+.dg{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.otazky{display:grid;gap:22px}
+.ot fieldset{border:0;margin:0;padding:0}
+.ot legend{font-weight:700;margin-bottom:10px;font-size:17px}
+.vol{display:flex;flex-wrap:wrap;gap:8px}
+.vol label{cursor:pointer}
+.vol input{position:absolute;opacity:0;pointer-events:none}
+.vol span{display:inline-block;padding:9px 14px;border:1.5px solid #4B6079;border-radius:999px;font-size:15px;color:#E6EDF4}
+.vol input:checked+span{background:var(--koral);border-color:var(--koral);color:#2A0F07;font-weight:700}
+.vol input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
+.karta{background:var(--bila);color:var(--tx);border-radius:8px;padding:22px;display:grid;gap:14px;position:sticky;top:90px}
+.karta .hlav{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--noc);padding-bottom:10px}
+.karta .hlav b{font-family:var(--f-disp);font-size:20px;font-weight:400}
+.karta .hlav span{font-size:13px;color:var(--tx2)}
+.terc{display:flex;gap:16px;align-items:center}
+.terc svg{width:110px;height:110px;flex:none}
+.terc p{font-size:15px;color:var(--tx2)}
+.zprava{white-space:pre-wrap;background:var(--mlha);border-radius:6px;padding:14px;font-size:15px}
+.pozn{font-size:14px;color:var(--tx2)}
+.diag .pozn{color:#C8D4E1}
+.diag .karta .pozn{color:var(--tx2)}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--linka);background:var(--bila);border-radius:6px}
+.kroky>div{padding:24px;border-left:1px solid var(--linka);display:grid;gap:8px}
+.kroky>div:first-child{border-left:0}
+.kroky .n{font:italic 400 15px var(--f-disp);color:var(--koral-tx)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{border-left:3px solid var(--modr);padding:6px 0 6px 16px}
+.duvera b{display:block}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:28px;align-items:start}
+.fotky div{width:100%;aspect-ratio:3/1;border-radius:6px;border:2px dashed var(--mlha2);display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:14px;padding:10px;background:var(--bila)}
+.fotky div+div{aspect-ratio:auto;height:100%}
+/* kontakt */
+.kontakt{background:var(--mlha)}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:22px 0 0}
+.kontakt dt{color:var(--tx2);font-size:15px}
+.kontakt dd{margin:0;font-weight:500}
+.mapa{background:var(--bila);border:1px solid var(--mlha2);border-radius:8px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:var(--noc);color:#C8D4E1;font-size:14px;padding:24px 0 100px}
+.mobil{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .hero{padding-block:36px 40px}
+  .hero .radek,.dg,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .hero .radek{gap:26px;margin-top:20px}
+  .prot>div{grid-template-columns:44px 1fr;gap:6px 14px}
+  .prot>div p{grid-column:2}
+  .kroky{grid-template-columns:1fr}
+  .kroky>div{border-left:0;border-top:1px solid var(--linka)}
+  .kroky>div:first-child{border-top:0}
+  .karta{position:static}
+  .fotky{grid-template-columns:1fr}
+  .fotky div+div{aspect-ratio:3/1;height:auto}
+  section{padding-block:52px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bila);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:520px){ .hero .akce .btn{flex:1 1 100%} .terc svg{width:84px;height:84px} }
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Petra Sanaková – kosmetika</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><span class="ps">PS</span><span><b>Petra Sanaková</b><small>kosmetika · Petřvald</small></span></a>
+    <nav class="nav" aria-label="Hlavní"><a href="#sluzby">Ošetření</a><a href="#diagnostika">Diagnostika</a><a href="#otazky">Otázky</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="btn btn-tm" href="mailto:petra.sanakova@seznam.cz?subject=Objedn%C3%A1n%C3%AD%20na%20o%C5%A1et%C5%99en%C3%AD" aria-label="Napsat e-mail"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18v14H3zm2 2v.4l7 4.6 7-4.6V7zm14 10V9.8l-7 4.6-7-4.6V17z"/></svg><span>Napsat e-mail</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="misto">Kosmetika Petřvald · Gen. Svobody 1010</div>
+    <h1>Nejdřív pleť <em>poznáme</em>. Pak ji ošetříme.</h1>
+    <div class="radek">
+      <div>
+        <p class="lead">Personalizované kosmetické služby s poradenstvím. Každé ošetření začíná diagnostikou pleti – teprve pak vybereme čištění, omlazení nebo světelnou terapii, které dávají smysl právě Vám.</p>
+        <div class="akce">
+          <a class="btn btn-hl" href="#diagnostika">Popsat svou pleť</a>
+          <a class="btn btn-ob" href="mailto:petra.sanakova@seznam.cz">petra.sanakova@seznam.cz</a>
+        </div>
+      </div>
+      <ul class="vlastnosti">
+        <li><span>Diagnostika pleti</span><span>před ošetřením</span></li>
+        <li><span>Péče na míru</span><span>s poradenstvím</span></li>
+        <li><span>Platba</span><span>i kartou</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod">
+      <div class="kicker">Ošetření</div>
+      <h2>Co pro Vaši pleť udělám</h2>
+    </div>
+    <div class="prot">
+      <div><span class="n">01</span><h3>Diagnostika pleti</h3><p>Zjistíme typ a stav pleti a na co se zaměřit. Základ pro každé další ošetření.</p></div>
+      <div><span class="n">02</span><h3>Hloubkové čištění pleti</h3><p>Pro pleť, která potřebuje vyčistit a znovu se nadechnout.</p></div>
+      <div><span class="n">03</span><h3>Omlazení pleti</h3><p>Ošetření zaměřené na svěžejší a pevnější vzhled pleti.</p></div>
+      <div><span class="n">04</span><h3>Světelná terapie</h3><p>Ošetření světlem jako doplněk péče o pleť – kdy se hodí, probereme při diagnostice.</p></div>
+      <div><span class="n">05</span><h3>Depilace</h3><p>Odstranění nežádoucích chloupků.</p></div>
+      <div><span class="n">06</span><h3>Poradenství</h3><p>Co používat doma, aby výsledek vydržel. Součást každé návštěvy.</p></div>
+    </div>
+    <p class="cenapozn">Cenu Vám napíšu předem podle toho, co Vaše pleť potřebuje.</p>
+    <div class="fotky"><div>Sem přijde Vaše fotka – ošetřovna</div><div>Sem přijde Vaše fotka – Petra</div></div>
+  </div>
+</section>
+
+<section class="diag" id="diagnostika">
+  <div class="wrap">
+    <div class="uvod">
+      <div class="kicker" style="color:#F2A48F">Než se uvidíme</div>
+      <h2>Popište mi svou pleť</h2>
+      <p>Tři rychlé otázky. Z odpovědí se složí e-mail, který mi pošlete – já Vám odpovím s návrhem ošetření, termínem a cenou.</p>
+    </div>
+    <div class="dg">
+      <div class="otazky">
+        <div class="ot"><fieldset><legend>Jaká je Vaše pleť během dne?</legend><div class="vol" data-k="typ">
+          <label><input type="radio" name="typ" value="mastná, leskne se" checked><span>leskne se</span></label>
+          <label><input type="radio" name="typ" value="suchá, pnutí"><span>pne a je suchá</span></label>
+          <label><input type="radio" name="typ" value="smíšená (T-zóna)"><span>jen T-zóna</span></label>
+          <label><input type="radio" name="typ" value="citlivá, červená"><span>červená, citlivá</span></label>
+          <label><input type="radio" name="typ" value="nevím"><span>nevím</span></label>
+        </div></fieldset></div>
+        <div class="ot"><fieldset><legend>Co Vás trápí nejvíc?</legend><div class="vol">
+          <label><input type="checkbox" name="cil" value="ucpané póry, černé tečky" checked><span>póry a černé tečky</span></label>
+          <label><input type="checkbox" name="cil" value="vrásky, povadlá pleť"><span>vrásky</span></label>
+          <label><input type="checkbox" name="cil" value="unavená, šedá pleť"><span>unavený vzhled</span></label>
+          <label><input type="checkbox" name="cil" value="nežádoucí chloupky"><span>chloupky</span></label>
+          <label><input type="checkbox" name="cil" value="nevím, chci poradit"><span>chci poradit</span></label>
+        </div></fieldset></div>
+        <div class="ot"><fieldset><legend>Kdy se Vám hodí přijít?</legend><div class="vol">
+          <label><input type="radio" name="kdy" value="dopoledne" checked><span>dopoledne</span></label>
+          <label><input type="radio" name="kdy" value="odpoledne"><span>odpoledne</span></label>
+          <label><input type="radio" name="kdy" value="kdykoliv"><span>kdykoliv</span></label>
+        </div></fieldset></div>
+      </div>
+      <div class="karta" aria-live="polite">
+        <div class="hlav"><b>Karta pleti</b><span>návrh k ošetření</span></div>
+        <div class="terc">
+          <svg viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="50" fill="#E6EDF4"/><circle cx="55" cy="55" r="34" fill="none" stroke="#CBD8E5" stroke-width="2"/><circle cx="55" cy="55" r="18" fill="none" stroke="#CBD8E5" stroke-width="2"/><circle id="bod" cx="55" cy="55" r="9" fill="#E07A5F"/></svg>
+          <p id="tip">Doporučený začátek: <b>diagnostika + hloubkové čištění</b>. Konečný návrh dostanete po osobní diagnostice.</p>
+        </div>
+        <div class="zprava" id="zprava"></div>
+        <a class="btn btn-hl" id="mail" href="mailto:petra.sanakova@seznam.cz">Poslat e-mail Petře</a>
+        <p class="pozn">Nic se neodesílá samo – otevře se Váš e-mailový program se zprávou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="uvod"><div class="kicker">Postup</div><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><span class="n">krok 1</span><h3>Napíšete mi</h3><p>Stačí pár vět o pleti – nebo použijte kartu pleti výše.</p></div>
+      <div><span class="n">krok 2</span><h3>Odpovím s návrhem</h3><p>Navrhnu ošetření, termín a cenu předem.</p></div>
+      <div><span class="n">krok 3</span><h3>Diagnostika a ošetření</h3><p>V salonu na Gen. Svobody 1010 pleť prohlédneme a ošetříme. Zaplatit můžete i kartou.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bila);border-block:1px solid var(--linka)" id="otazky">
+  <div class="wrap dvoj">
+    <div>
+      <h2>Proč ke mně</h2>
+      <ul class="duvera" style="margin-top:22px">
+        <li><b>Diagnostika pleti</b>ošetření podle stavu pleti, ne podle šablony</li>
+        <li><b>Individuální poradenství</b>co dělat doma, aby výsledek vydržel</li>
+        <li><b>Platba kartou</b>bez hledání hotovosti</li>
+        <li><b>Živnostník, IČO 72986646</b>údaj z katalogu Firmy.cz</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Časté otázky</h2>
+      <details><summary>Proč začínat diagnostikou?</summary><p>Stejné ošetření nefunguje na každou pleť. Diagnostika ukáže, co pleť opravdu potřebuje, a ušetří Vám zbytečné procedury.</p></details>
+      <details><summary>Jak se objednám?</summary><p>Napište mi e-mail na petra.sanakova@seznam.cz – nejrychleji přes kartu pleti výše. Odpovím s termínem.</p></details>
+      <details><summary>Můžu platit kartou?</summary><p>Ano, platba kartou je možná.</p></details>
+      <details><summary>Mám přijít nenalíčená?</summary><p>Obecně je lepší přijít bez make-upu, diagnostika je pak přesnější. Když to nestihnete, nevadí – pleť před ošetřením odlíčíme.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>E-mail</dt><dd><a href="mailto:petra.sanakova@seznam.cz">petra.sanakova@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Gen. Svobody 1010, Petřvald</dd>
+        <dt>Otevřeno</dt><dd>Doplníme podle Vás <span class="stitek">ukázkový text</span><br>Termín si domluvte e-mailem.</dd>
+        <dt>Platba</dt><dd>možná i kartou</dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 140" aria-hidden="true"><rect width="300" height="140" rx="6" fill="#E6EDF4"/><path d="M0 80 L300 60" stroke="#fff" stroke-width="12"/><path d="M110 0 L130 140" stroke="#fff" stroke-width="7"/><circle cx="160" cy="70" r="11" fill="#E07A5F"/><circle cx="160" cy="70" r="4" fill="#fff"/></svg>
+      <a class="btn btn-tm" href="https://mapy.cz/zakladni?q=Gen.%20Svobody%201010%20Pet%C5%99vald" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Petra Sanaková – kosmetika · Gen. Svobody 1010, Petřvald · IČO 72986646 · petra.sanakova@seznam.cz</div></footer>
+
+<div class="mobil">
+  <a class="btn btn-hl" href="#diagnostika">Popsat pleť</a>
+  <a class="btn btn-tm" href="mailto:petra.sanakova@seznam.cz">E-mail</a>
+</div>
+
+<script>
+(function(){
+  var out=document.getElementById('zprava'),mail=document.getElementById('mail'),tip=document.getElementById('tip'),bod=document.getElementById('bod');
+  var pos={'mastná, leskne se':[70,40],'suchá, pnutí':[38,70],'smíšená (T-zóna)':[55,30],'citlivá, červená':[78,72],'nevím':[55,55]};
+  function upd(){
+    var typ=(document.querySelector('input[name=typ]:checked')||{}).value||'';
+    var cil=[].slice.call(document.querySelectorAll('input[name=cil]:checked')).map(function(i){return i.value});
+    var kdy=(document.querySelector('input[name=kdy]:checked')||{}).value||'';
+    var p=pos[typ]||[55,55]; bod.setAttribute('cx',p[0]); bod.setAttribute('cy',p[1]);
+    var co=['diagnostika'];
+    if(cil.indexOf('ucpané póry, černé tečky')>-1) co.push('hloubkové čištění');
+    if(cil.indexOf('vrásky, povadlá pleť')>-1||cil.indexOf('unavená, šedá pleť')>-1) co.push('omlazení / světelná terapie');
+    if(cil.indexOf('nežádoucí chloupky')>-1) co.push('depilace');
+    tip.innerHTML='Doporučený začátek: <b>'+co.join(' + ')+'</b>. Konečný návrh dostanete po osobní diagnostice.';
+    var t='Dobrý den, paní Sanaková,\nmoje pleť: '+typ+'.\nTrápí mě: '+(cil.length?cil.join(', '):'—')+'.\nZajímá mě: '+co.join(', ')+'.\nHodí se mi '+kdy+'. Prosím o termín a cenu.\nDěkuji';
+    out.textContent=t;
+    mail.href='mailto:petra.sanakova@seznam.cz?subject='+encodeURIComponent('Objednání – karta pleti')+'&body='+encodeURIComponent(t);
+  }
+  [].slice.call(document.querySelectorAll('.diag input')).forEach(function(i){i.addEventListener('change',upd)});upd();
+})();
+</script>
+</body>
+</html>

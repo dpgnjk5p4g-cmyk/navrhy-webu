@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cukrárna a kavárna Karviná, Masarykovo náměstí | Venezia</title>
+<meta name="description" content="Kavárna a cukrárna Venezia na Masarykově náměstí v Karviné-Fryštátě: italská zmrzlina, zákusky, dorty na objednávku a káva. Terasa, Wi-Fi. Otevřeno denně 8–20, tel. 777 987 298.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&family=Pinyon+Script&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Kavárna a cukrárna Venezia","description":"Italská zmrzlina, zákusky, dorty a káva na Masarykově náměstí v Karviné. Terasa a Wi-Fi.","telephone":"+420777987298","email":"venezia.karvina@gmail.com","taxID":"08174903","servesCuisine":"Italská zmrzlina, zákusky, dorty","address":{"@type":"PostalAddress","streetAddress":"Masarykovo nám. 92/29","addressLocality":"Karviná-Fryštát","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}]}</script>
+<style>
+/* Venezia – italský, sladký, rodinný: pistácie + malina + smetana, benátská markýza. Hero dělený s ilustrací vitríny zmrzliny. Výrazný prvek: objednací lístek na dort (bez cen) → SMS. */
+:root{
+  --pistacie:#93B77D; --pist-tm:#3F5E33; --malina:#C23B5A; --malina-tm:#8E2340; --smetana:#FFF8EC; --vanilka:#F6E7C8;
+  --kakao:#4A2E25; --tx:#2E211C; --tx2:#66544C; --linka:#EBDCC3; --bila:#fff;
+  --f-disp:"Abril Fatface","Georgia",serif; --f-text:"Nunito Sans","Segoe UI",Roboto,Arial,sans-serif; --f-skript:"Pinyon Script","Brush Script MT",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--smetana);color:var(--tx);font-family:var(--f-text);font-size:17px;line-height:1.6}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4vw,46px);color:var(--malina-tm)}
+h3{font-size:22px}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--malina);outline-offset:2px}
+.navrh{background:var(--tx);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.lista{background:var(--smetana);border-bottom:1px solid var(--linka);position:sticky;top:0;z-index:20}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:8px}
+.znacka{text-decoration:none;line-height:1}
+.znacka b{font-family:var(--f-disp);font-weight:400;font-size:28px;color:var(--malina-tm)}
+.znacka small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tx2);margin-top:2px}
+.nav{display:flex;gap:22px;font-size:15px;font-weight:600}
+.nav a{text-decoration:none;color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font:800 16px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-m{background:var(--malina);color:#fff}
+.btn-m:hover{background:var(--malina-tm)}
+.btn-p{background:var(--pistacie);color:#1E2E17}
+.btn-o{border-color:var(--malina-tm);color:var(--malina-tm)}
+.lista .btn{min-height:42px;padding:0 16px}
+/* markýza */
+.markyza{height:34px;background:repeating-linear-gradient(90deg,var(--pistacie) 0 48px,var(--smetana) 48px 96px);position:relative}
+.markyza::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;background:radial-gradient(circle at 24px 0,var(--pistacie) 23px,transparent 24px) 0 0/96px 16px repeat-x,radial-gradient(circle at 72px 0,var(--smetana) 23px,transparent 24px) 0 0/96px 16px repeat-x}
+.hero{padding-block:52px 64px;background:radial-gradient(circle at 85% 60%,var(--vanilka),transparent 55%)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero .skript{font-family:var(--f-skript);font-size:34px;color:var(--pist-tm);line-height:1}
+.hero h1{font-size:clamp(42px,6.6vw,82px);color:var(--tx);margin:6px 0 16px}
+.hero h1 span{color:var(--malina)}
+.hero .lead{font-size:19px;color:var(--tx2);max-width:30em}
+.hero .akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.otev{margin-top:20px;display:inline-flex;gap:10px;align-items:center;background:var(--bila);border:1px solid var(--linka);border-radius:999px;padding:8px 16px 8px 8px;font-weight:600}
+.otev i{background:var(--pistacie);color:#1E2E17;font-style:normal;border-radius:999px;padding:4px 10px;font-size:14px}
+.vitrina{width:100%;max-width:520px;justify-self:end}
+/* zmrzlina */
+section{padding-block:76px}
+.uvod{max-width:640px;margin-bottom:34px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+.trojice{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.trojice>div{background:var(--bila);border-radius:24px;padding:26px;border:1px solid var(--linka);display:grid;gap:10px;align-content:start}
+.trojice svg{width:76px;height:76px}
+.trojice p{color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.fotky div{aspect-ratio:4/3;border-radius:20px;border:2px dashed var(--pistacie);display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:14px;padding:10px;background:var(--bila)}
+/* lístek */
+.listek-s{background:var(--pistacie)}
+.listek-s h2{color:#1E2E17}
+.listek-s .uvod p{color:#253A1D}
+.lw{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.listek{background:var(--smetana);border-radius:6px;padding:28px 26px 30px;position:relative;box-shadow:0 20px 40px -20px rgba(30,46,23,.6)}
+.listek::before,.listek::after{content:"";position:absolute;left:0;right:0;height:12px;background:radial-gradient(circle at 8px 0,transparent 7px,var(--smetana) 8px) 0 0/16px 12px repeat-x}
+.listek::before{top:-11px;transform:rotate(180deg)}
+.listek::after{bottom:-11px}
+.listek .hl{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px dashed var(--linka);padding-bottom:12px;margin-bottom:16px}
+.listek .hl b{font-family:var(--f-disp);font-weight:400;font-size:24px;color:var(--malina-tm)}
+.listek .hl span{font-size:13px;color:var(--tx2)}
+.pole{display:grid;gap:16px}
+.pole label{font-weight:800;font-size:15px;display:block;margin-bottom:6px}
+.pole input[type=text],.pole input[type=date],.pole select{width:100%;font:600 16px var(--f-text);padding:10px 12px;border:2px solid var(--linka);border-radius:10px;background:var(--bila);color:var(--tx)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0;cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:8px 14px;border-radius:999px;border:2px solid var(--linka);background:var(--bila);font-weight:600;font-size:15px}
+.chips input:checked+span{background:var(--malina);border-color:var(--malina);color:#fff}
+.chips input:focus-visible+span{outline:3px solid var(--malina-tm);outline-offset:2px}
+.dort{background:var(--smetana);border-radius:24px;padding:20px;display:grid;gap:14px}
+.dort svg{width:100%;height:auto;max-height:240px}
+.zprava{white-space:pre-wrap;background:var(--bila);border:1px dashed var(--malina);border-radius:14px;padding:14px;font-size:15px}
+.pozn{font-size:14px;color:var(--tx2)}
+/* kroky + důvěra */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.kroky>div{display:grid;gap:8px;text-align:center;justify-items:center}
+.kroky .kop{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font:400 28px var(--f-disp);color:#fff}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{background:var(--bila);border:1px solid var(--linka);border-radius:16px;padding:14px 18px}
+.duvera b{display:block}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:800;cursor:pointer}
+details p{margin-top:8px;color:var(--tx2)}
+/* kontakt */
+.kontakt{background:var(--kakao);color:#fff}
+.kontakt h2{color:var(--vanilka)}
+.kontakt .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:22px 0 0}
+.kontakt dt{color:var(--pistacie);font-size:15px}
+.kontakt dd{margin:0;font-weight:600}
+.namesti{background:#5B3B30;border-radius:24px;padding:20px;display:grid;gap:14px}
+.namesti svg{width:100%;height:auto}
+footer{background:#2E1C16;color:#D9C8BE;font-size:14px;padding:24px 0 100px}
+.mobil{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .hero .wrap,.lw,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .hero{padding-block:30px 44px}
+  .vitrina{max-width:300px;justify-self:center;order:-1}
+  .trojice,.kroky,.fotky{grid-template-columns:1fr}
+  section{padding-block:52px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--smetana);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:520px){ .hero .akce .btn{flex:1 1 100%} .vitrina{display:none} .listek{padding:24px 16px} }
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Kavárna a cukrárna Venezia</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><b>Venezia</b><small>kavárna &amp; cukrárna · Karviná</small></a>
+    <nav class="nav" aria-label="Hlavní"><a href="#nabidka">Nabídka</a><a href="#dort">Dort na objednávku</a><a href="#kontakt">Kde nás najdete</a></nav>
+    <a class="btn btn-m" href="tel:+420777987298" aria-label="Zavolat 777 987 298"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>777 987 298</span></a>
+  </div>
+</div>
+<div class="markyza" aria-hidden="true"></div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="skript">Benvenuti na náměstí</div>
+      <h1>Italská zmrzlina, <span>zákusky</span> a dorty</h1>
+      <p class="lead">Kavárna a cukrárna přímo na Masarykově náměstí v Karviné-Fryštátě. Posaďte se na terasu, dejte si kávu a vyberte si z vitríny.</p>
+      <div class="akce">
+        <a class="btn btn-m" href="#dort">Objednat dort</a>
+        <a class="btn btn-o" href="#nabidka">Co je ve vitríně</a>
+      </div>
+      <div class="otev"><i>denně</i>8:00–20:00 · Masarykovo nám. 92/29</div>
+    </div>
+    <svg class="vitrina" viewBox="0 0 520 420" role="img" aria-label="Ilustrace: vitrína s italskou zmrzlinou a dortem">
+      <rect x="20" y="150" width="480" height="240" rx="24" fill="#4A2E25"/>
+      <rect x="40" y="170" width="440" height="140" rx="12" fill="#FFF8EC"/>
+      <g>
+        <rect x="56" y="230" width="96" height="70" rx="6" fill="#E9E1D2"/><path d="M60 236q40-40 88 0" fill="#93B77D"/><circle cx="104" cy="214" r="26" fill="#93B77D"/>
+        <rect x="164" y="230" width="96" height="70" rx="6" fill="#E9E1D2"/><path d="M168 236q40-40 88 0" fill="#C23B5A"/><circle cx="212" cy="212" r="28" fill="#C23B5A"/>
+        <rect x="272" y="230" width="96" height="70" rx="6" fill="#E9E1D2"/><path d="M276 236q40-40 88 0" fill="#F6E7C8"/><circle cx="320" cy="214" r="26" fill="#F6E7C8"/>
+        <rect x="380" y="230" width="86" height="70" rx="6" fill="#E9E1D2"/><path d="M384 236q36-38 78 0" fill="#7A4B3A"/><circle cx="423" cy="214" r="24" fill="#7A4B3A"/>
+      </g>
+      <rect x="40" y="318" width="440" height="56" rx="10" fill="#5B3B30"/>
+      <g fill="#F6E7C8"><circle cx="80" cy="346" r="6"/><circle cx="110" cy="346" r="6"/><circle cx="140" cy="346" r="6"/></g>
+      <!-- dort nahoře -->
+      <rect x="300" y="70" width="150" height="70" rx="8" fill="#F6E7C8"/>
+      <rect x="300" y="96" width="150" height="14" fill="#C23B5A"/>
+      <path d="M300 74q18 14 37 0t37 0t38 0t38 0" fill="none" stroke="#FFF8EC" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="340" cy="62" r="9" fill="#C23B5A"/><circle cx="375" cy="58" r="9" fill="#C23B5A"/><circle cx="410" cy="62" r="9" fill="#C23B5A"/>
+      <rect x="290" y="140" width="170" height="10" rx="5" fill="#93B77D"/>
+      <!-- kornout -->
+      <path d="M110 140 L140 40 L80 40 z" fill="#E3B66A"/><path d="M90 60 l40 20 M86 80 l36 20 M96 46 l38 10" stroke="#C99A4C" stroke-width="3"/>
+      <circle cx="110" cy="34" r="30" fill="#93B77D"/><circle cx="126" cy="10" r="22" fill="#C23B5A"/>
+    </svg>
+  </div>
+</div>
+
+<section id="nabidka" style="background:var(--bila);border-block:1px solid var(--linka)">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Co u nás ochutnáte</h2>
+      <p>Nabídka zákusků i druhy zmrzliny se mění – co je dnes ve vitríně, uvidíte na místě nebo na našem Instagramu.</p>
+    </div>
+    <div class="trojice">
+      <div><svg viewBox="0 0 76 76" aria-hidden="true"><path d="M38 72 L52 34 H24z" fill="#E3B66A"/><circle cx="38" cy="28" r="16" fill="#93B77D"/><circle cx="46" cy="16" r="11" fill="#C23B5A"/></svg><h3>Italská zmrzlina</h3><p>Italská zmrzlina, kterou hosté chválí – ideální k procházce po náměstí.</p></div>
+      <div><svg viewBox="0 0 76 76" aria-hidden="true"><path d="M10 54 L66 54 L58 30 L18 30z" fill="#F6E7C8"/><rect x="10" y="54" width="56" height="10" rx="3" fill="#4A2E25"/><path d="M18 30q20-12 40 0" fill="#C23B5A"/><circle cx="38" cy="20" r="6" fill="#C23B5A"/></svg><h3>Zákusky</h3><p>Velké zákusky ke kávě – podle hostů za dobré peníze.</p></div>
+      <div><svg viewBox="0 0 76 76" aria-hidden="true"><rect x="10" y="30" width="56" height="34" rx="5" fill="#F6E7C8"/><rect x="10" y="42" width="56" height="7" fill="#C23B5A"/><path d="M10 33q9 7 18 0t19 0t19 0" fill="none" stroke="#fff" stroke-width="5"/><rect x="36" y="10" width="4" height="16" fill="#93B77D"/><path d="M38 4q4 4 0 7q-4-3 0-7" fill="#E3B66A"/></svg><h3>Dorty</h3><p>Dort na oslavu? Objednejte si ho předem přes lístek níže.</p></div>
+    </div>
+    <p style="margin-top:22px;color:var(--tx2)">A k tomu káva. Na terase, s Wi-Fi, denně od osmi do osmi.</p>
+    <div class="fotky"><div>Sem přijde Vaše fotka – vitrína zmrzliny</div><div>Sem přijde Vaše fotka – zákusky</div><div>Sem přijde Vaše fotka – terasa na náměstí</div></div>
+  </div>
+</section>
+
+<section class="listek-s" id="dort">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Lístek na dort</h2>
+      <p>Vyplňte, co si přejete. Z lístku se složí zpráva, kterou nám pošlete SMS – ozveme se s potvrzením a cenou.</p>
+    </div>
+    <div class="lw">
+      <div class="listek">
+        <div class="hl"><b>Objednávka dortu</b><span>Venezia · Karviná</span></div>
+        <div class="pole">
+          <div><label>Na jakou příležitost</label><div class="chips">
+            <label><input type="radio" name="pril" value="narozeniny" checked><span>narozeniny</span></label>
+            <label><input type="radio" name="pril" value="dětská oslava"><span>dětská oslava</span></label>
+            <label><input type="radio" name="pril" value="výročí"><span>výročí</span></label>
+            <label><input type="radio" name="pril" value="jiná příležitost"><span>jiné</span></label>
+          </div></div>
+          <div><label for="osob">Pro kolik lidí</label>
+            <select id="osob"><option>do 8 osob</option><option selected>asi 10–12 osob</option><option>asi 15–20 osob</option><option>víc než 20 osob</option></select></div>
+          <div><label>Barva / chuť (nápad)</label><div class="chips">
+            <label><input type="radio" name="bar" value="malinový" data-c="#C23B5A" checked><span>malina</span></label>
+            <label><input type="radio" name="bar" value="pistáciový" data-c="#93B77D"><span>pistácie</span></label>
+            <label><input type="radio" name="bar" value="čokoládový" data-c="#7A4B3A"><span>čokoláda</span></label>
+            <label><input type="radio" name="bar" value="vanilkový" data-c="#EFD9A8"><span>vanilka</span></label>
+          </div></div>
+          <div><label for="napis">Nápis na dort</label><input type="text" id="napis" maxlength="28" value="Všechno nejlepší"></div>
+          <div><label for="kdy">Kdy si dort vyzvednete</label><input type="date" id="kdy"></div>
+        </div>
+      </div>
+      <div class="dort" aria-live="polite">
+        <svg viewBox="0 0 400 250" aria-hidden="true">
+          <ellipse cx="200" cy="222" rx="170" ry="18" fill="#E9E1D2"/>
+          <rect id="vrst" x="70" y="110" width="260" height="106" rx="12" fill="#C23B5A"/>
+          <rect x="70" y="150" width="260" height="12" fill="#FFF8EC" opacity=".8"/>
+          <path d="M70 116q22 18 43 0t43 0t44 0t43 0t43 0t44 0" fill="none" stroke="#FFF8EC" stroke-width="12" stroke-linecap="round"/>
+          <g id="svicky"></g>
+          <text id="dnapis" x="200" y="198" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="28" fill="#FFF8EC">Všechno nejlepší</text>
+        </svg>
+        <div class="zprava" id="zprava"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a class="btn btn-m" id="sms" href="sms:+420777987298">Poslat SMS</a>
+          <a class="btn btn-o" href="tel:+420777987298">Raději zavolám</a>
+        </div>
+        <p class="pozn">Nic se neodesílá samo. Dort potvrzujeme až zpětně – s cenou a časem vyzvednutí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="uvod"><h2>Jak objednat dort</h2></div>
+    <div class="kroky">
+      <div><span class="kop" style="background:var(--pistacie);color:#1E2E17">1</span><h3>Vyplníte lístek</h3><p>Příležitost, počet lidí, chuť a nápis.</p></div>
+      <div><span class="kop" style="background:var(--malina)">2</span><h3>Potvrdíme</h3><p>Ozveme se s cenou a časem, kdy bude hotový.</p></div>
+      <div><span class="kop" style="background:var(--kakao)">3</span><h3>Vyzvednete na náměstí</h3><p>Masarykovo nám. 92/29 – denně 8–20.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--vanilka)">
+  <div class="wrap dvoj">
+    <div>
+      <h2>Proč Venezia</h2>
+      <ul class="duvera" style="margin-top:22px">
+        <li><b>3. místo mezi cukrárnami v Karviné</b>v žebříčku <a href="https://www.firmy.cz/detail/13468571-kavarna-a-cukrarna-venezia-karvina-frystat.html" target="_blank" rel="noopener">Firmy.cz</a></li>
+        <li><b>Hosté chválí</b>italskou zmrzlinu a velké zákusky za dobré peníze</li>
+        <li><b>Otevřeno každý den</b>8:00–20:00, i o víkendu</li>
+        <li><b>Přímo na náměstí</b>terasa a Wi-Fi</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Časté otázky</h2>
+      <details><summary>Jak dlouho předem objednat dort?</summary><p>Čím dřív, tím lépe – obvykle se vyplatí několik dní předem. Přesný termín potvrdíme po Vaší zprávě.</p></details>
+      <details><summary>Máte otevřeno i v neděli?</summary><p>Ano, otevřeno máme denně od 8 do 20 hodin.</p></details>
+      <details><summary>Dá se sedět venku?</summary><p>Ano, máme terasu na Masarykově náměstí.</p></details>
+      <details><summary>Máte Wi-Fi?</summary><p>Ano.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kde nás najdete</h2>
+      <dl>
+        <dt>Adresa</dt><dd>Masarykovo nám. 92/29, Karviná-Fryštát</dd>
+        <dt>Otevřeno</dt><dd>denně 8:00–20:00</dd>
+        <dt>Telefon</dt><dd><a href="tel:+420777987298">777 987 298</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:venezia.karvina@gmail.com">venezia.karvina@gmail.com</a></dd>
+      </dl>
+    </div>
+    <div class="namesti">
+      <svg viewBox="0 0 320 160" aria-hidden="true"><rect width="320" height="160" rx="14" fill="#4A2E25"/><rect x="70" y="30" width="180" height="100" fill="#6E4A3D"/><circle cx="160" cy="80" r="10" fill="#F6E7C8"/><text x="160" y="22" text-anchor="middle" fill="#F6E7C8" font-family="Nunito Sans" font-size="12">Masarykovo náměstí</text><rect x="196" y="118" width="40" height="22" rx="4" fill="#C23B5A"/><text x="216" y="133" text-anchor="middle" fill="#fff" font-family="Nunito Sans" font-size="10" font-weight="800">VENEZIA</text></svg>
+      <a class="btn btn-p" href="https://mapy.cz/zakladni?q=Masarykovo%20n%C3%A1m.%2092%2F29%20Karvin%C3%A1" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Kavárna a cukrárna Venezia · Masarykovo nám. 92/29, Karviná-Fryštát · IČO 08174903 · 777 987 298 · venezia.karvina@gmail.com</div></footer>
+
+<div class="mobil">
+  <a class="btn btn-m" href="tel:+420777987298">Zavolat</a>
+  <a class="btn btn-p" href="#dort">Objednat dort</a>
+</div>
+
+<script>
+(function(){
+  var kdy=document.getElementById('kdy'),napis=document.getElementById('napis'),osob=document.getElementById('osob');
+  var d=new Date(); d.setDate(d.getDate()+4); kdy.value=d.toISOString().slice(0,10); kdy.min=new Date().toISOString().slice(0,10);
+  var vrst=document.getElementById('vrst'),dn=document.getElementById('dnapis'),sv=document.getElementById('svicky'),out=document.getElementById('zprava'),sms=document.getElementById('sms');
+  function fmt(v){if(!v)return '(datum)';var p=v.split('-');return (+p[2])+'. '+(+p[1])+'. '+p[0]}
+  function upd(){
+    var pril=document.querySelector('input[name=pril]:checked').value;
+    var bar=document.querySelector('input[name=bar]:checked');
+    vrst.setAttribute('fill',bar.dataset.c);
+    dn.setAttribute('fill',bar.value==='vanilkový'?'#8E2340':'#FFF8EC');
+    dn.textContent=napis.value||' ';
+    var n={'do 8 osob':3,'asi 10–12 osob':5,'asi 15–20 osob':7,'víc než 20 osob':9}[osob.value]||5, h='';
+    for(var i=0;i<n;i++){var x=200-(n-1)*14+i*28;h+='<rect x="'+(x-4)+'" y="70" width="8" height="34" rx="2" fill="#93B77D"/><path d="M'+x+' 58q6 6 0 12q-6-6 0-12" fill="#E3B66A"/>'}
+    sv.innerHTML=h;
+    var t='Dobrý den, chtěl/a bych objednat dort ve Venezii.\nPříležitost: '+pril+'\nPočet osob: '+osob.value+'\nChuť/barva: '+bar.value+'\nNápis: '+(napis.value||'bez nápisu')+'\nVyzvednutí: '+fmt(kdy.value)+'\nProsím o potvrzení a cenu. Děkuji.';
+    out.textContent=t; sms.href='sms:+420777987298?&body='+encodeURIComponent(t);
+  }
+  [].slice.call(document.querySelectorAll('.listek input,.listek select')).forEach(function(e){e.addEventListener('input',upd);e.addEventListener('change',upd)});upd();
+})();
+</script>
+</body>
+</html>

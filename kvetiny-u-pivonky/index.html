@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Květinářství Havířov-Šumbark | Květiny u Pivoňky</title>
+<meta name="description" content="Květiny u Pivoňky, Generála Svobody 280/24, Havířov-Šumbark: kytice a vazby, svatební a smuteční floristika, suché vazby, keramika, svíčky a dekorace. Po–Pá 8–16:30, So 8–12, tel. 777 016 347.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Figtree:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Florist","name":"Květiny u Pivoňky","description":"Květiny a vazby, svatební a smuteční floristika, suché vazby, keramika, svíčky a dekorace.","telephone":"+420777016347","email":"vlasta.rojanova@seznam.cz","taxID":"75270587","address":{"@type":"PostalAddress","streetAddress":"Generála Svobody 280/24","addressLocality":"Havířov-Šumbark","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"16:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}]}</script>
+<style>
+/* Květiny u Pivoňky – modernizace WordPressu 2016–18. Romantický, řemeslný, laskavý: pivoňková růžová, lilková, listová zelená, krémová. Hero = výrazná typografie, v názvu místo „o“ kvete pivoňka. Výrazný prvek: „Uvažte si kytici“ – příležitost, barvy, velikost → kytice se kreslí a složí SMS. */
+:root{
+  --pivonka:#E58FAA; --pivonka-sv:#FBE3EA; --lilek:#4E2240; --lilek2:#3A1830; --list:#3E6B48; --list-sv:#DDEBDD;
+  --krem:#FFF9F5; --tx:#2D1F29; --tx2:#634F5C; --linka:#EFDDE3; --bila:#fff;
+  --f-disp:"Corben","Georgia",serif; --f-text:"Figtree","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--krem);color:var(--tx);font-family:var(--f-text);font-size:17px;line-height:1.6}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--f-disp);line-height:1.1;margin:0;text-wrap:balance}
+h2{font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--lilek)}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--list);outline-offset:2px}
+.navrh{background:var(--tx);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.lista{background:var(--krem);border-bottom:1px solid var(--linka);position:sticky;top:0;z-index:20}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:8px;text-decoration:none;font:700 19px var(--f-disp);color:var(--lilek)}
+.nav{display:flex;gap:22px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none;color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px 999px 999px 4px;font:700 16px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-l{background:var(--lilek);color:#fff}
+.btn-l:hover{background:var(--lilek2)}
+.btn-p{background:var(--pivonka);color:var(--lilek2)}
+.btn-o{border-color:var(--lilek);color:var(--lilek)}
+.lista .btn{min-height:42px;padding:0 16px}
+/* hero */
+.hero{background:var(--pivonka-sv);padding-block:56px 0;overflow:hidden;position:relative}
+.hero .misto{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--list)}
+.nazev{font-family:var(--f-disp);font-weight:700;color:var(--lilek);font-size:clamp(46px,11vw,150px);line-height:.95;margin:10px 0 0;letter-spacing:-.02em}
+.nazev .r2{display:block;padding-left:8%}
+.nazev svg{display:inline-block;width:.86em;height:.86em;vertical-align:-.08em;margin:0 .02em}
+.hero .pod{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:end;margin-top:24px;padding-bottom:40px}
+.hero .lead{font-size:19px;color:var(--tx2);max-width:30em}
+.hero .akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.ceduli{background:var(--bila);border-radius:18px;padding:18px 20px;border:1px solid var(--linka);display:grid;gap:6px}
+.ceduli .st{display:flex;align-items:center;gap:8px;font-weight:700}
+.ceduli .st i{width:12px;height:12px;border-radius:50%;background:var(--list)}
+.ceduli .st.zav i{background:#B04A63}
+.ceduli table{border-collapse:collapse;font-size:15px}
+.ceduli td{padding:3px 14px 3px 0}
+.ceduli tr.dnes td{font-weight:700;color:var(--lilek)}
+.listy{height:46px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='46' viewBox='0 0 120 46'%3E%3Cpath d='M0 46 C20 10 40 10 30 46 M40 46 C60 0 90 4 70 46 M80 46 C100 14 120 20 110 46' fill='%233E6B48'/%3E%3C/svg%3E") repeat-x bottom/120px 46px}
+section{padding-block:72px}
+.uvod{max-width:640px;margin-bottom:32px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+/* sortiment */
+.sort{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sort>div{background:var(--bila);border:1px solid var(--linka);border-radius:28px 28px 28px 6px;padding:24px;display:grid;gap:10px;align-content:start}
+.sort svg{width:64px;height:64px}
+.sort p{color:var(--tx2);font-size:16px}
+.fotky{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-top:28px}
+.fotky div{aspect-ratio:3/4;border-radius:999px 999px 16px 16px;border:2px dashed var(--pivonka);display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:14px;padding:14px;background:var(--bila)}
+/* uvazte */
+.kyt{background:var(--lilek);color:#fff}
+.kyt h2{color:#fff}
+.kyt .uvod p{color:#E9D5E1}
+.kw{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.kf{display:grid;gap:20px}
+.kf fieldset{border:0;margin:0;padding:0}
+.kf legend{font-weight:700;margin-bottom:10px}
+.kf .vol{display:flex;flex-wrap:wrap;gap:8px}
+.kf .vol label{cursor:pointer}
+.kf .vol input{position:absolute;opacity:0;pointer-events:none}
+.kf .vol span{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1.5px solid #8A5A7C;color:#F4E6EE;font-size:15px}
+.kf .vol span i{width:14px;height:14px;border-radius:50%;display:inline-block}
+.kf .vol input:checked+span{background:var(--pivonka);border-color:var(--pivonka);color:var(--lilek2);font-weight:700}
+.kf .vol input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
+.kf input[type=text],.kf input[type=date]{width:100%;font:500 16px var(--f-text);padding:11px 12px;border-radius:12px;border:1.5px solid #8A5A7C;background:var(--lilek2);color:#fff;color-scheme:dark}
+.kf label.t{display:block;font-weight:700;margin-bottom:8px}
+.vaza{background:var(--krem);color:var(--tx);border-radius:28px;padding:20px;display:grid;gap:14px}
+.vaza svg{width:100%;height:auto;max-height:320px}
+.zprava{white-space:pre-wrap;background:var(--bila);border:1px dashed var(--lilek);border-radius:14px;padding:14px;font-size:15px}
+.pozn{font-size:14px;color:var(--tx2)}
+/* svatba / smutek */
+.dve{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.dve>div{border-radius:28px;padding:30px;display:grid;gap:12px;align-content:start}
+.dve .sv{background:var(--pivonka-sv)}
+.dve .sm{background:#ECE8EA}
+.dve p{color:var(--tx2)}
+.dve ul{margin:0;padding-left:20px;color:var(--tx2)}
+/* kroky, důvěra */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.kroky>div{display:grid;gap:8px;border-top:3px solid var(--pivonka);padding-top:14px}
+.kroky span{font:700 15px var(--f-text);color:var(--list);letter-spacing:.1em;text-transform:uppercase}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{background:var(--bila);border:1px solid var(--linka);border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:28px 1fr;gap:12px}
+.duvera b{display:block}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--tx2)}
+/* kontakt */
+.kontakt{background:var(--list);color:#fff}
+.kontakt h2{color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:22px 0 0}
+.kontakt dt{color:var(--list-sv);font-size:15px}
+.kontakt dd{margin:0;font-weight:500}
+.mapa{background:#335A3C;border-radius:28px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:var(--lilek2);color:#E3CEDA;font-size:14px;padding:24px 0 100px}
+.mobil{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .hero{padding-top:30px}
+  .hero .pod,.kw,.dve,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .sort,.kroky{grid-template-columns:1fr}
+  .fotky{grid-template-columns:1fr 1fr}
+  section{padding-block:52px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--krem);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:520px){ .hero .akce .btn{flex:1 1 100%} .nazev .r2{padding-left:0} .dve>div{padding:22px} }
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Květiny u Pivoňky</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><g fill="#E58FAA"><circle cx="20" cy="12" r="9"/><circle cx="11" cy="20" r="9"/><circle cx="29" cy="20" r="9"/><circle cx="20" cy="27" r="9"/></g><circle cx="20" cy="20" r="6" fill="#4E2240"/></svg>Květiny u Pivoňky</a>
+    <nav class="nav" aria-label="Hlavní"><a href="#sortiment">Sortiment</a><a href="#kytice">Uvažte kytici</a><a href="#svatby">Svatby a smutek</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="btn btn-l" href="tel:+420777016347" aria-label="Zavolat 777 016 347"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>777 016 347</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="misto">Květinářství · Havířov-Šumbark</div>
+    <h1 class="nazev">Květiny<span class="r2">u Piv<svg viewBox="0 0 100 100" aria-hidden="true"><g fill="#E58FAA"><circle cx="50" cy="26" r="22"/><circle cx="27" cy="44" r="22"/><circle cx="73" cy="44" r="22"/><circle cx="35" cy="70" r="22"/><circle cx="65" cy="70" r="22"/></g><g fill="#F3B5C7"><circle cx="50" cy="42" r="16"/><circle cx="40" cy="56" r="14"/><circle cx="60" cy="56" r="14"/></g><circle cx="50" cy="52" r="9" fill="#4E2240"/></svg>ňky</span></h1>
+    <div class="pod">
+      <div>
+        <p class="lead">Kytice a vazby z čerstvých květin, svatební i smuteční floristika, suché vazby, keramika, svíčky a dekorace. Na Generála Svobody v Šumbarku.</p>
+        <div class="akce">
+          <a class="btn btn-l" href="#kytice">Uvázat kytici</a>
+          <a class="btn btn-o" href="tel:+420777016347">Zavolat 777 016 347</a>
+        </div>
+      </div>
+      <div class="ceduli" aria-live="polite">
+        <div class="st" id="st"><i></i><span id="stT">Otevírací doba</span></div>
+        <table id="tab">
+          <tr data-d="1"><td>Pondělí–pátek</td><td>8:00–16:30</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>8:00–12:00</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="listy" aria-hidden="true"></div>
+</div>
+
+<section id="sortiment">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Co u nás najdete</h2>
+      <p>Kytici na narozeniny, vazbu k výročí i dekoraci domů. Když nevíte, co vybrat, rády poradíme.</p>
+    </div>
+    <div class="sort">
+      <div><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 60 L32 34 L40 60z" fill="#3E6B48"/><g fill="#E58FAA"><circle cx="24" cy="22" r="10"/><circle cx="40" cy="22" r="10"/><circle cx="32" cy="12" r="10"/></g><circle cx="32" cy="22" r="6" fill="#4E2240"/></svg><h3>Kytice a vazby</h3><p>Z čerstvých květin, na každou příležitost.</p></div>
+      <div><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="none" stroke="#3E6B48" stroke-width="6"/><g fill="#E58FAA"><circle cx="32" cy="10" r="6"/><circle cx="12" cy="36" r="5"/><circle cx="50" cy="44" r="6"/></g></svg><h3>Svatební floristika</h3><p>Svatební kytice a vazby na Váš velký den.</p></div>
+      <div><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 40 Q32 20 56 40 Q32 54 8 40z" fill="#3E6B48"/><g fill="#F4F0F2" stroke="#634F5C" stroke-width="1.5"><circle cx="24" cy="36" r="7"/><circle cx="40" cy="36" r="7"/><circle cx="32" cy="30" r="7"/></g></svg><h3>Smuteční floristika</h3><p>Smuteční vazby s citem.</p></div>
+      <div><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M22 60 L26 30 M32 60 L32 24 M42 60 L38 30" stroke="#A6835A" stroke-width="3"/><g fill="#C9A47A"><ellipse cx="26" cy="26" rx="5" ry="8"/><ellipse cx="32" cy="18" rx="5" ry="8"/><ellipse cx="38" cy="26" rx="5" ry="8"/></g></svg><h3>Suché vazby</h3><p>Vydrží měsíce – na stůl, na dveře, do bytu.</p></div>
+      <div><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 22h28l-4 36H22z" fill="#C97D5D"/><rect x="14" y="16" width="36" height="8" rx="3" fill="#A9603F"/></svg><h3>Keramika</h3><p>Keramika k dárku i domů.</p></div>
+      <div><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="22" y="26" width="20" height="32" rx="3" fill="#FBE3EA" stroke="#4E2240" stroke-width="2"/><path d="M32 26v-6" stroke="#4E2240" stroke-width="2"/><path d="M32 8q6 7 0 12q-6-5 0-12" fill="#E8A13A"/></svg><h3>Svíčky a dekorace</h3><p>Drobnosti k dárku i domů.</p></div>
+    </div>
+    <div class="fotky"><div>Sem přijde Vaše fotka – kytice</div><div>Sem přijde Vaše fotka – svatební vazba</div><div>Sem přijde Vaše fotka – výloha</div><div>Sem přijde Vaše fotka – suchá vazba</div></div>
+  </div>
+</section>
+
+<section class="kyt" id="kytice">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Uvažte si kytici</h2>
+      <p>Vyberte příležitost, barvy a velikost. Kytice se Vám tady nakreslí a zpráva pro nás se složí sama – pošlete ji SMS a my se ozveme s cenou.</p>
+    </div>
+    <div class="kw">
+      <div class="kf">
+        <fieldset><legend>Příležitost</legend><div class="vol">
+          <label><input type="radio" name="pr" value="narozeniny" checked><span>narozeniny</span></label>
+          <label><input type="radio" name="pr" value="výročí"><span>výročí</span></label>
+          <label><input type="radio" name="pr" value="poděkování"><span>poděkování</span></label>
+          <label><input type="radio" name="pr" value="jen tak"><span>jen tak</span></label>
+          <label><input type="radio" name="pr" value="smuteční vazba"><span>smuteční</span></label>
+        </div></fieldset>
+        <fieldset><legend>Barvy</legend><div class="vol">
+          <label><input type="radio" name="ba" value="růžová" data-c="#E58FAA,#F3B5C7,#C9607F" checked><span><i style="background:#E58FAA"></i>růžová</span></label>
+          <label><input type="radio" name="ba" value="bílá a zelená" data-c="#FFFFFF,#F1EFE6,#B9D3B0"><span><i style="background:#fff"></i>bílá</span></label>
+          <label><input type="radio" name="ba" value="žlutá a oranžová" data-c="#F2C14E,#F29E4C,#F7D98A"><span><i style="background:#F2C14E"></i>žlutá</span></label>
+          <label><input type="radio" name="ba" value="červená" data-c="#C8324B,#E0566B,#9E2238"><span><i style="background:#C8324B"></i>červená</span></label>
+          <label><input type="radio" name="ba" value="pestrá" data-c="#E58FAA,#F2C14E,#8E7CC3"><span><i style="background:conic-gradient(#E58FAA 0 33%,#F2C14E 0 66%,#8E7CC3 0)"></i>pestrá</span></label>
+        </div></fieldset>
+        <fieldset><legend>Velikost</legend><div class="vol">
+          <label><input type="radio" name="ve" value="menší" data-n="5"><span>menší</span></label>
+          <label><input type="radio" name="ve" value="střední" data-n="8" checked><span>střední</span></label>
+          <label><input type="radio" name="ve" value="velká" data-n="12"><span>velká</span></label>
+        </div></fieldset>
+        <div><label class="t" for="kdy">Kdy si ji vyzvednete</label><input type="date" id="kdy"></div>
+      </div>
+      <div class="vaza" aria-live="polite">
+        <svg viewBox="0 0 400 320" aria-hidden="true">
+          <g id="stonky"></g>
+          <g id="kvety"></g>
+          <path d="M150 220 L200 312 L250 220z" fill="#E9D6C8" stroke="#C9B2A3" stroke-width="2"/>
+          <path d="M165 240 q35 14 70 0" fill="none" stroke="#4E2240" stroke-width="6" stroke-linecap="round"/>
+          <path d="M200 244 l-16 22 M200 244 l16 22" stroke="#4E2240" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <div class="zprava" id="zprava"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-l" id="sms" href="sms:+420777016347">Poslat SMS</a>
+          <a class="btn btn-o" href="tel:+420777016347">Zavolat</a>
+        </div>
+        <p class="pozn">Ilustrační obrázek – skutečnou kytici uvážeme z čerstvých květin, které budou v obchodě.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="svatby">
+  <div class="wrap">
+    <div class="uvod"><h2>Svatby a poslední rozloučení</h2><p>Dvě chvíle, kdy na květinách záleží nejvíc. Obě se vyplatí domluvit s předstihem.</p></div>
+    <div class="dve">
+      <div class="sv"><h3>Svatební floristika</h3><p>Svatební vazby probereme osobně nebo po telefonu – barvy, styl, počet vazeb.</p><a class="btn btn-l" href="tel:+420777016347" style="justify-self:start">Domluvit svatbu</a></div>
+      <div class="sm"><h3>Smuteční vazby</h3><p>Smuteční vazbu připravíme k termínu rozloučení. Stačí zavolat nebo se zastavit.</p><a class="btn btn-o" href="tel:+420777016347" style="justify-self:start">Zavolat 777 016 347</a></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bila);border-block:1px solid var(--linka)">
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><span>Krok 1</span><h3>Ozvete se</h3><p>SMS z kytice výše, telefonem, nebo se rovnou zastavte v obchodě.</p></div>
+      <div><span>Krok 2</span><h3>Domluvíme detaily</h3><p>Cenu Vám řekneme předem, podle velikosti a květin.</p></div>
+      <div><span>Krok 3</span><h3>Vyzvednete</h3><p>Po–Pá 8–16:30, v sobotu 8–12 na Generála Svobody 280/24.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap dvoj">
+    <div>
+      <h2>Proč u Pivoňky</h2>
+      <ul class="duvera" style="margin-top:22px">
+        <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="#E58FAA"/></svg><span><b>Zákazníci chválí</b>nádherné vazby za dobré peníze a příjemnou obsluhu (recenze na <a href="https://www.firmy.cz/detail/2624849-kvetiny-u-pivonky-havirov-sumbark.html" target="_blank" rel="noopener">Firmy.cz</a>)</span></li>
+        <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="#3E6B48"/></svg><span><b>Od kytice po věnec</b>běžné, svatební i smuteční vazby na jednom místě</span></li>
+        <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="#4E2240"/></svg><span><b>Otevřeno i v sobotu</b>8:00–12:00</span></li>
+        <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="#C9A47A"/></svg><span><b>Živnostník, IČO 75270587</b>údaj z katalogu Firmy.cz</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Časté otázky</h2>
+      <details><summary>Můžu si kytici objednat předem?</summary><p>Ano – pošlete nám SMS přes „Uvažte si kytici“ nebo zavolejte. Připravíme ji na čas, kdy si pro ni přijdete.</p></details>
+      <details><summary>Jak dlouho předem řešit svatbu?</summary><p>Čím dřív, tím lépe – ideálně několik týdnů předem, ať máme čas probrat barvy a styl.</p></details>
+      <details><summary>Kolik stojí kytice?</summary><p>Záleží na velikosti a květinách. Cenu Vám řekneme předem.</p></details>
+      <details><summary>Máte otevřeno v sobotu?</summary><p>Ano, v sobotu od 8 do 12 hodin.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Adresa</dt><dd>Generála Svobody 280/24, Havířov-Šumbark</dd>
+        <dt>Po–Pá</dt><dd>8:00–16:30</dd>
+        <dt>Sobota</dt><dd>8:00–12:00</dd>
+        <dt>Telefon</dt><dd><a href="tel:+420777016347">777 016 347</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:vlasta.rojanova@seznam.cz">vlasta.rojanova@seznam.cz</a></dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 140" aria-hidden="true"><rect width="300" height="140" rx="16" fill="#2C4F34"/><path d="M0 70 L300 84" stroke="#DDEBDD" stroke-width="10" opacity=".5"/><text x="16" y="56" font-family="Figtree" font-size="12" fill="#DDEBDD">Generála Svobody</text><g transform="translate(170 76)"><g fill="#E58FAA"><circle cy="-8" r="7"/><circle cx="-7" cy="0" r="7"/><circle cx="7" cy="0" r="7"/><circle cy="7" r="7"/></g><circle r="4" fill="#4E2240"/></g></svg>
+      <a class="btn btn-p" href="https://mapy.cz/zakladni?q=Gener%C3%A1la%20Svobody%20280%2F24%20Hav%C3%AD%C5%99ov" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Květiny u Pivoňky · Generála Svobody 280/24, Havířov-Šumbark · IČO 75270587 · 777 016 347 · vlasta.rojanova@seznam.cz</div></footer>
+
+<div class="mobil">
+  <a class="btn btn-l" href="tel:+420777016347">Zavolat</a>
+  <a class="btn btn-p" href="#kytice">Uvázat kytici</a>
+</div>
+
+<script>
+(function(){
+  /* otevírací doba */
+  var n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60;
+  var doba=d>=1&&d<=5?[8,16.5]:(d===6?[8,12]:null);
+  var row=document.querySelector('#tab tr[data-d="'+(d>=1&&d<=5?1:d)+'"]'); if(row) row.classList.add('dnes');
+  var st=document.getElementById('st'),stT=document.getElementById('stT');
+  if(doba&&h>=doba[0]&&h<doba[1]){stT.textContent='Teď otevřeno'} else {st.classList.add('zav');stT.textContent='Teď zavřeno'}
+  /* kytice */
+  var kdy=document.getElementById('kdy'),t=new Date();t.setDate(t.getDate()+1);if(t.getDay()===0)t.setDate(t.getDate()+1);
+  kdy.value=t.toISOString().slice(0,10);kdy.min=new Date().toISOString().slice(0,10);
+  var kv=document.getElementById('kvety'),sk=document.getElementById('stonky'),out=document.getElementById('zprava'),sms=document.getElementById('sms');
+  function kvet(x,y,r,c){return '<g transform="translate('+x+' '+y+')"><circle cy="'+(-r*.5)+'" r="'+r*.62+'" fill="'+c[0]+'"/><circle cx="'+(-r*.5)+'" cy="'+(r*.15)+'" r="'+r*.62+'" fill="'+c[0]+'"/><circle cx="'+(r*.5)+'" cy="'+(r*.15)+'" r="'+r*.62+'" fill="'+c[0]+'"/><circle r="'+r*.5+'" fill="'+c[1]+'"/><circle r="'+r*.2+'" fill="'+c[2]+'"/></g>'}
+  function fmt(v){var p=v.split('-');return (+p[2])+'. '+(+p[1])+'.'}
+  function upd(){
+    var pr=document.querySelector('input[name=pr]:checked').value;
+    var ba=document.querySelector('input[name=ba]:checked'),ve=document.querySelector('input[name=ve]:checked');
+    var cs=ba.dataset.c.split(','),N=+ve.dataset.n,smut=pr==='smuteční vazba';
+    if(smut){cs=['#F4F0F2','#FFFFFF','#B9D3B0']}
+    var s='',k='';
+    for(var i=0;i<N;i++){
+      var a=-1.1+2.2*(N===1?.5:i/(N-1)), rr=N>8?92:74, x=200+Math.sin(a)*rr*(i%2?0.75:1), y=170-Math.cos(a)*rr*(i%2?0.75:1)-(i%3)*10;
+      s+='<path d="M200 230 Q'+(200+(x-200)*.4)+' 200 '+x.toFixed(1)+' '+y.toFixed(1)+'" stroke="#3E6B48" stroke-width="4" fill="none"/>';
+      s+='<ellipse cx="'+((x+200)/2).toFixed(1)+'" cy="'+((y+230)/2).toFixed(1)+'" rx="12" ry="5" fill="#5E8B62" transform="rotate('+(a*40).toFixed(0)+' '+((x+200)/2).toFixed(1)+' '+((y+230)/2).toFixed(1)+')"/>';
+      var c=[cs[i%cs.length],cs[(i+1)%cs.length],'#4E2240'];
+      k+=kvet(x.toFixed(1),y.toFixed(1),N>8?26:30,c);
+    }
+    sk.innerHTML=s;kv.innerHTML=k;
+    var txt='Dobrý den, prosím o '+(smut?'smuteční vazbu':'kytici')+'.\nPříležitost: '+pr+'\nBarvy: '+(smut?'bílá / tlumené':ba.value)+'\nVelikost: '+ve.value+'\nVyzvednu: '+fmt(kdy.value)+'\nKolik bude stát? Děkuji.';
+    out.textContent=txt;sms.href='sms:+420777016347?&body='+encodeURIComponent(txt);
+  }
+  [].slice.call(document.querySelectorAll('.kf input')).forEach(function(e){e.addEventListener('change',upd);e.addEventListener('input',upd)});upd();
+})();
+</script>
+</body>
+</html>

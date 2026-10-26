@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kavárna Hlučín – snídaně a bezlepkové dezerty | Café Carpe Diem</title>
+<meta name="description" content="Café Carpe Diem, Ostravská 84/41, Hlučín: snídaně do 10:30, lívance, vafle, palačinky, polévky vždy bezlepkové, domácí bezlepkové dezerty a zmrzlina. Vše i v bezlepkové variantě. Tel. 602 161 150.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Lexend:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Café Carpe Diem","description":"Kavárna v Hlučíně: káva z pražírny Henri Café Olomouc, snídaně, lívance, vafle, palačinky, bezlepkové polévky a dezerty vlastní výroby, zmrzlina.","telephone":"+420602161150","email":"pavlina.konecna1@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Ostravská 84/41","addressLocality":"Hlučín","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"12:00"}]}</script>
+<style>
+/* Café Carpe Diem – modernizace šablony makro.rest. Útulný, domácký: křídová tabule, dřevo, oranžová. Hero = křídová tabule s ručně psaným menu. Výrazný prvek: menu se přepíná podle času (do 10:30 snídaně / od 10:30) a přepínač „bezlepkově“. */
+:root{
+  --tabule:#26332B; --tabule2:#1B251F; --krida:#F4F1E8; --oranz:#E07B2A; --oranz-tx:#9A4A0E; --drevo:#8A5A3B; --drevo-sv:#E9D6C2;
+  --pozadi:#FBF6EF; --tx:#26231F; --tx2:#5B544C; --linka:#E6DACB; --bila:#fff; --zelena:#5E8C61;
+  --f-ruka:"Kalam","Comic Sans MS",cursive; --f-text:"Lexend","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--pozadi);color:var(--tx);font-family:var(--f-text);font-size:16.5px;line-height:1.6}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
+h2{font:700 clamp(30px,4.2vw,48px) var(--f-ruka)}
+h3{font:500 18px var(--f-text)}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--oranz);outline-offset:2px}
+.navrh{background:var(--tx);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.lista{background:var(--pozadi);border-bottom:1px solid var(--linka);position:sticky;top:0;z-index:20}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 24px var(--f-ruka);line-height:1}
+.znacka small{display:block;font:400 12px var(--f-text);color:var(--tx2);letter-spacing:.08em;text-transform:uppercase}
+.nav{display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:10px;font:500 16px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-o{background:var(--oranz);color:#2A1404;font-weight:700}
+.btn-o:hover{background:#EA8E43}
+.btn-k{border-color:var(--krida);color:var(--krida)}
+.btn-t{background:var(--tabule);color:#fff}
+.lista .btn{min-height:42px;padding:0 16px}
+/* hero tabule */
+.hero{padding-block:34px 48px;background:linear-gradient(var(--drevo-sv),var(--pozadi))}
+.ram{background:var(--tabule);border:14px solid var(--drevo);border-radius:10px;box-shadow:inset 0 0 60px rgba(0,0,0,.45),0 22px 40px -22px rgba(60,30,10,.6);color:var(--krida);padding:40px 44px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;position:relative}
+.ram::after{content:"";position:absolute;left:30%;right:30%;bottom:-24px;height:10px;background:var(--drevo);border-radius:0 0 6px 6px}
+.ram .misto{font:400 20px var(--f-ruka);color:#F6C38F}
+.ram h1{font:700 clamp(40px,6.6vw,78px) var(--f-ruka);margin:4px 0 12px;line-height:1.02}
+.ram h1 u{text-decoration:none;background:linear-gradient(transparent 70%,rgba(224,123,42,.7) 70% 88%,transparent 88%)}
+.ram .lead{font-size:18px;color:#E3DFD3;max-width:30em}
+.ram .akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.ruka{font-family:var(--f-ruka);font-size:20px;line-height:1.5;border-left:2px dashed rgba(244,241,232,.35);padding-left:30px;display:grid;gap:8px;align-content:start}
+.ruka b{font-size:26px;color:#F6C38F;display:block}
+.ruka .dny{display:grid;grid-template-columns:auto 1fr;gap:2px 16px}
+.ruka .ted{display:inline-block;margin-top:6px;background:var(--krida);color:var(--tabule);padding:2px 12px;border-radius:4px;transform:rotate(-2deg);font-weight:700}
+/* pás */
+.pas{background:var(--bila);border-block:1px solid var(--linka)}
+.pas ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.pas li{padding:16px;border-left:1px solid var(--linka);font-size:14px;color:var(--tx2)}
+.pas li:first-child{border-left:0}
+.pas b{display:block;color:var(--tx);font-size:16px;font-weight:500}
+section{padding-block:72px}
+.uvod{max-width:660px;margin-bottom:28px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+/* menu */
+.ovl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:22px}
+.prep{display:inline-flex;background:var(--drevo-sv);border-radius:999px;padding:4px}
+.prep button{all:unset;cursor:pointer;padding:10px 18px;border-radius:999px;font-weight:500;font-size:15px}
+.prep button[aria-pressed=true]{background:var(--tabule);color:#fff}
+.prep button:focus-visible{outline:3px solid var(--oranz)}
+.gf{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-weight:500;font-size:15px;background:var(--bila);border:2px solid var(--linka);border-radius:999px;padding:8px 16px}
+.gf input{width:20px;height:20px;accent-color:var(--zelena)}
+.gf:has(input:checked){border-color:var(--zelena);background:#EAF2EA}
+.menu{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+.list{background:var(--bila);border:1px solid var(--linka);border-radius:14px;padding:8px 24px}
+.list .pol{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px dashed var(--linka)}
+.list .pol:last-child{border-bottom:0}
+.list .bl{flex:none;font-size:12px;font-weight:700;color:var(--zelena);border:1.5px solid var(--zelena);border-radius:999px;padding:2px 8px;height:fit-content;white-space:nowrap;opacity:0;transition:opacity .2s}
+.gfon .list .bl{opacity:1}
+.list .sk{font:700 22px var(--f-ruka);color:var(--oranz-tx);padding:14px 0 4px;border-bottom:0}
+.bok{display:grid;gap:14px}
+.bok>div{background:var(--tabule);color:var(--krida);border-radius:14px;padding:20px}
+.bok b{font:700 24px var(--f-ruka);color:#F6C38F;display:block}
+.bok p{color:#E3DFD3;font-size:15px;margin-top:4px}
+.cenapozn{margin-top:18px;color:var(--tx2);font-size:15px}
+/* dezerty + služby */
+.dez{background:var(--drevo-sv)}
+.dz{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dz>div{background:var(--bila);border-radius:14px;padding:18px;display:grid;gap:8px;align-content:start}
+.dz svg{width:100%;height:110px}
+.dz p{font-size:14px;color:var(--tx2)}
+.sluzby{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.sluzby span{background:var(--bila);border:1px solid var(--linka);border-radius:999px;padding:8px 14px;font-size:15px}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.fotky div{aspect-ratio:4/3;border-radius:14px;border:2px dashed var(--drevo);display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:14px;padding:10px;background:var(--pozadi)}
+/* důvěra */
+.duv{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
+.medaile{width:170px;height:170px;border-radius:50%;background:var(--oranz);color:#2A1404;display:grid;place-items:center;text-align:center;font:700 22px/1.1 var(--f-ruka);border:6px dashed #FBF6EF;outline:4px solid var(--oranz);padding:12px}
+.medaile b{display:block;font-size:46px}
+.duv ul{margin:14px 0 0;padding-left:20px;display:grid;gap:6px;color:var(--tx2)}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.kroky>div{display:grid;gap:6px}
+.kroky span{font:700 40px var(--f-ruka);color:var(--oranz)}
+.kroky p{color:var(--tx2)}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:500;cursor:pointer}
+details p{margin-top:8px;color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+/* kontakt */
+.kontakt{background:var(--tabule2);color:var(--krida)}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:22px 0 0}
+.kontakt dt{color:#F6C38F;font-size:15px}
+.kontakt dd{margin:0}
+.mapa{background:var(--tabule);border:10px solid var(--drevo);border-radius:10px;padding:18px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:#121A15;color:#C9CFC9;font-size:14px;padding:24px 0 100px}
+.mobil{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .ram{grid-template-columns:1fr;padding:26px 20px;border-width:10px;gap:22px}
+  .ruka{border-left:0;padding-left:0;border-top:2px dashed rgba(244,241,232,.35);padding-top:18px}
+  .menu,.duv,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .pas ul{grid-template-columns:1fr 1fr}
+  .pas li:nth-child(3){border-left:0}
+  .pas li{border-top:1px solid var(--linka)}
+  .dz{grid-template-columns:1fr 1fr}
+  .kroky,.fotky{grid-template-columns:1fr}
+  .list{padding:4px 16px}
+  section{padding-block:52px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--pozadi);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:520px){ .ram .akce .btn{flex:1 1 100%} .dz{grid-template-columns:1fr} .ram{border-width:8px} }
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Café Carpe Diem</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M5 12h20v8a10 10 0 0 1-10 10h0A10 10 0 0 1 5 20z" fill="#E07B2A"/><path d="M25 14h2a4 4 0 0 1 0 8h-2" fill="none" stroke="#26332B" stroke-width="2.5"/><path d="M11 3q2 3 0 6M17 3q2 3 0 6" stroke="#26332B" stroke-width="2.5" fill="none"/></svg><span>Café Carpe Diem<small>Hlučín</small></span></a>
+    <nav class="nav" aria-label="Hlavní"><a href="#menu">Menu</a><a href="#dezerty">Dezerty</a><a href="#otazky">Otázky</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="btn btn-o" href="tel:+420602161150" aria-label="Zavolat 602 161 150"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>602 161 150</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="ram">
+      <div>
+        <div class="misto">Ostravská 84/41 · Hlučín</div>
+        <h1>Lahodná káva a <u>bezlepkové</u> dezerty</h1>
+        <p class="lead">Snídaně do 10:30, lívance, vafle a palačinky, polévka každý den. Všechno jídlo připravíme i v bezlepkové variantě – dezerty pečeme podle vlastní receptury.</p>
+        <div class="akce">
+          <a class="btn btn-o" href="#menu">Co dnes podáváme</a>
+          <a class="btn btn-k" href="tel:+420602161150">Zavolat 602 161 150</a>
+        </div>
+      </div>
+      <div class="ruka" aria-live="polite">
+        <div><b>Otevřeno</b>
+          <div class="dny"><span>Po–Pá</span><span>8:00–18:00</span><span>So–Ne</span><span>8:00–12:00</span></div>
+        </div>
+        <div><span class="ted" id="ted">Teď: snídaně</span></div>
+        <div style="font-size:18px;color:#E3DFD3">káva z pražírny Henri Café Olomouc · psi vítáni · parkování zdarma</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pas">
+  <div class="wrap">
+    <ul>
+      <li><b>Vše i bez lepku</b>polévky vždy bezlepkové</li>
+      <li><b>Snídaně do 10:30</b>každý den</li>
+      <li><b>2. místo v Hlučíně</b>mezi kavárnami na Firmy.cz</li>
+      <li><b>Psi vítáni</b>rodiny s dětmi taky</li>
+    </ul>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Menu</h2>
+      <p>Menu se přepne samo podle toho, kolik je hodin. Polévku dne a aktuální dezerty najdete na našem Facebooku a Instagramu.</p>
+    </div>
+    <div class="ovl">
+      <div class="prep" role="group" aria-label="Část dne">
+        <button type="button" data-m="r" aria-pressed="true">Snídaně do 10:30</button>
+        <button type="button" data-m="d" aria-pressed="false">Od 10:30</button>
+      </div>
+      <label class="gf"><input type="checkbox" id="gf"> Chci bezlepkově</label>
+    </div>
+    <div class="menu" id="menuw">
+      <div class="list" id="listR">
+        <div class="pol sk">Snídaňové menu</div>
+        <div class="pol"><span>Tousty se šunkou a cheddarem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Tousty se slaninou, cibulkou a cheddarem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Pařížský / vajíčkový salát podle vlastní receptury s čerstvě rozpečenými bagetkami</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Párečky ve skle s hořčicí, kečupem a křenem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Míchaná vajíčka s cibulkou a slaninou / špekem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Vajíčka na anglické slanině / šunce</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Vaječná omeleta se sušenými rajčaty a cheddarem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Grande – volská oka, slanina, bavorské klobásky, fazole a grilované žampiony</span><span class="bl">i bez lepku</span></div>
+      </div>
+      <div class="list" id="listD" hidden>
+        <div class="pol sk">Slané</div>
+        <div class="pol"><span>Zapékané toasty 2 / 4 ks (podle aktuální nabídky)</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Pařížský / vajíčkový salát podle vlastní receptury s bagetkami</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Grilovaný camembert</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Palačinka se špenátem, slaninou, cibulí, cheddarem a česnekem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Palačinka s žampiony, bavorskou klobásou, smetanou a cheddarem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Lívance se slaninou a javorovým sirupem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol sk">Sladké</div>
+        <div class="pol"><span>Lívance s jablky, ořechy a smetanovým karamelem</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Lívance s banánem / čerstvým ovocem, čokoládou a šlehačkou</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Lívance s ovocným přelivem, čerstvým ovocem a šlehačkou</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Vafle s čerstvým ovocem, javorovým sirupem a šlehačkou</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Vafle s banánem, smetanovým karamelem a šlehačkou</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Palačinka s povidly, lyofilizovanými malinami a šlehačkou</span><span class="bl">i bez lepku</span></div>
+        <div class="pol"><span>Palačinka s nutellou, pistáciemi a šlehačkou</span><span class="bl">i bez lepku</span></div>
+      </div>
+      <div class="bok">
+        <div><b>Polévka každý den</b><p>Vaříme ji denně a vždy bezlepkovou. Jaká je dnes, píšeme na Facebook a Instagram.</p></div>
+        <div><b>Bez lepku? Bez starostí.</b><p>Veškeré podávané jídlo je možné připravit v bezlepkové variantě. Stačí to říct při objednání.</p></div>
+        <div><b>Zmrzlina</b><p>Bez prášku a bez přidávaných barviv – smetanová i sorbety.</p></div>
+      </div>
+    </div>
+    <p class="cenapozn">Ceny doplníme podle Vašeho aktuálního ceníku <span style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#FFF1CC;color:#6B4E0E;border:1px solid #E5C77A;border-radius:4px;padding:3px 6px">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="dez" id="dezerty">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Domácí dezerty</h2>
+      <p>Bezlepkové dezerty vlastní výroby. Nabídka se mění – tady je pár, které jste u nás už mohli ochutnat.</p>
+    </div>
+    <div class="dz">
+      <div><svg viewBox="0 0 160 110" aria-hidden="true"><path d="M20 90 L140 90 L120 40 L40 40z" fill="#5A3322"/><path d="M40 40q40-20 80 0" fill="#3B2015"/><rect x="34" y="62" width="92" height="8" fill="#9E1F3A"/><circle cx="80" cy="30" r="8" fill="#9E1F3A"/></svg><h3>Čokoládový dort s višňovým prokladem</h3></div>
+      <div><svg viewBox="0 0 160 110" aria-hidden="true"><path d="M30 90 L130 90 L130 54 L30 54z" fill="#E9D6C2"/><rect x="30" y="54" width="100" height="20" fill="#C9E39B"/><g fill="#fff"><circle cx="50" cy="50" r="4"/><circle cx="70" cy="47" r="3"/><circle cx="92" cy="50" r="4"/><circle cx="112" cy="47" r="3"/></g></svg><h3>Limetový cheesecake s bílou čokoládou</h3><p>bezlepkový</p></div>
+      <div><svg viewBox="0 0 160 110" aria-hidden="true"><circle cx="50" cy="66" r="24" fill="#E9B66A"/><rect x="84" y="46" width="44" height="40" rx="6" fill="#5A3322"/><circle cx="106" cy="40" r="7" fill="#E07B2A"/><path d="M36 60h28" stroke="#fff" stroke-width="4"/></svg><h3>Mix dezertů</h3><p>když se nemůžete rozhodnout</p></div>
+      <div><svg viewBox="0 0 160 110" aria-hidden="true"><ellipse cx="80" cy="76" rx="64" ry="20" fill="#E6DACB"/><g fill="#C0504D"><circle cx="54" cy="70" r="10"/><circle cx="76" cy="66" r="10"/></g><g fill="#F2C94C"><rect x="92" y="60" width="18" height="14"/><rect x="112" y="66" width="16" height="12"/></g></svg><h3>Slané mísy – salám a sýr</h3><p>k vínu nebo na akci</p></div>
+    </div>
+    <div class="sluzby" aria-label="Co u nás dál najdete">
+      <span>limonády a smoothie</span><span>tematické dny</span><span>degustace</span><span>catering</span><span>soukromé akce</span><span>jídlo s sebou</span><span>venkovní posezení</span><span>bezbariérové</span><span>Wi-Fi zdarma</span><span>platba kartou</span>
+    </div>
+    <div class="fotky"><div>Sem přijde Vaše fotka – dort</div><div>Sem přijde Vaše fotka – snídaně</div><div>Sem přijde Vaše fotka – kavárna</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap duv">
+    <div class="medaile"><span><b>2.</b>místo<br>v Hlučíně</span></div>
+    <div>
+      <h2>Hosté nás hodnotí „Fantastické“</h2>
+      <p style="margin-top:8px;color:var(--tx2)">Na <a href="https://www.firmy.cz/detail/13298244-cafe-carpe-diem-hlucin.html" target="_blank" rel="noopener">Firmy.cz</a> z 13 hodnocení a 2. místo mezi kavárnami v Hlučíně. Nejčastěji chválí:</p>
+      <ul><li>milou obsluhu</li><li>kávu</li><li>domáckou atmosféru</li></ul>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bila);border-block:1px solid var(--linka)">
+  <div class="wrap">
+    <div class="uvod"><h2>Soukromá akce nebo catering?</h2><p>Soukromou akci, slané mísy nebo catering domluvíme po telefonu.</p></div>
+    <div class="kroky">
+      <div><span>1.</span><h3>Zavoláte</h3><p>602 161 150 – řeknete, kolik vás bude a kdy.</p></div>
+      <div><span>2.</span><h3>Domluvíme menu</h3><p>Slané i sladké, klidně celé bez lepku.</p></div>
+      <div><span>3.</span><h3>Přijdete, nebo si odnesete</h3><p>U nás v kavárně, nebo s sebou.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="otazky">
+  <div class="wrap dvoj">
+    <div>
+      <h2>Časté otázky</h2>
+      <details><summary>Opravdu jde všechno bez lepku?</summary><p>Ano, veškeré podávané jídlo umíme připravit v bezlepkové variantě. Polévky jsou bezlepkové vždy.</p></details>
+      <details><summary>Do kolika podáváte snídaně?</summary><p>Snídaňové menu podáváme každý den do 10:30, pak přichází lívance, vafle, palačinky a toasty.</p></details>
+      <details><summary>Můžu přijít se psem?</summary><p>Ano, domácí mazlíčci jsou u nás vítáni.</p></details>
+    </div>
+    <div>
+      <h2 style="visibility:hidden" aria-hidden="true">.</h2>
+      <details><summary>Dá se zaparkovat?</summary><p>Ano, u kavárny je parkoviště zdarma.</p></details>
+      <details><summary>Můžu platit kartou?</summary><p>Ano – kartou, bezkontaktně i v hotovosti.</p></details>
+      <details><summary>Jaká je polévka dne?</summary><p>Aktuální nabídku píšeme každý den na Facebook a Instagram.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Adresa</dt><dd>Ostravská 84/41, Hlučín</dd>
+        <dt>Po–Pá</dt><dd>8:00–18:00</dd>
+        <dt>So–Ne</dt><dd>8:00–12:00</dd>
+        <dt>Telefon</dt><dd><a href="tel:+420602161150">602 161 150</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:pavlina.konecna1@gmail.com">pavlina.konecna1@gmail.com</a></dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 140" aria-hidden="true"><rect width="300" height="140" fill="#26332B"/><path d="M0 90 C90 70 200 90 300 60" stroke="#F4F1E8" stroke-width="3" stroke-dasharray="8 6" fill="none"/><text x="20" y="120" font-family="Kalam, cursive" font-size="18" fill="#F4F1E8">Ostravská</text><circle cx="170" cy="78" r="12" fill="#E07B2A"/><path d="M164 78h12" stroke="#26332B" stroke-width="3"/></svg>
+      <a class="btn btn-o" href="https://mapy.cz/zakladni?q=Ostravsk%C3%A1%2084%2F41%20Hlu%C4%8D%C3%ADn" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Café Carpe Diem · Ostravská 84/41, Hlučín · 602 161 150 · pavlina.konecna1@gmail.com</div></footer>
+
+<div class="mobil">
+  <a class="btn btn-o" href="tel:+420602161150">Zavolat</a>
+  <a class="btn btn-t" href="#menu">Menu</a>
+</div>
+
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.prep button')),R=document.getElementById('listR'),D=document.getElementById('listD'),gf=document.getElementById('gf'),w=document.getElementById('menuw'),ted=document.getElementById('ted');
+  function set(m){btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.m===m?'true':'false')});R.hidden=m!=='r';D.hidden=m!=='d'}
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.m)})});
+  gf.addEventListener('change',function(){w.classList.toggle('gfon',gf.checked)});
+  var n=new Date(),h=n.getHours()+n.getMinutes()/60,d=n.getDay(),zav=(d===0||d===6)?12:18;
+  if(h<8||h>=zav){ted.textContent='Teď zavřeno – otevíráme v 8:00';set('r')}
+  else if(h<10.5){ted.textContent='Teď: snídaně (do 10:30)';set('r')}
+  else {ted.textContent='Teď: lívance, vafle, palačinky';set('d')}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kosmetika Opava, řasy a permanentní make-up | Kosmetika Andrea Králová</title>
+<meta name="description" content="Kosmetika Andrea Králová – salony v Opavě, Chvalíkovicích, Jakubčovicích a Březové: permanentní make-up, prodlužování řas, čištění pleti, svatební líčení, nehty. Tel. 723 939 501.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bellefair&family=Sarabun:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Kosmetika Andrea Králová","description":"Permanentní make-up, prodlužování řas, čištění pleti, svatební a večerní líčení, epilace, modeláž nehtů.","telephone":"+420723939501","email":"kosmetikaopava@seznam.cz","taxID":"73000477","address":{"@type":"PostalAddress","streetAddress":"Sadová 121/4","addressLocality":"Opava","postalCode":"746 01","addressCountry":"CZ"}}</script>
+<style>
+/* Kosmetika A. Králová – modernizace Wixu. Šalvěj + pudrová, světlé. Hero dělený: text vlevo, ilustrace obličeje s řasami vpravo. Výrazný prvek: mapa 4 salonů – vyberete nejbližší a složí se SMS. */
+:root{
+  --salvej:#4F6B57; --salvej2:#3A5242; --salvej-sv:#DCE6DD; --pudr:#F4DCD6; --pudr2:#E9C3BA;
+  --krem:#FCFAF7; --tx:#22302A; --tx2:#53625A; --linka:#E4E1DB; --bila:#fff;
+  --f-disp:"Bellefair","Georgia",serif; --f-text:"Sarabun","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--krem);color:var(--tx);font-family:var(--f-text);font-size:17px;line-height:1.6}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4vw,46px)}
+h3{font-size:24px}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--salvej);outline-offset:2px}
+.navrh{background:var(--tx);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.stitek{display:inline-block;font:700 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF1CC;color:#6B4E0E;border:1px solid #E5C77A;border-radius:4px;padding:4px 6px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+.lista{background:rgba(252,250,247,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--linka);position:sticky;top:0;z-index:20}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.znacka{text-decoration:none;font-family:var(--f-disp);font-size:24px;line-height:1}
+.znacka small{display:block;font:500 12px var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--tx2);margin-top:4px}
+.nav{display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font:700 16px var(--f-text);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-hl{background:var(--salvej);color:#fff}
+.btn-hl:hover{background:var(--salvej2)}
+.btn-ob{border-color:var(--tx);color:var(--tx);background:transparent}
+.lista .btn{min-height:42px;padding:0 16px}
+/* hero */
+.hero>.wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:56px 64px}
+.hero .misto{font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--salvej)}
+.hero h1{font-size:clamp(40px,6.4vw,76px);margin:14px 0 18px}
+.hero h1 i{font-style:normal;color:var(--salvej)}
+.hero .lead{font-size:19px;color:var(--tx2);max-width:30em}
+.hero .akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .mini{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.hero .mini span{background:var(--salvej-sv);color:var(--salvej2);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px}
+.ilu{position:relative;aspect-ratio:1/1;max-width:480px;width:100%;justify-self:end}
+.ilu svg{width:100%;height:100%;display:block}
+/* stará vs nová */
+.posun{background:var(--bila);border-block:1px solid var(--linka)}
+.posun .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.posun div{padding:18px 16px;border-left:1px solid var(--linka);font-size:15px;color:var(--tx2)}
+.posun div:first-child{border-left:0}
+.posun b{display:block;color:var(--tx);font-size:16px}
+section{padding-block:72px}
+.uvod{max-width:640px;margin-bottom:36px;display:grid;gap:12px}
+.uvod p{color:var(--tx2)}
+/* služby */
+.skup{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skup>div{background:var(--bila);border:1px solid var(--linka);border-radius:14px;padding:26px 24px;display:grid;gap:12px;align-content:start}
+.skup>div:nth-child(2){background:var(--pudr);border-color:var(--pudr2)}
+.skup ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.skup li{padding-left:22px;position:relative}
+.skup li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;border-radius:50%;border:2px solid var(--salvej)}
+.skup .ik{width:46px;height:46px}
+.cenapozn{margin-top:24px;color:var(--tx2)}
+/* o mně */
+.omne{background:var(--salvej);color:#fff}
+.omne .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.omne h2{color:#fff}
+.omne p{color:#E8F0E9;margin-top:14px;font-size:18px}
+.omne blockquote{margin:0;font-family:var(--f-disp);font-size:clamp(26px,3vw,36px);line-height:1.25}
+.foto{aspect-ratio:4/5;border-radius:200px 200px 14px 14px;border:2px dashed #B9CCBD;display:grid;place-items:center;text-align:center;color:#E8F0E9;padding:16px;max-width:360px;width:100%}
+.poukaz{margin-top:22px;display:inline-flex;gap:12px;align-items:center;background:var(--pudr);color:var(--tx);border-radius:10px;padding:12px 16px;font-weight:500}
+/* mapa salonů */
+.salony{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.mapka{background:var(--bila);border:1px solid var(--linka);border-radius:14px;padding:12px}
+.mapka svg{width:100%;height:auto;display:block}
+.mapka .pin{cursor:pointer}
+.mapka .pin circle.k{fill:var(--bila);stroke:var(--salvej);stroke-width:3;transition:r .2s}
+.mapka .pin.on circle.k{fill:var(--salvej)}
+.mapka .pin text{font:600 14px var(--f-text);fill:var(--tx)}
+.mapka .pozn{font-size:13px;color:var(--tx2);padding:6px 8px 0}
+.seznam{display:grid;gap:10px}
+.seznam button{all:unset;cursor:pointer;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center;background:var(--bila);border:1.5px solid var(--linka);border-radius:12px;padding:14px 16px}
+.seznam button:focus-visible{outline:3px solid var(--salvej);outline-offset:2px}
+.seznam button[aria-pressed=true]{border-color:var(--salvej);background:var(--salvej-sv)}
+.seznam .c{grid-row:span 2;width:34px;height:34px;border-radius:50%;background:var(--pudr);display:grid;place-items:center;font-family:var(--f-disp);font-size:20px}
+.seznam b{font-size:17px}
+.seznam span.a{color:var(--tx2);font-size:15px}
+.skladac{margin-top:16px;background:var(--bila);border:1px solid var(--linka);border-radius:12px;padding:18px;display:grid;gap:12px}
+.skladac select{width:100%;font:500 16px var(--f-text);padding:10px 12px;border:1.5px solid var(--linka);border-radius:8px;background:var(--krem);color:var(--tx);margin-top:6px}
+.skladac label{font-weight:700;font-size:15px}
+.zprava{white-space:pre-wrap;background:var(--krem);border:1px dashed var(--salvej);border-radius:10px;padding:14px;font-size:15px}
+/* kroky + péče + faq */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:k}
+.kroky>div{display:grid;gap:8px}
+.kroky>div::before{counter-increment:k;content:"0" counter(k);font:400 44px var(--f-disp);color:var(--salvej)}
+.kroky p{color:var(--tx2)}
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.duvera{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.duvera li{background:var(--bila);border:1px solid var(--linka);border-radius:10px;padding:14px 16px}
+.duvera b{display:block}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:700;cursor:pointer;font-size:17px}
+details p{margin-top:8px;color:var(--tx2)}
+/* kontakt */
+.kontakt{background:var(--pudr)}
+.kontakt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:22px 0 0}
+.kontakt dt{color:var(--tx2);font-size:15px}
+.kontakt dd{margin:0;font-weight:500}
+.kontakt .mapy{display:grid;gap:10px;align-content:start}
+.kontakt .mapy a{display:flex;justify-content:space-between;gap:12px;background:var(--bila);border-radius:10px;padding:14px 16px;text-decoration:none;border:1px solid var(--pudr2)}
+.kontakt .mapy a span{color:var(--salvej2);font-weight:700;white-space:nowrap}
+footer{background:var(--tx);color:#CBD5CF;font-size:14px;padding:24px 0 100px}
+.mobil{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .hero>.wrap,.omne .wrap,.salony,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .hero>.wrap{padding-block:28px 40px;gap:20px}
+  .ilu{max-width:240px;justify-self:center;order:-1}
+  .skup{grid-template-columns:1fr}
+  .posun .wrap{grid-template-columns:1fr 1fr}
+  .posun div:nth-child(3){border-left:0}
+  .posun div{border-top:1px solid var(--linka)}
+  .kroky{grid-template-columns:1fr}
+  .foto{max-width:240px;justify-self:center}
+  section{padding-block:52px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--krem);border-top:1px solid var(--linka);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .mobil .btn{flex:1;padding:0 10px}
+}
+@media (max-width:520px){ .hero .akce .btn{flex:1 1 100%} .ilu{display:none} }
+</style>
+</head>
+<body>
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Kosmetika Andrea Králová</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top">Kosmetika Opava<small>Andrea Králová</small></a>
+    <nav class="nav" aria-label="Hlavní"><a href="#sluzby">Služby</a><a href="#omne">O mně</a><a href="#salony">Salony</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="btn btn-hl" href="tel:+420723939501" aria-label="Zavolat 723 939 501"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>723 939 501</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="misto">Opava · Chvalíkovice · Jakubčovice · Březová</div>
+      <h1>Řasy, obočí a pleť<br><i>v rukou kosmetičky</i></h1>
+      <p class="lead">Permanentní make-up, prodlužování řas metodou řasa na řasu, čištění pleti i svatební líčení. Individuální přístup a kvalitní přírodní kosmetika – ve čtyřech salonech na Opavsku.</p>
+      <div class="akce">
+        <a class="btn btn-hl" href="tel:+420723939501">Objednat se: 723 939 501</a>
+        <a class="btn btn-ob" href="#salony">Najít nejbližší salon</a>
+      </div>
+      <div class="mini"><span>PMU</span><span>Řasy</span><span>Pleť</span><span>Líčení</span><span>Nehty</span></div>
+    </div>
+    <div class="ilu" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <circle cx="200" cy="200" r="190" fill="#DCE6DD"/>
+        <circle cx="200" cy="200" r="150" fill="#F4DCD6"/>
+        <path d="M110 190 q90 -70 180 0" fill="none" stroke="#22302A" stroke-width="4" stroke-linecap="round"/>
+        <path d="M110 190 q90 60 180 0" fill="#FCFAF7" stroke="#22302A" stroke-width="3"/>
+        <circle cx="200" cy="196" r="30" fill="#4F6B57"/><circle cx="200" cy="196" r="13" fill="#22302A"/><circle cx="208" cy="188" r="5" fill="#fff"/>
+        <g stroke="#22302A" stroke-width="3" stroke-linecap="round">
+          <path d="M118 182 l-14 -22"/><path d="M134 170 l-8 -26"/><path d="M152 161 l-4 -28"/><path d="M170 155 l-1 -29"/><path d="M188 152 l2 -30"/><path d="M206 152 l4 -30"/><path d="M224 155 l7 -28"/><path d="M242 160 l10 -27"/><path d="M260 168 l13 -24"/><path d="M276 178 l16 -20"/>
+        </g>
+        <path d="M110 118 q90 -46 180 -6" fill="none" stroke="#3A5242" stroke-width="12" stroke-linecap="round"/>
+        <g fill="#4F6B57"><circle cx="320" cy="300" r="6"/><circle cx="90" cy="290" r="4"/><circle cx="300" cy="96" r="4"/></g>
+      </svg>
+    </div>
+  </div>
+  <div class="posun">
+    <div class="wrap">
+      <div><b>4 salony</b>Opava, Chvalíkovice, Jakubčovice, Březová</div>
+      <div><b>Dlouholetá praxe</b>vyučená kosmetička</div>
+      <div><b>Přírodní kosmetika</b>Originál Atok</div>
+      <div><b>Dárkové poukazy</b>v jakékoliv hodnotě</div>
+    </div>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Služby</h2>
+      <p>Celá nabídka z Vašeho dosavadního webu – přehledně podle toho, co chcete zlepšit.</p>
+    </div>
+    <div class="skup">
+      <div>
+        <svg class="ik" viewBox="0 0 46 46" aria-hidden="true"><g fill="none" stroke="#4F6B57" stroke-width="2.4" stroke-linecap="round"><path d="M6 24q17-14 34 0q-17 12-34 0z"/><circle cx="23" cy="23" r="5"/><path d="M10 16l-3-5M17 12l-1-6M23 11V5M29 12l1-6M36 16l3-5"/></g></svg>
+        <h3>Oči a obočí</h3>
+        <ul><li>Permanentní make-up</li><li>Prodlužování řas metodou řasa na řasu</li><li>Trvalá na řasy</li><li>Barvení řas i obočí</li></ul>
+      </div>
+      <div>
+        <svg class="ik" viewBox="0 0 46 46" aria-hidden="true"><g fill="none" stroke="#4F6B57" stroke-width="2.4" stroke-linecap="round"><ellipse cx="23" cy="23" rx="13" ry="17"/><path d="M17 20h3M26 20h3M19 30q4 3 8 0"/></g></svg>
+        <h3>Pleť a líčení</h3>
+        <ul><li>Čištění pleti</li><li>Masáž obličeje i dekoltu</li><li>Mikromasáž</li><li>Líčení svatební i večerní</li></ul>
+      </div>
+      <div>
+        <svg class="ik" viewBox="0 0 46 46" aria-hidden="true"><g fill="none" stroke="#4F6B57" stroke-width="2.4" stroke-linecap="round"><path d="M14 42V16a6 6 0 0 1 12 0v26"/><path d="M28 42V20a5 5 0 0 1 10 0v22"/></g></svg>
+        <h3>Ruce a tělo</h3>
+        <ul><li>Nehtová modeláž, manikúra</li><li>P-Shine, zdobení nehtů</li><li>Epilace celého těla</li></ul>
+      </div>
+    </div>
+    <p class="cenapozn">Cenu Vám řeknu předem po telefonu podle rozsahu ošetření. <a href="tel:+420723939501">Zavolat 723 939 501</a></p>
+  </div>
+</section>
+
+<section class="omne" id="omne">
+  <div class="wrap">
+    <div class="foto">Sem přijde Vaše fotka – Andrea v salonu</div>
+    <div>
+      <blockquote>„V mém salonu se zaměřuji na individuální přístup ke každému zákazníkovi.“</blockquote>
+      <p>Mám dlouholetou praxi a jsem vyučena v oboru kosmetička. Pracuji s velmi kvalitní přírodní kosmetikou Originál Atok. Těším se na Vaši návštěvu a věřím, že budete maximálně spokojeni.</p>
+      <div class="poukaz"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="9" width="24" height="17" rx="2" fill="none" stroke="#3A5242" stroke-width="2"/><path d="M15 9v17M3 15h24" stroke="#3A5242" stroke-width="2"/><path d="M15 9q-6-8-8-2q2 3 8 2q6 1 8-2q-2-6-8 2" fill="none" stroke="#3A5242" stroke-width="2"/></svg>Dárkový poukaz v jakékoliv hodnotě – výborný dárek pro ženy i dívky.</div>
+    </div>
+  </div>
+</section>
+
+<section id="salony">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Čtyři salony – vyberte si ten nejbližší</h2>
+      <p>Abyste to měla co nejblíž. Klepněte na salon a složí se zpráva s místem, službou a časem, kterou mi pošlete SMS.</p>
+    </div>
+    <div class="salony">
+      <div class="mapka">
+        <svg viewBox="0 0 520 380" role="img" aria-label="Schematická mapa salonů na Opavsku">
+          <rect width="520" height="380" rx="10" fill="#F1F5F1"/>
+          <path d="M0 70 C120 90 200 40 330 80 S470 70 520 60" fill="none" stroke="#B8CDE0" stroke-width="10"/>
+          <text x="420" y="52" font-size="12" fill="#6A7F92" font-family="Sarabun">Opava (řeka)</text>
+          <path d="M290 160 C300 220 330 260 330 380" fill="none" stroke="#B8CDE0" stroke-width="7"/>
+          <text x="338" y="320" font-size="12" fill="#6A7F92" font-family="Sarabun">Moravice</text>
+          <path d="M150 110 L260 170 L320 220 L230 330" fill="none" stroke="#fff" stroke-width="8"/>
+          <path d="M150 110 L260 170 L320 220 L230 330" fill="none" stroke="#D9D3C7" stroke-width="2" stroke-dasharray="6 6"/>
+          <g class="pin" data-i="0" transform="translate(150 110)"><circle class="k" r="14"/><text x="22" y="5">Opava</text></g>
+          <g class="pin" data-i="1" transform="translate(260 170)"><circle class="k" r="14"/><text x="22" y="5">Chvalíkovice</text></g>
+          <g class="pin" data-i="2" transform="translate(320 220)"><circle class="k" r="14"/><text x="22" y="5">Jakubčovice</text></g>
+          <g class="pin" data-i="3" transform="translate(230 330)"><circle class="k" r="14"/><text x="22" y="5">Březová</text></g>
+        </svg>
+        <p class="pozn">Schematická mapa, ne v měřítku.</p>
+      </div>
+      <div>
+        <div class="seznam" id="seznam">
+          <button aria-pressed="true" data-i="0"><span class="c">1</span><b>Opava</b><span class="a">Slezská tvorba, Sadová 121/4, 746 01</span></button>
+          <button aria-pressed="false" data-i="1"><span class="c">2</span><b>Chvalíkovice</b><span class="a">České školy 120/9, Opava 747 06</span></button>
+          <button aria-pressed="false" data-i="2"><span class="c">3</span><b>Jakubčovice</b><span class="a">Jakubčovice 88, Hradec nad Moravicí 747 06</span></button>
+          <button aria-pressed="false" data-i="3"><span class="c">4</span><b>Březová</b><span class="a">Březová 107, Březová u Vítkova 747 44</span></button>
+        </div>
+        <div class="skladac">
+          <div><label for="sl">Služba</label>
+            <select id="sl"><option>permanentní make-up</option><option>prodloužení řas</option><option>trvalá na řasy</option><option>barvení řas a obočí</option><option>čištění pleti</option><option>masáž obličeje a dekoltu</option><option>svatební líčení</option><option>večerní líčení</option><option>epilace</option><option>modeláž nehtů / manikúra</option><option>dárkový poukaz</option></select></div>
+          <div><label for="cas">Kdy se Vám hodí</label>
+            <select id="cas"><option>dopoledne</option><option>odpoledne</option><option>kdykoliv</option></select></div>
+          <div class="zprava" id="zprava" aria-live="polite"></div>
+          <a class="btn btn-hl" id="sms" href="sms:+420723939501">Poslat SMS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bila);border-block:1px solid var(--linka)">
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div><h3>Ozvete se</h3><p>Zavoláte nebo pošlete SMS – řeknete službu a který salon je Vám nejblíž.</p></div>
+      <div><h3>Domluvíme termín</h3><p>Řeknu Vám cenu předem a co si případně připravit (třeba u řas přijít bez make-upu).</p></div>
+      <div><h3>Přijdete a odpočíváte</h3><p>Ošetření s individuálním přístupem a přírodní kosmetikou.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap dvoj">
+    <div>
+      <h2>Proč ke mně</h2>
+      <ul class="duvera" style="margin-top:22px">
+        <li><b>Dlouholetá praxe</b>vyučená v oboru kosmetička</li>
+        <li><b>Čtyři salony na Opavsku</b>vyberete si ten nejbližší</li>
+        <li><b>Přírodní kosmetika Originál Atok</b>velmi kvalitní přípravky</li>
+        <li><b>Cena předem</b>dozvíte se ji při objednání</li>
+        <li><b>Živnostník, IČO 73000477</b>údaj z katalogu Firmy.cz</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Časté otázky</h2>
+      <details><summary>Kolik vydrží prodloužené řasy?</summary><p>Řasy přirozeně vypadávají, proto se obvykle chodí na doplnění zhruba po několika týdnech. Přesný interval Vám doporučím podle Vašich řas.</p></details>
+      <details><summary>Dá se líčení domluvit na svatbu?</summary><p>Ano, nabízím svatební i večerní líčení. Termín se vyplatí domluvit s předstihem.</p></details>
+      <details><summary>Ve kterém salonu Vás zastihnu?</summary><p>Salony jsou v Opavě, Chvalíkovicích, Jakubčovicích a Březové. Při objednání se domluvíme, kde a kdy.</p></details>
+      <details><summary>Můžu darovat poukaz?</summary><p>Ano, dárkový poukaz připravím v jakékoliv hodnotě.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420723939501">723 939 501</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:kosmetikaopava@seznam.cz">kosmetikaopava@seznam.cz</a></dd>
+        <dt>Otevřeno</dt><dd>Podle objednávek – doplníme podle Vás <span class="stitek">ukázkový text</span></dd>
+      </dl>
+    </div>
+    <div class="mapy">
+      <a href="https://mapy.cz/zakladni?q=Sadov%C3%A1%20121%2F4%20Opava" target="_blank" rel="noopener">Opava, Sadová 121/4<span>Mapy.cz →</span></a>
+      <a href="https://mapy.cz/zakladni?q=%C4%8Cesk%C3%A9%20%C5%A1koly%20120%2F9%20Chval%C3%ADkovice" target="_blank" rel="noopener">Chvalíkovice, České školy 120/9<span>Mapy.cz →</span></a>
+      <a href="https://mapy.cz/zakladni?q=Jakub%C4%8Dovice%2088%20Hradec%20nad%20Moravic%C3%AD" target="_blank" rel="noopener">Jakubčovice 88<span>Mapy.cz →</span></a>
+      <a href="https://mapy.cz/zakladni?q=B%C5%99ezov%C3%A1%20107%20B%C5%99ezov%C3%A1%20u%20V%C3%ADtkova" target="_blank" rel="noopener">Březová 107<span>Mapy.cz →</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Kosmetika Andrea Králová · Sadová 121/4, 746 01 Opava · IČO 73000477 · 723 939 501 · kosmetikaopava@seznam.cz</div></footer>
+
+<div class="mobil">
+  <a class="btn btn-hl" href="tel:+420723939501">Zavolat</a>
+  <a class="btn btn-ob" href="#salony">Nejbližší salon</a>
+</div>
+
+<script>
+(function(){
+  var mista=['Opava (Sadová 121/4)','Chvalíkovice (České školy 120/9)','Jakubčovice 88','Březová 107'];
+  var i=0, btns=[].slice.call(document.querySelectorAll('#seznam button')), pins=[].slice.call(document.querySelectorAll('.pin'));
+  var sl=document.getElementById('sl'),cas=document.getElementById('cas'),out=document.getElementById('zprava'),sms=document.getElementById('sms');
+  function upd(){
+    btns.forEach(function(b,k){b.setAttribute('aria-pressed',k===i?'true':'false')});
+    pins.forEach(function(p,k){p.classList.toggle('on',k===i)});
+    var t='Dobrý den, paní Králová,\nmám zájem o: '+sl.value+'.\nNejbližší salon: '+mista[i]+'.\nHodí se mi '+cas.value+'. Prosím o termín a cenu. Děkuji.';
+    out.textContent=t; sms.href='sms:+420723939501?&body='+encodeURIComponent(t);
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){i=+b.dataset.i;upd()})});
+  pins.forEach(function(p){p.addEventListener('click',function(){i=+p.dataset.i;upd()})});
+  sl.addEventListener('change',upd);cas.addEventListener('change',upd);upd();
+})();
+</script>
+</body>
+</html>
