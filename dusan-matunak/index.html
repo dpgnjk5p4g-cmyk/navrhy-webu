@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Dušan Matunák</title>
+<meta name="description" content="Dušan Matunák, stavební a obkladačské práce ve Frýdku-Místku: zednické práce, obklady a dlažby včetně venkovních, omítky, rekonstrukce koupelen, opravy a údržba. Tel. 777 105 460.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Dušan Matunák – stavební práce","description":"Zednické a stavební práce, pokládka obkladů a dlažeb včetně venkovních, omítky, rekonstrukce koupelen, opravy a údržba.","telephone":"+420777105460","email":"horo@email.cz","taxID":"71928189","address":{"@type":"PostalAddress","streetAddress":"I. P. Pavlova 1361","addressLocality":"Frýdek-Místek","postalCode":"738 01","addressCountry":"CZ"}}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: velký nápis přes celou šířku s vodováhou, služby jako seznam s rozměrovými kótami, zakázkový list na čtverečkovaném papíře, kontakt. Betonová paleta s žlutí vodováhy. */
+:root{
+  --grafit:#26282B;
+  --grafit2:#34373B;
+  --beton:#ECEAE6;
+  --beton2:#DEDBD5;
+  --zluta:#F2C230;      /* bublina vodováhy – tlačítka a plochy */
+  --zluta-tx:#7A5C00;   /* žlutá pro text na světlém */
+  --ocel:#4B5A66;
+  --tx:#1E2023;
+  --tx2:#55595F;
+  --papir:#FBFAF7;
+  --f-disp:"Archivo","Arial Black",Arial,sans-serif;
+  --f-text:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--beton);color:var(--tx);font-family:var(--f-text);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-disp);line-height:1.02;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,4.4vw,46px);font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:-.01em}
+h3{font-size:21px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--zluta);outline-offset:2px}
+.stitek{display:inline-block;font:600 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF3C4;color:var(--zluta-tx);border:1px solid #E9CF6E;border-radius:3px;padding:4px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.navrh{background:#000;color:#fff;font-size:14px;text-align:center;padding-block:8px}
+.lista{background:var(--grafit);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--grafit)}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.znacka{font-family:var(--f-disp);font-weight:800;font-stretch:115%;text-transform:uppercase;text-decoration:none;font-size:18px;letter-spacing:.02em;line-height:1.1}
+.znacka small{display:block;font:500 12px var(--f-text);letter-spacing:.08em;color:#BFC4C9}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:4px;font:600 17px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-z{background:var(--zluta);color:#1E1A08}
+.btn-z:hover{background:#F6CF55}
+.btn-o{border-color:currentColor;background:transparent;color:inherit}
+.lista .btn{min-height:42px;padding:0 14px;font-size:16px}
+/* hero */
+.hero{background:var(--grafit);color:#fff;padding-block:40px 48px;overflow:hidden}
+.hero .nad{font:600 14px var(--f-text);letter-spacing:.12em;text-transform:uppercase;color:var(--zluta)}
+.hero h1{font-size:clamp(44px,10vw,132px);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.02em;margin:14px 0 22px;line-height:.92}
+.hero h1 span{display:block;color:var(--zluta)}
+.vodovaha{width:100%;max-width:760px;height:auto;display:block;margin-bottom:26px}
+.hero .spodek{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:end}
+.hero p.lead{font-size:19px;color:#E3E5E8;max-width:34em}
+.hero .akce{display:flex;flex-wrap:wrap;gap:12px}
+.bubl{animation:vyvaz 2.4s ease-out 1 both}
+@keyframes vyvaz{0%{transform:translateX(-46px)}60%{transform:translateX(8px)}100%{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.bubl{animation:none}}
+/* služby */
+section{padding-block:68px}
+.hlava{display:grid;gap:10px;max-width:680px;margin-bottom:34px}
+.hlava p{color:var(--tx2)}
+.prace{list-style:none;margin:0;padding:0;border-top:3px solid var(--grafit)}
+.prace li{display:grid;grid-template-columns:72px 1fr 1.3fr;gap:20px;align-items:center;padding-block:20px;border-bottom:1px solid var(--beton2)}
+.prace svg{width:56px;height:56px}
+.prace p{color:var(--tx2)}
+.prace .kota{font:600 13px var(--f-text);color:var(--ocel);letter-spacing:.06em;text-transform:uppercase;display:block;margin-top:4px}
+.cena{margin-top:22px;color:var(--tx2)}
+/* zakázkový list */
+.zl{background:var(--ocel);color:#fff}
+.zl .hlava p{color:#DCE2E7}
+.list{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.papir{background-color:var(--papir);color:var(--tx);background-image:linear-gradient(#E4E7EA 1px,transparent 1px),linear-gradient(90deg,#E4E7EA 1px,transparent 1px);background-size:22px 22px;border-radius:4px;padding:26px 24px;box-shadow:0 14px 0 -6px #3B4852;display:grid;gap:18px}
+.papir h3{font-stretch:112%;text-transform:uppercase;font-size:18px;border-bottom:2px solid var(--grafit);padding-bottom:8px;display:flex;justify-content:space-between;gap:12px}
+.papir h3 small{font:500 13px var(--f-text);text-transform:none;color:var(--tx2)}
+.papir label.t{display:block;font-weight:600;margin-bottom:6px}
+.vyber{display:flex;flex-wrap:wrap;gap:8px}
+.vyber label{display:inline-flex;align-items:center;gap:6px;padding:9px 12px;background:#fff;border:2px solid var(--beton2);border-radius:4px;cursor:pointer;font-weight:500;font-size:15px}
+.vyber input{accent-color:var(--grafit)}
+.vyber label:has(input:checked){border-color:var(--grafit);background:#FFF6D6}
+.rozmer{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:center}
+.rozmer input,.papir input[type=text],.papir textarea{width:100%;font:500 17px var(--f-text);padding:10px 12px;border:2px solid var(--beton2);border-radius:4px;background:#fff;color:var(--tx)}
+.rozmer output{font:800 22px var(--f-disp);font-variant-numeric:tabular-nums;text-align:center;background:var(--zluta);border-radius:4px;padding:8px 4px;color:#1E1A08}
+.rozmer span{font-weight:600;color:var(--tx2)}
+.papir textarea{min-height:76px;resize:vertical}
+.odeslat{display:grid;gap:14px}
+.sms{background:var(--grafit);border-radius:4px;padding:20px;display:grid;gap:12px}
+.sms .bublina{background:#fff;color:var(--tx);border-radius:14px 14px 14px 4px;padding:14px 16px;font-size:15px;white-space:pre-wrap}
+.sms .kam{font-size:14px;color:#BFC4C9}
+.slib{border-left:4px solid var(--zluta);padding-left:14px;color:#EEF1F3}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid var(--grafit)}
+.kroky>div{padding:24px 22px;display:grid;gap:8px;border-left:3px solid var(--grafit);background:var(--papir)}
+.kroky>div:first-child{border-left:0}
+.kroky b{font:900 15px var(--f-disp);font-stretch:115%;text-transform:uppercase;color:var(--zluta-tx);letter-spacing:.06em}
+.kroky p{color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:40px;align-items:start}.fotky>div{width:100%;min-width:0}
+.fotky div{aspect-ratio:4/3;max-width:100%;border:2px dashed #A9ACB0;display:grid;place-items:center;text-align:center;color:var(--tx2);padding:12px;font-size:15px;background:repeating-linear-gradient(45deg,var(--beton) 0 14px,var(--beton2) 14px 16px)}
+/* důvěra + faq */
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.duvera{display:grid;gap:0;border-top:3px solid var(--grafit)}
+.duvera div{padding-block:14px;border-bottom:1px solid var(--beton2)}
+.duvera b{display:block;font-family:var(--f-disp);font-size:19px}
+details{border-bottom:1px solid var(--beton2);padding-block:14px}
+summary{font-weight:600;font-size:18px;cursor:pointer}
+details p{margin-top:8px;color:var(--tx2)}
+/* kontakt */
+.kontakt{background:var(--grafit);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tel-velky{font:900 clamp(40px,7vw,76px)/1 var(--f-disp);font-stretch:118%;color:var(--zluta);text-decoration:none;display:block;margin:16px 0 20px;font-variant-numeric:tabular-nums}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0}
+.kontakt dt{color:#BFC4C9}
+.kontakt dd{margin:0;font-weight:500}
+footer{background:#000;color:#BFC4C9;font-size:14px;padding-block:22px 96px}
+.mobil{display:none}
+@media (max-width:860px){
+  .hero .spodek,.list,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .prace li{grid-template-columns:56px 1fr;gap:6px 14px}
+  .prace li p{grid-column:2}
+  .kroky{grid-template-columns:1fr}
+  .kroky>div{border-left:0;border-top:3px solid var(--grafit)}
+  .kroky>div:first-child{border-top:0}
+  .fotky{grid-template-columns:1fr 1fr}
+  .fotky div:first-child{grid-column:1/-1}
+  section{padding-block:50px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--grafit);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .mobil .btn{flex:1;white-space:nowrap;padding:0 10px}
+  .mobil .btn-o{color:#fff}
+}
+@media (max-width:480px){
+  .hero .akce .btn{flex:1 1 100%}
+  .rozmer{grid-template-columns:1fr auto 1fr}
+  .rozmer output{grid-column:1/-1}
+  .rozmer .rov{display:none}
+}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Dušan Matunák – stavební práce</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top">Dušan Matunák<small>stavební a obkladačské práce</small></a>
+    <a class="btn btn-z" href="tel:+420777105460" aria-label="Zavolat 777 105 460"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>777 105 460</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="nad">Frýdek-Místek · zednické a stavební práce</div>
+    <h1>Postavím, obložím,<span>opravím.</span></h1>
+    <svg class="vodovaha" viewBox="0 0 760 70" role="img" aria-label="Vodováha se srovnanou bublinou">
+      <rect x="0" y="10" width="760" height="50" rx="6" fill="#F2C230"/>
+      <rect x="0" y="10" width="760" height="10" rx="5" fill="#F6D366"/>
+      <rect x="20" y="22" width="40" height="26" rx="3" fill="#26282B" opacity=".2"/>
+      <rect x="700" y="22" width="40" height="26" rx="3" fill="#26282B" opacity=".2"/>
+      <rect x="310" y="18" width="140" height="34" rx="17" fill="#26282B"/>
+      <rect x="316" y="23" width="128" height="24" rx="12" fill="#B7E0A0"/>
+      <line x1="356" y1="20" x2="356" y2="50" stroke="#26282B" stroke-width="2"/>
+      <line x1="404" y1="20" x2="404" y2="50" stroke="#26282B" stroke-width="2"/>
+      <g class="bubl"><ellipse cx="380" cy="35" rx="18" ry="8" fill="#F4FBEF"/></g>
+      <g fill="#26282B" opacity=".55"><rect x="90" y="40" width="2" height="12"/><rect x="130" y="44" width="2" height="8"/><rect x="170" y="40" width="2" height="12"/><rect x="210" y="44" width="2" height="8"/><rect x="250" y="40" width="2" height="12"/><rect x="510" y="40" width="2" height="12"/><rect x="550" y="44" width="2" height="8"/><rect x="590" y="40" width="2" height="12"/><rect x="630" y="44" width="2" height="8"/><rect x="670" y="40" width="2" height="12"/></g>
+    </svg>
+    <div class="spodek">
+      <p class="lead">Zednické a stavební práce, obklady a dlažby včetně venkovních, omítky a rekonstrukce koupelen. Opravy a údržbu domu zvládnu taky.</p>
+      <div class="akce">
+        <a class="btn btn-z" href="tel:+420777105460">Zavolat 777 105 460</a>
+        <a class="btn btn-o" href="#poptavka">Poslat poptávku</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="prace">
+  <div class="wrap">
+    <div class="hlava">
+      <h2>Co dělám</h2>
+      <p>Všechno z jedné ruky. Nemusíte koordinovat zedníka, obkladače a štukatéra zvlášť.</p>
+    </div>
+    <ul class="prace">
+      <li>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><g fill="#ECEAE6" stroke="#26282B" stroke-width="2.5"><rect x="4" y="10" width="22" height="10"/><rect x="30" y="10" width="22" height="10"/><rect x="16" y="24" width="24" height="10"/><rect x="4" y="38" width="22" height="10"/><rect x="30" y="38" width="22" height="10"/></g><rect x="42" y="24" width="10" height="10" fill="#F2C230"/></svg>
+        <div><h3>Zednické a stavební práce</h3><span class="kota">dům · byt</span></div>
+        <p>Zdění, bourání a stavební úpravy při rekonstrukci domu nebo bytu.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><rect x="4" y="4" width="48" height="48" fill="#ECEAE6" stroke="#26282B" stroke-width="2.5"/><path d="M4 20h48M4 36h48M20 4v48M36 4v48" stroke="#26282B" stroke-width="2"/><rect x="36" y="36" width="16" height="16" fill="#F2C230"/></svg>
+        <div><h3>Koupelny</h3><span class="kota">rekonstrukce</span></div>
+        <p>Rekonstrukce koupelny od starých obkladů po nové.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M2 40 L28 30 L54 40 L28 50Z" fill="#ECEAE6" stroke="#26282B" stroke-width="2.5"/><path d="M15 35 L41 45 M41 35 L15 45" stroke="#26282B" stroke-width="2"/><circle cx="42" cy="14" r="8" fill="#F2C230"/></svg>
+        <div><h3>Obklady a dlažby, i venku</h3><span class="kota">terasa · chodník · schody</span></div>
+        <p>Pokládka obkladů a dlažeb uvnitř i venku, třeba na terasu nebo k domu.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><rect x="4" y="6" width="34" height="44" fill="#ECEAE6" stroke="#26282B" stroke-width="2.5"/><path d="M36 30 L52 22 L54 28 L38 36Z" fill="#F2C230" stroke="#26282B" stroke-width="2"/><path d="M10 16 q8 4 16 0 M10 26 q8 4 16 0" stroke="#4B5A66" stroke-width="2" fill="none"/></svg>
+        <div><h3>Omítky</h3><span class="kota">nové · opravy</span></div>
+        <p>Nové omítky i opravy starých, aby stěna byla rovná a připravená na malování.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 48 L30 26" stroke="#26282B" stroke-width="5" stroke-linecap="round"/><rect x="26" y="8" width="24" height="14" rx="2" transform="rotate(45 38 15)" fill="#F2C230" stroke="#26282B" stroke-width="2.5"/></svg>
+        <div><h3>Opravy a údržba</h3><span class="kota">menší zakázky</span></div>
+        <p>Opravy a údržba domu: když něco popraská, opadá nebo se uvolní.</p>
+      </li>
+    </ul>
+    <p class="cena">Ceny nezveřejňuju, každá stavba je jiná. Přijedu, podívám se a cenu řeknu předem. <span class="stitek">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="zl" id="poptavka">
+  <div class="wrap">
+    <div class="hlava">
+      <h2>Zakázkový list</h2>
+      <p>Vyplňte pár řádků. Poptávka přijde rovnou na můj mobil jako SMS, takže se neztratí v e-mailu.</p>
+    </div>
+    <div class="list">
+      <form class="papir" id="f" novalidate>
+        <h3>Poptávka <small id="dnes"></small></h3>
+        <div>
+          <label class="t">Co potřebujete</label>
+          <div class="vyber" id="co">
+            <label><input type="radio" name="co" value="rekonstrukce koupelny" checked> koupelna</label>
+            <label><input type="radio" name="co" value="venkovní dlažba"> venkovní dlažba</label>
+            <label><input type="radio" name="co" value="obklady a dlažby uvnitř"> obklady uvnitř</label>
+            <label><input type="radio" name="co" value="omítky"> omítky</label>
+            <label><input type="radio" name="co" value="zednické práce"> zednické práce</label>
+            <label><input type="radio" name="co" value="oprava"> oprava</label>
+          </div>
+        </div>
+        <div>
+          <label class="t" for="d">Přibližná plocha</label>
+          <div class="rozmer">
+            <input id="d" type="number" min="0" step="0.1" value="3" inputmode="decimal" aria-label="Délka v metrech">
+            <span>×</span>
+            <input id="s" type="number" min="0" step="0.1" value="2" inputmode="decimal" aria-label="Šířka v metrech">
+            <span class="rov">=</span>
+            <output id="m" for="d s">6 m²</output>
+          </div>
+        </div>
+        <div>
+          <label class="t" for="kde">Kde (obec)</label>
+          <input id="kde" type="text" value="Frýdek-Místek" autocomplete="address-level2">
+        </div>
+        <div>
+          <label class="t" for="pop">Pár slov k zakázce</label>
+          <textarea id="pop">Stará koupelna s vanou, chtěli bychom sprchový kout.</textarea>
+        </div>
+        <div>
+          <label class="t">Kdy</label>
+          <div class="vyber">
+            <label><input type="radio" name="kdy" value="co nejdřív"> co nejdřív</label>
+            <label><input type="radio" name="kdy" value="do 3 měsíců" checked> do 3 měsíců</label>
+            <label><input type="radio" name="kdy" value="na jaře 2027"> na jaře 2027</label>
+          </div>
+        </div>
+      </form>
+      <div class="odeslat" aria-live="polite">
+        <div class="sms">
+          <div class="kam">Zpráva pro 777 105 460</div>
+          <div class="bublina" id="txt"></div>
+          <a class="btn btn-z" id="smsBtn" href="sms:+420777105460">Poslat SMS</a>
+          <button class="btn btn-o" type="button" id="kop" style="color:#fff">Zkopírovat text</button>
+        </div>
+        <p class="slib">Raději voláte? 777 105 460. Když to nevezmu, jsem na stavbě a ozvu se zpátky. <span class="stitek">ukázkový text</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="hlava"><h2>Jak to probíhá <span class="stitek">ukázkový text</span></h2></div>
+    <div class="kroky">
+      <div><b>Krok 1</b><h3>Pošlete zakázkový list</h3><p>Nebo zavolejte. Stačí, co chcete udělat a přibližná plocha.</p></div>
+      <div><b>Krok 2</b><h3>Prohlídka a cena</h3><p>Přijedu, doměřím a řeknu cenu i termín dřív, než začneme.</p></div>
+      <div><b>Krok 3</b><h3>Práce a předání</h3><p>Udělám, co jsme domluvili, uklidím a hotové předám.</p></div>
+    </div>
+    <div class="fotky">
+      <div>Sem přijde Vaše fotka<br>(hotová koupelna)</div>
+      <div>Sem přijde Vaše fotka<br>(terasa)</div>
+      <div>Sem přijde Vaše fotka<br>(omítka)</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--papir)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:22px">Kdo za prací stojí</h2>
+      <div class="duvera">
+        <div><b>Dušan Matunák</b>Živnostník, IČO 71928189</div>
+        <div><b>Provozovna</b>I. P. Pavlova 1361, Frýdek-Místek</div>
+        <div><b>Katalog</b><a href="https://www.firmy.cz/detail/12736604-dusan-matunak-stavebni-prace-frydek-mistek-frydek.html" target="_blank" rel="noopener">Profil na Firmy.cz</a></div>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Kolik dlažby mám koupit?</summary><p>K ploše se běžně počítá zhruba 10 % navíc na prořez a rozbité kusy. U venkovní dlažby a složitých tvarů i víc.</p></details>
+      <details><summary>Dá se dlažba položit venku i v zimě?</summary><p>Lepidla a spárovačky se obvykle zpracovávají při teplotě nad +5 °C, proto se venkovní dlažba dělá hlavně od jara do podzimu. Termín na jaro se dá domluvit už teď.</p></details>
+      <details><summary>Děláte i menší opravy?</summary><p>Ano, opravy a údržba patří k mé práci. Napište, o co jde.</p></details>
+      <details><summary>Kdy Vás zastihnu? <span class="stitek">ukázkový text</span></summary><p>Doplníme podle Vás. Nejjistější je zavolat nebo poslat SMS.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Zavolejte</h2>
+      <a class="tel-velky" href="tel:+420777105460">777 105 460</a>
+      <a class="btn btn-z" href="#poptavka">Vyplnit zakázkový list</a>
+    </div>
+    <dl>
+      <dt>E-mail</dt><dd><a href="mailto:horo@email.cz">horo@email.cz</a></dd>
+      <dt>Adresa</dt><dd>I. P. Pavlova 1361, 738 01 Frýdek-Místek · <a href="https://mapy.cz/zakladni?q=I.%20P.%20Pavlova%201361%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Mapy.cz</a></dd>
+      <dt>Kde pracuju</dt><dd>Frýdek-Místek a okolí <span class="stitek">ukázkový text</span></dd>
+      <dt>Kdy volat</dt><dd>Doplníme podle Vás <span class="stitek">ukázkový text</span></dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Dušan Matunák – stavební práce · I. P. Pavlova 1361, 738 01 Frýdek-Místek · IČO 71928189 · 777 105 460</div></footer>
+
+<div class="mobil"><a class="btn btn-z" href="tel:+420777105460">Zavolat</a><a class="btn btn-o" href="#poptavka">Poptávka</a></div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function n(el){var v=parseFloat(String(el.value).replace(',','.'));return isFinite(v)&&v>0?v:0}
+  function cz(x){return (Math.round(x*10)/10).toString().replace('.',',')}
+  function v(name){var e=document.querySelector('input[name='+name+']:checked');return e?e.value:''}
+  var d=new Date();$('dnes').textContent=d.getDate()+'. '+(d.getMonth()+1)+'. '+d.getFullYear();
+  function upd(){
+    var m=n($('d'))*n($('s'));$('m').textContent=cz(m)+' m²';
+    var t='Dobrý den, poptávám: '+v('co')+'.\n'+(m?'Plocha asi '+cz(m)+' m².\n':'')+'Místo: '+($('kde').value||'—')+'.\n'+($('pop').value?$('pop').value.trim()+'\n':'')+'Termín: '+v('kdy')+'.\nMůžete se ozvat? Děkuji.';
+    $('txt').textContent=t;$('smsBtn').href='sms:+420777105460?body='+encodeURIComponent(t);
+  }
+  $('f').addEventListener('input',upd);$('f').addEventListener('change',upd);$('f').addEventListener('submit',function(e){e.preventDefault()});
+  $('kop').addEventListener('click',function(){var b=this,t=$('txt').textContent;
+    function fb(){var r=document.createRange();r.selectNodeContents($('txt'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Text je označený'}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent='Zkopírováno'},fb)}catch(e){fb()}});
+  upd();
+})();
+</script>
+</body>
+</html>

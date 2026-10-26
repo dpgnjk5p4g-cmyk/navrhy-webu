@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Radomír Liberda</title>
+<meta name="description" content="Radomír Liberda, zedník a obkladač z Frýdku-Místku: rekonstrukce koupelen na klíč, obklady a dlažby, zateplení rodinných domů, zednické práce. Po–Pá 7–17, tel. 775 802 756.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Radomír Liberda – zednické práce","description":"Zednické, obkladačské a dlaždičské práce, zateplování rodinných domů a rekonstrukce koupelen na klíč.","telephone":"+420775802756","email":"radomirliberda@email.cz","taxID":"66167566","address":{"@type":"PostalAddress","streetAddress":"Lískovecká 1754","addressLocality":"Frýdek-Místek","postalCode":"738 01","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"17:00"}]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: dělený hero (text + řez koupelnou), pak pás faktů, služby, plánovač koupelny jako dlaždicový rastr, kroky, kontakt. Jedna světlá „obkladová“ paleta. */
+:root{
+  --lahev:#1F4F47;      /* lahvově zelená glazura – hlavní */
+  --lahev2:#173C36;
+  --glazura:#CFE6DF;    /* světlý obklad */
+  --sparu:#F5F7F4;      /* spárovačka – pozadí */
+  --horcice:#E0A526;    /* hořčicový akcent na tlačítka */
+  --horcice-tx:#7C5A0E; /* akcent pro text */
+  --tx:#1D2624;
+  --tx2:#4A5754;
+  --linka:#D9E2DE;
+  --bila:#FFFFFF;
+  --f-disp:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;
+  --f-text:"Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--sparu);color:var(--tx);font-family:var(--f-text);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-disp);line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--horcice);outline-offset:2px}
+.stitek{display:inline-block;font:600 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF1CC;color:var(--horcice-tx);border:1px solid #EBCB7A;border-radius:4px;padding:4px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.navrh{background:var(--tx);color:#fff;font-size:14px;text-align:center;padding-block:8px}
+.lista{background:var(--bila);border-bottom:1px solid var(--linka);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bila)}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-disp);font-weight:800;font-size:19px;line-height:1.1}
+.znacka small{display:block;font:600 12px var(--f-text);color:var(--tx2);letter-spacing:.04em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:10px;font:700 17px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-tel{background:var(--horcice);color:#1D1A10}
+.btn-tel:hover{background:#ECB43C}
+.btn-obrys{border-color:var(--lahev);color:var(--lahev);background:transparent}
+.btn-obrys:hover{background:var(--glazura)}
+.lista .btn{min-height:42px;padding:0 14px;font-size:16px}
+/* hero */
+.hero{background:var(--lahev);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:48px 56px}
+.hero .nadpis{font:700 13px var(--f-text);letter-spacing:.1em;text-transform:uppercase;color:var(--glazura)}
+.hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;margin:12px 0 16px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--horcice)}
+.hero p.lead{font-size:19px;max-width:34em;color:#E6F1EE}
+.hero .akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .btn-obrys{border-color:#fff;color:#fff}
+.hero .btn-obrys:hover{background:var(--lahev2)}
+.hero .doba{margin-top:18px;font-size:15px;color:var(--glazura)}
+.hero svg{width:100%;height:auto;max-width:460px;justify-self:end;display:block}
+/* fakta */
+.fakta{background:var(--bila);border-bottom:1px solid var(--linka)}
+.fakta ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.fakta li{padding:18px 16px;border-left:1px solid var(--linka);font-size:15px;color:var(--tx2)}
+.fakta li:first-child{border-left:0}
+.fakta b{display:block;font-family:var(--f-disp);font-size:19px;color:var(--tx);font-weight:600}
+section{padding-block:64px}
+.uvod{max-width:640px;margin-bottom:32px;display:grid;gap:10px}
+.uvod p{color:var(--tx2)}
+/* služby jako dlaždice */
+.sluzby{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:var(--linka);border:4px solid var(--linka);border-radius:6px}
+.sluzby>div{background:var(--bila);padding:24px 20px;display:grid;gap:10px;align-content:start}
+.sluzby svg{width:40px;height:40px}
+.sluzby p{color:var(--tx2);font-size:16px}
+.cena{margin-top:20px;font-size:16px;color:var(--tx2)}
+/* plánovač */
+.planovac{background:var(--glazura)}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.pl form{background:var(--bila);border-radius:10px;padding:24px;display:grid;gap:18px;border:1px solid var(--linka)}
+.pl label{font-weight:600;display:block;margin-bottom:6px}
+.pl .radek{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pl input[type=number]{width:100%;font:600 18px var(--f-text);padding:10px 12px;border:2px solid var(--linka);border-radius:8px;background:var(--sparu);color:var(--tx)}
+.volby{display:flex;flex-wrap:wrap;gap:8px}
+.volby label{margin:0;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:2px solid var(--linka);border-radius:8px;cursor:pointer;background:var(--sparu)}
+.volby input{accent-color:var(--lahev)}
+.volby label:has(input:checked){border-color:var(--lahev);background:#E3F1EC}
+.vysledek{display:grid;gap:16px}
+.pudorys{background:var(--bila);border-radius:10px;border:1px solid var(--linka);padding:16px}
+.pudorys svg{width:100%;height:auto;display:block;max-height:280px}
+.cisla{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cisla div{background:var(--lahev);color:#fff;border-radius:10px;padding:14px 16px}
+.cisla b{display:block;font:800 30px var(--f-disp);font-variant-numeric:tabular-nums}
+.cisla span{font-size:14px;color:var(--glazura)}
+.zprava{background:var(--bila);border:1px dashed var(--lahev);border-radius:10px;padding:16px;font-size:15px;white-space:pre-wrap;color:var(--tx)}
+.pozn{font-size:14px;color:var(--tx2)}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:k}
+.kroky>div{border-top:4px solid var(--lahev);padding-top:16px;display:grid;gap:8px}
+.kroky>div::before{counter-increment:k;content:counter(k);font:800 40px var(--f-disp);color:var(--horcice-tx)}
+.kroky p{color:var(--tx2)}
+/* fotky */
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.fotky div{aspect-ratio:4/3;max-width:100%;border-radius:8px;border:2px dashed #A9BDB6;display:grid;place-items:center;text-align:center;color:var(--tx2);font-size:15px;padding:12px;background:repeating-linear-gradient(0deg,transparent 0 38px,#E4ECE9 38px 40px),repeating-linear-gradient(90deg,var(--bila) 0 38px,#E4ECE9 38px 40px)}
+/* důvěra + faq */
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.duvera{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.duvera li{background:var(--bila);border:1px solid var(--linka);border-radius:8px;padding:14px 16px}
+.duvera b{display:block}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:700;cursor:pointer;font-size:18px}
+details p{margin-top:8px;color:var(--tx2)}
+/* kontakt */
+.kontakt{background:var(--lahev2);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.kontakt h2{color:#fff}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0}
+.kontakt dt{color:var(--glazura);font-size:15px}
+.kontakt dd{margin:0;font-weight:600}
+.kontakt a{color:#fff}
+.mapa{background:var(--lahev);border-radius:10px;padding:20px;display:grid;gap:14px}
+.mapa svg{width:100%;height:auto}
+footer{background:var(--tx);color:#C9D3D0;font-size:14px;padding-block:24px 96px}
+.mobil-volat{display:none}
+@media (max-width:860px){
+  .hero .wrap,.pl,.dvoj,.kontakt .wrap{grid-template-columns:1fr}
+  .hero .wrap{padding-block:32px 40px;gap:24px}
+  .hero svg{justify-self:center;max-width:260px}
+  .mobil-volat .btn{font-size:16px;padding:0 10px;white-space:nowrap}
+  .sluzby{grid-template-columns:1fr 1fr}
+  .fakta ul{grid-template-columns:1fr 1fr}
+  .fakta li:nth-child(3){border-left:0}
+  .fakta li{border-top:1px solid var(--linka)}
+  .kroky,.fotky{grid-template-columns:1fr}
+  section{padding-block:48px}
+  .lista .btn span{display:none}
+  .mobil-volat{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;gap:8px;background:var(--bila);border-top:1px solid var(--linka);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .mobil-volat .btn{flex:1}
+}
+@media (max-width:480px){
+  .sluzby{grid-template-columns:1fr}
+  .hero .akce .btn{flex:1 1 100%}
+  .pl .radek{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Radomír Liberda – zednické práce</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="#1F4F47"/><rect x="18" y="1" width="15" height="15" fill="#CFE6DF"/><rect x="1" y="18" width="15" height="15" fill="#CFE6DF"/><rect x="18" y="18" width="15" height="15" fill="#E0A526"/></svg><span>Radomír Liberda<small>zedník a obkladač</small></span></a>
+    <a class="btn btn-tel" href="tel:+420775802756" aria-label="Zavolat 775 802 756"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>775 802 756</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="nadpis">Frýdek-Místek a okolí</div>
+      <h1>Koupelnu Vám udělám <em>na klíč</em>. Od bourání po poslední spáru.</h1>
+      <p class="lead">Provádím zednické, obkladačské i dlaždičské práce, zateplování rodinných domů a rekonstrukce koupelen na klíč. Jeden řemeslník, jeden telefon.</p>
+      <div class="akce">
+        <a class="btn btn-tel" href="tel:+420775802756">Zavolat 775 802 756</a>
+        <a class="btn btn-obrys" href="#koupelna">Spočítat koupelnu</a>
+      </div>
+      <p class="doba">Po–Pá 7–17 · Lískovecká 1754, Frýdek</p>
+    </div>
+    <svg viewBox="0 0 400 340" role="img" aria-label="Ilustrace: obložená koupelna se sprchovým koutem">
+      <defs>
+        <pattern id="obk" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#CFE6DF"/><rect x="0" y="0" width="38" height="38" fill="#E6F3EF"/></pattern>
+        <pattern id="dl" width="56" height="28" patternUnits="userSpaceOnUse"><rect width="56" height="28" fill="#B9D2CA"/><rect width="54" height="26" fill="#DCEAE5"/></pattern>
+      </defs>
+      <rect x="20" y="10" width="360" height="240" fill="url(#obk)"/>
+      <polygon points="0,250 400,250 400,330 0,330" fill="url(#dl)"/>
+      <rect x="20" y="250" width="360" height="6" fill="#173C36" opacity=".25"/>
+      <!-- sprchový kout -->
+      <rect x="40" y="40" width="130" height="210" fill="#FFFFFF" opacity=".35" stroke="#FFFFFF" stroke-width="3"/>
+      <line x1="170" y1="40" x2="170" y2="250" stroke="#FFFFFF" stroke-width="5"/>
+      <path d="M70 60 h50 v14" fill="none" stroke="#F5F7F4" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="120" cy="82" r="12" fill="#F5F7F4"/>
+      <g stroke="#9CC3B8" stroke-width="2" stroke-linecap="round"><line x1="112" y1="100" x2="108" y2="120"/><line x1="120" y1="100" x2="120" y2="124"/><line x1="128" y1="100" x2="132" y2="120"/></g>
+      <!-- umyvadlo + zrcadlo -->
+      <rect x="230" y="50" width="100" height="80" rx="8" fill="#F5F7F4" stroke="#FFFFFF" stroke-width="3"/>
+      <path d="M220 160 h120 a0 0 0 0 1 0 0 v10 a30 30 0 0 1 -30 30 h-60 a30 30 0 0 1 -30 -30 z" fill="#FFFFFF"/>
+      <rect x="276" y="146" width="8" height="16" fill="#9CC3B8"/>
+      <rect x="240" y="200" width="80" height="50" fill="#1F4F47" opacity=".85"/>
+      <!-- hladítko s lepidlem -->
+      <g transform="translate(300 262) rotate(-12)"><rect x="0" y="0" width="80" height="34" rx="3" fill="#E0A526"/><rect x="30" y="-22" width="20" height="24" rx="4" fill="#173C36"/><path d="M0 34 l6 8 l6 -8 l6 8 l6 -8 l6 8 l6 -8 l6 8 l6 -8 l6 8 l6 -8 l6 8 l6 -8 l8 8" fill="none" stroke="#7C5A0E" stroke-width="2"/></g>
+    </svg>
+  </div>
+</div>
+
+<div class="fakta">
+  <div class="wrap">
+    <ul>
+      <li><b>Po–Pá 7–17</b>kdy mě zastihnete</li>
+      <li><b>4 řemesla</b>zednictví, obklady, dlažby, zateplení</li>
+      <li><b>Frýdek</b>Lískovecká 1754</li>
+      <li><b>IČO 66167566</b>živnostník</li>
+    </ul>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Co pro Vás udělám</h2>
+      <p>Celou práci odvedu sám, takže nemusíte shánět zedníka, obkladače a dlaždiče zvlášť.</p>
+    </div>
+    <div class="sluzby">
+      <div>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="4" width="32" height="32" fill="#CFE6DF"/><path d="M4 14h32M4 24h32M14 4v32M24 4v32" stroke="#1F4F47" stroke-width="2"/><rect x="24" y="24" width="12" height="12" fill="#E0A526"/></svg>
+        <h3>Koupelna na klíč</h3>
+        <p>Od vybourání starých obkladů po nové obklady a dlažby. Vy řešíte jen výběr obkladu.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="20" width="36" height="16" fill="#CFE6DF"/><path d="M2 28h36M11 20v16M20 20v8M29 20v16" stroke="#1F4F47" stroke-width="2"/><path d="M8 16l10-10 4 4-10 10z" fill="#E0A526"/></svg>
+        <h3>Obklady a dlažby</h3>
+        <p>Kuchyně, chodby, schodiště, podlahy. Pečlivě vyrovnaný podklad a rovné spáry.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 20 20 6l16 14v16H4z" fill="#CFE6DF" stroke="#1F4F47" stroke-width="2"/><rect x="30" y="18" width="6" height="18" fill="#E0A526"/><rect x="15" y="24" width="10" height="12" fill="#1F4F47"/></svg>
+        <h3>Zateplení rodinného domu</h3>
+        <p>Zateplení fasády rodinných domů. Méně tepla uteče ven, méně zaplatíte za topení.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><g fill="#CFE6DF" stroke="#1F4F47" stroke-width="2"><rect x="3" y="6" width="16" height="8"/><rect x="21" y="6" width="16" height="8"/><rect x="11" y="16" width="18" height="8"/><rect x="3" y="26" width="16" height="8"/><rect x="21" y="26" width="16" height="8"/></g><rect x="31" y="16" width="6" height="8" fill="#E0A526"/></svg>
+        <h3>Zednické práce</h3>
+        <p>Zednické práce v rodinném domě i v bytě, poctivě a bez zbytečných řečí.</p>
+      </div>
+    </div>
+    <p class="cena">Ceny se liší podle rozsahu a materiálu. Cenu řeknu předem, ještě než začneme. <span class="stitek">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="planovac" id="koupelna">
+  <div class="wrap">
+    <div class="uvod">
+      <h2>Spočítejte si svou koupelnu</h2>
+      <p>Zadejte rozměry místnosti. Hned uvidíte, kolik metrů obkladu a dlažby budete kupovat, a já dostanu přesnou poptávku.</p>
+    </div>
+    <div class="pl">
+      <form id="f" novalidate>
+        <div class="radek">
+          <div><label for="d">Délka (m)</label><input id="d" type="number" min="1" max="8" step="0.1" value="2.4" inputmode="decimal"></div>
+          <div><label for="s">Šířka (m)</label><input id="s" type="number" min="1" max="8" step="0.1" value="1.8" inputmode="decimal"></div>
+        </div>
+        <div>
+          <label>Obklad na stěnách</label>
+          <div class="volby">
+            <label><input type="radio" name="v" value="1.5"> do 1,5 m</label>
+            <label><input type="radio" name="v" value="2.1" checked> do 2,1 m</label>
+            <label><input type="radio" name="v" value="2.6"> až ke stropu</label>
+          </div>
+        </div>
+        <div>
+          <label>Co chcete změnit</label>
+          <div class="volby" id="zmeny">
+            <label><input type="checkbox" value="vanu vyměnit za sprchový kout" checked> vana → sprchový kout</label>
+            <label><input type="checkbox" value="nový záchod"> záchod</label>
+            <label><input type="checkbox" value="nové umyvadlo"> umyvadlo</label>
+            <label><input type="checkbox" value="vybourat staré obklady" checked> bourání starých obkladů</label>
+          </div>
+        </div>
+        <div>
+          <label for="kdy">Kdy chcete začít</label>
+          <div class="volby">
+            <label><input type="radio" name="kdy" value="co nejdřív"> co nejdřív</label>
+            <label><input type="radio" name="kdy" value="v zimě" checked> v zimě</label>
+            <label><input type="radio" name="kdy" value="na jaře 2027"> na jaře 2027</label>
+          </div>
+        </div>
+      </form>
+      <div class="vysledek" aria-live="polite">
+        <div class="pudorys"><svg id="plan" viewBox="0 0 320 240" role="img" aria-label="Půdorys koupelny v měřítku"></svg></div>
+        <div class="cisla">
+          <div><b id="mDl">0 m²</b><span>dlažba vč. 10 % na prořez</span></div>
+          <div><b id="mOb">0 m²</b><span>obklad vč. 10 % na prořez</span></div>
+        </div>
+        <div class="zprava" id="txt"></div>
+        <div class="akce" style="display:flex;flex-wrap:wrap;gap:10px">
+          <a class="btn btn-tel" id="sms" href="sms:+420775802756">Poslat jako SMS</a>
+          <button class="btn btn-obrys" type="button" id="kop">Zkopírovat text</button>
+        </div>
+        <p class="pozn">Odečtené jsou dveře 0,8 × 2 m. Je to orientační výpočet, přesné množství doměřím na místě.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="uvod"><h2>Jak to probíhá <span class="stitek">ukázkový text</span></h2></div>
+    <div class="kroky">
+      <div><h3>Zavoláte nebo pošlete rozměry</h3><p>Stačí pár vět: co chcete změnit a jak je místnost velká.</p></div>
+      <div><h3>Přijedu a řeknu cenu</h3><p>Prohlédnu podklad, doměřím a domluvíme termín i cenu předem.</p></div>
+      <div><h3>Pracuju a uklidím</h3><p>Po dokončení předám hotovou práci a odvezu suť.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="uvod"><h2>Hotové koupelny a obklady</h2><p>Místo pro fotky Vašich zakázek. Zákazníci se nejdřív dívají, jak práce vypadá.</p></div>
+    <div class="fotky">
+      <div>Sem přijde Vaše fotka<br>(hotová koupelna)</div>
+      <div>Sem přijde Vaše fotka<br>(detail obkladu)</div>
+      <div>Sem přijde Vaše fotka<br>(zateplený dům)</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bila);border-block:1px solid var(--linka)">
+  <div class="wrap dvoj">
+    <div>
+      <h2 style="margin-bottom:20px">Proč právě já</h2>
+      <ul class="duvera">
+        <li><b>Jeden člověk na celou koupelnu</b>Zednické, obkladačské i dlaždičské práce dělám sám.</li>
+        <li><b>Řádný živnostník</b>IČO 66167566, provozovna Lískovecká 1754, Frýdek-Místek.</li>
+        <li><b>Najdete mě i v katalogu</b><a href="https://www.firmy.cz/detail/2248124-radomir-liberda-zednicke-prace-frydek-mistek-frydek.html" target="_blank" rel="noopener">Profil na Firmy.cz</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Kolik obkladu a dlažby mám koupit?</summary><p>K ploše se běžně připočítává zhruba 10 % na prořez a rozbité kusy. U velkých formátů a pokládky na diagonálu i víc. Výpočet nahoře to dělá za Vás.</p></details>
+      <details><summary>Kdy Vás zastihnu?</summary><p>V pracovní dny od 7 do 17 hodin na čísle 775 802 756.</p></details>
+      <details><summary>Jak dlouho trvá rekonstrukce koupelny? <span class="stitek">ukázkový text</span></summary><p>Běžná koupelna v panelovém nebo rodinném domě zabere zhruba dva až tři týdny. Přesný termín řeknu po prohlídce.</p></details>
+      <details><summary>Musím mít obklad vybraný předem? <span class="stitek">ukázkový text</span></summary><p>Ne. Rád poradím, co se do Vaší koupelny hodí a kolik ho koupit.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Ozvěte se, domluvíme se</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420775802756">775 802 756</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:radomirliberda@email.cz">radomirliberda@email.cz</a></dd>
+        <dt>Adresa</dt><dd>Lískovecká 1754, 738 01 Frýdek-Místek</dd>
+        <dt>Kdy volat</dt><dd>Po–Pá 7–17</dd>
+        <dt>Kde pracuju</dt><dd>Frýdek-Místek a okolí <span class="stitek">ukázkový text</span></dd>
+      </dl>
+    </div>
+    <div class="mapa">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="6" fill="#173C36"/><path d="M0 95 C60 80 110 110 170 90 S260 60 300 70" stroke="#2F6B61" stroke-width="10" fill="none"/><path d="M40 0 L120 150 M0 40 L300 120 M210 0 L180 150" stroke="#2F6B61" stroke-width="3"/><circle cx="150" cy="74" r="10" fill="#E0A526"/><circle cx="150" cy="74" r="22" fill="none" stroke="#E0A526" stroke-width="2" opacity=".6"/></svg>
+      <a class="btn btn-tel" href="https://mapy.cz/zakladni?q=L%C3%ADskoveck%C3%A1%201754%20Fr%C3%BDdek-M%C3%ADstek" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Radomír Liberda – zednické práce · Lískovecká 1754, 738 01 Frýdek-Místek · IČO 66167566 · 775 802 756</div></footer>
+
+<div class="mobil-volat"><a class="btn btn-tel" href="tel:+420775802756">Zavolat</a><a class="btn btn-obrys" href="#koupelna">Spočítat koupelnu</a></div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function num(el){var v=parseFloat(String(el.value).replace(',','.'));return isFinite(v)&&v>0?Math.min(v,8):0}
+  function cz(n){return n.toFixed(1).replace('.',',')}
+  function val(name){var e=document.querySelector('input[name='+name+']:checked');return e?e.value:''}
+  function draw(d,s){
+    var W=320,H=240,p=36,sc=Math.min((W-2*p)/d,(H-2*p)/s),w=d*sc,h=s*sc,x=(W-w)/2,y=(H-h)/2,t=0.3*sc,g='';
+    for(var i=x;i<x+w-0.5;i+=t)for(var j=y;j<y+h-0.5;j+=t)g+='<rect x="'+(i+1)+'" y="'+(j+1)+'" width="'+Math.max(0,Math.min(t,x+w-i)-2)+'" height="'+Math.max(0,Math.min(t,y+h-j)-2)+'" fill="#DCEAE5"/>';
+    $('plan').innerHTML='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="#B9D2CA"/>'+g+
+      '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="none" stroke="#1F4F47" stroke-width="4"/>'+
+      '<rect x="'+(x+w-0.8*sc-6)+'" y="'+(y+h-3)+'" width="'+(0.8*sc)+'" height="6" fill="#E0A526"/>'+
+      '<text x="'+(x+w/2)+'" y="'+(y-6)+'" text-anchor="middle" font-size="13" font-family="Source Sans 3,Arial" fill="#1D2624">'+cz(d)+' m</text>'+
+      '<text x="'+(x-6)+'" y="'+(y+h/2)+'" text-anchor="end" font-size="13" font-family="Source Sans 3,Arial" fill="#1D2624">'+cz(s)+' m</text>';
+  }
+  function upd(){
+    var d=num($('d'))||1,s=num($('s'))||1,v=parseFloat(val('v'));
+    var dl=d*s*1.1,ob=Math.max(0,(2*(d+s)*v-0.8*Math.min(v,2)))*1.1;
+    $('mDl').textContent=cz(dl)+' m²';$('mOb').textContent=cz(ob)+' m²';
+    var z=[].slice.call(document.querySelectorAll('#zmeny input:checked')).map(function(e){return e.value});
+    var t='Dobrý den, mám zájem o rekonstrukci koupelny.\nRozměry: '+cz(d)+' × '+cz(s)+' m, obklad '+(v===2.6?'až ke stropu':'do '+cz(v)+' m')+'.\n'+
+      (z.length?'Chci: '+z.join(', ')+'.\n':'')+'Orientačně dlažba '+cz(dl)+' m², obklad '+cz(ob)+' m².\nZačít: '+val('kdy')+'.\nMůžete se přijet podívat? Děkuji.';
+    $('txt').textContent=t;
+    $('sms').href='sms:+420775802756?body='+encodeURIComponent(t);
+    draw(d,s);
+  }
+  $('f').addEventListener('input',upd);$('f').addEventListener('change',upd);
+  $('f').addEventListener('submit',function(e){e.preventDefault()});
+  $('kop').addEventListener('click',function(){
+    var t=$('txt').textContent,b=this;
+    function ok(){b.textContent='Zkopírováno'}
+    function fb(){var r=document.createRange();r.selectNodeContents($('txt'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Text je označený'}
+    try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}
+  });
+  upd();
+})();
+</script>
+</body>
+</html>

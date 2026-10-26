@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Radek Figura</title>
+<meta name="description" content="Radek Figura, klempíř a pokrývač z Opavy-Kylešovic: klempířské, pokrývačské, tesařské a izolatérské práce. Spočítejte si plochu střechy a pošlete poptávku. Tel. 777 275 540.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Karla:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RoofingContractor","name":"Radek Figura","description":"Klempířské, pokrývačské, tesařské a izolatérské práce.","telephone":"+420777275540","email":"radekfigura@seznam.cz","taxID":"73000540","address":{"@type":"PostalAddress","streetAddress":"Liptovská 963/8","addressLocality":"Opava","postalCode":"747 06","addressCountry":"CZ"}}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: hero jako karta přes plochu oblohy se siluetou střech, čtyři řemesla střechy, kalkulačka plochy střechy s živým nákresem, kroky, kontakt. Břidlice, měď, měděnka. */
+:root{
+  --brid:#2F3A40;      /* břidlice */
+  --brid2:#243035;
+  --med:#B8692E;       /* měď – tlačítka a plochy */
+  --med-tx:#8A4A1A;    /* měď pro text na světlém */
+  --patina:#5E9C8A;    /* měděnka */
+  --patina-sv:#D6E8E2;
+  --nebe:#EEF2F1;
+  --bila:#FFFFFF;
+  --tx:#1F272B;
+  --tx2:#525E64;
+  --linka:#D5DEDB;
+  --f-disp:"Zilla Slab",Rockwell,Georgia,serif;
+  --f-text:"Karla","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--nebe);color:var(--tx);font-family:var(--f-text);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-disp);line-height:1.08;text-wrap:balance;margin:0;font-weight:700}
+h2{font-size:clamp(30px,4.2vw,44px)}
+h3{font-size:22px}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--med);outline-offset:2px}
+.stitek{display:inline-block;font:700 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FBEBDD;color:var(--med-tx);border:1px solid #E6BE9C;border-radius:3px;padding:4px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.navrh{background:var(--brid2);color:#fff;font-size:14px;text-align:center;padding-block:8px}
+.lista{background:var(--bila);border-bottom:1px solid var(--linka);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bila)}
+.lista .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 21px/1.05 var(--f-disp)}
+.znacka small{display:block;font:500 13px var(--f-text);color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;font:700 17px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-med{background:var(--med);color:#fff}
+.btn-med:hover{background:#A65C25}
+.btn-o{border-color:var(--brid);color:var(--brid);background:transparent}
+.btn-o:hover{background:var(--patina-sv)}
+.lista .btn{min-height:42px;padding:0 16px;font-size:16px}
+/* hero */
+.hero{position:relative;background:linear-gradient(#CFE0DC,#EEF2F1 70%);overflow:hidden}
+.hero .strechy{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;display:block}
+.hero .wrap{position:relative;padding-block:44px 150px}
+.karta{background:var(--bila);border-radius:6px;padding:30px 28px;max-width:600px;box-shadow:0 2px 0 var(--linka),0 20px 40px -24px rgba(36,48,53,.45);display:grid;gap:16px;border-top:6px solid var(--med)}
+.karta .nad{font:700 14px var(--f-text);letter-spacing:.1em;text-transform:uppercase;color:var(--med-tx)}
+.karta h1{font-size:clamp(36px,5.6vw,58px)}
+.karta p{color:var(--tx2);font-size:18px}
+.remesla{display:flex;flex-wrap:wrap;gap:6px}
+.remesla span{font-weight:700;font-size:14px;background:var(--patina-sv);color:var(--brid);padding:5px 10px;border-radius:999px}
+.akce{display:flex;flex-wrap:wrap;gap:12px}
+section{padding-block:66px}
+.hlava{max-width:660px;display:grid;gap:10px;margin-bottom:32px}
+.hlava p{color:var(--tx2)}
+/* řemesla */
+.ctyri{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ctyri>div{background:var(--bila);border-radius:6px;padding:22px 20px;display:grid;gap:10px;align-content:start;border:1px solid var(--linka)}
+.ctyri svg{width:52px;height:52px}
+.ctyri .kdo{font:700 13px var(--f-text);letter-spacing:.08em;text-transform:uppercase;color:var(--patina)}
+.ctyri p{color:var(--tx2);font-size:16px}
+.cena{margin-top:20px;color:var(--tx2)}
+/* kalkulačka */
+.kal{background:var(--brid);color:#fff}
+.kal .hlava p{color:#C9D4D7}
+.kgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.panel{background:var(--brid2);border-radius:6px;padding:24px;display:grid;gap:20px}
+.panel .t{display:block;font-weight:700;margin-bottom:8px}
+.typy{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.typy label{display:grid;justify-items:center;gap:4px;padding:10px 4px;border:2px solid #44535A;border-radius:6px;cursor:pointer;font-size:14px;font-weight:700;text-align:center}
+.typy input{position:absolute;opacity:0;pointer-events:none}
+.typy svg{width:52px;height:34px}
+.typy label:has(input:checked){border-color:var(--med);background:#3A2E26}
+.typy label:has(input:focus-visible){outline:3px solid var(--med)}
+.dvoj-in{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.panel input[type=number]{width:100%;font:700 18px var(--f-text);padding:10px 12px;border-radius:6px;border:2px solid #44535A;background:var(--brid);color:#fff}
+.panel input[type=range]{width:100%;accent-color:var(--med)}
+.sklon{display:flex;justify-content:space-between;font-size:15px;color:#C9D4D7}
+.sklon b{color:#fff;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:2px solid #44535A;border-radius:999px;cursor:pointer;font-size:15px;font-weight:500}
+.chips input{accent-color:var(--med)}
+.chips label:has(input:checked){border-color:var(--patina);background:#2C4A44}
+.vystup{display:grid;gap:16px}
+.nakres{background:var(--nebe);border-radius:6px;padding:12px}
+.nakres svg{width:100%;height:auto;display:block}
+.plocha{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.plocha b{font:700 54px/1 var(--f-disp);color:#F0B88A;font-variant-numeric:tabular-nums}
+.plocha span{color:#C9D4D7}
+.zprava{background:var(--bila);color:var(--tx);border-radius:6px;padding:16px;font-size:15px;white-space:pre-wrap}
+.pozn{font-size:14px;color:#C9D4D7}
+.kal .btn-o{border-color:#fff;color:#fff}
+.kal .btn-o:hover{background:var(--brid2)}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.kroky>div{display:grid;gap:8px;padding-top:18px;border-top:2px solid var(--brid);position:relative}
+.kroky>div::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;background:var(--med);transform:rotate(45deg)}
+.kroky p{color:var(--tx2)}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px;align-items:start}
+.fotky>div{width:100%;aspect-ratio:4/3;border-radius:6px;border:2px dashed #9FB3AD;display:grid;place-items:center;text-align:center;color:var(--tx2);padding:12px;font-size:15px;background:repeating-linear-gradient(0deg,var(--bila) 0 16px,#E3EAE8 16px 18px)}
+/* důvěra + faq */
+.dv{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.fakta{display:grid;gap:12px;list-style:none;margin:0;padding:0}
+.fakta li{background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:14px 16px}
+.fakta b{display:block;font-family:var(--f-disp);font-size:19px}
+details{border-bottom:1px solid var(--linka);padding-block:14px}
+summary{font-weight:700;font-size:18px;cursor:pointer}
+details p{margin-top:8px;color:var(--tx2)}
+/* kontakt */
+.kontakt{background:var(--brid2);color:#fff}
+.kontakt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:20px 0 0}
+.kontakt dt{color:#C9D4D7}
+.kontakt dd{margin:0;font-weight:700}
+.kontakt .btn-o{border-color:#fff;color:#fff}
+footer{background:#182024;color:#AEBBBF;font-size:14px;padding-block:22px 96px}
+.mobil{display:none}
+@media (max-width:860px){
+  .kgrid,.dv,.kontakt .wrap{grid-template-columns:1fr}
+  .ctyri{grid-template-columns:1fr 1fr}
+  .kroky,.fotky{grid-template-columns:1fr}
+  .hero .wrap{padding-block:24px 96px}
+  .karta{padding:22px 20px}
+  section{padding-block:50px}
+  .lista .btn span{display:none}
+  .mobil{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bila);border-top:1px solid var(--linka);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .mobil .btn{flex:1;white-space:nowrap;padding:0 10px}
+}
+@media (max-width:480px){
+  .ctyri{grid-template-columns:1fr}
+  .karta .akce .btn{flex:1 1 100%}
+  .typy{grid-template-columns:1fr 1fr}
+}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Radek Figura</div>
+
+<div class="lista" role="banner">
+  <div class="wrap">
+    <a class="znacka" href="#top"><svg width="36" height="30" viewBox="0 0 36 30" aria-hidden="true"><path d="M2 16 18 3l16 13" fill="none" stroke="#B8692E" stroke-width="4" stroke-linejoin="round"/><rect x="7" y="16" width="22" height="12" fill="#2F3A40"/></svg><span>Radek Figura<small>klempíř a pokrývač · Opava</small></span></a>
+    <a class="btn btn-med" href="tel:+420777275540" aria-label="Zavolat 777 275 540"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>777 275 540</span></a>
+  </div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <svg class="strechy" viewBox="0 0 1440 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 170 V110 L60 70 L120 110 V90 L200 40 L280 90 V120 H320 V80 L380 50 L440 80 V170Z" fill="#9DB4AE"/>
+    <path d="M400 170 V100 L470 60 L540 100 V85 L610 45 L690 85 L760 45 L830 85 V170Z" fill="#8AA39C"/>
+    <path d="M780 170 V95 L860 40 L940 95 V120 L1010 120 L1010 80 L1080 30 L1150 80 V110 L1220 70 L1300 110 L1300 90 L1370 55 L1440 90 V170Z" fill="#9DB4AE"/>
+    <path d="M0 170 V140 L90 105 L180 140 V130 L300 95 L420 130 V150 L560 110 L700 150 V135 L820 100 L960 135 V145 L1100 105 L1240 145 V130 L1340 100 L1440 130 V170Z" fill="#2F3A40"/>
+    <path d="M300 95 L420 130" stroke="#B8692E" stroke-width="5"/>
+    <path d="M1100 105 L1240 145" stroke="#5E9C8A" stroke-width="5"/>
+  </svg>
+  <div class="wrap">
+    <div class="karta">
+      <div class="nad">Opava a okolí</div>
+      <h1>Střecha, která nezatéká. Od krovu po okapy.</h1>
+      <p>Provádíme klempířské, pokrývačské, tesařské a izolatérské práce. Celou střechu tak zvládne jedna parta.</p>
+      <div class="remesla"><span>klempíř</span><span>pokrývač</span><span>tesař</span><span>izolatér</span></div>
+      <div class="akce">
+        <a class="btn btn-med" href="tel:+420777275540">Zavolat 777 275 540</a>
+        <a class="btn btn-o" href="#strecha">Spočítat střechu</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="prace">
+  <div class="wrap">
+    <div class="hlava">
+      <h2>Čtyři řemesla jedné střechy</h2>
+      <p>Na střeše se potkává krov, krytina, plech i izolace. U nás to dělá jedna firma, takže se nikdo nevymlouvá na toho druhého.</p>
+    </div>
+    <div class="ctyri">
+      <div>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M4 30 26 10l22 20" fill="none" stroke="#2F3A40" stroke-width="4"/><path d="M4 30h44v6H4z" fill="#B8692E"/><path d="M40 36v12" stroke="#B8692E" stroke-width="5"/></svg>
+        <span class="kdo">klempíř</span><h3>Klempířské práce</h3>
+        <p>Okapy, svody, oplechování a další plechové prvky střechy.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M2 40 26 12l24 28z" fill="#2F3A40"/><g stroke="#D6E8E2" stroke-width="2"><path d="M12 33h28M17 27h18M21 21h10"/></g></svg>
+        <span class="kdo">pokrývač</span><h3>Pokrývačské práce</h3>
+        <p>Nová krytina i opravy stávající střechy.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><g stroke="#8A4A1A" stroke-width="5" stroke-linecap="square"><path d="M6 42 26 12 46 42"/><path d="M12 33h28"/><path d="M26 12v30"/></g></svg>
+        <span class="kdo">tesař</span><h3>Tesařské práce</h3>
+        <p>Krov a dřevěné konstrukce střechy.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><rect x="4" y="26" width="44" height="14" fill="#2F3A40"/><path d="M4 24h44" stroke="#5E9C8A" stroke-width="5"/><g fill="#5E9C8A"><circle cx="16" cy="12" r="3"/><circle cx="26" cy="8" r="3"/><circle cx="36" cy="12" r="3"/></g></svg>
+        <span class="kdo">izolatér</span><h3>Izolatérské práce</h3>
+        <p>Izolace proti vodě, aby střecha i dům zůstaly suché.</p>
+      </div>
+    </div>
+    <p class="cena">Cena záleží na ploše, krytině a stavu krovu. Přijedeme, změříme a cenu řekneme předem. <span class="stitek">ukázkový text</span></p>
+  </div>
+</section>
+
+<section class="kal" id="strecha">
+  <div class="wrap">
+    <div class="hlava">
+      <h2>Kolik metrů má Vaše střecha?</h2>
+      <p>Vyberte tvar, zadejte rozměry domu a sklon. Hned uvidíte přibližnou plochu a poptávku můžete rovnou poslat.</p>
+    </div>
+    <div class="kgrid">
+      <form class="panel" id="f" novalidate>
+        <div>
+          <span class="t">Tvar střechy</span>
+          <div class="typy">
+            <label><input type="radio" name="typ" value="sedlová" checked><svg viewBox="0 0 52 34" aria-hidden="true"><path d="M4 30 26 6l22 24z" fill="#B8692E"/></svg>sedlová</label>
+            <label><input type="radio" name="typ" value="valbová"><svg viewBox="0 0 52 34" aria-hidden="true"><path d="M2 30 16 8h20l14 22z" fill="#B8692E"/></svg>valbová</label>
+            <label><input type="radio" name="typ" value="pultová"><svg viewBox="0 0 52 34" aria-hidden="true"><path d="M4 30V8l44 14v8z" fill="#B8692E"/></svg>pultová</label>
+            <label><input type="radio" name="typ" value="plochá"><svg viewBox="0 0 52 34" aria-hidden="true"><path d="M4 20h44v10H4z" fill="#B8692E"/></svg>plochá</label>
+          </div>
+        </div>
+        <div class="dvoj-in">
+          <div><label class="t" for="d">Délka domu (m)</label><input id="d" type="number" min="3" max="40" step="0.5" value="11" inputmode="decimal"></div>
+          <div><label class="t" for="s">Šířka domu (m)</label><input id="s" type="number" min="3" max="30" step="0.5" value="8" inputmode="decimal"></div>
+        </div>
+        <div id="sklonBox">
+          <label class="t" for="k">Sklon střechy</label>
+          <input id="k" type="range" min="5" max="55" step="1" value="38">
+          <div class="sklon"><span>mírná</span><b id="kv">38°</b><span>strmá</span></div>
+        </div>
+        <div>
+          <span class="t">Co je potřeba</span>
+          <div class="chips" id="co">
+            <label><input type="checkbox" value="nová krytina" checked> nová krytina</label>
+            <label><input type="checkbox" value="oprava, zatéká"> zatéká</label>
+            <label><input type="checkbox" value="okapy a svody" checked> okapy a svody</label>
+            <label><input type="checkbox" value="krov"> krov</label>
+            <label><input type="checkbox" value="izolace"> izolace</label>
+          </div>
+        </div>
+      </form>
+      <div class="vystup" aria-live="polite">
+        <div class="nakres"><svg id="nak" viewBox="0 0 360 180" role="img" aria-label="Nákres střechy podle zadání"></svg></div>
+        <div class="plocha"><b id="pl">0 m²</b><span>přibližná plocha střechy<br>vč. přesahu 0,5 m</span></div>
+        <div class="zprava" id="txt"></div>
+        <div class="akce">
+          <a class="btn btn-med" id="sms" href="sms:+420777275540">Poslat SMS</a>
+          <button class="btn btn-o" type="button" id="kop">Zkopírovat text</button>
+        </div>
+        <p class="pozn">Orientační výpočet z půdorysu a sklonu, bez vikýřů a štítů. Přesnou plochu změříme na místě.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="hlava"><h2>Jak to probíhá <span class="stitek">ukázkový text</span></h2></div>
+    <div class="kroky">
+      <div><h3>Zavoláte nebo pošlete výpočet</h3><p>Tvar, rozměry a co je potřeba. Fotka střechy pomůže.</p></div>
+      <div><h3>Prohlídka na místě</h3><p>Vylezeme na střechu, změříme, zkontrolujeme krov a řekneme cenu předem.</p></div>
+      <div><h3>Práce za suchého počasí</h3><p>Domluvíme termín, střechu uděláme a po sobě uklidíme.</p></div>
+    </div>
+    <div class="fotky">
+      <div>Sem přijde Vaše fotka<br>(hotová střecha)</div>
+      <div>Sem přijde Vaše fotka<br>(okapy a oplechování)</div>
+      <div>Sem přijde Vaše fotka<br>(krov)</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bila);border-block:1px solid var(--linka)">
+  <div class="wrap dv">
+    <div>
+      <h2 style="margin-bottom:20px">S kým jednáte</h2>
+      <ul class="fakta">
+        <li><b>Radek Figura</b>Živnostník, IČO 73000540</li>
+        <li><b>Opava-Kylešovice</b>Liptovská 963/8, 747 06 Opava</li>
+        <li><b>Katalog</b><a href="https://www.firmy.cz/detail/2468959-radek-figura-opava-kylesovice.html" target="_blank" rel="noopener">Profil na Firmy.cz</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px">Časté otázky</h2>
+      <details open><summary>Jak spočítám plochu střechy?</summary><p>Půdorys domu i s přesahem vydělte kosinem sklonu. Dům 11 × 8 m s přesahem 0,5 m a sklonem 38° má asi 137 m² střechy. Kalkulačka nahoře to udělá za Vás.</p></details>
+      <details><summary>Dá se střecha dělat i na podzim?</summary><p>Za suchého počasí ano. Jen se počítá s kratším dnem a termín se přizpůsobí předpovědi. <span class="stitek">ukázkový text</span></p></details>
+      <details><summary>Opravíte jen okapy, bez celé střechy?</summary><p>Klempířské práce děláme i samostatně. Napište, o co jde. <span class="stitek">ukázkový text</span></p></details>
+      <details><summary>Kdy Vás zastihnu? <span class="stitek">ukázkový text</span></summary><p>Doplníme podle Vás. Nejjistější je zavolat nebo poslat SMS.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Ozvěte se, přijedeme se podívat</h2>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420777275540">777 275 540</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:radekfigura@seznam.cz">radekfigura@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Liptovská 963/8, Opava-Kylešovice</dd>
+        <dt>Kde pracujeme</dt><dd>Opavsko a Ostravsko <span class="stitek">ukázkový text</span></dd>
+      </dl>
+    </div>
+    <div class="akce" style="align-self:center">
+      <a class="btn btn-med" href="tel:+420777275540">Zavolat 777 275 540</a>
+      <a class="btn btn-o" href="https://mapy.cz/zakladni?q=Liptovsk%C3%A1%20963%2F8%20Opava" target="_blank" rel="noopener">Mapy.cz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Radek Figura – klempířské a pokrývačské práce · Liptovská 963/8, 747 06 Opava · IČO 73000540 · 777 275 540</div></footer>
+
+<div class="mobil"><a class="btn btn-med" href="tel:+420777275540">Zavolat</a><a class="btn btn-o" href="#strecha">Spočítat střechu</a></div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function n(el,mx){var v=parseFloat(String(el.value).replace(',','.'));return isFinite(v)&&v>0?Math.min(v,mx):0}
+  function cz(x){return Math.round(x).toLocaleString('cs-CZ')}
+  function typ(){return document.querySelector('input[name=typ]:checked').value}
+  function draw(t,k){
+    var W=360,H=180,b=150,x0=60,x1=300,w=x1-x0,a=k*Math.PI/180,h,p='';
+    var wall='<rect x="'+(x0+12)+'" y="'+b+'" width="'+(w-24)+'" height="26" fill="#9DB4AE"/>';
+    if(t==='plochá'){p='<rect x="'+(x0-8)+'" y="'+(b-14)+'" width="'+(w+16)+'" height="14" fill="#2F3A40"/>';}
+    else if(t==='pultová'){h=Math.min(130,Math.tan(a)*w);p='<path d="M'+(x0-8)+' '+(b)+' L'+(x0-8)+' '+(b-h)+' L'+(x1+8)+' '+b+'Z" fill="#2F3A40"/>';}
+    else{h=Math.min(130,Math.tan(a)*w/2);var cx=(x0+x1)/2,r=t==='valbová'?36:0;
+      p='<path d="M'+(x0-8)+' '+b+' L'+(cx-r)+' '+(b-h)+' L'+(cx+r)+' '+(b-h)+' L'+(x1+8)+' '+b+'Z" fill="#2F3A40"/>'+
+      '<path d="M'+(x0-8)+' '+b+' L'+(cx-r)+' '+(b-h)+'" stroke="#B8692E" stroke-width="4"/>';}
+    var arc=t==='plochá'?'':'<path d="M'+(x1+8-34)+' '+b+' A34 34 0 0 0 '+(x1+8-34*Math.cos(a))+' '+(b-34*Math.sin(a))+'" fill="none" stroke="#B8692E" stroke-width="2"/><text x="'+(x1+16)+'" y="'+(b-6)+'" font-size="14" font-family="Karla,Arial" fill="#1F272B">'+k+'°</text>';
+    $('nak').innerHTML='<rect width="360" height="180" fill="#EEF2F1"/>'+wall+p+'<rect x="'+(x0-8)+'" y="'+b+'" width="'+(w+16)+'" height="5" fill="#B8692E"/>'+arc;
+  }
+  function upd(){
+    var t=typ(),d=n($('d'),40)||10,s=n($('s'),30)||8,k=+$('k').value;
+    $('sklonBox').hidden=(t==='plochá');$('kv').textContent=k+'°';
+    var A=(d+1)*(s+1),plo=t==='plochá'?A:A/Math.cos(k*Math.PI/180);
+    $('pl').textContent=cz(plo)+' m²';
+    var co=[].slice.call(document.querySelectorAll('#co input:checked')).map(function(e){return e.value});
+    var txt='Dobrý den, poptávám práce na střeše.\nStřecha: '+t+(t==='plochá'?'':', sklon asi '+k+'°')+', dům '+String(d).replace('.',',')+' × '+String(s).replace('.',',')+' m (asi '+cz(plo)+' m²).\n'+(co.length?'Potřebuji: '+co.join(', ')+'.\n':'')+'Můžete se přijet podívat? Děkuji.';
+    $('txt').textContent=txt;$('sms').href='sms:+420777275540?body='+encodeURIComponent(txt);
+    draw(t,k);
+  }
+  $('f').addEventListener('input',upd);$('f').addEventListener('change',upd);$('f').addEventListener('submit',function(e){e.preventDefault()});
+  $('kop').addEventListener('click',function(){var b=this,t=$('txt').textContent;
+    function fb(){var r=document.createRange();r.selectNodeContents($('txt'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Text je označený'}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent='Zkopírováno'},fb)}catch(e){fb()}});
+  upd();
+})();
+</script>
+</body>
+</html>
