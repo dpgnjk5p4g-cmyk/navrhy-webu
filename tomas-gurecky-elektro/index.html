@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Tomáš Gurecký – elektro a tepelná čerpadla</title>
+<meta name="description" content="Tomáš Gurecký, Ostrava-Petřkovice: elektroinstalace, revize elektrických zařízení, prodej a montáž tepelných čerpadel, měření a regulace. Tel. 602 527 973.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Public+Sans:wght@400;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Electrician","name":"Tomáš Gurecký – elektro a tepelná čerpadla","telephone":"+420602527973","email":"tgurecky@gmail.com","address":{"@type":"PostalAddress","streetAddress":"U Jana 540/44","addressLocality":"Ostrava-Petřkovice","postalCode":"725 29","addressCountry":"CZ"},"geo":{"@type":"GeoCoordinates","latitude":49.868807,"longitude":18.252827}}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: velký nápis přes celou šířku na inkoustové ploše se „sinusovkou“, pod ním čtyři obory a kalkulačka výkonu tepelného čerpadla */
+:root{
+  --ink:#14202B; --ink2:#1E2E3C; --teal:#0E7C7B; --teal-l:#7FD1CC; --led:#E4572E; --led-tx:#B23A17;
+  --led-on:#FF8A63; --led-off:#3A4B58; --led-off2:#54687A;
+  --led-bar:#F2C14E; --led-hot:#E4572E;
+  --led-ok:#0E7C7B;
+  --ice:#E6F1F1; --bila:#FFFFFF; --sed:#4A5A66; --linka:#D3DEE0;
+  --display:"Chakra Petch","Arial Narrow",sans-serif; --body:"Public Sans",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--ice);color:var(--ink);font:17px/1.6 var(--body);padding-bottom:76px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4.8vw,46px);text-transform:uppercase;letter-spacing:.01em}
+a{color:inherit}
+.demo{display:inline-block;font:700 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px}
+.navrh{background:#000;color:#fff;text-align:center;font-size:13px;padding:8px 16px}
+.top{background:var(--ink);color:#fff;border-bottom:1px solid #2A3B49}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.logo{font:700 20px/1 var(--display);letter-spacing:.03em;text-transform:uppercase}
+.logo small{display:block;font:400 12.5px/1.4 var(--body);letter-spacing:0;text-transform:none;color:#A9BAC6;margin-top:3px}
+.toptel{font-weight:700;text-decoration:none;white-space:nowrap;color:var(--teal-l);border:1px solid #2F4556;border-radius:4px;padding:8px 12px}
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero svg.vlna{position:absolute;left:0;right:0;bottom:0;width:100%;height:120px;opacity:.55}
+.hero .wrap{position:relative;padding-block:42px 70px}
+.eyebrow{font:600 13px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--teal-l)}
+.hero h1{font-size:clamp(44px,9.5vw,112px);text-transform:uppercase;margin:14px 0 16px;letter-spacing:-.01em}
+.hero h1 span{color:var(--led-on)}
+.hero p{max-width:56ch;margin:0 0 22px;color:#C6D3DC;font-size:18px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 16px/1 var(--body);text-decoration:none;border-radius:4px;padding:15px 20px;border:2px solid transparent;cursor:pointer}
+.btn-a{background:var(--led);color:#fff}
+.btn-t{background:transparent;color:#fff;border-color:#7F95A5}
+.btn-d{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--led-bar);outline-offset:2px}
+.obory{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #2A3B49;margin-top:34px}
+.obory a{display:block;padding:16px 14px 0 0;text-decoration:none;color:#DDE6EC;font-weight:600;font-size:15px}
+.obory b{display:block;font:700 24px/1 var(--display);color:#fff;margin-bottom:4px;font-variant-numeric:tabular-nums}
+section{padding-block:58px}
+.lead{max-width:62ch;color:var(--sed);margin:10px 0 0}
+.sl{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+.sl article{background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:22px;display:grid;grid-template-columns:56px 1fr;gap:16px}
+.sl article>div{min-width:0}
+.sl h3{overflow-wrap:anywhere;font-size:clamp(20px,5.4vw,24px);text-transform:uppercase;margin-bottom:6px}
+.sl p{margin:0;color:var(--sed)}
+.kalk{background:var(--ink2);color:#fff}
+.kalk h2{color:#fff}
+.kalk .lead{color:#B7C6D1}
+.kbox{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px;align-items:start}
+.panel{background:var(--ink);border:1px solid #2F4556;border-radius:8px;padding:22px}
+.lab{display:flex;justify-content:space-between;font:600 13px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--teal-l);margin:18px 0 10px}
+.lab:first-child{margin-top:0}
+.lab output{text-transform:none;color:#fff;font:700 18px var(--display);letter-spacing:0;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--led)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 15px var(--body);border:1px solid #3F5566;background:transparent;border-radius:4px;padding:10px 13px;cursor:pointer;color:#DDE6EC}
+.chips button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.displej{background:#0B141C;border-radius:8px;padding:22px;border:1px solid #2F4556}
+.kw{font:700 clamp(54px,9vw,84px)/1 var(--display);color:var(--led-on);font-variant-numeric:tabular-nums}
+.kw small{font-size:.35em;color:#B7C6D1;margin-left:6px}
+.bar{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;margin:14px 0 6px}
+.bar i{height:16px;border-radius:2px;background:var(--led-off)}
+.bar i.on{background:var(--led-bar)}
+.bar i.hot{background:var(--led-hot)}
+.osa{display:flex;justify-content:space-between;font-size:12px;color:#8DA0AE;font-variant-numeric:tabular-nums}
+.pozn{font-size:14px;color:#B7C6D1;margin:14px 0}
+.displej pre{white-space:pre-wrap;font:15px/1.55 var(--body);margin:16px 0;color:#fff;border-top:1px dashed #2F4556;padding-top:16px}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:26px 0 0;padding:0;list-style:none;border:1px solid var(--linka);border-radius:6px;background:var(--bila)}
+.kroky li{padding:22px;border-right:1px solid var(--linka)}
+.kroky li:last-child{border-right:0}
+.kroky b{font:700 15px var(--display);color:var(--led-tx);letter-spacing:.1em}
+.kroky h3{font-size:22px;text-transform:uppercase;margin:6px 0}
+.kroky p{margin:0;color:var(--sed)}
+.duv{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.duv div{border-left:4px solid var(--teal);background:var(--bila);padding:16px 18px}
+.duv b{display:block;font:700 22px/1.1 var(--display);text-transform:uppercase}
+.duv span{color:var(--sed);font-size:16px}
+details{background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:16px 18px;margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.foto{border:2px dashed #93AAB0;border-radius:6px;display:grid;place-items:center;min-height:200px;color:var(--sed);font-weight:700;text-align:center;padding:16px;background:repeating-linear-gradient(45deg,#DCE8E9 0 12px,#E6F1F1 12px 24px)}
+footer{background:var(--ink);color:#A9BAC6;font-size:14px}
+footer .wrap{padding-block:26px}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:8px;background:var(--ink);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista a{flex:1}
+@media (max-width:860px){
+  .kbox,.kontakt{grid-template-columns:1fr}
+  .sl,.duv{grid-template-columns:1fr}
+  .kroky{grid-template-columns:1fr}
+  .kroky li{border-right:0;border-bottom:1px solid var(--linka)}
+  .kroky li:last-child{border-bottom:0}
+  .obory{grid-template-columns:1fr 1fr}
+  .lista{display:flex}
+  .toptel{display:none}
+  .hero .wrap{padding-block:26px 56px}
+}
+@media (min-width:861px){body{padding-bottom:0}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Tomáš Gurecký – elektro a tepelná čerpadla</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <div class="logo">Gurecký elektro<small>Ostrava-Petřkovice</small></div>
+  <a class="toptel" href="tel:+420602527973">☎ 602 527 973</a>
+</div></div>
+
+<div class="hero">
+  <svg class="vlna" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 Q75 0 150 60 T300 60 T450 60 T600 60 T750 60 T900 60 T1050 60 T1200 60" fill="none" stroke="#0E7C7B" stroke-width="3"/><path d="M0 80 Q75 20 150 80 T300 80 T450 80 T600 80 T750 80 T900 80 T1050 80 T1200 80" fill="none" stroke="#E4572E" stroke-width="2" opacity=".6"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">Elektrikář a revizní práce · Ostrava a okolí</div>
+    <h1>Elektřina, revize <span>a teplo</span> z jedné ruky</h1>
+    <p>Elektroinstalace, revize elektrických zařízení, prodej a montáž tepelných čerpadel, měření a regulace. Elektřina i tepelné čerpadlo u jednoho řemeslníka.</p>
+    <div class="btns">
+      <a class="btn btn-a" href="tel:+420602527973">☎ Zavolat 602 527 973</a>
+      <a class="btn btn-t" href="#kalkulacka">Spočítat tepelné čerpadlo</a>
+    </div>
+    <div class="obory">
+      <a href="#sluzby"><b>01</b>Elektroinstalace</a>
+      <a href="#sluzby"><b>02</b>Revize</a>
+      <a href="#sluzby"><b>03</b>Tepelná čerpadla</a>
+      <a href="#sluzby"><b>04</b>Měření a regulace</a>
+    </div>
+  </div>
+</div>
+
+<section id="sluzby"><div class="wrap">
+  <h2>Co dělám</h2>
+  <p class="lead">„Nabízíme elektroinstalační práce, revize elektrických zařízení, prodej a montáž tepelných čerpadel, měření a regulace.“</p>
+  <div class="sl">
+    <article><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><rect width="56" height="56" rx="6" fill="#14202B"/><path d="M31 10 18 31h9l-3 15 14-22h-9z" fill="#F2C14E"/></svg>
+      <div><h3>Elektroinstalace</h3><p>Nové rozvody, rekonstrukce i úpravy elektřiny v domě a bytě.</p></div></article>
+    <article><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><rect width="56" height="56" rx="6" fill="#0E7C7B"/><rect x="16" y="12" width="24" height="32" rx="3" fill="#fff"/><path d="M21 22h14M21 28h14M21 34h8" stroke="#14202B" stroke-width="2.4"/><path d="M33 36l3 3 6-7" stroke="#E4572E" stroke-width="3" fill="none"/></svg>
+      <div><h3>Revize elektro</h3><p>Revize elektrických zařízení s revizní zprávou.<span class="demo">ukázkový text</span></p></div></article>
+    <article><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><rect width="56" height="56" rx="6" fill="#E4572E"/><rect x="10" y="16" width="36" height="26" rx="3" fill="#fff"/><circle cx="24" cy="29" r="8" fill="none" stroke="#14202B" stroke-width="2.4"/><path d="M24 21v16M16 29h16M18.5 23.5l11 11M29.5 23.5l-11 11" stroke="#14202B" stroke-width="1.4"/><path d="M36 22v14M40 22v14" stroke="#14202B" stroke-width="2"/></svg>
+      <div><h3>Tepelná čerpadla</h3><p>Prodej a montáž tepelných čerpadel včetně elektrického připojení.</p></div></article>
+    <article><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><rect width="56" height="56" rx="6" fill="#1E2E3C"/><circle cx="28" cy="30" r="14" fill="none" stroke="#7FD1CC" stroke-width="3"/><path d="M28 30l8-7" stroke="#FF8A63" stroke-width="3" stroke-linecap="round"/><circle cx="28" cy="30" r="2.5" fill="#fff"/></svg>
+      <div><h3>Měření a regulace</h3><p>Regulace vytápění a technologií, aby systém běžel úsporně.<span class="demo">ukázkový text</span></p></div></article>
+  </div>
+</div></section>
+
+<section class="kalk" id="kalkulacka"><div class="wrap">
+  <h2>Jak silné tepelné čerpadlo?</h2>
+  <p class="lead">Zadejte plochu a stav domu. Ukážeme orientační tepelnou ztrátu, podle které se čerpadlo vybírá, a složíme z ní poptávku. Přesný výpočet udělám u Vás na místě.</p>
+  <div class="kbox">
+    <form class="panel" id="kf" onsubmit="return false">
+      <label class="lab" for="plocha">Vytápěná plocha <output id="plo">140 m²</output></label>
+      <input type="range" id="plocha" min="40" max="400" step="10" value="140">
+      <span class="lab" id="st-l">Stav domu</span>
+      <div class="chips" id="stav" role="group" aria-labelledby="st-l">
+        <button type="button" aria-pressed="false" data-w="45">Novostavba</button>
+        <button type="button" aria-pressed="true" data-w="75">Zateplený starší dům</button>
+        <button type="button" aria-pressed="false" data-w="120">Nezateplený dům</button>
+      </div>
+      <span class="lab" id="t-l">Čím topíte teď</span>
+      <div class="chips" id="top" role="group" aria-labelledby="t-l">
+        <button type="button" aria-pressed="true">Plyn</button>
+        <button type="button" aria-pressed="false">Elektřina</button>
+        <button type="button" aria-pressed="false">Tuhá paliva</button>
+        <button type="button" aria-pressed="false">Stavím nový dům</button>
+      </div>
+      <span class="lab" id="o-l">K tomu</span>
+      <div class="chips" id="kt" role="group" aria-labelledby="o-l">
+        <button type="button" aria-pressed="true">Ohřev vody</button>
+        <button type="button" aria-pressed="false">Revize elektřiny</button>
+        <button type="button" aria-pressed="false">Nové rozvody elektro</button>
+      </div>
+    </form>
+    <div class="displej" aria-live="polite">
+      <div style="font:600 13px var(--body);letter-spacing:.08em;text-transform:uppercase;color:#7FD1CC">Orientační tepelná ztráta</div>
+      <div class="kw" id="kw">10,5<small>kW</small></div>
+      <div class="bar" id="bar"></div>
+      <div class="osa"><span>0</span><span>5</span><span>10</span><span>15</span><span>20 kW</span></div>
+      <p class="pozn">Orientační odhad z plochy a typu domu (W na m²). Skutečnou ztrátu ovlivní okna, výška stropů a poloha domu.<span class="demo">ukázkový text</span></p>
+      <pre id="sms"></pre>
+      <div class="btns">
+        <a class="btn btn-a" id="smsbtn" href="#">Poslat SMS na 602 527 973</a>
+        <a class="btn btn-t" id="mailbtn" href="#">Poslat e-mailem</a>
+      </div>
+      <p style="font-size:14px;color:#B7C6D1;margin:12px 0 0">Telefon: <b style="color:#fff;user-select:all">602 527 973</b> · e-mail: <b style="color:#fff;user-select:all">tgurecky@gmail.com</b></p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Jak to probíhá</h2>
+  <ol class="kroky">
+    <li><b>KROK 1</b><h3>Ozvete se</h3><p>Zavoláte nebo pošlete poptávku z kalkulačky.</p></li>
+    <li><b>KROK 2</b><h3>Prohlídka</h3><p>Podívám se na dům a rozvody a navrhnu řešení. Cenu znáte předem.<span class="demo">ukázkový text</span></p></li>
+    <li><b>KROK 3</b><h3>Montáž a zapojení</h3><p>Čerpadlo i elektřinu zapojím sám, včetně regulace.<span class="demo">ukázkový text</span></p></li>
+  </ol>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Proč já</h2>
+  <div class="duv">
+    <div><b>4 obory</b><span>elektro, revize, tepelná čerpadla a regulace u jednoho řemeslníka</span></div>
+    <div><b>Méně koordinace</b><span>montáž čerpadla a jeho elektrické připojení řeší jeden člověk</span></div>
+    <div><b>IČO 66920132</b><span>živnostník, U Jana 540/44, Ostrava-Petřkovice</span></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Časté otázky</h2>
+  <details open><summary>Vyplatí se mi tepelné čerpadlo?</summary><p>Záleží na domě a na tom, čím topíte teď. Po prohlídce Vám řeknu, jaké čerpadlo dává smysl.<span class="demo">ukázkový text</span></p></details>
+  <details><summary>Zapojíte čerpadlo i elektricky?</summary><p>Ano, elektroinstalace i měření a regulace patří k mým službám.</p></details>
+  <details><summary>Kam jezdíte?</summary><p>Ostrava a okolí. Napište, kde dům stojí.<span class="demo">ukázkový text</span></p></details>
+  <details><summary>Kolik stojí revize elektřiny?</summary><p>Cenu řeknu předem podle velikosti domu nebo bytu.<span class="demo">ukázkový text</span></p></details>
+</div></section>
+
+<section style="background:var(--bila)" id="kontakt"><div class="wrap kontakt">
+  <div>
+    <h2>Kontakt</h2>
+    <p style="font-size:18px;margin:16px 0 6px"><b>Tomáš Gurecký</b><br>U Jana 540/44, 725 29 Ostrava-Petřkovice</p>
+    <p style="margin:0 0 8px">Tel.: <a href="tel:+420602527973"><b>602 527 973</b></a><br>E-mail: <a href="mailto:tgurecky@gmail.com">tgurecky@gmail.com</a></p>
+    <p style="margin:0 0 18px;color:var(--sed)">Kdy mi můžete volat: doplníme podle Vás<span class="demo">ukázkový text</span></p>
+    <div class="btns">
+      <a class="btn btn-a" href="tel:+420602527973">☎ Zavolat</a>
+      <a class="btn btn-d" href="https://mapy.cz/zakladni?q=U%20Jana%20540%2F44%20Ostrava-Pet%C5%99kovice" target="_blank" rel="noopener">Ukázat na mapě</a>
+    </div>
+  </div>
+  <div class="foto">Sem přijde Vaše fotka<br>namontovaného tepelného čerpadla</div>
+</div></section>
+
+<footer><div class="wrap">Tomáš Gurecký · elektroinstalace, revize, tepelná čerpadla · IČO 66920132 · U Jana 540/44, 725 29 Ostrava-Petřkovice · 602 527 973</div></footer>
+
+<div class="lista"><a class="btn btn-a" href="tel:+420602527973">☎ Zavolat</a><a class="btn btn-t" href="#kalkulacka">Spočítat</a></div>
+
+<script>
+(function(){
+  var bar=document.getElementById("bar");for(var i=0;i<20;i++)bar.appendChild(document.createElement("i"));
+  function grp(id,multi){var g=document.getElementById(id);g.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+    if(multi){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!=="true")}else{[].forEach.call(g.children,function(x){x.setAttribute("aria-pressed",x===b)})}upd()});return g}
+  var stav=grp("stav"),top=grp("top"),kt=grp("kt",true);
+  function sel(g){return [].filter.call(g.children,function(b){return b.getAttribute("aria-pressed")==="true"})}
+  var pl=document.getElementById("plocha");pl.addEventListener("input",upd);
+  function upd(){
+    var a=+pl.value,s=sel(stav)[0],w=+s.getAttribute("data-w"),kw=a*w/1000;
+    document.getElementById("plo").textContent=a+" m²";
+    document.getElementById("kw").innerHTML=kw.toFixed(1).replace(".",",")+"<small>kW</small>";
+    var n=Math.min(20,Math.round(kw));[].forEach.call(bar.children,function(x,i){x.className=i<n?(i>=14?"hot":"on"):""});
+    var dal=sel(kt).map(function(b){return b.textContent.toLowerCase()});
+    var t="Dobrý den, pane Gurecký,\nmám zájem o tepelné čerpadlo.\nDům: "+s.textContent.toLowerCase()+", "+a+" m², teď: "+sel(top)[0].textContent.toLowerCase()+".\nOrientační ztráta z Vaší kalkulačky: "+kw.toFixed(1).replace(".",",")+" kW.\n";
+    if(dal.length)t+="K tomu: "+dal.join(", ")+".\n";
+    t+="Prosím o zavolání a domluvu prohlídky. Děkuji.";
+    document.getElementById("sms").textContent=t;
+    document.getElementById("smsbtn").href="sms:+420602527973?body="+encodeURIComponent(t);
+    document.getElementById("mailbtn").href="mailto:tgurecky@gmail.com?subject="+encodeURIComponent("Poptávka tepelného čerpadla")+"&body="+encodeURIComponent(t);
+  }
+  upd();
+})();
+</script>
+</body>
+</html>
