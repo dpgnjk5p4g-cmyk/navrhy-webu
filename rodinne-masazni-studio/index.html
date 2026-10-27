@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Rodinné masážní a relaxační studio Postřelmov</title>
+<meta name="description" content="Rodinné masážní a relaxační studio v Postřelmově – Hana a Tomáš Třetinovi. Klasické masáže od 350 Kč, lávové kameny, horké rýžové měšce, lymfodrenáž, maderoterapie, rezonanční lůžko. Vždy na objednání, tel. 728 899 108.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:wght@400;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Rodinné masážní a relaxační studio","alternateName":"Inspirace zdraví","telephone":"+420728899108","email":"tretinovah@atlas.cz","url":"https://www.inspiracezdravi.cz/","address":{"@type":"PostalAddress","streetAddress":"Tichá 484","postalCode":"789 69","addressLocality":"Postřelmov","addressCountry":"CZ"},"priceRange":"350–3100 Kč","employee":[{"@type":"Person","name":"Hana Třetinová"},{"@type":"Person","name":"Tomáš Třetina"}]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: rezonance – velký nápis přes šířku nad soustřednými vlnami zvuku, skladač masáže z vlastního ceníku jako hlavní nástroj */
+:root{
+  --noc:#23264A; --noc2:#181A36; --mosaz:#C9A44C; --mosaz-tx:#7D6420; --levandule:#E9E6F3; --lev2:#D5D0EA;
+  --salvej:#7FA08A; --salvej-tx:#3F6A4E; --papir:#FBFAFD; --ink:#1D1F33; --sed:#55587A; --linka:#DCD8EC;
+  --display:"Marcellus","Palatino Linotype","Book Antiqua",serif; --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papir);color:var(--ink);font:18px/1.6 var(--body);padding-bottom:78px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4.6vw,46px);color:var(--noc)}
+p{margin:0}
+a{color:inherit}
+.demo{display:inline-block;font:700 10.5px/1 var(--body);letter-spacing:.07em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.navrh{background:#000;color:#fff;text-align:center;font-size:13px;padding:8px 16px;line-height:1.4}
+.top{background:var(--noc);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--noc)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.logo{text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo svg{width:34px;height:34px;flex:none}
+.logo b{font:400 19px/1.1 var(--display);display:block}
+.logo small{font-size:12.5px;color:var(--lev2);letter-spacing:.05em}
+.nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+.nav a{text-decoration:none;color:var(--lev2)}
+.nav a:hover{color:#fff}
+.tel{display:inline-flex;align-items:center;gap:8px;background:var(--mosaz);color:var(--noc2);text-decoration:none;font-weight:700;padding:10px 16px;border-radius:8px;white-space:nowrap}
+.tel svg{width:18px;height:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 17px/1 var(--body);text-decoration:none;border-radius:8px;padding:16px 22px;border:2px solid transparent;cursor:pointer}
+.btn-zl{background:var(--mosaz);color:var(--noc2)}
+.btn-zl:hover{background:#D8B65F}
+.btn-noc{background:var(--noc);color:#fff}
+.btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-line2{background:transparent;color:var(--noc);border-color:var(--noc)}
+.btn:focus-visible,.zona:focus-visible,.opt:focus-visible{outline:3px solid var(--mosaz);outline-offset:3px}
+
+/* hero */
+.hero{background:var(--noc);color:#fff;position:relative;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero .wrap{position:relative;padding-block:56px 60px;display:flex;flex-direction:column;gap:20px}
+.eyebrow{font:700 13px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--mosaz)}
+.eyebrow.tm{color:var(--mosaz-tx)}
+.hero h1{font-size:clamp(42px,8.4vw,104px);letter-spacing:-.01em;max-width:12ch}
+.hero h1 span{color:var(--mosaz)}
+.hero .lead{font-size:clamp(18px,2.2vw,22px);color:var(--lev2);max-width:36em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.pasek{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:15.5px;color:var(--lev2);border-top:1px solid rgba(255,255,255,.18);padding-top:18px;margin-top:8px}
+.pasek b{color:#fff}
+
+section{padding-block:68px}
+.uvod{display:flex;flex-direction:column;gap:12px;max-width:42em;margin-bottom:34px}
+.uvod p{color:var(--sed);font-size:18.5px}
+
+/* skladač */
+.sklad{background:var(--levandule)}
+.sklad-grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:40px;align-items:start}
+.telo{background:var(--papir);border-radius:24px;padding:18px;border:1px solid var(--linka)}
+.telo svg{width:100%;height:auto;display:block}
+.zona{cursor:pointer;fill:var(--mosaz);fill-opacity:0;stroke:var(--noc);stroke-width:1.6;stroke-dasharray:4 4;transition:fill-opacity .2s}
+.zona:hover{fill-opacity:.25}
+.zona.on{fill-opacity:.75;stroke:var(--mosaz-tx);stroke-dasharray:none}
+.telo p{text-align:center;font-size:14px;color:var(--sed);margin-top:6px}
+.panel{background:var(--papir);border-radius:24px;border:1px solid var(--linka);padding:24px;display:flex;flex-direction:column;gap:18px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:600 15.5px/1 var(--body);background:var(--levandule);color:var(--noc);border:1.5px solid var(--lev2);border-radius:8px;padding:11px 14px;cursor:pointer}
+.opt.on{background:var(--noc);color:#fff;border-color:var(--noc)}
+.opt[disabled]{opacity:.45;cursor:not-allowed}
+.vysl{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;border-top:1px solid var(--linka);padding-top:18px}
+.vysl h3{font-size:26px;color:var(--noc)}
+.vysl .cislo{font:400 44px/1 var(--display);color:var(--noc);font-variant-numeric:tabular-nums;white-space:nowrap}
+.vysl .cislo small{font:600 16px/1 var(--body);color:var(--sed);margin-left:8px}
+.lab{font-weight:700;font-size:15px;margin-bottom:8px}
+.zprava{background:var(--levandule);border-radius:12px;padding:14px;font-size:15.5px;white-space:pre-wrap;min-height:3.5em}
+.akce{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.akce .pozn{font-size:13.5px;color:var(--sed)}
+
+/* ceník */
+.cenik-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.blok{background:#fff;border:1px solid var(--linka);border-radius:18px;padding:24px}
+.blok h3{font-size:24px;color:var(--noc);margin-bottom:12px}
+.blok table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.blok td{padding:9px 0;border-bottom:1px dotted var(--lev2);vertical-align:top;font-size:16.5px}
+.blok tr:last-child td{border-bottom:0}
+.blok td.min{color:var(--sed);white-space:nowrap;padding-left:10px;text-align:right;font-size:15px}
+.blok td.kc{white-space:nowrap;text-align:right;font-weight:700;padding-left:14px}
+.blok.vyrazny{background:var(--noc);color:#fff;border-color:var(--noc)}
+.blok.vyrazny h3{color:var(--mosaz)}
+.blok.vyrazny td{border-color:rgba(255,255,255,.2);color:#fff}
+.blok.vyrazny td.min{color:var(--lev2)}
+.blok.vyrazny p{color:var(--lev2);font-size:15.5px;margin-top:10px}
+.platnost{margin-top:16px;color:var(--sed);font-size:15px}
+
+/* duo */
+.duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.osoba{background:#fff;border:1px solid var(--linka);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.osoba .ft{aspect-ratio:16/9;max-width:100%;border:2px dashed var(--lev2);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--sed);font-weight:600;font-size:15px;text-align:center;padding:10px;background:var(--levandule)}
+.osoba h3{font-size:28px;color:var(--noc)}
+.osoba a.t{font-weight:700;color:var(--salvej-tx)}
+.osoba ul{margin:0;padding-left:20px;color:var(--sed)}
+.filo{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.filo div{border-left:3px solid var(--mosaz);padding-left:18px}
+.filo h3{font-size:22px;color:var(--noc);margin-bottom:6px}
+.filo p{color:var(--sed)}
+
+/* lůžko */
+.luzko{background:var(--noc2);color:#fff}
+.luzko h2{color:#fff}
+.luzko .uvod p{color:var(--lev2)}
+.luz-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.luz-grid svg{width:100%;height:auto;display:block}
+.luz-body{display:flex;flex-direction:column;gap:16px;color:var(--lev2)}
+.luz-body .cena2{font:400 32px/1.1 var(--display);color:var(--mosaz)}
+
+/* poukazy */
+.poukaz{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.karta-p{aspect-ratio:1.75;max-width:100%;border-radius:18px;background:linear-gradient(135deg,var(--noc),#3A3E70);color:#fff;padding:26px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 40px -20px rgba(35,38,74,.6)}
+.karta-p .nm{font:400 30px/1.1 var(--display)}
+.karta-p .nm span{color:var(--mosaz)}
+.karta-p small{color:var(--lev2);font-size:14px}
+.body-p{display:flex;flex-direction:column;gap:12px}
+.body-p ul{margin:0;padding-left:20px;color:var(--sed)}
+
+/* faq + kontakt */
+.faq details{border-bottom:1px solid var(--linka);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font:400 26px/1 var(--display);color:var(--mosaz-tx)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--sed);margin-top:8px;max-width:46em}
+.kontakt{background:var(--levandule)}
+.kon-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.kk{background:var(--papir);border-radius:20px;padding:26px;border:1px solid var(--linka);display:flex;flex-direction:column;gap:12px}
+.kk h3{font-size:24px;color:var(--noc)}
+.kk .r{display:flex;gap:12px}
+.kk .r svg{width:22px;height:22px;flex:none;color:var(--noc);margin-top:3px}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hod td{padding:7px 0;border-bottom:1px solid var(--linka)}
+.hod td:last-child{text-align:right;font-weight:700}
+footer{background:var(--noc2);color:var(--lev2);font-size:14px}
+footer .wrap{padding-block:26px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--noc);display:none;gap:10px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista a{flex:1;padding:14px 10px;font-size:16px}
+
+@media (max-width:920px){
+  .nav{display:none}
+  .sklad-grid,.cenik-grid,.duo-grid,.filo,.luz-grid,.poukaz,.kon-grid{grid-template-columns:1fr}
+  .telo{max-width:320px;width:100%;margin:0 auto}
+  .top .tel span{display:none}
+  .lista{display:flex}
+  section{padding-block:50px}
+  .hero .wrap{padding-block:36px 44px}
+}
+@media (min-width:921px){body{padding-bottom:0}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Rodinné masážní a relaxační studio (Inspirace zdraví)</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <a class="logo" href="#"><svg viewBox="0 0 40 40" fill="none" stroke="#C9A44C" stroke-width="2"><circle cx="20" cy="20" r="6"/><circle cx="20" cy="20" r="12" opacity=".7"/><circle cx="20" cy="20" r="18" opacity=".4"/></svg><span><b>Inspirace zdraví</b><small>Rodinné masážní studio · Postřelmov</small></span></a>
+    <nav class="nav" aria-label="Menu"><a href="#sklad">Sestavit masáž</a><a href="#cenik">Ceník</a><a href="#luzko">Rezonanční lůžko</a><a href="#poukazy">Poukazy</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="tel" href="tel:+420728899108" aria-label="Zavolat 728 899 108"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>728 899 108</span></a>
+  </div>
+</div>
+
+<main>
+<section class="hero" style="padding:0">
+  <canvas id="vlny" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow">Masáže v Postřelmově · Hana a Tomáš Třetinovi</p>
+    <h1>Dar doteku a <span>chvíle ticha</span></h1>
+    <p class="lead">Klasické masáže od 350 Kč, lávové kameny, horké rýžové měšce, lymfodrenáž, maderoterapie a relaxace v rezonančním lůžku. Vždy na objednání, s parkovištěm 30 m od vchodu.</p>
+    <div class="cta">
+      <a class="btn btn-zl" href="tel:+420728899108">Zavolat 728 899 108</a>
+      <a class="btn btn-line" href="#sklad">Sestavit masáž a cenu</a>
+    </div>
+    <div class="pasek"><span><b>Po–Pá</b> na objednání</span><span>Tichá 484, vchod ze Spojovací</span><span>Dárkové poukazy s platností 12 měsíců</span></div>
+  </div>
+</section>
+
+<section class="sklad" id="sklad">
+  <div class="wrap">
+    <div class="uvod">
+      <p class="eyebrow tm">Sestavte si masáž</p>
+      <h2>Klepněte, co chcete promasírovat</h2>
+      <p>Cenu a délku spočítáme hned podle našeho ceníku platného od 1. 2. 2025. Pak stačí poslat SMS a domluvíme termín.</p>
+    </div>
+    <div class="sklad-grid">
+      <div class="telo">
+        <svg viewBox="0 0 200 400" role="group" aria-label="Části těla">
+          <g fill="#FFFFFF" stroke="#D5D0EA" stroke-width="2">
+            <circle cx="100" cy="40" r="24"/>
+            <path d="M60 80c8-8 72-8 80 0l10 116c1 8-5 12-10 12l-8-80-2 90H70l-2-90-8 80c-5 0-11-4-10-12z"/>
+            <path d="M72 222h56l-4 160c0 6-6 8-12 8l-8-140-8 140c-6 0-12-2-12-8z"/>
+          </g>
+          <rect class="zona" data-c="S" tabindex="0" role="button" aria-label="Šíje" x="74" y="64" width="52" height="24" rx="12"/>
+          <rect class="zona" data-c="Z" tabindex="0" role="button" aria-label="Záda" x="70" y="94" width="60" height="100" rx="16"/>
+          <rect class="zona" data-c="H" tabindex="0" role="button" aria-label="Horní končetiny" x="38" y="84" width="26" height="128" rx="13"/>
+          <rect class="zona" data-c="H" tabindex="-1" aria-hidden="true" x="136" y="84" width="26" height="128" rx="13"/>
+          <rect class="zona" data-c="D" tabindex="0" role="button" aria-label="Dolní končetiny" x="70" y="226" width="60" height="160" rx="20"/>
+        </svg>
+        <p>Šíje · záda · ruce · nohy</p>
+      </div>
+      <div class="panel">
+        <div>
+          <p class="lab">Části těla</p>
+          <div class="opts" role="group" aria-label="Části těla">
+            <button class="opt" data-c="S" id="o-s" type="button">Šíje</button>
+            <button class="opt on" data-c="Z" id="o-z" type="button">Záda</button>
+            <button class="opt" data-c="H" id="o-h" type="button">Horní končetiny</button>
+            <button class="opt" data-c="D" id="o-d" type="button">Dolní končetiny</button>
+          </div>
+        </div>
+        <div>
+          <p class="lab">Způsob</p>
+          <div class="opts" role="group" aria-label="Způsob masáže">
+            <button class="opt on" data-k="klas" id="k-klas" type="button">Klasická masáž</button>
+            <button class="opt" data-k="lava" id="k-lava" type="button">S lávovými kameny</button>
+          </div>
+        </div>
+        <div class="vysl" aria-live="polite">
+          <div><p class="eyebrow tm" id="v-typ">Klasická relaxační a rekondiční</p><h3 id="v-nazev">Záda</h3></div>
+          <p class="cislo" id="v-cena">450 Kč<small>30 min</small></p>
+        </div>
+        <div class="zprava" id="zprava"></div>
+        <div class="akce">
+          <a class="btn btn-noc" id="sms" href="sms:+420728899108">Poslat SMS Haně</a>
+          <button class="btn btn-line2" id="kopir" type="button">Zkopírovat text</button>
+          <span class="pozn">Termín potvrdíme zpět. Tel. 728 899 108 (Hana) nebo 705 338 535 (Tomáš).</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cenik">
+  <div class="wrap">
+    <div class="uvod">
+      <p class="eyebrow tm">Ceník</p>
+      <h2>Všechny ceny předem, bez překvapení</h2>
+    </div>
+    <div class="cenik-grid">
+      <div class="blok">
+        <h3>Klasické relaxační a rekondiční masáže</h3>
+        <table>
+          <tr><td>Šíje</td><td class="min">20 min</td><td class="kc">350 Kč</td></tr>
+          <tr><td>Záda</td><td class="min">30 min</td><td class="kc">450 Kč</td></tr>
+          <tr><td>Horní končetiny</td><td class="min">20 min</td><td class="kc">350 Kč</td></tr>
+          <tr><td>Dolní končetiny</td><td class="min">40 min</td><td class="kc">550 Kč</td></tr>
+          <tr><td>Záda a šíje</td><td class="min">50 min</td><td class="kc">650 Kč</td></tr>
+          <tr><td>Záda a horní končetiny</td><td class="min">50 min</td><td class="kc">650 Kč</td></tr>
+          <tr><td>Záda a dolní končetiny</td><td class="min">70 min</td><td class="kc">900 Kč</td></tr>
+          <tr><td>Záda, šíje, horní končetiny</td><td class="min">70 min</td><td class="kc">900 Kč</td></tr>
+          <tr><td>Záda, šíje a dolní končetiny</td><td class="min">90 min</td><td class="kc">1 150 Kč</td></tr>
+          <tr><td>Celé tělo</td><td class="min">110 min</td><td class="kc">1 450 Kč</td></tr>
+        </table>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div class="blok">
+          <h3>S lávovými kameny</h3>
+          <table>
+            <tr><td>Záda</td><td class="min">45 min</td><td class="kc">650 Kč</td></tr>
+            <tr><td>Záda a šíje</td><td class="min">65 min</td><td class="kc">900 Kč</td></tr>
+            <tr><td>Záda + dolní končetiny</td><td class="min">85 min</td><td class="kc">1 150 Kč</td></tr>
+          </table>
+        </div>
+        <div class="blok">
+          <h3>Relaxační masáže</h3>
+          <table>
+            <tr><td>Breussova masáž zad</td><td class="min">50 min</td><td class="kc">700 Kč</td></tr>
+            <tr><td>Horké rýžové měšce, celé tělo</td><td class="min">80 min</td><td class="kc">1 100 Kč</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="blok">
+        <h3>Lymfodrenáž a maderoterapie</h3>
+        <table>
+          <tr><td>Manuální lymfodrenáž horní nebo dolní části těla</td><td class="min">60 min</td><td class="kc">800 Kč</td></tr>
+          <tr><td>Manuální lymfodrenáž celého těla</td><td class="min">120 min</td><td class="kc">1 550 Kč</td></tr>
+          <tr><td>Balíček 5 ošetření poloviny těla</td><td class="min"></td><td class="kc">3 750 Kč</td></tr>
+          <tr><td>Balíček 5 ošetření celého těla</td><td class="min"></td><td class="kc">7 250 Kč</td></tr>
+          <tr><td>Maderoterapie problémových partií</td><td class="min">60 min</td><td class="kc">800 Kč</td></tr>
+          <tr><td>Maderoterapie, balíček 5 ošetření</td><td class="min"></td><td class="kc">3 750 Kč</td></tr>
+          <tr><td>Kineziotaping, za tejp podle času a materiálu</td><td class="min"></td><td class="kc">150–300 Kč</td></tr>
+        </table>
+      </div>
+      <div class="blok vyrazny">
+        <h3>Vibrační harmonizace hudbou</h3>
+        <table>
+          <tr><td>Relaxace v rezonančním lůžku s hudebními nástroji</td><td class="min">120 min</td><td class="kc">1 550 Kč</td></tr>
+          <tr><td>Královská párová relaxace</td><td class="min">120 min</td><td class="kc">3 100 Kč</td></tr>
+        </table>
+        <p>Párová relaxace: rezonanční lůžko a další nástroje plus 60minutová masáž pro dva.</p>
+      </div>
+    </div>
+    <p class="platnost">Ceník platný od 1. 2. 2025, převzatý z inspiracezdravi.cz.</p>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="uvod">
+      <p class="eyebrow tm">Rodinné studio</p>
+      <h2>Dva maséři, jedna rodina</h2>
+      <p>Vyberte si, ke komu půjdete. Každý z nás má svoje speciality.</p>
+    </div>
+    <div class="duo-grid">
+      <div class="osoba">
+        <div class="ft">Sem přijde Vaše fotka – Hana</div>
+        <h3>Hana Třetinová</h3>
+        <a class="t" href="tel:+420728899108">728 899 108</a>
+        <ul><li>klasická masáž a kineziotaping</li><li>horké měšce a lávové kameny</li><li>manuální lymfodrenáž</li><li>Breussova masáž, maderoterapie</li></ul>
+      </div>
+      <div class="osoba">
+        <div class="ft">Sem přijde Vaše fotka – Tomáš</div>
+        <h3>Tomáš Třetina</h3>
+        <a class="t" href="tel:+420705338535">705 338 535</a>
+        <ul><li>klasická masáž a kineziotaping</li><li>relaxační masáž s lávovými kameny</li><li>manuální lymfodrenáž</li><li>rezonanční lůžko a harmonizace hudbou</li></ul>
+      </div>
+    </div>
+    <div class="filo">
+      <div><h3>Dar doteku</h3><p>Cílený dotek zklidní tělo, uvolní napětí a uleví bolavým místům.</p></div>
+      <div><h3>Cesta energie</h3><p>Rovnováha mezi dáváním a přijímáním, energie, která v těle znovu proudí, a podpora jeho samoléčivých schopností.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="luzko" id="luzko">
+  <div class="wrap luz-grid">
+    <div>
+      <div class="uvod" style="margin-bottom:20px">
+        <p class="eyebrow">Specialita studia</p>
+        <h2>Rezonanční lůžko Samathi bed</h2>
+        <p>Ležíte a hudba z lůžka i z dalších nástrojů prochází celým tělem. Dvě hodiny hluboké relaxace a harmonizace zvukem.</p>
+      </div>
+      <div class="luz-body">
+        <p class="cena2">1 550 Kč · 120 min</p>
+        <p>Pro dva jako Královská párová relaxace s masáží: 3 100 Kč.</p>
+        <div class="cta"><a class="btn btn-zl" href="tel:+420705338535">Objednat u Tomáše</a></div>
+      </div>
+    </div>
+    <svg viewBox="0 0 420 300" aria-hidden="true">
+      <g fill="none" stroke="#C9A44C">
+        <ellipse cx="210" cy="150" rx="200" ry="120" stroke-opacity=".18"/>
+        <ellipse cx="210" cy="150" rx="160" ry="94" stroke-opacity=".3"/>
+        <ellipse cx="210" cy="150" rx="120" ry="68" stroke-opacity=".45"/>
+      </g>
+      <path d="M70 176 Q210 196 350 176 L344 196 Q210 216 76 196 Z" fill="#7D6420"/>
+      <path d="M70 170 Q210 190 350 170 L350 178 Q210 198 70 178 Z" fill="#C9A44C"/>
+      <g stroke="#D5D0EA" stroke-width="1.4" opacity=".8">
+        <line x1="90" y1="182" x2="330" y2="182"/><line x1="90" y1="186" x2="330" y2="186"/><line x1="90" y1="190" x2="330" y2="190"/>
+      </g>
+      <path d="M110 166 c20-14 60-16 90-12 c30 4 80 2 110-4 c10 0 14 6 4 10 c-40 10-170 14-204 6z" fill="#E9E6F3"/>
+      <circle cx="104" cy="158" r="14" fill="#E9E6F3"/>
+      <g fill="none" stroke="#C9A44C" stroke-width="2" stroke-linecap="round">
+        <path d="M200 120 q10 -14 0 -28"/><path d="M220 116 q14 -20 0 -40"/><path d="M240 120 q10 -14 0 -28"/>
+      </g>
+      <path d="M60 236 l300 0" stroke="#3A3E70" stroke-width="2"/>
+    </svg>
+  </div>
+</section>
+
+<section id="poukazy">
+  <div class="wrap poukaz">
+    <div class="karta-p">
+      <small>DÁRKOVÝ POUKAZ</small>
+      <p class="nm">Masáž podle <span>Vašeho výběru</span></p>
+      <small>Rodinné masážní a relaxační studio · Postřelmov · platnost 12 měsíců</small>
+    </div>
+    <div class="body-p">
+      <p class="eyebrow tm">Dárkové poukazy</p>
+      <h2>Dárek, který uleví</h2>
+      <ul>
+        <li>Na částku nebo na masáž podle Vašeho výběru.</li>
+        <li>Platí 12 měsíců od prodeje, po dohodě i déle.</li>
+        <li>Vyzvednete u nás po domluvě, nebo pošleme Českou poštou po platbě předem na účet (poštovné 50 Kč).</li>
+      </ul>
+      <div class="cta"><a class="btn btn-noc" href="tel:+420728899108">Objednat poukaz</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" style="background:#fff">
+  <div class="wrap">
+    <div class="uvod"><p class="eyebrow tm">Časté otázky</p><h2>Než přijdete</h2></div>
+    <details><summary>Musím se objednat předem?</summary><p>Ano, masírujeme vždy na objednání. Zavolejte Haně na 728 899 108 nebo Tomášovi na 705 338 535.</p></details>
+    <details><summary>Kde zaparkuji?</summary><p>Vchod je z ulice Spojovací, označené parkoviště najdete 30 m od budovy.</p></details>
+    <details><summary>Co je maderoterapie?</summary><p>Masáž dřevěnými nástroji na problémové partie. Pro intenzivní péči nabízíme balíček 5 ošetření.<span class="demo">ukázkový text</span></p></details>
+    <details><summary>Kdy masáž raději odložit?</summary><p>Při horečce, nachlazení, akutním zánětu nebo čerstvém zranění. Když si nejste jistí, zeptejte se nás předem.<span class="demo">ukázkový text</span></p></details>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="uvod"><p class="eyebrow tm">Kontakt</p><h2>Jak k nám</h2></div>
+    <div class="kon-grid">
+      <div class="kk">
+        <h3>Rodinné masážní a relaxační studio</h3>
+        <div class="r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div>Tichá 484, 789 69 Postřelmov<br>vchod z ulice Spojovací, parkoviště 30 m od budovy<br><a href="https://mapy.cz/zakladni?q=Tich%C3%A1%20484%20Post%C5%99elmov" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></div></div>
+        <div class="r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+420728899108"><b>728 899 108</b></a> Hana Třetinová<br><a href="tel:+420705338535"><b>705 338 535</b></a> Tomáš Třetina</div></div>
+        <div class="r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><a href="mailto:tretinovah@atlas.cz">tretinovah@atlas.cz</a></div></div>
+        <p style="font-size:15px;color:var(--sed)">IČO 87786249</p>
+      </div>
+      <div class="kk">
+        <h3>Kdy masírujeme</h3>
+        <table class="hod">
+          <tr><td>Pondělí–pátek</td><td>od 9:00, na objednání</td></tr>
+          <tr><td>Sobota, neděle</td><td>zavřeno</td></tr>
+        </table>
+        <p style="font-size:15px;color:var(--sed)">Konec dne podle objednávek. Přesný čas domluvíme po telefonu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Hana Třetinová · Rodinné masážní a relaxační studio, Postřelmov</span><span>Návrh webu: Weby na míru</span></div></footer>
+
+<div class="lista">
+  <a class="btn btn-zl" href="tel:+420728899108">Zavolat</a>
+  <a class="btn btn-line" href="#sklad">Sestavit masáž</a>
+</div>
+
+<script>
+(function(){
+  // ceník od 1. 2. 2025 (inspiracezdravi.cz)
+  var KLAS={"S":[350,20,"Šíje"],"Z":[450,30,"Záda"],"H":[350,20,"Horní končetiny"],"D":[550,40,"Dolní končetiny"],
+    "SZ":[650,50,"Záda a šíje"],"HZ":[650,50,"Záda a horní končetiny"],"DZ":[900,70,"Záda a dolní končetiny"],
+    "HSZ":[900,70,"Záda, šíje, horní končetiny"],"DSZ":[1150,90,"Záda, šíje a dolní končetiny"],"DHSZ":[1450,110,"Celé tělo"]};
+  var LAVA={"Z":[650,45,"Záda s lávovými kameny"],"SZ":[900,65,"Záda a šíje s lávovými kameny"],"DZ":[1150,85,"Záda s lávovými kameny + dolní končetiny"]};
+  var sel={Z:1}, kind="klas";
+  function key(){return Object.keys(sel).filter(function(k){return sel[k]}).sort().join("")}
+  function fmt(n){return n.toLocaleString("cs-CZ").replace(/ /g," ")}
+  var nazvy={S:"šíje",Z:"záda",H:"horní končetiny",D:"dolní končetiny"};
+  function render(){
+    var k=key(), tab=kind==="lava"?LAVA:KLAS, r=tab[k];
+    document.querySelectorAll("[data-c]").forEach(function(e){e.classList.toggle("on",!!sel[e.dataset.c])});
+    document.querySelectorAll("[data-k]").forEach(function(e){e.classList.toggle("on",e.dataset.k===kind)});
+    var typ=document.getElementById("v-typ"), nz=document.getElementById("v-nazev"), c=document.getElementById("v-cena"), t;
+    var vyber=Object.keys(sel).filter(function(x){return sel[x]}).map(function(x){return nazvy[x]}).join(", ");
+    typ.textContent=kind==="lava"?"Klasická masáž s lávovými kameny":"Klasická relaxační a rekondiční";
+    if(!k){nz.textContent="Vyberte část těla";c.innerHTML="";t="";}
+    else if(r){nz.textContent=r[2];c.innerHTML=fmt(r[0])+" Kč<small>"+r[1]+" min</small>";
+      t="Dobrý den, chtěl/a bych se objednat na masáž: "+r[2].toLowerCase()+" ("+r[1]+" min, "+fmt(r[0])+" Kč). Kdy byste měli volno? Děkuji.";}
+    else{nz.textContent=vyber.charAt(0).toUpperCase()+vyber.slice(1);c.innerHTML="<small style='margin:0'>tuto kombinaci domluvíme po telefonu</small>";
+      t="Dobrý den, chtěl/a bych se objednat na "+(kind==="lava"?"masáž s lávovými kameny":"klasickou masáž")+": "+vyber+". Kolik by to stálo a kdy byste měli volno? Děkuji.";}
+    document.getElementById("zprava").textContent=t||"Klepněte na postavu nebo vyberte části těla.";
+    document.getElementById("sms").href="sms:+420728899108"+(t?"?body="+encodeURIComponent(t):"");
+  }
+  function tog(c){sel[c]=!sel[c];render()}
+  document.querySelectorAll(".zona,.opt[data-c]").forEach(function(e){
+    e.addEventListener("click",function(){tog(e.dataset.c)});
+    e.addEventListener("keydown",function(ev){if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();tog(e.dataset.c)}});
+  });
+  document.querySelectorAll("[data-k]").forEach(function(e){e.addEventListener("click",function(){kind=e.dataset.k;render()})});
+  document.getElementById("kopir").onclick=function(){
+    var t=document.getElementById("zprava").textContent,b=this;
+    function ok(){b.textContent="Zkopírováno";setTimeout(function(){b.textContent="Zkopírovat text"},1800)}
+    function s(){var r=document.createRange();r.selectNodeContents(document.getElementById("zprava"));var g=getSelection();g.removeAllRanges();g.addRange(r)}
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,s)}else s();
+  };
+  render();
+  // vlny v hero
+  var cv=document.getElementById("vlny"),cx=cv.getContext("2d"),red=matchMedia("(prefers-reduced-motion: reduce)").matches,t0=0;
+  function size(){cv.width=cv.offsetWidth*devicePixelRatio;cv.height=cv.offsetHeight*devicePixelRatio}
+  function draw(t){
+    var w=cv.width,h=cv.height,ox=w*.82,oy=h*.55;cx.clearRect(0,0,w,h);
+    for(var i=0;i<14;i++){var r=((i*70*devicePixelRatio)+(t/40))%(980*devicePixelRatio);
+      cx.beginPath();cx.arc(ox,oy,r,0,Math.PI*2);cx.strokeStyle="rgba(201,164,76,"+Math.max(0,.5-r/(2000*devicePixelRatio))+")";cx.lineWidth=1.2*devicePixelRatio;cx.stroke();}
+    if(!red) requestAnimationFrame(draw);
+  }
+  size();addEventListener("resize",size);draw(0);
+})();
+</script>
+</body>
+</html>

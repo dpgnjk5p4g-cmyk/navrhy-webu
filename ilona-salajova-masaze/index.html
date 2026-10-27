@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Ilona Salajová – masáže Prostějov</title>
+<meta name="description" content="Masáže a lymfodrenáž v Prostějově – Ilona Salajová, Winklerova 2257/27. Ruční i přístrojová lymfodrenáž, baňkování, rašelinové zábaly, antistresová masáž hlavy. Po–Pá 8–17, víkend dle objednávek. Tel. 777 015 249.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Mulish:wght@400;600;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Masáže Ilona Salajová","telephone":"+420777015249","email":"ilona.pv@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Winklerova 2257/27","postalCode":"796 01","addressLocality":"Prostějov","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"6"},"sameAs":["https://www.facebook.com/pg/Masáže-Ilona-Salajová-524820877715993"]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+/* Layout: tok lymfy – dělený hero (text + proudící linie), mapa úlevy jako postava s klikacími místy, klidné široké plochy */
+:root{
+  --laguna:#1F4E5A; --laguna2:#163B44; --sklo:#9CC9C1; --sklo2:#D6EAE6; --mlha:#F3F7F6;
+  --broskev:#E08A6D; --broskev-tx:#A4502F; --ink:#18292D; --sed:#4A5E62; --bila:#FFFFFF; --linka:#D3E2DF;
+  --display:"Gloock","Georgia","Times New Roman",serif; --body:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mlha);color:var(--ink);font:17px/1.65 var(--body);padding-bottom:78px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,5vw,46px);color:var(--laguna)}
+p{margin:0}
+a{color:inherit}
+.demo{display:inline-block;font:800 10.5px/1 var(--body);letter-spacing:.07em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border:1px solid #E7C66A;border-radius:3px;padding:3px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.navrh{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:8px 16px;line-height:1.4}
+.top{background:var(--bila);border-bottom:1px solid var(--linka);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bila)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.logo{font:400 22px/1 var(--display);color:var(--laguna);text-decoration:none}
+.logo small{display:block;font:600 12px/1.3 var(--body);color:var(--sed);letter-spacing:.04em;margin-top:3px}
+.tel{display:inline-flex;align-items:center;gap:8px;background:var(--laguna);color:#fff;text-decoration:none;font-weight:800;padding:10px 16px;border-radius:999px;white-space:nowrap}
+.tel svg{width:18px;height:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:800 17px/1 var(--body);text-decoration:none;border-radius:999px;padding:16px 24px;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--laguna);color:#fff}
+.btn-call:hover{background:var(--laguna2)}
+.btn-alt{background:transparent;color:var(--laguna);border-color:var(--laguna)}
+.btn:focus-visible,.zona:focus-visible,.chip:focus-visible{outline:3px solid var(--broskev);outline-offset:3px}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--bila) 0%,var(--mlha) 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding-block:44px 52px}
+.eyebrow{font:800 13px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--broskev-tx)}
+.hero h1{font-size:clamp(40px,6.4vw,74px);color:var(--laguna);margin:12px 0 16px}
+.hero h1 em{font-style:normal;color:var(--broskev-tx)}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--sed);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.fakta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-size:15px;color:var(--sed)}
+.fakta b{color:var(--ink)}
+.fakta span{display:inline-flex;align-items:center;gap:7px}
+.fakta svg{width:18px;height:18px;flex:none;color:var(--laguna)}
+.tok{width:100%;max-width:440px;justify-self:center}
+.tok svg{width:100%;height:auto;display:block}
+.tok path.f{stroke-dasharray:14 10;animation:plyn 9s linear infinite}
+@keyframes plyn{to{stroke-dashoffset:-240}}
+@media (prefers-reduced-motion:reduce){.tok path.f{animation:none}}
+
+/* sekce */
+section{padding-block:64px}
+.uvod{display:flex;flex-direction:column;gap:12px;max-width:40em;margin-bottom:32px}
+.uvod p{color:var(--sed);font-size:18px}
+
+/* mapa úlevy */
+.mapa{background:var(--bila)}
+.mapa-grid{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:40px;align-items:start}
+.postava{background:var(--mlha);border-radius:28px;padding:20px;position:relative}
+.postava svg{width:100%;height:auto;display:block}
+.zona{cursor:pointer;fill:var(--sklo);fill-opacity:.0;stroke:var(--laguna);stroke-width:2;stroke-dasharray:5 5;transition:fill-opacity .2s}
+.zona:hover{fill-opacity:.35}
+.zona.on{fill:var(--broskev);fill-opacity:.55;stroke:var(--broskev-tx);stroke-dasharray:none}
+.postava .popis{font:600 13px/1.4 var(--body);color:var(--sed);text-align:center;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{font:700 15px/1 var(--body);background:var(--mlha);color:var(--laguna);border:1.5px solid var(--linka);border-radius:999px;padding:11px 16px;cursor:pointer}
+.chip.on{background:var(--laguna);color:#fff;border-color:var(--laguna)}
+.doporuceni{border:1px solid var(--linka);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:14px;background:var(--mlha)}
+.doporuceni h3{font-size:28px;color:var(--laguna)}
+.doporuceni .proc{color:var(--sed)}
+.dny{display:flex;flex-wrap:wrap;gap:8px}
+.dny label{font-weight:700;font-size:14px}
+.den{font:700 14px/1.2 var(--body);background:var(--bila);border:1.5px solid var(--linka);border-radius:12px;padding:9px 12px;cursor:pointer;color:var(--ink);text-align:center;min-width:64px}
+.den small{display:block;font-weight:600;color:var(--sed);font-size:12px}
+.den.on{border-color:var(--broskev-tx);background:#FBE9E2}
+.zprava{background:var(--bila);border:1px dashed var(--sklo);border-radius:14px;padding:14px;font-size:15px;color:var(--ink);white-space:pre-wrap;min-height:4em}
+.akce{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.akce .pozn{font-size:13px;color:var(--sed)}
+
+/* služby */
+.sluzby-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--linka);border:1px solid var(--linka);border-radius:22px;overflow:hidden}
+.sl{background:var(--bila);padding:26px 24px;display:flex;flex-direction:column;gap:10px}
+.sl svg{width:44px;height:44px;color:var(--laguna)}
+.sl h3{font-size:24px;color:var(--ink)}
+.sl p{color:var(--sed);font-size:16px}
+.cena{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--sklo2);border-radius:18px;padding:18px 22px}
+.cena p{font-weight:600}
+
+/* důvěra */
+.duvera{background:var(--laguna);color:#fff}
+.duvera h2{color:#fff}
+.duvera .uvod p{color:var(--sklo2)}
+.duv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.duv{border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.duv .velke{font:400 46px/1 var(--display);color:#fff}
+.duv p{color:var(--sklo2);font-size:16px}
+.duv a{color:#fff;font-weight:700}
+.foto{margin-top:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.fotomisto{aspect-ratio:4/3;max-width:100%;border:2px dashed rgba(255,255,255,.4);border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--sklo2);font-weight:700;font-size:15px;padding:12px}
+
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:k;list-style:none;padding:0;margin:0}
+.kroky li{background:var(--bila);border-radius:20px;padding:24px;border:1px solid var(--linka);display:flex;flex-direction:column;gap:8px}
+.kroky li::before{counter-increment:k;content:counter(k);font:400 34px/1 var(--display);color:var(--broskev-tx)}
+.kroky h3{font-size:22px}
+.kroky p{color:var(--sed);font-size:16px}
+
+/* faq */
+.faq{background:var(--bila)}
+.faq details{border-bottom:1px solid var(--linka);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:800;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font:400 26px/1 var(--display);color:var(--broskev-tx)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--sed);margin-top:10px;max-width:46em}
+
+/* kontakt */
+.kontakt-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.karta{background:var(--bila);border-radius:22px;border:1px solid var(--linka);padding:26px;display:flex;flex-direction:column;gap:14px}
+.karta h3{font-size:24px;color:var(--laguna)}
+.radek{display:flex;gap:12px;align-items:flex-start}
+.radek svg{width:22px;height:22px;flex:none;color:var(--laguna);margin-top:3px}
+.hodiny{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hodiny td{padding:8px 0;border-bottom:1px solid var(--linka)}
+.hodiny td:last-child{text-align:right;font-weight:700}
+.hodiny tr.dnes td{color:var(--broskev-tx)}
+footer{background:var(--ink);color:#C9D6D4;font-size:14px}
+footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{color:#fff}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bila);border-top:1px solid var(--linka);display:none;gap:10px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista a{flex:1;padding:14px 10px;font-size:16px}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:28px 40px}
+  .tok{max-width:320px;order:-1;display:none}
+  .mapa-grid{grid-template-columns:1fr}
+  .postava{max-width:340px;margin:0 auto;width:100%}
+  .sluzby-grid,.duv-grid,.kroky,.foto{grid-template-columns:1fr}
+  .fotomisto{aspect-ratio:16/7}
+  .kontakt-grid{grid-template-columns:1fr}
+  .top .tel span{display:none}
+  .lista{display:flex}
+  section{padding-block:48px}
+}
+@media (min-width:901px){body{padding-bottom:0}}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Ilona Salajová – masáže</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <a class="logo" href="#">Ilona Salajová<small>Masáže a lymfodrenáž · Prostějov</small></a>
+    <a class="tel" href="tel:+420777015249" aria-label="Zavolat 777 015 249"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>777 015 249</span></a>
+  </div>
+</div>
+
+<main>
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Masáže v Prostějově · Winklerova 27</p>
+      <h1>Lehké nohy, uvolněná záda, <em>klidná hlava.</em></h1>
+      <p class="lead">Ruční i přístrojová lymfodrenáž, baňkování, rašelinové zábaly a antistresová masáž hlavy. Ve všední dny od 8 do 17, o víkendu podle domluvy.</p>
+      <div class="cta">
+        <a class="btn btn-call" href="tel:+420777015249">Zavolat 777 015 249</a>
+        <a class="btn btn-alt" href="#mapa">Vybrat masáž</a>
+      </div>
+      <div class="fakta">
+        <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></svg><b>5,0</b> ze 6 hodnocení na Firmy.cz</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Po–Pá <b>8:00–17:00</b></span>
+      </div>
+    </div>
+    <div class="tok" aria-hidden="true">
+      <svg viewBox="0 0 400 440" fill="none">
+        <circle cx="200" cy="220" r="190" fill="#D6EAE6"/>
+        <circle cx="200" cy="220" r="130" fill="#FFFFFF" opacity=".55"/>
+        <path class="f" d="M70 400 C120 300 90 240 160 190 S250 120 230 40" stroke="#1F4E5A" stroke-width="5" stroke-linecap="round"/>
+        <path class="f" d="M140 420 C170 330 170 270 210 230 S300 170 300 70" stroke="#9CC9C1" stroke-width="7" stroke-linecap="round"/>
+        <path class="f" d="M230 420 C240 350 260 300 290 260 S350 200 340 120" stroke="#E08A6D" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="160" cy="190" r="10" fill="#1F4E5A"/>
+        <circle cx="210" cy="230" r="12" fill="#9CC9C1"/>
+        <circle cx="290" cy="260" r="9" fill="#E08A6D"/>
+        <circle cx="230" cy="40" r="6" fill="#1F4E5A"/>
+        <circle cx="300" cy="70" r="7" fill="#9CC9C1"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="mapa" id="mapa">
+  <div class="wrap">
+    <div class="uvod">
+      <p class="eyebrow">Mapa úlevy</p>
+      <h2>Ukažte, kde Vás to trápí</h2>
+      <p>Klepněte na místo na postavě nebo vyberte potíž. Doporučíme ošetření z naší nabídky a připravíme zprávu k objednání.</p>
+    </div>
+    <div class="mapa-grid">
+      <div class="postava">
+        <svg viewBox="0 0 200 400" role="group" aria-label="Postava s místy k výběru">
+          <g fill="#FFFFFF" stroke="#9CC9C1" stroke-width="2">
+            <circle cx="100" cy="42" r="26"/>
+            <path d="M88 66h24v14H88z"/>
+            <path d="M58 82c10-6 74-6 84 0l8 110c1 8-4 12-10 12l-6-74-4 92H70l-4-92-6 74c-6 0-11-4-10-12z"/>
+            <path d="M72 222h56l-4 160c0 6-6 8-12 8l-8-140-8 140c-6 0-12-2-12-8z"/>
+          </g>
+          <ellipse class="zona" data-z="hlava" tabindex="0" role="button" aria-label="Hlava – stres, napětí" cx="100" cy="42" rx="30" ry="30"/>
+          <rect class="zona" data-z="sije" tabindex="0" role="button" aria-label="Šíje a ramena" x="62" y="64" width="76" height="30" rx="14"/>
+          <rect class="zona" data-z="zada" tabindex="0" role="button" aria-label="Záda" x="66" y="98" width="68" height="90" rx="18"/>
+          <rect class="zona" data-z="nohy" tabindex="0" role="button" aria-label="Nohy – otoky, těžké nohy" x="70" y="230" width="60" height="150" rx="22"/>
+        </svg>
+        <p class="popis">Klepněte na hlavu, šíji, záda nebo nohy</p>
+      </div>
+      <div>
+        <div class="chips" role="group" aria-label="Potíže">
+          <button class="chip" data-z="nohy" id="ch-nohy">Těžké, oteklé nohy</button>
+          <button class="chip" data-z="zada" id="ch-zada">Ztuhlá záda</button>
+          <button class="chip" data-z="sije" id="ch-sije">Šíje od počítače</button>
+          <button class="chip" data-z="hlava" id="ch-hlava">Stres a napětí</button>
+          <button class="chip" data-z="telo" id="ch-telo">Únava, potřebuji regenerovat</button>
+        </div>
+        <div class="doporuceni" aria-live="polite">
+          <p class="eyebrow" id="d-mis">Nohy</p>
+          <h3 id="d-nazev">Lymfodrenáž</h3>
+          <p class="proc" id="d-proc"></p>
+          <div>
+            <p style="font-weight:800;font-size:15px;margin-bottom:8px">Kdy se Vám to hodí?</p>
+            <div class="dny" id="dny"></div>
+          </div>
+          <div class="zprava" id="zprava"></div>
+          <div class="akce">
+            <a class="btn btn-call" id="sms" href="sms:+420777015249">Poslat SMS</a>
+            <button class="btn btn-alt" id="kopir" type="button">Zkopírovat text</button>
+            <span class="pozn">SMS jde na 777 015 249. Termín Vám potvrdíme.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="uvod">
+      <p class="eyebrow">Co nabízím</p>
+      <h2>Masáže, které Vám uleví</h2>
+      <p>Při vhodných masérských hmatech se zbavíte únavy, tělo regeneruje a posiluje.</p>
+    </div>
+    <div class="sluzby-grid">
+      <div class="sl"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 34c6-10 10-10 16 0s10 10 16 0"/><path d="M8 22c6-10 10-10 16 0s10 10 16 0"/></svg><h3>Ruční lymfodrenáž</h3><p>Jemná technika, která pomáhá od otoků a pocitu těžkých nohou.</p></div>
+      <div class="sl"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="10" y="8" width="28" height="32" rx="6"/><path d="M18 18h12M18 26h12M18 34h6"/></svg><h3>Přístrojová lymfodrenáž</h3><p>Manžety s postupným tlakem. Podle Firmy.cz 8. místo v oboru lymfodrenáž v ČR.</p></div>
+      <div class="sl"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 30c0-8 4-14 10-14s10 6 10 14"/><path d="M10 30h28v6H10z"/></svg><h3>Baňkování</h3><p>Podtlakové baňky na ztuhlá záda a šíji.</p></div>
+      <div class="sl"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 28c8-4 24-4 32 0v8H8z"/><path d="M16 22c0-4 2-6 4-8M24 22c0-4 2-6 4-8M32 22c0-4 2-6 4-8"/></svg><h3>Rašelinové zábaly</h3><p>Teplo rašeliny prohřeje a uvolní svaly.</p></div>
+      <div class="sl"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="20" r="11"/><path d="M14 40c2-6 6-9 10-9s8 3 10 9"/><path d="M19 18c2 2 8 2 10 0"/></svg><h3>Antistresová masáž hlavy</h3><p>Když hlava nepřestává pracovat ani večer.</p></div>
+      <div class="sl"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 36c4-14 8-22 12-22s8 8 12 22"/><path d="M8 36h32"/></svg><h3>Rekondiční a regenerační masáže</h3><p>Pro záda, šíji i celé tělo, po práci nebo po sportu.</p></div>
+    </div>
+    <div class="cena">
+      <p>Ceny ráda řeknu předem do telefonu.<span class="demo">ukázkový text</span></p>
+      <a class="btn btn-call" href="tel:+420777015249">Zavolat a zeptat se</a>
+    </div>
+  </div>
+</section>
+
+<section class="duvera">
+  <div class="wrap">
+    <div class="uvod">
+      <p class="eyebrow" style="color:var(--sklo)">Proč ke mně</p>
+      <h2>Ověřeno na Firmy.cz</h2>
+      <p>Hodnocení i umístění jsou z katalogu Firmy.cz.</p>
+    </div>
+    <div class="duv-grid">
+      <div class="duv"><span class="velke">5,0</span><p>Hodnocení „Fantastické“ ze 6 recenzí. <a href="https://www.firmy.cz/detail/2657740-ilona-salajova-prostejov.html" target="_blank" rel="noopener">Přečíst na Firmy.cz</a></p></div>
+      <div class="duv"><span class="velke">8.</span><p>místo v kategorii Manuální a přístrojová lymfodrenáž v celé ČR (Firmy.cz, říjen 2026).</p></div>
+      <div class="duv"><span class="velke">IČO</span><p>87639505 · Ilona Salajová, Winklerova 2257/27, Prostějov.</p></div>
+    </div>
+    <div class="foto">
+      <div class="fotomisto">Sem přijde Vaše fotka – masérna</div>
+      <div class="fotomisto">Sem přijde Vaše fotka – přístroj na lymfodrenáž</div>
+      <div class="fotomisto">Sem přijde Vaše fotka – Vy</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="uvod">
+      <p class="eyebrow">Jak to probíhá</p>
+      <h2>Od telefonu k úlevě</h2>
+    </div>
+    <ol class="kroky">
+      <li><h3>Zavoláte nebo napíšete</h3><p>Řeknete, co Vás trápí, a domluvíme den. Ve všední dny 8–17, o víkendu podle domluvy.</p></li>
+      <li><h3>Krátce si promluvíme</h3><p>Před masáží se zeptám na zdraví a vybereme, co Vám pomůže nejvíc.<span class="demo">ukázkový text</span></p></li>
+      <li><h3>Odcházíte lehčí</h3><p>Po ošetření dostanete tip, jak úlevu udržet doma.<span class="demo">ukázkový text</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="uvod"><p class="eyebrow">Časté otázky</p><h2>Na co se lidé ptají</h2></div>
+    <details><summary>Jaký je rozdíl mezi ruční a přístrojovou lymfodrenáží?</summary><p>Ruční lymfodrenáž dělají ruce maséra, přístrojová využívá manžety, které postupně stlačují nohy nebo paže. Obojí podporuje odtok lymfy. Co je lepší pro Vás, poradím do telefonu.<span class="demo">ukázkový text</span></p></details>
+    <details><summary>Kdy se masáž nedoporučuje?</summary><p>Obvykle při horečce, akutním zánětu, infekci, čerstvém zranění nebo u některých onemocnění srdce a žil. Pokud si nejste jistí, zeptejte se lékaře nebo mě předem.<span class="demo">ukázkový text</span></p></details>
+    <details><summary>Dá se přijít o víkendu?</summary><p>Ano, o víkendu masíruji podle objednávek. Stačí se předem domluvit na čísle 777 015 249.</p></details>
+    <details><summary>Co si mám vzít s sebou?</summary><p>Nic zvláštního, stačí pohodlné oblečení. Po masáži si dopřejte chvíli klidu a dost vody.<span class="demo">ukázkový text</span></p></details>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="uvod"><p class="eyebrow">Kontakt</p><h2>Kde mě najdete</h2></div>
+    <div class="kontakt-grid">
+      <div class="karta">
+        <h3>Masáže Ilona Salajová</h3>
+        <div class="radek"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div>Winklerova 2257/27<br>796 01 Prostějov<br><a href="https://mapy.cz/zakladni?q=Winklerova%202257%2F27%20Prost%C4%9Bjov" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></div></div>
+        <div class="radek"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+420777015249"><b>777 015 249</b></a></div></div>
+        <div class="radek"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><a href="mailto:ilona.pv@seznam.cz">ilona.pv@seznam.cz</a></div></div>
+        <div class="radek"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-3a4 4 0 0 0-4 4v3H6v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg><div><a href="https://www.facebook.com/pg/Masáže-Ilona-Salajová-524820877715993" target="_blank" rel="noopener">Facebook</a></div></div>
+      </div>
+      <div class="karta">
+        <h3>Otevírací doba</h3>
+        <table class="hodiny" id="hodiny">
+          <tr data-d="1"><td>Pondělí</td><td>8:00–17:00</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>8:00–17:00</td></tr>
+          <tr data-d="3"><td>Středa</td><td>8:00–17:00</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>8:00–17:00</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>8:00–17:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>dle objednávek</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>dle objednávek</td></tr>
+        </table>
+        <p style="color:var(--sed);font-size:15px">Ve svátky se doba může lišit, raději zavolejte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Ilona Salajová · masáže Prostějov · IČO 87639505</span><span>Návrh webu: Weby na míru</span></div></footer>
+
+<div class="lista">
+  <a class="btn btn-call" href="tel:+420777015249">Zavolat</a>
+  <a class="btn btn-alt" href="#mapa" style="background:#fff">Objednat</a>
+</div>
+
+<script>
+(function(){
+  var D={
+    nohy:{mis:"Nohy",n:"Lymfodrenáž ruční nebo přístrojová",p:"Na těžké a oteklé nohy je nejčastější volbou lymfodrenáž. Přístrojovou i ruční dělám přímo v Prostějově.",t:"lymfodrenáž nohou"},
+    zada:{mis:"Záda",n:"Masáž zad a baňkování",p:"Ztuhlá záda uvolní rekondiční masáž, na zatvrdlé svaly pomáhá baňkování nebo prohřátí rašelinovým zábalem.",t:"masáž zad (případně s baňkováním)"},
+    sije:{mis:"Šíje a ramena",n:"Masáž šíje s rašelinovým zábalem",p:"Šíje od počítače potřebuje prohřát a povolit. Teplý rašelinový zábal a masáž šíje a ramen.",t:"masáž šíje a ramen"},
+    hlava:{mis:"Hlava",n:"Antistresová masáž hlavy",p:"Když nemůžete vypnout. Klidná masáž hlavy, po které se lépe usíná.",t:"antistresovou masáž hlavy"},
+    telo:{mis:"Celé tělo",n:"Regenerační masáž",p:"Na únavu a vyčerpání je tu regenerační masáž celého těla, po které organismus znovu nabere sílu.",t:"regenerační masáž"}
+  };
+  var svatky=["1-1","5-1","5-8","7-5","7-6","9-28","10-28","11-17","12-24","12-25","12-26"];
+  var dnyN=["Ne","Po","Út","St","Čt","Pá","So"];
+  var cur="nohy", den=null, list=[];
+  var d=new Date(); d.setHours(12,0,0,0);
+  for(var i=1;list.length<6 && i<20;i++){
+    var x=new Date(d.getTime()+i*864e5), w=x.getDay(), k=(x.getMonth()+1)+"-"+x.getDate();
+    if(w===0||w===6||svatky.indexOf(k)>-1) continue;
+    list.push(x);
+  }
+  var wrap=document.getElementById("dny");
+  list.forEach(function(x,i){
+    var b=document.createElement("button"); b.type="button"; b.className="den"; b.id="den-"+i;
+    b.innerHTML=dnyN[x.getDay()]+"<small>"+x.getDate()+". "+(x.getMonth()+1)+".</small>";
+    b.onclick=function(){den=(den===i?null:i); render();};
+    wrap.appendChild(b);
+  });
+  var vik=document.createElement("button"); vik.type="button"; vik.className="den"; vik.id="den-vikend";
+  vik.innerHTML="Víkend<small>dle domluvy</small>"; vik.onclick=function(){den=(den==="v"?null:"v"); render();}; wrap.appendChild(vik);
+  function text(){
+    var s=D[cur], t="Dobrý den, chtěl/a bych se objednat na "+s.t+".";
+    if(den==="v") t+=" Hodil by se mi víkend, šlo by to?";
+    else if(den!==null){var x=list[den]; t+=" Hodí se mi "+["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"][x.getDay()]+" "+x.getDate()+". "+(x.getMonth()+1)+".";}
+    else t+=" Kdy byste měla volno?";
+    return t+" Děkuji.";
+  }
+  function render(){
+    var s=D[cur];
+    document.getElementById("d-mis").textContent=s.mis;
+    document.getElementById("d-nazev").textContent=s.n;
+    document.getElementById("d-proc").textContent=s.p;
+    document.querySelectorAll(".zona").forEach(function(z){z.classList.toggle("on",z.dataset.z===cur)});
+    document.querySelectorAll(".chip").forEach(function(z){z.classList.toggle("on",z.dataset.z===cur)});
+    document.querySelectorAll(".den").forEach(function(b,i){b.classList.toggle("on",(b.id==="den-vikend"&&den==="v")||b.id==="den-"+den)});
+    var t=text(); document.getElementById("zprava").textContent=t;
+    document.getElementById("sms").href="sms:+420777015249?body="+encodeURIComponent(t);
+  }
+  function pick(z){cur=z; render();}
+  document.querySelectorAll(".zona,.chip").forEach(function(el){
+    el.addEventListener("click",function(){pick(el.dataset.z)});
+    el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();pick(el.dataset.z)}});
+  });
+  document.getElementById("kopir").onclick=function(){
+    var t=text(), b=this;
+    function ok(){b.textContent="Zkopírováno";setTimeout(function(){b.textContent="Zkopírovat text"},1800)}
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){sel()})}else sel();
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById("zprava"));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+  };
+  var dn=new Date().getDay(); var tr=document.querySelector('#hodiny tr[data-d="'+dn+'"]'); if(tr) tr.classList.add("dnes");
+  render();
+})();
+</script>
+</body>
+</html>
