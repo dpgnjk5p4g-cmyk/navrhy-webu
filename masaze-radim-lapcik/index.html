@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Masáže Radim Lapčík</title>
+<meta name="description" content="Masáže Staré Město u Uherského Hradiště – Radim Lapčík. Klasická, sportovní a rekondiční masáž, lymfomasáž, TUINA, Dornova metoda, Breussova masáž. Út–Čt 15–19, Po a Pá výjezdy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Masáže Radim Lapčík","telephone":"+420777586836","email":"radimlapcik@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Hradišťská 1955","postalCode":"686 03","addressLocality":"Staré Město","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"15:00","closes":"19:00"}],"sameAs":["https://www.facebook.com/people/Masáže-Radim-Lapčík/61550933273105"]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Typografický hero s tlačítky; výrazný prvek: páteř s klikacími úseky → orientační doporučení + SMS */
+:root{
+  --jedle:#1D3B34; --cihla:#B5532F; --kost:#F2EEE6; --uhel:#17191A; --mlha:#DCD6CB; --bila:#FFFDF9;
+  --bg:var(--kost); --fg:var(--uhel); --muted:#55594f; --card:var(--bila); --line:#d4cdbf; --accent:var(--cihla); --deep:var(--jedle); --ondeep:#F2EEE6; --tag:#efe2d6;
+  --f-display:"Bitter",Georgia,"Times New Roman",serif; --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121615;--fg:#ECE7DD;--muted:#a7aba2;--card:#1b2120;--line:#2f3836;--accent:#E07650;--deep:#0f2620;--ondeep:#ECE7DD;--tag:#3a2a22;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121615;--fg:#ECE7DD;--muted:#a7aba2;--card:#1b2120;--line:#2f3836;--accent:#E07650;--deep:#0f2620;--ondeep:#ECE7DD;--tag:#3a2a22;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--f-body);margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);line-height:1.12;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+a{color:inherit}
+.navrh{background:var(--uhel);color:#F2EEE6;font-size:.85rem;text-align:center;padding-block:8px}
+.navrh .wrap{display:block}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.logo{font-family:var(--f-display);font-weight:800;font-size:1.1rem;letter-spacing:.01em}
+.logo small{display:block;font:500 .72rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:6px;padding:13px 20px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:700 1rem var(--f-body)}
+.btn-call{background:var(--accent);color:#fff}
+.btn-out{border-color:currentColor;background:transparent;color:var(--fg)}
+.btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.top .btn{padding:9px 14px;font-size:.92rem}
+/* hero */
+.hero{padding-block:28px 40px}
+.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.hero h1{font-size:clamp(2.6rem,9vw,5.6rem);font-weight:800;letter-spacing:-.01em;margin-top:10px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{max-width:38ch;font-size:1.12rem;margin-top:16px}
+.cas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.cas span{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:.92rem;font-variant-numeric:tabular-nums}
+.cas b{font-family:var(--f-display)}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.techniky{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--f-display);font-weight:500;color:var(--muted)}
+section{padding-block:56px}
+.sec-head{display:grid;gap:10px;max-width:60ch;margin-bottom:28px}
+.sec-head p{color:var(--muted)}
+/* páteř */
+.pater{background:var(--deep);color:var(--ondeep)}
+.pater .sec-head p{color:#c9d3cd}
+.pgrid{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:32px;align-items:start}
+.spine svg{width:100%;max-width:240px;height:auto;display:block;margin:0 auto}
+.seg{cursor:pointer}
+.seg .hit{fill:transparent}
+.seg .v{fill:#3d6157;stroke:#8fb0a5;stroke-width:1;transition:fill .2s}
+.seg text{fill:#c9d3cd;font:600 11px var(--f-body)}
+.seg:hover .v,.seg.on .v{fill:var(--cihla);stroke:#f6cdb8}
+.seg.on text{fill:#fff}
+.seg:focus-visible .hit{stroke:#fff;stroke-width:2}.seg:focus{outline:none}
+.oblasti{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.oblasti button{background:transparent;color:var(--ondeep);border:1.5px solid #6f8f84;border-radius:999px;padding:8px 14px;font:600 .92rem var(--f-body);cursor:pointer}
+.oblasti button[aria-pressed="true"]{background:var(--cihla);border-color:var(--cihla);color:#fff}
+.doporuc{background:#123029;border:1px solid #2f5248;border-radius:8px;padding:20px;display:grid;gap:14px}
+.doporuc h3{color:#fff}
+.doporuc ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.stitek{display:inline-block;font:600 .7rem var(--f-body);letter-spacing:.06em;text-transform:uppercase;background:var(--tag);color:var(--fg);border-radius:4px;padding:2px 7px;vertical-align:middle}
+.pater .stitek{background:#3a4a44;color:#e8efe9}
+.den{display:flex;flex-wrap:wrap;gap:8px}
+.den button{background:#1d3b34;color:var(--ondeep);border:1.5px solid #4c6c62;border-radius:6px;padding:8px 10px;font:600 .85rem var(--f-body);cursor:pointer;min-width:84px;text-align:left;line-height:1.25}
+.den button small{display:block;font-weight:500;color:#a9bcb4;font-size:.74rem}
+.den button[aria-pressed="true"]{background:#F2EEE6;color:#17191A}
+.den button[aria-pressed="true"] small{color:#55594f}
+.den button:disabled{opacity:.45;cursor:not-allowed;background:repeating-linear-gradient(45deg,#1d3b34 0 6px,#16302a 6px 12px)}
+.smsbox{background:#F2EEE6;color:#17191A;border-radius:6px;padding:12px 14px;font-size:.95rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.sl{background:var(--card);padding:20px;display:grid;gap:8px;align-content:start}
+.sl p{color:var(--muted);font-size:.95rem}
+.cena{margin-top:18px;color:var(--muted)}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:k}
+.krok{border-top:3px solid var(--accent);padding-top:14px;display:grid;gap:6px}
+.krok::before{counter-increment:k;content:counter(k);font:800 2rem var(--f-display);color:var(--accent)}
+/* výjezd + foto */
+.dve{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;display:grid;gap:10px;align-content:start}
+.foto{border:2px dashed var(--line);border-radius:8px;min-height:220px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(127,127,127,.06) 14px 28px)}
+/* důvěra */
+.duvera{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.duvera div{border-left:3px solid var(--deep);padding-left:14px}
+.duvera b{display:block;font-family:var(--f-display);font-size:1.05rem}
+/* faq */
+details{border-bottom:1px solid var(--line);padding-block:14px}
+summary{cursor:pointer;font-weight:700;font-family:var(--f-display);font-size:1.05rem}
+details p{margin-top:8px;color:var(--muted);max-width:65ch}
+/* kontakt */
+.kontakt{background:var(--card);border-top:1px solid var(--line)}
+.kgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hod td{padding:7px 0;border-bottom:1px solid var(--line)}
+.hod td:last-child{text-align:right}
+.mapa{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.mapa svg{display:block;width:100%;height:auto}
+footer{padding-block:28px 100px;color:var(--muted);font-size:.85rem}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:10px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:var(--bg);border-top:1px solid var(--line)}
+.sticky .btn{flex:1}
+@media (max-width:760px){
+  .pgrid,.dve,.kgrid{grid-template-columns:1fr}
+  .kroky{grid-template-columns:1fr}
+  .sticky{display:flex}
+  .top .btn{display:none}
+  .spine svg{max-width:200px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="navrh"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Masáže Radim Lapčík</div></div>
+
+<div role="banner" class="wrap top">
+  <div class="logo">Radim Lapčík<small>Masáže · Staré Město</small></div>
+  <a class="btn btn-call" href="tel:+420777586836">Zavolat 777 586 836</a>
+</div>
+
+<main>
+<div class="wrap hero">
+  <div class="kicker">Masér ve Starém Městě u Uherského Hradiště</div>
+  <h1>Záda, šíje, páteř.<br><em>Po práci</em> u mě.</h1>
+  <p class="lead">Klasická, sportovní i rekondiční masáž, Dornova metoda, Breussova masáž a čínská TUINA. Termíny odpoledne, kdy už máte po směně.</p>
+  <div class="cas">
+    <span><b>Út–Čt</b> 15:00–19:00 ve studiu</span>
+    <span><b>Po a Pá</b> výjezdní masáže</span>
+    <span><b>So</b> po telefonu</span>
+  </div>
+  <div class="akce">
+    <a class="btn btn-call" href="tel:+420777586836">Zavolat a objednat</a>
+    <a class="btn btn-out" href="#pater">Kde Vás to drží?</a>
+  </div>
+  <div class="techniky"><span>Klasická</span><span>Sportovní</span><span>Rekondiční</span><span>Lymfomasáž</span><span>TUINA</span><span>Dorn</span><span>Breuss</span></div>
+</div>
+
+<section class="pater" id="pater">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Kde Vás to drží?</h2>
+      <p>Klepněte na úsek páteře nebo na potíž. Ukážu, které z mých technik se k tomu obvykle hodí, a připravím zprávu s termínem.</p>
+    </div>
+    <div class="pgrid">
+      <div class="spine">
+        <svg viewBox="0 0 200 440" role="group" aria-label="Páteř – vyberte úsek">
+          <ellipse cx="100" cy="36" rx="30" ry="28" fill="none" stroke="#6f8f84" stroke-width="1.5"/>
+          <path d="M44 122 Q100 100 156 122" stroke="#6f8f84" stroke-width="2.5" fill="none"/>
+          <path d="M52 300 Q100 284 148 300 L156 340 Q100 356 44 340 Z" fill="none" stroke="#6f8f84" stroke-width="1.5"/>
+          <g class="seg" data-k="krk" tabindex="0" role="button" aria-label="Krční páteř a šíje"><rect class="hit" x="60" y="66" width="80" height="46"/><rect class="v" x="89.0" y="70.0" width="22.0" height="4.5" rx="3"/><rect class="v" x="88.5" y="76.1" width="23.0" height="4.5" rx="3"/><rect class="v" x="88.0" y="82.2" width="24.0" height="4.5" rx="3"/><rect class="v" x="87.5" y="88.3" width="25.0" height="4.5" rx="3"/><rect class="v" x="87.0" y="94.4" width="26.0" height="4.5" rx="3"/><rect class="v" x="86.5" y="100.5" width="27.0" height="4.5" rx="3"/><rect class="v" x="86.0" y="106.6" width="28.0" height="4.5" rx="3"/><text x="132" y="96">šíje</text></g>
+          <g class="seg" data-k="hrudni" tabindex="0" role="button" aria-label="Hrudní páteř a lopatky"><rect class="hit" x="60" y="114" width="80" height="114"/><rect class="v" x="85.0" y="118.0" width="30.0" height="7.5" rx="3"/><rect class="v" x="84.5" y="127.1" width="30.9" height="7.5" rx="3"/><rect class="v" x="84.1" y="136.2" width="31.8" height="7.5" rx="3"/><rect class="v" x="83.6" y="145.3" width="32.7" height="7.5" rx="3"/><rect class="v" x="83.2" y="154.4" width="33.6" height="7.5" rx="3"/><rect class="v" x="82.7" y="163.5" width="34.5" height="7.5" rx="3"/><rect class="v" x="82.3" y="172.6" width="35.5" height="7.5" rx="3"/><rect class="v" x="81.8" y="181.7" width="36.4" height="7.5" rx="3"/><rect class="v" x="81.4" y="190.8" width="37.3" height="7.5" rx="3"/><rect class="v" x="80.9" y="199.9" width="38.2" height="7.5" rx="3"/><rect class="v" x="80.5" y="209.0" width="39.1" height="7.5" rx="3"/><rect class="v" x="80.0" y="218.1" width="40.0" height="7.5" rx="3"/><text x="132" y="176">lopatky</text></g>
+          <g class="seg" data-k="bedra" tabindex="0" role="button" aria-label="Bederní páteř"><rect class="hit" x="60" y="228" width="80" height="70"/><rect class="v" x="78.0" y="232.0" width="44.0" height="11" rx="3"/><rect class="v" x="77.2" y="245.5" width="45.5" height="11" rx="3"/><rect class="v" x="76.5" y="259.0" width="47.0" height="11" rx="3"/><rect class="v" x="75.8" y="272.5" width="48.5" height="11" rx="3"/><rect class="v" x="75.0" y="286.0" width="50.0" height="11" rx="3"/><text x="134" y="266">bedra</text></g>
+          <g class="seg" data-k="krizi" tabindex="0" role="button" aria-label="Kříž a pánev"><rect class="hit" x="60" y="298" width="80" height="50"/><path class="v" d="M80 300 L120 300 L106 340 L94 340 Z"/><text x="16" y="326">kříž</text></g>
+          <g class="seg" data-k="nohy" tabindex="0" role="button" aria-label="Nohy a otoky"><rect class="hit" x="60" y="352" width="80" height="84"/><path class="v" d="M66 356 L94 356 L90 434 L72 434 Z"/><path class="v" d="M106 356 L134 356 L128 434 L110 434 Z"/><text x="10" y="400">nohy</text></g>
+        </svg>
+      </div>
+      <div>
+        <div class="oblasti" role="group" aria-label="Potíže">
+          <button data-k="krk" aria-pressed="false">Ztuhlá šíje</button>
+          <button data-k="hrudni" aria-pressed="false">Mezi lopatkami</button>
+          <button data-k="bedra" aria-pressed="false">Bolí v kříži / bedra</button>
+          <button data-k="sport" aria-pressed="false">Po sportu</button>
+          <button data-k="nohy" aria-pressed="false">Těžké nohy</button>
+          <button data-k="relax" aria-pressed="false">Chci jen vypnout</button>
+        </div>
+        <div class="doporuc" aria-live="polite">
+          <div><span class="stitek">orientační doporučení</span></div>
+          <h3 id="dop-nadpis">Ztuhlá šíje</h3>
+          <ul id="dop-list"></ul>
+          <p style="color:#c9d3cd;font-size:.92rem">Kde začneme, domluvíme na místě podle toho, jak se cítíte. Při akutní bolesti, horečce nebo po úrazu se nejdřív poraďte s lékařem.</p>
+          <div>
+            <p style="font-weight:600;margin-bottom:8px">Kdy se Vám hodí přijít?</p>
+            <div class="den" id="dny"></div>
+          </div>
+          <div class="smsbox" id="sms"></div>
+          <div class="row">
+            <a class="btn btn-call" id="smsbtn" href="sms:+420777586836">Poslat SMS</a>
+            <button class="btn btn-out" style="color:#F2EEE6" id="kopir" type="button">Zkopírovat text</button>
+          </div>
+          <p style="font-size:.85rem;color:#c9d3cd">Číslo pro SMS i hovor: <b>777 586 836</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Co u mě dostanete</h2>
+      <p>Masáže, které dělám. Délku a postup přizpůsobím tomu, s čím přijdete.</p>
+    </div>
+    <div class="sluzby">
+      <div class="sl"><h3>Klasická masáž</h3><p>Uvolnění zatuhlých svalů zad, šíje i končetin.</p></div>
+      <div class="sl"><h3>Sportovní a rekondiční</h3><p>Před výkonem, po tréninku nebo po fyzicky náročné práci.</p></div>
+      <div class="sl"><h3>Relaxační masáž</h3><p>Pomalejší tempo pro ty, kdo potřebují hlavně vypnout.</p></div>
+      <div class="sl"><h3>Manuální lymfomasáž</h3><p>Jemná technika pro těžké a oteklé nohy.</p></div>
+      <div class="sl"><h3>Čínská masáž TUINA</h3><p>Tradiční tlaková technika z čínské medicíny.</p></div>
+      <div class="sl"><h3>Dornova metoda</h3><p>Jemné srovnání kloubů a obratlů, pohyb děláte sami s mou pomocí.</p></div>
+      <div class="sl"><h3>Breussova masáž</h3><p>Jemná masáž podél celé páteře, často navazuje na Dornovu metodu.</p></div>
+      <div class="sl"><h3>Bambusová a čokoládová</h3><p>Pro změnu nebo jako dárek.</p></div>
+    </div>
+    <p class="cena">Cenu Vám řeknu předem do telefonu, podle délky a druhu masáže. <span class="stitek">ukázkový text</span></p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div class="krok"><h3>Zavoláte nebo napíšete</h3><p>Řeknete, co Vás trápí a kdy můžete. Odpoledne Út–Čt, výjezd Po a Pá.</p></div>
+      <div class="krok"><h3>Krátce se domluvíme</h3><p>Před masáží se zeptám na potíže a zdraví, ať vím, kde a jak začít.</p></div>
+      <div class="krok"><h3>Masáž a doporučení</h3><p>Po masáži Vám řeknu, co můžete dělat doma, a domluvíme další termín, pokud ho budete chtít.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap dve">
+    <div class="box">
+      <span class="kicker">Pondělí a pátek</span>
+      <h3>Výjezdní masáže</h3>
+      <p>V pondělí a v pátek jezdím s masáží za klienty. Kam až dojedu a za kolik, se domluvíme po telefonu.</p>
+      <p><span class="stitek">ukázkový text</span> Doplníme obce, kam jezdíte nejčastěji.</p>
+      <a class="btn btn-out" href="tel:+420777586836" style="justify-self:start">Domluvit výjezd</a>
+    </div>
+    <div class="foto"><div><b>Sem přijde Vaše fotka</b><br>masérna nebo Vy při práci</div></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Proč ke mně</h2></div>
+    <div class="duvera">
+      <div><b>7 technik v jedné masérně</b>od klasiky po Dorna a TUINA</div>
+      <div><b>Termíny po práci</b>Út–Čt do 19:00</div>
+      <div><b>Hradišťská 1955</b>Staré Město, živnostník, IČO 02924501</div>
+      <div><b>Na Facebooku</b><a href="https://www.facebook.com/people/Masáže-Radim-Lapčík/61550933273105" target="_blank" rel="noopener">Masáže Radim Lapčík</a></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Časté otázky</h2></div>
+    <details><summary>Co si mám vzít s sebou?</summary><p>Stačí ručník a pohodlné oblečení. Olej a vše ostatní mám připravené. <span class="stitek">ukázkový text</span></p></details>
+    <details><summary>Jakou masáž si mám vybrat?</summary><p>Nemusíte vědět předem. Řekněte mi, co Vás bolí nebo co potřebujete, a technika se vybere podle toho. Pomůže i výběr výše na páteři.</p></details>
+    <details><summary>Dá se přijít i mimo úterý až čtvrtek?</summary><p>V sobotu po telefonické domluvě. V pondělí a v pátek dělám výjezdní masáže.</p></details>
+    <details><summary>Kdy masáž raději odložit?</summary><p>Při horečce, akutním zánětu, čerstvém úrazu nebo kožním onemocnění v místě masáže. Když si nejste jistí, zavolejte.</p></details>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap kgrid">
+    <div style="display:grid;gap:14px;align-content:start">
+      <h2>Kontakt</h2>
+      <p style="font-size:1.25rem;font-family:var(--f-display);font-weight:700"><a href="tel:+420777586836">777 586 836</a></p>
+      <p><a href="mailto:radimlapcik@seznam.cz">radimlapcik@seznam.cz</a></p>
+      <p>Hradišťská 1955, 686 03 Staré Město<br><a href="https://mapy.cz/zakladni?q=Hradi%C5%A1%C5%A5sk%C3%A1%201955%2C%20Star%C3%A9%20M%C4%9Bsto" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></p>
+      <table class="hod" aria-label="Otevírací doba">
+        <tr><td>Pondělí</td><td>výjezdní masáže</td></tr>
+        <tr><td>Úterý</td><td>15:00–19:00</td></tr>
+        <tr><td>Středa</td><td>15:00–19:00</td></tr>
+        <tr><td>Čtvrtek</td><td>15:00–19:00</td></tr>
+        <tr><td>Pátek</td><td>výjezdní masáže / po telefonu</td></tr>
+        <tr><td>Sobota</td><td>po telefonu</td></tr>
+        <tr><td>Neděle</td><td>zavřeno</td></tr>
+      </table>
+      <p style="font-size:.85rem;color:var(--muted)">O svátcích se doba může lišit.</p>
+    </div>
+    <div class="mapa" aria-hidden="true">
+      <svg viewBox="0 0 400 300"><rect width="400" height="300" fill="var(--bg)"/><path d="M0 210 C90 190 150 240 240 200 S360 150 400 170" stroke="#7aa3b5" stroke-width="14" fill="none" opacity=".55"/><path d="M40 0 L120 300 M0 90 L400 120 M260 0 L220 300" stroke="var(--line)" stroke-width="8"/><text x="250" y="195" font-family="Public Sans,sans-serif" font-size="12" fill="var(--muted)">Morava</text><circle cx="168" cy="108" r="11" fill="var(--accent)"/><circle cx="168" cy="108" r="4" fill="#fff"/><text x="186" y="104" font-family="Bitter,serif" font-weight="700" font-size="15" fill="var(--fg)">Hradišťská 1955</text><text x="186" y="122" font-family="Public Sans,sans-serif" font-size="12" fill="var(--muted)">Staré Město</text></svg>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">© Masáže Radim Lapčík · Hradišťská 1955, Staré Město · IČO 02924501<br>Nezávazný návrh webu od studia Weby na míru.</footer>
+
+<div class="sticky"><a class="btn btn-call" href="tel:+420777586836">Zavolat</a><a class="btn btn-out" href="#pater">Vybrat termín</a></div>
+
+<script>
+(function(){
+  var D={
+    krk:{n:"Ztuhlá šíje",t:["Klasická masáž šíje a ramen","Breussova masáž podél páteře","TUINA – tlakové body šíje"],s:"ztuhlou šíji"},
+    hrudni:{n:"Mezi lopatkami",t:["Klasická masáž zad","Dornova metoda – srovnání obratlů","Breussova masáž"],s:"bolest mezi lopatkami"},
+    bedra:{n:"Bedra a kříž",t:["Dornova metoda – pánev a bedra","Breussova masáž","Rekondiční masáž zad"],s:"bolest v kříži"},
+    krizi:{n:"Kříž a pánev",t:["Dornova metoda – pánev a kyčle","Klasická masáž beder a hýždí"],s:"bolest v kříži a pánvi"},
+    sport:{n:"Po sportu",t:["Sportovní masáž","Rekondiční masáž","Lymfomasáž nohou po zátěži"],s:"masáž po sportu"},
+    nohy:{n:"Těžké nohy",t:["Manuální lymfomasáž","Klasická masáž dolních končetin"],s:"těžké a oteklé nohy"},
+    relax:{n:"Chci jen vypnout",t:["Relaxační masáž","Klasická masáž celých zad"],s:"relaxační masáž"}
+  };
+  var svatky=["2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01"];
+  var dnyN=["Ne","Po","Út","St","Čt","Pá","So"];
+  var vyber="krk",den=null;
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+  function vykresli(){
+    var o=D[vyber];
+    document.getElementById("dop-nadpis").textContent=o.n;
+    document.getElementById("dop-list").innerHTML=o.t.map(function(x){return "<li>"+x+"</li>"}).join("");
+    document.querySelectorAll(".seg").forEach(function(g){g.classList.toggle("on",g.dataset.k===vyber)});
+    document.querySelectorAll(".oblasti button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.k===vyber)});
+    var txt="Dobrý den, chtěl/a bych se objednat na masáž – řeším "+o.s+". ";
+    txt+= den? ("Hodilo by se mi "+den+". ") : "Kdy byste měl volný termín? ";
+    txt+="Děkuji.";
+    document.getElementById("sms").textContent=txt;
+    document.getElementById("smsbtn").href="sms:+420777586836?body="+encodeURIComponent(txt);
+  }
+  function dny(){
+    var box=document.getElementById("dny"),d=new Date(),n=0,h="";
+    d.setHours(12);
+    while(n<8){
+      d.setDate(d.getDate()+1);
+      var w=d.getDay(); if(w===0) continue;
+      var st=iso(d),sv=svatky.indexOf(st)>=0;
+      var co= (w>=2&&w<=4)?"15–19 ve studiu":(w===6?"po telefonu":"výjezd");
+      var lab=dnyN[w]+" "+d.getDate()+". "+(d.getMonth()+1)+".";
+      h+='<button type="button" '+(sv?'disabled title="Státní svátek"':'')+' data-d="'+lab+(w>=2&&w<=4?" odpoledne":(w===6?" (sobota)":" – výjezd"))+'" aria-pressed="false">'+lab+'<small>'+(sv?"svátek":co)+'</small></button>';
+      n++;
+    }
+    box.innerHTML=h;
+    box.querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){
+      box.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});
+      b.setAttribute("aria-pressed","true");den=b.dataset.d;vykresli();})});
+  }
+  document.querySelectorAll(".seg").forEach(function(g){
+    function f(){vyber=g.dataset.k;vykresli()}
+    g.addEventListener("click",f);g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();f()}});
+  });
+  document.querySelectorAll(".oblasti button").forEach(function(b){b.addEventListener("click",function(){vyber=b.dataset.k;vykresli()})});
+  document.getElementById("kopir").addEventListener("click",function(){
+    var t=document.getElementById("sms").textContent,b=this;
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent="Zkopírováno"},function(){sel()})}catch(e){sel()}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById("sms"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Text označen"}
+  });
+  dny();vykresli();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Masáže Budošová</title>
+<meta name="description" content="Masáže Budošová, Brumov-Bylnice: reflexní masáž plosky nohy, klasická masáž, Dornova metoda, Breussova masáž, baňkování, indická masáž hlavy a další. Ceník, Po–Pá 8–15, po domluvě i později.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Masáže Budošová","telephone":"+420739365976","email":"budosovazuzanka@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Mýto 178","postalCode":"763 31","addressLocality":"Brumov-Bylnice","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"15:00"}],"url":"https://masaze-budosova.webnode.cz/","priceRange":"150–800 Kč"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Ilustrace kopců Bílých Karpat nahoře, text pod ní; výrazný prvek: mapa chodidla (reflexní zóny) + ceník jako lístek podle potíží */
+:root{
+  --mech:#4E6B3A; --jerabina:#B83B2B; --len:#EEF1EA; --kura:#2E2A24; --seno:#D9C27E;
+  --bg:var(--len); --fg:var(--kura); --muted:#5d5a50; --card:#FBFCF8; --line:#cfd6c6; --accent:var(--jerabina); --green:var(--mech); --tag:#f3e3b8; --tagfg:#4a3a0c;
+  --h1:#a9bf93; --h2:#7f9a68; --h3:#5b7848; --sky:#dfe7d6;
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif; --f-body:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151a13;--fg:#ECEBE3;--muted:#aeb2a2;--card:#1d241a;--line:#334030;--accent:#E06A55;--green:#8fb070;--tag:#4b3d16;--tagfg:#f3e3b8;--h1:#3d5233;--h2:#2f4428;--h3:#22341e;--sky:#1a2117;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151a13;--fg:#ECEBE3;--muted:#aeb2a2;--card:#1d241a;--line:#334030;--accent:#E06A55;--green:#8fb070;--tag:#4b3d16;--tagfg:#f3e3b8;--h1:#3d5233;--h2:#2f4428;--h3:#22341e;--sky:#1a2117;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:17px/1.6 var(--f-body);margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.8rem,4.2vw,2.6rem)}
+h3{font-size:1.15rem;font-weight:500}
+p{margin:0}
+a{color:inherit}
+.navrh{background:var(--kura);color:#EEF1EA;font-size:.85rem;text-align:center;padding-block:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:13px 20px;text-decoration:none;border:2px solid transparent;cursor:pointer;font:700 1rem var(--f-body)}
+.btn-call{background:var(--accent);color:#fff}
+.btn-out{border-color:var(--green);color:var(--fg);background:transparent}
+.btn:focus-visible,button:focus-visible,a:focus-visible,path:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.stitek{display:inline-block;font:700 .68rem var(--f-body);letter-spacing:.07em;text-transform:uppercase;background:var(--tag);color:var(--tagfg);border-radius:4px;padding:2px 7px;vertical-align:middle}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.logo{font-family:var(--f-display);font-size:1.3rem;font-weight:700}
+.logo small{display:block;font:500 .78rem var(--f-body);color:var(--muted);letter-spacing:.04em}
+.top .btn{padding:9px 14px;font-size:.92rem}
+.kopce{background:var(--sky);line-height:0}
+.kopce svg{width:100%;height:clamp(120px,22vw,250px);display:block}
+.hero{padding-block:26px 44px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:28px;align-items:end}
+.kick{font:700 .8rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.hero h1{font-size:clamp(2.3rem,6.4vw,4.2rem);margin-top:8px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--accent)}
+.hero .lead{max-width:44ch;margin-top:14px;font-size:1.1rem}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.kdy{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:8px;font-variant-numeric:tabular-nums}
+.kdy b{font-family:var(--f-display);font-weight:500;font-size:1.25rem}
+.kdy .po{border-top:1px dashed var(--line);padding-top:8px;color:var(--muted)}
+section{padding-block:56px}
+.sec-head{display:grid;gap:10px;max-width:62ch;margin-bottom:26px}
+.sec-head p{color:var(--muted)}
+/* chodidlo */
+.chod{background:var(--card);border-block:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:34px;align-items:start}
+.foot svg{width:100%;max-width:280px;height:auto;display:block;margin:0 auto}
+.z{fill:var(--h1);stroke:var(--card);stroke-width:3;cursor:pointer;transition:fill .2s}
+.z:hover,.z.on{fill:var(--accent)}
+.out{fill:none;stroke:var(--green);stroke-width:2.5}
+.zinfo{display:grid;gap:12px}
+.zinfo h3{font-size:1.5rem}
+.zbtn{display:flex;flex-wrap:wrap;gap:8px}
+.zbtn button{background:transparent;border:1.5px solid var(--line);color:var(--fg);border-radius:999px;padding:7px 13px;font:700 .9rem var(--f-body);cursor:pointer}
+.zbtn button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.delky{display:flex;flex-wrap:wrap;gap:8px}
+.delky button{background:var(--bg);border:1.5px solid var(--line);color:var(--fg);border-radius:10px;padding:8px 14px;font:700 .95rem var(--f-body);cursor:pointer;font-variant-numeric:tabular-nums}
+.delky button[aria-pressed="true"]{border-color:var(--green);background:var(--green);color:#fff}
+.smsbox{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.95rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+/* lístek */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tabs button{background:transparent;border:none;border-bottom:3px solid transparent;padding:6px 4px;margin-right:10px;font:700 1rem var(--f-body);color:var(--muted);cursor:pointer}
+.tabs button[aria-pressed="true"]{color:var(--fg);border-color:var(--accent)}
+.listek{columns:2 340px;column-gap:40px}
+.pol{break-inside:avoid;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 14px;padding-block:12px;border-bottom:1px dotted var(--line)}
+.pol h3{font-size:1.08rem}
+.pol .ceny{font-variant-numeric:tabular-nums;text-align:right;font-size:.95rem;white-space:nowrap}
+.pol .ceny span{display:block}
+.pol .ceny b{color:var(--accent)}
+.pol[hidden]{display:none!important}
+.kroky{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.krok{display:grid;gap:6px;border-top:2px solid var(--green);padding-top:12px}
+.krok b{font-family:var(--f-display);font-size:1.15rem;font-weight:500}
+.dve{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.foto{border:2px dashed var(--line);border-radius:14px;min-height:200px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px}
+.duvera{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.duvera div{padding:14px 0 0;border-top:2px solid var(--line)}
+.duvera b{display:block;font-family:var(--f-display);font-weight:500;font-size:1.15rem}
+details{border-bottom:1px solid var(--line);padding-block:14px}
+summary{cursor:pointer;font-weight:700}
+details p{margin-top:8px;color:var(--muted);max-width:65ch}
+.kgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.hod{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hod td{padding:7px 0;border-bottom:1px solid var(--line)}
+.hod td:last-child{text-align:right}
+footer{padding-block:28px 100px;color:var(--muted);font-size:.85rem}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:10px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:var(--bg);border-top:1px solid var(--line)}
+.sticky .btn{flex:1}
+@media (max-width:780px){
+  .hero,.cgrid,.dve,.kgrid{grid-template-columns:1fr}
+  .kroky{grid-template-columns:1fr}
+  .sticky{display:flex}.top .btn{display:none}
+  .foot svg{max-width:210px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="navrh"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Masáže Budošová</div></div>
+
+<div role="banner" class="wrap top">
+  <div class="logo">Masáže Budošová<small>Brumov-Bylnice</small></div>
+  <a class="btn btn-call" href="tel:+420739365976">739 365 976</a>
+</div>
+
+<div class="kopce" aria-hidden="true">
+  <svg viewBox="0 0 1200 250" preserveAspectRatio="xMidYMax slice">
+    <circle cx="930" cy="80" r="38" fill="var(--seno)" opacity=".85"/>
+    <path d="M0 170 C150 110 260 120 380 150 S620 90 760 120 S1020 150 1200 100 V250 H0Z" fill="var(--h1)"/>
+    <path d="M0 200 C180 160 300 170 450 190 S700 150 860 175 S1080 190 1200 160 V250 H0Z" fill="var(--h2)"/>
+    <path d="M0 230 C200 205 380 215 560 225 S900 205 1200 215 V250 H0Z" fill="var(--h3)"/>
+    <g fill="var(--h3)"><path d="M210 150 l10 -30 l10 30z"/><path d="M226 152 l8 -24 l8 24z"/><path d="M640 128 l11 -32 l11 32z"/><path d="M1040 140 l9 -26 l9 26z"/><path d="M1056 142 l7 -20 l7 20z"/></g>
+    <g fill="var(--jerabina)"><circle cx="110" cy="214" r="4"/><circle cx="118" cy="219" r="4"/><circle cx="106" cy="222" r="4"/></g>
+  </svg>
+</div>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <div class="kick">Masérka v Brumově-Bylnici</div>
+    <h1>Reflexní masáž, Dorn i baňky. <em>Bez dojíždění.</em></h1>
+    <p class="lead">Devatenáct druhů masáží a terapií s cenou na korunu. Pracuji se 100% přírodními oleji a masáž skládám podle toho, co Vás trápí.</p>
+    <div class="akce">
+      <a class="btn btn-call" href="tel:+420739365976">Zavolat a objednat</a>
+      <a class="btn btn-out" href="#cenik">Ceník masáží</a>
+    </div>
+  </div>
+  <div class="kdy">
+    <span class="kick">Kdy přijít</span>
+    <div><b>Po–Pá 8:00–15:00</b></div>
+    <div class="po">Po 15:00? Domluvíme termín i po otevírací době.</div>
+    <div>Mýto 178, Brumov-Bylnice</div>
+  </div>
+</div>
+
+<section class="chod" id="chodidlo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Mapa chodidla</h2>
+      <p>Reflexní masáž plosky nohy pracuje s body na chodidle. Klepněte na část chodidla a uvidíte, ke které části těla ji reflexní mapy obvykle přiřazují. Pak vyberte délku masáže a pošlete SMS.</p>
+    </div>
+    <div class="cgrid">
+      <div class="foot">
+        <svg viewBox="0 0 220 420" role="group" aria-label="Chodidlo – reflexní zóny">
+          <g>
+            <path class="z" data-z="hlava" tabindex="0" role="button" aria-label="Prsty – hlava" d="M70 40 a18 20 0 1 1 36 0 a18 20 0 1 1 -36 0Z M112 34 a12 14 0 1 1 24 0 a12 14 0 1 1 -24 0Z M140 44 a11 13 0 1 1 22 0 a11 13 0 1 1 -22 0Z M164 60 a10 12 0 1 1 20 0 a10 12 0 1 1 -20 0Z M182 82 a9 11 0 1 1 18 0 a9 11 0 1 1 -18 0Z"/>
+            <path class="z" data-z="hrudnik" tabindex="0" role="button" aria-label="Polštářek pod prsty – hrudník a ramena" d="M58 92 C80 74 150 74 194 102 C198 124 196 140 190 156 L60 156 C52 130 52 108 58 92Z"/>
+            <path class="z" data-z="bricho" tabindex="0" role="button" aria-label="Klenba – břicho a trávení" d="M60 162 L190 162 C186 196 178 228 172 262 L76 262 C70 228 62 196 60 162Z"/>
+            <path class="z" data-z="pater" tabindex="0" role="button" aria-label="Vnitřní hrana – páteř" d="M40 96 L56 92 C50 120 50 150 58 196 C66 236 72 268 74 300 L58 306 C46 260 34 210 32 160 C32 132 34 112 40 96Z"/>
+            <path class="z" data-z="panev" tabindex="0" role="button" aria-label="Pata – pánev a kříž" d="M76 268 L172 268 C176 300 176 340 160 372 C142 404 92 406 76 376 C64 350 66 300 76 268Z"/>
+          </g>
+          <path class="out" d="M86 22 C40 40 22 110 30 170 C38 240 60 300 66 360 C72 410 160 420 172 370 C190 300 196 240 202 160 C206 110 206 90 196 72"/>
+        </svg>
+      </div>
+      <div class="zinfo" aria-live="polite">
+        <div class="zbtn" id="zbtn" role="group" aria-label="Zóny chodidla"></div>
+        <span><span class="stitek">orientační</span></span>
+        <h3 id="z-nazev">Prsty</h3>
+        <p id="z-text"></p>
+        <p style="color:var(--muted);font-size:.95rem">Reflexní mapy jsou tradiční pomůcka, ne lékařská diagnóza. Při zdravotních potížích se poraďte s lékařem.</p>
+        <div>
+          <p style="font-weight:700;margin-bottom:8px">Reflexní masáž plosky nohy</p>
+          <div class="delky" id="delky">
+            <button type="button" data-d="30 min" data-c="250" aria-pressed="false">30 min · 250 Kč</button>
+            <button type="button" data-d="45 min" data-c="300" aria-pressed="true">45 min · 300 Kč</button>
+            <button type="button" data-d="60 min" data-c="350" aria-pressed="false">60 min · 350 Kč</button>
+          </div>
+        </div>
+        <div class="zbtn" id="cas" role="group" aria-label="Kdy">
+          <button type="button" data-t="dopoledne" aria-pressed="true">Dopoledne</button>
+          <button type="button" data-t="do 15:00" aria-pressed="false">Do 15:00</button>
+          <button type="button" data-t="po 15:00 (po domluvě)" aria-pressed="false">Po 15:00 po domluvě</button>
+        </div>
+        <div class="smsbox" id="sms"></div>
+        <div class="row">
+          <a class="btn btn-call" id="smsbtn" href="sms:+420739365976">Poslat SMS</a>
+          <button type="button" class="btn btn-out" id="kopir">Zkopírovat text</button>
+        </div>
+        <p style="font-size:.88rem;color:var(--muted)">Číslo pro SMS i hovor: <b>739 365 976</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cenik">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Ceník masáží</h2>
+      <p>Ceny z mého současného ceníku. Vyberte, co potřebujete, a lístek ukáže, co se k tomu hodí.</p>
+    </div>
+    <div class="tabs" id="tabs">
+      <button type="button" data-f="vse" aria-pressed="true">Vše</button>
+      <button type="button" data-f="zada" aria-pressed="false">Záda a páteř</button>
+      <button type="button" data-f="hlava" aria-pressed="false">Hlava a stres</button>
+      <button type="button" data-f="teplo" aria-pressed="false">Teplo a odpočinek</button>
+      <button type="button" data-f="nohy" aria-pressed="false">Nohy a lymfa</button>
+    </div>
+    <div class="listek" id="listek"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div class="krok"><b>Zavoláte nebo napíšete</b><p>Termín Po–Pá 8–15. Když nestihnete, domluvíme se i na pozdější hodinu.</p></div>
+      <div class="krok"><b>Masáž šitá na míru</b><p>Zeptám se, co Vás trápí, a podle toho vyberu techniku i délku.</p></div>
+      <div class="krok"><b>Přírodní oleje</b><p>Používám 100% přírodní kvalitní oleje, pokožka si odpočine spolu se svaly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap dve">
+    <div class="foto"><div><b>Sem přijde Vaše fotka</b><br>masérna</div></div>
+    <div class="foto"><div><b>Sem přijde Vaše fotka</b><br>Vy při práci</div></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Proč ke mně</h2></div>
+    <div class="duvera">
+      <div><b>Kvalifikovaná masérka</b>individuální přístup ke každému klientovi</div>
+      <div><b>19 položek s cenou</b>od 150 Kč, žádné ceny „na dotaz“</div>
+      <div><b>Přírodní oleje</b>100% přírodní a kvalitní</div>
+      <div><b>IČO 06067115</b>Mýto 178, Brumov-Bylnice</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Časté otázky</h2></div>
+    <details><summary>Nevím, jakou masáž si vybrat.</summary><p>Nevadí. Za 60 minut za 600 Kč nabízím kombinaci masáží podle zdravotního stavu – vyberu to, co Vám pomůže nejvíc.</p></details>
+    <details><summary>Dá se přijít po práci?</summary><p>Ano. Běžně mám otevřeno Po–Pá 8–15, po otevírací době se domluvíme.</p></details>
+    <details><summary>Co je Dornova metoda?</summary><p>Jemné srovnání kloubů a obratlů celého těla. U mě trvá 60 minut a stojí 800 Kč. Často na ni navazuje Breussova masáž podél páteře.</p></details>
+    <details><summary>Kdy masáž raději odložit?</summary><p>Při horečce, akutním zánětu nebo čerstvém úrazu. Když si nejste jistí, zavolejte.</p></details>
+  </div>
+</section>
+
+<section class="chod">
+  <div class="wrap kgrid">
+    <div style="display:grid;gap:12px;align-content:start">
+      <h2>Kontakt</h2>
+      <p style="font:700 1.4rem var(--f-body)"><a href="tel:+420739365976">739 365 976</a></p>
+      <p><a href="mailto:budosovazuzanka@seznam.cz">budosovazuzanka@seznam.cz</a></p>
+      <p>Mýto 178, 763 31 Brumov-Bylnice<br><a href="https://mapy.cz/zakladni?q=M%C3%BDto%20178%2C%20Brumov-Bylnice" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></p>
+    </div>
+    <div>
+      <table class="hod" aria-label="Otevírací doba">
+        <tr><td>Pondělí–pátek</td><td>8:00–15:00</td></tr>
+        <tr><td>Po 15:00</td><td>po domluvě</td></tr>
+        <tr><td>Sobota, neděle</td><td>zavřeno</td></tr>
+      </table>
+      <p style="font-size:.85rem;color:var(--muted);margin-top:8px">O svátcích se doba může lišit.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">© Masáže Budošová · Mýto 178, Brumov-Bylnice · IČO 06067115<br>Nezávazný návrh webu od studia Weby na míru.</footer>
+<div class="sticky"><a class="btn btn-call" href="tel:+420739365976">Zavolat</a><a class="btn btn-out" href="#cenik">Ceník</a></div>
+
+<script>
+(function(){
+  var C=[
+    ["Kombinace masáží","podle zdravotního stavu",[["60 min",600]],"zada hlava"],
+    ["Klasická masáž","",[["30 min",350],["45 min",400],["60 min",500]],"zada"],
+    ["Náprava celého těla podle pana Dorna","",[["60 min",800]],"zada"],
+    ["Breussova masáž","podél páteře",[["45 min",300],["60 min",350]],"zada"],
+    ["Komplexní terapie triggerpointů","spouštěcí body",[["30 min",300]],"zada"],
+    ["Baňkování","",[["30 min",300],["45 min",350],["60 min",400]],"zada"],
+    ["Reflexní masáž plosky nohy","",[["30 min",250],["45 min",300],["60 min",350]],"nohy"],
+    ["Lymfatická masáž","",[["60 min",400]],"nohy"],
+    ["Kraniosakrální terapie","",[["60 min",450]],"hlava"],
+    ["Indická masáž hlavy (champi)","",[["30 min",200],["45 min",250]],"hlava"],
+    ["Antistresová masáž hlavy","",[["30 min",200],["45 min",250]],"hlava"],
+    ["Odblokování krku a hlavy","",[["30 min",250],["45 min",300]],"hlava zada"],
+    ["Otevírání meridiánů","",[["60 min",400]],"hlava"],
+    ["Havajská masáž","",[["60 min",450]],"teplo"],
+    ["Masáž bylinnými měšci","ajurvédská technika",[["60 min",600]],"teplo"],
+    ["Masáž lávovými kameny","",[["30 min",200]],"teplo"],
+    ["Zábal lávovými kameny","",[["30 min",150]],"teplo"],
+    ["Medová detoxikační masáž","",[["30 min",250]],"teplo nohy"],
+    ["Medový zábal","",[["30 min",200]],"teplo"]
+  ];
+  var L=document.getElementById("listek");
+  L.innerHTML=C.map(function(c){return '<div class="pol" data-k="'+c[3]+'"><div><h3>'+c[0]+'</h3>'+(c[1]?'<small style="color:var(--muted)">'+c[1]+'</small>':'')+'</div><div class="ceny">'+c[2].map(function(p){return '<span>'+p[0]+' <b>'+p[1]+' Kč</b></span>'}).join("")+'</div></div>'}).join("");
+  document.querySelectorAll("#tabs button").forEach(function(b){b.addEventListener("click",function(){
+    document.querySelectorAll("#tabs button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    var f=b.dataset.f;L.querySelectorAll(".pol").forEach(function(p){p.hidden=!(f==="vse"||p.dataset.k.split(" ").indexOf(f)>=0)});
+  })});
+  var Z={hlava:["Prsty","Bříška prstů se v reflexních mapách přiřazují hlavě, šíji a dutinám."],
+         hrudnik:["Polštářek pod prsty","Oblast pod prsty odpovídá hrudníku, plicím a ramenům."],
+         bricho:["Klenba","Klenba chodidla se přiřazuje břichu a trávení."],
+         pater:["Vnitřní hrana","Vnitřní hrana chodidla kopíruje v reflexní mapě páteř – od krku po kostrč."],
+         panev:["Pata","Pata se přiřazuje pánvi, kříži a bedrům."]};
+  var zona="hlava",delka="45 min",cena=300,cas="dopoledne";
+  var zb=document.getElementById("zbtn");
+  zb.innerHTML=Object.keys(Z).map(function(k){return '<button type="button" data-z="'+k+'" aria-pressed="false">'+Z[k][0]+'</button>'}).join("");
+  function upd(){
+    document.getElementById("z-nazev").textContent=Z[zona][0];
+    document.getElementById("z-text").textContent=Z[zona][1];
+    document.querySelectorAll(".z").forEach(function(p){p.classList.toggle("on",p.dataset.z===zona)});
+    zb.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.z===zona)});
+    var t="Dobrý den, chtěl/a bych se objednat na reflexní masáž plosky nohy ("+delka+", "+cena+" Kč), hodilo by se mi "+cas+". Kdy máte volno? Děkuji.";
+    document.getElementById("sms").textContent=t;
+    document.getElementById("smsbtn").href="sms:+420739365976?body="+encodeURIComponent(t);
+  }
+  document.querySelectorAll(".z").forEach(function(p){function f(){zona=p.dataset.z;upd()}p.addEventListener("click",f);p.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();f()}})});
+  zb.addEventListener("click",function(e){var b=e.target.closest("button");if(b){zona=b.dataset.z;upd()}});
+  document.querySelectorAll("#delky button").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll("#delky button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});delka=b.dataset.d;cena=+b.dataset.c;upd()})});
+  document.querySelectorAll("#cas button").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll("#cas button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});cas=b.dataset.t;upd()})});
+  document.getElementById("kopir").addEventListener("click",function(){
+    var b=this,el=document.getElementById("sms");
+    function s(){var r=document.createRange();r.selectNodeContents(el);var x=getSelection();x.removeAllRanges();x.addRange(r);b.textContent="Text označen"}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="Zkopírováno"},s)}catch(e){s()}
+  });
+  upd();
+})();
+</script>
+</body>
+</html>
