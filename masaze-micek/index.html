@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Masáže Míček</title>
+<meta name="description" content="Rekondiční a sportovní masáže ve Zlíně, Školní 492. Pomoc od akutní bolesti, baňkování, Dornova metoda. Otevřeno každý den 9–20. Objednání: 731 614 414.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Masáže Míček","telephone":"+420731614414","email":"jirkamicek@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Školní 492","addressLocality":"Zlín","postalCode":"760 01","addressCountry":"CZ"},"taxID":"17388171","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"20:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","bestRating":"5","reviewCount":"9"}}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+<style>
+/* Rozvržení: hero = bílá karta přes dvoubarevnou plochu (teal + korál), výrazný prvek = týdenní tabule 9–20 s ručičkou „teď“ a skladačem SMS */
+:root{
+  --teal:#0F3443; --teal2:#0A2531; --koral:#E4583E; --koral-tx:#B23A22; --mata:#CDEBDD; --led:#F4F8F9;
+  --bila:#FFFFFF; --sed:#56656C; --linka:#D3DEE2;
+  --f-disp:"Anton", Impact, "Arial Narrow", sans-serif;
+  --f-text:"Rubik", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--led);color:var(--teal);font:17px/1.6 var(--f-text)}
+a{color:var(--koral-tx)}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--koral);outline-offset:2px}
+.obal{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;line-height:1.02;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance;margin:0}
+h2{font-size:clamp(36px,5.4vw,56px)}
+.stitek{font:500 12px/1 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--sed)}
+.demo{display:inline-block;font:500 11px/1.3 var(--f-text);text-transform:none;letter-spacing:.03em;background:#FBE1DA;color:#7A2414;border-radius:3px;padding:2px 6px;vertical-align:middle;margin-left:4px}
+.navrh{background:var(--teal2);color:#DCEBEF;font-size:14px;text-align:center;padding-block:8px}
+.lista{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bila);border-bottom:1px solid var(--linka)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bila)}
+.lista .obal{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.znacka{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--teal);font-family:var(--f-disp);font-size:26px;text-transform:uppercase;line-height:1}
+.znacka svg{width:34px;height:34px}
+.tel{display:inline-flex;align-items:center;gap:8px;background:var(--koral);color:#fff;text-decoration:none;font-weight:700;border-radius:8px;padding:10px 16px;white-space:nowrap}
+.tel svg{width:18px;height:18px}
+.tl{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;padding:14px 22px;font:700 17px var(--f-text);text-decoration:none;border:2px solid var(--koral);cursor:pointer}
+.tl.plny{background:var(--koral);color:#fff}
+.tl.obrys{background:#fff;color:var(--teal);border-color:var(--teal)}
+/* hero */
+.hero{background:linear-gradient(100deg,var(--teal) 0 62%,var(--koral) 62% 100%)}
+.hero .obal{padding-block:36px 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+.karta{background:var(--bila);border-radius:14px;padding:30px;display:grid;gap:16px;box-shadow:0 18px 40px rgba(10,37,49,.25)}
+.karta h1{font-size:clamp(44px,6.6vw,78px)}
+.karta h1 span{color:var(--koral-tx)}
+.karta .lead{margin:0;font-size:19px;max-width:40ch;color:var(--sed)}
+.akce{display:flex;flex-wrap:wrap;gap:12px}
+.hvezdy{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:15px;color:var(--sed)}
+.hvezdy b{color:var(--teal);font-size:18px}
+.hvezdy svg{width:92px;height:16px}
+.mic{max-width:100%;width:100%;aspect-ratio:1}
+/* služby */
+section{padding-block:58px}
+.uvod{max-width:62ch;margin:12px 0 26px;color:var(--sed)}
+.sluzby{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sl{background:var(--bila);border-radius:12px;padding:22px;border:1px solid var(--linka);display:grid;gap:8px;align-content:start}
+.sl h3{font-size:28px}
+.sl p{margin:0;color:var(--sed);font-size:16px}
+.sl .ik{width:42px;height:42px;border-radius:50%;background:var(--mata);display:grid;place-items:center}
+.sl .ik svg{width:24px;height:24px}
+.cena{margin-top:22px;background:var(--mata);border-radius:12px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;justify-content:space-between}
+.cena p{margin:0;max-width:56ch}
+/* tabule */
+.tabule{background:var(--teal);color:#E2EEF1}
+.tabule h2{color:#fff}
+.tabule .uvod{color:#B9CFD6}
+.tab-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start}
+.tyden{background:var(--teal2);border-radius:12px;padding:18px;display:grid;gap:8px;min-width:0}
+.osa{display:grid;grid-template-columns:96px 1fr;gap:10px;font-size:12px;color:#8FB0BA;font-variant-numeric:tabular-nums}
+.osa .cisla{display:flex;justify-content:space-between}
+.den{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;background:transparent;border:0;color:inherit;font:inherit;padding:4px 0;cursor:pointer;text-align:left;border-radius:6px}
+.den .jm{font-weight:500;font-size:15px;color:#E2EEF1;line-height:1.2}
+.den .jm small{display:block;font-size:12px;color:#8FB0BA;font-weight:400}
+.pas{position:relative;height:30px;background:#123F51;border-radius:6px;overflow:hidden}
+.pas i{position:absolute;top:0;bottom:0;left:0;right:0;background:var(--mata);opacity:.92}
+.pas .vyber{position:absolute;top:-3px;bottom:-3px;width:4px;background:var(--koral);border-radius:2px;box-shadow:0 0 0 2px var(--teal2)}
+.pas .ted{position:absolute;top:0;bottom:0;width:2px;background:#fff}
+.den.svatek .pas i{background:repeating-linear-gradient(135deg,#5E7F89 0 6px,#123F51 6px 12px);opacity:1}
+.den[aria-pressed="true"]{outline:2px solid var(--koral);outline-offset:3px}
+.skladac{background:var(--led);color:var(--teal);border-radius:12px;padding:22px;display:grid;gap:14px;min-width:0}
+.skladac label{display:grid;gap:6px;font-size:14px;color:var(--sed)}
+.skladac input[type=range]{width:100%;accent-color:var(--koral)}
+.cas{font-family:var(--f-disp);font-size:44px;line-height:1;color:var(--teal)}
+.partie{display:flex;flex-wrap:wrap;gap:8px}
+.partie button{font:500 15px var(--f-text);border:2px solid var(--linka);background:#fff;color:var(--teal);border-radius:999px;padding:8px 14px;cursor:pointer}
+.partie button[aria-pressed="true"]{border-color:var(--koral);background:#FCE6E0}
+.text{background:#fff;border:1px solid var(--linka);border-radius:8px;padding:12px;font-size:15px;white-space:pre-wrap}
+.tlac{display:flex;flex-wrap:wrap;gap:10px}
+/* ostatní */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;padding:0;margin:24px 0 0}
+.kroky li{background:#fff;border-radius:12px;border:1px solid var(--linka);padding:22px;display:grid;gap:6px;align-content:start}
+.kroky b{font-family:var(--f-disp);font-size:44px;line-height:1;color:var(--koral-tx)}
+.kroky h3{font-size:26px}
+.kroky p{margin:0;color:var(--sed)}
+.duv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.duv div{background:#fff;border-radius:12px;padding:22px;border-top:5px solid var(--koral);display:grid;gap:6px;align-content:start}
+.duv b{font-family:var(--f-disp);font-size:38px;line-height:1;font-weight:400}
+.duv p{margin:0;color:var(--sed);font-size:15px}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.foto{width:100%;max-width:100%;aspect-ratio:4/3;border:2px dashed #9DB4BC;border-radius:12px;display:grid;place-items:center;text-align:center;padding:12px;color:var(--sed);font-size:15px;background:radial-gradient(circle at 20% 20%,#E6F1F4 0 30%,transparent 31%),#F9FBFC}
+details{background:#fff;border:1px solid var(--linka);border-radius:10px;padding:14px 18px}
+details+details{margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--sed)}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0}
+.kontakt dt{font-weight:700}
+.kontakt dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.mapa{background:#fff;border:1px solid var(--linka);border-radius:12px;padding:16px}
+.mapa svg{width:100%;height:auto;display:block}
+footer{background:var(--teal2);color:#B9CFD6;font-size:14px;padding-block:24px 96px}
+.dole{display:none}
+@media (max-width:880px){
+  .hero{background:linear-gradient(180deg,var(--teal) 0 70%,var(--koral) 70% 100%)}
+  .hero .obal{grid-template-columns:1fr;padding-block:18px 28px}
+  .karta{padding:22px}
+  .mic{display:none}
+  .sluzby,.kroky,.duv,.fotky,.tab-grid,.kontakt{grid-template-columns:1fr}
+  .osa,.den{grid-template-columns:74px 1fr}
+  .lista .tel span{display:none}
+  .dole{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--bila);border-top:1px solid var(--linka);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .dole a{flex:1}
+}
+</style>
+
+<div class="navrh">Nezávazný návrh webu – není to oficiální stránka firmy Masáže Míček</div>
+
+<div class="lista" role="banner"><div class="obal">
+  <a class="znacka" href="#"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#E4583E"/><path d="M4 13c8 3 18 3 26 0M4 21c8-3 18-3 26 0" stroke="#fff" stroke-width="2" fill="none"/></svg>Masáže Míček</a>
+  <a class="tel" href="tel:+420731614414"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>731 614 414</span></a>
+</div></div>
+
+<main>
+<div class="hero"><div class="obal">
+  <div class="karta">
+    <p class="stitek">Zlín · Školní 492 · každý den 9–20</p>
+    <h1>Záda bolí dnes? <span>Přijďte i v neděli.</span></h1>
+    <p class="lead">Rekondiční a sportovní masáže, pomoc od akutní bolesti, baňkování a Dornova metoda. Terapie s individuálním přístupem.</p>
+    <div class="akce">
+      <a class="tl plny" href="tel:+420731614414">Zavolat 731 614 414</a>
+      <a class="tl obrys" href="#termin">Najít čas</a>
+    </div>
+    <div class="hvezdy">
+      <svg viewBox="0 0 92 16" aria-hidden="true"><g fill="#E4583E"><path id="h" d="M8 0l2.4 5 5.6.6-4.2 3.8 1.2 5.6L8 12.2 3 15l1.2-5.6L0 5.6 5.6 5z"/><use href="#h" x="19"/><use href="#h" x="38"/><use href="#h" x="57"/><use href="#h" x="76"/></g></svg>
+      <span><b>5,0</b> z 9 hodnocení na <a href="https://www.firmy.cz/detail/13413413-masaze-micek-zlin.html" target="_blank" rel="noopener">Firmy.cz</a></span>
+    </div>
+  </div>
+  <svg class="mic" viewBox="0 0 300 300" role="img" aria-label="Ilustrace: masážní míček a ručička hodin">
+    <circle cx="150" cy="150" r="128" fill="#fff" opacity=".12"/>
+    <circle cx="150" cy="150" r="96" fill="#F4F8F9"/>
+    <g fill="#E4583E"><circle cx="150" cy="62" r="7"/><circle cx="196" cy="74" r="7"/><circle cx="228" cy="106" r="7"/><circle cx="238" cy="150" r="7"/><circle cx="228" cy="194" r="7"/><circle cx="196" cy="226" r="7"/><circle cx="150" cy="238" r="7"/><circle cx="104" cy="226" r="7"/><circle cx="72" cy="194" r="7"/><circle cx="62" cy="150" r="7"/><circle cx="72" cy="106" r="7"/><circle cx="104" cy="74" r="7"/></g>
+    <g fill="#0F3443"><circle cx="150" cy="108" r="6"/><circle cx="180" cy="122" r="6"/><circle cx="190" cy="152" r="6"/><circle cx="176" cy="182" r="6"/><circle cx="146" cy="192" r="6"/><circle cx="118" cy="178" r="6"/><circle cx="110" cy="148" r="6"/><circle cx="122" cy="120" r="6"/></g>
+    <path d="M150 150 L150 92" stroke="#0F3443" stroke-width="6" stroke-linecap="round"/>
+    <path d="M150 150 L200 170" stroke="#E4583E" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="150" cy="150" r="9" fill="#0F3443"/>
+    <text x="150" y="292" text-anchor="middle" font-family="Rubik, sans-serif" font-size="16" fill="#fff">9:00 – 20:00, Po–Ne</text>
+  </svg>
+</div></div>
+
+<section id="sluzby"><div class="obal">
+  <p class="stitek">Co dělám</p>
+  <h2>Masáže podle toho, co bolí</h2>
+  <p class="uvod">Služby podle zápisu na Firmy.cz. Na místě se domluvíme, co Vaše tělo potřebuje.</p>
+  <div class="sluzby">
+    <div class="sl"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="#0F3443" stroke-width="2"><path d="M12 2v6M8 6l4 4 4-4M5 14h14M7 18h10M9 22h6"/></svg></span><h3>Pomoc od akutní bolesti</h3><p>Když Vás chytla záda nebo šíje a potřebujete úlevu co nejdřív.</p></div>
+    <div class="sl"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="#0F3443" stroke-width="2"><circle cx="15" cy="5" r="2"/><path d="M4 21l5-6 3 2 2-6 5 3"/></svg></span><h3>Sportovní masáž</h3><p>Pro sportovce, kteří chtějí dát svalům péči po zátěži.</p></div>
+    <div class="sl"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="#0F3443" stroke-width="2"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="8"/></svg></span><h3>Rekondiční masáž</h3><p>Pravidelná péče pro tělo unavené prací, sezením a stresem.</p></div>
+    <div class="sl"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="#0F3443" stroke-width="2"><path d="M6 4h12v4a6 6 0 0 1-12 0zM9 20h6M12 14v6"/></svg></span><h3>Baňkování</h3><p>Podtlakové baňky na místa, kde svaly drží napětí dlouho.</p></div>
+    <div class="sl"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="#0F3443" stroke-width="2"><path d="M12 2v20M9 5h6M9 9h6M9 13h6M9 17h6"/></svg></span><h3>Dornova metoda</h3><p>Šetrná práce s páteří a klouby, spojená s klasickou masáží zad.</p></div>
+    <div class="sl"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="#0F3443" stroke-width="2"><path d="M8 3c4 0 6 5 5 11s-3 7-5 7-3-3-2-8-2-10 2-10z"/></svg></span><h3>Reflexní a klasická</h3><p>Reflexní masáž chodidel a klasická masáž zad i celého těla.</p></div>
+  </div>
+  <div class="cena"><p><b>Cenu řeknu předem.</b> Zavolejte, co Vás trápí, a dozvíte se cenu i délku masáže hned do telefonu.</p><a class="tl plny" href="tel:+420731614414">Zavolat</a></div>
+</div></section>
+
+<section id="termin" class="tabule"><div class="obal">
+  <p class="stitek" style="color:#8FB0BA">Otevřeno 7 dní v týdnu</p>
+  <h2>Kdy to stihnete?</h2>
+  <p class="uvod">Mám otevřeno každý den od 9 do 20. Klepněte na den, posuňte čas a vyberte, co bolí. Zprávu pošlete SMS, termín potvrdím.</p>
+  <div class="tab-grid">
+    <div class="tyden">
+      <div class="osa"><span></span><span class="cisla"><span>9</span><span>12</span><span>15</span><span>18</span><span>20</span></span></div>
+      <div id="dny" style="display:grid;gap:6px"></div>
+      <small style="color:#8FB0BA">Šrafovaně: státní svátek, otevírací doba se může lišit – raději zavolejte. Bílá čára: teď.</small>
+    </div>
+    <div class="skladac">
+      <div><span class="stitek">Vybraný čas</span><div class="cas" id="cas-txt" aria-live="polite"></div></div>
+      <label for="hod">Kolem kolika hodin<input type="range" id="hod" min="9" max="19" step="0.5" value="17"></label>
+      <div>
+        <span class="stitek">Co bolí</span>
+        <div class="partie" id="partie" style="margin-top:8px">
+          <button type="button" aria-pressed="true" data-v="záda">Záda</button>
+          <button type="button" aria-pressed="false" data-v="šíje">Šíje</button>
+          <button type="button" aria-pressed="false" data-v="nohy po sportu">Nohy po sportu</button>
+          <button type="button" aria-pressed="false" data-v="akutní bolest">Akutní bolest</button>
+        </div>
+      </div>
+      <div class="text" id="text"></div>
+      <div class="tlac"><a class="tl plny" id="sms" href="sms:+420731614414">Poslat SMS</a><button type="button" class="tl obrys" id="kopie">Zkopírovat</button></div>
+      <small style="color:var(--sed)">SMS i volání: 731 614 414</small>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="obal">
+  <p class="stitek">Jednoduše</p>
+  <h2>Jak to probíhá</h2>
+  <ol class="kroky">
+    <li><b>1</b><h3>Napíšete nebo zavoláte</h3><p>Řeknete, co bolí a kdy se Vám hodí. Otevřeno je i o víkendu.</p></li>
+    <li><b>2</b><h3>Přijedete na Školní 492</h3><p>Parkování je u provozovny k dispozici.</p></li>
+    <li><b>3</b><h3>Masáž podle Vás</h3><p>Individuální přístup: technika podle toho, co Vaše tělo potřebuje.</p></li>
+  </ol>
+</div></section>
+
+<section style="background:#E8F1F3"><div class="obal">
+  <p class="stitek">Co o mně víte</p>
+  <h2>Proč Míček</h2>
+  <div class="duv">
+    <div><b>5,0 z 9</b><p>Hodnocení „Fantastické“ od 9 zákazníků na <a href="https://www.firmy.cz/detail/13413413-masaze-micek-zlin.html" target="_blank" rel="noopener">Firmy.cz</a>.</p></div>
+    <div><b>4. místo</b><p>V žebříčku Masáže ve Zlíně na Firmy.cz.</p></div>
+    <div><b>7 dní</b><p>Otevřeno každý den 9–20, i v sobotu a v neděli. IČO 17388171.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-bottom:0"><div class="obal">
+  <p class="stitek">Prostor</p>
+  <h2>Kde masíruji</h2>
+  <div class="fotky">
+    <div class="foto">Sem přijde Vaše fotka<br>masérna</div>
+    <div class="foto">Sem přijde Vaše fotka<br>baňkování</div>
+    <div class="foto">Sem přijde Vaše fotka<br>vchod na Školní</div>
+  </div>
+</div></section>
+
+<section><div class="obal" style="max-width:860px;margin-left:auto;margin-right:auto">
+  <p class="stitek">Otázky</p>
+  <h2>Než přijdete</h2>
+  <div style="margin-top:20px">
+    <details open><summary>Můžu přijít i o víkendu?</summary><p>Ano, otevřeno je každý den od 9 do 20 hodin. Ve svátky se doba může lišit, proto raději zavolejte.</p></details>
+    <details><summary>Chytla mě záda. Vezmete mě rychle?</summary><p>Pomoc od akutní bolesti patří k tomu, co dělám. Zavolejte 731 614 414 a domluvíme nejbližší volný čas.</p></details>
+    <details><summary>Dá se u Vás parkovat?</summary><p>Ano, parkování je k dispozici (podle zápisu na Firmy.cz).</p></details>
+    <details><summary>Prodáváte dárkové poukazy? <span class="demo">ukázkový text</span></summary><p>Doplníme podle Vás.</p></details>
+  </div>
+</div></section>
+
+<section id="kontakt" style="background:#fff"><div class="obal">
+  <p class="stitek">Kontakt</p>
+  <h2>Školní 492, Zlín</h2>
+  <div class="kontakt">
+    <dl>
+      <dt>Telefon</dt><dd><a href="tel:+420731614414">731 614 414</a></dd>
+      <dt>E-mail</dt><dd><a href="mailto:jirkamicek@seznam.cz">jirkamicek@seznam.cz</a></dd>
+      <dt>Adresa</dt><dd>Školní 492, 760 01 Zlín</dd>
+      <dt>Otevřeno</dt><dd>Po–Ne 9:00–20:00</dd>
+      <dt>Parkování</dt><dd>k dispozici</dd>
+    </dl>
+    <div class="mapa">
+      <svg viewBox="0 0 400 220" role="img" aria-label="Orientační plánek: Školní 492, Zlín">
+        <rect width="400" height="220" rx="8" fill="#EEF4F6"/>
+        <path d="M0 120 L400 100" stroke="#fff" stroke-width="20"/>
+        <path d="M250 0 L230 220" stroke="#fff" stroke-width="14"/>
+        <text x="28" y="96" font-family="Rubik, sans-serif" font-size="13" fill="#56656C">Školní</text>
+        <rect x="150" y="128" width="60" height="38" rx="4" fill="#CDEBDD"/><text x="164" y="152" font-family="Rubik, sans-serif" font-size="13" fill="#0F3443">P</text>
+        <circle cx="190" cy="80" r="14" fill="#E4583E"/><circle cx="190" cy="80" r="5" fill="#fff"/>
+        <text x="16" y="206" font-family="Rubik, sans-serif" font-size="12" fill="#56656C">Orientační plánek, ne přesná mapa</text>
+      </svg>
+      <p style="margin:10px 0 0"><a href="https://mapy.cz/zakladni?q=%C5%A0koln%C3%AD%20492%20Zl%C3%ADn" target="_blank" rel="noopener">Otevřít na Mapy.cz</a></p>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer><div class="obal"><p>Masáže Míček · Školní 492, 760 01 Zlín · IČO 17388171</p><p>Nezávazný návrh webu. Texty označené „ukázkový text“ doplníme podle Vás.</p></div></footer>
+<div class="dole"><a class="tl plny" href="tel:+420731614414">Zavolat</a><a class="tl obrys" href="#termin">Najít čas</a></div>
+
+<script>
+(function(){
+  var svatky=["2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08"];
+  var dny=["Ne","Po","Út","St","Čt","Pá","So"],dnyDl=["neděli","pondělí","úterý","středu","čtvrtek","pátek","sobotu"];
+  function iso(x){return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0")}
+  var box=document.getElementById("dny"),ted=new Date(),zvol=null,btns=[];
+  for(var i=0;i<7;i++){
+    var d=new Date(ted.getFullYear(),ted.getMonth(),ted.getDate()+i),sv=svatky.indexOf(iso(d))>-1;
+    var b=document.createElement("button");b.type="button";b.className="den"+(sv?" svatek":"");
+    b.dataset.txt=(i===0?"dnes":(i===1?"zítra":"v "+dnyDl[d.getDay()]))+" "+d.getDate()+". "+(d.getMonth()+1)+".";
+    b.innerHTML='<span class="jm">'+(i===0?"Dnes":dny[d.getDay()])+'<small>'+d.getDate()+". "+(d.getMonth()+1)+'.'+(sv?" svátek":"")+'</small></span><span class="pas"><i></i></span>';
+    if(i===0){var h=ted.getHours()+ted.getMinutes()/60;if(h>=9&&h<=20){var t=document.createElement("span");t.className="ted";t.style.left=((h-9)/11*100)+"%";b.querySelector(".pas").appendChild(t)}}
+    if(sv){b.disabled=true;b.style.cursor="not-allowed"}
+    box.appendChild(b);btns.push(b);
+    if(!sv&&zvol===null&&(i>0||ted.getHours()<18))zvol=i;
+  }
+  if(zvol===null)zvol=1;
+  var hod=document.getElementById("hod"),partie=[].slice.call(document.querySelectorAll("#partie button"));
+  function fmt(v){var h=Math.floor(v),m=v%1?"30":"00";return h+":"+m}
+  function kresli(){
+    btns.forEach(function(b,i){b.setAttribute("aria-pressed",i===zvol?"true":"false");var s=b.querySelector(".vyber");if(s)s.remove();
+      if(i===zvol){var v=document.createElement("span");v.className="vyber";v.style.left="calc("+((hod.value-9)/11*100)+"% - 2px)";b.querySelector(".pas").appendChild(v)}});
+    var den=btns[zvol].dataset.txt;
+    document.getElementById("cas-txt").textContent=den.split(" ")[0]==="v"?den.slice(2)+" · "+fmt(+hod.value):den+" · "+fmt(+hod.value);
+    var co=partie.filter(function(b){return b.getAttribute("aria-pressed")==="true"}).map(function(b){return b.dataset.v});
+    var txt="Dobrý den, chtěl/a bych masáž – "+(co.length?co.join(", "):"poradit, co vybrat")+". Hodilo by se mi "+den+" kolem "+fmt(+hod.value)+". Děkuji.";
+    document.getElementById("text").textContent=txt;
+    document.getElementById("sms").href="sms:+420731614414?body="+encodeURIComponent(txt);
+  }
+  btns.forEach(function(b,i){b.addEventListener("click",function(){if(!b.disabled){zvol=i;kresli()}})});
+  hod.addEventListener("input",kresli);
+  partie.forEach(function(b){b.addEventListener("click",function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true");kresli()})});
+  document.getElementById("kopie").addEventListener("click",function(){var b=this,t=document.getElementById("text").textContent;
+    function nic(){var r=document.createRange();r.selectNodeContents(document.getElementById("text"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Označeno – zkopírujte"}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent="Zkopírováno"},nic)}catch(e){nic()}});
+  kresli();
+})();
+</script>
+</body>
+</html>
