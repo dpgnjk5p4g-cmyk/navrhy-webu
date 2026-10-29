@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Masážní salon Zuzka</title>
+<meta name="description" content="Masážní salon Zuzka v Hrádku u Znojma: lymfatická masáž, sportovně-relaxační masáž, maderoterapie, lifting obličeje a lávové kameny. Masíruje zdravotní sestra s 20 lety praxe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Masážní salon Zuzka","telephone":"+420703320219","email":"prokupkovazuzana@email.cz","address":{"@type":"PostalAddress","streetAddress":"Hrádek 203","postalCode":"671 27","addressLocality":"Hrádek","addressCountry":"CZ"},"founder":{"@type":"Person","name":"Zuzana Prokůpková"},"taxID":"21400938"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Dělený hero: vlevo text, vpravo ilustrace proudů lymfy; pod tím „sesterská“ kontrola a mapka vchodu */
+:root{
+  --inkoust:#22304A;   /* text, tmavé plochy */
+  --lymfa:#2F7F7C;     /* hlavní barva – klidná tyrkysová */
+  --brosk:#F0B49B;     /* teplý akcent – broskev */
+  --mleko:#F4F7F7;     /* pozadí */
+  --bila:#FFFFFF;
+  --sediva:#5A6577;
+  --linka:#D7E2E2;
+  --f-disp:"Young Serif",Georgia,"Times New Roman",serif;
+  --f-text:"Figtree","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mleko);color:var(--inkoust);font:400 17px/1.6 var(--f-text);-webkit-font-smoothing:antialiased}
+a{color:var(--lymfa)}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;line-height:1.12;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4.4vw,42px)}
+h3{font-size:22px}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.banner-navrh{background:var(--inkoust);color:#fff;font-size:13.5px;text-align:center;padding:8px 16px}
+.uk{display:inline-block;font:600 10.5px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border-radius:4px;padding:4px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 17px/1 var(--f-text);text-decoration:none;border-radius:999px;padding:16px 24px;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-call{background:var(--lymfa);color:#fff}
+.btn-call:hover{background:#246764}
+.btn-line{border-color:var(--inkoust);color:var(--inkoust);background:transparent}
+.btn:focus-visible,button:focus-visible,input:focus-visible,label:focus-within{outline:3px solid var(--brosk);outline-offset:2px}
+/* hlavička */
+.top{background:var(--bila);border-bottom:1px solid var(--linka)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--inkoust)}
+.logo b{font:400 22px/1 var(--f-disp)}
+.logo small{display:block;font-size:12.5px;color:var(--sediva);letter-spacing:.04em}
+.top-tel{font-weight:700;text-decoration:none;color:var(--inkoust);white-space:nowrap}
+.top nav{display:flex;gap:22px;font-size:15px}
+.top nav a{color:var(--inkoust);text-decoration:none}
+@media (max-width:860px){.top nav{display:none}}
+/* hero */
+.hero{background:var(--bila)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:44px 56px}
+.hero .eyebrow{font-weight:600;color:var(--lymfa);font-size:15px;margin-bottom:14px}
+.hero h1{font-size:clamp(36px,6vw,64px);margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--lymfa)}
+.hero .lead{font-size:19px;color:var(--sediva);max-width:34em;margin-bottom:26px}
+.hero .akce{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.fakta{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:15px;color:var(--inkoust)}
+.fakta span{display:flex;align-items:center;gap:8px}
+.fakta i{width:8px;height:8px;border-radius:50%;background:var(--brosk);display:inline-block}
+.ilu{min-width:0}
+.ilu svg{width:100%;height:auto;display:block;max-width:520px;margin-left:auto}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:26px;padding-block:26px 34px}.ilu svg{max-width:260px;margin:0 auto}}
+/* sekce */
+section{padding-block:64px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:30px;max-width:640px}
+.sec-head p{color:var(--sediva)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sluzba{background:var(--bila);border:1px solid var(--linka);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.sluzba .ik{width:44px;height:44px;border-radius:12px;background:#E3F1F0;display:grid;place-items:center}
+.sluzba .ik svg{width:26px;height:26px}
+.sluzba p{color:var(--sediva);font-size:16px}
+.sluzba .pro{font-size:14px;color:var(--lymfa);font-weight:600;margin-top:auto}
+@media (max-width:900px){.sluzby{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sluzby{grid-template-columns:1fr}}
+.cena-pozn{margin-top:22px;background:var(--inkoust);color:#fff;border-radius:18px;padding:22px 24px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between}
+.cena-pozn p{max-width:46em}
+.cena-pozn .btn-call{background:var(--brosk);color:var(--inkoust)}
+/* rozcestník + sestra */
+.dvoj{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:900px){.dvoj{grid-template-columns:1fr}}
+.panel{background:var(--bila);border-radius:22px;padding:26px;border:1px solid var(--linka);min-width:0}
+.panel h3{margin-bottom:6px}
+.panel .pod{color:var(--sediva);font-size:15.5px;margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{font:500 15px/1.2 var(--f-text);border:1.5px solid var(--linka);background:var(--mleko);color:var(--inkoust);border-radius:999px;padding:10px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--lymfa);border-color:var(--lymfa);color:#fff}
+.vysl{background:#E3F1F0;border-radius:14px;padding:16px 18px;min-height:96px}
+.vysl b{display:block;font:400 21px/1.2 var(--f-disp);margin-bottom:4px}
+.vysl p{font-size:15.5px;color:var(--inkoust)}
+.sestra{background:var(--inkoust);color:#fff;border:0}
+.sestra .pod{color:#C8D3E0}
+.sestra h3{color:#fff}
+.odznak{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px 6px 6px;font-size:13.5px;margin-bottom:14px}
+.odznak svg{width:26px;height:26px}
+.check{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.check label{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border-radius:12px;padding:11px 14px;cursor:pointer;font-size:15.5px}
+.check input{width:20px;height:20px;accent-color:var(--brosk);margin:2px 0 0;flex:none}
+.verdikt{border-radius:14px;padding:14px 16px;font-size:15.5px;background:#2E6B4F}
+.verdikt.ne{background:#8A3B2E}
+.verdikt b{display:block;font-size:17px;margin-bottom:2px}
+.sms{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.sms textarea{width:100%;min-height:86px;border-radius:12px;border:1.5px solid var(--linka);padding:12px;font:400 15.5px/1.5 var(--f-text);color:var(--inkoust);background:var(--mleko);resize:vertical}
+.sms .row{display:flex;flex-wrap:wrap;gap:10px}
+.sms .btn{padding:13px 18px;font-size:16px}
+.mini{font-size:13.5px;color:var(--sediva)}
+/* o mně */
+.omne{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+@media (max-width:820px){.omne{grid-template-columns:1fr}}
+.foto{aspect-ratio:4/5;max-height:460px;width:100%;max-width:100%;border-radius:22px;border:2px dashed #9DB9B8;background:repeating-linear-gradient(135deg,#EAF3F3 0 14px,#F4F7F7 14px 28px);display:grid;place-items:center;text-align:center;color:var(--lymfa);font-weight:600;padding:20px}
+.citat{font:400 clamp(24px,3.4vw,34px)/1.25 var(--f-disp);margin-bottom:18px}
+.citat span{color:var(--lymfa)}
+.duvera{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.duvera div{background:var(--bila);border:1px solid var(--linka);border-radius:14px;padding:14px 16px;font-size:15px}
+.duvera b{display:block;font:400 26px/1.1 var(--f-disp);color:var(--lymfa)}
+@media (max-width:560px){.duvera{grid-template-columns:1fr}}
+/* kroky */
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:k}
+.krok{border-top:3px solid var(--lymfa);padding-top:16px}
+.krok b{font:400 22px/1.2 var(--f-disp);display:block;margin-bottom:6px}
+.krok p{color:var(--sediva);font-size:16px}
+@media (max-width:760px){.kroky{grid-template-columns:1fr}}
+/* kde nás najdete */
+.kde{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+@media (max-width:860px){.kde{grid-template-columns:1fr}}
+.mapka{background:var(--bila);border:1px solid var(--linka);border-radius:22px;padding:18px;min-width:0}
+.mapka svg{width:100%;height:auto;display:block}
+.kontakt{background:var(--inkoust);color:#fff;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.kontakt a{color:#fff}
+.kontakt dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:16px}
+.kontakt dt{color:#AFC0D3}
+.kontakt dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.kontakt .btn-call{background:var(--brosk);color:var(--inkoust);align-self:flex-start}
+/* FAQ */
+.faq details{background:var(--bila);border:1px solid var(--linka);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:600;font-size:17px}
+.faq details p{color:var(--sediva);margin-top:8px;font-size:16px}
+footer{background:var(--inkoust);color:#C8D3E0;font-size:14px;padding-block:28px 96px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between}
+footer a{color:#fff}
+/* mobilní lišta */
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bila);border-top:1px solid var(--linka);display:none;gap:10px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista .btn{flex:1;padding:14px 10px}
+@media (max-width:760px){.lista{display:flex}}
+@media (prefers-reduced-motion:no-preference){.tok{stroke-dasharray:8 10;animation:tec 6s linear infinite}@keyframes tec{to{stroke-dashoffset:-180}}}
+</style>
+
+<div class="banner-navrh">Nezávazný návrh webu – není to oficiální stránka firmy Masážní salon Zuzka</div>
+
+<div class="top" role="banner">
+  <div class="wrap">
+    <a class="logo" href="#uvod" aria-label="Masážní salon Zuzka – úvod">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2F7F7C"/><path d="M11 15c4-3 8 3 12 0s6-2 6-2M11 21c4-3 8 3 12 0s6-2 6-2M11 27c4-3 8 3 12 0s6-2 6-2" stroke="#F0B49B" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      <span><b>Salon Zuzka</b><small>masáže · Hrádek u Znojma</small></span>
+    </a>
+    <nav aria-label="Hlavní menu"><a href="#sluzby">Masáže</a><a href="#co-mi-sedne">Co mi sedne</a><a href="#o-mne">O mně</a><a href="#kde">Kde mě najdete</a></nav>
+    <a class="top-tel" href="tel:+420703320219">703 320 219</a>
+  </div>
+</div>
+
+<main id="uvod">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Masážní salon Zuzka · Hrádek u Znojma</p>
+      <h1>Masáž od zdravotní sestry. <em>Lehké nohy</em>, volná záda.</h1>
+      <p class="lead">Lymfatická a sportovně-relaxační masáž, maderoterapie, lifting obličeje a lávové kameny. Masíruje Zuzana Prokůpková, všeobecná sestra s 20 lety praxe ve zdravotnictví.</p>
+      <div class="akce">
+        <a class="btn btn-call" href="tel:+420703320219"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Objednat se: 703 320 219</a>
+        <a class="btn btn-line" href="#co-mi-sedne">Kterou masáž vybrat?</a>
+      </div>
+      <div class="fakta">
+        <span><i></i>Hrádek 203, hasičská zbrojnice – vchod vpravo</span>
+        <span><i></i>Termín domluvíme po telefonu</span>
+      </div>
+    </div>
+    <div class="ilu" aria-hidden="true">
+      <svg viewBox="0 0 520 460">
+        <rect x="20" y="20" width="480" height="420" rx="210" fill="#E3F1F0"/>
+        <path d="M150 400c10-90 20-160 70-220 25-30 30-70 25-100" fill="none" stroke="#22304A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M370 400c-10-90-20-160-70-220-25-30-30-70-25-100" fill="none" stroke="#22304A" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="260" cy="60" r="0" fill="none"/>
+        <path class="tok" d="M195 395c8-70 16-130 52-180" stroke="#2F7F7C" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path class="tok" d="M325 395c-8-70-16-130-52-180" stroke="#2F7F7C" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path class="tok" d="M260 390V150" stroke="#2F7F7C" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <g fill="#F0B49B"><circle cx="247" cy="215" r="11"/><circle cx="273" cy="215" r="11"/><circle cx="260" cy="150" r="13"/><circle cx="210" cy="300" r="8"/><circle cx="310" cy="300" r="8"/></g>
+        <g fill="#22304A" font-family="Figtree,Arial,sans-serif" font-size="15" font-weight="600">
+          <text x="300" y="140">mízní uzliny</text>
+          <text x="58" y="300">směr masáže</text>
+        </g>
+        <path d="M150 292h48" stroke="#22304A" stroke-width="1.5"/>
+        <path d="M290 136l-18 8" stroke="#22304A" stroke-width="1.5"/>
+        <g transform="translate(372 330)"><rect width="118" height="64" rx="14" fill="#22304A"/><text x="14" y="27" fill="#F0B49B" font-family="Young Serif,Georgia,serif" font-size="20">20 let</text><text x="14" y="48" fill="#fff" font-family="Figtree,Arial,sans-serif" font-size="13">ve zdravotnictví</text></g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="sluzby">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Masáže a ošetření</h2>
+      <p>Šest věcí, které v salonu děláte nejčastěji. U každé je napsané, komu pomáhá, ať víte, co si objednat.</p>
+    </div>
+    <div class="sluzby">
+      <article class="sluzba">
+        <div class="ik"><svg viewBox="0 0 26 26" fill="none" stroke="#2F7F7C" stroke-width="2" stroke-linecap="round"><path d="M4 9c3-2 6 2 9 0s6-2 9 0M4 14c3-2 6 2 9 0s6-2 9 0M4 19c3-2 6 2 9 0s6-2 9 0"/></svg></div>
+        <h3>Lymfatická masáž</h3>
+        <p>Lymfodrenáž pomalými, jemnými tahy ve směru toku mízy. Podporuje odvod tekutin z těla.</p>
+        <span class="pro">Pro oteklé a těžké nohy</span>
+      </article>
+      <article class="sluzba">
+        <div class="ik"><svg viewBox="0 0 26 26" fill="none" stroke="#2F7F7C" stroke-width="2" stroke-linecap="round"><path d="M6 20l5-9 4 5 5-11"/><circle cx="20" cy="5" r="2"/></svg></div>
+        <h3>Sportovně-relaxační masáž</h3>
+        <p>Regenerace po námaze, uvolnění ztuhlých svalů a napětí, lepší prokrvení.</p>
+        <span class="pro">Po sportu, práci a stresu</span>
+      </article>
+      <article class="sluzba">
+        <div class="ik"><svg viewBox="0 0 26 26" fill="none" stroke="#2F7F7C" stroke-width="2" stroke-linecap="round"><rect x="4" y="9" width="18" height="8" rx="4"/><path d="M8 9v8M13 9v8M18 9v8"/></svg></div>
+        <h3>Maderoterapie</h3>
+        <p>Terapie dřevěnými nástroji. Pomáhá na celulitidu, tvarování postavy a zpevnění pokožky.</p>
+        <span class="pro">Pro postavu a pevnější pleť</span>
+      </article>
+      <article class="sluzba">
+        <div class="ik"><svg viewBox="0 0 26 26" fill="none" stroke="#2F7F7C" stroke-width="2" stroke-linecap="round"><ellipse cx="13" cy="13" rx="7" ry="9"/><path d="M10 11h.01M16 11h.01M10 17c2 1.3 4 1.3 6 0"/></svg></div>
+        <h3>Manuální lifting obličeje</h3>
+        <p>Masáž obličeje rukama pro pevnější kontury a méně viditelné vrásky.</p>
+        <span class="pro">Pro svěží obličej</span>
+      </article>
+      <article class="sluzba">
+        <div class="ik"><svg viewBox="0 0 26 26" fill="#2F7F7C"><ellipse cx="9" cy="16" rx="6" ry="4"/><ellipse cx="18" cy="11" rx="5" ry="3.4"/></svg></div>
+        <h3>Masáž lávovými kameny</h3>
+        <p>Klasické hmaty spojené s teplem nahřátých čedičových kamenů, na závěr chvíle klidu s kameny podél páteře.</p>
+        <span class="pro">Když je Vám zima a nemůžete vypnout</span>
+      </article>
+      <article class="sluzba">
+        <div class="ik"><svg viewBox="0 0 26 26" fill="none" stroke="#2F7F7C" stroke-width="2.4" stroke-linecap="round"><path d="M7 4c-2 6 0 12 4 18M13 4c-2 6 0 12 4 18"/></svg></div>
+        <h3>Tejpování</h3>
+        <p>Kineziologické tejpy na namožené svaly a klouby, aby úleva vydržela i po masáži.</p>
+        <span class="pro">Po zranění a přetížení</span>
+      </article>
+    </div>
+    <div class="cena-pozn">
+      <p><b>Cenu Vám řeknu předem do telefonu.</b> Záleží na délce a druhu masáže. Ceník doplníme podle Vás.<span class="uk">ukázkový text</span></p>
+      <a class="btn btn-call" href="tel:+420703320219">Zavolat 703 320 219</a>
+    </div>
+  </div>
+</section>
+
+<section id="co-mi-sedne" style="background:#E8F0F0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Co Vám sedne a můžete dnes přijít?</h2>
+      <p>Vyberte, co Vás trápí, a zaškrtněte, jak se dnes cítíte. Zprávu pak pošlete jednou SMS.</p>
+    </div>
+    <div class="dvoj">
+      <div class="panel">
+        <h3>1. Co Vás trápí?</h3>
+        <p class="pod">Orientační doporučení z nabídky salonu. Přesně se domluvíme po telefonu.</p>
+        <div class="chips" id="potize" role="group" aria-label="Potíže">
+          <button class="chip" type="button" id="p-nohy" data-k="nohy" aria-pressed="true">Oteklé, těžké nohy</button>
+          <button class="chip" type="button" id="p-zada" data-k="zada" aria-pressed="false">Ztuhlá záda po práci</button>
+          <button class="chip" type="button" id="p-sport" data-k="sport" aria-pressed="false">Po sportu</button>
+          <button class="chip" type="button" id="p-celulitida" data-k="celulitida" aria-pressed="false">Celulitida</button>
+          <button class="chip" type="button" id="p-oblicej" data-k="oblicej" aria-pressed="false">Unavený obličej</button>
+          <button class="chip" type="button" id="p-zima" data-k="zima" aria-pressed="false">Stres a zima v těle</button>
+        </div>
+        <div class="vysl" id="doporuceni" aria-live="polite"><b>Lymfatická masáž</b><p>Jemné tahy ve směru toku mízy uleví nohám, které večer těžknou.</p></div>
+      </div>
+      <div class="panel sestra">
+        <div class="odznak"><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#F0B49B"/><path d="M13 7v12M7 13h12" stroke="#22304A" stroke-width="3"/></svg>Kontrola od zdravotní sestry</div>
+        <h3>2. Můžete dnes na masáž?</h3>
+        <p class="pod">Zaškrtněte, co pro Vás dnes platí. Vychází to ze seznamu „Kdy se masáž nesmí provádět“.</p>
+        <div class="check" id="kontra">
+          <label><input type="checkbox" id="k1"> Mám teplotu, kašel nebo rýmu</label>
+          <label><input type="checkbox" id="k2"> Mám infekční nebo zánětlivé onemocnění</label>
+          <label><input type="checkbox" id="k3"> Mám kožní onemocnění v místě masáže</label>
+          <label><input type="checkbox" id="k4"> Jsem těhotná</label>
+          <label><input type="checkbox" id="k5"> Léčím se s nádorovým onemocněním nebo poruchou srážlivosti</label>
+        </div>
+        <div class="verdikt" id="verdikt" aria-live="polite"><b>Můžete se objednat.</b>Nic z toho dnes neplatí, napište si o termín.</div>
+        <div class="sms">
+          <label class="mini" for="zprava" style="color:#C8D3E0">Zpráva pro Zuzku (můžete upravit):</label>
+          <textarea id="zprava"></textarea>
+          <div class="row">
+            <a class="btn btn-call" id="poslat" href="sms:+420703320219" style="background:var(--brosk);color:var(--inkoust)">Poslat SMS</a>
+            <a class="btn btn-line" href="tel:+420703320219" style="border-color:#fff;color:#fff">Raději zavolám</a>
+          </div>
+          <p class="mini" style="color:#AFC0D3">Číslo: 703 320 219. Nejde o lékařskou radu; při pochybnostech se poraďte s lékařem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="o-mne">
+  <div class="wrap omne">
+    <div class="foto">Sem přijde Vaše fotka<br>(Zuzka v salonu)</div>
+    <div>
+      <p class="citat">„Jmenuji se Zuzka Prokůpková a jsem <span>všeobecná sestra s 20 letou praxí</span> ve zdravotnictví.“</p>
+      <p style="color:var(--sediva);margin-bottom:12px">Lymfatické masáži a maderoterapii se věnuji nejvíc. Jako sestra vím, kdy masáž pomůže a kdy je lepší počkat, a řeknu Vám to na rovinu.<span class="uk">ukázkový text</span></p>
+      <div class="duvera">
+        <div><b>20 let</b>praxe ve zdravotnictví</div>
+        <div><b>6</b>druhů masáží a ošetření</div>
+        <div><b>IČO</b>21400938, Hrádek 203</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bila)">
+  <div class="wrap">
+    <div class="sec-head"><h2>Jak to probíhá</h2></div>
+    <div class="kroky">
+      <div class="krok"><b>Zavoláte nebo napíšete</b><p>Řeknete, co Vás trápí. Domluvíme druh masáže, délku, cenu a čas.</p></div>
+      <div class="krok"><b>Přijdete do Hrádku</b><p>Budova hasičské zbrojnice, vchod vpravo. Krátce se zeptám na zdraví a začneme.</p></div>
+      <div class="krok"><b>Odejdete lehčí</b><p>Na závěr dostanete radu, co dělat doma a kdy je dobré přijít znovu.<span class="uk">ukázkový text</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kde">
+  <div class="wrap">
+    <div class="sec-head"><h2>Kde mě najdete</h2><p>Hrádek 203, v budově hasičské zbrojnice. Vchod je vpravo.</p></div>
+    <div class="kde">
+      <div class="mapka" aria-label="Náčrt vchodu do salonu">
+        <svg viewBox="0 0 560 300" role="img" aria-labelledby="mapka-t"><title id="mapka-t">Náčrt budovy hasičské zbrojnice se vchodem do salonu vpravo</title>
+          <rect width="560" height="300" rx="16" fill="#F4F7F7"/>
+          <rect x="0" y="240" width="560" height="60" fill="#D7E2E2"/>
+          <text x="20" y="278" font-family="Figtree,Arial,sans-serif" font-size="15" fill="#5A6577">ulice v Hrádku</text>
+          <path d="M110 240V110l130-60 130 60v130z" fill="#fff" stroke="#22304A" stroke-width="3"/>
+          <rect x="165" y="150" width="150" height="90" rx="4" fill="#E9EEF3" stroke="#22304A" stroke-width="3"/>
+          <path d="M165 172h150M165 194h150M165 216h150" stroke="#B8C4D2" stroke-width="2"/>
+          <text x="240" y="132" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="14" font-weight="700" fill="#22304A">HASIČSKÁ ZBROJNICE</text>
+          <rect x="340" y="176" width="26" height="64" rx="3" fill="#2F7F7C"/>
+          <circle cx="360" cy="210" r="2.6" fill="#fff"/>
+          <path d="M470 150c-30 0-60 10-90 30" stroke="#F0B49B" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M392 168l-14 14 19 4" stroke="#F0B49B" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="400" y="96" width="140" height="56" rx="12" fill="#22304A"/>
+          <text x="470" y="120" text-anchor="middle" font-family="Young Serif,Georgia,serif" font-size="17" fill="#fff">Salon Zuzka</text>
+          <text x="470" y="140" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="13" fill="#F0B49B">vchod vpravo</text>
+        </svg>
+        <p class="mini" style="margin-top:8px">Zjednodušený náčrt. <a href="https://mapy.cz/zakladni?q=Hr%C3%A1dek%20203%2C%20671%2027" target="_blank" rel="noopener">Otevřít Hrádek 203 v Mapy.cz</a></p>
+      </div>
+      <div class="kontakt">
+        <h3 style="color:#fff">Kontakt</h3>
+        <dl>
+          <dt>Telefon</dt><dd><a href="tel:+420703320219">703 320 219</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:prokupkovazuzana@email.cz">prokupkovazuzana@email.cz</a></dd>
+          <dt>Adresa</dt><dd>Hrádek 203, 671 27<br>budova hasičské zbrojnice, vchod vpravo</dd>
+          <dt>Kdy</dt><dd>Podle objednání. Otevírací dobu doplníme podle Vás.<span class="uk">ukázkový text</span></dd>
+          <dt>Facebook</dt><dd><a href="https://www.facebook.com/groups/1789862404893912/" target="_blank" rel="noopener">Skupina salonu</a></dd>
+        </dl>
+        <a class="btn btn-call" href="tel:+420703320219">Objednat se</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Časté otázky</h2></div>
+    <details><summary>Kolik stojí masáž?</summary><p>Cenu Vám řeknu předem do telefonu podle druhu a délky masáže.</p></details>
+    <details><summary>Můžu přijít, když jsem nachlazená?</summary><p>Ne. Při kašli, rýmě nebo zvýšené teplotě se masáž nedělá. Zavolejte a přeobjednáme Vás.</p></details>
+    <details><summary>Co si mám vzít s sebou?</summary><p>Stačí pohodlné oblečení. Ručník a oleje jsou připravené v salonu.<span class="uk">ukázkový text</span></p></details>
+    <details><summary>Jak poznám, kterou masáž zvolit?</summary><p>Vyberte potíž v rozcestníku výše, nebo zavolejte a poradím Vám.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Masážní salon Zuzka · Zuzana Prokůpková · IČO 21400938 · Hrádek 203, 671 27</span>
+    <span><a href="tel:+420703320219">703 320 219</a> · <a href="mailto:prokupkovazuzana@email.cz">prokupkovazuzana@email.cz</a></span>
+  </div>
+</footer>
+
+<div class="lista">
+  <a class="btn btn-call" href="tel:+420703320219">Zavolat</a>
+  <a class="btn btn-line" href="#co-mi-sedne">Kterou masáž?</a>
+</div>
+
+<script>
+(function(){
+  var data={
+    nohy:["Lymfatická masáž","Jemné tahy ve směru toku mízy uleví nohám, které večer těžknou."],
+    zada:["Sportovně-relaxační masáž","Uvolní ztuhlé svaly a napětí po dlouhém dni v práci."],
+    sport:["Sportovně-relaxační masáž + tejp","Regenerace po námaze; namožené místo můžeme otejpovat."],
+    celulitida:["Maderoterapie","Dřevěné nástroje na celulitidu, tvarování postavy a zpevnění pokožky."],
+    oblicej:["Manuální lifting obličeje","Masáž obličeje pro pevnější kontury a svěží vzhled."],
+    zima:["Masáž lávovými kameny","Teplo čedičových kamenů prohřeje a pomůže vypnout hlavu."]
+  };
+  var vyber="nohy";
+  var chips=document.querySelectorAll('#potize .chip');
+  var kontra=document.querySelectorAll('#kontra input');
+  var ver=document.getElementById('verdikt');
+  var dop=document.getElementById('doporuceni');
+  var ta=document.getElementById('zprava');
+  var odkaz=document.getElementById('poslat');
+  var upraveno=false;
+  ta.addEventListener('input',function(){upraveno=true;nastavOdkaz();});
+  function nastavOdkaz(){odkaz.href='sms:+420703320219?body='+encodeURIComponent(ta.value);}
+  function prekresli(){
+    var d=data[vyber];
+    dop.innerHTML='<b>'+d[0]+'</b><p>'+d[1]+'</p>';
+    var nelze=Array.prototype.some.call(kontra,function(i){return i.checked;});
+    if(nelze){ver.className='verdikt ne';ver.innerHTML='<b>Dnes raději ne.</b>S touto potíží se masáž nedělá. Zavolejte a domluvíme termín, až budete fit.';}
+    else{ver.className='verdikt';ver.innerHTML='<b>Můžete se objednat.</b>Nic z toho dnes neplatí, napište si o termín.';}
+    if(!upraveno){
+      ta.value=nelze?'Dobrý den, chtěl(a) bych se objednat na '+d[0].toLowerCase()+', ale teď jsem nemocný/á. Můžeme termín domluvit za týden? Děkuji.':'Dobrý den, chtěl(a) bych se objednat na '+d[0].toLowerCase()+'. Který termín máte volný? Děkuji.';
+    }
+    nastavOdkaz();
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){vyber=c.getAttribute('data-k');chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false');});upraveno=false;prekresli();});});
+  kontra.forEach(function(i){i.addEventListener('change',function(){upraveno=false;prekresli();});});
+  prekresli();
+})();
+</script>
+</body>
+</html>

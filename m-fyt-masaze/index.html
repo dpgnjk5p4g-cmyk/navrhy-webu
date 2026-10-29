@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – M-FYT Masáže</title>
+<meta name="description" content="M-FYT Masáže v Blížkovicích u Znojma: masáže a regenerace, baňkování, tejpování, rehabilitační cvičení a poradenství při bolestech zad a po úrazech. Objednání na 732 498 294.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"M-FYT Masáže","telephone":"+420732498294","email":"pointra@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Blížkovice 454","postalCode":"671 55","addressLocality":"Blížkovice","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday"],"opens":"17:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"18:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday"],"opens":"08:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"13:00","closes":"20:00"}],"taxID":"09510397"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Karta přes dvoubarevnou plochu (ocel/beton); výrazný prvek: úhloměr rozsahu pohybu, který složí SMS */
+:root{
+  --ocel:#24415E;      /* hlavní tmavá */
+  --limet:#B5D334;     /* signální akcent (jen na tmavé nebo jako plocha s tmavým textem) */
+  --beton:#ECEEEA;     /* pozadí */
+  --uhel:#1B1F23;      /* text */
+  --tlum:#55606B;
+  --linka:#D3D8D2;
+  --bila:#FFFFFF;
+  --f-disp:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --f-text:"Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--beton);color:var(--uhel);font:400 17.5px/1.55 var(--f-text)}
+h1,h2,h3{font-family:var(--f-disp);font-weight:700;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+h2{font-size:clamp(34px,5vw,54px)}
+h3{font-size:25px}
+p{margin:0}
+a{color:var(--ocel)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.banner-navrh{background:var(--uhel);color:#fff;font-size:13.5px;text-align:center;padding:8px 16px}
+.uk{display:inline-block;font:700 10.5px/1 var(--f-text);letter-spacing:.07em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border-radius:3px;padding:4px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 21px/1 var(--f-disp);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border-radius:2px;padding:16px 24px;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-call{background:var(--limet);color:var(--uhel)}
+.btn-call:hover{background:#C6E24A}
+.btn-dark{background:var(--ocel);color:#fff}
+.btn-line{border-color:currentColor;color:var(--ocel);background:transparent}
+:focus-visible{outline:3px solid #F29E38;outline-offset:2px}
+.top{background:var(--ocel);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font:700 28px/1 var(--f-disp);letter-spacing:.02em;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo span{color:var(--limet)}
+.logo small{font:600 13px/1.2 var(--f-text);letter-spacing:.08em;text-transform:uppercase;color:#C5D2DF}
+.top nav{display:flex;gap:22px;font-size:15.5px}
+.top nav a{color:#fff;text-decoration:none}
+.top .tel{color:var(--limet);font-weight:700;text-decoration:none;white-space:nowrap}
+@media (max-width:860px){.top nav{display:none}.logo small{display:none}}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--ocel) 0 56%,var(--beton) 56% 100%);padding-block:30px 50px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+.karta{background:var(--bila);border-radius:4px;padding:34px;box-shadow:0 18px 40px rgba(20,35,50,.18);min-width:0}
+.karta .mesto{font:600 15px/1 var(--f-text);letter-spacing:.12em;text-transform:uppercase;color:var(--tlum);margin-bottom:14px}
+.karta h1{font-size:clamp(44px,7vw,84px);color:var(--ocel);margin-bottom:16px}
+.karta h1 mark{background:var(--limet);color:var(--uhel);padding:0 .08em}
+.karta .lead{font-size:19px;color:var(--tlum);max-width:34em}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.tyden{background:var(--uhel);color:#fff;border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.tyden h3{color:var(--limet);font-size:22px}
+.tyden ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-variant-numeric:tabular-nums}
+.tyden li{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;font-size:15.5px}
+.tyden .bar{height:10px;background:rgba(255,255,255,.12);border-radius:2px;position:relative;overflow:hidden}
+.tyden .bar i{position:absolute;top:0;bottom:0;background:var(--limet);border-radius:2px}
+.tyden li.dnes{color:var(--limet);font-weight:700}
+.tyden small{color:#AEB8C2;font-size:13.5px}
+@media (max-width:900px){.hero{background:linear-gradient(180deg,var(--ocel) 0 220px,var(--beton) 220px 100%);padding-block:20px 40px}.hero-grid{grid-template-columns:1fr}.karta{padding:24px}}
+section{padding-block:66px}
+.sec-head{max-width:680px;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.sec-head p{color:var(--tlum)}
+.stitek{font:700 14px/1 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--ocel)}
+/* služby */
+.sluzby{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--linka);border:2px solid var(--linka)}
+.sl{background:var(--bila);padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.sl .n{font:700 15px/1 var(--f-disp);letter-spacing:.1em;color:var(--tlum)}
+.sl p{color:var(--tlum);font-size:16.5px}
+.sl.vyber{background:var(--ocel);color:#fff}
+.sl.vyber p,.sl.vyber .n{color:#C5D2DF}
+@media (max-width:900px){.sluzby{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sluzby{grid-template-columns:1fr}}
+.pozn{margin-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 22px;font-size:17px}
+/* úhloměr */
+.gonio-sek{background:var(--ocel);color:#fff}
+.gonio-sek .sec-head p{color:#C5D2DF}
+.gonio-sek .stitek{color:var(--limet)}
+.gonio{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+@media (max-width:860px){.gonio{grid-template-columns:1fr}}
+.dial{background:var(--uhel);border-radius:4px;padding:18px;min-width:0}
+.dial svg{width:100%;max-width:440px;display:block;margin:0 auto;height:auto}
+.ovl{display:flex;flex-direction:column;gap:18px;min-width:0}
+.ovl b.l{display:block;font:600 14px/1 var(--f-text);letter-spacing:.12em;text-transform:uppercase;color:#C5D2DF;margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 16px/1.2 var(--f-text);border:2px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:2px;padding:10px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--limet);border-color:var(--limet);color:var(--uhel)}
+input[type=range]{width:100%;accent-color:var(--limet);height:28px}
+.hodnota{font:700 44px/1 var(--f-disp);color:var(--limet);font-variant-numeric:tabular-nums}
+.hodnota small{font:400 16px/1.3 var(--f-text);color:#C5D2DF;display:block;margin-top:4px}
+textarea{width:100%;min-height:100px;border:0;border-radius:2px;padding:12px;font:400 16px/1.5 var(--f-text);color:var(--uhel);background:var(--beton);resize:vertical}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.mini{font-size:13.5px;color:#AEB8C2}
+/* cesta */
+.cesta{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.etapa{padding:22px 22px 22px 0;border-top:6px solid var(--ocel);position:relative}
+.etapa:nth-child(2){border-color:#4F7695}
+.etapa:nth-child(3){border-color:var(--limet)}
+.etapa b{display:block;font:700 28px/1 var(--f-disp);text-transform:uppercase;margin-bottom:8px}
+.etapa p{color:var(--tlum);font-size:16.5px}
+.etapa .co{font-weight:600;color:var(--uhel);margin-top:8px;font-size:15.5px}
+@media (max-width:760px){.cesta{grid-template-columns:1fr}.etapa{padding-right:0}}
+/* důvěra */
+.duvera{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center}
+@media (max-width:820px){.duvera{grid-template-columns:1fr}}
+.foto{width:100%;max-width:100%;aspect-ratio:4/3;border:2px dashed #9AAABB;background:repeating-linear-gradient(90deg,#E2E7E2 0 16px,#ECEEEA 16px 32px);display:grid;place-items:center;text-align:center;color:var(--ocel);font-weight:700;padding:20px}
+.fakta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.fakta div{background:var(--bila);border-left:4px solid var(--limet);padding:12px 14px;font-size:15.5px}
+.fakta b{display:block;font:700 24px/1.1 var(--f-disp);color:var(--ocel)}
+@media (max-width:480px){.fakta{grid-template-columns:1fr}}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:820px){.kontakt{grid-template-columns:1fr}}
+.kk{background:var(--bila);padding:26px;border-radius:4px;min-width:0}
+.kk dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:12px 0 18px}
+.kk dt{color:var(--tlum)}
+.kk dd{margin:0;overflow-wrap:anywhere}
+.tab{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:10px}
+.tab td{padding:8px 0;border-bottom:1px solid var(--linka)}
+.tab td:last-child{text-align:right}
+.tab tr.dnes td{font-weight:700;color:var(--ocel)}
+.faq details{background:var(--bila);padding:16px 18px;margin-bottom:8px;border-radius:2px}
+.faq summary{cursor:pointer;font-weight:700;font-size:17.5px}
+.faq details p{color:var(--tlum);margin-top:8px}
+footer{background:var(--uhel);color:#AEB8C2;font-size:14px;padding-block:28px 96px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+footer a{color:#fff}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:10px;background:var(--uhel);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista .btn{flex:1;padding:14px 8px}
+.lista .btn-line{color:#fff}
+@media (max-width:760px){.lista{display:flex}.btn{font-size:19px;padding:15px 16px}.lista .btn{white-space:nowrap}}
+</style>
+
+<div class="banner-navrh">Nezávazný návrh webu – není to oficiální stránka firmy M-FYT Masáže</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <a class="logo" href="#uvod">M-<span>FYT</span><small style="margin-left:6px">masáže · Blížkovice</small></a>
+  <nav aria-label="Hlavní menu"><a href="#sluzby">Služby</a><a href="#rozsah">Rozsah pohybu</a><a href="#cesta">Po úrazu</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="tel" href="tel:+420732498294">732 498 294</a>
+</div></div>
+
+<main id="uvod">
+<div class="hero"><div class="wrap hero-grid">
+  <div class="karta">
+    <p class="mesto">Blížkovice · Znojemsko</p>
+    <h1>Zpátky do <mark>pohybu</mark></h1>
+    <p class="lead">Masáže a regenerace, baňkování, tejpování a rehabilitační cvičení. Pomůžu při bolestech zad a kloubů i po úrazu. Večery ve všední dny a celý víkend.</p>
+    <div class="akce">
+      <a class="btn btn-call" href="tel:+420732498294"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Objednat: 732 498 294</a>
+      <a class="btn btn-line" href="#rozsah">Popsat potíž</a>
+    </div>
+  </div>
+  <div class="tyden" aria-label="Provozní doba">
+    <h3>Kdy mě zastihnete</h3>
+    <ol id="tyden"></ol>
+    <small>Provoz dle objednání Po–Ne. Ve svátky se doba může lišit (Firmy.cz).</small>
+  </div>
+</div></div>
+
+<section id="sluzby"><div class="wrap">
+  <div class="sec-head"><span class="stitek">Služby</span><h2>Od masáže po cvičení</h2><p>Všechno, co tělo potřebuje po přetížení nebo zranění, na jednom místě v Blížkovicích.</p></div>
+  <div class="sluzby">
+    <div class="sl vyber"><span class="n">01 · NEJČASTĚJŠÍ</span><h3>Masáže a regenerace</h3><p>Uvolnění ztuhlých svalů po práci a sportu, rychlejší regenerace.</p></div>
+    <div class="sl"><span class="n">02</span><h3>Měkké a mobilizační techniky</h3><p>Uvolnění zatuhlých tkání a kloubů, aby se znovu volně hýbaly.</p></div>
+    <div class="sl"><span class="n">03</span><h3>Baňkování</h3><p>Podtlakové baňky na zatuhlá místa na zádech a ramenou.</p></div>
+    <div class="sl"><span class="n">04</span><h3>Tejpování</h3><p>Kineziologický tejp podpoří sval nebo kloub i mezi návštěvami.</p></div>
+    <div class="sl"><span class="n">05</span><h3>Rehabilitační cvičení</h3><p>Cviky, které posílí oslabená místa, abyste bolest nemuseli řešit znovu.</p></div>
+    <div class="sl"><span class="n">06</span><h3>Poradenství</h3><p>Při bolestech pohybového aparátu a po úrazech: co dělat a čemu se vyhnout.</p></div>
+  </div>
+  <div class="pozn"><p><b>Cenu řeknu předem do telefonu.</b> Ceník doplníme podle Vás.<span class="uk">ukázkový text</span></p><a class="btn btn-dark" href="tel:+420732498294">Zavolat</a></div>
+</div></section>
+
+<section class="gonio-sek" id="rozsah"><div class="wrap">
+  <div class="sec-head"><span class="stitek">Popište potíž za minutu</span><h2>Jak daleko to jde?</h2><p>Vyberte kloub a posuvníkem ukažte, kam se dostanete, než začne bolet. Zpráva se složí sama a pošlete ji SMS.</p></div>
+  <div class="gonio">
+    <div class="dial">
+      <svg viewBox="0 0 400 300" role="img" aria-labelledby="gt"><title id="gt">Úhloměr rozsahu pohybu</title>
+        <path d="M60 240A140 140 0 0 1 340 240" fill="none" stroke="#3A4552" stroke-width="22"/>
+        <path id="oblouk" d="" fill="none" stroke="#B5D334" stroke-width="22"/>
+        <g id="ryska" font-family="Source Sans 3,Arial,sans-serif" font-size="13" fill="#AEB8C2"></g>
+        <line id="rameno" x1="200" y1="240" x2="200" y2="110" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+        <line x1="200" y1="240" x2="80" y2="240" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".35"/>
+        <circle cx="200" cy="240" r="16" fill="#B5D334"/>
+        <text id="kloub-t" x="200" y="285" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="700" font-size="20" fill="#fff" letter-spacing="1">RAMENO · UPAŽENÍ</text>
+      </svg>
+    </div>
+    <div class="ovl">
+      <div><b class="l">Kloub a pohyb</b>
+        <div class="chips" id="klouby">
+          <button class="chip" type="button" id="g-rameno" data-i="0" aria-pressed="true">Rameno – upažit</button>
+          <button class="chip" type="button" id="g-krk" data-i="1" aria-pressed="false">Krk – otočit hlavu</button>
+          <button class="chip" type="button" id="g-zada" data-i="2" aria-pressed="false">Záda – předklon</button>
+          <button class="chip" type="button" id="g-koleno" data-i="3" aria-pressed="false">Koleno – pokrčit</button>
+        </div></div>
+      <div><b class="l"><label for="uhel">Dostanu se bez bolesti na</label></b>
+        <input type="range" id="uhel" min="0" max="180" value="90">
+        <div class="hodnota" id="hodnota">90°<small>orientačně, běžně až 180°</small></div></div>
+      <div><b class="l">Od kdy</b>
+        <div class="chips" id="od">
+          <button class="chip" type="button" id="o-tyden" aria-pressed="true">Pár dní</button>
+          <button class="chip" type="button" id="o-mesic" aria-pressed="false">Déle než měsíc</button>
+          <button class="chip" type="button" id="o-uraz" aria-pressed="false">Po úrazu</button>
+        </div></div>
+      <div>
+        <label class="mini" for="sms">Zpráva (můžete upravit):</label>
+        <textarea id="sms"></textarea>
+        <div class="row"><a class="btn btn-call" id="sms-btn" href="sms:+420732498294">Poslat SMS</a><a class="btn btn-line" href="tel:+420732498294" style="color:#fff">Zavolat</a></div>
+        <p class="mini" style="margin-top:8px">Číslo: 732 498 294. Úhly jsou orientační, nejde o vyšetření ani diagnózu.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="cesta"><div class="wrap">
+  <div class="sec-head"><span class="stitek">Po úrazu a při bolesti</span><h2>Cesta zpátky ve třech krocích</h2><p>Nejde jen o jednu masáž. Postupně tělo uvolníme, rozhýbeme a posílíme.</p></div>
+  <div class="cesta">
+    <div class="etapa"><b>1. Uvolnit</b><p>Masáž, baňkování a měkké techniky povolí stažené svaly.</p><p class="co">Masáž · baňkování</p></div>
+    <div class="etapa"><b>2. Rozhýbat</b><p>Mobilizační techniky vrátí kloubům rozsah, tejp je podpoří mezi návštěvami.</p><p class="co">Mobilizace · tejpování</p></div>
+    <div class="etapa"><b>3. Posílit</b><p>Rehabilitační cviky na doma, aby se bolest nevracela.</p><p class="co">Cvičení · poradenství</p></div>
+  </div>
+</div></section>
+
+<section style="background:var(--bila)"><div class="wrap duvera">
+  <div class="foto">Sem přijde Vaše fotka<br>(masérna nebo práce s klientem)</div>
+  <div>
+    <span class="stitek">Proč M-FYT</span>
+    <h2 style="margin:10px 0 12px">Masér i rehabilitace v jedné místnosti</h2>
+    <p style="color:var(--tlum)">Když masáž nestačí, rovnou přidáme cvičení a tejp. Nemusíte jezdit do Znojma.<span class="uk">ukázkový text</span></p>
+    <div class="fakta">
+      <div><b>7 dní</b>v týdnu podle objednání</div>
+      <div><b>6 služeb</b>od masáže po cvičení</div>
+      <div><b>Blížkovice 454</b>Znojemsko</div>
+      <div><b>IČO</b>09510397</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="kontakt"><div class="wrap">
+  <div class="sec-head"><span class="stitek">Kontakt</span><h2>Blížkovice 454</h2></div>
+  <div class="kontakt">
+    <div class="kk">
+      <h3>Objednání</h3>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420732498294">732 498 294</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:pointra@seznam.cz">pointra@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Blížkovice 454, 671 55</dd>
+        <dt>Mapa</dt><dd><a href="https://mapy.cz/zakladni?q=Bl%C3%AD%C5%BEkovice%20454" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></dd>
+      </dl>
+      <a class="btn btn-call" href="tel:+420732498294">Zavolat</a>
+    </div>
+    <div class="kk">
+      <h3>Provozní doba</h3>
+      <table class="tab" id="tab"></table>
+      <p style="color:var(--tlum);font-size:15px;margin-top:10px">Provoz dle objednání. Ve státní svátky se doba může lišit, raději zavolejte.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="faq" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Časté otázky</h2></div>
+  <details><summary>Můžu přijít hned po úrazu?</summary><p>Zavolejte a popište, co se stalo. Čerstvý úraz má nejdřív vidět lékař, pak domluvíme další postup.<span class="uk">ukázkový text</span></p></details>
+  <details><summary>Stihnu to po práci?</summary><p>Ano. V pondělí a úterý od 17 do 20, ve středu od 18 do 20 hodin. Čtvrtek až sobota celý den od 8 do 20, v neděli od 13 do 20 hodin.</p></details>
+  <details><summary>Co si vzít s sebou?</summary><p>Pohodlné oblečení na cvičení a případně zprávu od lékaře.<span class="uk">ukázkový text</span></p></details>
+  <details><summary>Kolik to stojí?</summary><p>Cenu Vám řeknu předem do telefonu podle toho, co budeme dělat.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>M-FYT Masáže · IČO 09510397 · Blížkovice 454, 671 55</span>
+  <span><a href="tel:+420732498294">732 498 294</a> · <a href="mailto:pointra@seznam.cz">pointra@seznam.cz</a></span>
+</div></footer>
+
+<div class="lista"><a class="btn btn-call" href="tel:+420732498294">Zavolat</a><a class="btn btn-line" href="#rozsah">Popsat potíž</a></div>
+
+<script>
+(function(){
+  /* provozní doba z Firmy.cz */
+  var doba=[["Po","Pondělí",17,20],["Út","Úterý",17,20],["St","Středa",18,20],["Čt","Čtvrtek",8,20],["Pá","Pátek",8,20],["So","Sobota",8,20],["Ne","Neděle",13,20]];
+  var dnes=(new Date().getDay()+6)%7, ol=document.getElementById('tyden'), tab=document.getElementById('tab');
+  doba.forEach(function(d,i){
+    var li=document.createElement('li'); if(i===dnes) li.className='dnes';
+    var l=(d[2]-6)/16*100, w=(d[3]-d[2])/16*100;
+    li.innerHTML='<span>'+d[0]+'</span><span class="bar"><i style="left:'+l+'%;width:'+w+'%"></i></span><span>'+d[2]+'–'+d[3]+'</span>';
+    ol.appendChild(li);
+    var tr=document.createElement('tr'); if(i===dnes) tr.className='dnes';
+    tr.innerHTML='<td>'+d[1]+'</td><td>'+d[2]+':00–'+d[3]+':00</td>'; tab.appendChild(tr);
+  });
+  /* úhloměr */
+  var klouby=[["rameno","RAMENO · UPAŽENÍ","upažit",180],["krk","KRK · OTOČENÍ HLAVY","otočit hlavu",80],["záda","ZÁDA · PŘEDKLON","předklonit se",90],["koleno","KOLENO · POKRČENÍ","pokrčit koleno",140]];
+  var k=0, r=document.getElementById('uhel'), h=document.getElementById('hodnota'), ram=document.getElementById('rameno'), obl=document.getElementById('oblouk'), kt=document.getElementById('kloub-t'), ry=document.getElementById('ryska');
+  var ta=document.getElementById('sms'), sb=document.getElementById('sms-btn'), ruc=false;
+  function bod(a,rad){var t=Math.PI*(1-a/180);return [200+rad*Math.cos(t),240-rad*Math.sin(t)];}
+  function rysky(){var max=klouby[k][3],s='';for(var a=0;a<=max;a+=(max>100?30:20)){var p=bod(a/max*180,168);s+='<text x="'+p[0].toFixed(1)+'" y="'+(p[1]+4).toFixed(1)+'" text-anchor="middle">'+a+'°</text>';}ry.innerHTML=s;}
+  function vyber(sel){var c=document.querySelector(sel+' [aria-pressed="true"]');return c?c.textContent.toLowerCase():'';}
+  function kresli(){
+    var max=klouby[k][3]; if(+r.value>max) r.value=max; r.max=max;
+    var v=+r.value, a=v/max*180, p=bod(a,130), e=bod(a,140);
+    ram.setAttribute('x2',p[0].toFixed(1)); ram.setAttribute('y2',p[1].toFixed(1));
+    obl.setAttribute('d',a<=0.5?'':'M60 240A140 140 0 0 1 '+e[0].toFixed(1)+' '+e[1].toFixed(1));
+    kt.textContent=klouby[k][1];
+    h.innerHTML=v+'°<small>orientačně, běžně asi do '+max+'°</small>';
+    if(!ruc){ta.value='Dobrý den, '+klouby[k][2]+' zvládnu bez bolesti jen asi na '+v+'° (potíže: '+vyber('#od')+'). Chtěl(a) bych se objednat na masáž nebo cvičení. Kdy máte volno? Děkuji.';}
+    sb.href='sms:+420732498294?body='+encodeURIComponent(ta.value);
+  }
+  ta.addEventListener('input',function(){ruc=true;sb.href='sms:+420732498294?body='+encodeURIComponent(ta.value);});
+  r.addEventListener('input',function(){ruc=false;kresli();});
+  function skupina(sel,cb){var cs=document.querySelectorAll(sel+' .chip');cs.forEach(function(c){c.addEventListener('click',function(){cs.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false');});ruc=false;if(cb)cb(c);kresli();});});}
+  skupina('#klouby',function(c){k=+c.getAttribute('data-i');r.value=Math.round(klouby[k][3]/2);rysky();});
+  skupina('#od');
+  rysky(); kresli();
+})();
+</script>
+</body>
+</html>

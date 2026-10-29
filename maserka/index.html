@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – MasérkA</title>
+<meta name="description" content="MasérkA, Zámecká 17, Moravský Krumlov: klasická a lymfatická masáž, tejpování a maderoterapie. Otevřeno denně 8–20, objednání na 731 695 842.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Jost:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"MasérkA","telephone":"+420731695842","email":"maserk.a@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Zámecká 17","postalCode":"672 01","addressLocality":"Moravský Krumlov","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"taxID":"19252838"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Velký nápis přes celou šířku (značka „masérkA“), pod ním pruh s otevírací dobou; výrazný prvek: postava s tejpy */
+:root{
+  --svestka:#4A2741;   /* tmavá plocha, nadpisy */
+  --ruze:#A8545A;      /* akcent – růžové dřevo */
+  --pudr:#F7EFEC;      /* pozadí */
+  --zlato:#B8893A;     /* drobné detaily */
+  --text:#2B1B26;
+  --tlum:#6E5A66;
+  --linka:#E7D8D4;
+  --bila:#FFFDFC;
+  --f-disp:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-text:"Jost","Avenir Next","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--pudr);color:var(--text);font:400 17px/1.6 var(--f-text)}
+h1,h2,h3{font-family:var(--f-disp);font-weight:500;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4.6vw,48px)}
+h3{font-size:23px}
+p{margin:0}
+a{color:var(--ruze)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.banner-navrh{background:var(--text);color:#fff;font-size:13.5px;text-align:center;padding:8px 16px}
+.uk{display:inline-block;font:600 10.5px/1 var(--f-text);letter-spacing:.07em;text-transform:uppercase;background:#FFF1C9;color:#6A4A00;border-radius:4px;padding:4px 6px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 17px/1 var(--f-text);letter-spacing:.02em;text-decoration:none;border-radius:4px;padding:17px 24px;border:1.5px solid transparent;cursor:pointer}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-call{background:var(--ruze);color:#fff}
+.btn-call:hover{background:#8F4449}
+.btn-line{border-color:var(--svestka);color:var(--svestka);background:transparent}
+:focus-visible{outline:3px solid var(--zlato);outline-offset:2px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:16px;font-size:15px}
+.top nav{display:flex;gap:24px}
+.top nav a{color:var(--text);text-decoration:none}
+.top .tel{font-weight:600;color:var(--svestka);text-decoration:none;white-space:nowrap}
+.top .misto{color:var(--tlum)}
+@media (max-width:820px){.top nav{display:none}}
+/* hero */
+.hero{padding-block:8px 0}
+.znacka{font-family:var(--f-disp);font-weight:500;font-size:clamp(84px,21vw,300px);line-height:.86;letter-spacing:-.035em;color:var(--svestka);margin:0;white-space:nowrap}
+.znacka .a{color:var(--ruze);font-style:italic}
+.hero-pod{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end;margin-top:22px;padding-bottom:40px;border-bottom:1px solid var(--linka)}
+.hero-pod h1{font-size:clamp(26px,3.4vw,38px);margin-bottom:14px;color:var(--text)}
+.hero-pod h1 i{color:var(--ruze)}
+.hero-pod .lead{color:var(--tlum);font-size:18px;max-width:36em}
+.akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.stav{background:var(--svestka);color:#fff;border-radius:6px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.stav .rad{display:flex;align-items:center;gap:10px;font-size:15px}
+.tecka{width:10px;height:10px;border-radius:50%;background:#7FD1A0;flex:none}
+.tecka.zav{background:#E9A3A7}
+.stav b{font:500 30px/1 var(--f-disp)}
+.stav small{color:#D9C7D2;font-size:14px}
+.dny{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:4px}
+.dny span{text-align:center;font-size:12.5px;padding:6px 0;border-radius:3px;background:rgba(255,255,255,.1)}
+.dny span.dnes{background:var(--ruze)}
+@media (max-width:820px){.hero-pod{grid-template-columns:1fr;gap:22px;margin-top:14px}}
+section{padding-block:68px}
+.sec-head{max-width:660px;display:flex;flex-direction:column;gap:10px;margin-bottom:30px}
+.sec-head p{color:var(--tlum)}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ruze);font-weight:600}
+/* nabídka jako lístek */
+.listek{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.pol{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;padding:22px 0;border-top:1px solid var(--linka);min-width:0}
+.pol .c{font:italic 500 30px/1 var(--f-disp);color:var(--ruze);grid-row:span 2}
+.pol h3{font-size:24px}
+.pol p{color:var(--tlum);font-size:16px}
+@media (max-width:760px){.listek{grid-template-columns:1fr}}
+.cena{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;justify-content:space-between;background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:20px 22px}
+/* tejpy */
+.tejp-sek{background:var(--svestka);color:#fff}
+.tejp-sek .sec-head p{color:#E2D2DC}
+.tejp-sek h2{color:#fff}
+.tejp{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}
+@media (max-width:860px){.tejp{grid-template-columns:1fr}}
+.postava{background:rgba(255,255,255,.06);border-radius:8px;padding:16px;min-width:0}
+.postava svg{width:100%;max-width:380px;height:auto;display:block;margin:0 auto}
+.zona{cursor:pointer}
+.zona circle.hit{fill:transparent}
+.zona .pas{opacity:0;transition:opacity .25s}
+.zona.on .pas{opacity:1}
+.zona .bod{fill:#fff;opacity:.85}
+.zona.on .bod{fill:var(--zlato)}
+.ovl{display:flex;flex-direction:column;gap:18px;min-width:0}
+.skup b{display:block;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#E2D2DC;margin-bottom:8px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 15.5px/1.2 var(--f-text);border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:10px 15px;cursor:pointer}
+.chip[aria-pressed="true"]{background:#fff;color:var(--svestka);border-color:#fff}
+.zprava textarea{width:100%;min-height:96px;border-radius:6px;border:0;padding:14px;font:400 16px/1.5 var(--f-text);color:var(--text);background:var(--pudr);resize:vertical}
+.zprava .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.mini{font-size:13.5px;color:#D9C7D2}
+/* o mně */
+.omne{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media (max-width:820px){.omne{grid-template-columns:1fr}}
+.foto{width:100%;max-width:100%;aspect-ratio:1/1;max-height:440px;border:1.5px dashed #C9A7A9;border-radius:6px;background:repeating-linear-gradient(45deg,#F3E4E0 0 12px,#F7EFEC 12px 24px);display:grid;place-items:center;text-align:center;color:var(--ruze);font-weight:500;padding:20px}
+.motto{font:italic 500 clamp(28px,4vw,44px)/1.15 var(--f-disp);color:var(--svestka);margin-bottom:16px}
+.duvera{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.duvera span{border:1px solid var(--linka);background:var(--bila);border-radius:999px;padding:8px 14px;font-size:15px}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.krok{border-left:2px solid var(--ruze);padding-left:16px}
+.krok b{display:block;font:500 22px/1.2 var(--f-disp);margin-bottom:6px}
+.krok p{color:var(--tlum);font-size:16px}
+@media (max-width:760px){.kroky{grid-template-columns:1fr}}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:820px){.kontakt{grid-template-columns:1fr}}
+.karta{background:var(--bila);border:1px solid var(--linka);border-radius:6px;padding:26px;min-width:0}
+.karta dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:12px 0 18px}
+.karta dt{color:var(--tlum)}
+.karta dd{margin:0;overflow-wrap:anywhere}
+.tab{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:12px}
+.tab td{padding:8px 0;border-bottom:1px solid var(--linka)}
+.tab td:last-child{text-align:right}
+.tab tr.dnes td{font-weight:600;color:var(--ruze)}
+.faq details{border-top:1px solid var(--linka);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:500;font-size:18px}
+.faq details p{color:var(--tlum);margin-top:8px}
+footer{background:var(--text);color:#D9C7D2;font-size:14px;padding-block:28px 96px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+footer a{color:#fff}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:10px;background:var(--bila);border-top:1px solid var(--linka);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lista .btn{flex:1;padding:15px 10px}
+@media (max-width:760px){.lista{display:flex}}
+</style>
+
+<div class="banner-navrh">Nezávazný návrh webu – není to oficiální stránka firmy MasérkA</div>
+
+<div class="top" role="banner"><div class="wrap">
+  <span class="misto">Zámecká 17 · Moravský Krumlov</span>
+  <nav aria-label="Hlavní menu"><a href="#masaze">Masáže</a><a href="#tejp">Tejpování</a><a href="#o-mne">O mně</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="tel" href="tel:+420731695842">731 695 842</a>
+</div></div>
+
+<main>
+<div class="hero"><div class="wrap">
+  <p class="znacka" aria-hidden="true">masérk<span class="a">A</span></p>
+  <div class="hero-pod">
+    <div>
+      <h1>Masáže a tejpování v Moravském Krumlově. <i>Každý den 8–20.</i></h1>
+      <p class="lead">Klasická a lymfatická masáž, tejpování a maderoterapie na Zámecké 17. Zavolejte, domluvíme čas, který Vám sedí, i o víkendu.</p>
+      <div class="akce">
+        <a class="btn btn-call" href="tel:+420731695842"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Objednat se: 731 695 842</a>
+        <a class="btn btn-line" href="#tejp">Kam dát tejp?</a>
+      </div>
+    </div>
+    <div class="stav" aria-live="polite">
+      <div class="rad"><span class="tecka" id="tecka"></span><span id="stav-t">Otevřeno denně 8:00–20:00</span></div>
+      <b id="stav-b">8:00–20:00</b>
+      <small id="stav-s">Po–Ne, podle údajů na Firmy.cz</small>
+      <div class="dny" id="dny"><span>Po</span><span>Út</span><span>St</span><span>Čt</span><span>Pá</span><span>So</span><span>Ne</span></div>
+    </div>
+  </div>
+</div></div>
+
+<section id="masaze"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Nabídka</span><h2>Co pro Vás udělám</h2><p>„Masáž regeneruje nejen tělo, ale i duši.“ Čtyři věci, kvůli kterým ke mně lidé chodí.</p></div>
+  <div class="listek">
+    <div class="pol"><span class="c">i</span><h3>Klasická masáž</h3><p>Uvolní ztuhlá záda, šíji a ramena po práci u počítače nebo na nohou.</p></div>
+    <div class="pol"><span class="c">ii</span><h3>Lymfatická masáž</h3><p>Jemná masáž, která pomáhá odvodu tekutin. Pro oteklé a unavené nohy.</p></div>
+    <div class="pol"><span class="c">iii</span><h3>Tejpování</h3><p>Kineziologický tejp na koleno, rameno, záda nebo kotník. Podpoří sval i kloub mezi návštěvami.</p></div>
+    <div class="pol"><span class="c">iv</span><h3>Maderoterapie</h3><p>Masáž dřevěnými nástroji na tvarování postavy a pevnější pokožku.</p></div>
+  </div>
+  <div class="cena">
+    <p><b>Cenu řeknu předem do telefonu.</b> Ceník doplníme podle Vás.<span class="uk">ukázkový text</span></p>
+    <a class="btn btn-call" href="tel:+420731695842">Zavolat 731 695 842</a>
+  </div>
+</div></section>
+
+<section class="tejp-sek" id="tejp"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow" style="color:#E9B8BB">Objednávka za minutu</span><h2>Kde Vás to bolí?</h2><p>Ťukněte na místa, kde chcete masáž nebo tejp. Vyberte, kdy se Vám to hodí, a pošlete SMS.</p></div>
+  <div class="tejp">
+    <div class="postava">
+      <svg viewBox="0 0 300 520" role="group" aria-label="Postava s místy pro masáž a tejp">
+        <g fill="none" stroke="#E2D2DC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="150" cy="52" r="30"/>
+          <path d="M132 82v14M168 82v14"/>
+          <path d="M95 104c20-10 90-10 110 0l14 108-20 6-12-86-4 104h-66l-4-104-12 86-20-6z"/>
+          <path d="M113 230l-6 140 10 120M187 230l6 140-10 120M150 236v96"/>
+          <path d="M117 230h66"/>
+        </g>
+        <g class="zona" data-k="šíje" tabindex="0" role="button" aria-pressed="false" aria-label="Šíje"><circle class="hit" cx="150" cy="94" r="24"/><rect class="pas" x="142" y="80" width="16" height="34" rx="3" fill="#E58FA0"/><circle class="bod" cx="150" cy="96" r="7"/></g>
+        <g class="zona" data-k="rameno" tabindex="0" role="button" aria-pressed="false" aria-label="Rameno"><circle class="hit" cx="98" cy="114" r="24"/><path class="pas" d="M86 102l26 10-6 16-26-10z" fill="#6EA8D8"/><circle class="bod" cx="98" cy="114" r="7"/></g>
+        <g class="zona" data-k="loket" tabindex="0" role="button" aria-pressed="false" aria-label="Loket"><circle class="hit" cx="216" cy="176" r="22"/><rect class="pas" x="208" y="160" width="14" height="34" rx="3" fill="#E58FA0" transform="rotate(-8 215 176)"/><circle class="bod" cx="216" cy="176" r="7"/></g>
+        <g class="zona" data-k="záda a bedra" tabindex="0" role="button" aria-pressed="false" aria-label="Záda a bedra"><circle class="hit" cx="150" cy="186" r="28"/><g class="pas" fill="#2B2B2B"><rect x="128" y="150" width="14" height="72" rx="3"/><rect x="158" y="150" width="14" height="72" rx="3"/></g><circle class="bod" cx="150" cy="188" r="7"/></g>
+        <g class="zona" data-k="koleno" tabindex="0" role="button" aria-pressed="false" aria-label="Koleno"><circle class="hit" cx="111" cy="368" r="24"/><path class="pas" d="M96 346c10 10 20 10 30 0v46c-10-10-20-10-30 0z" fill="#E8C9A0"/><circle class="bod" cx="111" cy="368" r="7"/></g>
+        <g class="zona" data-k="lýtko a nohy" tabindex="0" role="button" aria-pressed="false" aria-label="Lýtko a nohy"><circle class="hit" cx="190" cy="420" r="24"/><rect class="pas" x="184" y="392" width="13" height="58" rx="3" fill="#6EA8D8"/><circle class="bod" cx="190" cy="420" r="7"/></g>
+        <g class="zona" data-k="kotník" tabindex="0" role="button" aria-pressed="false" aria-label="Kotník"><circle class="hit" cx="116" cy="482" r="22"/><path class="pas" d="M104 470h26v12h-26z" fill="#E58FA0"/><circle class="bod" cx="116" cy="482" r="7"/></g>
+      </svg>
+      <p class="mini" style="text-align:center;margin-top:6px">Barvy tejpů jsou jen pro ilustraci.</p>
+    </div>
+    <div class="ovl">
+      <div class="skup"><b>Co chcete</b>
+        <div class="chips" id="druh">
+          <button class="chip" type="button" id="d-klas" aria-pressed="true">Klasická masáž</button>
+          <button class="chip" type="button" id="d-lymf" aria-pressed="false">Lymfatická masáž</button>
+          <button class="chip" type="button" id="d-tejp" aria-pressed="true">Tejp</button>
+          <button class="chip" type="button" id="d-made" aria-pressed="false">Maderoterapie</button>
+        </div></div>
+      <div class="skup"><b>Kdy se Vám to hodí</b>
+        <div class="chips" id="kdy">
+          <button class="chip" type="button" id="c-rano" aria-pressed="false">Ráno 8–11</button>
+          <button class="chip" type="button" id="c-pol" aria-pressed="false">Odpoledne 12–16</button>
+          <button class="chip" type="button" id="c-vec" aria-pressed="true">Večer 16–20</button>
+          <button class="chip" type="button" id="c-vik" aria-pressed="false">O víkendu</button>
+        </div></div>
+      <div class="zprava">
+        <label class="mini" for="sms-text">Zpráva (můžete upravit):</label>
+        <textarea id="sms-text"></textarea>
+        <div class="row">
+          <a class="btn btn-call" id="sms-btn" href="sms:+420731695842" style="background:#fff;color:var(--svestka)">Poslat SMS</a>
+          <a class="btn btn-line" href="tel:+420731695842" style="border-color:#fff;color:#fff">Zavolat</a>
+        </div>
+        <p class="mini" style="margin-top:8px">Číslo: 731 695 842</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="o-mne"><div class="wrap omne">
+  <div class="foto">Sem přijde Vaše fotka<br>(masérka při práci)</div>
+  <div>
+    <p class="motto">Masáž regeneruje nejen tělo, ale i duši.</p>
+    <p style="color:var(--tlum)">Masíruji sama, v klidu a bez spěchu. Každou masáž přizpůsobím tomu, co Vás zrovna bolí.<span class="uk">ukázkový text</span></p>
+    <div class="duvera"><span>Zámecká 17, Moravský Krumlov</span><span>IČO 19252838</span><span>Otevřeno 7 dní v týdnu</span></div>
+  </div>
+</div></section>
+
+<section style="background:var(--bila)"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Jak to probíhá</span><h2>Tři kroky k úlevě</h2></div>
+  <div class="kroky">
+    <div class="krok"><b>Domluvíme se</b><p>Zavoláte nebo pošlete SMS. Řeknete, co Vás trápí, a vybereme čas mezi 8. a 20. hodinou.</p></div>
+    <div class="krok"><b>Přijdete na Zámeckou 17</b><p>Masáž přizpůsobím Vašim potížím. Když je potřeba, na závěr nalepím tejp.</p></div>
+    <div class="krok"><b>Odcházíte uvolnění</b><p>Řeknu Vám, jak dlouho tejp nechat a kdy je dobré přijít znovu.<span class="uk">ukázkový text</span></p></div>
+  </div>
+</div></section>
+
+<section id="kontakt"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Kontakt</span><h2>Zámecká 17, Moravský Krumlov</h2></div>
+  <div class="kontakt">
+    <div class="karta">
+      <h3>Objednání</h3>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420731695842">731 695 842</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:maserk.a@seznam.cz">maserk.a@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Zámecká 17, 672 01 Moravský Krumlov</dd>
+        <dt>Mapa</dt><dd><a href="https://mapy.cz/zakladni?q=Z%C3%A1meck%C3%A1%2017%2C%20Moravsk%C3%BD%20Krumlov" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></dd>
+        <dt>Sítě</dt><dd>Facebook a Instagram <span style="color:var(--tlum)">@maserka.a</span></dd>
+      </dl>
+      <a class="btn btn-call" href="tel:+420731695842">Zavolat</a>
+    </div>
+    <div class="karta">
+      <h3>Otevírací doba</h3>
+      <table class="tab" id="tab">
+        <tr><td>Pondělí</td><td>8:00–20:00</td></tr><tr><td>Úterý</td><td>8:00–20:00</td></tr><tr><td>Středa</td><td>8:00–20:00</td></tr><tr><td>Čtvrtek</td><td>8:00–20:00</td></tr><tr><td>Pátek</td><td>8:00–20:00</td></tr><tr><td>Sobota</td><td>8:00–20:00</td></tr><tr><td>Neděle</td><td>8:00–20:00</td></tr>
+      </table>
+      <p style="color:var(--tlum);font-size:15px;margin-top:12px">Na masáž se prosím objednejte předem. O státních svátcích se raději ozvěte, zda mám otevřeno.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="faq" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Časté otázky</h2></div>
+  <details><summary>Jak dlouho vydrží tejp?</summary><p>Obvykle několik dní, i ve sprše. Přesně Vám to řeknu při nalepení.<span class="uk">ukázkový text</span></p></details>
+  <details><summary>Můžu přijít i v neděli?</summary><p>Ano, mám otevřeno každý den od 8 do 20 hodin. Stačí se předem objednat.</p></details>
+  <details><summary>Kolik stojí masáž?</summary><p>Cenu Vám řeknu předem do telefonu podle druhu a délky masáže.</p></details>
+  <details><summary>Kdy masáž není vhodná?</summary><p>Při horečce, nachlazení nebo zánětu je lepší termín posunout. Zavolejte a přeobjednáme Vás.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>MasérkA · IČO 19252838 · Zámecká 17, 672 01 Moravský Krumlov</span>
+  <span><a href="tel:+420731695842">731 695 842</a> · <a href="mailto:maserk.a@seznam.cz">maserk.a@seznam.cz</a></span>
+</div></footer>
+
+<div class="lista"><a class="btn btn-call" href="tel:+420731695842">Zavolat</a><a class="btn btn-line" href="#tejp">Objednat SMS</a></div>
+
+<script>
+(function(){
+  /* otevírací doba 8–20 každý den; o státních svátcích výzva zavolat */
+  var svatky=["01-01","05-01","05-08","07-05","07-06","09-28","10-28","11-17","12-24","12-25","12-26"];
+  function velikonoce(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(y,mo-1,da);}
+  var now=new Date(),y=now.getFullYear(),e=velikonoce(y);
+  var pv=new Date(e);pv.setDate(e.getDate()-2);var po=new Date(e);po.setDate(e.getDate()+1);
+  function k(d){return String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  var svatek=svatky.indexOf(k(now))>=0||k(now)===k(pv)||k(now)===k(po);
+  var den=(now.getDay()+6)%7, min=now.getHours()*60+now.getMinutes();
+  var dny=document.querySelectorAll('#dny span'); if(dny[den]) dny[den].className='dnes';
+  var rows=document.querySelectorAll('#tab tr'); if(rows[den]) rows[den].className='dnes';
+  var t=document.getElementById('stav-t'),b=document.getElementById('stav-b'),s=document.getElementById('stav-s'),tk=document.getElementById('tecka');
+  if(svatek){tk.className='tecka zav';t.textContent='Dnes je státní svátek';b.textContent='Zavolejte';s.textContent='zda mám otevřeno · 731 695 842';}
+  else if(min>=480&&min<1200){t.textContent='Teď otevřeno';b.textContent='do 20:00';s.textContent='Otevřeno denně 8:00–20:00 (Firmy.cz)';}
+  else{tk.className='tecka zav';t.textContent='Teď zavřeno';b.textContent=min<480?'otevírám v 8:00':'zítra od 8:00';s.textContent='Otevřeno denně 8:00–20:00 (Firmy.cz)';}
+
+  /* skladač SMS */
+  var mista=[];var ta=document.getElementById('sms-text'),btn=document.getElementById('sms-btn'),ruc=false;
+  ta.addEventListener('input',function(){ruc=true;btn.href='sms:+420731695842?body='+encodeURIComponent(ta.value);});
+  function vybrane(sel){return Array.prototype.filter.call(document.querySelectorAll(sel+' .chip'),function(c){return c.getAttribute('aria-pressed')==='true';}).map(function(c){return c.textContent.toLowerCase();});}
+  function sloz(){
+    if(ruc) return;
+    var co=vybrane('#druh'),kdy=vybrane('#kdy');
+    var txt='Dobrý den, chtěl(a) bych se objednat'+(co.length?' na: '+co.join(', '):'')+(mista.length?'. Jde mi o: '+mista.join(', '):'')+'.'+(kdy.length?' Hodí se mi: '+kdy.join(' nebo ')+'.':'')+' Máte volný termín? Děkuji.';
+    ta.value=txt;btn.href='sms:+420731695842?body='+encodeURIComponent(txt);
+  }
+  document.querySelectorAll('.chips .chip').forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true');ruc=false;sloz();});});
+  document.querySelectorAll('.zona').forEach(function(z){
+    function prepni(){var n=z.getAttribute('data-k');var i=mista.indexOf(n);if(i>=0){mista.splice(i,1);z.classList.remove('on');z.setAttribute('aria-pressed','false');}else{mista.push(n);z.classList.add('on');z.setAttribute('aria-pressed','true');}ruc=false;sloz();}
+    z.addEventListener('click',prepni);
+    z.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();prepni();}});
+  });
+  ['rameno','koleno'].forEach(function(n){var z=document.querySelector('.zona[data-k="'+n+'"]');mista.push(n);z.classList.add('on');z.setAttribute('aria-pressed','true');});
+  sloz();
+})();
+</script>
+</body>
+</html>
