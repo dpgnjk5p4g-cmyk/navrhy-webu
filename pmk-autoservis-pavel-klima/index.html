@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – PMK autoservis</title>
+<meta name="description" content="PMK autoservis Pavel Klíma, Rudoltice 132 pod čerpací stanicí LPG – montáže LPG, autoopravy, karosářské práce, dekarbonizace motoru, ochrana podvozku a dutin, výměna čelních skel a oleje.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "PMK autoservis",
+  "founder": {"@type": "Person", "name": "Pavel Klíma"},
+  "telephone": "+420777122784",
+  "email": "info@pmk.cz",
+  "taxID": "11129492",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rudoltice 132",
+    "addressLocality": "Rudoltice",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "13:00", "closes": "16:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "13:00", "closes": "15:00"}
+  ]
+}
+</script>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --blue:#0E4C92;
+  --blue-dark:#0A3A70;
+  --orange:#F28C28;
+  --orange-hover:#E07B17;
+  --fog:#EEF1F4;
+  --coal:#15191E;
+  --muted:#4A5562;
+  --line:#D3D9E0;
+  --white:#FFFFFF;
+  --head:"Chakra Petch","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --r:6px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--fog);color:var(--coal);font-family:var(--body);font-size:16px;line-height:1.55;overflow-x:hidden}
+.page{background:var(--fog);color:var(--coal);min-width:0;padding-bottom:76px}
+.page img,.page svg{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0;letter-spacing:.01em}
+h2{font-size:1.75rem;margin-bottom:.5rem}
+h3{font-size:1.15rem}
+p{margin:0 0 .75rem}
+a{color:var(--blue)}
+.kicker{font-family:var(--head);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.35rem}
+.lead{color:var(--muted);max-width:60ch}
+section{padding:48px 0}
+
+/* banner návrhu */
+.draft{background:var(--coal);color:#fff;font-size:.85rem;text-align:center;padding:8px 16px;line-height:1.4}
+.draft strong{color:var(--orange)}
+
+/* záhlaví */
+.top{background:var(--white);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--coal);min-width:0}
+.brand-mark{width:38px;height:38px;flex:0 0 38px}
+.brand-name{font-family:var(--head);font-weight:700;font-size:1.2rem;line-height:1.1}
+.brand-name .b1{color:var(--blue)}
+.brand-sub{display:block;font-family:var(--body);font-weight:500;font-size:.78rem;color:var(--muted)}
+.top-tel{display:inline-flex;align-items:center;gap:6px;font-family:var(--head);font-weight:700;font-size:1.05rem;color:var(--coal);text-decoration:none;white-space:nowrap}
+.top-tel svg{width:18px;height:18px}
+.nav{display:none}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;border-radius:var(--r);font-family:var(--head);font-weight:700;font-size:1.05rem;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn-main{background:var(--orange);color:var(--coal)}
+.btn-main:hover{background:var(--orange-hover)}
+.btn-ghost{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn-ghost:hover{background:var(--fog)}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--coal);outline-offset:2px}
+
+/* hero */
+.hero{background:var(--blue);position:relative;overflow:hidden;padding:20px 0 28px}
+.hero-grid{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:20px;align-items:start}
+.hero-card{background:var(--white);border-radius:10px;padding:22px 18px;box-shadow:0 12px 30px rgba(10,30,60,.25);border-top:6px solid var(--orange);min-width:0}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--fog);border:1px solid var(--line);color:var(--coal);border-radius:999px;padding:5px 12px 5px 8px;font-size:.84rem;font-weight:600;margin-bottom:14px;max-width:100%}
+.badge svg{width:18px;height:18px;flex:0 0 18px}
+.hero h1{font-size:2rem;color:var(--coal);margin-bottom:10px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero-text{color:var(--muted);margin-bottom:18px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-actions .btn{flex:1 1 180px}
+.hero-facts{list-style:none;margin:18px 0 0;padding:14px 0 0;border-top:1px dashed var(--line);display:grid;gap:6px;font-size:.92rem;color:var(--muted)}
+.hero-facts b{color:var(--coal)}
+.hero-side{display:none}
+
+/* služby */
+.services{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;gap:14px;align-items:flex-start;min-width:0}
+.svc-ico{flex:0 0 44px;width:44px;height:44px;border-radius:var(--r);background:var(--fog);display:flex;align-items:center;justify-content:center}
+.svc-ico svg{width:26px;height:26px}
+.svc p{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+.svc.main{border-color:var(--blue);border-width:2px}
+.svc.main .svc-ico{background:var(--blue)}
+.price-note{margin-top:18px;font-weight:600}
+
+/* kalkulačka */
+.calc-sec{background:var(--coal);color:#fff}
+.calc-sec .kicker{color:var(--orange)}
+.calc-sec .lead{color:#C4CCD6}
+.calc{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px;align-items:start}
+.calc-box{background:#1F252C;border:1px solid #33404D;border-radius:10px;padding:18px;min-width:0}
+.field{display:block;margin-bottom:14px}
+.field span{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-weight:600;font-size:.95rem;margin-bottom:6px}
+.field input{width:100%;min-height:46px;padding:10px 12px;border-radius:var(--r);border:1px solid #4B5866;background:#fff;color:var(--coal);font:inherit;font-size:1.05rem}
+.tag{display:inline-block;font-family:var(--body);font-size:.72rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;background:var(--orange);color:var(--coal);border-radius:4px;padding:2px 6px;line-height:1.3}
+.tag.soft{background:#33404D;color:#E6EBF0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pair .field{margin-bottom:0}
+.prices{border:1px dashed #5A6878;border-radius:var(--r);padding:12px;margin-bottom:14px}
+.prices-head{margin-bottom:10px}
+.derived{font-size:.92rem;color:#C4CCD6;margin:0 0 4px}
+.result{text-align:left}
+.result-label{font-family:var(--head);font-weight:600;color:#C4CCD6;font-size:1rem}
+.result-num{font-family:var(--head);font-weight:700;font-size:2.6rem;line-height:1.05;color:var(--orange);margin:4px 0 12px;word-break:break-word}
+.rows{display:grid;gap:6px;margin:0 0 16px;font-size:.95rem}
+.rows div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #33404D;padding-bottom:6px}
+.rows dt{color:#C4CCD6}
+.rows dd{margin:0;font-weight:700;white-space:nowrap}
+.sms-preview{background:#11151A;border:1px solid #33404D;border-radius:var(--r);padding:10px 12px;font-size:.92rem;color:#E6EBF0;margin:10px 0 12px;word-break:break-word}
+.calc-note{font-size:.85rem;color:#AEB8C4;margin-top:10px}
+.calc .btn-main{width:100%}
+.hint{color:var(--orange);font-size:.9rem;min-height:1.2em;margin:6px 0 0}
+
+/* důvěra */
+.trust{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px}
+.trust-item{background:var(--white);border-left:5px solid var(--blue);border-radius:var(--r);padding:16px}
+.trust-item b{display:block;font-family:var(--head);font-size:1.2rem;margin-bottom:2px}
+.trust-item span{color:var(--muted);font-size:.95rem}
+.photo{margin-top:16px;border:2px dashed #9AA6B3;border-radius:10px;background:repeating-linear-gradient(45deg,#E3E8ED 0 12px,#EEF1F4 12px 24px);min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-weight:600;padding:16px;width:100%}
+
+/* kroky */
+.steps{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:12px;counter-reset:s}
+.steps li{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:16px 16px 16px 64px;position:relative;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--head);font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps p{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+
+/* sezóna */
+.season{background:var(--white);border:2px solid var(--blue);border-radius:10px;padding:20px;display:flex;gap:16px;align-items:flex-start}
+.season svg{flex:0 0 48px;width:48px;height:48px}
+.season p{margin:6px 0 0}
+
+/* FAQ */
+.faq{margin-top:20px;display:grid;gap:10px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:0 16px}
+.faq summary{cursor:pointer;font-family:var(--head);font-weight:600;font-size:1.05rem;padding:14px 24px 14px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:12px;font-size:1.3rem;color:var(--blue)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--muted);padding-bottom:14px;margin:0}
+
+/* kontakt */
+.contact{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px;align-items:start}
+.card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:18px;min-width:0}
+.contact-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.contact-list li{display:flex;flex-direction:column}
+.contact-list small{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.contact-list a,.contact-list strong{font-weight:700;font-size:1.1rem;word-break:break-word}
+.hours{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours th,.hours td{text-align:left;padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.hours td{text-align:right;font-weight:600}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.muted{color:var(--muted);font-size:.9rem}
+
+/* patička */
+.foot{background:var(--coal);color:#C4CCD6;padding:28px 0;font-size:.92rem}
+.foot .wrap{display:grid;gap:8px}
+.foot strong{color:#fff;font-family:var(--head);font-size:1.1rem}
+.foot a{color:#fff}
+
+/* fixní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--white);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+.callbar .btn{flex:1 1 0;min-height:48px;font-size:1rem;padding:10px 12px}
+
+@media (min-width:720px){
+  .services{grid-template-columns:1fr 1fr}
+  .trust{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:2.6rem}
+}
+@media (min-width:960px){
+  .page{padding-bottom:0}
+  .callbar{display:none}
+  section{padding:72px 0}
+  h2{font-size:2.2rem}
+  .nav{display:flex;gap:22px}
+  .nav a{color:var(--coal);text-decoration:none;font-weight:600;font-size:.95rem}
+  .nav a:hover{color:var(--blue)}
+  .hero{padding:56px 0}
+  .hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center}
+  .hero-card{padding:34px 32px}
+  .hero h1{font-size:3rem}
+  .hero-side{display:block;color:#fff}
+  .services{grid-template-columns:repeat(3,1fr)}
+  .svc.main{grid-column:1 / -1}
+  .calc{grid-template-columns:1.1fr .9fr}
+}
+</style>
+
+<div class="page">
+
+<div class="draft" role="note"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy PMK autoservis.</div>
+
+<div role="banner" class="top">
+  <div class="wrap">
+    <a class="brand" href="#uvod" aria-label="PMK autoservis – úvod">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="7" fill="#0E4C92"/><rect x="9" y="12" width="22" height="16" rx="8" fill="none" stroke="#fff" stroke-width="3"/><rect x="17" y="7" width="6" height="5" fill="#F28C28"/><path d="M15 20h10" stroke="#F28C28" stroke-width="3" stroke-linecap="round"/></svg>
+      <span><span class="brand-name"><span class="b1">PMK</span> <span>autoservis</span></span><span class="brand-sub">Pavel Klíma · Rudoltice</span></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#sluzby">Služby</a>
+      <a href="#uspora">Úspora s LPG</a>
+      <a href="#postup">Jak to probíhá</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="top-tel" href="tel:+420777122784"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0E4C92" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>777 122 784</a>
+  </div>
+</div>
+
+<main>
+<section class="hero" id="uvod">
+  <svg class="hero-grid" aria-hidden="true" preserveAspectRatio="none"><defs><pattern id="g" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>
+  <div class="wrap">
+    <div class="hero-card">
+      <span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F28C28" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Najdete nás pod čerpací stanicí LPG</span>
+      <h1>Přestavby na <em>LPG</em> v Rudolticích</h1>
+      <p class="hero-text">Provádíme montáže LPG. K tomu běžné autoopravy, karosářské práce, výměnu oleje i čelních skel. Cenu řekneme předem.</p>
+      <div class="hero-actions">
+        <a class="btn btn-main" href="tel:+420777122784">Objednat servis</a>
+        <a class="btn btn-ghost" href="#uspora">Spočítat úsporu s LPG</a>
+      </div>
+      <ul class="hero-facts">
+        <li><b>Rudoltice 132</b> – pod čerpací stanicí LPG</li>
+        <li><b>Po–Čt</b> 8–12 a 13–16 · <b>Pá</b> 8–12 a 13–15</li>
+      </ul>
+    </div>
+    <div class="hero-side" aria-hidden="true">
+      <svg viewBox="0 0 420 300">
+        <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="70" y="90" width="280" height="130" rx="65"/>
+          <path d="M140 90v130M280 90v130" stroke-dasharray="6 8" opacity=".6"/>
+          <rect x="190" y="62" width="40" height="28" rx="4"/>
+          <path d="M120 220l-14 40M300 220l14 40M90 260h240"/>
+        </g>
+        <circle cx="210" cy="155" r="38" fill="#0A3A70" stroke="#F28C28" stroke-width="4"/>
+        <path d="M210 155l20-18" stroke="#F28C28" stroke-width="5" stroke-linecap="round"/>
+        <text x="210" y="182" fill="#fff" font-family="Chakra Petch, system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">LPG</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="wrap">
+    <p class="kicker">Služby</p>
+    <h2>Co pro vás uděláme</h2>
+    <p class="lead">Specializujeme se na přestavby na LPG. Opravíme ale i auto, které na plyn nejezdí.</p>
+    <div class="services">
+      <article class="svc main">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="8" width="18" height="10" rx="5"/><path d="M10 5h4v3h-4z"/></g></svg></div>
+        <div><h3>Montáže LPG</h3><p>Přestavíme váš benzínový vůz na LPG, aby jezdil levněji na obě paliva.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#0E4C92" stroke-width="2" stroke-linecap="round" d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
+        <div><h3>Autoopravy</h3><p>Opravíme mechanické závady vašeho auta.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#0E4C92" stroke-width="2" stroke-linejoin="round" d="M3 15l2-5h11l3 5v3H3zM7 18v2M17 18v2M5 10l2-4h7l2 4"/></svg></div>
+        <div><h3>Karosářské práce</h3><p>Opravíme poškozenou karoserii po nehodě nebo korozi.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#0E4C92" stroke-width="2" stroke-linecap="round" d="M4 20h16M7 20V9h10v11M9 9V5h6v4M10 13h4M10 16h4"/></svg></div>
+        <div><h3>Dekarbonizace motoru</h3><p>Odstraníme z motoru karbonové usazeniny.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#0E4C92" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/></svg></div>
+        <div><h3>Ochrana podvozku a dutin</h3><p>Ošetříme podvozek a dutiny karoserie proti korozi.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#0E4C92" stroke-width="2" stroke-linejoin="round" d="M3 16c2-6 4-9 9-9s7 3 9 9zM9 11l2 2"/></svg></div>
+        <div><h3>Výměna čelních skel</h3><p>Vyměníme prasklé nebo poškozené čelní sklo.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#0E4C92" stroke-width="2" stroke-linejoin="round" d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></svg></div>
+        <div><h3>Výměna oleje</h3><p>Vyměníme motorový olej a filtr.</p></div>
+      </article>
+    </div>
+    <p class="price-note">Ceny na webu neuvádíme. Cenu řekneme předem, než začneme.</p>
+  </div>
+</section>
+
+<section class="calc-sec" id="uspora">
+  <div class="wrap">
+    <p class="kicker">Kalkulačka</p>
+    <h2>Kolik ušetříte s LPG?</h2>
+    <p class="lead">Zadejte, kolik najezdíte a kolik auto spotřebuje. Ceny paliv jsou jen příklad – přepište je podle aktuálních.</p>
+    <div class="calc">
+      <form class="calc-box" id="calcForm" novalidate onsubmit="return false">
+        <label class="field"><span>Najeté km za rok</span><input id="km" type="number" inputmode="numeric" min="0" step="500" value="15000"></label>
+        <label class="field"><span>Spotřeba benzínu (l/100 km)</span><input id="cons" type="number" inputmode="decimal" min="0" step="0.1" value="7"></label>
+        <div class="prices">
+          <div class="prices-head"><span class="tag">ukázkové ceny – upravte podle aktuálních</span></div>
+          <div class="pair">
+            <label class="field"><span>Benzín (Kč/l)</span><input id="pPetrol" type="number" inputmode="decimal" min="0" step="0.1" value="38"></label>
+            <label class="field"><span>LPG (Kč/l)</span><input id="pLpg" type="number" inputmode="decimal" min="0" step="0.1" value="18"></label>
+          </div>
+        </div>
+        <p class="derived">Spotřeba LPG: <strong id="lpgCons">8,4</strong> l/100 km <span class="tag soft">orientačně</span></p>
+        <p class="calc-note">Počítáme spotřebu LPG = spotřeba benzínu × 1,2. Plyn má menší výhřevnost na litr, proto ho auto spálí víc.</p>
+      </form>
+      <div class="calc-box result" aria-live="polite">
+        <div class="result-label">Roční úspora za palivo</div>
+        <div class="result-num" id="saving">17 220 Kč</div>
+        <dl class="rows">
+          <div><dt>Na benzín za rok</dt><dd id="costPetrol">39 900 Kč</dd></div>
+          <div><dt>Na LPG za rok</dt><dd id="costLpg">22 680 Kč</dd></div>
+        </dl>
+        <label class="field"><span>Vaše auto (značka a model)</span><input id="car" type="text" autocomplete="off" placeholder="např. Škoda Octavia 1.6"></label>
+        <div class="sms-preview" id="smsPreview">Mám zájem o přestavbu na LPG: auto …, najedu 15 000 km/rok</div>
+        <a class="btn btn-main" id="smsBtn" href="sms:+420777122784">Poslat SMS Pavlu Klímovi</a>
+        <p class="hint" id="hint"></p>
+        <p class="calc-note">SMS jde na 777 122 784. Výpočet je orientační a nezahrnuje cenu přestavby.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="duvera">
+  <div class="wrap">
+    <p class="kicker">Kdo jsme</p>
+    <h2>Autoservis pod plynovou stanicí</h2>
+    <p class="lead">Servis vede Pavel Klíma. Najdete nás v Rudolticích hned pod čerpací stanicí LPG.</p>
+    <div class="trust">
+      <div class="trust-item"><b>Přestavby na LPG</b><span>Hlavní specializace servisu</span></div>
+      <div class="trust-item"><b>Rudoltice 132</b><span>Pod čerpací stanicí LPG</span></div>
+      <div class="trust-item"><b>IČO 11129492</b><span>Pavel Klíma, živnostník</span></div>
+    </div>
+    <div class="photo">Sem přijde vaše fotka – dílna nebo auto po přestavbě</div>
+  </div>
+</section>
+
+<section id="postup" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Jak to probíhá</p>
+    <h2>Tři kroky k opravě nebo přestavbě</h2>
+    <ol class="steps">
+      <li><h3>Zavoláte nebo pošlete SMS</h3><p>Řeknete, o jaké auto jde a co potřebujete.</p></li>
+      <li><h3>Domluvíme termín a cenu</h3><p>Cenu řekneme předem, ještě než začneme pracovat.</p></li>
+      <li><h3>Přivezete auto do Rudoltic</h3><p>Rudoltice 132, pod čerpací stanicí LPG. Po práci vám řekneme, co jsme udělali.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="zima" style="padding-top:0">
+  <div class="wrap">
+    <div class="season">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="#0E4C92" stroke-width="3" stroke-linecap="round"><path d="M24 4v40M6.7 14l34.6 20M6.7 34l34.6-20"/><path d="M18 8l6 5 6-5M18 40l6-5 6 5" fill="none"/></g></svg>
+      <div>
+        <h3>Před zimou</h3>
+        <p>Od 1. 11. do 31. 3. musíte mít zimní pneumatiky, pokud jsou na silnici zimní podmínky.</p>
+        <p>Před zimou vám auto zkontrolujeme. <a href="tel:+420777122784">Zavolejte 777 122 784</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="otazky" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Časté otázky</p>
+    <h2>Na co se lidé ptají</h2>
+    <div class="faq">
+      <details><summary>Dá se na LPG přestavět každé auto?</summary><p>Ne každý motor je pro přestavbu vhodný. Řekněte nám značku, model a motor – podle toho poradíme, jestli to u vašeho auta jde.</p></details>
+      <details><summary>Bude auto jezdit i na benzín?</summary><p>Ano. Benzínová nádrž po přestavbě zůstává a auto může jezdit na obě paliva.</p></details>
+      <details><summary>Proč auto na LPG spotřebuje víc litrů?</summary><p>LPG má v litru méně energie než benzín. Spotřeba je proto o něco vyšší – v kalkulačce počítáme orientačně o 20 %.</p></details>
+      <details><summary>Musí se přestavba zapsat do dokladů?</summary><p>Ano. Montáž LPG je změna na vozidle a zapisuje se do dokladů vozidla.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Kontakt</p>
+    <h2>Zavolejte nebo přijeďte</h2>
+    <div class="contact">
+      <div class="card">
+        <ul class="contact-list">
+          <li><small>Telefon</small><a href="tel:+420777122784">777 122 784</a></li>
+          <li><small>E-mail</small><a href="mailto:info@pmk.cz">info@pmk.cz</a></li>
+          <li><small>Adresa</small><strong>Rudoltice 132</strong><span class="muted">pod čerpací stanicí LPG</span></li>
+          <li><a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=Rudoltice%20132" target="_blank" rel="noopener">Ukázat na Mapy.cz</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px">Otevírací doba</h3>
+        <table class="hours">
+          <tr><th scope="row">Pondělí – čtvrtek</th><td>8–12 a 13–16</td></tr>
+          <tr><th scope="row">Pátek</th><td>8–12 a 13–15</td></tr>
+          <tr><th scope="row">Sobota, neděle</th><td>zavřeno</td></tr>
+        </table>
+        <p class="muted" style="margin-top:12px">Mezi 12 a 13 máme pauzu. S autem je lepší se předem domluvit telefonem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <strong><span>PMK</span> <span>autoservis</span></strong>
+    <span>Pavel Klíma · Rudoltice 132 (pod čerpací stanicí LPG) · IČO 11129492</span>
+    <span><a href="tel:+420777122784">777 122 784</a> · <a href="mailto:info@pmk.cz">info@pmk.cz</a></span>
+    <span>Návrh webu, 2026</span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-main" href="tel:+420777122784">Zavolat</a>
+  <a class="btn btn-ghost" href="#uspora">Úspora LPG</a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var PHONE = '+420777122784';
+  var $ = function(id){return document.getElementById(id);};
+  var nf = new Intl.NumberFormat('cs-CZ',{maximumFractionDigits:0});
+  var nf1 = new Intl.NumberFormat('cs-CZ',{maximumFractionDigits:2});
+  function num(id){var v=parseFloat(String($(id).value).replace(',','.'));return isFinite(v)&&v>0?v:0;}
+  function msg(){
+    var car = $('car').value.trim() || '…';
+    var km = num('km');
+    return 'Mám zájem o přestavbu na LPG: auto ' + car + ', najedu ' + (km?nf.format(km):'…') + ' km/rok';
+  }
+  function update(){
+    var km=num('km'), c=num('cons'), pp=num('pPetrol'), pl=num('pLpg');
+    var lc = c*1.2;
+    var costP = km/100*c*pp, costL = km/100*lc*pl, s = costP-costL;
+    $('lpgCons').textContent = nf1.format(Math.round(lc*100)/100);
+    $('costPetrol').textContent = nf.format(Math.round(costP)) + ' Kč';
+    $('costLpg').textContent = nf.format(Math.round(costL)) + ' Kč';
+    $('saving').textContent = (s<0?'−':'') + nf.format(Math.abs(Math.round(s))) + ' Kč';
+    var m = msg();
+    $('smsPreview').textContent = m;
+    $('smsBtn').href = 'sms:' + PHONE + '?body=' + encodeURIComponent(m);
+  }
+  ['km','cons','pPetrol','pLpg','car'].forEach(function(id){$(id).addEventListener('input',function(){ $('hint').textContent=''; update(); });});
+  $('smsBtn').addEventListener('click',function(e){
+    if(!$('car').value.trim()){
+      e.preventDefault();
+      $('hint').textContent = 'Doplňte prosím značku a model auta.';
+      $('car').focus();
+      return;
+    }
+    update();
+  });
+  update();
+})();
+</script>
+</body>
+</html>

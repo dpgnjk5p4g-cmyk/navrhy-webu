@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Pavel Bartoš, autoservis Svratka</title>
+<meta name="description" content="Autoservis a pneuservis Pavel Bartoš ve Svratce (Dopravní 38): opravy silničních motorových vozidel, pneuservis, přezouvání a řešení pojistných událostí. Po–Pá 7–17, tel. 774 447 111.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800&family=Red+Hat+Text:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Pavel Bartoš",
+  "description": "Opravy silničních motorových vozidel, pneuservis a řešení pojistných událostí.",
+  "telephone": "+420774447111",
+  "email": "p.bartos@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dopravní 38",
+    "addressLocality": "Svratka",
+    "addressCountry": "CZ"
+  },
+  "openingHours": "Mo-Fr 07:00-17:00",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "74240315"},
+  "areaServed": "Svratka a okolí",
+  "sameAs": ["https://www.firmy.cz/detail/2335552-pavel-bartos-svratka.html"]
+}
+</script>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --modra:#23407A;
+  --modra-tmava:#182D58;
+  --oranzova:#E8590C;
+  --oranzova-text:#A63F06;
+  --svetla:#F3F5F8;
+  --uhel:#1A1C20;
+  --seda:#4A5060;
+  --linka:#D5DBE5;
+  --bila:#FFFFFF;
+  --nadpis:"Red Hat Display",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --text:"Red Hat Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--svetla);color:var(--uhel);font-family:var(--text);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+.page{background:var(--svetla);color:var(--uhel);overflow-x:hidden;padding-bottom:76px}
+.page img,.page svg{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--nadpis);line-height:1.15;margin:0 0 .5em;color:var(--uhel)}
+h2{font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--modra)}
+.sekce{padding:56px 0}
+.sekce--bila{background:var(--bila)}
+.nadtitul{display:inline-block;font-family:var(--nadpis);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--oranzova-text);margin-bottom:.5em}
+.uvod{max-width:640px;color:var(--seda)}
+
+/* banner návrhu */
+.navrh{background:var(--uhel);color:#fff;font-size:.88rem;text-align:center;padding:8px 16px}
+.navrh strong{color:#FFB98F}
+
+/* záhlaví */
+.hlava{background:var(--bila);border-bottom:1px solid var(--linka);position:sticky;top:0;z-index:20}
+.hlava .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--uhel);min-width:0}
+.logo svg{flex:0 0 auto}
+.logo-text{font-family:var(--nadpis);font-weight:800;font-size:1.1rem;line-height:1.1}
+.logo-text small{display:block;font-family:var(--text);font-weight:500;font-size:.78rem;color:var(--seda)}
+.hlava nav{display:none;gap:20px}
+.hlava nav a{text-decoration:none;color:var(--uhel);font-weight:500;font-size:.95rem}
+.hlava nav a:hover{color:var(--modra)}
+.tel-hlava{font-family:var(--nadpis);font-weight:800;text-decoration:none;color:var(--modra);white-space:nowrap;font-size:1.05rem}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--nadpis);font-weight:800;font-size:1.05rem;text-decoration:none;border-radius:8px;padding:14px 22px;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn--hlavni{background:var(--oranzova);color:var(--uhel)}
+.btn--hlavni:hover{background:#F06A1F}
+.btn--obrys{background:transparent;border-color:var(--modra);color:var(--modra)}
+.btn--modra{background:var(--modra);color:#fff}
+.btn:focus-visible,.volba:focus-visible,input:focus-visible{outline:3px solid var(--oranzova);outline-offset:2px}
+
+/* hero */
+.hero{background:var(--bila);padding:28px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+.hero h1{font-size:clamp(2rem,8vw,3.4rem);font-weight:800;letter-spacing:-.01em}
+.hero h1 span{color:var(--modra)}
+.hero p.lead{font-size:1.1rem;color:var(--seda);max-width:520px}
+.hero-akce{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.hero-fakta{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.95rem;color:var(--seda)}
+.hero-fakta li::before{content:"";display:inline-block;width:8px;height:8px;background:var(--oranzova);border-radius:2px;margin-right:8px;vertical-align:middle}
+.hero-obraz{width:100%;border-radius:14px;overflow:hidden;background:#DCE6F2}
+.hero-obraz svg{display:block;width:100%;height:auto}
+
+/* služby */
+.mrizka{display:grid;grid-template-columns:1fr;gap:16px;align-items:start}
+.karta{background:var(--bila);border:1px solid var(--linka);border-radius:12px;padding:22px;width:100%}
+.karta .ikona{width:48px;height:48px;border-radius:10px;background:var(--svetla);display:grid;place-items:center;margin-bottom:14px}
+.karta p{color:var(--seda);margin:0}
+.poznamka-cena{margin-top:20px;font-weight:700;color:var(--modra)}
+
+/* průvodce */
+.pruvodce{background:var(--modra);color:#fff}
+.pruvodce h2,.pruvodce h3{color:#fff}
+.pruvodce .nadtitul{color:#FFB98F}
+.pruvodce .uvod{color:#D8E1F0}
+.pr-box{background:var(--bila);color:var(--uhel);border-radius:14px;padding:20px;margin-top:24px}
+.pr-box h3{color:var(--uhel)}
+.krok-cislo{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--oranzova);color:var(--uhel);font-family:var(--nadpis);font-weight:800;font-size:.95rem;margin-right:8px;vertical-align:middle}
+.volby{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0 22px}
+.volba{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--svetla);border:2px solid var(--linka);border-radius:10px;padding:12px 14px;font:inherit;font-weight:500;color:var(--uhel);cursor:pointer}
+.volba svg{flex:0 0 auto}
+.volba[aria-pressed="true"]{border-color:var(--oranzova);background:#FFF1E8;font-weight:700}
+.stitek{display:inline-block;background:#FFF1E8;color:var(--oranzova-text);border:1px solid #F5C3A5;border-radius:6px;padding:3px 10px;font-size:.85rem;font-weight:700;margin-bottom:12px}
+.seznam{list-style:none;padding:0;margin:0 0 20px}
+.seznam li{border-bottom:1px solid var(--linka)}
+.seznam label{display:flex;gap:12px;align-items:flex-start;padding:12px 2px;cursor:pointer}
+.seznam input{width:22px;height:22px;flex:0 0 auto;margin-top:2px;accent-color:var(--modra)}
+.seznam input:checked + span{color:var(--seda);text-decoration:line-through}
+.postup{font-size:.9rem;color:var(--seda);margin:-8px 0 16px}
+.pole{display:block;font-weight:700;margin-bottom:6px}
+.vstup{width:100%;font:inherit;padding:12px 14px;border:2px solid var(--linka);border-radius:8px;background:#fff;color:var(--uhel)}
+.nahled{background:var(--svetla);border-left:4px solid var(--oranzova);border-radius:6px;padding:12px 14px;margin:16px 0;font-size:.95rem;word-break:break-word}
+.nahled b{display:block;font-size:.8rem;color:var(--seda);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.pr-akce{display:flex;flex-wrap:wrap;gap:10px}
+.pr-prazdne{color:var(--seda);font-style:italic;margin:0}
+[hidden]{display:none!important}
+
+/* kroky */
+.kroky{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:1fr;gap:16px;counter-reset:k;align-items:start}
+.kroky li{background:var(--bila);border:1px solid var(--linka);border-radius:12px;padding:22px 22px 22px 70px;position:relative;width:100%}
+.kroky li::before{counter-increment:k;content:counter(k);position:absolute;left:20px;top:20px;width:36px;height:36px;border-radius:50%;background:var(--modra);color:#fff;font-family:var(--nadpis);font-weight:800;display:grid;place-items:center}
+.kroky p{margin:0;color:var(--seda)}
+.sekce--bila .kroky li{background:var(--svetla)}
+
+/* přezouvání */
+.prez{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
+.fakt{background:var(--bila);border-radius:12px;padding:22px;border-top:5px solid var(--modra);width:100%}
+.fakt .velke{font-family:var(--nadpis);font-weight:800;font-size:2rem;color:var(--modra);line-height:1.1;margin-bottom:6px}
+.fakt p{margin:0;color:var(--seda)}
+
+/* důvěra */
+.duvera{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
+.foto{width:100%;aspect-ratio:4/3;border:2px dashed #9AA6BA;border-radius:12px;display:grid;place-items:center;color:var(--seda);background:var(--svetla);font-weight:700;text-align:center;padding:16px}
+.udaje{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.udaje li{background:var(--svetla);border-radius:10px;padding:14px 16px}
+.udaje b{display:block;font-size:.8rem;color:var(--seda);text-transform:uppercase;letter-spacing:.06em}
+.ukazka{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#E8ECF3;color:var(--seda);border-radius:4px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+
+/* FAQ */
+.faq details{background:var(--bila);border:1px solid var(--linka);border-radius:10px;margin-bottom:10px}
+.faq summary{cursor:pointer;padding:16px 18px;font-weight:700;font-family:var(--nadpis);font-size:1.05rem;list-style:none;position:relative;padding-right:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:1.4rem;color:var(--modra)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 16px;margin:0;color:var(--seda)}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
+.kontakt-box{background:var(--bila);border-radius:12px;padding:22px;border:1px solid var(--linka);width:100%}
+.kontakt-box dl{margin:0;display:grid;gap:14px}
+.kontakt-box dt{font-size:.8rem;color:var(--seda);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.kontakt-box dd{margin:0;font-size:1.1rem;font-weight:500;word-break:break-word}
+.kontakt-box dd a{font-weight:700}
+.mapa-svg{display:block;width:100%;height:auto;border-radius:12px;background:#E3EAF3}
+
+/* patička */
+.pata{background:var(--uhel);color:#C9CED8;padding:32px 0;font-size:.95rem}
+.pata strong{color:#fff;font-family:var(--nadpis)}
+.pata p{margin:0 0 .4em}
+
+/* fixní lišta */
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bila);border-top:1px solid var(--linka);padding:10px 16px;display:flex;gap:10px}
+.lista .btn{flex:1 1 0;padding:12px 10px;font-size:1rem;min-width:0}
+
+@media (min-width:700px){
+  .mrizka{grid-template-columns:repeat(3,1fr)}
+  .volby{grid-template-columns:repeat(2,1fr)}
+  .kroky{grid-template-columns:repeat(3,1fr)}
+  .prez{grid-template-columns:repeat(3,1fr)}
+  .duvera{grid-template-columns:1fr 1fr}
+  .kontakt{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  .hero{padding:48px 0 64px}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;gap:48px}
+  .hlava nav{display:flex}
+  .lista{display:none}
+  .page{padding-bottom:0}
+  .pr-box{padding:32px}
+  .pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+  .volby{grid-template-columns:1fr}
+}
+</style>
+
+<div class="page">
+
+<div class="navrh"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Pavel Bartoš</div>
+
+<div role="banner" class="hlava">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Pavel Bartoš – autoservis Svratka">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#23407A"/><path d="M20 8 L33 31 H7 Z" fill="none" stroke="#E8590C" stroke-width="3.5" stroke-linejoin="round"/><rect x="18.5" y="16" width="3" height="8" rx="1.2" fill="#fff"/><circle cx="20" cy="27" r="1.8" fill="#fff"/></svg>
+      <span class="logo-text">Pavel Bartoš <small>autoservis a pneuservis · Svratka</small></span>
+    </a>
+    <nav aria-label="Hlavní nabídka">
+      <a href="#sluzby">Služby</a>
+      <a href="#nehoda">Nehoda – co teď</a>
+      <a href="#prezouvani">Přezouvání</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel-hlava" href="tel:+420774447111">774 447 111</a>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="nadtitul">Autoservis · Dopravní 38, Svratka</span>
+      <h1>Opravy aut a pojistné události <span>ve Svratce</span></h1>
+      <p class="lead">Opravím jakékoli silniční motorové vozidlo, přezuji pneumatiky a pomohu vám vyřešit pojistnou událost. Cenu řekneme předem.</p>
+      <div class="hero-akce">
+        <a class="btn btn--hlavni" href="tel:+420774447111">Objednat servis</a>
+        <a class="btn btn--obrys" href="#nehoda">Stala se vám nehoda?</a>
+      </div>
+      <ul class="hero-fakta">
+        <li>Po–Pá 7–17</li>
+        <li>Tel. 774 447 111</li>
+        <li>Pneuservis</li>
+      </ul>
+    </div>
+    <div class="hero-obraz">
+      <svg viewBox="0 0 560 400" role="img" aria-labelledby="hero-svg-t">
+        <title id="hero-svg-t">Výstražný trojúhelník na silnici mezi kopci Vysočiny</title>
+        <defs>
+          <linearGradient id="nebe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8EC"/><stop offset="1" stop-color="#EEF2F7"/></linearGradient>
+        </defs>
+        <rect width="560" height="400" fill="url(#nebe)"/>
+        <circle cx="440" cy="78" r="30" fill="#F7E2C8"/>
+        <!-- kopce -->
+        <path d="M0 210 C70 170 130 160 200 185 C260 205 300 150 380 150 C450 150 500 180 560 170 V400 H0Z" fill="#7F96BF"/>
+        <path d="M0 240 C90 205 170 215 250 228 C330 240 400 200 470 205 C510 208 540 215 560 220 V400 H0Z" fill="#4E6A9E"/>
+        <path d="M0 268 C100 248 200 255 280 262 C370 270 460 250 560 258 V400 H0Z" fill="#3B6B4C"/>
+        <!-- smrky -->
+        <g fill="#24472F">
+          <path d="M40 270 l14 -46 l14 46z"/><path d="M62 268 l11 -36 l11 36z"/><path d="M90 266 l13 -42 l13 42z"/>
+          <path d="M440 262 l13 -44 l13 44z"/><path d="M466 262 l10 -32 l10 32z"/><path d="M490 264 l14 -48 l14 48z"/><path d="M520 264 l11 -36 l11 36z"/>
+          <path d="M330 260 l8 -26 l8 26z"/><path d="M348 260 l7 -22 l7 22z"/>
+        </g>
+        <!-- louka -->
+        <path d="M0 290 C140 278 420 278 560 290 V400 H0Z" fill="#5C8A55"/>
+        <!-- silnice -->
+        <path d="M262 262 L298 262 L470 400 L90 400 Z" fill="#3A3D44"/>
+        <path d="M262 262 L298 262 L304 268 L256 268 Z" fill="#2C2F35"/>
+        <!-- středová čára -->
+        <g fill="#F3F5F8">
+          <path d="M279 268 h3 l1 12 h-5z"/><path d="M277 292 h6 l2 20 h-10z"/><path d="M273 328 h10 l3 30 h-16z"/><path d="M268 376 h16 l3 24 h-22z"/>
+        </g>
+        <!-- krajnice -->
+        <path d="M262 262 L90 400 L100 400 L265 262Z" fill="#E6E8EC"/>
+        <path d="M298 262 L470 400 L460 400 L295 262Z" fill="#E6E8EC"/>
+        <!-- auto v dálce -->
+        <g transform="translate(278 248)">
+          <rect x="-14" y="6" width="28" height="12" rx="3" fill="#23407A"/>
+          <rect x="-9" y="0" width="18" height="9" rx="3" fill="#23407A"/>
+          <rect x="-6" y="2" width="12" height="5" rx="1" fill="#C9D8EC"/>
+          <circle cx="-11" cy="12" r="2" fill="#E8590C"/><circle cx="11" cy="12" r="2" fill="#E8590C"/>
+        </g>
+        <!-- trojúhelník -->
+        <g transform="translate(330 300)">
+          <ellipse cx="44" cy="80" rx="52" ry="7" fill="#000" opacity=".25"/>
+          <path d="M44 74 L30 80 M44 74 L58 80" stroke="#1A1C20" stroke-width="3"/>
+          <path d="M44 0 L90 76 H-2 Z" fill="#E8590C" stroke="#B5450A" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M44 22 L70 66 H18 Z" fill="#F3F5F8"/>
+          <path d="M44 34 L60 60 H28 Z" fill="#E8590C"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sekce" id="sluzby">
+  <div class="wrap">
+    <span class="nadtitul">Co dělám</span>
+    <h2>Služby</h2>
+    <div class="mrizka">
+      <div class="karta">
+        <div class="ikona"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M18.5 3.5a6 6 0 0 0-6.6 8l-8.4 8.4a2.3 2.3 0 0 0 3.2 3.2l8.4-8.4a6 6 0 0 0 8-6.6l-3.6 3.6-3.2-.8-.8-3.2z" fill="#23407A"/></svg></div>
+        <h3>Opravy vozidel</h3>
+        <p>Provádím veškeré opravy silničních motorových vozidel – od osobních aut po další vozidla na silnici.</p>
+      </div>
+      <div class="karta">
+        <div class="ikona"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#23407A" stroke-width="4"/><circle cx="14" cy="14" r="4" fill="#E8590C"/></svg></div>
+        <h3>Pneuservis</h3>
+        <p>Přezuji vám pneumatiky na zimu i na léto, aby auto bylo připravené na sezónu.</p>
+      </div>
+      <div class="karta">
+        <div class="ikona"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="5" y="3" width="18" height="22" rx="2" fill="none" stroke="#23407A" stroke-width="3"/><path d="M9 10h10M9 15h10M9 20h6" stroke="#E8590C" stroke-width="2.5"/></svg></div>
+        <h3>Pojistné události</h3>
+        <p>Pomohu vám vyřešit pojistnou událost, ať už jde o nehodu, zvěř, kroupy nebo sklo.</p>
+      </div>
+    </div>
+    <p class="poznamka-cena">Cenu řekneme předem, než se do opravy pustím.</p>
+  </div>
+</section>
+
+<section class="sekce pruvodce" id="nehoda">
+  <div class="wrap">
+    <span class="nadtitul">Průvodce</span>
+    <h2>Stala se vám nehoda? Co teď</h2>
+    <p class="uvod">Vyberte, co se stalo. Ukáže se vám, na co nezapomenout, a jednou zprávou mi dáte vědět.</p>
+
+    <div class="pr-box">
+      <div class="pr-grid">
+        <div>
+          <h3><span class="krok-cislo">1</span>Co se stalo?</h3>
+          <div class="volby" id="volby">
+            <button type="button" class="volba" data-s="auto" aria-pressed="false">
+              <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M4 18l3-7h10l3 7z" fill="#23407A"/><path d="M14 22l3-7h10l2 7z" fill="#E8590C"/><circle cx="8" cy="20" r="2.4" fill="#1A1C20"/><circle cx="24" cy="24" r="2.4" fill="#1A1C20"/></svg>
+              Srážka s jiným autem</button>
+            <button type="button" class="volba" data-s="zver" aria-pressed="false">
+              <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 3 L28 26 H2 Z" fill="none" stroke="#E8590C" stroke-width="3" stroke-linejoin="round"/><path d="M10 21c2-4 6-5 9-5l2-3 1 2-1 2v4h-2v-2h-6v2z" fill="#1A1C20"/></svg>
+              Srážka se zvěří</button>
+            <button type="button" class="volba" data-s="kroupy" aria-pressed="false">
+              <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M8 14a6 6 0 0 1 11-4 5 5 0 1 1 3 9H9a5 5 0 0 1-1-5z" fill="#23407A"/><circle cx="10" cy="24" r="2" fill="#7F96BF"/><circle cx="16" cy="26" r="2" fill="#7F96BF"/><circle cx="22" cy="24" r="2" fill="#7F96BF"/></svg>
+              Kroupy nebo spadlý strom</button>
+            <button type="button" class="volba" data-s="sklo" aria-pressed="false">
+              <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M4 22 L7 8 H23 L26 22 Z" fill="#C9D8EC" stroke="#23407A" stroke-width="2.5"/><path d="M15 12 l-2 4 3 1-3 4M15 12l4 3-2 2" stroke="#E8590C" stroke-width="2" fill="none"/></svg>
+              Rozbité sklo</button>
+            <button type="button" class="volba" data-s="parkoviste" aria-pressed="false">
+              <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="4" width="22" height="22" rx="4" fill="#23407A"/><path d="M11 21V9h5a3.5 3.5 0 0 1 0 7h-5" stroke="#fff" stroke-width="3" fill="none"/></svg>
+              Poškození na parkovišti</button>
+          </div>
+        </div>
+
+        <div>
+          <h3><span class="krok-cislo">2</span>Na co nezapomenout</h3>
+          <p class="pr-prazdne" id="pr-prazdne">Nejdřív vyberte situaci vlevo (na mobilu nahoře).</p>
+          <div id="pr-obsah" hidden>
+            <span class="stitek">Obecné rady, podmínky určuje vaše pojišťovna</span>
+            <ul class="seznam" id="seznam"></ul>
+            <p class="postup" id="postup" aria-live="polite"></p>
+
+            <h3><span class="krok-cislo">3</span>Dejte mi vědět</h3>
+            <label class="pole" for="auto">Jaké máte auto?</label>
+            <input class="vstup" id="auto" type="text" placeholder="např. Škoda Fabia, 2015" autocomplete="off">
+            <div class="nahled" aria-live="polite"><b>Text SMS</b><span id="nahled-text"></span></div>
+            <div class="pr-akce">
+              <a class="btn btn--hlavni" id="sms-btn" href="sms:+420774447111">Poslat SMS na 774 447 111</a>
+              <a class="btn btn--obrys" href="tel:+420774447111">Raději zavolám</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sekce sekce--bila" id="pojistna">
+  <div class="wrap">
+    <span class="nadtitul">Pojistná událost</span>
+    <h2>Pojistná událost ve 3 krocích</h2>
+    <ol class="kroky">
+      <li><h3>Nahlaste škodu</h3><p>Škodu nahlaste své pojišťovně a poznamenejte si číslo škodní události. Fotky a záznam o nehodě si nechte.</p></li>
+      <li><h3>Přivezte auto</h3><p>Zavolejte nebo napište a přivezte auto na Dopravní 38 ve Svratce. Vezměte s sebou podklady k nehodě.</p></li>
+      <li><h3>Opravím a vyřešíme to</h3><p>Auto opravím a s pojistnou událostí vám pomohu. Než začnu, řekneme si, co oprava obnáší.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce" id="prezouvani">
+  <div class="wrap">
+    <span class="nadtitul">Pneuservis</span>
+    <h2>Přezouvání</h2>
+    <p class="uvod">Na Vysočině přichází zima brzy. Přezutí se vyplatí domluvit dopředu – zavolejte a domluvíme termín v pracovní den.</p>
+    <div class="prez">
+      <div class="fakt"><div class="velke">1. 11. – 31. 3.</div><p>V tomto období jsou zimní pneumatiky povinné, pokud je na silnici zimní situace – sníh, led nebo námraza.</p></div>
+      <div class="fakt"><div class="velke">4 mm</div><p>Tolik musí mít zimní pneumatika osobního auta aspoň v hloubce dezénu.</p></div>
+      <div class="fakt"><div class="velke">Po–Pá 7–17</div><p>Přezouvám v otevírací době. Cenu řekneme předem.</p></div>
+    </div>
+    <p style="margin-top:20px"><a class="btn btn--hlavni" href="tel:+420774447111">Objednat přezutí</a></p>
+  </div>
+</section>
+
+<section class="sekce sekce--bila" id="duvera">
+  <div class="wrap">
+    <div class="duvera">
+      <div>
+        <span class="nadtitul">Kdo vám auto opraví</span>
+        <h2>Místní autoservis ve Svratce</h2>
+        <p>Jsem Pavel Bartoš a auta opravuji přímo ve Svratce. Když se vám něco stane, nemusíte nikam daleko. <span class="ukazka">ukázkový text</span></p>
+        <ul class="udaje">
+          <li><b>Adresa dílny</b>Dopravní 38, Svratka</li>
+          <li><b>Živnostník</b>IČO 74240315</li>
+          <li><b>Otevřeno</b>Pondělí až pátek, 7–17</li>
+        </ul>
+      </div>
+      <div class="foto">Sem přijde vaše fotka<br>(dílna nebo vy u auta)</div>
+    </div>
+  </div>
+</section>
+
+<section class="sekce" id="jak">
+  <div class="wrap">
+    <span class="nadtitul">Běžná oprava</span>
+    <h2>Jak to probíhá</h2>
+    <ol class="kroky">
+      <li><h3>Zavoláte</h3><p>Řeknete, co auto dělá. Domluvíme den, kdy ho přivezete.</p></li>
+      <li><h3>Řekneme cenu</h3><p>Auto prohlédnu a cenu řekneme předem, než se do opravy pustím.</p></li>
+      <li><h3>Vyzvednete auto</h3><p>Až bude hotovo, zavolám vám. Auto si vyzvednete v otevírací době.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce sekce--bila faq" id="otazky">
+  <div class="wrap">
+    <span class="nadtitul">Časté otázky</span>
+    <h2>Na co se lidé ptají</h2>
+    <details><summary>Musím při nehodě volat policii?</summary><p>Policii je třeba volat vždy, když je někdo zraněný, když je škoda na některém z vozidel zjevně vyšší než 100 000 Kč, když je poškozený majetek třetí osoby (například svodidla) nebo když se s druhým řidičem nedohodnete. Jinak stačí společný záznam o dopravní nehodě.</p></details>
+    <details><summary>Co dělat po srážce se zvěří?</summary><p>Zastavte, zajistěte místo výstražným trojúhelníkem a zavolejte policii na 158. Pojišťovny u střetu se zvěří obvykle chtějí policejní záznam. Uhynulé zvíře si neodvážejte.</p></details>
+    <details><summary>Můžu jezdit s prasklým čelním sklem?</summary><p>Prasklina v zorném poli řidiče je závada, se kterou byste jezdit neměli. Menší poškození mimo zorné pole je dobré nechat posoudit dřív, než se rozšíří.</p></details>
+    <details><summary>Kdy přezout na zimní pneumatiky?</summary><p>Zimní pneumatiky jsou povinné od 1. listopadu do 31. března, když je na silnici sníh, led nebo námraza. Na Vysočině je rozumné přezout včas, než přijde první sníh.</p></details>
+    <details><summary>Kolik bude oprava stát?</summary><p>Záleží na tom, co je potřeba udělat. Cenu řekneme předem, až auto uvidím.</p></details>
+  </div>
+</section>
+
+<section class="sekce" id="kontakt">
+  <div class="wrap">
+    <span class="nadtitul">Kontakt</span>
+    <h2>Kde mě najdete</h2>
+    <div class="kontakt">
+      <div class="kontakt-box">
+        <dl>
+          <div><dt>Telefon</dt><dd><a href="tel:+420774447111">774 447 111</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:p.bartos@seznam.cz">p.bartos@seznam.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Dopravní 38, Svratka</dd></div>
+          <div><dt>Otevírací doba</dt><dd>Pondělí–pátek 7–17</dd></div>
+        </dl>
+        <p style="margin:20px 0 0;display:flex;flex-wrap:wrap;gap:10px">
+          <a class="btn btn--hlavni" href="tel:+420774447111">Objednat servis</a>
+          <a class="btn btn--obrys" href="https://mapy.cz/zakladni?q=Dopravn%C3%AD%2038%2C%20Svratka" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+        </p>
+      </div>
+      <a href="https://mapy.cz/zakladni?q=Dopravn%C3%AD%2038%2C%20Svratka" target="_blank" rel="noopener" aria-label="Dopravní 38, Svratka na Mapy.cz">
+        <svg class="mapa-svg" viewBox="0 0 400 260" aria-hidden="true">
+          <rect width="400" height="260" fill="#E3EAF3"/>
+          <path d="M0 180 C80 160 140 200 220 170 C300 140 340 160 400 150" stroke="#fff" stroke-width="16" fill="none"/>
+          <path d="M150 0 C160 80 190 140 210 260" stroke="#fff" stroke-width="12" fill="none"/>
+          <path d="M0 60 C100 70 250 40 400 70" stroke="#fff" stroke-width="8" fill="none"/>
+          <path d="M260 0 L300 260" stroke="#C9D8EC" stroke-width="6"/>
+          <path d="M300 200 C330 180 360 200 400 190 V260 H300Z" fill="#B9D3B5"/>
+          <circle cx="200" cy="160" r="26" fill="#E8590C" opacity=".2"/>
+          <path d="M200 122a18 18 0 0 1 18 18c0 14-18 30-18 30s-18-16-18-30a18 18 0 0 1 18-18z" fill="#23407A"/>
+          <circle cx="200" cy="140" r="6" fill="#fff"/>
+          <rect x="120" y="206" width="160" height="34" rx="8" fill="#fff"/>
+          <text x="200" y="228" text-anchor="middle" font-family="system-ui,Arial,sans-serif" font-size="15" font-weight="700" fill="#1A1C20">Dopravní 38, Svratka</text>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="pata">
+  <div class="wrap">
+    <p><strong>Pavel Bartoš</strong> – autoservis a pneuservis</p>
+    <p>Dopravní 38, Svratka · IČO 74240315 · <a href="tel:+420774447111" style="color:#fff">774 447 111</a></p>
+    <p>Návrh webu, 2026</p>
+  </div>
+</div>
+
+<div class="lista">
+  <a class="btn btn--hlavni" href="tel:+420774447111">Zavolat</a>
+  <a class="btn btn--modra" href="#nehoda">Nehoda – co teď</a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var spolecne = {
+    fotky: "Vyfoťte místo i škodu – celé auto, detail poškození a okolí.",
+    smlouva: "Připravte si číslo pojistné smlouvy (najdete ho na zelené kartě nebo ve smlouvě).",
+    nahlasit: "Nahlaste škodu své pojišťovně a poznamenejte si číslo škodní události."
+  };
+  var situace = {
+    auto: {nazev: "srážka s jiným autem", body: [
+      "Zastavte, zapněte výstražná světla, oblékněte vestu a postavte výstražný trojúhelník.",
+      spolecne.fotky,
+      "Sepište s druhým řidičem záznam o dopravní nehodě. Policii volejte (158) při zranění, škodě zjevně nad 100 000 Kč, škodě na majetku třetí osoby nebo když se nedohodnete.",
+      "Zapište si SPZ, jméno a pojišťovnu druhého řidiče.",
+      spolecne.smlouva, spolecne.nahlasit]},
+    zver: {nazev: "srážka se zvěří", body: [
+      "Zastavte, zapněte výstražná světla, oblékněte vestu a postavte výstražný trojúhelník.",
+      "Zavolejte policii (158) – pojišťovny u střetu se zvěří obvykle chtějí policejní záznam.",
+      spolecne.fotky + " Vyfoťte i zvíře, pokud je to bezpečné.",
+      "Zvíře si neodvážejte.",
+      spolecne.smlouva, spolecne.nahlasit]},
+    kroupy: {nazev: "kroupy nebo spadlý strom", body: [
+      spolecne.fotky,
+      "Poznamenejte si datum, čas a přesné místo, kde auto stálo.",
+      "Pokud strom blokuje silnici nebo je někdo zraněný, volejte policii (158).",
+      spolecne.smlouva, spolecne.nahlasit]},
+    sklo: {nazev: "rozbité sklo", body: [
+      "Vyfoťte poškozené sklo zblízka i celé auto.",
+      "S prasklinou v zorném poli řidiče dál nejezděte.",
+      "Ověřte si, jestli máte k pojištění připojištění skel.",
+      "Pokud sklo někdo rozbil úmyslně, nahlaste to policii (158).",
+      spolecne.smlouva, spolecne.nahlasit]},
+    parkoviste: {nazev: "poškození na parkovišti", body: [
+      spolecne.fotky,
+      "Je-li viník na místě, sepište s ním záznam o dopravní nehodě.",
+      "Pokud viník ujel nebo ho neznáte, zavolejte policii (158).",
+      "Zeptejte se svědků a zjistěte, jestli parkoviště nemá kamery.",
+      spolecne.smlouva, spolecne.nahlasit]}
+  };
+  var vybrana = null;
+  var volby = document.querySelectorAll('.volba');
+  var seznam = document.getElementById('seznam');
+  var obsah = document.getElementById('pr-obsah');
+  var prazdne = document.getElementById('pr-prazdne');
+  var postup = document.getElementById('postup');
+  var auto = document.getElementById('auto');
+  var nahled = document.getElementById('nahled-text');
+  var sms = document.getElementById('sms-btn');
+
+  function zprava(){
+    var a = auto.value.trim() || "…";
+    return "Řeším pojistnou událost: " + situace[vybrana].nazev + ", auto " + a;
+  }
+  function obnovZpravu(){
+    if(!vybrana) return;
+    var t = zprava();
+    nahled.textContent = t;
+    sms.setAttribute('href', 'sms:+420774447111?body=' + encodeURIComponent(t));
+  }
+  function obnovPostup(){
+    var vse = seznam.querySelectorAll('input');
+    var hotovo = seznam.querySelectorAll('input:checked').length;
+    postup.textContent = "Odškrtnuto " + hotovo + " z " + vse.length + ".";
+  }
+  function vyber(klic){
+    vybrana = klic;
+    volby.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.s === klic ? 'true' : 'false'); });
+    seznam.innerHTML = '';
+    situace[klic].body.forEach(function(text, i){
+      var li = document.createElement('li');
+      var lab = document.createElement('label');
+      var inp = document.createElement('input');
+      inp.type = 'checkbox'; inp.id = 'b' + i;
+      inp.addEventListener('change', obnovPostup);
+      var sp = document.createElement('span'); sp.textContent = text;
+      lab.appendChild(inp); lab.appendChild(sp); li.appendChild(lab); seznam.appendChild(li);
+    });
+    prazdne.hidden = true; obsah.hidden = false;
+    obnovPostup(); obnovZpravu();
+    if (window.innerWidth < 960) { obsah.scrollIntoView({behavior:'smooth', block:'start'}); }
+  }
+  volby.forEach(function(b){ b.addEventListener('click', function(){ vyber(b.dataset.s); }); });
+  auto.addEventListener('input', obnovZpravu);
+})();
+</script>
+</body>
+</html>

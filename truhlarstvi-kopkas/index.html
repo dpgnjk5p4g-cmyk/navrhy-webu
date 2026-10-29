@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Truhlářství Kopkaš</title>
+<meta name="description" content="Truhlářství Kopkaš, Sedlo 7, Střelské Hoštice (Strakonicko): pergoly, zahradní domky, houpačky se skluzavkou, ploty, pískoviště, psí boudy, truhlíky, nábytek, informační tabule pro obce a suché toalety ze dřeva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Zilla+Slab:wght@500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Truhlářství Kopkaš",
+  "founder": {"@type": "Person", "name": "Štefan Kopkaš"},
+  "telephone": "+420608181508",
+  "email": "s.kopkas@seznam.cz",
+  "url": "https://www.truhlarstvi-kopkas.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sedlo 7",
+    "addressLocality": "Střelské Hoštice",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "06:00",
+    "closes": "16:00"
+  }]
+}
+</script>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --trava:#3D6B35;
+  --trava-tm:#2F5429;
+  --med:#D9A35B;
+  --med-sv:#F3DDB8;
+  --nebe:#E6F0F3;
+  --kura:#2B2118;
+  --kura-sv:#5A4A3C;
+  --papir:#FBF8F2;
+  --bila:#FFFFFF;
+  --linka:#E3DACB;
+  --serif:"Zilla Slab",Georgia,"Times New Roman",serif;
+  --sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papir);color:var(--kura);font-family:var(--sans);font-size:17px;line-height:1.55}
+.page{background:var(--papir);overflow-x:hidden;padding-bottom:76px}
+img,svg{max-width:100%;display:block}
+a{color:var(--trava-tm)}
+h1,h2,h3{font-family:var(--serif);line-height:1.1;margin:0 0 .5em;color:var(--kura)}
+h2{font-size:clamp(1.8rem,6vw,2.6rem)}
+h3{font-size:1.25rem}
+p{margin:0 0 1em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.sec{padding:56px 0}
+.kicker{font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--trava);margin-bottom:.5em}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;background:var(--med-sv);color:var(--kura);border-radius:99px;padding:2px 9px;vertical-align:middle}
+
+/* banner návrhu */
+.notice{background:var(--kura);color:#F5EFE6;font-size:.85rem;text-align:center;padding:8px 16px}
+
+/* záhlaví */
+.top{background:var(--papir);border-bottom:1px solid var(--linka)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.3rem;text-decoration:none;color:var(--kura);display:flex;align-items:center;gap:10px;min-width:0}
+.brand b{color:var(--trava)}
+.brand svg{flex:none}
+.top-tel{font-weight:800;text-decoration:none;color:var(--kura);white-space:nowrap;display:flex;align-items:center;gap:6px}
+.top-tel span.t2{display:none}
+.nav{display:none}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:800;font-size:1.05rem;text-decoration:none;border-radius:999px;padding:14px 24px;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn-med{background:var(--med);color:var(--kura)}
+.btn-med:hover{background:#E4B36E}
+.btn-out{background:transparent;color:var(--kura);border-color:var(--kura)}
+.btn-trava{background:var(--trava);color:#fff}
+.btn-trava:hover{background:var(--trava-tm)}
+.btn:focus-visible,.chip:focus-visible,.item:focus-visible{outline:3px solid var(--kura);outline-offset:3px}
+
+/* hero */
+.hero{background:var(--nebe);padding:26px 0 0}
+.hero h1{font-size:clamp(2.7rem,12.5vw,8.4rem);letter-spacing:-.02em;margin:0 0 .2em;line-height:.98;color:var(--kura)}
+.hero h1 em{font-style:normal;color:var(--trava)}
+.hero .lead{font-size:1.1rem;max-width:40em;margin-bottom:18px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.hero .ctas .btn{flex:1 1 180px}
+
+/* zahrada – nástroj */
+.garden-box{position:relative}
+.garden-q{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin-bottom:8px}
+.garden-q h2{margin:0;font-size:clamp(1.5rem,5.6vw,2.3rem)}
+.garden-q p{margin:0;color:var(--kura-sv);font-size:.95rem}
+.garden{width:100%;height:auto;touch-action:manipulation}
+.item{cursor:pointer}
+.item .halo{fill:var(--med);opacity:0;transition:opacity .2s}
+.item:hover .halo{opacity:.35}
+.item.on .halo{opacity:.75}
+.item .pin{opacity:0;transition:opacity .2s}
+.item.on .pin{opacity:1}
+.lbl{font-family:var(--sans);font-weight:800;font-size:20px;fill:var(--kura);paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round;pointer-events:none}
+@media (max-width:700px){.lbl{display:none}}
+
+.tool{background:var(--bila);border-top:4px solid var(--med);padding:24px 0 40px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px;padding:0;list-style:none}
+.chip{font-family:var(--sans);font-size:.95rem;font-weight:700;border:2px solid var(--linka);background:var(--papir);color:var(--kura);border-radius:99px;padding:8px 14px;cursor:pointer;line-height:1.2}
+.chip[aria-pressed="true"]{background:var(--trava);border-color:var(--trava);color:#fff}
+.chip[aria-pressed="true"]::before{content:"✓ "}
+.sub{font-size:.9rem;color:var(--kura-sv);margin:14px 0 8px;font-weight:700}
+.rows{display:grid;gap:10px;margin:16px 0}
+.row{display:grid;gap:8px;background:var(--papir);border:1px solid var(--linka);border-left:5px solid var(--trava);border-radius:10px;padding:12px 14px}
+.row .nm{font-weight:800}
+.row .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.row input{width:82px;font:inherit;font-weight:700;padding:8px 10px;border:2px solid var(--linka);border-radius:8px;background:#fff;color:var(--kura)}
+.row .x{color:var(--kura-sv)}
+.row .res{font-weight:800;color:var(--trava-tm)}
+.row .rm{margin-left:auto;background:none;border:0;color:var(--kura-sv);text-decoration:underline;cursor:pointer;font:inherit;font-size:.9rem;padding:4px}
+.empty{background:var(--nebe);border-radius:10px;padding:14px;color:var(--kura-sv);margin:16px 0}
+.fields{display:grid;gap:10px;margin:8px 0 16px}
+.fields label{display:grid;gap:4px;font-weight:700;font-size:.92rem}
+.fields input,.fields textarea{font:inherit;padding:10px 12px;border:2px solid var(--linka);border-radius:8px;background:#fff;color:var(--kura);width:100%}
+.preview{white-space:pre-wrap;background:var(--nebe);border-radius:10px;padding:14px;font-size:.95rem;margin:0 0 14px;border:1px dashed var(--trava)}
+.send{display:flex;flex-wrap:wrap;gap:10px}
+.send .btn{flex:1 1 180px}
+.small{font-size:.88rem;color:var(--kura-sv)}
+
+/* služby */
+.svc{display:grid;grid-template-columns:1fr;gap:12px;margin:20px 0 0;padding:0}
+.svc li{list-style:none;background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:16px 16px 14px;display:flex;gap:14px;align-items:flex-start}
+.svc ul{margin:0;padding:0}
+.svc .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--nebe);display:grid;place-items:center}
+.svc h3{margin:0 0 4px;font-size:1.15rem}
+.svc p{margin:0;font-size:.95rem;color:var(--kura-sv)}
+.price{margin-top:22px;background:var(--trava);color:#fff;border-radius:var(--r);padding:18px 20px;font-weight:700}
+.price strong{font-family:var(--serif);font-size:1.3rem;display:block}
+
+/* foto */
+.photos{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px;align-items:start}
+.ph{width:100%;aspect-ratio:4/3;border:2px dashed #B9A88F;border-radius:var(--r);display:grid;place-items:center;text-align:center;color:var(--kura-sv);font-weight:700;background:repeating-linear-gradient(135deg,#F4EEE3 0 14px,#EFE7D8 14px 28px);padding:12px}
+
+/* důvěra */
+.trust{background:var(--kura);color:#F5EFE6}
+.trust h2{color:#fff}
+.trust .kicker{color:var(--med)}
+.facts{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+.fact{border:1px solid #4A3B2E;border-radius:var(--r);padding:18px}
+.fact .big{font-family:var(--serif);font-size:2.2rem;font-weight:700;color:var(--med);line-height:1}
+.fact p{margin:.4em 0 0;color:#E8DFD2}
+.fact a{color:var(--med)}
+
+/* kroky */
+.steps{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px;counter-reset:s}
+.step{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:20px;position:relative}
+.step .n{font-family:var(--serif);font-weight:700;font-size:1.1rem;width:40px;height:40px;border-radius:50%;background:var(--med);color:var(--kura);display:grid;place-items:center;margin-bottom:10px}
+.step p{margin:0;color:var(--kura-sv)}
+
+/* FAQ */
+.faq{background:var(--nebe)}
+details{background:var(--bila);border-radius:var(--r);margin-bottom:10px;border:1px solid #CFDDE2}
+summary{cursor:pointer;font-weight:800;padding:16px 44px 16px 18px;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:1.4rem;color:var(--trava)}
+details[open] summary::after{content:"–"}
+details p{padding:0 18px 16px;margin:0;color:var(--kura-sv)}
+
+/* kontakt */
+.contact{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+.cbox{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:20px}
+.cbox dl{margin:0;display:grid;gap:12px}
+.cbox dt{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--trava)}
+.cbox dd{margin:0;font-weight:700;overflow-wrap:anywhere}
+.cbox dd a{color:var(--kura)}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:8px 0;border-bottom:1px solid var(--linka)}
+.hours td+td{text-align:right;font-weight:700}
+
+footer{background:var(--trava-tm);color:#EAF1E8;padding:30px 0 34px;font-size:.92rem}
+footer .fn{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:#fff}
+footer a{color:#fff}
+
+/* fixní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--kura);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.callbar .btn{flex:1;padding:12px 14px}
+
+@media (min-width:700px){
+  .svc{grid-template-columns:1fr 1fr}
+  .photos{grid-template-columns:repeat(3,1fr)}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:1fr 1fr}
+  .fields{grid-template-columns:1fr 1fr}
+  .fields .wide{grid-column:1 / -1}
+  .top-tel span.t2{display:inline}
+}
+@media (min-width:960px){
+  .page{padding-bottom:0}
+  .callbar{display:none}
+  .nav{display:flex;gap:22px}
+  .nav a{text-decoration:none;color:var(--kura);font-weight:700}
+  .nav a:hover{color:var(--trava)}
+  .svc{grid-template-columns:repeat(3,1fr)}
+  .tool-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
+  .sec{padding:80px 0}
+}
+</style>
+
+<div class="page">
+
+<div class="notice" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Truhlářství Kopkaš</div>
+
+<div role="banner" class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="2" y="2" width="30" height="30" rx="8" fill="#3D6B35"/><path d="M9 25V12l8-5 8 5v13" fill="none" stroke="#D9A35B" stroke-width="3" stroke-linejoin="round"/><path d="M13 25v-7h8v7" fill="none" stroke="#fff" stroke-width="2.5"/></svg>
+      <span><span>Truhlářství</span> <b>Kopkaš</b></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#zahrada">Poptávka</a><a href="#sluzby">Co dělám</a><a href="#postup">Jak to probíhá</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="top-tel" href="tel:+420608181508" aria-label="Zavolat 608 181 508">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#3D6B35" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      608 181 508<span class="t2">&nbsp;</span>
+    </a>
+  </div>
+</div>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <h1 id="h1">Dřevo pro <em>Vaši zahradu.</em></h1>
+    <p class="lead">Pergoly, zahradní domky, houpačky se skluzavkou, ploty i psí boudy. Dělám je v Sedle u Střelských Hoštic na Strakonicku. Cenu řeknu předem.</p>
+    <div class="ctas">
+      <a class="btn btn-med" href="tel:+420608181508">Zavolat 608 181 508</a>
+      <a class="btn btn-out" href="#zahrada">Poskládat poptávku</a>
+    </div>
+
+    <div class="garden-box" id="zahrada">
+      <div class="garden-q">
+        <h2>Co postavíme na Vaší zahradě?</h2>
+        <p>Klepněte na předmět v obrázku.</p>
+      </div>
+      <svg class="garden" viewBox="0 0 1200 560" role="group" aria-label="Ilustrace zahrady – klepnutím vyberete, co chcete postavit">
+        <!-- nebe a kopce -->
+        <rect width="1200" height="560" fill="#E6F0F3"/>
+        <circle cx="1080" cy="80" r="44" fill="#F3DDB8"/>
+        <path d="M0 300 Q180 210 380 270 T760 250 T1200 260 V560 H0Z" fill="#B9D3A8"/>
+        <path d="M0 340 Q300 290 620 320 T1200 310 V560 H0Z" fill="#8DB678"/>
+        <rect y="370" width="1200" height="190" fill="#6E9E5C"/>
+        <path d="M0 470 Q400 440 800 470 T1200 460 V560 H0Z" fill="#5E8E4E"/>
+
+        <!-- PLOT -->
+        <g class="item" data-id="plot" tabindex="0" role="button" aria-pressed="false" aria-label="Plot">
+          <rect class="halo" x="0" y="300" width="1200" height="80" rx="10"/>
+          <rect x="0" y="322" width="1200" height="9" fill="#A8743A"/>
+          <rect x="0" y="352" width="1200" height="9" fill="#A8743A"/>
+          <g fill="#C98E4A" stroke="#8A5C2B" stroke-width="2">
+            <path d="M14 372V318l9-12 9 12v54z"/><path d="M54 372V318l9-12 9 12v54z"/><path d="M94 372V318l9-12 9 12v54z"/><path d="M134 372V318l9-12 9 12v54z"/><path d="M174 372V318l9-12 9 12v54z"/><path d="M214 372V318l9-12 9 12v54z"/><path d="M254 372V318l9-12 9 12v54z"/><path d="M294 372V318l9-12 9 12v54z"/><path d="M334 372V318l9-12 9 12v54z"/><path d="M374 372V318l9-12 9 12v54z"/><path d="M414 372V318l9-12 9 12v54z"/><path d="M454 372V318l9-12 9 12v54z"/><path d="M494 372V318l9-12 9 12v54z"/><path d="M534 372V318l9-12 9 12v54z"/><path d="M574 372V318l9-12 9 12v54z"/><path d="M614 372V318l9-12 9 12v54z"/><path d="M654 372V318l9-12 9 12v54z"/><path d="M694 372V318l9-12 9 12v54z"/><path d="M734 372V318l9-12 9 12v54z"/><path d="M774 372V318l9-12 9 12v54z"/><path d="M814 372V318l9-12 9 12v54z"/><path d="M854 372V318l9-12 9 12v54z"/><path d="M894 372V318l9-12 9 12v54z"/><path d="M934 372V318l9-12 9 12v54z"/><path d="M974 372V318l9-12 9 12v54z"/><path d="M1014 372V318l9-12 9 12v54z"/><path d="M1054 372V318l9-12 9 12v54z"/><path d="M1094 372V318l9-12 9 12v54z"/><path d="M1134 372V318l9-12 9 12v54z"/><path d="M1174 372V318l9-12 9 12v54z"/>
+          </g>
+          <g class="pin" transform="translate(960 296)"><circle r="16" fill="#3D6B35"/><path d="M-7 0l5 5 9-10" stroke="#fff" stroke-width="4" fill="none"/></g>
+        </g>
+
+        <!-- ZAHRADNÍ DOMEK -->
+        <g class="item" data-id="domek" tabindex="0" role="button" aria-pressed="false" aria-label="Zahradní domek">
+          <ellipse class="halo" cx="175" cy="400" rx="155" ry="150"/>
+          <path d="M40 260 L175 168 L310 260 Z" fill="#7A3E22"/>
+          <path d="M40 260 L175 168 L310 260" fill="none" stroke="#5A2C17" stroke-width="10" stroke-linejoin="round"/>
+          <rect x="62" y="258" width="226" height="190" fill="#D9A35B"/>
+          <g stroke="#B88440" stroke-width="3"><path d="M62 290h226M62 322h226M62 354h226M62 386h226M62 418h226"/></g>
+          <rect x="146" y="320" width="62" height="128" fill="#8A5C2B"/>
+          <circle cx="196" cy="388" r="4" fill="#F3DDB8"/>
+          <rect x="84" y="290" width="44" height="40" fill="#E6F0F3" stroke="#8A5C2B" stroke-width="5"/>
+          <rect x="228" y="290" width="44" height="40" fill="#E6F0F3" stroke="#8A5C2B" stroke-width="5"/>
+          <g class="pin" transform="translate(175 150)"><circle r="16" fill="#3D6B35"/><path d="M-7 0l5 5 9-10" stroke="#fff" stroke-width="4" fill="none"/></g>
+        </g>
+
+        <!-- PERGOLA -->
+        <g class="item" data-id="pergola" tabindex="0" role="button" aria-pressed="false" aria-label="Pergola">
+          <ellipse class="halo" cx="470" cy="360" rx="140" ry="150"/>
+          <rect x="350" y="224" width="240" height="18" rx="3" fill="#A8743A"/>
+          <g fill="#C98E4A"><rect x="356" y="210" width="12" height="18"/><rect x="396" y="210" width="12" height="18"/><rect x="436" y="210" width="12" height="18"/><rect x="476" y="210" width="12" height="18"/><rect x="516" y="210" width="12" height="18"/><rect x="556" y="210" width="12" height="18"/></g>
+          <rect x="366" y="240" width="18" height="200" fill="#B07A3E"/>
+          <rect x="556" y="240" width="18" height="200" fill="#B07A3E"/>
+          <path d="M384 262 l24 -20M556 262 l-24 -20" stroke="#B07A3E" stroke-width="10"/>
+          <!-- popínavka -->
+          <path d="M375 440 C360 400 392 370 372 330 C356 296 392 280 378 248" fill="none" stroke="#3D6B35" stroke-width="5"/>
+          <g fill="#4F8743"><circle cx="372" cy="400" r="10"/><circle cx="386" cy="350" r="10"/><circle cx="368" cy="300" r="9"/><circle cx="400" cy="232" r="11"/><circle cx="430" cy="236" r="9"/></g>
+          <!-- stůl a lavice -->
+          <rect x="420" y="372" width="100" height="10" fill="#7A4E26"/>
+          <rect x="430" y="380" width="8" height="40" fill="#7A4E26"/><rect x="502" y="380" width="8" height="40" fill="#7A4E26"/>
+          <rect x="404" y="402" width="132" height="8" fill="#8A5C2B"/>
+          <g class="pin" transform="translate(470 196)"><circle r="16" fill="#3D6B35"/><path d="M-7 0l5 5 9-10" stroke="#fff" stroke-width="4" fill="none"/></g>
+        </g>
+
+        <!-- HOUPAČKA SE SKLUZAVKOU -->
+        <g class="item" data-id="houpacka" tabindex="0" role="button" aria-pressed="false" aria-label="Houpačka se skluzavkou">
+          <ellipse class="halo" cx="760" cy="350" rx="150" ry="160"/>
+          <path d="M630 440 L660 220 L690 440 M630 440 M760 440 L730 220 L700 440" fill="none" stroke="#B07A3E" stroke-width="12" stroke-linecap="round"/>
+          <rect x="650" y="212" width="160" height="14" rx="4" fill="#A8743A"/>
+          <!-- houpačka -->
+          <path d="M680 226 V350 M712 226 V350" stroke="#5A4A3C" stroke-width="3"/>
+          <rect x="672" y="350" width="48" height="9" rx="3" fill="#D9A35B"/>
+          <!-- věž -->
+          <rect x="790" y="210" width="12" height="230" fill="#B07A3E"/>
+          <rect x="852" y="210" width="12" height="230" fill="#B07A3E"/>
+          <path d="M778 214 L827 168 L876 214Z" fill="#3D6B35"/>
+          <rect x="786" y="320" width="82" height="14" fill="#A8743A"/>
+          <g stroke="#C98E4A" stroke-width="6"><path d="M796 334v40M812 334v40M828 334v40M844 334v40M860 334v40" opacity=".0"/></g>
+          <!-- skluzavka -->
+          <path d="M864 326 C900 340 912 420 962 438 L970 424 C924 406 914 330 868 312Z" fill="#D9A35B" stroke="#8A5C2B" stroke-width="3"/>
+          <g class="pin" transform="translate(827 150)"><circle r="16" fill="#3D6B35"/><path d="M-7 0l5 5 9-10" stroke="#fff" stroke-width="4" fill="none"/></g>
+        </g>
+
+        <!-- PSÍ BOUDA -->
+        <g class="item" data-id="bouda" tabindex="0" role="button" aria-pressed="false" aria-label="Psí bouda">
+          <ellipse class="halo" cx="1085" cy="430" rx="100" ry="90"/>
+          <path d="M1010 400 L1085 346 L1160 400Z" fill="#7A3E22"/>
+          <rect x="1022" y="398" width="126" height="78" fill="#C98E4A"/>
+          <g stroke="#A8743A" stroke-width="3"><path d="M1022 420h126M1022 444h126"/></g>
+          <path d="M1066 476 V444 a19 19 0 0 1 38 0 V476Z" fill="#2B2118"/>
+          <!-- miska + kost -->
+          <ellipse cx="1172" cy="482" rx="16" ry="6" fill="#3D6B35"/>
+          <g class="pin" transform="translate(1085 330)"><circle r="16" fill="#3D6B35"/><path d="M-7 0l5 5 9-10" stroke="#fff" stroke-width="4" fill="none"/></g>
+        </g>
+
+        <!-- PÍSKOVIŠTĚ -->
+        <g class="item" data-id="piskoviste" tabindex="0" role="button" aria-pressed="false" aria-label="Pískoviště">
+          <ellipse class="halo" cx="560" cy="505" rx="130" ry="50"/>
+          <path d="M450 490 L670 490 L690 530 L430 530Z" fill="#8A5C2B"/>
+          <path d="M462 494 L658 494 L672 522 L448 522Z" fill="#F3DDB8"/>
+          <path d="M520 512 q20 -18 40 0" fill="#E7C894"/>
+          <path d="M600 505 l20 -22 M612 483 l14 2" stroke="#3D6B35" stroke-width="5" stroke-linecap="round"/>
+          <rect x="482" y="500" width="22" height="16" rx="3" fill="#D9A35B"/>
+          <g class="pin" transform="translate(420 488)"><circle r="16" fill="#3D6B35"/><path d="M-7 0l5 5 9-10" stroke="#fff" stroke-width="4" fill="none"/></g>
+        </g>
+        <g aria-hidden="true">
+          <text class="lbl" x="1186" y="296" text-anchor="end">Plot</text>
+          <text class="lbl" x="175" y="480" text-anchor="middle">Zahradní domek</text>
+          <text class="lbl" x="470" y="456" text-anchor="middle">Pergola</text>
+          <text class="lbl" x="780" y="478" text-anchor="middle">Houpačka se skluzavkou</text>
+          <text class="lbl" x="1085" y="512" text-anchor="middle">Psí bouda</text>
+          <text class="lbl" x="560" y="552" text-anchor="middle">Pískoviště</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="tool" aria-labelledby="tool-h">
+    <div class="wrap tool-grid">
+      <div>
+        <p class="kicker" id="tool-h">Vaše poptávka</p>
+        <p class="sub" style="margin-top:0">Z obrázku:</p>
+        <div class="chips" id="chips-main"></div>
+        <p class="sub">A další ze dřeva:</p>
+        <div class="chips" id="chips-more"></div>
+        <div id="rows" class="rows" aria-live="polite"></div>
+        <div id="empty" class="empty">Zatím nic nevybráno. Klepněte na pergolu, plot nebo cokoli jiného – ukáže se pole pro rozměr.</div>
+      </div>
+      <div>
+        <div class="fields">
+          <label>Kam to bude (obec)<input id="f-obec" autocomplete="address-level2" placeholder="např. Strakonice"></label>
+          <label>Vaše jméno<input id="f-jm" autocomplete="name" placeholder="nepovinné"></label>
+          <label class="wide">Poznámka<textarea id="f-pozn" rows="2" placeholder="např. dřevo, barva, termín"></textarea></label>
+        </div>
+        <p class="sub" style="margin-top:0">Zpráva, která se odešle:</p>
+        <div class="preview" id="preview"></div>
+        <div class="send">
+          <a class="btn btn-med" id="sms" href="sms:+420608181508">Poslat SMS</a>
+          <a class="btn btn-out" id="mail" href="mailto:s.kopkas@seznam.cz">Poslat e-mailem</a>
+        </div>
+        <p class="small" style="margin-top:10px">SMS na 608 181 508 se otevře ve Vašem telefonu, text můžete před odesláním upravit. Rozměry stačí přibližně.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sluzby" aria-labelledby="sl-h">
+  <div class="wrap">
+    <p class="kicker">Co dělám</p>
+    <h2 id="sl-h">Ze dřeva pro zahradu, chalupu i obec</h2>
+    <ul class="svc">
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 7h20M5 7v16M21 7v16M3 4h20" stroke="#3D6B35" stroke-width="2.5" fill="none"/></svg></div><div><h3>Pergoly</h3><p>Stín nad terasou nebo posezením – stačí mi rozměr plochy.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M4 23L8 4l4 19M8 4h12M10 4v10M14 4v10M9 14h6M20 4v19l4 0" stroke="#3D6B35" stroke-width="2.2" fill="none"/></svg></div><div><h3>Houpačky se skluzavkou</h3><p>Dětská sestava na zahradu, kde se dá houpat i klouzat.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 12L13 4l10 8M5 11v12h16V11M11 23v-7h4v7" stroke="#3D6B35" stroke-width="2.5" fill="none"/></svg></div><div><h3>Zahradní domky</h3><p>Místo na nářadí, kola a zahradní nábytek přes zimu.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M2 9h22M2 18h22M5 6v17M13 6v17M21 6v17" stroke="#3D6B35" stroke-width="2.5" fill="none"/></svg></div><div><h3>Ploty</h3><p>Dřevěný plot kolem zahrady nebo chalupy – počítá se na metry.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M4 17h18l-2 6H6zM3 17l2-5h16l2 5" stroke="#3D6B35" stroke-width="2.3" fill="none"/></svg></div><div><h3>Pískoviště</h3><p>Ohraničení na písek pro děti, ve velikosti podle zahrady.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 12L13 5l10 7M5 11v12h16V11M10 23v-5a3 3 0 0 1 6 0v5" stroke="#3D6B35" stroke-width="2.5" fill="none"/></svg></div><div><h3>Psí boudy</h3><p>Bouda pro psa – řekněte mi, jak je pes velký.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 11h20l-3 10H6zM8 11c0-4 2-6 5-6s5 2 5 6" stroke="#3D6B35" stroke-width="2.3" fill="none"/></svg></div><div><h3>Truhlíky</h3><p>Na květiny, bylinky nebo zeleninu pod okno či na terasu.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M4 4v19M22 4v19M4 9h18M4 15h18M4 21h18" stroke="#3D6B35" stroke-width="2.5" fill="none"/></svg></div><div><h3>Police</h3><p>Do dílny, sklepa, garáže i do bytu.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 3v20M19 13v10M7 13h12M7 9h8" stroke="#3D6B35" stroke-width="2.5" fill="none"/></svg></div><div><h3>Židle a nábytek</h3><p>Židle, stoly a další nábytek ze dřeva do domu i na zahradu.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 12h16v8H5zM7 20v3M19 20v3M9 12V8h8v4" stroke="#3D6B35" stroke-width="2.3" fill="none"/></svg></div><div><h3>Dětský nábytek</h3><p>Stolky, židličky a další kusy do dětského pokoje.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 4h20v12H3zM7 16v7M19 16v7M7 8h12M7 12h8" stroke="#3D6B35" stroke-width="2.3" fill="none"/></svg></div><div><h3>Informační tabule pro obce</h3><p>Dřevěné vývěsky a tabule na náves, k hřišti nebo stezce.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 9L13 3l8 6v14H5zM11 23v-8h4v8M12 9h2" stroke="#3D6B35" stroke-width="2.3" fill="none"/></svg></div><div><h3>Suché toalety</h3><p>Dřevěná kadibudka tam, kde není voda ani kanalizace.</p></div></li>
+      <li><div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M15 4a5 5 0 0 0-5 7L3 18l4 4 7-7a5 5 0 0 0 7-5l-3 3-3-1-1-3z" stroke="#3D6B35" stroke-width="2.2" fill="none" stroke-linejoin="round"/></svg></div><div><h3>Servis</h3><p>Když je potřeba něco ze dřeva opravit, zavolejte a domluvíme se.</p></div></li>
+    </ul>
+    <div class="price"><strong>Cenu řeknu předem.</strong>Podle rozměru, dřeva a místa.</div>
+
+    <div class="photos">
+      <div class="ph">Sem přijde vaše fotka<br>(pergola)</div>
+      <div class="ph">Sem přijde vaše fotka<br>(houpačka se skluzavkou)</div>
+      <div class="ph">Sem přijde vaše fotka<br>(zahradní domek)</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec trust" aria-labelledby="tr-h">
+  <div class="wrap">
+    <p class="kicker">Proč já</p>
+    <h2 id="tr-h">Truhlář ze Sedla u Střelských Hoštic</h2>
+    <div class="facts">
+      <div class="fact"><div class="big">od 2003</div><p>V oboru od roku 2003.</p></div>
+      <div class="fact"><div class="big">4,4 / 5</div><p><a href="https://www.firmy.cz/detail/2422765-truhlarstvi-kopkas-strelske-hostice-sedlo.html" rel="noopener">15 hodnocení na Firmy.cz</a></p></div>
+      <div class="fact"><div class="big">IČO</div><p>73493406 · Štefan Kopkaš, Sedlo 7, Střelské Hoštice</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="postup" aria-labelledby="po-h">
+  <div class="wrap">
+    <p class="kicker">Jak to probíhá</p>
+    <h2 id="po-h">Tři kroky od nápadu k hotové věci</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Pošlete, co chcete</h3><p>Zavolejte, nebo vyberte v obrázku zahrady a pošlete SMS s přibližným rozměrem.</p></div>
+      <div class="step"><div class="n">2</div><h3>Domluvíme detaily a cenu</h3><p>Upřesníme rozměr, dřevo a umístění. Cenu znáte dřív, než začnu.</p></div>
+      <div class="step"><div class="n">3</div><h3>Vyrobím a předám</h3><p>Termín domluvíme podle Vás. Pak už se jen užívá zahrada.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" aria-labelledby="fq-h">
+  <div class="wrap">
+    <p class="kicker">Časté otázky</p>
+    <h2 id="fq-h">Na co se lidé ptají</h2>
+    <details><summary>Potřebuji na pergolu nebo zahradní domek povolení?</summary><p>Záleží na velikosti, výšce a umístění stavby. Menší zahradní stavby u rodinného domu často povolení nepotřebují, ale pravidla se liší. Před objednávkou se raději zeptejte na stavebním úřadě nebo na obci.</p></details>
+    <details><summary>Jak se o dřevo venku starat?</summary><p>Dřevo na zahradě chrání nátěr – lazura nebo olej. Ten se obvykle obnovuje po několika letech, na slunci a dešti dřív. Pomůže, když dřevo nestojí přímo v mokré zemi a voda z něj může stékat.</p></details>
+    <details><summary>Co mám mít připravené, když poptávám?</summary><p>Přibližný rozměr (u pergoly délku a šířku, u plotu délku v metrech), místo, kam to bude, a ideálně fotku zahrady. Přesné míry se doladí potom.</p></details>
+    <details><summary>Jak funguje suchá toaleta?</summary><p>Nepotřebuje vodu ani kanalizaci. Odpad se po každém použití zasype pilinami nebo jiným suchým materiálem a pak se kompostuje. Hodí se na chatu, zahradu nebo k hřišti.</p></details>
+    <details><summary>Na jakém podkladu má stát zahradní domek nebo pergola?</summary><p>Na rovném a pevném – betonové patky, dlaždice nebo základová deska. Dřevo by nemělo ležet přímo na zemi, jinak rychleji trpí vlhkostí.</p></details>
+  </div>
+</section>
+
+<section class="sec" id="kontakt" aria-labelledby="ko-h">
+  <div class="wrap">
+    <p class="kicker">Kontakt</p>
+    <h2 id="ko-h">Zavolejte, domluvíme se</h2>
+    <div class="contact">
+      <div class="cbox">
+        <dl>
+          <div><dt>Telefon</dt><dd><a href="tel:+420608181508">608 181 508</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:s.kopkas@seznam.cz">s.kopkas@seznam.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Sedlo 7, Střelské Hoštice<br><a href="https://mapy.cz/zakladni?q=Sedlo%207%2C%20St%C5%99elsk%C3%A9%20Ho%C5%A1tice" rel="noopener">Ukázat na Mapy.cz</a></dd></div>
+          <div><dt>Kdo</dt><dd>Štefan Kopkaš</dd></div>
+        </dl>
+      </div>
+      <div class="cbox">
+        <h3>Kdy mě zastihnete</h3>
+        <table class="hours">
+          <tr><td>Pondělí – pátek</td><td>6:00–16:00</td></tr>
+          <tr><td>Sobota</td><td>po telefonické domluvě</td></tr>
+                  </table>
+        <p class="small" style="margin-top:12px">Než přijedete, zavolejte.</p>
+        <a class="btn btn-trava" style="width:100%" href="tel:+420608181508">Zavolat 608 181 508</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fn"><span>Truhlářství</span> <span>Kopkaš</span></div>
+    <p style="margin:.4em 0">Štefan Kopkaš · Sedlo 7, Střelské Hoštice · IČO 73493406<br>
+    <a href="tel:+420608181508">608 181 508</a> · <a href="mailto:s.kopkas@seznam.cz">s.kopkas@seznam.cz</a></p>
+    <p style="margin:0;opacity:.85">Návrh webu, 2026</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-med" href="tel:+420608181508">Zavolat</a>
+  <a class="btn btn-trava" href="#zahrada">Poptávka SMS</a>
+</div>
+</div>
+
+<script>
+(function(){
+  var ITEMS = [
+    {id:"pergola", n:"Pergola", t:"area", main:1},
+    {id:"houpacka", n:"Houpačka se skluzavkou", t:"ks", main:1},
+    {id:"domek", n:"Zahradní domek", t:"dim", main:1},
+    {id:"plot", n:"Plot", t:"len", main:1},
+    {id:"bouda", n:"Psí bouda", t:"ks", main:1},
+    {id:"piskoviste", n:"Pískoviště", t:"ks", main:1},
+    {id:"truhlik", n:"Truhlík", t:"ks"},
+    {id:"police", n:"Police", t:"ks"},
+    {id:"zidle", n:"Židle", t:"ks"},
+    {id:"nabytek", n:"Nábytek", t:"ks"},
+    {id:"detsky", n:"Dětský nábytek", t:"ks"},
+    {id:"tabule", n:"Informační tabule", t:"ks"},
+    {id:"toaleta", n:"Suchá toaleta", t:"ks"}
+  ];
+  var state = {}; // id -> {a,b}
+  var order = [];
+  var PHONE = "+420608181508";
+  var byId = {}; ITEMS.forEach(function(i){byId[i.id]=i;});
+
+  function num(v){ v = String(v||"").replace(",", "."); var x = parseFloat(v); return isFinite(x) && x>0 ? x : 0; }
+  function fmt(x){ return (Math.round(x*100)/100).toString().replace(".", ","); }
+
+  var cm = document.getElementById("chips-main"), cx = document.getElementById("chips-more");
+  ITEMS.forEach(function(it){
+    var b = document.createElement("button");
+    b.type="button"; b.className="chip"; b.textContent=it.n; b.setAttribute("aria-pressed","false"); b.dataset.id=it.id;
+    b.addEventListener("click", function(){ toggle(it.id); });
+    (it.main?cm:cx).appendChild(b);
+  });
+  document.querySelectorAll(".garden .item").forEach(function(g){
+    g.addEventListener("click", function(){ toggle(g.dataset.id); });
+    g.addEventListener("keydown", function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(g.dataset.id);} });
+  });
+
+  function toggle(id){
+    if(state[id]){ delete state[id]; order = order.filter(function(x){return x!==id;}); }
+    else { state[id] = {a:"", b:""}; if(byId[id].t==="ks") state[id].a="1"; order.push(id); }
+    sync(); renderRows(id);
+  }
+  function sync(){
+    document.querySelectorAll("[data-id]").forEach(function(el){
+      var on = !!state[el.dataset.id];
+      el.setAttribute("aria-pressed", on?"true":"false");
+      if(el.classList.contains("item")) el.classList.toggle("on", on);
+    });
+  }
+  function renderRows(focusId){
+    var box = document.getElementById("rows"); box.innerHTML="";
+    document.getElementById("empty").style.display = order.length ? "none":"block";
+    order.forEach(function(id){
+      var it = byId[id], s = state[id];
+      var r = document.createElement("div"); r.className="row";
+      var h = '<div class="nm">'+it.n+'</div><div class="fl">';
+      if(it.t==="area"||it.t==="dim"){
+        h += '<label class="x">délka <input inputmode="decimal" data-k="a" value="'+s.a+'" aria-label="'+it.n+' délka v metrech"></label><span class="x">×</span>'+
+             '<label class="x">šířka <input inputmode="decimal" data-k="b" value="'+s.b+'" aria-label="'+it.n+' šířka v metrech"></label><span class="x">m</span>';
+        if(it.t==="area") h += '<span class="res" data-res></span>';
+      } else if(it.t==="len"){
+        h += '<label class="x">délka <input inputmode="decimal" data-k="a" value="'+s.a+'" aria-label="Délka plotu v metrech"></label><span class="x">m</span>';
+      } else {
+        h += '<label class="x">počet <input inputmode="numeric" data-k="a" value="'+s.a+'" aria-label="'+it.n+' počet kusů"></label><span class="x">ks</span>';
+      }
+      h += '<button type="button" class="rm">odebrat</button></div>';
+      r.innerHTML = h;
+      r.querySelectorAll("input").forEach(function(inp){
+        inp.addEventListener("input", function(){ s[inp.dataset.k]=inp.value; upd(r,it,s); compose(); });
+      });
+      r.querySelector(".rm").addEventListener("click", function(){ toggle(id); });
+      upd(r,it,s);
+      box.appendChild(r);
+      if(id===focusId){ var f=r.querySelector("input"); if(f && window.innerWidth>=960) f.focus({preventScroll:true}); }
+    });
+    compose();
+  }
+  function upd(r,it,s){
+    var el = r.querySelector("[data-res]"); if(!el) return;
+    var a=num(s.a), b=num(s.b);
+    el.textContent = a&&b ? "= "+fmt(a*b)+" m²" : "";
+  }
+  function line(id){
+    var it=byId[id], s=state[id], a=num(s.a), b=num(s.b);
+    if(it.t==="area") return "- pergola" + (a&&b ? " cca "+fmt(a)+" × "+fmt(b)+" m ("+fmt(a*b)+" m²)" : " (rozměr upřesním)");
+    if(it.t==="dim") return "- zahradní domek" + (a&&b ? " cca "+fmt(a)+" × "+fmt(b)+" m" : " (rozměr upřesním)");
+    if(it.t==="len") return "- plot" + (a ? " délka cca "+fmt(a)+" m" : " (délku upřesním)");
+    return "- " + it.n.toLowerCase() + ": " + (a ? Math.round(a) : 1) + " ks";
+  }
+  function compose(){
+    var obec = document.getElementById("f-obec").value.trim();
+    var jm = document.getElementById("f-jm").value.trim();
+    var pz = document.getElementById("f-pozn").value.trim();
+    var t = "Dobrý den, mám zájem o:\n";
+    t += order.length ? order.map(line).join("\n") : "- (vyberte na zahradě)";
+    if(obec) t += "\nMísto: " + obec;
+    if(pz) t += "\nPoznámka: " + pz;
+    t += "\nProsím o cenu. Děkuji" + (jm ? ", " + jm : "") + ".";
+    document.getElementById("preview").textContent = t;
+    var enc = encodeURIComponent(t);
+    document.getElementById("sms").href = "sms:" + PHONE + "?body=" + enc;
+    document.getElementById("mail").href = "mailto:s.kopkas@seznam.cz?subject=" + encodeURIComponent("Poptávka ze zahrady") + "&body=" + enc;
+  }
+  ["f-obec","f-jm","f-pozn"].forEach(function(i){ document.getElementById(i).addEventListener("input", compose); });
+  renderRows();
+})();
+</script>
+</body>
+</html>

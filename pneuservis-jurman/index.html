@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Pneuservis Jurman</title>
+<meta name="description" content="Pneuservis Jurman, Nové Město na Moravě – prodej nových pneumatik i protektorů, ocelových a hliníkových disků. Demontáž, montáž a vyvážení kol. Otevřeno i v sobotu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Pneuservis Jurman",
+  "description": "Prodej nových pneumatik i protektorů, ocelových a hliníkových disků. Kompletní demontáž, montáž a vyvážení kol.",
+  "telephone": "+420566616898",
+  "email": "rbpneu@seznam.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Petrovická 314",
+    "addressLocality": "Nové Město na Moravě",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:00", "closes": "16:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+  ]
+}
+</script>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --guma:#111315;
+  --dezen:#2C3036;
+  --dot:#FFD23F;
+  --bila:#F7F7F5;
+  --sedy-svetly:#BFC3C9;
+  --sedy-tmavy:#4A4F57;
+  --linka:#DCDDD8;
+  --display:"Anton","Impact","Haettenschweiler","Arial Narrow Bold","Arial Narrow",system-ui,sans-serif;
+  --text:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bila);color:var(--guma);font-family:var(--text);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+.page{background:var(--bila);overflow-x:clip;padding-bottom:76px}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;letter-spacing:.01em;margin:0;overflow-wrap:break-word}
+h2{font-size:clamp(2.1rem,8vw,3.6rem);text-transform:uppercase}
+h3{font-size:1.45rem;text-transform:uppercase}
+p{margin:0 0 .8em}
+.eyebrow{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.7rem}
+.ukazka{display:inline-block;font-family:var(--text);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#E6E3D6;color:#3b3a33;border-radius:4px;padding:2px 6px;vertical-align:middle}
+
+/* banner návrhu */
+.navrh{background:var(--dot);color:var(--guma);font-size:.82rem;font-weight:600;text-align:center;padding:7px 16px;line-height:1.35}
+
+/* záhlaví */
+.top{background:var(--guma);color:var(--bila);border-bottom:1px solid #23272c;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;min-width:0;flex:1 1 auto;overflow:hidden}
+.brand svg{flex:none}
+.brand-name{font-family:var(--display);font-size:1.35rem;text-transform:uppercase;letter-spacing:.03em;line-height:1;white-space:nowrap}
+.brand-name b{font-weight:400;color:var(--dot)}
+.toptel{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;background:var(--dot);color:var(--guma);border-radius:999px;padding:9px 14px;font-size:.95rem;white-space:nowrap}
+.toptel .num{display:none}
+.nav{display:none}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--text);font-weight:800;font-size:1.05rem;text-decoration:none;border-radius:12px;padding:15px 22px;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn-dot{background:var(--dot);color:var(--guma)}
+.btn-dot:hover{background:#ffdc66}
+.btn-ghost{background:transparent;color:var(--bila);border-color:#5b616a}
+.btn-ghost:hover{border-color:var(--dot)}
+.btn-dark{background:var(--guma);color:var(--bila)}
+.btn-line{background:#fff;color:var(--guma);border-color:var(--guma)}
+:focus-visible{outline:3px solid var(--dot);outline-offset:2px}
+
+/* hero */
+.hero{position:relative;background:var(--guma);color:var(--bila);overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,19,21,.35) 0%,rgba(17,19,21,.82) 55%,rgba(17,19,21,.96) 100%)}
+.hero .wrap{position:relative;padding-top:26px;padding-bottom:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:.85rem;font-weight:700;line-height:1.25;background:rgba(17,19,21,.85);border:1px solid #3a3f46;color:var(--bila);text-decoration:none}
+.pill .led{width:9px;height:9px;border-radius:50%;background:#8a9099;flex:none}
+.pill.open .led{background:#5BD47A;box-shadow:0 0 0 3px rgba(91,212,122,.25)}
+.pill.closed .led{background:#ff8a7a}
+.rating{background:var(--dot);color:var(--guma);border-color:var(--dot)}
+.rating .stars{letter-spacing:1px}
+.hero h1{font-size:clamp(2.4rem,10.8vw,8.6rem);overflow-wrap:normal;text-transform:uppercase;line-height:.93;margin:0 0 18px;letter-spacing:.005em}
+.hero h1 .hl{color:var(--dot)}
+.hero-lead{font-size:1.08rem;max-width:40em;color:#E4E6E9;margin-bottom:20px}
+.hero-lead strong{color:var(--bila)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-cta .link{color:var(--bila);font-weight:700;text-decoration:underline;text-decoration-color:var(--dot);text-underline-offset:4px;padding:8px 2px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;padding:0;list-style:none;font-size:.9rem;color:var(--sedy-svetly)}
+.hero-facts li::before{content:"";display:inline-block;width:8px;height:8px;background:var(--dot);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* sekce */
+section{padding:56px 0}
+.sec-head{margin-bottom:26px;max-width:46rem}
+.sec-head p{color:var(--sedy-tmavy);margin-top:10px}
+.dark{background:var(--guma);color:var(--bila)}
+.dark .sec-head p{color:var(--sedy-svetly)}
+.dezen-bg{background:var(--dezen);color:var(--bila)}
+
+/* konfigurátor */
+.kolo{background:var(--dezen);color:var(--bila)}
+.kolo .eyebrow{color:var(--dot)}
+.kolo .sec-head p{color:#D5D8DC}
+.konf{display:grid;grid-template-columns:1fr;gap:22px;align-items:start}
+.konf > *{min-width:0}
+.krok{background:var(--guma);border:1px solid #3a3f46;border-radius:var(--r);padding:18px 16px;margin:0 0 14px}
+.krok legend{display:contents}
+.krok-t{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.krok-n{font-family:var(--display);font-size:1.6rem;color:var(--dot);line-height:1}
+.krok-t span:last-child{font-weight:800;font-size:1.05rem}
+.chips{display:grid;grid-template-columns:1fr;gap:8px}
+.chip{position:relative;display:block}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:block;border:2px solid #4a5058;border-radius:10px;padding:11px 14px;font-weight:700;cursor:pointer;background:#1b1e22;line-height:1.3}
+.chip small{display:block;font-weight:500;color:var(--sedy-svetly);font-size:.84rem;margin-top:2px}
+.chip input:checked + span{border-color:var(--dot);background:#2a2716;box-shadow:inset 0 0 0 1px var(--dot)}
+.chip input:focus-visible + span{outline:3px solid var(--dot);outline-offset:2px}
+.chips.ks{grid-template-columns:repeat(4,minmax(0,1fr))}
+.chips.ks span{text-align:center;padding:11px 4px}
+.rozmer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:end}
+.rozmer label{font-size:.8rem;font-weight:700;color:var(--sedy-svetly);display:block;min-width:0}
+select,input[type=text]{width:100%;font:inherit;font-weight:700;font-size:1rem;color:var(--guma);background:var(--bila);border:2px solid #6b7179;border-radius:10px;padding:10px 8px;margin-top:4px;min-width:0}
+input[type=text]{font-weight:500}
+.hint{font-size:.88rem;color:#D5D8DC;margin:10px 0 14px;display:flex;gap:8px;align-items:flex-start}
+.hint b{color:var(--dot);font-weight:800}
+.nakres{position:sticky;top:76px;background:var(--guma);border:1px solid #3a3f46;border-radius:var(--r);padding:14px}
+.nakres svg{display:block;width:100%;height:auto}
+.nakres-cap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;margin-top:8px}
+.nakres-cap .rz{font-family:var(--display);font-size:2rem;color:var(--dot);line-height:1}
+.nakres-cap .pop{font-size:.9rem;color:#D5D8DC}
+.vysledek{background:var(--bila);color:var(--guma);border-radius:var(--r);padding:18px 16px;margin-top:14px}
+.vysledek h3{font-size:1.3rem;margin-bottom:8px}
+.tahak{background:#fff;border:2px dashed var(--guma);border-radius:10px;padding:12px 14px;font-size:.98rem;margin:0 0 14px;white-space:pre-line}
+.vysledek .akce{display:grid;grid-template-columns:1fr;gap:10px}
+.vysledek .note{font-size:.84rem;color:var(--sedy-tmavy);margin:10px 0 0}
+
+/* služby */
+.sluzby{display:grid;grid-template-columns:1fr;gap:14px}
+.sluzba{background:#fff;border:1px solid var(--linka);border-radius:var(--r);padding:20px 18px;display:flex;gap:16px;align-items:flex-start;min-width:0}
+.sluzba svg{flex:none}
+.sluzba h3{margin-bottom:6px}
+.sluzba p{margin:0;color:var(--sedy-tmavy)}
+.cena{margin-top:18px;display:flex;gap:12px;align-items:center;background:var(--guma);color:var(--bila);border-radius:var(--r);padding:16px 18px;font-weight:700}
+.cena .tag{background:var(--dot);color:var(--guma);font-family:var(--display);font-weight:400;font-size:1.2rem;border-radius:8px;padding:4px 10px;flex:none}
+
+/* důvěra */
+.duvera{display:grid;grid-template-columns:1fr;gap:14px;align-items:start}
+.duvera > *{min-width:0}
+.fakta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fakt{background:var(--dezen);border-radius:var(--r);padding:16px}
+.fakt .v{font-family:var(--display);font-size:2.2rem;color:var(--dot);line-height:1;display:block;overflow-wrap:anywhere}
+.fakt .k{font-size:.9rem;color:#D5D8DC;display:block;margin-top:6px}
+.fakt a{color:var(--bila)}
+.foto{border:2px dashed #5b616a;border-radius:var(--r);min-height:200px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--sedy-svetly);font-weight:700;padding:20px;background:repeating-linear-gradient(135deg,#1a1d21 0 14px,#16181b 14px 28px);width:100%}
+.foto.light{border-color:#a8aba4;color:var(--sedy-tmavy);background:repeating-linear-gradient(135deg,#eeeee9 0 14px,#e7e7e1 14px 28px)}
+
+/* kroky */
+.kroky{display:grid;grid-template-columns:1fr;gap:14px;counter-reset:k;padding:0;margin:0;list-style:none}
+.kroky li{background:#fff;border:1px solid var(--linka);border-radius:var(--r);padding:20px 18px 18px;position:relative;min-width:0}
+.kroky li::before{counter-increment:k;content:counter(k);font-family:var(--display);font-size:2.6rem;line-height:1;display:block;color:var(--guma);background:var(--dot);width:56px;height:56px;border-radius:50%;text-align:center;padding-top:6px;margin-bottom:12px}
+.kroky h3{margin-bottom:6px}
+.kroky p{margin:0;color:var(--sedy-tmavy)}
+
+/* přezouvání */
+.prez{display:grid;grid-template-columns:1fr;gap:14px;align-items:start}
+.prez > *{min-width:0}
+.karta{background:var(--guma);border:1px solid #3a3f46;border-radius:var(--r);padding:20px 18px}
+.karta h3{color:var(--dot);margin-bottom:8px}
+.karta p{color:#E0E2E5;margin:0}
+.karta .big{font-family:var(--display);font-size:3.2rem;line-height:1;color:var(--bila);display:block;margin-bottom:6px}
+.mereni{display:flex;align-items:center;gap:14px}
+.mereni svg{flex:none}
+
+/* faq */
+.faq{max-width:52rem}
+.faq details{border-bottom:2px solid var(--guma);padding:4px 0}
+.faq summary{cursor:pointer;font-weight:800;font-size:1.08rem;padding:14px 36px 14px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:6px;font-family:var(--display);font-size:1.8rem;line-height:1.2}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--sedy-tmavy);margin:0 0 16px}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:1fr;gap:16px;align-items:start}
+.kontakt > *{min-width:0}
+.kbox{background:var(--dezen);border-radius:var(--r);padding:20px 18px}
+.kbox a{color:var(--bila)}
+.kline{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #444a52}
+.kline:last-child{border-bottom:0}
+.kline svg{flex:none;margin-top:3px}
+.kline .l{display:block;font-size:.8rem;color:var(--sedy-svetly);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.kline .h{font-weight:700;font-size:1.08rem;overflow-wrap:anywhere}
+.hodiny{width:100%;border-collapse:collapse;font-size:1rem}
+.hodiny td{padding:9px 0;border-bottom:1px solid #444a52}
+.hodiny td:last-child{text-align:right;font-weight:700}
+.hodiny tr.today td{color:var(--dot)}
+.svatek{font-size:.9rem;color:#D5D8DC;margin:12px 0 0}
+
+/* patička */
+.foot{background:#0b0c0e;color:var(--sedy-svetly);padding:30px 0 30px;font-size:.92rem}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+.foot strong{color:var(--bila);font-family:var(--display);font-weight:400;font-size:1.3rem;text-transform:uppercase;letter-spacing:.03em}
+.foot p{margin:0}
+
+/* mobilní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--guma);border-top:1px solid #33383f;padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.callbar .btn{flex:1;padding:13px 10px;font-size:1rem}
+.callbar .btn-ghost{flex:0 0 auto}
+
+@media (min-width:640px){
+  .chips{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chips.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sluzby{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kroky{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .vysledek .akce{grid-template-columns:1fr 1fr}
+  .toptel .num{display:inline}
+  .toptel .lbl{display:none}
+}
+@media (min-width:900px){
+  .page{padding-bottom:0}
+  .callbar{display:none}
+  .nav{display:flex;gap:22px;font-weight:600;font-size:.95rem}
+  .nav a{text-decoration:none;color:#D5D8DC}
+  .nav a:hover{color:var(--dot)}
+  section{padding:84px 0}
+  .hero .wrap{padding-top:48px;padding-bottom:64px}
+  .hero-lead{font-size:1.22rem}
+  .konf{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:28px}
+  .duvera{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+  .duvera .foto{min-height:100%;height:100%}
+  .fakta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .prez{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kontakt{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sluzby{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:899px){ .nakres{position:relative;top:0} }
+@media (max-width:639px){ .brand-name{font-size:1.12rem} .brand svg{width:28px;height:28px} .toptel{padding:8px 12px} }
+@media (max-width:359px){ .brand-name{font-size:1rem} }
+</style>
+
+<div class="page">
+
+<div class="navrh" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Pneuservis Jurman</div>
+
+<div role="banner" class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Pneuservis Jurman – na začátek">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#2C3036"/><circle cx="17" cy="17" r="16" fill="none" stroke="#FFD23F" stroke-width="2" stroke-dasharray="4 3"/><circle cx="17" cy="17" r="8" fill="#BFC3C9"/><circle cx="17" cy="17" r="2.6" fill="#111315"/></svg>
+      <span class="brand-name"><span>Pneuservis</span> <b>Jurman</b></span>
+    </a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#kolo">Složte si kolo</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#prezouvani">Přezouvání</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="toptel" href="tel:+420566616898" aria-label="Zavolat 566 616 898">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#111315" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      <span class="num">566 616 898</span><span class="lbl">Zavolat</span>
+    </a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" style="padding:0" aria-labelledby="h1">
+  <svg class="hero-bg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 900">
+    <defs>
+      <pattern id="dezen" width="120" height="96" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+        <rect width="120" height="96" fill="#111315"/>
+        <!-- směrový V dezén -->
+        <path d="M0 10 L34 40 L60 26 L86 40 L120 10 L120 28 L86 58 L60 44 L34 58 L0 28Z" fill="#2C3036"/>
+        <path d="M0 58 L34 88 L60 74 L86 88 L120 58 L120 76 L86 106 L60 92 L34 106 L0 76Z" fill="#2C3036"/>
+        <path d="M60 50 v10 M60 2 v10" stroke="#2C3036" stroke-width="4"/>
+        <path d="M18 44 l8 -6 M94 38 l8 6" stroke="#22262b" stroke-width="3"/>
+      </pattern>
+    </defs>
+    <rect width="1440" height="900" fill="url(#dezen)"/>
+    <!-- žlutá DOT tečka jako na boku nové pneumatiky -->
+    <circle cx="1310" cy="140" r="34" fill="#FFD23F" opacity=".9"/>
+  </svg>
+  <div class="hero-fade" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-meta">
+      <a class="pill rating" href="https://www.firmy.cz/detail/14055878-pneuservis-jurman-nove-mesto-na-morave.html" target="_blank" rel="noopener">
+        <span class="stars" aria-hidden="true">★★★★★</span> 4,9 z 14 hodnocení · Firmy.cz
+      </a>
+      <span class="pill" id="stav" aria-live="polite"><span class="led"></span><span class="txt">Po–Pá 8–12 a 13–16, So 8–12</span></span>
+    </div>
+    <h1 id="h1">Přezujeme Vás <span class="hl">i&nbsp;v&nbsp;sobotu.</span></h1>
+    <p class="hero-lead"><strong>Pneuservis v Novém Městě na Moravě, Petrovická 314.</strong> Prodáváme nové pneumatiky i protektory, ocelové a hliníkové disky. Kola Vám sundáme, přezujeme, vyvážíme a nasadíme zpátky.</p>
+    <div class="hero-cta">
+      <a class="btn btn-dot" href="tel:+420566616898">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#111315" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        Zavolat 566 616 898
+      </a>
+      <a class="link" href="#kolo">Složte si kolo a pošlete poptávku →</a>
+    </div>
+    <ul class="hero-facts">
+      <li>Sobota 8–12</li>
+      <li>Nové i protektory</li>
+      <li>Ocelové i hliníkové disky</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SLOŽTE SI KOLO -->
+<section class="kolo" id="kolo" aria-labelledby="h-kolo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Poptávka za minutu</span>
+      <h2 id="h-kolo">Složte si kolo</h2>
+      <p>Tři kroky a máte hotovou poptávku. Pošlete ji e-mailem, nebo zavolejte a přečtěte si ji z taháku. Cenu řekneme předem.</p>
+    </div>
+
+    <div class="konf">
+      <form id="konf" onsubmit="return false" novalidate>
+        <fieldset class="krok">
+          <legend><span class="krok-t"><span class="krok-n">1</span><span>Pneumatika</span></span></legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="pneu" value="nova" checked><span>Nová<small>Nová pneumatika</small></span></label>
+            <label class="chip"><input type="radio" name="pneu" value="protektor"><span>Protektor<small>Pneumatika s novým běhounem</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="krok">
+          <legend><span class="krok-t"><span class="krok-n">2</span><span>Disk</span></span></legend>
+          <div class="chips c3">
+            <label class="chip"><input type="radio" name="disk" value="ocel" checked><span>Ocelový<small>Nový ocelový disk</small></span></label>
+            <label class="chip"><input type="radio" name="disk" value="alu"><span>Hliníkový<small>Nový hliníkový disk</small></span></label>
+            <label class="chip"><input type="radio" name="disk" value="vlastni"><span>Jen přezutí<small>Na Vaše vlastní disky</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="krok">
+          <legend><span class="krok-t"><span class="krok-n">3</span><span>Rozměr a počet kusů</span></span></legend>
+          <div class="rozmer">
+            <label>Šířka (mm)<select id="sirka"></select></label>
+            <label>Profil (%)<select id="profil"></select></label>
+            <label>Průměr (R)<select id="prumer"></select></label>
+          </div>
+          <p class="hint"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:3px"><circle cx="12" cy="12" r="10" fill="none" stroke="#FFD23F" stroke-width="2"/><path d="M12 10.5v6M12 7.2v.1" stroke="#FFD23F" stroke-width="2.4" stroke-linecap="round"/></svg><span>Rozměr najdete na boku pneumatiky, např. <b>205/55 R16</b>.</span></p>
+          <div class="chips ks" role="radiogroup" aria-label="Počet kusů">
+            <label class="chip"><input type="radio" name="ks" value="1"><span>1 ks</span></label>
+            <label class="chip"><input type="radio" name="ks" value="2"><span>2 ks</span></label>
+            <label class="chip"><input type="radio" name="ks" value="3"><span>3 ks</span></label>
+            <label class="chip"><input type="radio" name="ks" value="4" checked><span>4 ks</span></label>
+          </div>
+          <label style="display:block;margin-top:14px;font-size:.8rem;font-weight:700;color:var(--sedy-svetly)">Auto (nepovinné)
+            <input type="text" id="auto" placeholder="např. Škoda Octavia" autocomplete="off"></label>
+        </fieldset>
+      </form>
+
+      <div>
+        <div class="nakres" aria-live="polite">
+          <svg id="kresba" viewBox="0 0 420 300" role="img" aria-labelledby="kresba-t">
+            <title id="kresba-t">Nákres kola podle Vaší volby</title>
+            <g id="k-kolo"></g>
+            <g id="k-bok"></g>
+            <g id="k-ks"></g>
+          </svg>
+          <div class="nakres-cap">
+            <span class="rz" id="cap-rz">205/55 R16</span>
+            <span class="pop" id="cap-pop">Nová · ocelový disk · 4 ks</span>
+          </div>
+        </div>
+
+        <div class="vysledek">
+          <h3>Tahák k hovoru</h3>
+          <p class="tahak" id="tahak"></p>
+          <div class="akce">
+            <a class="btn btn-dot" id="b-mail" href="mailto:rbpneu@seznam.cz">Poslat e-mailem</a>
+            <a class="btn btn-dark" href="tel:+420566616898">Zavolat 566 616 898</a>
+          </div>
+          <p class="note">Telefon 566 616 898 je pevná linka – SMS na něj nedojde. Pište na rbpneu@seznam.cz, nebo volejte v otevírací době.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY -->
+<section id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Co u nás pořídíte</span>
+      <h2 id="h-sluzby">Pneumatiky, disky, přezutí</h2>
+      <p>Prodej i práce na jednom místě. Přijedete, odjedete obutí.</p>
+    </div>
+    <div class="sluzby">
+      <article class="sluzba">
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#111315"/><circle cx="27" cy="27" r="14" fill="#F7F7F5"/><circle cx="27" cy="27" r="25" fill="none" stroke="#2C3036" stroke-width="5" stroke-dasharray="3 3"/><circle cx="39" cy="12" r="4" fill="#FFD23F"/></svg>
+        <div><h3>Nové pneumatiky</h3><p>Prodáváme nové pneumatiky v rozměru, který potřebujete.</p></div>
+      </article>
+      <article class="sluzba">
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#2C3036"/><circle cx="27" cy="27" r="25" fill="none" stroke="#FFD23F" stroke-width="3" stroke-dasharray="6 4"/><circle cx="27" cy="27" r="14" fill="#F7F7F5"/></svg>
+        <div><h3>Protektory</h3><p>Pneumatiky s novým běhounem – u nás je koupíte stejně jako nové.</p></div>
+      </article>
+      <article class="sluzba">
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#111315"/><circle cx="27" cy="27" r="17" fill="#8D939B"/><g fill="#111315"><circle cx="27" cy="15" r="3"/><circle cx="39" cy="27" r="3"/><circle cx="27" cy="39" r="3"/><circle cx="15" cy="27" r="3"/></g><circle cx="27" cy="27" r="5" fill="#2C3036"/></svg>
+        <div><h3>Ocelové disky</h3><p>Odolné ocelové disky, třeba na zimní sadu.</p></div>
+      </article>
+      <article class="sluzba">
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#111315"/><circle cx="27" cy="27" r="17" fill="#D4D7DB"/><g fill="#111315"><path d="M27 27 L22 12 L32 12Z"/><path d="M27 27 L22 12 L32 12Z" transform="rotate(72 27 27)"/><path d="M27 27 L22 12 L32 12Z" transform="rotate(144 27 27)"/><path d="M27 27 L22 12 L32 12Z" transform="rotate(216 27 27)"/><path d="M27 27 L22 12 L32 12Z" transform="rotate(288 27 27)"/></g><circle cx="27" cy="27" r="5" fill="#D4D7DB"/></svg>
+        <div><h3>Hliníkové disky</h3><p>Lehčí hliníková kola – vybereme rozměr, který na Vaše auto sedí.</p></div>
+      </article>
+      <article class="sluzba">
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#FFD23F"/><path d="M15 33 a13 13 0 0 1 22-14" fill="none" stroke="#111315" stroke-width="4" stroke-linecap="round"/><path d="M33 13 l5 6 -7 2z" fill="#111315"/><path d="M39 21 a13 13 0 0 1 -22 14" fill="none" stroke="#111315" stroke-width="4" stroke-linecap="round"/><path d="M21 41 l-5-6 7-2z" fill="#111315"/></svg>
+        <div><h3>Demontáž a montáž</h3><p>Kompletně: kolo z auta, pneumatiku z disku a zase zpátky.</p></div>
+      </article>
+      <article class="sluzba">
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#2C3036"/><path d="M10 36 h34" stroke="#F7F7F5" stroke-width="3" stroke-linecap="round"/><path d="M27 36 l-6 -10 h12z" fill="#FFD23F"/><circle cx="17" cy="20" r="5" fill="#F7F7F5"/><circle cx="37" cy="20" r="5" fill="#F7F7F5"/><path d="M17 20 L37 20" stroke="#F7F7F5" stroke-width="2"/></svg>
+        <div><h3>Vyvážení kol</h3><p>Vyvážené kolo nehází volantem a pneumatika se sjíždí rovnoměrně.</p></div>
+      </article>
+    </div>
+    <div class="cena"><span class="tag">Cena</span><span>Ceník na webu nemáme. Cenu řekneme předem – po telefonu nebo v odpovědi na e-mail.</span></div>
+  </div>
+</section>
+
+<!-- DŮVĚRA -->
+<section class="dark" aria-labelledby="h-duvera">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--dot)">Proč k nám</span>
+      <h2 id="h-duvera">Ověřte si nás</h2>
+      <p>Žádné sliby, jen fakta, která si můžete zkontrolovat.</p>
+    </div>
+    <div class="duvera">
+      <div class="fakta">
+        <div class="fakt"><span class="v">4,9</span><span class="k">průměr ze 14 hodnocení na <a href="https://www.firmy.cz/detail/14055878-pneuservis-jurman-nove-mesto-na-morave.html" target="_blank" rel="noopener">Firmy.cz</a></span></div>
+        <div class="fakt"><span class="v">So 8–12</span><span class="k">přezujeme i v sobotu dopoledne</span></div>
+        <div class="fakt"><span class="v">314</span><span class="k">Petrovická 314, Nové Město na Moravě</span></div>
+        <div class="fakt"><span class="v" style="font-size:1.7rem">70406898</span><span class="k">IČO – podnikáme pod svým jménem</span></div>
+      </div>
+      <div class="foto" role="img" aria-label="Místo pro fotografii dílny">Sem přijde vaše fotka<br>(dílna, zvedák, vyvažovačka)</div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK TO PROBÍHÁ -->
+<section aria-labelledby="h-jak">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Jak to probíhá</span>
+      <h2 id="h-jak">Tři kroky k přezutí</h2>
+    </div>
+    <ol class="kroky">
+      <li><h3>Ozvěte se</h3><p>Zavolejte na 566 616 898, nebo si složte kolo a pošlete poptávku e-mailem.</p></li>
+      <li><h3>Domluvíme se</h3><p>Řekneme, co máme, kolik to bude stát a kdy můžete přijet.</p></li>
+      <li><h3>Přijedete</h3><p>Na Petrovickou 314. Kola sundáme, přezujeme, vyvážíme a nasadíme.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- PŘEZOUVÁNÍ -->
+<section class="dezen-bg" id="prezouvani" aria-labelledby="h-prez">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--dot)">Přezouvání</span>
+      <h2 id="h-prez">Co říká zákon</h2>
+      <p style="color:#D5D8DC">Obecná pravidla pro osobní auta v Česku. Nic víc, nic míň.</p>
+    </div>
+    <div class="prez">
+      <div class="karta">
+        <span class="big">1. 11.–31. 3.</span>
+        <h3>Zimní pneu povinné</h3>
+        <p>V tomto období musíte mít zimní pneumatiky, když je na silnici sníh, led nebo námraza, případně když se dají podle počasí čekat.</p>
+      </div>
+      <div class="karta">
+        <div class="mereni">
+          <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="22" width="56" height="32" rx="4" fill="#2C3036"/><g fill="#111315"><rect x="8" y="22" width="10" height="16"/><rect x="22" y="22" width="10" height="16"/><rect x="36" y="22" width="10" height="16"/><rect x="50" y="22" width="6" height="16"/></g><path d="M27 4 v34" stroke="#FFD23F" stroke-width="3"/><path d="M21 22 h12 M21 38 h12" stroke="#FFD23F" stroke-width="3"/></svg>
+          <span class="big">4 mm</span>
+        </div>
+        <h3>Hloubka dezénu</h3>
+        <p>Zimní pneumatika na osobním autě musí mít dezén hluboký aspoň 4 mm. Mělčí už jako zimní neplatí.</p>
+      </div>
+      <div class="karta">
+        <span class="big">205/55 R16</span>
+        <h3>Jak číst rozměr</h3>
+        <p>205 je šířka v mm, 55 výška boku v procentech šířky, R16 průměr disku v palcích. Najdete ho na boku pneumatiky.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Časté otázky</span>
+      <h2 id="h-faq">Na co se řidiči ptají</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Musím mít zimní pneumatiky od 1. listopadu za každého počasí?</summary>
+        <p>Ne. Od 1. 11. do 31. 3. jsou povinné, když je na silnici sníh, led nebo námraza, nebo když se dají čekat. V praxi je ale lepší přezout dřív, než napadne první sníh – pak bývá v pneuservisech nejvíc lidí.</p>
+      </details>
+      <details>
+        <summary>Kde zjistím rozměr své pneumatiky?</summary>
+        <p>Na boku pneumatiky, zápis vypadá třeba 205/55 R16. Bývá i v technickém průkazu nebo na štítku ve dveřích řidiče či na víčku nádrže.</p>
+      </details>
+      <details>
+        <summary>Co je protektor?</summary>
+        <p>Protektor je pneumatika, které se na původní kostru navulkanizuje nový běhoun. Bývá levnější než nová pneumatika.</p>
+      </details>
+      <details>
+        <summary>Proč se kola po přezutí vyvažují?</summary>
+        <p>Kolo nikdy nemá hmotnost rozloženou úplně rovnoměrně. Nevyvážené kolo se projeví chvěním volantu a nerovnoměrně sjetou pneumatikou, proto se vyvažuje při každé montáži.</p>
+      </details>
+      <details>
+        <summary>Jak poznám, že je pneumatika sjetá?</summary>
+        <p>Změřte hloubku dezénu, stačí i obyčejné posuvné měřítko. Zimní pneumatika potřebuje aspoň 4 mm. V drážkách dezénu jsou navíc indikátory opotřebení – když s nimi dezén splývá, je čas na nové.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="dark" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--dot)">Kontakt</span>
+      <h2 id="h-kontakt">Zavolejte, nebo přijeďte</h2>
+      <p>Telefon je pevná linka, nejrychleji nás zastihnete v otevírací době.</p>
+    </div>
+    <div class="kontakt">
+      <div class="kbox">
+        <div class="kline">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFD23F" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          <div><span class="l">Telefon (pevná linka)</span><a class="h" href="tel:+420566616898">566 616 898</a></div>
+        </div>
+        <div class="kline">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="#FFD23F" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="#FFD23F" stroke-width="2"/></svg>
+          <div><span class="l">E-mail</span><a class="h" href="mailto:rbpneu@seznam.cz">rbpneu@seznam.cz</a></div>
+        </div>
+        <div class="kline">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z" fill="#FFD23F"/><circle cx="12" cy="9" r="2.6" fill="#2C3036"/></svg>
+          <div><span class="l">Adresa</span><span class="h">Petrovická 314<br>Nové Město na Moravě</span><br>
+          <a href="https://mapy.cz/zakladni?q=Petrovick%C3%A1%20314%2C%20Nov%C3%A9%20M%C4%9Bsto%20na%20Morav%C4%9B" target="_blank" rel="noopener" style="font-weight:700;color:var(--dot)">Otevřít v Mapy.cz →</a></div>
+        </div>
+      </div>
+      <div class="kbox">
+        <h3 style="margin-bottom:10px">Otevírací doba</h3>
+        <table class="hodiny" id="hodiny">
+          <tr data-d="1"><td>Pondělí</td><td>8–12 a 13–16</td></tr>
+          <tr data-d="2"><td>Úterý</td><td>8–12 a 13–16</td></tr>
+          <tr data-d="3"><td>Středa</td><td>8–12 a 13–16</td></tr>
+          <tr data-d="4"><td>Čtvrtek</td><td>8–12 a 13–16</td></tr>
+          <tr data-d="5"><td>Pátek</td><td>8–12 a 13–16</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>8–12</td></tr>
+          <tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+        </table>
+        <p class="svatek">O státních svátcích: než přijedete, zavolejte.</p>
+      </div>
+      <div class="foto" role="img" aria-label="Místo pro fotografii provozovny" style="min-height:240px">Sem přijde vaše fotka<br>(vjezd do pneuservisu)</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="foot">
+  <div class="wrap">
+    <div>
+      <strong><span>Pneuservis</span> <span>Jurman</span></strong>
+      <p>Petrovická 314, Nové Město na Moravě · IČO 70406898</p>
+      <p>Tel. <a href="tel:+420566616898">566 616 898</a> · <a href="mailto:rbpneu@seznam.cz">rbpneu@seznam.cz</a></p>
+    </div>
+    <p style="align-self:flex-end">Návrh webu, 2026</p>
+  </div>
+</div>
+
+<div class="callbar">
+  <a class="btn btn-dot" href="tel:+420566616898">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#111315" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+    Zavolat 566 616 898
+  </a>
+  <a class="btn btn-ghost" href="#kolo">Poptat</a>
+</div>
+
+</div>
+
+<script>
+(function(){
+  /* ---------- Teď otevřeno (Europe/Prague) ---------- */
+  var DNY=["neděli","pondělí","úterý","středu","čtvrtek","pátek","sobotu"];
+  var SLOTY={1:[[480,720],[780,960]],2:[[480,720],[780,960]],3:[[480,720],[780,960]],4:[[480,720],[780,960]],5:[[480,720],[780,960]],6:[[480,720]],0:[]};
+  function velikonoce(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(Date.UTC(y,mo-1,da));}
+  function svatek(y,m,d){
+    var pevne=["1-1","5-1","5-8","7-5","7-6","9-28","10-28","11-17","12-24","12-25","12-26"];
+    if(pevne.indexOf(m+"-"+d)>-1) return true;
+    var e=velikonoce(y), pa=new Date(e.getTime()-2*864e5), po=new Date(e.getTime()+864e5);
+    function sh(x){return x.getUTCMonth()+1===m&&x.getUTCDate()===d;}
+    return sh(pa)||sh(po);
+  }
+  function hh(min){return Math.floor(min/60)+":"+("0"+(min%60)).slice(-2);}
+  function praha(){
+    try{
+      var p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Prague",year:"numeric",month:"numeric",day:"numeric",hour:"numeric",minute:"numeric",hour12:false,weekday:"short"}).formatToParts(new Date());
+      var o={};p.forEach(function(x){o[x.type]=x.value;});
+      var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+      return {y:+o.year,m:+o.month,d:+o.day,wd:wd,min:(+o.hour%24)*60+(+o.minute)};
+    }catch(e){var n=new Date();return {y:n.getFullYear(),m:n.getMonth()+1,d:n.getDate(),wd:n.getDay(),min:n.getHours()*60+n.getMinutes()};}
+  }
+  function stav(){
+    var el=document.getElementById("stav"), t=praha(), txt, cls="closed";
+    var row=document.querySelector('#hodiny tr[data-d="'+t.wd+'"]'); if(row) row.className="today";
+    if(svatek(t.y,t.m,t.d)){ txt="Dnes je státní svátek – než přijedete, zavolejte"; cls=""; }
+    else{
+      var s=SLOTY[t.wd], i, otevreno=null, dalsi=null;
+      for(i=0;i<s.length;i++){ if(t.min>=s[i][0]&&t.min<s[i][1]) otevreno=s[i]; if(!dalsi&&t.min<s[i][0]) dalsi=s[i]; }
+      if(otevreno){ txt="Teď otevřeno · do "+hh(otevreno[1]); cls="open"; }
+      else if(dalsi){ txt="Teď zavřeno · otevíráme dnes v "+hh(dalsi[0]); }
+      else{
+        var base=Date.UTC(t.y,t.m-1,t.d);
+        for(i=1;i<10;i++){
+          var x=new Date(base+i*864e5), wd=x.getUTCDay();
+          if(SLOTY[wd].length&&!svatek(x.getUTCFullYear(),x.getUTCMonth()+1,x.getUTCDate())){
+            txt="Teď zavřeno · otevíráme "+(i===1?"zítra":"v "+DNY[wd])+" v "+hh(SLOTY[wd][0][0]); break;
+          }
+        }
+        if(!txt) txt="Než přijedete, zavolejte";
+      }
+    }
+    el.className="pill "+cls; el.querySelector(".txt").textContent=txt;
+  }
+  stav(); setInterval(stav,60000);
+
+  /* ---------- Složte si kolo ---------- */
+  var NS="http://www.w3.org/2000/svg";
+  var sirka=document.getElementById("sirka"), profil=document.getElementById("profil"), prumer=document.getElementById("prumer");
+  function fill(sel,arr,def,pre){arr.forEach(function(v){var o=document.createElement("option");o.value=v;o.textContent=(pre||"")+v;if(v===def)o.selected=true;sel.appendChild(o);});}
+  var S=[],P=[],R=[],v;
+  for(v=135;v<=315;v+=10)S.push(v);
+  for(v=30;v<=80;v+=5)P.push(v);
+  for(v=13;v<=22;v++)R.push(v);
+  fill(sirka,S,205); fill(profil,P,55); fill(prumer,R,16,"R");
+
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+  function val(name){var c=document.querySelector('input[name="'+name+'"]:checked');return c?c.value:"";}
+
+  var NAZ={pneu:{nova:"nová",protektor:"protektor"},disk:{ocel:"ocelový disk",alu:"hliníkový disk",vlastni:"jen přezutí na vlastní disky"}};
+
+  function kresli(){
+    var w=+sirka.value, p=+profil.value, r=+prumer.value, ks=+val("ks"), pneu=val("pneu"), disk=val("disk");
+    var cx=140, cy=150, OUT=132;
+    var rimMM=r*25.4/2, sideMM=w*p/100, scale=OUT/(rimMM+sideMM);
+    var rr=Math.max(48,Math.min(108,rimMM*scale));
+    var g=document.getElementById("k-kolo"); g.innerHTML="";
+    /* pneumatika */
+    el("circle",{cx:cx,cy:cy,r:OUT,fill:"#1d2024"},g);
+    var tread=el("g",{},g), N=40, i;
+    for(i=0;i<N;i++){
+      var a=i*360/N;
+      if(pneu==="protektor"){
+        el("rect",{x:cx-5,y:cy-OUT+1,width:10,height:13,rx:1.5,fill:"#2C3036",transform:"rotate("+a+" "+cx+" "+cy+")"},tread);
+      }else{
+        el("path",{d:"M"+(cx-6)+" "+(cy-OUT+1)+" l6 9 l6 -9 v6 l-6 9 l-6 -9z",fill:"#3a3f46",transform:"rotate("+a+" "+cx+" "+cy+")"},tread);
+      }
+    }
+    if(pneu==="protektor") el("circle",{cx:cx,cy:cy,r:OUT-18,fill:"none",stroke:"#FFD23F","stroke-width":2,"stroke-dasharray":"7 5"},g);
+    /* bok s nápisem */
+    el("circle",{cx:cx,cy:cy,r:rr+4,fill:"#111315"},g);
+    var tr=(OUT-18+rr+4)/2+(-4);
+    var path=el("path",{id:"bokText",d:"M "+(cx-tr)+" "+cy+" A "+tr+" "+tr+" 0 0 1 "+(cx+tr)+" "+cy,fill:"none"},g);
+    var t=el("text",{"font-family":"Anton,Impact,'Arial Narrow',sans-serif","font-size":Math.max(11,Math.min(17,(OUT-rr)*0.32)),"letter-spacing":"1.5",fill:"#BFC3C9","text-anchor":"middle"},g);
+    var tp=el("textPath",{href:"#bokText",startOffset:"50%"},t);
+    tp.textContent=w+"/"+p+" R"+r+(pneu==="protektor"?"  ·  PROTEKTOR":"");
+    if(pneu==="nova") el("circle",{cx:cx+ (rr+ (OUT-rr)/2)*Math.cos(Math.PI*0.25), cy:cy+(rr+(OUT-rr)/2)*Math.sin(Math.PI*0.25), r:5.5, fill:"#FFD23F"},g);
+    /* disk */
+    var d=el("g",{},g);
+    if(disk==="ocel"){
+      el("circle",{cx:cx,cy:cy,r:rr,fill:"#6E747C"},d);
+      el("circle",{cx:cx,cy:cy,r:rr-5,fill:"none",stroke:"#555b62","stroke-width":3},d);
+      for(i=0;i<8;i++){var b=i*Math.PI/4;el("circle",{cx:cx+Math.cos(b)*rr*0.62,cy:cy+Math.sin(b)*rr*0.62,r:rr*0.11,fill:"#111315"},d);}
+      el("circle",{cx:cx,cy:cy,r:rr*0.34,fill:"#8D939B"},d);
+    }else if(disk==="alu"){
+      el("circle",{cx:cx,cy:cy,r:rr,fill:"#D4D7DB"},d);
+      el("circle",{cx:cx,cy:cy,r:rr-3,fill:"none",stroke:"#9aa0a7","stroke-width":2},d);
+      for(i=0;i<5;i++){
+        var a1=(i*72+18)*Math.PI/180, a2=(i*72+54)*Math.PI/180, ri=rr*0.36, ro=rr*0.86;
+        el("path",{d:"M"+(cx+Math.cos(a1+0.12)*ri)+" "+(cy+Math.sin(a1+0.12)*ri)+" L"+(cx+Math.cos(a1)*ro)+" "+(cy+Math.sin(a1)*ro)+" A"+ro+" "+ro+" 0 0 1 "+(cx+Math.cos(a2)*ro)+" "+(cy+Math.sin(a2)*ro)+" L"+(cx+Math.cos(a2-0.12)*ri)+" "+(cy+Math.sin(a2-0.12)*ri)+" Z",fill:"#1d2024"},d);
+      }
+    }else{
+      el("circle",{cx:cx,cy:cy,r:rr,fill:"#2C3036",stroke:"#FFD23F","stroke-width":3,"stroke-dasharray":"8 6"},d);
+      var tx=el("text",{x:cx,y:cy+rr*0.62,"text-anchor":"middle","font-family":"Inter,system-ui,sans-serif","font-weight":"800","font-size":Math.max(10,rr*0.17),fill:"#FFD23F"},d);
+      tx.textContent="VÁŠ DISK";
+    }
+    el("circle",{cx:cx,cy:cy,r:rr*0.2,fill:disk==="alu"?"#9aa0a7":"#111315"},d);
+    for(i=0;i<5;i++){var c=i*72*Math.PI/180-Math.PI/2;el("circle",{cx:cx+Math.cos(c)*rr*0.13,cy:cy+Math.sin(c)*rr*0.13,r:Math.max(1.6,rr*0.03),fill:disk==="alu"?"#111315":"#BFC3C9"},d);}
+
+    /* boční pohled – šířka běhounu */
+    var gb=document.getElementById("k-bok"); gb.innerHTML="";
+    var bw=Math.round(26+(w-135)/180*44), bx=330-bw/2, by=22, bh=210;
+    el("rect",{x:bx,y:by,width:bw,height:bh,rx:bw*0.28,fill:"#1d2024"},gb);
+    for(i=0;i<9;i++){
+      var yy=by+14+i*22;
+      if(pneu==="protektor") el("rect",{x:bx+4,y:yy,width:bw-8,height:8,rx:2,fill:"#2C3036"},gb);
+      else el("path",{d:"M"+(bx+4)+" "+yy+" L"+(bx+bw/2)+" "+(yy+10)+" L"+(bx+bw-4)+" "+yy,fill:"none",stroke:"#3a3f46","stroke-width":4},gb);
+    }
+    el("path",{d:"M"+bx+" "+(by+bh+14)+" h"+bw+" M"+bx+" "+(by+bh+8)+" v12 M"+(bx+bw)+" "+(by+bh+8)+" v12",stroke:"#FFD23F","stroke-width":2},gb);
+    var lt=el("text",{x:330,y:by+bh+34,"text-anchor":"middle","font-family":"Inter,system-ui,sans-serif","font-weight":"800","font-size":"14",fill:"#FFD23F"},gb);
+    lt.textContent=w+" mm";
+
+    /* počet kusů */
+    var gk=document.getElementById("k-ks"); gk.innerHTML="";
+    for(i=0;i<4;i++){
+      var on=i<ks, x0=20+i*22;
+      el("circle",{cx:x0,cy:280,r:8,fill:on?"#FFD23F":"none",stroke:on?"#FFD23F":"#5b616a","stroke-width":2},gk);
+    }
+    var kt=el("text",{x:20+4*22-4,y:285,"font-family":"Inter,system-ui,sans-serif","font-weight":"700","font-size":"14",fill:"#F7F7F5"},gk);
+    kt.textContent="× "+ks+" ks";
+
+    /* popisky a zpráva */
+    var rz=w+"/"+p+" R"+r;
+    document.getElementById("cap-rz").textContent=rz;
+    var popis=(pneu==="nova"?"Nová":"Protektor")+" · "+NAZ.disk[disk]+" · "+ks+" ks";
+    document.getElementById("cap-pop").textContent=popis;
+
+    var auto=document.getElementById("auto").value.trim();
+    var co=pneu==="nova"?"nové pneumatiky":"protektory";
+    var kus=ks===1?"1 kus":(ks<5?ks+" kusy":ks+" kusů");
+    var diskVeta = disk==="ocel"?"na nových ocelových discích":(disk==="alu"?"na nových hliníkových discích":"přezout na moje vlastní disky");
+    var tahak="Dobrý den, poptávám "+co+" "+rz+", "+kus+", "+diskVeta+"."+
+      (auto?"\nAuto: "+auto+".":"")+
+      "\nKolik to bude stát včetně demontáže, montáže a vyvážení?\nKdy můžu přijet?";
+    document.getElementById("tahak").textContent=tahak;
+
+    var predmet="Poptávka: "+(pneu==="nova"?"nové pneu":"protektory")+" "+rz+", "+ks+" ks";
+    var telo=tahak+"\n\nTelefon na mě: \n\nDěkuji.";
+    document.getElementById("b-mail").href="mailto:rbpneu@seznam.cz?subject="+encodeURIComponent(predmet)+"&body="+encodeURIComponent(telo);
+  }
+  document.getElementById("konf").addEventListener("change",kresli);
+  document.getElementById("auto").addEventListener("input",kresli);
+  kresli();
+})();
+</script>
+</body>
+</html>

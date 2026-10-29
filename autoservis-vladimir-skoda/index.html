@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Vladimír Škoda</title>
+<meta name="description" content="Autoservis, pneuservis a karosárna Vladimír Škoda ve Velké Bíteši u D1. Servis a opravy, přezouvání a geometrie, karosářské práce, tažné zařízení, diagnostika, klimatizace, odtah. Po–Pá 6–16.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@600;800;900&family=Sofia+Sans:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Vladimír Škoda – autoservis, pneuservis a karosárna",
+  "telephone": "+420776032982",
+  "email": "skodak.mira@seznam.cz",
+  "taxID": "46227806",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Velká Bíteš 703",
+    "addressLocality": "Velká Bíteš",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "06:00",
+    "closes": "16:00"
+  }],
+  "foundingDate": "1997"
+}
+</script>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --graf:#1B1E24;
+  --graf2:#262A31;
+  --red:#C8102E;
+  --red-d:#A50D26;
+  --asf:#E9EAEC;
+  --yel:#F2C230;
+  --white:#FFFFFF;
+  --muted:#4A505B;
+  --muted-d:#B9BEC7;
+  --line:#CDD0D5;
+  --f-head:"Sofia Sans Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+  --f-body:"Sofia Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--asf);color:var(--graf);font-family:var(--f-body);font-size:17px;line-height:1.55}
+.page{background:var(--asf);overflow-x:clip;padding-bottom:72px}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-head);line-height:1.02;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(34px,7vw,56px);font-weight:900;text-transform:uppercase}
+h3{font-size:24px;font-weight:800}
+p{margin:0 0 12px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.tag{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--yel);color:var(--graf);padding:2px 7px;border-radius:3px;vertical-align:middle}
+.kicker{font-family:var(--f-head);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:15px;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:4px;background:var(--yel);flex:none}
+section{padding:64px 0}
+
+/* banner */
+.notice{background:var(--yel);color:var(--graf);font-size:14px;font-weight:700;text-align:center;padding:8px 16px}
+
+/* top bar */
+.top{background:var(--graf);color:var(--white);position:sticky;top:0;z-index:20;border-bottom:4px solid var(--red)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.logo-mark{width:38px;height:38px;flex:none}
+.logo-txt{font-family:var(--f-head);text-transform:uppercase;line-height:1;min-width:0}
+.logo-txt b{display:block;white-space:nowrap;font-size:20px;font-weight:900;letter-spacing:.02em}
+.logo-txt span{display:block;font-size:12px;letter-spacing:.14em;color:var(--muted-d);font-weight:600}
+.nav{display:none;gap:22px;font-weight:600;font-size:15px}
+.nav a{text-decoration:none;color:var(--asf)}
+.nav a:hover{color:var(--yel)}
+.tel{font-family:var(--f-head);font-weight:800;font-size:19px;text-decoration:none;white-space:nowrap;color:var(--white);display:flex;align-items:center;gap:6px}
+.tel svg{width:18px;height:18px}
+
+/* hero */
+.hero{background:var(--graf);color:var(--white);padding:28px 0 0;position:relative}
+.hero h1{font-size:clamp(44px,13.4vw,128px);font-weight:900;text-transform:uppercase;line-height:.96;letter-spacing:-.005em;margin-bottom:18px}
+.hero h1 .y{color:var(--yel);display:block}
+.hero-lead{font-size:18px;color:var(--asf);max-width:640px;margin-bottom:20px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 22px;border-radius:4px;font-family:var(--f-head);font-weight:800;font-size:20px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:var(--red-d)}
+.btn-ghost{border-color:var(--asf);color:var(--white);background:transparent}
+.btn-ghost:hover{background:var(--asf);color:var(--graf)}
+.hero-grid{display:grid;gap:24px;align-items:start}
+.plan-box{background:var(--graf2);border-radius:6px;padding:12px;width:100%}
+.plan-cap{font-size:13px;color:var(--muted-d);margin:8px 2px 0;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #3A3F48;margin-top:28px}
+.facts div{padding:16px 8px 18px;border-right:1px solid #3A3F48}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-family:var(--f-head);font-weight:900;font-size:clamp(34px,8vw,52px);line-height:1;color:var(--yel)}
+.facts span{font-size:14px;color:var(--muted-d)}
+.road{height:14px;background:repeating-linear-gradient(90deg,var(--yel) 0 40px,transparent 40px 70px) center/100% 4px no-repeat,var(--graf)}
+
+.pl-lab{fill:#B9BEC7;font:700 11px var(--f-body);text-anchor:middle;letter-spacing:.08em}
+.pl-lab.sm{font-size:10px}
+.pl-task{fill:#F2C230;font:800 12px var(--f-body);text-anchor:middle;text-transform:uppercase}
+.pl-task.sm{font-size:10px}
+.pl-car{transition:transform .7s cubic-bezier(.5,.1,.2,1),opacity .4s;opacity:0}
+.pl-car.on{opacity:1}
+
+/* services */
+.svc-grid{display:grid;gap:0;margin-top:28px;border-top:3px solid var(--graf)}
+.svc{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+.svc .num{font-family:var(--f-head);font-weight:900;font-size:34px;color:var(--red);line-height:1}
+.svc p{margin:6px 0 0;color:var(--muted)}
+.svc-note{margin-top:22px;background:var(--white);border-left:6px solid var(--yel);padding:16px 18px}
+.svc-note p:last-child{margin:0}
+
+/* tool */
+.tool{background:var(--graf);color:var(--white)}
+.tool h2{color:var(--white)}
+.tool .kicker{color:var(--yel)}
+.tool-intro{color:var(--asf);max-width:700px}
+.tool-grid{display:grid;gap:22px;margin-top:26px;align-items:start}
+.step-h{font-family:var(--f-head);font-weight:800;font-size:20px;text-transform:uppercase;letter-spacing:.04em;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.step-h i{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--yel);color:var(--graf);display:inline-flex;align-items:center;justify-content:center;font-size:17px;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{font:600 16px var(--f-body);background:transparent;color:var(--white);border:2px solid #5A606B;border-radius:4px;padding:10px 14px;cursor:pointer;min-height:46px;text-align:left}
+.chip[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:var(--white);font-weight:700}
+.chip:focus-visible,.day:focus-visible,.slot:focus-visible,.btn:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:14px}
+.day{font:600 14px var(--f-body);background:var(--graf2);color:var(--white);border:2px solid #3A3F48;border-radius:4px;padding:8px 2px;cursor:pointer;line-height:1.2;min-width:0}
+.day b{display:block;font-family:var(--f-head);font-size:20px}
+.day[aria-pressed="true"]{background:var(--yel);color:var(--graf);border-color:var(--yel)}
+.slots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:18px}
+.slot{font:700 15px var(--f-body);background:var(--graf2);color:var(--white);border:2px solid #3A3F48;border-radius:4px;padding:9px 0;cursor:pointer;min-width:0}
+.slot[aria-pressed="true"]{background:var(--yel);color:var(--graf);border-color:var(--yel)}
+.field{display:block;margin-bottom:12px}
+.field span{display:block;font-size:14px;color:var(--muted-d);margin-bottom:4px}
+.field input{width:100%;font:16px var(--f-body);padding:12px;border-radius:4px;border:2px solid #5A606B;background:var(--graf2);color:var(--white)}
+.field input:focus{outline:none;border-color:var(--yel)}
+.msg{background:var(--asf);color:var(--graf);border-radius:4px;padding:14px;font-size:15px;white-space:pre-wrap;margin:6px 0 14px;min-height:90px;border-left:6px solid var(--yel)}
+.small{font-size:14px;color:var(--muted-d)}
+.tool .btn-red[aria-disabled="true"]{opacity:.55;pointer-events:none}
+
+/* tyres */
+.tyre{background:var(--white)}
+.tyre-grid{display:grid;gap:18px;margin-top:26px}
+.tcard{border:2px solid var(--graf);border-radius:4px;padding:20px}
+.tcard .big{font-family:var(--f-head);font-weight:900;font-size:46px;line-height:1;color:var(--red);margin-bottom:6px}
+.tcard p:last-child{margin:0}
+
+/* trust */
+.trust-grid{display:grid;gap:14px;margin-top:26px}
+.trust-grid > div{background:var(--white);padding:18px;border-radius:4px;border-top:4px solid var(--graf)}
+.trust-grid b{display:block;font-family:var(--f-head);font-size:28px;font-weight:900;line-height:1.05;margin-bottom:4px}
+.trust-grid span{color:var(--muted);font-size:15px}
+.photo{margin-top:18px;display:grid;gap:14px}
+.ph{background:repeating-linear-gradient(135deg,#DADCE0 0 12px,#E2E4E7 12px 24px);border:2px dashed #9AA0AA;border-radius:4px;min-height:180px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700;text-align:center;padding:16px;width:100%}
+
+/* steps */
+.how{background:var(--white)}
+.steps{display:grid;gap:16px;margin-top:26px;counter-reset:s}
+.st{position:relative;padding:20px 18px 18px 18px;background:var(--asf);border-radius:4px}
+.st::before{counter-increment:s;content:counter(s);font-family:var(--f-head);font-weight:900;font-size:56px;line-height:1;color:var(--red);display:block;margin-bottom:6px}
+.st p{margin:6px 0 0;color:var(--muted)}
+
+/* faq */
+.faq-list{margin-top:24px;border-top:3px solid var(--graf)}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;font-weight:700;font-size:18px;padding:14px 32px 14px 0;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:8px;font-family:var(--f-head);font-size:30px;color:var(--red)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:0 0 16px}
+
+/* contact */
+.contact{background:var(--graf);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact .kicker{color:var(--yel)}
+.c-grid{display:grid;gap:22px;margin-top:26px}
+.c-rows div{padding:14px 0;border-bottom:1px solid #3A3F48}
+.c-rows span{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-d)}
+.c-rows a,.c-rows b{font-family:var(--f-head);font-size:26px;font-weight:800;text-decoration:none;word-break:break-word}
+.c-rows a:hover{color:var(--yel)}
+.map-card{background:var(--graf2);border-radius:6px;padding:18px}
+.map-card svg{margin-bottom:12px}
+
+footer.foot{background:#121418;color:var(--muted-d);font-size:14px;padding:26px 0 30px}
+.foot .wrap{display:grid;gap:6px}
+.foot b{color:var(--white);font-family:var(--f-head);font-size:20px;text-transform:uppercase;letter-spacing:.03em}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--graf);border-top:3px solid var(--yel)}
+.callbar a{flex:1;min-height:48px;font-size:18px;padding:8px 10px}
+
+@media (max-width:520px){.logo-txt span{display:none}.logo-txt b{font-size:18px}.logo-mark{width:32px;height:32px}.tel{font-size:18px}}
+@media (min-width:720px){
+  .svc-grid{grid-template-columns:1fr 1fr;column-gap:40px}
+  .tyre-grid,.steps{grid-template-columns:repeat(3,1fr)}
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .photo{grid-template-columns:2fr 1fr}
+  .c-grid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  .nav{display:flex}
+  .hero{padding-top:44px}
+  .hero-grid{grid-template-columns:5fr 6fr;gap:40px}
+  .hero-grid .plan-box{margin-top:-6px}
+  .tool-grid{grid-template-columns:7fr 6fr;gap:36px}
+  .tool-plan{position:sticky;top:90px}
+  .callbar{display:none}
+  .page{padding-bottom:0}
+  section{padding:88px 0}
+}
+@media (prefers-reduced-motion:reduce){.pl-car{transition:none}}
+</style>
+
+<div class="page">
+  <div class="notice" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Vladimír Škoda</div>
+
+  <div class="top" role="banner">
+    <div class="wrap">
+      <a class="logo" href="#uvod" aria-label="Autoservis Vladimír Škoda – úvod">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="4" fill="#C8102E"/><path d="M8 30h24M12 30V14M28 30V14M9 14h22" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><rect x="15" y="18" width="10" height="6" rx="2" fill="#F2C230"/></svg>
+        <span class="logo-txt"><b>Vladimír Škoda</b> <span>Autoservis · Velká Bíteš</span></span>
+      </a>
+      <nav class="nav" aria-label="Hlavní">
+        <a href="#sluzby">Služby</a> <a href="#zvedak">Objednat</a> <a href="#prezouvani">Přezouvání</a> <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="tel" href="tel:+420776032982"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F2C230" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>776 032 982</a>
+    </div>
+  </div>
+
+  <main>
+  <div class="hero" id="uvod">
+    <div class="wrap">
+      <h1>Servis u D1 ve Velké Bíteši. <span class="y">Od roku 1997.</span></h1>
+      <div class="hero-grid">
+        <div>
+          <p class="hero-lead">Autoservis, pneuservis a karosárna. Servis a opravy, přezouvání, geometrie, tažná zařízení. Otevřeno Po–Pá od 6:00 do 16:00.</p>
+          <div class="btns">
+            <a class="btn btn-red" href="#zvedak">Objednat servis</a>
+            <a class="btn btn-ghost" href="tel:+420776032982">Zavolat</a>
+          </div>
+        </div>
+        <div class="plan-box">
+          <svg viewBox="0 0 640 400" role="img" aria-label="Půdorys dílny shora: 4 zvedáky a 6 stání pro vozy">
+<rect x="14" y="14" width="612" height="372" rx="6" fill="#262A31" stroke="#E9EAEC" stroke-opacity=".55" stroke-width="3"/>
+<rect x="10" y="222" width="10" height="36" fill="#262A31"/>
+<rect x="40" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="52" y="118" width="12" height="26" fill="#C8102E"/><rect x="141" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M64 124 L90 108 M64 138 L90 158 M141 124 L115 108 M141 138 L115 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="102.5" y="72" class="pl-lab">ZVEDÁK 1</text>
+<rect x="185" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="197" y="118" width="12" height="26" fill="#C8102E"/><rect x="286" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M209 124 L235 108 M209 138 L235 158 M286 124 L260 108 M286 138 L260 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="247.5" y="72" class="pl-lab">ZVEDÁK 2</text>
+<rect x="330" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="342" y="118" width="12" height="26" fill="#C8102E"/><rect x="431" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M354 124 L380 108 M354 138 L380 158 M431 124 L405 108 M431 138 L405 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="392.5" y="72" class="pl-lab">ZVEDÁK 3</text>
+<rect x="475" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="487" y="118" width="12" height="26" fill="#C8102E"/><rect x="576" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M499 124 L525 108 M499 138 L525 158 M576 124 L550 108 M576 138 L550 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="537.5" y="72" class="pl-lab">ZVEDÁK 4</text>
+<line x1="20" y1="240" x2="620" y2="240" stroke="#F2C230" stroke-width="4" stroke-dasharray="22 14"/>
+<text x="56" y="214" class="pl-lab">VJEZD →</text>
+<rect x="36" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="79" y="285" class="pl-lab sm">STÁNÍ 1</text>
+<rect x="132" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="175" y="285" class="pl-lab sm">STÁNÍ 2</text>
+<rect x="228" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="271" y="285" class="pl-lab sm">STÁNÍ 3</text>
+<rect x="324" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="367" y="285" class="pl-lab sm">STÁNÍ 4</text>
+<rect x="420" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="463" y="285" class="pl-lab sm">STÁNÍ 5</text>
+<rect x="516" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="559" y="285" class="pl-lab sm">STÁNÍ 6</text>
+<g class=""  style="transform:translate(80px,82px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class=""  style="transform:translate(370px,82px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#9AA0AA"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class=""  style="transform:translate(56px,288px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#E9EAEC"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class=""  style="transform:translate(248px,288px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class=""  style="transform:translate(440px,288px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#9AA0AA"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+          </svg>
+          <div class="plan-cap"><span>Půdorys dílny shora – schéma</span><span>4 zvedáky · 6 stání</span></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div><b>1997</b><span>otevřeno od roku</span></div>
+        <div><b>4</b><span>zvedáky v dílně</span></div>
+        <div><b>6</b><span>míst pro vozy</span></div>
+      </div>
+    </div>
+    <div class="road" aria-hidden="true"></div>
+  </div>
+
+  <section id="sluzby">
+    <div class="wrap">
+      <div class="kicker">Co u nás uděláte</div>
+      <h2>Služby</h2>
+      <div class="svc-grid">
+        <div class="svc"><div class="num">01</div><div><h3>Servis a opravy</h3><p>Pravidelný servis i opravy, se kterými auto přestalo jezdit, jak má.</p></div></div>
+        <div class="svc"><div class="num">02</div><div><h3>Pneuservis a geometrie</h3><p>Přezutí, opravy pneumatik a seřízení geometrie, aby auto netáhlo do strany.</p></div></div>
+        <div class="svc"><div class="num">03</div><div><h3>Karosářské práce</h3><p>Opravy karoserie po ťukanci i větší škodě – podívám se a řeknu, co to obnáší.</p></div></div>
+        <div class="svc"><div class="num">04</div><div><h3>Tažné zařízení</h3><p>Montáž tažného zařízení na vaše auto.</p></div></div>
+        <div class="svc"><div class="num">05</div><div><h3>Diagnostika</h3><p>Načtení chyb z řídicí jednotky, když svítí kontrolka nebo auto zlobí.</p></div></div>
+        <div class="svc"><div class="num">06</div><div><h3>Klimatizace</h3><p>Servis klimatizace, když přestane chladit.</p></div></div>
+        <div class="svc"><div class="num">07</div><div><h3>Odtah</h3><p>Když auto nepojede, zavolejte – domluvíme odtah do dílny.</p></div></div>
+      </div>
+      <div class="svc-note">
+        <p><b>Cenu řekneme předem.</b> Než začneme, víte, co se bude dělat a kolik to bude stát.</p>
+        <p class="small" style="color:var(--muted)">Nabízím také ojeté vozy a náhradní díly – zeptejte se po telefonu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool" id="zvedak">
+    <div class="wrap">
+      <div class="kicker">Objednávka za minutu</div>
+      <h2>Najeďte na zvedák</h2>
+      <p class="tool-intro">Vyberte, co je potřeba, a auto najede na zvedák v naší dílně. Pak zvolte den a čas. Složíme z toho SMS na 776 032 982 – odešlete ji jedním klepnutím a já se ozvu s potvrzením.</p>
+      <div class="tool-grid">
+        <div>
+          <p class="step-h"><i>1</i>Co potřebujete</p>
+          <div class="chips" id="chips">
+            <button type="button" class="chip" aria-pressed="false" data-s="Servis a opravy" data-k="SERVIS">Servis a opravy</button>
+            <button type="button" class="chip" aria-pressed="false" data-s="Pneuservis a geometrie" data-k="PNEU">Pneuservis a geometrie</button>
+            <button type="button" class="chip" aria-pressed="false" data-s="Karosářské práce" data-k="KAROSERIE">Karosářské práce</button>
+            <button type="button" class="chip" aria-pressed="false" data-s="Tažné zařízení" data-k="TAŽNÉ">Tažné zařízení</button>
+            <button type="button" class="chip" aria-pressed="false" data-s="Diagnostika" data-k="DIAGNOSTIKA">Diagnostika</button>
+            <button type="button" class="chip" aria-pressed="false" data-s="Klimatizace" data-k="KLIMA">Klimatizace</button>
+            <button type="button" class="chip" aria-pressed="false" data-s="Odtah" data-k="ODTAH">Odtah</button>
+          </div>
+          <p class="step-h"><i>2</i>Kdy přijedete</p>
+          <div class="days" id="days" aria-label="Den"></div>
+          <div class="slots" id="slots" aria-label="Čas"></div>
+          <p class="step-h"><i>3</i>Vaše auto</p>
+          <label class="field"><span>Značka a model (nepovinné)</span><input id="car" type="text" placeholder="např. Octavia 2.0 TDI" autocomplete="off"></label>
+          <label class="field"><span>Vaše jméno (nepovinné)</span><input id="name" type="text" placeholder="Jméno a příjmení" autocomplete="name"></label>
+        </div>
+        <div class="tool-plan">
+          <div class="plan-box" style="background:#15171C">
+            <svg viewBox="0 0 640 400" role="img" aria-label="Půdorys dílny – vybrané úkony najíždějí na zvedáky">
+<rect x="14" y="14" width="612" height="372" rx="6" fill="#262A31" stroke="#E9EAEC" stroke-opacity=".55" stroke-width="3"/>
+<rect x="10" y="222" width="10" height="36" fill="#262A31"/>
+<rect x="40" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="52" y="118" width="12" height="26" fill="#C8102E"/><rect x="141" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M64 124 L90 108 M64 138 L90 158 M141 124 L115 108 M141 138 L115 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="102.5" y="72" class="pl-lab">ZVEDÁK 1</text>
+<text x="102.5" y="208" class="pl-task" id="lt0"></text>
+<rect x="185" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="197" y="118" width="12" height="26" fill="#C8102E"/><rect x="286" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M209 124 L235 108 M209 138 L235 158 M286 124 L260 108 M286 138 L260 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="247.5" y="72" class="pl-lab">ZVEDÁK 2</text>
+<text x="247.5" y="208" class="pl-task" id="lt1"></text>
+<rect x="330" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="342" y="118" width="12" height="26" fill="#C8102E"/><rect x="431" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M354 124 L380 108 M354 138 L380 158 M431 124 L405 108 M431 138 L405 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="392.5" y="72" class="pl-lab">ZVEDÁK 3</text>
+<text x="392.5" y="208" class="pl-task" id="lt2"></text>
+<rect x="475" y="48" width="125" height="170" fill="none" stroke="#E9EAEC" stroke-opacity=".35" stroke-dasharray="6 5"/>
+<rect x="487" y="118" width="12" height="26" fill="#C8102E"/><rect x="576" y="118" width="12" height="26" fill="#C8102E"/>
+<path d="M499 124 L525 108 M499 138 L525 158 M576 124 L550 108 M576 138 L550 158" stroke="#9AA0AA" stroke-width="4" stroke-linecap="round"/>
+<text x="537.5" y="72" class="pl-lab">ZVEDÁK 4</text>
+<text x="537.5" y="208" class="pl-task" id="lt3"></text>
+<line x1="20" y1="240" x2="620" y2="240" stroke="#F2C230" stroke-width="4" stroke-dasharray="22 14"/>
+<text x="56" y="214" class="pl-lab">VJEZD →</text>
+<rect x="36" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="79" y="285" class="pl-lab sm">STÁNÍ 1</text>
+<text x="79" y="266" class="pl-task sm" id="st0"></text>
+<rect x="132" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="175" y="285" class="pl-lab sm">STÁNÍ 2</text>
+<text x="175" y="266" class="pl-task sm" id="st1"></text>
+<rect x="228" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="271" y="285" class="pl-lab sm">STÁNÍ 3</text>
+<text x="271" y="266" class="pl-task sm" id="st2"></text>
+<rect x="324" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="367" y="285" class="pl-lab sm">STÁNÍ 4</text>
+<text x="367" y="266" class="pl-task sm" id="st3"></text>
+<rect x="420" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="463" y="285" class="pl-lab sm">STÁNÍ 5</text>
+<text x="463" y="266" class="pl-task sm" id="st4"></text>
+<rect x="516" y="272" width="86" height="100" fill="none" stroke="#E9EAEC" stroke-opacity=".35"/>
+<text x="559" y="285" class="pl-lab sm">STÁNÍ 6</text>
+<text x="559" y="266" class="pl-task sm" id="st5"></text>
+<g class="pl-car" id="car0" style="transform:translate(-80px,198px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class="pl-car" id="car1" style="transform:translate(-80px,198px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class="pl-car" id="car2" style="transform:translate(-80px,198px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class="pl-car" id="car3" style="transform:translate(-80px,198px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class="pl-car" id="car4" style="transform:translate(-80px,198px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class="pl-car" id="car5" style="transform:translate(-80px,198px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+<g class="pl-car" id="car6" style="transform:translate(-80px,198px)"><rect x="0" y="0" width="46" height="84" rx="12" fill="#C8102E"/><rect x="6" y="18" width="34" height="16" rx="4" fill="#1B1E24" opacity=".75"/><rect x="6" y="58" width="34" height="11" rx="3" fill="#1B1E24" opacity=".6"/><rect x="4" y="2" width="9" height="5" rx="2" fill="#F2C230"/><rect x="33" y="2" width="9" height="5" rx="2" fill="#F2C230"/></g>
+            </svg>
+            <div class="plan-cap"><span id="planInfo">Zatím nic nevybráno</span><span>Po–Pá 6:00–16:00</span></div>
+          </div>
+          <p class="small" style="margin:16px 0 6px">Text zprávy:</p>
+          <div class="msg" id="msg" aria-live="polite"></div>
+          <a class="btn btn-red" id="send" href="#" aria-disabled="true" style="width:100%">Odeslat SMS</a>
+          <p class="small" style="margin-top:10px">Zpráva se otevře ve vašem telefonu, nic se neodešle samo. Termín je předběžný – potvrdím ho zpátky. Na počítači raději zavolejte: <a href="tel:+420776032982" style="color:var(--yel)">776 032 982</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tyre" id="prezouvani">
+    <div class="wrap">
+      <div class="kicker">Pneuservis</div>
+      <h2>Přezouvání</h2>
+      <div class="tyre-grid">
+        <div class="tcard"><div class="big">1. 11.–31. 3.</div><p>V tomto období musíte mít zimní pneumatiky, pokud jsou na silnici zimní podmínky – sníh, led nebo námraza.</p></div>
+        <div class="tcard"><div class="big">4 mm</div><p>Zimní pneumatika musí mít dezén hluboký aspoň 4 mm. Méně už jako zimní neplatí.</p></div>
+        <div class="tcard"><div class="big">+ geometrie</div><p>Při přezutí zkontrolujeme pneumatiky a na přání seřídíme geometrii. Objednejte se výš přes „Najeďte na zvedák“.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-nas">
+    <div class="wrap">
+      <div class="kicker">Proč k nám</div>
+      <h2>Dílna, která tu stojí od roku 1997</h2>
+      <div class="trust-grid">
+        <div><b>Od roku 1997</b><span>otevřeno ve Velké Bíteši</span></div>
+        <div><b>4 zvedáky</b><span>a místo pro 6 vozů</span></div>
+        <div><b>U D1</b><span>Velká Bíteš 703</span></div>
+        <div><b>IČO 46227806</b><span>Vladimír Škoda, živnostník</span></div>
+      </div>
+      <div class="photo">
+        <div class="ph">Sem přijde vaše fotka – dílna se zvedáky</div>
+        <div class="ph">Sem přijde vaše fotka – Vladimír Škoda</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <div class="kicker">Jak to probíhá</div>
+      <h2>Tři kroky <span class="tag">ukázkový text</span></h2>
+      <div class="steps">
+        <div class="st"><h3>Ozvete se</h3><p>Zavoláte nebo pošlete SMS z nástroje výš. Domluvíme den a čas.</p></div>
+        <div class="st"><h3>Přijedete ráno</h3><p>Dílna otevírá v 6:00. Auto se podívá na zvedák a řeknu vám, co je potřeba a kolik to bude stát.</p></div>
+        <div class="st"><h3>Vyzvednete auto</h3><p>Až bude hotovo, zavolám. Nic navíc bez vašeho souhlasu.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="otazky">
+    <div class="wrap">
+      <div class="kicker">Časté otázky</div>
+      <h2>Na co se lidé ptají</h2>
+      <div class="faq-list">
+        <details><summary>Kdy musím přezout na zimní pneumatiky?</summary><p>Od 1. listopadu do 31. března musíte mít zimní pneumatiky, když jsou na silnici zimní podmínky. Dezén zimní pneumatiky musí mít aspoň 4 mm. Nejlepší je objednat se s předstihem, než začne sněžit.</p></details>
+        <details><summary>Svítí mi kontrolka motoru. Můžu jet dál?</summary><p>Záleží na barvě a na tom, jak se auto chová. Žlutá kontrolka obvykle znamená závadu, kterou je dobré nechat brzy zkontrolovat. Červená kontrolka znamená zastavit. Diagnostika přečte uloženou chybu a ukáže, kde hledat.</p></details>
+        <details><summary>Auto táhne do strany. Co s tím?</summary><p>Častou příčinou je špatně seřízená geometrie nebo nerovnoměrně sjeté pneumatiky. Seřízení geometrie zároveň prodlouží životnost pneumatik.</p></details>
+        <details><summary>Klimatizace přestala chladit. Je to vážné?</summary><p>Často chybí chladivo nebo je potřeba vyčistit systém. Servis klimatizace to zjistí a doplní. Nezapomeňte, že klimatizace pomáhá i v zimě proti mlžení oken.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="wrap">
+      <div class="kicker">Kontakt</div>
+      <h2>Kde nás najdete</h2>
+      <div class="c-grid">
+        <div class="c-rows">
+          <div><span>Telefon (i SMS)</span><a href="tel:+420776032982">776 032 982</a></div>
+          <div><span>E-mail</span><a href="mailto:skodak.mira@seznam.cz">skodak.mira@seznam.cz</a></div>
+          <div><span>Adresa</span><b>Velká Bíteš 703</b></div>
+          <div><span>Otevřeno</span><b>Po–Pá 6:00–16:00</b></div>
+        </div>
+        <div class="map-card">
+          <svg viewBox="0 0 400 200" role="img" aria-label="Schéma: Velká Bíteš u dálnice D1">
+            <rect width="400" height="200" rx="4" fill="#1B1E24"/>
+            <path d="M-10 150 C 90 140, 180 120, 410 60" stroke="#E9EAEC" stroke-width="18" fill="none" stroke-opacity=".25"/>
+            <path d="M-10 150 C 90 140, 180 120, 410 60" stroke="#F2C230" stroke-width="2.5" stroke-dasharray="14 10" fill="none"/>
+            <rect x="300" y="88" width="44" height="26" rx="3" fill="#C8102E"/><text x="322" y="106" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="15" text-anchor="middle">D1</text>
+            <circle cx="160" cy="70" r="11" fill="#C8102E"/><circle cx="160" cy="70" r="4" fill="#fff"/>
+            <text x="180" y="66" fill="#E9EAEC" font-family="Arial,sans-serif" font-weight="700" font-size="15">Velká Bíteš 703</text>
+            <text x="180" y="84" fill="#B9BEC7" font-family="Arial,sans-serif" font-size="12">schéma, ne mapa</text>
+          </svg>
+          <a class="btn btn-red" style="width:100%" href="https://mapy.cz/zakladni?q=Velk%C3%A1%20B%C3%ADte%C5%A1%20703" target="_blank" rel="noopener">Otevřít v Mapy.cz</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <b>Autoservis Vladimír Škoda</b>
+      <span>Autoservis, pneuservis a karosárna · Velká Bíteš 703 · IČO 46227806</span>
+      <span>Tel. <a href="tel:+420776032982">776 032 982</a> · <a href="mailto:skodak.mira@seznam.cz">skodak.mira@seznam.cz</a></span>
+      <span>Návrh webu, 2026</span>
+    </div>
+  </footer>
+
+  <div class="callbar">
+    <a class="btn btn-red" href="tel:+420776032982">Zavolat 776 032 982</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var PHONE='+420776032982';
+  var LIFT=[[40,48],[185,48],[330,48],[475,48]];
+  var STANI=[[36,272],[132,272],[228,272],[324,272],[420,272],[516,272]];
+  var HOLI={'17.11':1,'24.12':1,'25.12':1,'26.12':1,'1.1':1};
+  var DN=['Ne','Po','Út','St','Čt','Pá','So'];
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var sel=[], day=null, time=null;
+
+  function place(){
+    var info=[];
+    for(var k=0;k<7;k++){
+      var c=document.getElementById('car'+k);
+      var t=sel[k];
+      if(!t){c.classList.remove('on');c.style.transform='translate(-80px,198px)';continue;}
+      var x,y;
+      if(k<4){x=LIFT[k][0]+39.5;y=LIFT[k][1]+42;}
+      else {var s=STANI[k-4];x=s[0]+20;y=s[1]+16;}
+      c.classList.add('on');c.style.transform='translate('+x+'px,'+y+'px)';
+    }
+    for(var i=0;i<4;i++){document.getElementById('lt'+i).textContent=sel[i]?sel[i].k:'';}
+    for(var j=0;j<6;j++){var t2=sel[j+4];document.getElementById('st'+j).textContent=t2?t2.k:'';}
+    document.getElementById('planInfo').textContent=sel.length?('Na zvedáku: '+Math.min(sel.length,4)+(sel.length>4?(', na stání: '+(sel.length-4)):'')):'Zatím nic nevybráno';
+  }
+  chips.forEach(function(b){
+    b.addEventListener('click',function(){
+      var on=b.getAttribute('aria-pressed')==='true';
+      b.setAttribute('aria-pressed',on?'false':'true');
+      if(on){sel=sel.filter(function(x){return x.s!==b.dataset.s;});}
+      else{sel.push({s:b.dataset.s,k:b.dataset.k});}
+      place();compose();
+    });
+  });
+
+  // days: next 10 working days (Po–Pá), skipping holidays, starting tomorrow
+  var dWrap=document.getElementById('days');
+  var d=new Date();d.setHours(12,0,0,0);
+  var n=0;
+  while(n<10){
+    d.setDate(d.getDate()+1);
+    var wd=d.getDay();
+    if(wd===0||wd===6) continue;
+    if(HOLI[d.getDate()+'.'+(d.getMonth()+1)]) continue;
+    var b=document.createElement('button');
+    b.type='button';b.className='day';b.setAttribute('aria-pressed','false');
+    var lbl=DN[wd]+' '+d.getDate()+'. '+(d.getMonth()+1)+'.';
+    b.dataset.v=lbl;
+    b.innerHTML=DN[wd]+'<b>'+d.getDate()+'. '+(d.getMonth()+1)+'.</b>';
+    b.addEventListener('click',(function(btn){return function(){
+      [].forEach.call(dWrap.children,function(x){x.setAttribute('aria-pressed','false');});
+      btn.setAttribute('aria-pressed','true');day=btn.dataset.v;compose();
+    };})(b));
+    dWrap.appendChild(b);n++;
+  }
+  var sWrap=document.getElementById('slots');
+  ['6:00','7:00','8:00','9:00','10:00','11:00','12:00','13:00','14:00','15:00'].forEach(function(t){
+    var b=document.createElement('button');
+    b.type='button';b.className='slot';b.setAttribute('aria-pressed','false');b.textContent=t;
+    b.addEventListener('click',function(){
+      [].forEach.call(sWrap.children,function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');time=t;compose();
+    });
+    sWrap.appendChild(b);
+  });
+  document.getElementById('car').addEventListener('input',compose);
+  document.getElementById('name').addEventListener('input',compose);
+
+  function compose(){
+    var car=document.getElementById('car').value.trim();
+    var name=document.getElementById('name').value.trim();
+    var txt='Dobrý den, chtěl(a) bych se objednat do servisu.\n';
+    txt+='Úkony: '+(sel.length?sel.map(function(x){return x.s;}).join(', '):'(vyberte)')+'\n';
+    txt+='Termín: '+(day||'(vyberte den)')+(time?(' v '+time):', čas (vyberte)')+'\n';
+    if(car) txt+='Auto: '+car+'\n';
+    txt+='Prosím o potvrzení.';
+    if(name) txt+='\n'+name;
+    document.getElementById('msg').textContent=txt;
+    var a=document.getElementById('send');
+    var ok=sel.length&&day&&time;
+    a.setAttribute('aria-disabled',ok?'false':'true');
+    a.href=ok?('sms:'+PHONE+'?body='+encodeURIComponent(txt)):'#';
+    a.textContent=ok?'Odeslat SMS':'Vyberte úkon, den a čas';
+  }
+  place();compose();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Truhlářství Miroslav Koubek</title>
+<meta name="description" content="Truhlářství Miroslav Koubek, Strakonice – nábytek na zakázku od roku 1990: kuchyňské linky, šatní skříně, stoly, dětské pokoje, kancelářský nábytek, postele a vestavby. Návrh, doprava, montáž i povrchová úprava.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Truhlářství Miroslav Koubek",
+  "description": "Výroba nábytku na zakázku – kuchyňské linky, šatní skříně, stoly, dětské pokoje, kancelářský a bytový nábytek, postele, vestavby.",
+  "telephone": "+420603886591",
+  "email": "miroslav.koubek@gmail.com",
+  "foundingDate": "1990",
+  "taxID": "10315632",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zahradní 41",
+    "addressLocality": "Strakonice",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+  ]
+}
+</script>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  color-scheme: light;
+  --orech:#4B2E1E;
+  --javor:#EAD7B7;
+  --javor-svetly:#F6EEDF;
+  --papir:#FBF7EF;
+  --smrk:#2F5D50;
+  --smrk-tmavy:#244A40;
+  --tuzka:#1C1C1C;
+  --sediva:#5A5148;
+  --linka:#CDBB9C;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Karla", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papir);color:var(--tuzka);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+.page{background:var(--papir);color:var(--tuzka);overflow-x:hidden;padding-bottom:76px}
+.page img,.page svg{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--serif);color:var(--orech);line-height:1.15;margin:0 0 .5em;font-weight:700}
+h2{font-size:clamp(1.6rem,4.5vw,2.3rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+a{color:var(--smrk)}
+.tag{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--javor);color:var(--orech);border:1px dashed var(--orech);border-radius:4px;padding:1px 6px;vertical-align:middle}
+
+/* banner návrhu */
+.notice{background:var(--tuzka);color:#F6EEDF;font-size:.85rem;text-align:center;padding:8px 16px}
+.notice strong{color:#fff}
+
+/* záhlaví */
+.topbar{background:var(--papir);border-bottom:1px solid var(--linka)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);color:var(--orech);text-decoration:none;line-height:1.1;display:flex;flex-direction:column;min-width:0}
+.brand .b1{font-size:.78rem;font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--smrk);font-weight:700}
+.brand .b2{font-size:1.25rem;font-weight:700}
+.topnav{display:none;gap:20px}
+.topnav a{color:var(--tuzka);text-decoration:none;font-weight:600}
+.topnav a:hover{color:var(--smrk);text-decoration:underline}
+.tel-top{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--orech);text-decoration:none;border:2px solid var(--orech);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.tel-top:hover{background:var(--orech);color:#fff}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:700;font-size:1.05rem;text-decoration:none;border-radius:8px;padding:14px 22px;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn-main{background:var(--smrk);color:#fff}
+.btn-main:hover{background:var(--smrk-tmavy)}
+.btn-ghost{background:transparent;color:var(--orech);border-color:var(--orech)}
+.btn-ghost:hover{background:var(--orech);color:#fff}
+
+/* hero */
+.hero{background:var(--javor-svetly);border-bottom:1px solid var(--linka)}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:22px;padding-top:26px;padding-bottom:30px;align-items:center}
+.hero h1{font-size:clamp(2rem,8vw,3.4rem);margin-bottom:.35em}
+.hero h1 .rok{display:block;color:var(--smrk)}
+.hero .lead{font-size:1.08rem;max-width:34em;color:var(--tuzka)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.hero .fakta{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.92rem;color:var(--sediva)}
+.hero .fakta li::before{content:"— ";color:var(--orech)}
+.sketch{background:#fff;border:1px solid var(--linka);border-radius:6px;box-shadow:0 10px 26px rgba(75,46,30,.12);padding:10px;transform:rotate(-1deg);width:100%}
+.sketch svg{display:block;width:100%;height:auto}
+.sketch figcaption{font-size:.8rem;color:var(--sediva);padding:4px 4px 0;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+
+/* sekce */
+section{padding:52px 0}
+.alt{background:var(--javor-svetly);border-top:1px solid var(--linka);border-bottom:1px solid var(--linka)}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--smrk);margin-bottom:6px}
+.intro{max-width:40em;color:var(--sediva)}
+
+/* služby */
+.sluzby{display:grid;grid-template-columns:1fr;gap:14px;margin-top:24px;align-items:start}
+.sluzba{background:#fff;border:1px solid var(--linka);border-radius:8px;padding:18px 18px 14px;border-left:5px solid var(--orech)}
+.sluzba h3{margin-bottom:.25em}
+.sluzba p{margin:0;color:var(--sediva);font-size:.97rem}
+.doplnky{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+.doplnky span{background:var(--smrk);color:#fff;border-radius:999px;padding:6px 14px;font-weight:600;font-size:.92rem}
+.cena{margin-top:18px;font-weight:600;color:var(--orech)}
+
+/* nástroj */
+.tool{display:grid;grid-template-columns:1fr;gap:20px;margin-top:22px;align-items:start}
+.panel{background:#fff;border:1px solid var(--linka);border-radius:10px;padding:18px;min-width:0}
+fieldset{border:0;margin:0 0 16px;padding:0;min-width:0}
+legend{font-weight:700;color:var(--orech);margin-bottom:8px;padding:0}
+.tvary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tvary label{position:relative;cursor:pointer}
+.tvary input{position:absolute;opacity:0;width:1px;height:1px}
+.tvary span{display:flex;flex-direction:column;align-items:center;gap:4px;border:2px solid var(--linka);border-radius:8px;padding:8px 4px;font-weight:700;font-size:.92rem;color:var(--tuzka);background:var(--papir);text-align:center}
+.tvary svg{width:44px;height:34px}
+.tvary input:checked + span{border-color:var(--smrk);background:#E4EEEA;color:var(--smrk-tmavy)}
+.tvary input:focus-visible + span{outline:3px solid var(--orech);outline-offset:2px}
+.slider{margin-bottom:12px}
+.slider label{display:flex;justify-content:space-between;gap:8px;font-weight:600;font-size:.95rem}
+.slider output{font-family:var(--serif);color:var(--orech);font-weight:700;white-space:nowrap}
+input[type=range]{width:100%;accent-color:var(--smrk);margin:6px 0 0}
+.check{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;font-weight:600;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--smrk);margin-top:2px;flex:0 0 auto}
+.sub{margin:4px 0 10px 30px}
+.text-in{display:block;width:100%;font:inherit;padding:10px 12px;border:1px solid var(--linka);border-radius:6px;background:var(--papir);color:var(--tuzka)}
+.text-in:focus{outline:3px solid var(--smrk);outline-offset:1px}
+.plan-box{background:#fff;border:1px solid var(--linka);border-radius:10px;padding:12px;min-width:0;
+  background-image:linear-gradient(rgba(47,93,80,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(47,93,80,.07) 1px,transparent 1px);background-size:20px 20px}
+.plan-box svg{display:block;width:100%;height:auto;max-height:520px}
+.souhrn{font-size:.95rem;color:var(--sediva);margin:10px 4px 0}
+.souhrn strong{color:var(--orech)}
+.zprava{white-space:pre-wrap;background:var(--javor-svetly);border:1px dashed var(--orech);border-radius:6px;padding:10px 12px;font-size:.92rem;margin:12px 0;color:var(--tuzka);overflow-wrap:anywhere}
+.send{display:flex;flex-wrap:wrap;gap:10px}
+.send .btn{flex:1 1 200px}
+.mini{font-size:.85rem;color:var(--sediva);margin-top:10px}
+
+/* důvěra */
+.duvera{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px}
+.fakt{border-top:3px solid var(--orech);padding-top:10px}
+.fakt b{display:block;font-family:var(--serif);font-size:1.7rem;color:var(--orech);line-height:1.1}
+.fakt span{color:var(--sediva);font-size:.95rem}
+
+/* fotky */
+.fotky{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px;align-items:start}
+.foto{margin:0;width:100%}
+.foto .ph{width:100%;aspect-ratio:4/3;border:2px dashed var(--linka);border-radius:8px;background:repeating-linear-gradient(45deg,#F3E8D3 0 10px,#F8F0E2 10px 20px);display:flex;align-items:center;justify-content:center;color:var(--orech);font-weight:700;text-align:center;padding:10px}
+.foto figcaption{font-size:.9rem;color:var(--sediva);margin-top:6px}
+
+/* kroky */
+.kroky{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:1fr;gap:16px;counter-reset:k}
+.kroky li{counter-increment:k;background:#fff;border:1px solid var(--linka);border-radius:8px;padding:18px 18px 16px 70px;position:relative}
+.kroky li::before{content:counter(k);position:absolute;left:18px;top:16px;width:38px;height:38px;border-radius:50%;background:var(--orech);color:#fff;font-family:var(--serif);font-weight:700;font-size:1.2rem;display:flex;align-items:center;justify-content:center}
+.kroky h3{margin-bottom:.2em}
+.kroky p{margin:0;color:var(--sediva)}
+
+/* FAQ */
+.faq{margin-top:20px;max-width:780px}
+.faq details{border-bottom:1px solid var(--linka);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:700;color:var(--orech);font-size:1.05rem;list-style-position:outside}
+.faq details p{margin:10px 0 0;color:var(--tuzka)}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:1fr;gap:20px;margin-top:22px;align-items:start}
+.karta{background:#fff;border:1px solid var(--linka);border-radius:10px;padding:20px;min-width:0}
+.karta dl{margin:0;display:grid;grid-template-columns:1fr;gap:2px 16px}
+.karta dt{font-weight:700;color:var(--orech);margin-top:10px}
+.karta dd{margin:0;overflow-wrap:anywhere}
+.hodiny{width:100%;border-collapse:collapse}
+.hodiny td{padding:8px 0;border-bottom:1px solid var(--linka)}
+.hodiny td:last-child{text-align:right;font-weight:700}
+
+/* patička */
+.foot{background:var(--orech);color:var(--javor);padding:30px 0 34px;font-size:.93rem}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between}
+.foot strong{font-family:var(--serif);color:#fff;font-size:1.1rem}
+.foot a{color:#fff}
+
+/* mobilní lišta */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:rgba(251,247,239,.97);border-top:1px solid var(--linka);box-shadow:0 -4px 14px rgba(0,0,0,.08)}
+.callbar a{flex:1;padding:12px 10px;font-size:1rem}
+
+@media (min-width:640px){
+  .sluzby{grid-template-columns:1fr 1fr}
+  .duvera{grid-template-columns:repeat(3,1fr)}
+  .fotky{grid-template-columns:repeat(3,1fr)}
+  .karta dl{grid-template-columns:auto 1fr}
+  .karta dt{margin-top:0}
+}
+@media (min-width:900px){
+  body{font-size:18px}
+  .page{padding-bottom:0}
+  .callbar{display:none}
+  .topnav{display:flex}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;gap:44px;padding-top:56px;padding-bottom:60px}
+  .sluzby{grid-template-columns:repeat(3,1fr)}
+  .tool{grid-template-columns:minmax(0,380px) minmax(0,1fr)}
+  .kroky{grid-template-columns:repeat(3,1fr)}
+  .kontakt{grid-template-columns:1fr 1fr}
+  section{padding:76px 0}
+}
+</style>
+
+<div class="page">
+  <div class="notice" role="note"><strong>Nezávazný návrh webu</strong> – není to oficiální stránka firmy Truhlářství Miroslav Koubek</div>
+
+  <div role="banner" class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top"><span class="b1">Truhlářství</span> <span class="b2">Miroslav Koubek</span></a>
+      <nav class="topnav" aria-label="Hlavní menu">
+        <a href="#sluzby">Co vyrábím</a>
+        <a href="#kuchyn">Nakreslete si kuchyň</a>
+        <a href="#postup">Jak to probíhá</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="tel-top" href="tel:+420603886591" aria-label="Zavolat 603 886 591">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        603 886 591</a>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <p class="kicker">Truhlářství a stolařství · Strakonice</p>
+          <h1>Nábytek na míru ze Strakonic. <span class="rok">Od roku 1990.</span></h1>
+          <p class="lead">Zabývám se výrobou nábytku na zakázku – kuchyňské linky se spotřebiči, šatní skříně, stoly i vestavby. Navrhnu, vyrobím, dovezu a namontuji.</p>
+          <div class="cta">
+            <a class="btn btn-main" href="tel:+420603886591">Zavolat 603 886 591</a>
+            <a class="btn btn-ghost" href="#kuchyn">Nakreslit kuchyň</a>
+          </div>
+          <ul class="fakta">
+            <li>Zahradní 41, Strakonice</li>
+            <li>Po–Pá 8–16, So 8–12</li>
+          </ul>
+        </div>
+
+        <figure class="sketch" style="margin:0">
+          <svg viewBox="0 0 520 360" role="img" aria-labelledby="skT">
+            <title id="skT">Nákres kuchyňské linky tužkou s kótami</title>
+            <defs>
+              <pattern id="mrizka" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#D9E4F0" stroke-width=".8"/></pattern>
+              <marker id="sip" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9" fill="none" stroke="#1C1C1C" stroke-width="1.2"/></marker>
+            </defs>
+            <rect width="520" height="360" fill="#FFFEFA"/>
+            <rect width="520" height="360" fill="url(#mrizka)"/>
+            <g fill="none" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round">
+              <!-- horní skříňky -->
+              <g stroke-width="1.6" opacity=".9">
+                <path d="M70 52 L450 51 L451 128 L69 129 Z"/>
+                <path d="M71.5 53.5 L448 53 M450 52.5 L450.5 126"/>
+                <path d="M165 52 L165 128 M260 51 L260 128 M355 51 L355 128"/>
+                <path d="M155 92 L155 104 M175 92 L175 104 M250 92 L250 104 M270 92 L270 104 M345 92 L345 104 M365 92 L365 104" stroke-width="2.2"/>
+              </g>
+              <!-- digestoř -->
+              <path d="M262 128 L353 128 L342 150 L273 150 Z" stroke-width="1.4"/>
+              <!-- pracovní deska -->
+              <path d="M58 200 L462 199 L462 210 L58 211 Z" stroke-width="2"/>
+              <path d="M59 202 L461 201" stroke-width=".7" opacity=".6"/>
+              <!-- spodní skříňky -->
+              <g stroke-width="1.6">
+                <path d="M70 211 L70 296 L450 295 L450 210"/>
+                <path d="M165 211 L165 296 M260 211 L260 296 M355 211 L355 296"/>
+                <path d="M72 230 L163 230 M72 262 L163 262" stroke-width="1.1"/>
+                <path d="M108 220 L126 220 M108 246 L126 246 M108 278 L126 278" stroke-width="2.2"/>
+                <path d="M200 225 L225 225 M390 225 L415 225 M295 225 L320 225" stroke-width="2.2"/>
+                <path d="M70 296 L70 306 L450 305 L450 295" stroke-width="1"/>
+              </g>
+              <!-- dřez a varná deska -->
+              <path d="M178 199 Q180 190 192 190 L238 190 Q248 190 249 199" stroke-width="1.3"/>
+              <path d="M214 190 L214 176 Q214 170 222 170 L230 172" stroke-width="1.3"/>
+              <ellipse cx="290" cy="197" rx="13" ry="3" stroke-width="1.1"/>
+              <ellipse cx="326" cy="197" rx="13" ry="3" stroke-width="1.1"/>
+              <!-- šrafa stěny -->
+              <g stroke-width=".6" opacity=".45">
+                <path d="M70 160 L90 140 M90 160 L110 140 M110 160 L130 140 M370 160 L390 140 M390 160 L410 140 M410 160 L430 140 M430 160 L450 140"/>
+              </g>
+              <!-- kóty -->
+              <g stroke-width="1" opacity=".85">
+                <path d="M70 26 L70 44 M450 26 L450 44" />
+                <path d="M74 34 L446 34" marker-start="url(#sip)" marker-end="url(#sip)"/>
+                <path d="M478 211 L478 296" marker-start="url(#sip)" marker-end="url(#sip)"/>
+                <path d="M462 210 L486 210 M458 296 L486 296"/>
+                <path d="M30 129 L30 199" marker-start="url(#sip)" marker-end="url(#sip)"/>
+                <path d="M22 129 L66 129 M22 199 L56 199"/>
+                <path d="M70 330 L165 330" marker-start="url(#sip)" marker-end="url(#sip)"/>
+                <path d="M70 312 L70 338 M165 312 L165 338"/>
+              </g>
+            </g>
+            <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" fill="#1C1C1C" font-size="15">
+              <text x="260" y="29" text-anchor="middle">320</text>
+              <text x="492" y="258" transform="rotate(90 492 258)" text-anchor="middle">85</text>
+              <text x="20" y="168" transform="rotate(-90 20 168)" text-anchor="middle">60</text>
+              <text x="117" y="352" text-anchor="middle">60</text>
+              <text x="200" y="352" font-size="13" opacity=".75">rovná linka, cm</text>
+            </g>
+            <!-- tužka -->
+            <g transform="translate(372 316) rotate(-18)">
+              <rect x="0" y="0" width="120" height="12" fill="#2F5D50"/>
+              <rect x="0" y="0" width="120" height="4" fill="#3D7566"/>
+              <path d="M120 0 L140 6 L120 12 Z" fill="#EAD7B7"/>
+              <path d="M134 4.3 L140 6 L134 7.7 Z" fill="#1C1C1C"/>
+              <rect x="-12" y="0" width="12" height="12" fill="#B9A27E"/>
+            </g>
+          </svg>
+          <figcaption><span>Takhle začíná každá zakázka – tužkou a metrem.</span><span class="tag">ukázkový nákres</span></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- SLUŽBY -->
+    <section id="sluzby">
+      <div class="wrap">
+        <p class="kicker">Co vyrábím</p>
+        <h2>Nábytek na zakázku, od návrhu po montáž</h2>
+        <p class="intro">Každý kus dělám podle vašich rozměrů a prostoru. Ne podle katalogu.</p>
+        <div class="sluzby">
+          <article class="sluzba"><h3>Kuchyňské linky</h3><p>Linka na míru včetně spotřebičů – rovná, do L nebo do U.</p></article>
+          <article class="sluzba"><h3>Šatní skříně</h3><p>Skříně přesně do výšky i šířky vaší místnosti.</p></article>
+          <article class="sluzba"><h3>Vestavby</h3><p>Využiju šikminu, výklenek i prostor pod schody.</p></article>
+          <article class="sluzba"><h3>Stoly</h3><p>Jídelní i pracovní stoly v rozměru, který se k vám vejde.</p></article>
+          <article class="sluzba"><h3>Dětské pokoje</h3><p>Nábytek, který sedí do pokoje i na míru dítěti.</p></article>
+          <article class="sluzba"><h3>Postele</h3><p>Postel v rozměru i výšce podle vás.</p></article>
+          <article class="sluzba"><h3>Kancelářský nábytek</h3><p>Stoly, skříně a police pro kancelář.</p></article>
+          <article class="sluzba"><h3>Bytový nábytek</h3><p>Nábytek do bytu i domu podle vašich rozměrů.</p></article>
+        </div>
+        <div class="doplnky" aria-label="K tomu nabízím">
+          <span>Návrh</span><span>Doprava</span><span>Montáž</span><span>Povrchová úprava</span>
+        </div>
+        <p class="cena">Cenu vám řeknu předem – podle rozměrů a materiálu.</p>
+      </div>
+    </section>
+
+    <!-- NAKRESLETE SI KUCHYŇ -->
+    <section id="kuchyn" class="alt">
+      <div class="wrap">
+        <p class="kicker">Nakreslete si kuchyň</p>
+        <h2>Pošlete mi rozměry ještě dnes</h2>
+        <p class="intro">Vyberte tvar linky a nastavte délky stěn. Půdorys se kreslí sám. Pak mi ho jednou SMS pošlete na 603 886 591.</p>
+
+        <div class="tool">
+          <form class="panel" id="planForm" onsubmit="return false">
+            <fieldset>
+              <legend>Tvar linky</legend>
+              <div class="tvary">
+                <label><input type="radio" name="tvar" value="rovna" checked><span><svg viewBox="0 0 44 34" aria-hidden="true"><rect x="3" y="4" width="38" height="9" fill="currentColor"/></svg>Rovná</span></label>
+                <label><input type="radio" name="tvar" value="L"><span><svg viewBox="0 0 44 34" aria-hidden="true"><path d="M3 4h38v9H12v18H3z" fill="currentColor"/></svg>Do L</span></label>
+                <label><input type="radio" name="tvar" value="U"><span><svg viewBox="0 0 44 34" aria-hidden="true"><path d="M3 4h38v27h-9V13H12v18H3z" fill="currentColor"/></svg>Do U</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Délky stěn s linkou</legend>
+              <div class="slider" id="sA"><label for="dA"><span>Stěna A (hlavní)</span><output id="oA" for="dA">320 cm</output></label><input type="range" id="dA" min="150" max="600" step="10" value="320"></div>
+              <div class="slider" id="sB" hidden><label for="dB"><span>Stěna B (vlevo)</span><output id="oB" for="dB">240 cm</output></label><input type="range" id="dB" min="120" max="450" step="10" value="240"></div>
+              <div class="slider" id="sC" hidden><label for="dC"><span>Stěna C (vpravo)</span><output id="oC" for="dC">200 cm</output></label><input type="range" id="dC" min="120" max="450" step="10" value="200"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Chcete k tomu i…</legend>
+              <label class="check"><input type="checkbox" id="chSkrin"> vestavěnou skříň</label>
+              <div class="sub slider" id="sS" hidden><label for="dS"><span>Šířka skříně</span><output id="oS" for="dS">200 cm</output></label><input type="range" id="dS" min="80" max="400" step="10" value="200"></div>
+              <label class="check"><input type="checkbox" id="chStul"> stůl</label>
+            </fieldset>
+
+            <fieldset>
+              <legend><label for="obec">Odkud jste? <span style="font-weight:400;color:var(--sediva)">(nepovinné)</span></label></legend>
+              <input class="text-in" type="text" id="obec" placeholder="např. Strakonice" autocomplete="address-level2">
+            </fieldset>
+          </form>
+
+          <div style="min-width:0">
+            <div class="plan-box">
+              <svg id="plan" viewBox="0 0 600 500" role="img" aria-label="Půdorys kuchyně s kótami"></svg>
+            </div>
+            <p class="souhrn" id="souhrn"></p>
+            <div class="panel" style="margin-top:12px">
+              <p style="margin:0;font-weight:700;color:var(--orech)">Zpráva, která se odešle:</p>
+              <div class="zprava" id="zprava" aria-live="polite"></div>
+              <div class="send">
+                <a class="btn btn-main" id="smsBtn" href="sms:+420603886591">Poslat SMS s rozměry</a>
+                <a class="btn btn-ghost" id="mailBtn" href="mailto:miroslav.koubek@gmail.com">Poslat e-mailem</a>
+              </div>
+              <p class="mini">Rozměry jsou orientační – přesné míry se vždy ověřují na místě. Hloubka linky v nákresu je 60 cm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DŮVĚRA -->
+    <section id="o-mne">
+      <div class="wrap">
+        <p class="kicker">Proč u mě</p>
+        <h2>Řemeslo, které dělám přes třicet let</h2>
+        <div class="duvera">
+          <div class="fakt"><b>Od roku 1990</b><span>vyrábím nábytek na zakázku</span></div>
+          <div class="fakt"><b>Strakonice</b><span>Zahradní 41 – místní truhlář</span></div>
+          <div class="fakt"><b>IČO 10315632</b><span>živnostník, jednáte přímo se mnou</span></div>
+        </div>
+
+        <div class="fotky">
+          <figure class="foto"><div class="ph">Sem přijde vaše fotka</div><figcaption>Kuchyňská linka do L, dub <span class="tag">ukázkový text</span></figcaption></figure>
+          <figure class="foto"><div class="ph">Sem přijde vaše fotka</div><figcaption>Vestavěná skříň pod šikminou <span class="tag">ukázkový text</span></figcaption></figure>
+          <figure class="foto"><div class="ph">Sem přijde vaše fotka</div><figcaption>Dětský pokoj s postelí <span class="tag">ukázkový text</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTUP -->
+    <section id="postup" class="alt">
+      <div class="wrap">
+        <p class="kicker">Jak to probíhá</p>
+        <h2>Tři kroky k nábytku na míru</h2>
+        <ol class="kroky">
+          <li><h3>Ozvete se</h3><p>Zavoláte, nebo pošlete SMS s rozměry z nákresu výše.</p></li>
+          <li><h3>Návrh a cena</h3><p>Domluvíme podobu, materiál a povrch. Cenu znáte předem.</p></li>
+          <li><h3>Výroba a montáž</h3><p>Vyrobím, dovezu a namontuji u vás doma.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="otazky">
+      <div class="wrap">
+        <p class="kicker">Časté otázky</p>
+        <h2>Na co se lidé ptají</h2>
+        <div class="faq">
+          <details><summary>Musím mít spotřebiče vybrané předem?</summary><p>Je to dobré. Lednice, trouba nebo myčka mají dané rozměry a linka se podle nich navrhuje. Stačí znát typ nebo rozměry.</p></details>
+          <details><summary>Jak mám změřit kuchyň pro první odhad?</summary><p>Změřte délku stěn, kde má linka stát, a výšku místnosti. Poznamenejte si okna, dveře, odpad a přívod vody. Přesné míry se pak vždy ověřují na místě.</p></details>
+          <details><summary>Proč nábytek na míru, a ne hotový?</summary><p>Hotový nábytek má pevné rozměry. Na míru využijete každý centimetr – výklenky, šikminy i prostor až ke stropu.</p></details>
+          <details><summary>Jak dlouho trvá výroba?</summary><p>Záleží na rozsahu zakázky a materiálu. Termín se domlouvá po návrhu, kdy je jasné, co přesně se vyrábí.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="alt">
+      <div class="wrap">
+        <p class="kicker">Kontakt</p>
+        <h2>Zavolejte, nebo napište</h2>
+        <div class="kontakt">
+          <div class="karta">
+            <dl>
+              <dt>Telefon</dt><dd><a href="tel:+420603886591">603 886 591</a> (i SMS)</dd>
+              <dt>E-mail</dt><dd><a href="mailto:miroslav.koubek@gmail.com">miroslav.koubek@gmail.com</a></dd>
+              <dt>Adresa</dt><dd>Zahradní 41, Strakonice<br><a href="https://mapy.cz/zakladni?q=Zahradn%C3%AD%2041%2C%20Strakonice" target="_blank" rel="noopener">Ukázat na Mapy.cz</a></dd>
+              <dt>IČO</dt><dd>10315632</dd>
+            </dl>
+            <div class="cta" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+              <a class="btn btn-main" href="tel:+420603886591">Zavolat</a>
+              <a class="btn btn-ghost" href="#kuchyn">Poslat rozměry</a>
+            </div>
+          </div>
+          <div class="karta">
+            <h3>Kdy mě zastihnete</h3>
+            <table class="hodiny">
+              <tr><td>Pondělí – pátek</td><td>8–16</td></tr>
+              <tr><td>Sobota</td><td>8–12</td></tr>
+              <tr><td>Neděle</td><td>zavřeno</td></tr>
+            </table>
+            <p class="mini" style="margin-top:12px">Když to nevezmu, pošlete SMS s rozměry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="foot" role="contentinfo">
+    <div class="wrap">
+      <div><strong><span>Truhlářství</span> <span>Miroslav Koubek</span></strong><br>Zahradní 41, Strakonice · IČO 10315632</div>
+      <div><a href="tel:+420603886591">603 886 591</a> · <a href="mailto:miroslav.koubek@gmail.com">miroslav.koubek@gmail.com</a><br>Návrh webu, 2026</div>
+    </div>
+  </div>
+
+  <div class="callbar">
+    <a class="btn btn-main" href="tel:+420603886591">Zavolat</a>
+    <a class="btn btn-ghost" href="#kuchyn" style="background:#fff">Nakreslit kuchyň</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var TEL = "+420603886591", MAIL = "miroslav.koubek@gmail.com", D = 60;
+  var $ = function(id){ return document.getElementById(id); };
+  var svg = $("plan"), NS = "http://www.w3.org/2000/svg";
+  var tvarNazev = { rovna: "rovná", L: "do L", U: "do U" };
+
+  function el(name, attrs, text){
+    var e = document.createElementNS(NS, name);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    svg.appendChild(e); return e;
+  }
+  function kota(x1, y1, x2, y2, label, fs, vert){
+    var t = fs * 0.45;
+    el("line", {x1:x1, y1:y1, x2:x2, y2:y2, stroke:"#1C1C1C", "stroke-width":fs*0.07});
+    if (vert){
+      el("line", {x1:x1-t, y1:y1, x2:x1+t, y2:y1, stroke:"#1C1C1C", "stroke-width":fs*0.07});
+      el("line", {x1:x2-t, y1:y2, x2:x2+t, y2:y2, stroke:"#1C1C1C", "stroke-width":fs*0.07});
+      el("line", {x1:x1-t*.7, y1:y1+t*.7, x2:x1+t*.7, y2:y1-t*.7, stroke:"#1C1C1C", "stroke-width":fs*0.1});
+      el("line", {x1:x2-t*.7, y1:y2+t*.7, x2:x2+t*.7, y2:y2-t*.7, stroke:"#1C1C1C", "stroke-width":fs*0.1});
+      var cy = (y1+y2)/2, cx = x1;
+      var g = el("text", {x:cx, y:cy, "font-size":fs, "text-anchor":"middle", fill:"#1C1C1C", "font-family":"Karla, system-ui, sans-serif", "font-weight":"700", transform:"rotate(-90 "+cx+" "+cy+") translate(0 "+(-fs*0.35)+")"}, label);
+    } else {
+      el("line", {x1:x1, y1:y1-t, x2:x1, y2:y1+t, stroke:"#1C1C1C", "stroke-width":fs*0.07});
+      el("line", {x1:x2, y1:y2-t, x2:x2, y2:y2+t, stroke:"#1C1C1C", "stroke-width":fs*0.07});
+      el("line", {x1:x1-t*.7, y1:y1+t*.7, x2:x1+t*.7, y2:y1-t*.7, stroke:"#1C1C1C", "stroke-width":fs*0.1});
+      el("line", {x1:x2-t*.7, y1:y2+t*.7, x2:x2+t*.7, y2:y2-t*.7, stroke:"#1C1C1C", "stroke-width":fs*0.1});
+      el("text", {x:(x1+x2)/2, y:y1-fs*0.35, "font-size":fs, "text-anchor":"middle", fill:"#1C1C1C", "font-family":"Karla, system-ui, sans-serif", "font-weight":"700"}, label);
+    }
+  }
+  function moduly(x, y, w, h, horiz){
+    // dělení na skříňky po cca 60 cm
+    var len = horiz ? w : h, n = Math.max(1, Math.round(len / 60)), step = len / n;
+    for (var i = 1; i < n; i++){
+      if (horiz) el("line", {x1:x+i*step, y1:y, x2:x+i*step, y2:y+h, stroke:"#4B2E1E", "stroke-width":1.2, "stroke-dasharray":"4 3"});
+      else el("line", {x1:x, y1:y+i*step, x2:x+w, y2:y+i*step, stroke:"#4B2E1E", "stroke-width":1.2, "stroke-dasharray":"4 3"});
+    }
+  }
+
+  function stav(){
+    var tvar = document.querySelector('input[name="tvar"]:checked').value;
+    return {
+      tvar: tvar,
+      A: +$("dA").value, B: +$("dB").value, C: +$("dC").value,
+      skrin: $("chSkrin").checked, S: +$("dS").value,
+      stul: $("chStul").checked,
+      obec: $("obec").value.trim()
+    };
+  }
+
+  function kresli(s){
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = s.A;
+    var hloubkaLinky = s.tvar === "L" ? s.B : s.tvar === "U" ? Math.max(s.B, s.C) : D;
+    var H = Math.max(260, hloubkaLinky + 150 + (s.skrin ? D : 0));
+    var S = Math.min(s.S, W);
+    var pad = Math.max(W, H) * 0.2 + 30;
+    var fs = Math.max(W + 2*pad, H + 2*pad) / 26;
+    svg.setAttribute("viewBox", (-pad) + " " + (-pad) + " " + (W + 2*pad) + " " + (H + 2*pad));
+
+    // místnost (stěny)
+    var wt = 12;
+    el("rect", {x:-wt, y:-wt, width:W+2*wt, height:H+2*wt, fill:"#4B2E1E"});
+    el("rect", {x:0, y:0, width:W, height:H, fill:"#FFFEFA"});
+    el("text", {x:W/2, y:H - (s.skrin ? D + fs*0.8 : fs*0.8), "font-size":fs*0.8, "text-anchor":"middle", fill:"#5A5148", "font-family":"Karla, system-ui, sans-serif"}, "průchod");
+
+    var lc = "#EAD7B7", ls = "#4B2E1E";
+    // stěna A – nahoře
+    el("rect", {x:0, y:0, width:W, height:D, fill:lc, stroke:ls, "stroke-width":2});
+    moduly(0, 0, W, D, true);
+    // dřez a varná deska
+    var dx = W * 0.3, vx = W * 0.68;
+    el("rect", {x:dx-25, y:12, width:50, height:36, rx:6, fill:"#fff", stroke:"#1C1C1C", "stroke-width":1.5});
+    el("circle", {cx:dx, cy:30, r:4, fill:"none", stroke:"#1C1C1C", "stroke-width":1.2});
+    [[-12,-9],[12,-9],[-12,9],[12,9]].forEach(function(p){
+      el("circle", {cx:vx+p[0], cy:30+p[1], r:7, fill:"none", stroke:"#1C1C1C", "stroke-width":1.5});
+    });
+    // stěna B – vlevo
+    if (s.tvar !== "rovna"){
+      el("rect", {x:0, y:D, width:D, height:s.B - D, fill:lc, stroke:ls, "stroke-width":2});
+      moduly(0, D, D, s.B - D, false);
+    }
+    // stěna C – vpravo
+    if (s.tvar === "U"){
+      el("rect", {x:W-D, y:D, width:D, height:s.C - D, fill:lc, stroke:ls, "stroke-width":2});
+      moduly(W-D, D, D, s.C - D, false);
+    }
+    // vestavěná skříň – u spodní stěny
+    if (s.skrin){
+      var sx = W - S;
+      el("defs", {}).innerHTML = '<pattern id="sraf" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="10" stroke="#2F5D50" stroke-width="2"/></pattern>';
+      el("rect", {x:sx, y:H-D, width:S, height:D, fill:"url(#sraf)", stroke:"#2F5D50", "stroke-width":2.5});
+      var lbl = el("text", {x:sx + S/2, y:H - D/2 + fs*0.35, "font-size":fs*0.85, "text-anchor":"middle", fill:"#1C1C1C", "font-family":"Karla, system-ui, sans-serif", "font-weight":"700", "paint-order":"stroke", stroke:"#FFFEFA", "stroke-width":fs*0.35}, "skříň");
+      kota(sx, H + pad*0.5, W, H + pad*0.5, S + " cm", fs, false);
+    }
+    // stůl
+    var stulOk = true;
+    if (s.stul){
+      var fx0 = s.tvar === "rovna" ? 0 : D, fx1 = s.tvar === "U" ? W - D : W;
+      var fy0 = D, fy1 = H - (s.skrin ? D : 0);
+      var fw = fx1 - fx0, fh = fy1 - fy0;
+      var tw = Math.min(140, fw - 50), th = Math.min(80, fh - 60);
+      if (tw >= 50 && th >= 50){
+        var tx = fx0 + (fw - tw)/2, ty = fy0 + (fh - th)/2 + 10;
+        el("rect", {x:tx, y:ty, width:tw, height:th, rx:4, fill:"#C9A57A", stroke:"#4B2E1E", "stroke-width":2});
+        var zidli = Math.max(1, Math.floor(tw / 55));
+        for (var i = 0; i < zidli; i++){
+          var cx = tx + tw * (i + .5) / zidli;
+          el("rect", {x:cx-15, y:ty-24, width:30, height:18, rx:4, fill:"none", stroke:"#4B2E1E", "stroke-width":1.5});
+          el("rect", {x:cx-15, y:ty+th+6, width:30, height:18, rx:4, fill:"none", stroke:"#4B2E1E", "stroke-width":1.5});
+        }
+        el("text", {x:tx+tw/2, y:ty+th/2+fs*0.3, "font-size":fs*0.8, "text-anchor":"middle", fill:"#1C1C1C", "font-family":"Karla, system-ui, sans-serif", "font-weight":"700"}, "stůl");
+      } else stulOk = false;
+    }
+    // popisky stěn
+    el("text", {x:W/2, y:D + fs*1.1, "font-size":fs*0.85, "text-anchor":"middle", fill:"#4B2E1E", "font-family":"Karla, system-ui, sans-serif", "font-weight":"700"}, "A");
+    if (s.tvar !== "rovna") el("text", {x:D + fs*0.8, y:(D + s.B)/2, "font-size":fs*0.85, "text-anchor":"middle", fill:"#4B2E1E", "font-family":"Karla, system-ui, sans-serif", "font-weight":"700"}, "B");
+    if (s.tvar === "U") el("text", {x:W - D - fs*0.8, y:(D + s.C)/2, "font-size":fs*0.85, "text-anchor":"middle", fill:"#4B2E1E", "font-family":"Karla, system-ui, sans-serif", "font-weight":"700"}, "C");
+
+    // kóty
+    kota(0, -pad*0.5, W, -pad*0.5, "A = " + s.A + " cm", fs, false);
+    if (s.tvar !== "rovna") kota(-pad*0.5, 0, -pad*0.5, s.B, "B = " + s.B + " cm", fs, true);
+    if (s.tvar === "U") kota(W + pad*0.5, 0, W + pad*0.5, s.C, "C = " + s.C + " cm", fs, true);
+    return stulOk;
+  }
+
+  function zprava(s){
+    var t = "Dobrý den, pane Koubku, poptávám kuchyňskou linku na míru.\n";
+    t += "Tvar: " + tvarNazev[s.tvar] + ".\n";
+    t += "Stěna A: " + s.A + " cm";
+    if (s.tvar !== "rovna") t += ", stěna B: " + s.B + " cm";
+    if (s.tvar === "U") t += ", stěna C: " + s.C + " cm";
+    t += ".\n";
+    var k = [];
+    if (s.skrin) k.push("vestavěnou skříň (šířka cca " + s.S + " cm)");
+    if (s.stul) k.push("stůl");
+    if (k.length) t += "Chci i " + k.join(" a ") + ".\n";
+    if (s.obec) t += "Jsem z: " + s.obec + ".\n";
+    t += "Prosím o zavolání. Děkuji.";
+    return t;
+  }
+
+  function obnov(){
+    var s = stav();
+    $("sB").hidden = s.tvar === "rovna";
+    $("sC").hidden = s.tvar !== "U";
+    $("sS").hidden = !s.skrin;
+    $("oA").textContent = s.A + " cm"; $("oB").textContent = s.B + " cm";
+    $("oC").textContent = s.C + " cm"; $("oS").textContent = s.S + " cm";
+    var stulOk = kresli(s);
+    var deska = s.A + (s.tvar !== "rovna" ? s.B - D : 0) + (s.tvar === "U" ? s.C - D : 0);
+    $("souhrn").innerHTML = "Linka " + tvarNazev[s.tvar] + " · pracovní deska celkem cca <strong>" + deska + " cm</strong>" +
+      (s.stul && !stulOk ? " · stůl se do zbylého místa nevejde, probereme jinou polohu" : "");
+    var txt = zprava(s);
+    $("zprava").textContent = txt;
+    $("smsBtn").href = "sms:" + TEL + "?body=" + encodeURIComponent(txt);
+    $("mailBtn").href = "mailto:" + MAIL + "?subject=" + encodeURIComponent("Poptávka kuchyně na míru") + "&body=" + encodeURIComponent(txt);
+  }
+
+  $("planForm").addEventListener("input", obnov);
+  $("planForm").addEventListener("change", obnov);
+  obnov();
+})();
+</script>
+</body>
+</html>

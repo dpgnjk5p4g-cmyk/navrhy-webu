@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Autoservis Doleček</title>
+<meta name="description" content="Autoservis Doleček v Dolní Moravě pod Králickým Sněžníkem: mechanické opravy, autoklempířské práce, pneuservis a přezouvání, geometrie, lepení autoskel, tažná zařízení, autodiagnostika, zajištění STK. Otevřeno Po, Út, Čt 9–16.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Sora:wght@400;600;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Autoservis Doleček",
+  "founder": {"@type": "Person", "name": "Daniel Doleček"},
+  "telephone": "+420735092891",
+  "email": "daniel.dolecek@email.cz",
+  "identifier": {"@type": "PropertyValue", "name": "IČO", "value": "07437366"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dolní Morava 2",
+    "addressLocality": "Dolní Morava",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday"], "opens": "09:00", "closes": "16:00"}
+  ],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mechanické opravy"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Autoklempířské práce"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pneuservis"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Geometrie"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lepení autoskel"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Montáž tažných zařízení"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Autodiagnostika"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Zajištění STK"}}
+  ]
+}
+</script>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --jedle:#1F4B3F;
+  --jedle-tmava:#163830;
+  --jedle-svetla:#2E6656;
+  --snih:#F4F7F6;
+  --bila:#FFFFFF;
+  --oranz:#F2711C;
+  --oranz-hover:#F58A42;
+  --zula:#3A3F44;
+  --text:#22272B;
+  --text-mekky:#4A5157;
+  --linka:#D5DEDB;
+  --mlha:#E6EDEA;
+  --na-oranz:#1A1C1E;
+  --sans:"Sora",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --serif:"Lora",Georgia,"Times New Roman",serif;
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--snih);color:var(--text);font-family:var(--serif);font-size:17px;line-height:1.6;overflow-x:hidden}
+.page{background:var(--snih);min-height:100vh;padding-bottom:76px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--jedle)}
+h1,h2,h3,.sans{font-family:var(--sans);line-height:1.2;letter-spacing:-.01em;color:var(--jedle-tmava)}
+h1{font-size:clamp(1.85rem,6.4vw,3.2rem);font-weight:800;margin:.2em 0 .35em}
+h2{font-size:clamp(1.5rem,4.6vw,2.2rem);font-weight:700;margin:0 0 .4em}
+h3{font-size:1.1rem;font-weight:700;margin:0 0 .3em}
+p{margin:0 0 1em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+section{padding:56px 0}
+.kicker{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--jedle-svetla);margin:0 0 .5em}
+.lead{font-size:1.1rem;color:var(--text-mekky);max-width:60ch}
+.tag-ukazka{display:inline-block;font-family:var(--sans);font-size:.7rem;font-weight:600;background:#FFF3C4;color:#5A4500;border:1px dashed #B08A00;border-radius:6px;padding:1px 7px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--sans);font-weight:700;font-size:1rem;text-decoration:none;border-radius:999px;padding:14px 24px;border:2px solid transparent;cursor:pointer;min-height:50px;text-align:center}
+.btn-primary{background:var(--oranz);color:var(--na-oranz)}
+.btn-primary:hover{background:var(--oranz-hover)}
+.btn-ghost{background:transparent;color:var(--jedle);border-color:var(--jedle)}
+.btn-ghost:hover{background:var(--mlha)}
+.btn:focus-visible,.chip:focus-within,.den:focus-visible,.cast:focus-visible{outline:3px solid var(--zula);outline-offset:2px}
+
+/* banner návrhu */
+.navrh{background:var(--zula);color:#fff;font-family:var(--sans);font-size:.85rem;text-align:center;padding:8px 16px;line-height:1.4}
+
+/* záhlaví */
+.top{background:var(--bila);border-bottom:1px solid var(--linka);position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--jedle-tmava);min-width:0}
+.logo svg{width:38px;height:38px;flex:none}
+.logo-text{font-family:var(--sans);line-height:1.1;min-width:0}
+.logo-text span{display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--jedle-svetla)}
+.logo-text strong{display:block;font-size:1.15rem;font-weight:800}
+.top-tel{font-family:var(--sans);font-weight:700;text-decoration:none;color:var(--jedle);display:flex;align-items:center;gap:8px;white-space:nowrap;padding:8px 0}
+.top-tel svg{width:20px;height:20px}
+.top-nav{display:none}
+
+/* hero */
+.hero{padding:28px 0 40px;background:linear-gradient(180deg,var(--bila) 0%,var(--snih) 100%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center}
+.hero-text p.lead{margin-bottom:1.2em}
+.odznak{display:inline-flex;align-items:center;gap:10px;background:var(--bila);border:1px solid var(--linka);border-radius:999px;padding:6px 14px 6px 8px;text-decoration:none;color:var(--text);font-family:var(--sans);font-size:.88rem;box-shadow:0 2px 8px rgba(31,75,63,.08);max-width:100%}
+.odznak b{background:var(--jedle);color:#fff;border-radius:999px;padding:3px 10px;font-weight:700;white-space:nowrap}
+.odznak .hv{color:#8A5A00;letter-spacing:1px;white-space:nowrap}
+.odznak:hover{border-color:var(--jedle)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.hero-fakta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-family:var(--sans);font-size:.88rem;color:var(--text-mekky);padding:0;list-style:none}
+.hero-fakta li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--oranz);margin-right:8px;vertical-align:middle}
+.hero-art{width:100%;border-radius:20px;overflow:hidden;background:#DCE8E4;box-shadow:0 10px 30px rgba(31,75,63,.15)}
+.hero-art svg{width:100%;height:auto}
+
+/* služby */
+.sluzby-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:24px}
+.sluzba{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:20px;display:flex;gap:14px;align-items:flex-start}
+.sluzba .ik{flex:none;width:44px;height:44px;border-radius:12px;background:var(--mlha);display:grid;place-items:center}
+.sluzba .ik svg{width:26px;height:26px}
+.sluzba p{margin:0;color:var(--text-mekky);font-size:.98rem}
+.cena-pozn{margin-top:20px;font-family:var(--sans);font-weight:600;color:var(--jedle)}
+
+/* košík */
+.kosik-sec{background:var(--jedle);color:#fff}
+.kosik-sec h2,.kosik-sec .kicker{color:#fff}
+.kosik-sec .kicker{opacity:.85}
+.kosik-sec .lead{color:#DCE8E4}
+.kosik{background:var(--bila);color:var(--text);border-radius:20px;padding:20px 16px;margin-top:24px;display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+.krok-nadpis{font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--jedle-tmava);margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.krok-nadpis i{font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--oranz);color:var(--na-oranz);display:grid;place-items:center;font-size:.85rem;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip label{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:.9rem;font-weight:600;border:2px solid var(--linka);border-radius:999px;padding:9px 14px;cursor:pointer;background:var(--snih);color:var(--zula);user-select:none}
+.chip label::before{content:"+";font-weight:800;color:var(--jedle-svetla)}
+.chip input:checked+label{background:var(--jedle);border-color:var(--jedle);color:#fff}
+.chip input:checked+label::before{content:"✓";color:#fff}
+.dny{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.den{font-family:var(--sans);border:2px solid var(--linka);background:var(--snih);border-radius:12px;padding:8px 4px;cursor:pointer;text-align:center;color:var(--zula);line-height:1.2;min-width:0}
+.den small{display:block;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-mekky)}
+.den strong{display:block;font-size:1rem}
+.den[aria-pressed="true"]{background:var(--jedle);border-color:var(--jedle);color:#fff}
+.den[aria-pressed="true"] small{color:#DCE8E4}
+.casti{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+.cast{font-family:var(--sans);font-weight:600;font-size:.92rem;border:2px solid var(--linka);background:var(--snih);border-radius:12px;padding:10px 6px;cursor:pointer;color:var(--zula)}
+.cast span{display:block;font-weight:400;font-size:.78rem;color:var(--text-mekky)}
+.cast[aria-pressed="true"]{background:var(--jedle);border-color:var(--jedle);color:#fff}
+.cast[aria-pressed="true"] span{color:#DCE8E4}
+.pole{display:block;margin-top:12px}
+.pole span{display:block;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--zula);margin-bottom:4px}
+.pole input,.pole textarea{width:100%;font:inherit;font-size:1rem;border:2px solid var(--linka);border-radius:10px;padding:10px 12px;background:var(--bila);color:var(--text)}
+.pole input:focus,.pole textarea:focus{outline:none;border-color:var(--jedle)}
+.nahled{background:var(--snih);border:1px dashed var(--jedle-svetla);border-radius:12px;padding:14px;font-family:var(--sans);font-size:.9rem;white-space:pre-wrap;word-break:break-word;color:var(--text);min-height:120px}
+.kosik-akce{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.kosik-akce .btn{flex:1 1 220px}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.hint{font-family:var(--sans);font-size:.82rem;color:var(--text-mekky);margin:8px 0 0}
+.pocet{font-family:var(--sans);font-size:.85rem;color:var(--text-mekky);margin-top:8px}
+
+/* přezouvání */
+.prez-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:24px}
+.fakt{background:var(--bila);border-radius:var(--r);border:1px solid var(--linka);padding:22px;border-top:5px solid var(--jedle)}
+.fakt .velke{font-family:var(--sans);font-size:2rem;font-weight:800;color:var(--jedle);line-height:1.1;margin-bottom:6px}
+.fakt p{margin:0;color:var(--text-mekky)}
+.prez-pozn{margin-top:18px;background:var(--mlha);border-radius:var(--r);padding:16px 18px;font-size:.98rem}
+
+/* důvěra */
+.duvera-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+.foto{width:100%;aspect-ratio:4/3;border-radius:var(--r);border:2px dashed var(--jedle-svetla);background:repeating-linear-gradient(45deg,var(--mlha),var(--mlha) 12px,var(--snih) 12px,var(--snih) 24px);display:grid;place-items:center;text-align:center;font-family:var(--sans);font-weight:600;color:var(--jedle);padding:16px}
+.duvera-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.duvera-list li{background:var(--bila);border:1px solid var(--linka);border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.duvera-list li b{font-family:var(--sans);color:var(--jedle-tmava);display:block}
+.duvera-list svg{width:24px;height:24px;flex:none;margin-top:2px}
+
+/* kroky */
+.kroky{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:24px;counter-reset:k;padding:0;list-style:none}
+.kroky li{background:var(--bila);border:1px solid var(--linka);border-radius:var(--r);padding:22px 20px 20px 72px;position:relative}
+.kroky li::before{counter-increment:k;content:counter(k);position:absolute;left:20px;top:20px;width:38px;height:38px;border-radius:50%;background:var(--oranz);color:var(--na-oranz);font-family:var(--sans);font-weight:800;display:grid;place-items:center}
+.kroky p{margin:0;color:var(--text-mekky)}
+
+/* kontakt */
+.kontakt-sec{background:var(--bila)}
+.kontakt-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
+.kontakt-radky{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.kontakt-radky li{display:flex;gap:12px;align-items:flex-start}
+.kontakt-radky svg{width:24px;height:24px;flex:none;margin-top:3px}
+.kontakt-radky a{font-family:var(--sans);font-weight:600;word-break:break-word}
+.kontakt-radky small{display:block;color:var(--text-mekky)}
+.hodiny{width:100%;border-collapse:collapse;font-family:var(--sans);background:var(--snih);border-radius:var(--r);overflow:hidden}
+.hodiny caption{text-align:left;font-weight:700;color:var(--jedle-tmava);font-size:1.1rem;padding-bottom:10px}
+.hodiny th,.hodiny td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--linka)}
+.hodiny tr:last-child th,.hodiny tr:last-child td{border-bottom:0}
+.hodiny th{font-weight:600;color:var(--zula);width:45%}
+.hodiny td.otevreno{color:var(--jedle);font-weight:700}
+.hodiny td.zavreno{color:#8B2E12;font-weight:600}
+.hodiny tr.dnes{background:#FFE7D6}
+.hodiny tr.dnes th::after{content:" · dnes";font-weight:400;color:var(--text-mekky);font-size:.85em}
+
+/* FAQ */
+.faq{margin-top:20px;display:grid;gap:10px}
+.faq details{background:var(--bila);border:1px solid var(--linka);border-radius:12px;padding:0 18px}
+.faq summary{font-family:var(--sans);font-weight:700;color:var(--jedle-tmava);cursor:pointer;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--jedle-svetla);flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq details p{color:var(--text-mekky);margin:0 0 16px}
+
+/* patička */
+.pata{background:var(--jedle-tmava);color:#DCE8E4;padding:36px 0 28px;font-family:var(--sans);font-size:.9rem}
+.pata a{color:#fff}
+.pata-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.pata strong{color:#fff;font-size:1.05rem}
+.pata .male{opacity:.8;margin-top:18px;font-size:.8rem}
+
+/* fixní lišta mobil */
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bila);border-top:1px solid var(--linka);padding:10px 16px;display:flex;gap:10px;box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+.lista .btn{flex:1;padding:12px 10px;min-height:48px;font-size:.95rem}
+
+@media (min-width:700px){
+  .sluzby-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .prez-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kroky{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dny{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .pata-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kosik{padding:28px}
+}
+@media (min-width:960px){
+  section{padding:80px 0}
+  .page{padding-bottom:0}
+  .lista{display:none}
+  .top-nav{display:flex;gap:22px;font-family:var(--sans);font-size:.92rem;font-weight:600}
+  .top-nav a{text-decoration:none;color:var(--zula)}
+  .top-nav a:hover{color:var(--jedle)}
+  .hero{padding:56px 0 72px}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px}
+  .sluzby-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .sluzba{flex-direction:column}
+  .kosik{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:36px;padding:36px}
+  .duvera-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+  .kontakt-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+  .dny{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+</style>
+
+<div class="page">
+
+<div class="navrh" role="note">Nezávazný návrh webu – není to oficiální stránka firmy Autoservis Doleček</div>
+
+<div role="banner" class="top">
+  <div class="wrap">
+    <a class="logo" href="#uvod" aria-label="Autoservis Doleček – úvod">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#1F4B3F"/><path d="M5 30 L15 15 L20 22 L25 13 L35 30 Z" fill="#F4F7F6"/><path d="M23 16 L25 13 L27.5 17 L25.5 16.2 Z" fill="#1F4B3F"/><circle cx="20" cy="30" r="5" fill="#F2711C"/><circle cx="20" cy="30" r="2" fill="#1F4B3F"/></svg>
+      <span class="logo-text"><span>Autoservis</span> <strong>Doleček</strong></span>
+    </a>
+    <nav class="top-nav" aria-label="Hlavní">
+      <a href="#sluzby">Služby</a>
+      <a href="#objednat">Objednat</a>
+      <a href="#prezouvani">Přezouvání</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="top-tel" href="tel:+420735092891" aria-label="Zavolat 735 092 891">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F4B3F" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      735 092 891
+    </a>
+  </div>
+</div>
+
+<main>
+<section class="hero" id="uvod">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <a class="odznak" href="https://www.firmy.cz/detail/13226863-autoservis-dolecek-dolni-morava.html" target="_blank" rel="noopener">
+        <b>5,0</b><span class="hv" aria-hidden="true">★★★★★</span><span>z 12 hodnocení na Firmy.cz</span>
+      </a>
+      <h1>Autoservis pod Králickým Sněžníkem</h1>
+      <p class="lead">Opravím, přezuji, seřídím a připravím na STK. Daniel Doleček, Dolní Morava 2 – pro místní řidiče i chalupáře.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#objednat">Objednat servis</a>
+        <a class="btn btn-ghost" href="tel:+420735092891">Zavolat 735 092 891</a>
+      </div>
+      <ul class="hero-fakta">
+        <li>Po, Út, Čt 9–16</li>
+        <li>Opravy, klempířina, skla</li>
+        <li>Pneuservis a geometrie</li>
+      </ul>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 520 400" role="img" aria-label="Ilustrace: horské hřebeny se sněhem, serpentina a servisní budka mezi jedlemi">
+        <defs>
+          <linearGradient id="nebe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9DCD6"/><stop offset="1" stop-color="#F4F7F6"/></linearGradient>
+          <linearGradient id="louka" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3C7564"/><stop offset="1" stop-color="#1F4B3F"/></linearGradient>
+        </defs>
+        <rect width="520" height="400" fill="url(#nebe)"/>
+        <circle cx="420" cy="78" r="30" fill="#FBE3CF"/>
+        <!-- zadní hřeben -->
+        <path d="M0 210 L70 140 L120 170 L200 70 L250 120 L300 95 L380 165 L440 120 L520 175 L520 400 L0 400 Z" fill="#8FA8A1"/>
+        <path d="M200 70 L228 102 L214 98 L204 110 L192 96 L178 104 Z" fill="#FFFFFF"/>
+        <path d="M300 95 L318 113 L306 110 L296 118 L286 108 Z" fill="#FFFFFF"/>
+        <path d="M70 140 L88 158 L76 155 L64 162 L58 153 Z" fill="#FFFFFF"/>
+        <path d="M440 120 L458 135 L446 133 L436 140 L428 132 Z" fill="#FFFFFF"/>
+        <!-- prostřední hřeben -->
+        <path d="M0 260 L90 190 L160 230 L250 160 L330 225 L410 185 L520 245 L520 400 L0 400 Z" fill="#5C7F75"/>
+        <path d="M250 160 L274 180 L262 178 L250 188 L238 177 L226 181 Z" fill="#EAF1EE"/>
+        <!-- louka -->
+        <path d="M0 300 C120 265 220 290 300 275 C380 260 450 270 520 285 L520 400 L0 400 Z" fill="url(#louka)"/>
+        <!-- serpentina -->
+        <path d="M150 400 C170 370 330 372 340 350 C350 328 190 330 200 310 C208 293 300 292 318 282" fill="none" stroke="#3A3F44" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M150 400 C170 370 330 372 340 350 C350 328 190 330 200 310 C208 293 300 292 318 282" fill="none" stroke="#F4F7F6" stroke-width="2" stroke-dasharray="10 9" stroke-linecap="round"/>
+        <!-- servisní budka -->
+        <g transform="translate(318 222)">
+          <rect x="0" y="22" width="112" height="56" fill="#F4F7F6" stroke="#163830" stroke-width="2"/>
+          <path d="M-8 24 L56 -6 L120 24 Z" fill="#163830"/>
+          <path d="M-8 24 L56 -6 L120 24" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+          <rect x="12" y="38" width="50" height="40" fill="#F2711C"/>
+          <path d="M12 46 H62 M12 54 H62 M12 62 H62 M12 70 H62" stroke="#C9560F" stroke-width="2"/>
+          <rect x="74" y="38" width="26" height="20" fill="#C9DCD6" stroke="#163830" stroke-width="2"/>
+          <path d="M87 38 V58 M74 48 H100" stroke="#163830" stroke-width="1.5"/>
+          <rect x="26" y="8" width="60" height="14" rx="2" fill="#F2711C"/>
+          <text x="56" y="19" text-anchor="middle" font-family="Sora,system-ui,Arial,sans-serif" font-size="10" font-weight="800" fill="#1A1C1E" letter-spacing="1.5">SERVIS</text>
+          <!-- pneumatiky -->
+          <circle cx="-14" cy="70" r="9" fill="#3A3F44"/><circle cx="-14" cy="70" r="3.5" fill="#8FA8A1"/>
+          <circle cx="-14" cy="56" r="9" fill="#3A3F44"/><circle cx="-14" cy="56" r="3.5" fill="#8FA8A1"/>
+        </g>
+        <!-- jedle -->
+        <g fill="#163830">
+          <path d="M40 330 L58 275 L76 330 Z"/><path d="M45 305 L58 262 L71 305 Z"/><rect x="55" y="330" width="6" height="10"/>
+          <path d="M84 338 L98 296 L112 338 Z"/><path d="M88 318 L98 286 L108 318 Z"/><rect x="95" y="338" width="6" height="8"/>
+          <path d="M448 330 L466 270 L484 330 Z"/><path d="M452 302 L466 258 L480 302 Z"/><rect x="463" y="330" width="6" height="10"/>
+          <path d="M484 345 L498 305 L512 345 Z"/><rect x="495" y="345" width="6" height="8"/>
+          <path d="M262 272 L272 244 L282 272 Z"/>
+        </g>
+        <!-- sníh na jedlích -->
+        <g fill="#FFFFFF" opacity=".85">
+          <path d="M53 278 L58 262 L63 278 Z"/><path d="M461 272 L466 258 L471 272 Z"/><path d="M94 296 L98 286 L102 296 Z"/>
+        </g>
+        <!-- auto na serpentině -->
+        <g transform="translate(232 352)">
+          <rect x="0" y="6" width="40" height="13" rx="4" fill="#F2711C"/>
+          <path d="M8 6 L13 -2 H28 L33 6 Z" fill="#F2711C"/>
+          <path d="M14 0 H27 L30 5 H11 Z" fill="#C9DCD6"/>
+          <circle cx="10" cy="20" r="4.5" fill="#1A1C1E"/><circle cx="31" cy="20" r="4.5" fill="#1A1C1E"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="wrap">
+    <p class="kicker">Služby</p>
+    <h2>Co v dílně dělám</h2>
+    <p class="lead">Jeden servis na všechno podstatné – od motoru přes plech až po sklo a STK.</p>
+    <div class="sluzby-grid">
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F4B3F" d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg></div><div><h3>Mechanické opravy</h3><p>Brzdy, podvozek, výfuk, motor – opravím, co na autě dělá potíže.</p></div></div>
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F4B3F" d="M3 17h2l1-4h12l1 4h2v2h-2v1h-3v-1H8v1H5v-1H3zM7.5 6h9l1.5 5h-12z"/></svg></div><div><h3>Autoklempířské práce</h3><p>Promáčklý nebo zrezivělý plech opravím klempířsky.</p></div></div>
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#1F4B3F" stroke-width="3"/><circle cx="12" cy="12" r="3.5" fill="#1F4B3F"/></svg></div><div><h3>Pneuservis</h3><p>Přezutí, výměna a vyvážení kol – na horách před zimou nutnost.</p></div></div>
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#1F4B3F" stroke-width="2.5" stroke-linecap="round" d="M5 4v16M19 4v16M5 12h14M9 8l-4 4 4 4M15 8l4 4-4 4"/></svg></div><div><h3>Geometrie</h3><p>Seřídím sbíhavost kol, aby auto jelo rovně a pneumatiky se nesjížděly.</p></div></div>
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#1F4B3F" stroke-width="2.5" stroke-linejoin="round" d="M3 18 L6 6 H18 L21 18 Z"/><path stroke="#1F4B3F" stroke-width="1.6" d="M10 9 L8 15 M14 9 L13 12"/></svg></div><div><h3>Lepení autoskel</h3><p>Prasklé čelní sklo vyměním a nové zalepím.</p></div></div>
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#1F4B3F" stroke-width="2.5" stroke-linecap="round" d="M3 10h9v4h4"/><circle cx="18.5" cy="14" r="2.5" fill="#1F4B3F"/></svg></div><div><h3>Tažné zařízení</h3><p>Namontuji tažné zařízení pro vozík, karavan nebo nosič kol.</p></div></div>
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2" fill="none" stroke="#1F4B3F" stroke-width="2.5"/><path fill="none" stroke="#1F4B3F" stroke-width="2" d="M6 13l3-3 3 2 4-4"/><path stroke="#1F4B3F" stroke-width="2.5" d="M9 20h6"/></svg></div><div><h3>Autodiagnostika</h3><p>Svítí kontrolka? Přečtu chyby z řídicí jednotky a řeknu, co dál.</p></div></div>
+      <div class="sluzba"><div class="ik"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#1F4B3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4 10-10"/></svg></div><div><h3>Zajištění STK</h3><p>Auto před technickou připravím a STK zajistím.</p></div></div>
+    </div>
+    <p class="cena-pozn">Cenu řekneme předem – po telefonu nebo když auto uvidím.</p>
+  </div>
+</section>
+
+<section class="kosik-sec" id="objednat">
+  <div class="wrap">
+    <p class="kicker">Objednat servis</p>
+    <h2>Co pro Vás uděláme?</h2>
+    <p class="lead">Naklikejte, co autu chybí, vyberte den a část dne. Složím z toho SMS, kterou jen odešlete – termín Vám potvrdím.</p>
+
+    <div class="kosik">
+      <div>
+        <p class="krok-nadpis"><i>1</i>Vyberte úkony</p>
+        <div class="chips" id="ukony">
+          <div class="chip"><input type="checkbox" id="u1" value="mechanická oprava"><label for="u1">Mechanická oprava</label></div>
+          <div class="chip"><input type="checkbox" id="u2" value="autoklempířské práce"><label for="u2">Klempířské práce</label></div>
+          <div class="chip"><input type="checkbox" id="u3" value="pneuservis / přezutí"><label for="u3">Pneuservis / přezutí</label></div>
+          <div class="chip"><input type="checkbox" id="u4" value="geometrie"><label for="u4">Geometrie</label></div>
+          <div class="chip"><input type="checkbox" id="u5" value="lepení autoskla"><label for="u5">Lepení autoskla</label></div>
+          <div class="chip"><input type="checkbox" id="u6" value="tažné zařízení"><label for="u6">Tažné zařízení</label></div>
+          <div class="chip"><input type="checkbox" id="u7" value="autodiagnostika"><label for="u7">Autodiagnostika</label></div>
+          <div class="chip"><input type="checkbox" id="u8" value="zajištění STK"><label for="u8">Zajištění STK</label></div>
+        </div>
+        <p class="pocet" id="pocet">Zatím nic nevybráno.</p>
+
+        <p class="krok-nadpis" style="margin-top:22px"><i>2</i>Vyberte den (Po, Út, Čt)</p>
+        <div class="dny" id="dny" role="group" aria-label="Den návštěvy"></div>
+        <div class="casti" role="group" aria-label="Část dne">
+          <button type="button" class="cast" data-cast="dopoledne" aria-pressed="true">Dopoledne<span>9–12 h</span></button>
+          <button type="button" class="cast" data-cast="odpoledne" aria-pressed="false">Odpoledne<span>12–16 h</span></button>
+        </div>
+        <p class="hint">St, Pá a o víkendu je zavřeno, státní svátky nenabízím.</p>
+      </div>
+
+      <div>
+        <p class="krok-nadpis"><i>3</i>Doplňte a odešlete</p>
+        <label class="pole"><span>Auto (značka, model) – nepovinné</span><input type="text" id="auto" placeholder="např. Škoda Octavia" autocomplete="off"></label>
+        <label class="pole"><span>Poznámka – nepovinné</span><textarea id="pozn" rows="2" placeholder="např. při brzdění pískají brzdy"></textarea></label>
+        <label class="pole"><span>Vaše jméno – nepovinné</span><input type="text" id="jmeno" autocomplete="name"></label>
+        <p class="krok-nadpis" style="margin-top:18px">Náhled zprávy</p>
+        <div class="nahled" id="nahled" aria-live="polite"></div>
+        <div class="kosik-akce">
+          <a class="btn btn-primary" id="poslat" href="sms:+420735092891" aria-disabled="true">Poslat SMS na 735 092 891</a>
+          <a class="btn btn-ghost" href="tel:+420735092891">Raději zavolám</a>
+        </div>
+        <p class="hint" id="hint-sms">Vyberte aspoň jeden úkon a den.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prezouvani">
+  <div class="wrap">
+    <p class="kicker">Přezouvání</p>
+    <h2>Na horách se zima nepodceňuje</h2>
+    <p class="lead">Pod Sněžníkem bývá sníh a námraza na silnici dřív než ve městě. Pár pravidel, která platí pro každého řidiče:</p>
+    <div class="prez-grid">
+      <div class="fakt"><div class="velke">1. 11. – 31. 3.</div><p>V tomto období jsou zimní pneumatiky povinné, pokud je na silnici sníh, led nebo námraza – nebo se to dá podle počasí čekat.</p></div>
+      <div class="fakt"><div class="velke">4 mm</div><p>Nejmenší povolená hloubka dezénu zimních pneumatik u osobních aut. U letních pneu se zimní hloubka nepočítá.</p></div>
+      <div class="fakt"><div class="velke">Značka</div><p>Dopravní značka „Zimní výbava“ na konkrétním úseku přikazuje zimní pneumatiky po celé období 1. 11. – 31. 3., i když zrovna nesněží.</p></div>
+    </div>
+    <p class="prez-pozn"><strong class="sans">Přezutí si domluvte včas.</strong> Vyberte v objednávce „Pneuservis / přezutí“ a já se Vám ozvu s termínem. Kdy přezout, nechám na Vás – rozhoduje počasí, ne kalendář.</p>
+  </div>
+</section>
+
+<section id="o-mne" style="background:var(--bila)">
+  <div class="wrap duvera-grid">
+    <div class="foto" role="img" aria-label="Místo pro fotografii">Sem přijde vaše fotka<br>(dílna nebo pan Doleček u auta)</div>
+    <div>
+      <p class="kicker">Kdo opravuje</p>
+      <h2>Daniel Doleček, Dolní Morava</h2>
+      <p>Auto mi předáte osobně a osobně ho taky převezmete. Řeknu, co je potřeba, kolik to bude stát a co může počkat.</p>
+      <ul class="duvera-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F2711C" d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.3l7-.8z"/></svg><div><b>5,0 z 12 hodnocení</b><a href="https://www.firmy.cz/detail/13226863-autoservis-dolecek-dolni-morava.html" target="_blank" rel="noopener">Přečtěte si je na Firmy.cz</a></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F4B3F" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div><b>Dolní Morava 2</b>Pod Králickým Sněžníkem, kousek od Králík</div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="#1F4B3F" stroke-width="2.2"/><path stroke="#1F4B3F" stroke-width="2" d="M8 8h8M8 12h8M8 16h5"/></svg><div><b>IČO 07437366</b>Živnostník Daniel Doleček</div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#1F4B3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4 10-10"/></svg><div><b>Osm služeb pod jednou střechou</b>Mechanika, klempířina, skla, pneu, geometrie, tažné, diagnostika, STK</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="postup">
+  <div class="wrap">
+    <p class="kicker">Jak to probíhá</p>
+    <h2>Tři kroky a jedete</h2>
+    <ol class="kroky">
+      <li><h3>Ozvěte se</h3><p>Pošlete SMS z formuláře výše nebo zavolejte na 735 092 891.</p></li>
+      <li><h3>Domluvíme termín a cenu</h3><p>Potvrdím den, řeknu cenu předem. Bez překvapení při placení.</p></li>
+      <li><h3>Přivezete auto, já ho opravím</h3><p>Po, Út nebo Čt mezi 9 a 16. Při předání vysvětlím, co jsem dělal.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="kontakt-sec" id="kontakt">
+  <div class="wrap kontakt-grid">
+    <div>
+      <p class="kicker">Kontakt</p>
+      <h2>Kde mě najdete</h2>
+      <ul class="kontakt-radky">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F4B3F" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><div><a href="tel:+420735092891">735 092 891</a><small>Volejte v otevírací době, SMS kdykoli</small></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#1F4B3F" stroke-width="2.2"/><path fill="none" stroke="#1F4B3F" stroke-width="2.2" d="M3 7l9 6 9-6"/></svg><div><a href="mailto:daniel.dolecek@email.cz">daniel.dolecek@email.cz</a></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1F4B3F" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div><a href="https://mapy.cz/zakladni?q=Doln%C3%AD%20Morava%202" target="_blank" rel="noopener">Dolní Morava 2</a><small>Otevřít v Mapy.cz</small></div></li>
+      </ul>
+      <div class="hero-cta" style="margin-top:22px">
+        <a class="btn btn-primary" href="#objednat">Objednat servis</a>
+      </div>
+    </div>
+    <div>
+      <table class="hodiny" id="hodiny">
+        <caption>Otevírací doba</caption>
+        <tbody>
+          <tr data-d="1"><th scope="row">Pondělí</th><td class="otevreno">9:00–16:00</td></tr>
+          <tr data-d="2"><th scope="row">Úterý</th><td class="otevreno">9:00–16:00</td></tr>
+          <tr data-d="3"><th scope="row">Středa</th><td class="zavreno">zavřeno</td></tr>
+          <tr data-d="4"><th scope="row">Čtvrtek</th><td class="otevreno">9:00–16:00</td></tr>
+          <tr data-d="5"><th scope="row">Pátek</th><td class="zavreno">zavřeno</td></tr>
+          <tr data-d="6"><th scope="row">Sobota</th><td class="zavreno">zavřeno</td></tr>
+          <tr data-d="0"><th scope="row">Neděle</th><td class="zavreno">zavřeno</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="otazky">
+  <div class="wrap">
+    <p class="kicker">Časté otázky</p>
+    <h2>Na co se řidiči ptají</h2>
+    <div class="faq">
+      <details><summary>Kdy musím mít zimní pneumatiky?</summary><p>Od 1. listopadu do 31. března, pokud je na silnici sníh, led nebo námraza, případně se dají podle počasí čekat. Na horách to bývá často. Dezén musí mít aspoň 4 mm.</p></details>
+      <details><summary>Svítí mi kontrolka motoru. Můžu ještě jet?</summary><p>Záleží na tom, co chyba znamená. Pokud kontrolka bliká nebo auto ztrácí výkon, raději nejezděte a zavolejte. Diagnostika přečte uložené chyby a ukáže, kde hledat.</p></details>
+      <details><summary>Jak poznám, že potřebuji geometrii?</summary><p>Auto táhne na jednu stranu, volant nestojí rovně nebo se pneumatiky sjíždějí nerovnoměrně. Geometrie se vyplatí i po nárazu do obrubníku nebo po výměně dílů podvozku.</p></details>
+      <details><summary>Prasklo mi čelní sklo. Musím ho měnit?</summary><p>Prasklina v zorném poli řidiče je problém při technické kontrole i za jízdy. Nové sklo se do karoserie lepí a lepidlo potřebuje čas zatvrdnout, než se s autem vyjede.</p></details>
+      <details><summary>Musím se předem objednat?</summary><p>Otevřeno je jen v pondělí, úterý a čtvrtek, proto se vyplatí termín domluvit předem – SMS z formuláře nebo telefonem.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pata">
+  <div class="wrap">
+    <div class="pata-grid">
+      <div><strong>Autoservis Doleček</strong><br>Daniel Doleček<br>IČO 07437366</div>
+      <div>Dolní Morava 2<br><a href="https://mapy.cz/zakladni?q=Doln%C3%AD%20Morava%202" target="_blank" rel="noopener">Mapy.cz</a></div>
+      <div><a href="tel:+420735092891">735 092 891</a><br><a href="mailto:daniel.dolecek@email.cz">daniel.dolecek@email.cz</a><br>Po, Út, Čt 9–16</div>
+    </div>
+    <p class="male">Návrh webu, 2026 · Nezávazný návrh, není to oficiální stránka firmy.</p>
+  </div>
+</footer>
+
+<div class="lista">
+  <a class="btn btn-primary" href="tel:+420735092891">Zavolat</a>
+  <a class="btn btn-ghost" href="#objednat">Objednat servis</a>
+</div>
+</div>
+
+<script>
+(function(){
+  var TEL = "+420735092891";
+  var OTEVRENO = [1,2,4]; // Po, Út, Čt
+  var DNY = ["Ne","Po","Út","St","Čt","Pá","So"];
+  var DNY_DL = ["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+  function velikonoce(r){var a=r%19,b=Math.floor(r/100),c=r%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mes=Math.floor((h+l-7*m+114)/31),den=((h+l-7*m+114)%31)+1;return new Date(r,mes-1,den);}
+  function svatek(dt){
+    var md=(dt.getMonth()+1)+"-"+dt.getDate();
+    var pevne=["1-1","5-1","5-8","7-5","7-6","9-28","10-28","11-17","12-24","12-25","12-26"];
+    if(pevne.indexOf(md)>-1) return true;
+    var v=velikonoce(dt.getFullYear());
+    var pa=new Date(v);pa.setDate(v.getDate()-2);
+    var po=new Date(v);po.setDate(v.getDate()+1);
+    return dt.toDateString()===pa.toDateString()||dt.toDateString()===po.toDateString();
+  }
+  // tabulka – zvýraznit dnešek
+  var dnes=new Date();
+  var r=document.querySelector('#hodiny tr[data-d="'+dnes.getDay()+'"]'); if(r) r.classList.add("dnes");
+
+  // dny
+  var box=document.getElementById("dny"), vybranyDen=null, vybranaCast="dopoledne";
+  var d=new Date(dnes.getFullYear(),dnes.getMonth(),dnes.getDate()+1), n=0, pojistka=0;
+  while(n<8 && pojistka<90){
+    pojistka++;
+    if(OTEVRENO.indexOf(d.getDay())>-1 && !svatek(d)){
+      var b=document.createElement("button");
+      b.type="button";b.className="den";b.setAttribute("aria-pressed","false");
+      var txt=DNY_DL[d.getDay()]+" "+d.getDate()+". "+(d.getMonth()+1)+".";
+      b.dataset.text=txt;
+      b.innerHTML="<small>"+DNY[d.getDay()]+"</small><strong>"+d.getDate()+". "+(d.getMonth()+1)+".</strong>";
+      b.setAttribute("aria-label",txt);
+      b.addEventListener("click",function(){
+        var all=box.querySelectorAll(".den");for(var i=0;i<all.length;i++)all[i].setAttribute("aria-pressed","false");
+        this.setAttribute("aria-pressed","true");vybranyDen=this.dataset.text;sloz();
+      });
+      box.appendChild(b);n++;
+    }
+    d.setDate(d.getDate()+1);
+  }
+  var casti=document.querySelectorAll(".cast");
+  for(var i=0;i<casti.length;i++){casti[i].addEventListener("click",function(){
+    for(var j=0;j<casti.length;j++)casti[j].setAttribute("aria-pressed","false");
+    this.setAttribute("aria-pressed","true");vybranaCast=this.dataset.cast;sloz();
+  });}
+
+  var chk=document.querySelectorAll("#ukony input");
+  for(var c=0;c<chk.length;c++) chk[c].addEventListener("change",sloz);
+  ["auto","pozn","jmeno"].forEach(function(id){document.getElementById(id).addEventListener("input",sloz);});
+
+  function sloz(){
+    var u=[];for(var i=0;i<chk.length;i++) if(chk[i].checked) u.push(chk[i].value);
+    document.getElementById("pocet").textContent = u.length ? ("Vybráno: "+u.length+(u.length===1?" úkon":(u.length<5?" úkony":" úkonů"))) : "Zatím nic nevybráno.";
+    var auto=document.getElementById("auto").value.trim();
+    var pozn=document.getElementById("pozn").value.trim();
+    var jm=document.getElementById("jmeno").value.trim();
+    var t="Dobrý den, pane Dolečku,\nchtěl(a) bych objednat servis.\n";
+    t+="Úkony: "+(u.length?u.join(", "):"…")+"\n";
+    t+="Termín: "+(vybranyDen?vybranyDen+", "+vybranaCast:"…")+"\n";
+    if(auto) t+="Auto: "+auto+"\n";
+    if(pozn) t+="Poznámka: "+pozn+"\n";
+    t+="Prosím o potvrzení a orientační cenu. Děkuji"+(jm?", "+jm:"")+".";
+    document.getElementById("nahled").textContent=t;
+    var btn=document.getElementById("poslat"), ok=u.length>0 && vybranyDen;
+    btn.href="sms:"+TEL+"?body="+encodeURIComponent(t);
+    btn.setAttribute("aria-disabled", ok?"false":"true");
+    document.getElementById("hint-sms").textContent = ok ? "Otevře se Vám aplikace Zprávy s hotovým textem." : "Vyberte aspoň jeden úkon a den.";
+  }
+  sloz();
+})();
+</script>
+</body>
+</html>
