@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Hana Antošová – masáže</title>
+<meta name="description" content="Hana Antošová – masáže, Nádražní 89, Dubňany: klasické, aroma, lymfatické a těhotenské masáže, baňkování, lávové kameny, Dornova metoda, Bowenova masáž, rašelinové zábaly. Termín po telefonu 776 630 846.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,500;0,7..72,700;1,7..72,500&family=Outfit:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Hana Antošová – masáže","telephone":"+420776630846","email":"antosovahana@email.cz","address":{"@type":"PostalAddress","streetAddress":"Nádražní 89","postalCode":"696 03","addressLocality":"Dubňany","addressCountry":"CZ"},"taxID":"87430215"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: klenuté okno – nadpis uvnitř velkého oblouku, pod ním rozcestník „Jak se dnes cítíte?“ a bylinková polička */
+:root{
+  color-scheme:light;
+  --len:#3E5A7A;       /* lněná modrá – hlavní */
+  --len-tm:#2C4560;
+  --merunka:#F2B88B;   /* plochy a tlačítka s tmavým textem */
+  --mleko:#F8F6F1;     /* pozadí */
+  --inkoust:#1F2833;   /* text */
+  --sedy:#56606C;
+  --bila:#FFFFFF;
+  --f-disp:"Literata",Georgia,serif;
+  --f-text:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mleko);color:var(--inkoust);font:17px/1.6 var(--f-text)}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-disp);margin:0;line-height:1.15;text-wrap:balance}
+h2{font-size:clamp(28px,4.6vw,44px);color:var(--len-tm)}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--sedy);margin:0}
+.tag{display:inline-block;font:600 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF1DC;color:#7A4A12;border:1px solid #EBC99C;padding:4px 7px;border-radius:4px;vertical-align:middle}
+.banner{background:var(--inkoust);color:#EEF1F5;text-align:center;font-size:14px;padding-block:9px}
+.banner b{color:var(--merunka)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(248,246,241,.96);border-bottom:1px solid #E5E0D6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--mleko)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.logo{text-decoration:none;color:var(--inkoust);font-family:var(--f-disp);font-weight:700;font-size:19px;line-height:1.1}
+.logo small{display:block;font:500 12px var(--f-text);color:var(--sedy);letter-spacing:.05em}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:14px;font:600 17px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--len);color:#fff}
+.btn-alt{background:var(--merunka);color:var(--inkoust)}
+.btn-line{border-color:var(--len);color:var(--len);background:transparent}
+.btn:focus-visible,input:focus-visible+span{outline:3px solid var(--merunka);outline-offset:2px}
+.top .btn{min-height:42px;padding:0 16px;font-size:15px}
+
+.hero{padding-block:28px 40px}
+.arch{background:var(--len);color:#fff;border-radius:min(46vw,520px) min(46vw,520px) 26px 26px;padding:clamp(70px,13vw,140px) clamp(20px,6vw,80px) clamp(30px,5vw,56px);position:relative;overflow:hidden;text-align:center}
+.arch::after{content:"";position:absolute;inset:14px;border:1.5px solid rgba(242,184,139,.55);border-radius:inherit;pointer-events:none}
+.arch .eyebrow{color:var(--merunka)}
+.arch h1{font-size:clamp(38px,7.4vw,84px);font-weight:700;margin-top:14px;max-width:14ch;margin-left:auto;margin-right:auto}
+.arch h1 em{font-weight:500;color:var(--merunka)}
+.arch .lead{max-width:44ch;margin:18px auto 0;font-size:clamp(17px,2vw,20px);color:#E6ECF3}
+.arch .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px;position:relative;z-index:1}
+.arch .btn-call{background:#fff;color:var(--len-tm)}
+.note{display:inline-flex;gap:10px;align-items:center;margin-top:20px;background:rgba(255,255,255,.12);border-radius:999px;padding:8px 16px;font-size:15px}
+.note svg{width:20px;height:20px;flex:none}
+@media (max-width:640px){.note{font-size:14px;border-radius:14px;text-align:left}}
+.leaves{position:absolute;bottom:-6px;width:150px;opacity:.5}
+.leaves.l{left:-10px}.leaves.r{right:-10px;transform:scaleX(-1)}
+@media (max-width:640px){.leaves{width:90px;opacity:.35}}
+
+section{padding-block:54px}
+.head{display:grid;gap:10px;margin-bottom:26px;max-width:62ch}
+.head p{margin:0;color:var(--sedy)}
+
+/* rozcestník */
+.feel{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+@media (max-width:860px){.feel{grid-template-columns:1fr}}
+.moods{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;min-width:0}
+.mood{position:relative}
+.mood input{position:absolute;opacity:0;width:1px;height:1px}
+.mood span{display:flex;flex-direction:column;gap:6px;background:var(--bila);border:1.5px solid #DCD6CA;border-radius:16px;padding:14px;cursor:pointer;height:100%;font-weight:600}
+.mood span svg{width:44px;height:44px}
+.mood small{font-weight:400;color:var(--sedy);font-size:14px}
+.mood input:checked+span{border-color:var(--len);background:#EAF0F6;box-shadow:inset 0 0 0 1px var(--len)}
+.advice{background:var(--bila);border-radius:22px;padding:24px;border:1px solid #E1DBCF;min-width:0}
+.advice h3{font-size:24px;color:var(--len-tm)}
+.advice ul{margin:12px 0 0;padding-left:20px}
+.advice .why{color:var(--sedy);font-size:15px;margin-top:10px}
+.advice .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.advice .row label{position:relative}
+.advice .row input{position:absolute;opacity:0;width:1px;height:1px}
+.advice .row span{display:inline-block;padding:8px 13px;border-radius:999px;border:1.5px solid #CCD5DF;font-size:15px;cursor:pointer}
+.advice .row input:checked+span{background:var(--merunka);border-color:var(--merunka);font-weight:600}
+.advice .send{display:grid;gap:10px;margin-top:18px}
+.advice .num{text-align:center;font-size:14px;color:var(--sedy)}
+.advice .num b{color:var(--inkoust);user-select:all}
+
+/* nabídka */
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.item{background:var(--bila);border-radius:18px;padding:20px;border:1px solid #E5E0D6;min-width:0}
+.item h3{font-size:20px;color:var(--len-tm)}
+.item p{margin:6px 0 0;color:var(--sedy);font-size:15px}
+.item.star{background:var(--merunka);border-color:var(--merunka)}
+.item.star h3{color:var(--inkoust)}.item.star p{color:#3A2E25}
+.pricebar{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#EAF0F6;border-radius:18px;padding:16px 20px}
+.pricebar p{margin:0}
+
+/* těhotenská */
+.preg{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center}
+@media (max-width:860px){.preg{grid-template-columns:1fr}}
+.preg svg{width:100%;max-width:380px;height:auto;display:block;margin:auto}
+.preg ol{padding-left:22px;margin:16px 0 0;display:grid;gap:8px}
+
+/* polička */
+.shelf{background:var(--len-tm);color:#EEF1F5}
+.shelf h2{color:#fff}.shelf .head p{color:#C9D5E2}.shelf .eyebrow{color:var(--merunka)}
+.jars{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:18px;align-items:end;border-bottom:10px solid #8C6A4A;padding-bottom:0}
+.jar{text-align:center;font-size:15px;padding-bottom:12px}
+.jar svg{width:84px;height:100px;display:block;margin:0 auto 8px}
+.photo{border:2px dashed #C5CEDA;border-radius:22px;min-height:200px;display:grid;place-items:center;text-align:center;color:var(--sedy);background:repeating-linear-gradient(-45deg,#F0EDE6 0 12px,#F8F6F1 12px 24px);padding:20px}
+
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--merunka);padding-top:12px}
+.steps li::before{content:counter(s) ".";font:700 26px var(--f-disp);color:var(--len);display:block}
+.steps b{display:block}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px}
+.trust div{background:var(--bila);border-radius:16px;padding:16px;border:1px solid #E5E0D6}
+.trust b{display:block;font-family:var(--f-disp);font-size:18px;color:var(--len-tm)}
+.faq details{border-bottom:1px solid #DCD6CA;padding-block:14px}
+.faq summary{font-weight:600;cursor:pointer}
+.faq p{margin:8px 0 0;color:var(--sedy)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0}
+.contact dt{font-weight:600;color:var(--sedy)}.contact dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.map{border-radius:22px;overflow:hidden;min-height:240px;position:relative;background:#E3E9EF}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .pin{position:absolute;left:16px;bottom:16px;background:var(--bila);border-radius:12px;padding:12px 14px;max-width:260px;box-shadow:0 6px 16px rgba(31,40,51,.15)}
+footer{background:var(--inkoust);color:#C9D0D8;font-size:14px;padding-block:28px 100px}
+footer a{color:var(--merunka)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;gap:10px;background:rgba(248,246,241,.97);border-top:1px solid #E1DBCF;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1;min-height:48px;padding:0 10px;font-size:16px}
+@media (max-width:760px){.sticky{display:flex}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy <b>Hana Antošová – masáže</b></div>
+<div class="top" role="banner"><div class="wrap">
+  <a class="logo" href="#uvod">Hana Antošová<small>masáže · Dubňany</small></a>
+  <a class="btn btn-call" href="tel:+420776630846">Zavolat</a>
+</div></div>
+
+<main id="uvod">
+<section class="hero"><div class="wrap">
+  <div class="arch">
+    <svg class="leaves l" viewBox="0 0 150 160" aria-hidden="true"><g fill="#F2B88B"><path d="M20 160 C30 110 60 70 110 40 C90 90 60 130 20 160z"/><path d="M10 150 C0 110 10 70 40 40 C45 80 35 120 10 150z"/></g></svg>
+    <svg class="leaves r" viewBox="0 0 150 160" aria-hidden="true"><g fill="#F2B88B"><path d="M20 160 C30 110 60 70 110 40 C90 90 60 130 20 160z"/><path d="M10 150 C0 110 10 70 40 40 C45 80 35 120 10 150z"/></g></svg>
+    <p class="eyebrow">Masáže · Dubňany, Nádražní 89</p>
+    <h1>Uleví zádům. <em>I v těhotenství.</em></h1>
+    <p class="lead">Klasické, aroma, lymfatické a těhotenské masáže. Baňkování, lávové kameny, Dornova metoda, Bowenova masáž a rašelinové zábaly.</p>
+    <div class="cta">
+      <a class="btn btn-call" href="tel:+420776630846">Zavolat 776 630 846</a>
+      <a class="btn btn-alt" href="#vyber">Co mi dnes pomůže?</a>
+    </div>
+    <div class="note"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="#F2B88B" stroke-width="2"/><path d="M10 5v5l3 2" stroke="#F2B88B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Termín vždy po telefonické domluvě</div>
+  </div>
+</div></section>
+
+<section id="vyber" style="padding-top:20px"><div class="wrap">
+  <div class="head"><p class="eyebrow">Rozcestník</p><h2>Jak se dnes cítíte?</h2><p>Klepněte na to, co Vás trápí. Ukážu Vám, které masáže z mé nabídky se k tomu hodí, a z výběru se složí SMS. <span class="tag">orientační doporučení</span></p></div>
+  <div class="feel">
+    <div class="moods" role="radiogroup" aria-label="Jak se cítíte" id="moods"></div>
+    <div class="advice" aria-live="polite">
+      <p class="eyebrow">Hodí se Vám</p>
+      <h3 id="advT"></h3>
+      <ul id="advL"></ul>
+      <p class="why" id="advW"></p>
+      <div class="row" id="when" aria-label="Kdy se Vám to hodí"></div>
+      <div class="send">
+        <a class="btn btn-call" id="sms" href="sms:+420776630846">Poslat SMS s výběrem</a>
+        <a class="btn btn-line" href="tel:+420776630846">Zavolat a domluvit se</a>
+        <div class="num">Číslo: <b>776 630 846</b></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section style="background:var(--bila)"><div class="wrap">
+  <div class="head"><p class="eyebrow">Nabídka</p><h2>Masáže a péče</h2></div>
+  <div class="menu">
+    <div class="item star"><h3>Těhotenská masáž</h3><p>Jemná masáž pro nastávající maminky.</p></div>
+    <div class="item"><h3>Klasická masáž</h3><p>Uvolní ztuhlá záda, šíji a nohy.</p></div>
+    <div class="item"><h3>Aroma masáž</h3><p>Masáž s vonnými oleji na zklidnění.</p></div>
+    <div class="item"><h3>Lymfatická masáž</h3><p>Pro oteklé a těžké nohy.</p></div>
+    <div class="item"><h3>Baňkování</h3><p>Podtlak, který prohřeje a prokrví.</p></div>
+    <div class="item"><h3>Lávové kameny</h3><p>Teplé kameny do zatuhlých svalů.</p></div>
+    <div class="item"><h3>Dornova metoda</h3><p>Šetrná práce s páteří a klouby.</p></div>
+    <div class="item"><h3>Bowenova tlaková masáž</h3><p>Jemné hmaty s pauzami na odezvu těla.</p></div>
+    <div class="item"><h3>Rašelinové zábaly</h3><p>Hluboké teplo na záda a klouby.</p></div>
+    <div class="item"><h3>Mobilizační techniky</h3><p>Pro rozhýbání ztuhlých kloubů.</p></div>
+  </div>
+  <p class="eyebrow" style="margin-top:12px;text-transform:none;letter-spacing:0;font-weight:400">Krátké popisy jsou <span class="tag">ukázkový text</span> – doplníme Vašimi slovy.</p>
+  <div class="pricebar"><p><b>Cenu Vám řeknu předem do telefonu.</b> Ceník sem doplníme, až mi ho pošlete. <span class="tag">ukázkový text</span></p><a class="btn btn-call" href="tel:+420776630846">Zeptat se na cenu</a></div>
+</div></section>
+
+<section><div class="wrap preg">
+  <svg viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="140" fill="#EAF0F6"/><circle cx="150" cy="82" r="30" fill="#3E5A7A"/><path d="M110 290 C105 210 112 150 150 125 C182 128 196 160 205 195 C212 222 196 250 175 252 C170 270 172 282 175 290z" fill="#3E5A7A"/><path d="M168 168 C212 168 220 238 176 246" fill="#F2B88B"/><path d="M120 160 C100 180 95 205 110 225" stroke="#F8F6F1" stroke-width="10" fill="none" stroke-linecap="round"/></svg>
+  <div>
+    <p class="eyebrow">Pro nastávající maminky</p>
+    <h2>Těhotenská masáž v Dubňanech</h2>
+    <p>Těhotenské masáže patří k tomu, co dělám. Bříško roste, záda a nohy nesou víc – masáž pomůže si na chvíli odpočinout.</p>
+    <ol>
+      <li>Při objednání mi řekněte, v kolikátém týdnu jste.</li>
+      <li>Masíruji v poloze, která je Vám pohodlná.</li>
+      <li>Kdykoli řeknete, upravíme tlak nebo polohu.</li>
+    </ol>
+    <p class="why" style="color:var(--sedy);font-size:15px">Postup je <span class="tag">ukázkový text</span> – upravíme podle toho, jak to děláte Vy.</p>
+    <div class="cta"><a class="btn btn-call" href="tel:+420776630846">Objednat těhotenskou masáž</a></div>
+  </div>
+</div></section>
+
+<section class="shelf"><div class="wrap">
+  <div class="head"><p class="eyebrow">Bylinková polička</p><h2>Odneste si kousek péče domů</h2><p>Při návštěvě si můžete koupit i to, co prodávám – nebo to darovat.</p></div>
+  <div class="jars">
+    <div class="jar"><svg viewBox="0 0 84 100" aria-hidden="true"><rect x="14" y="24" width="56" height="74" rx="10" fill="#F8F6F1"/><rect x="20" y="10" width="44" height="16" rx="4" fill="#8C6A4A"/><path d="M30 80 C30 60 42 50 42 44 C42 50 54 60 54 80" fill="#6D8F5E"/></svg>Domácí bylinky</div>
+    <div class="jar"><svg viewBox="0 0 84 100" aria-hidden="true"><rect x="14" y="24" width="56" height="74" rx="10" fill="#F8F6F1"/><rect x="20" y="10" width="44" height="16" rx="4" fill="#8C6A4A"/><g fill="#B59A6A"><circle cx="34" cy="70" r="5"/><circle cx="46" cy="76" r="5"/><circle cx="40" cy="62" r="5"/><circle cx="52" cy="66" r="5"/><circle cx="30" cy="82" r="5"/><circle cx="50" cy="86" r="5"/></g></svg>Konopná semínka</div>
+    <div class="jar"><svg viewBox="0 0 84 100" aria-hidden="true"><rect x="10" y="30" width="64" height="68" rx="6" fill="#F2B88B"/><rect x="18" y="44" width="48" height="26" rx="3" fill="#F8F6F1"/><path d="M42 30 V8" stroke="#F8F6F1" stroke-width="2"/><rect x="36" y="2" width="12" height="10" fill="#F8F6F1"/></svg>Bylinné čaje</div>
+    <div class="jar"><svg viewBox="0 0 84 100" aria-hidden="true"><path d="M30 6 h24 v58 c0 10 18 12 18 24 c0 8 -8 10 -16 10 h-20 c-8 0 -10 -6 -8 -14 c2 -8 2 -14 2 -20z" fill="#F8F6F1"/><path d="M30 20h24M30 34h24" stroke="#3E5A7A" stroke-width="3"/></svg>Kompresní punčochy Maxis</div>
+    <div class="jar"><svg viewBox="0 0 84 100" aria-hidden="true"><rect x="22" y="30" width="40" height="68" rx="8" fill="#F8F6F1"/><rect x="30" y="16" width="24" height="16" rx="3" fill="#6D8F5E"/><path d="M42 56 l-8 14 h16z" fill="#6D8F5E"/></svg>Produkty Hemp</div>
+    <div class="jar"><svg viewBox="0 0 84 100" aria-hidden="true"><rect x="6" y="40" width="72" height="56" rx="6" fill="#F8F6F1"/><rect x="38" y="40" width="8" height="56" fill="#F2B88B"/><rect x="6" y="62" width="72" height="8" fill="#F2B88B"/><path d="M42 40 C30 24 18 32 30 40 M42 40 C54 24 66 32 54 40" stroke="#F2B88B" stroke-width="5" fill="none"/></svg>Dárkové poukazy</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="head"><p class="eyebrow">Jak to probíhá</p><h2>Tři kroky k masáži</h2></div>
+  <ol class="steps">
+    <li><b>Zavoláte mi</b>Na 776 630 846 se domluvíme, co Vás trápí a kdy přijdete.</li>
+    <li><b>Přijdete na Nádražní 89</b>V Dubňanech. Před masáží se krátce zeptám, jak se cítíte.</li>
+    <li><b>Odpočinete si</b>Po masáži Vám ráda poradím, čím pokračovat doma.</li>
+  </ol>
+  <div class="photo" style="margin-top:28px">Sem přijde Vaše fotka<br>(masérna nebo Vy při práci)</div>
+</div></section>
+
+<section style="background:var(--bila)"><div class="wrap">
+  <div class="head"><p class="eyebrow">Proč ke mně</p><h2>Malá masérna, osobní péče</h2></div>
+  <div class="trust">
+    <div><b>Těhotenské masáže</b>Součást mé stálé nabídky.</div>
+    <div><b>10 druhů péče</b>Od klasiky po Bowena a rašelinové zábaly.</div>
+    <div><b>Dubňany, Nádražní 89</b>Živnostnice, IČO 87430215 (Firmy.cz).</div>
+    <div><b>Cena předem</b>Řeknu Vám ji do telefonu.</div>
+  </div>
+</div></section>
+
+<section class="faq"><div class="wrap">
+  <div class="head"><p class="eyebrow">Časté otázky</p><h2>Než zavoláte</h2></div>
+  <details><summary>Jak se objednám?</summary><p>Telefonicky na 776 630 846. Termín domlouváme vždy předem.</p></details>
+  <details><summary>Můžu přijít na masáž v těhotenství?</summary><p>Ano, těhotenské masáže nabízím. Při objednání mi řekněte, v kolikátém týdnu jste.</p></details>
+  <details><summary>Co si vzít s sebou?</summary><p>Pohodlné oblečení. Ostatní připravím. <span class="tag">ukázkový text</span></p></details>
+  <details><summary>Dá se koupit dárkový poukaz?</summary><p>Ano, dárkové poukazy prodávám. Zavolejte a domluvíme, na jakou masáž ho chcete.</p></details>
+</div></section>
+
+<section id="kontakt" style="background:var(--bila)"><div class="wrap">
+  <div class="head"><p class="eyebrow">Kontakt</p><h2>Zavolejte, domluvíme termín</h2></div>
+  <div class="contact">
+    <div>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420776630846">776 630 846</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:antosovahana@email.cz">antosovahana@email.cz</a></dd>
+        <dt>Adresa</dt><dd>Nádražní 89, 696 03 Dubňany</dd>
+        <dt>Otevřeno</dt><dd>Dle telefonické domluvy</dd>
+      </dl>
+      <div class="cta"><a class="btn btn-call" href="tel:+420776630846">Zavolat</a><a class="btn btn-line" href="https://mapy.cz/zakladni?q=N%C3%A1dra%C5%BEn%C3%AD%2089%2C%20Dub%C5%88any" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></div>
+    </div>
+    <div class="map">
+      <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="260" fill="#E3E9EF"/><path d="M-10 80 L410 120" stroke="#fff" stroke-width="16"/><path d="M-10 60 L410 100" stroke="#B8C3CF" stroke-width="3" stroke-dasharray="14 8"/><path d="M250 -10 C240 100 270 180 260 270" stroke="#fff" stroke-width="12" fill="none"/><g fill="#CBD5DF"><rect x="40" y="140" width="80" height="60" rx="6"/><rect x="150" y="150" width="70" height="80" rx="6"/><rect x="290" y="150" width="80" height="50" rx="6"/></g><circle cx="256" cy="130" r="14" fill="#3E5A7A"/><circle cx="256" cy="130" r="5" fill="#F2B88B"/></svg>
+      <div class="pin"><b>Nádražní 89</b><br>Dubňany</div>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">Hana Antošová – masáže · Nádražní 89, 696 03 Dubňany · IČO 87430215 · <a href="tel:+420776630846">776 630 846</a> · <a href="mailto:antosovahana@email.cz">antosovahana@email.cz</a><br>Návrh připravilo studio Weby na míru.</div></footer>
+<div class="sticky"><a class="btn btn-call" href="tel:+420776630846">Zavolat</a><a class="btn btn-alt" href="#vyber">Vybrat masáž</a></div>
+
+<script>
+(function(){
+  var M=[
+   {k:"preg",t:"Jsem v očekávání",s:"záda a nohy nesou víc",i:'<circle cx="18" cy="8" r="5" fill="#3E5A7A"/><path d="M12 34c0-10 2-17 6-20 6 1 9 8 9 13 0 4-3 6-6 6v1z" fill="#3E5A7A"/><circle cx="23" cy="24" r="5" fill="#F2B88B"/>',a:["Těhotenská masáž"],w:"Řekněte mi v SMS, v kolikátém týdnu jste."},
+   {k:"legs",t:"Oteklé, těžké nohy",s:"po celém dni na nohou",i:'<path d="M12 4v22c0 4 3 6 7 6h6" stroke="#3E5A7A" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M26 10c3 3 3 7 0 10" stroke="#F2B88B" stroke-width="3" fill="none"/>',a:["Lymfatická masáž","Kompresní punčochy Maxis (k dostání u mě)"],w:"Lymfatická masáž je pro těžké nohy nejčastější volba."},
+   {k:"back",t:"Bolí mě záda",s:"šíje, bedra, ztuhlost",i:'<rect x="15" y="3" width="6" height="30" rx="3" fill="#3E5A7A"/><g fill="#F2B88B"><circle cx="18" cy="9" r="2.6"/><circle cx="18" cy="17" r="2.6"/><circle cx="18" cy="25" r="2.6"/></g>',a:["Klasická masáž","Dornova metoda","Bowenova tlaková masáž","Mobilizační techniky"],w:"Co přesně, domluvíme podle toho, kde a jak dlouho to bolí."},
+   {k:"warm",t:"Potřebuju prohřát",s:"zima, ztuhlé svaly",i:'<ellipse cx="14" cy="26" rx="9" ry="6" fill="#3E5A7A"/><ellipse cx="25" cy="23" rx="8" ry="5" fill="#56606C"/><path d="M12 14c0-3 3-3 3-7M22 12c0-3 3-3 3-7" stroke="#F2B88B" stroke-width="2.4" fill="none"/>',a:["Lávové kameny","Rašelinové zábaly","Baňkování"],w:"Teplo povolí svaly – hodí se hlavně v chladných měsících."},
+   {k:"calm",t:"Chci vypnout",s:"stres, špatný spánek",i:'<path d="M24 6a12 12 0 1 0 6 20A10 10 0 0 1 24 6z" fill="#3E5A7A"/><circle cx="12" cy="10" r="2" fill="#F2B88B"/>',a:["Aroma masáž","Klasická masáž"],w:"Vonné oleje a klidný hmat na hodinu bez telefonu."},
+   {k:"gift",t:"Hledám dárek",s:"pro mámu, kamarádku",i:'<rect x="5" y="14" width="26" height="18" rx="3" fill="#3E5A7A"/><rect x="16" y="14" width="4" height="18" fill="#F2B88B"/><path d="M18 14c-5-7-11-4-6 0M18 14c5-7 11-4 6 0" stroke="#F2B88B" stroke-width="2.4" fill="none"/>',a:["Dárkový poukaz na masáž"],w:"Napište, na jakou masáž a pro koho – poukaz připravím."}
+  ];
+  var box=document.getElementById("moods"),cur=M[0],when="co nejdřív";
+  M.forEach(function(m,i){var l=document.createElement("label");l.className="mood";l.innerHTML='<input type="radio" name="mood" id="mood-'+m.k+'"'+(i===0?' checked':'')+'><span><svg viewBox="0 0 36 36" aria-hidden="true">'+m.i+'</svg>'+m.t+'<small>'+m.s+'</small></span>';l.querySelector("input").addEventListener("change",function(){cur=m;upd();});box.appendChild(l);});
+  var wb=document.getElementById("when");["co nejdřív","tento týden","příští týden","dopoledne","odpoledne"].forEach(function(x,i){var l=document.createElement("label");l.innerHTML='<input type="radio" name="when" id="when-'+i+'"'+(i===0?' checked':'')+'><span>'+x+'</span>';l.querySelector("input").addEventListener("change",function(){when=x;upd();});wb.appendChild(l);});
+  function upd(){document.getElementById("advT").textContent=cur.t;var ul=document.getElementById("advL");ul.innerHTML="";cur.a.forEach(function(x){var li=document.createElement("li");li.textContent=x;ul.appendChild(li);});document.getElementById("advW").textContent=cur.w;
+    var b="Dobrý den, paní Antošová, chtěla bych se objednat. "+cur.t+" – zajímá mě: "+cur.a.join(", ")+". Hodilo by se mi: "+when+"."+(cur.k==="preg"?" Jsem v ... týdnu.":"")+" Děkuji.";
+    document.getElementById("sms").href="sms:+420776630846?body="+encodeURIComponent(b);}
+  upd();
+})();
+</script>
+</body>
+</html>

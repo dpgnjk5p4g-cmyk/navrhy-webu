@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Kosmetika a masáže Lenka Procházková</title>
+<meta name="description" content="Kosmetika a masáže Lenka Procházková, Hlinická 262, Vracov: Dornova metoda, klasická a baňková masáž, lávové kameny, ruční lifting obličeje, bylinná kosmetika bez konzervantů. Objednání na 731 857 794.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,500;0,700;1,500&family=Albert+Sans:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Kosmetika a masáže Lenka Procházková","telephone":"+420731857794","email":"prochazkova.l@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Hlinická 262","postalCode":"696 42","addressLocality":"Vracov","addressCountry":"CZ"},"taxID":"48313874"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: herbářový list – typografický hero se štítky bylin, pak „recept“ jako výrazný prvek, kúra liftingu jako řada 12 teček */
+:root{
+  color-scheme:light;
+  --koren:#2E2A1F;      /* text */
+  --rozmaryn:#3F5B47;   /* hlavní zelená */
+  --heremanek:#E9B949;  /* akcent, plochy s tmavým textem */
+  --salvej:#C9D6C3;     /* jemné plochy */
+  --herbar:#F3F5EE;     /* pozadí */
+  --bila:#FFFFFF;
+  --sedy:#5C5A4E;
+  --f-disp:"Petrona",Georgia,"Times New Roman",serif;
+  --f-text:"Albert Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--herbar);color:var(--koren);font:17px/1.6 var(--f-text);-webkit-text-size-adjust:100%}
+a{color:var(--rozmaryn)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-disp);line-height:1.12;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,5vw,46px);font-weight:700;color:var(--rozmaryn)}
+h3{font-size:22px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--sedy)}
+.tag{display:inline-block;font:600 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF3CF;color:#6B4E00;border:1px solid #E6CF85;padding:4px 7px;border-radius:4px;vertical-align:middle}
+.banner{background:var(--koren);color:#F3F5EE;font-size:14px;text-align:center;padding-block:9px}
+.banner b{color:var(--heremanek)}
+.top{background:var(--bila);border-bottom:1px solid #DDE3D6;position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bila)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.logo{font-family:var(--f-disp);font-weight:700;font-size:19px;color:var(--rozmaryn);text-decoration:none;line-height:1.1}
+.logo small{display:block;font:500 12px var(--f-text);color:var(--sedy);letter-spacing:.04em}
+.top nav{display:flex;gap:18px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--koren)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;font:600 17px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--rozmaryn);color:#fff}
+.btn-alt{background:var(--heremanek);color:var(--koren)}
+.btn-line{border-color:var(--rozmaryn);color:var(--rozmaryn);background:transparent}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--heremanek);outline-offset:2px}
+.top .btn{min-height:42px;padding:0 16px;font-size:15px}
+
+/* HERO */
+.hero{padding-block:34px 44px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(40px,8.4vw,92px);font-weight:700;color:var(--koren);letter-spacing:-.01em;max-width:13ch}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--rozmaryn)}
+.hero .lead{font-size:clamp(18px,2.2vw,21px);max-width:38ch;margin:18px 0 0}
+.hero .where{margin-top:14px;font-weight:600;color:var(--sedy)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.labels{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:10px;margin-top:30px}
+@media (max-width:760px){.labels{grid-template-columns:1fr 1fr}.label{padding:8px}}
+.label{display:flex;align-items:center;gap:10px;background:var(--bila);border:1px solid #D6DECF;border-radius:6px;padding:8px 12px 8px 8px;font-size:15px}
+.label svg{width:34px;height:34px;flex:none}
+.label b{display:block;font-family:var(--f-disp);font-size:16px}
+.label span{color:var(--sedy);font-size:13px}
+.sprig{position:absolute;right:4%;top:24px;width:min(30vw,360px);opacity:.95;pointer-events:none}
+.herbtag{position:absolute;right:calc(4% + 40px);top:440px;background:var(--bila);border:1px solid #D6DECF;padding:10px 14px;font:italic 500 15px var(--f-disp);transform:rotate(-3deg);box-shadow:0 4px 10px rgba(46,42,31,.08)}
+.herbtag small{display:block;font:600 11px var(--f-text);letter-spacing:.1em;text-transform:uppercase;font-style:normal;color:var(--sedy)}
+@media (max-width:1000px){.herbtag{display:none}}
+@media (max-width:760px){.sprig{width:150px;right:-40px;top:auto;bottom:-10px;opacity:.35}.top nav{display:none}}
+
+section{padding-block:56px}
+.sec-head{display:grid;gap:10px;margin-bottom:28px;max-width:62ch}
+.sec-head p{margin:0;color:var(--sedy)}
+
+/* nabídka */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.card{background:var(--bila);border:1px solid #D9E0D2;border-radius:10px;padding:22px;min-width:0}
+.card h3{display:flex;align-items:center;gap:10px;color:var(--rozmaryn)}
+.card h3 svg{width:30px;height:30px;flex:none}
+.card ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.card li{padding-left:22px;position:relative}
+.card li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:50% 0;background:var(--rozmaryn);transform:rotate(-20deg)}
+.price-note{margin-top:22px;background:var(--salvej);border-radius:10px;padding:16px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.price-note p{margin:0;max-width:60ch}
+
+/* recept */
+.recipe-sec{background:var(--rozmaryn);color:#F3F5EE}
+.recipe-sec h2{color:#fff}
+.recipe-sec .sec-head p{color:#DCE6D8}
+.recipe{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+@media (max-width:860px){.recipe{grid-template-columns:1fr}}
+.pick{display:grid;gap:18px;min-width:0}
+.pick fieldset{border:0;margin:0;padding:0}
+.pick legend{font:600 14px var(--f-text);letter-spacing:.1em;text-transform:uppercase;color:var(--heremanek);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-block;padding:9px 14px;border-radius:999px;border:1.5px solid #9DB7A3;color:#F3F5EE;font-size:15px;cursor:pointer;user-select:none}
+.chip input:checked+span{background:var(--heremanek);border-color:var(--heremanek);color:var(--koren);font-weight:600}
+.chip input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
+.paper{background:#FFFDF6;color:var(--koren);border-radius:4px;padding:26px 24px 22px;box-shadow:0 14px 30px rgba(0,0,0,.25);position:relative;min-width:0;transform:rotate(.6deg)}
+.paper::before{content:"";position:absolute;inset:10px;border:1px dashed #CFC8AE;border-radius:2px;pointer-events:none}
+.paper .rx{font-family:var(--f-disp);font-size:44px;line-height:1;color:var(--rozmaryn);font-style:italic}
+.paper h3{font-size:20px;margin:6px 0 2px}
+.paper .who{font-size:13px;color:var(--sedy)}
+.paper ol{margin:16px 0;padding-left:22px;min-height:60px;font-size:16px}
+.paper ol:empty::before{content:"Vyberte vlevo, co si dopřejete.";color:var(--sedy);font-style:italic;margin-left:-22px}
+.paper .when{border-top:1px solid #E5DFC8;padding-top:10px;font-size:15px}
+.paper .send{display:grid;gap:10px;margin-top:16px}
+.paper .send .btn{width:100%}
+.paper .num{font-size:14px;color:var(--sedy);text-align:center}
+.paper .num b{color:var(--koren);user-select:all}
+
+/* kúra */
+.cure{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+@media (max-width:860px){.cure{grid-template-columns:1fr}}
+.dots{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:420px}
+.dot{aspect-ratio:1;max-width:100%;border-radius:50%;border:2px solid var(--rozmaryn);display:grid;place-items:center;font:700 15px var(--f-text);color:var(--rozmaryn);background:var(--bila)}
+.dot.on{background:var(--rozmaryn);color:#fff}
+.cure input[type=range]{width:100%;max-width:420px;accent-color:var(--rozmaryn);margin-top:18px}
+.cure .out{font-size:15px;color:var(--sedy);margin-top:6px}
+.photo{border:2px dashed #B9C6B3;border-radius:10px;min-height:220px;display:grid;place-items:center;text-align:center;color:var(--sedy);background:repeating-linear-gradient(45deg,#EEF2E9 0 12px,#F6F8F2 12px 24px);padding:20px;font-size:15px}
+
+/* jak */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px;counter-reset:s;padding:0;margin:0;list-style:none}
+.steps li{background:var(--bila);border-radius:10px;padding:20px;border:1px solid #D9E0D2;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--heremanek);font:700 18px var(--f-disp);margin-bottom:10px}
+.steps b{display:block;font-family:var(--f-disp);font-size:19px;margin-bottom:4px}
+
+/* důvěra + kontakt */
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+.trust div{border-top:3px solid var(--rozmaryn);padding-top:12px}
+.trust b{display:block;font-family:var(--f-disp);font-size:20px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
+.contact dt{font-weight:600;color:var(--sedy)}
+.contact dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.mapcard{background:var(--salvej);border-radius:10px;padding:22px;position:relative;overflow:hidden;min-height:240px}
+.mapcard svg{position:absolute;inset:0;width:100%;height:100%}
+.mapcard .pin{position:relative;background:var(--bila);border-radius:8px;padding:14px 16px;max-width:280px;box-shadow:0 6px 16px rgba(46,42,31,.15)}
+.faq details{background:var(--bila);border:1px solid #D9E0D2;border-radius:10px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:600;cursor:pointer;font-size:17px}
+.faq p{margin:10px 0 0;color:var(--sedy)}
+footer{background:var(--koren);color:#D9DccF;font-size:14px;padding-block:28px 100px}
+footer a{color:var(--heremanek)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;gap:10px;background:rgba(255,255,255,.96);border-top:1px solid #D6DECF;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1;min-height:48px;padding:0 10px;font-size:16px}
+@media (max-width:760px){.sticky{display:flex}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy <b>Kosmetika a masáže Lenka Procházková</b></div>
+
+<div class="top" role="banner"><div class="wrap">
+  <a class="logo" href="#uvod">Lenka Procházková<small>kosmetika a masáže · Vracov</small></a>
+  <nav aria-label="Hlavní menu"><a href="#nabidka">Nabídka</a><a href="#lifting">Lifting</a><a href="#objednat">Objednat</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="btn btn-call" href="tel:+420731857794">Zavolat</a>
+</div></div>
+
+<main id="uvod">
+<section class="hero"><div class="wrap">
+  <svg class="sprig" viewBox="0 0 300 420" aria-hidden="true"><g fill="none" stroke="#3F5B47" stroke-width="3" stroke-linecap="round"><path d="M150 410 C150 300 140 200 175 40"/><path d="M152 330 C110 310 90 280 80 250"/><path d="M155 260 C200 240 225 210 238 175"/><path d="M160 190 C120 170 105 140 100 110"/></g><g fill="#3F5B47"><ellipse cx="80" cy="246" rx="26" ry="11" transform="rotate(-50 80 246)"/><ellipse cx="238" cy="172" rx="26" ry="11" transform="rotate(-40 238 172)"/><ellipse cx="100" cy="106" rx="24" ry="10" transform="rotate(-70 100 106)"/></g><g fill="#E9B949"><circle cx="175" cy="38" r="18"/></g><g fill="#fff"><ellipse cx="175" cy="12" rx="7" ry="13"/><ellipse cx="175" cy="64" rx="7" ry="13"/><ellipse cx="149" cy="38" rx="13" ry="7"/><ellipse cx="201" cy="38" rx="13" ry="7"/><ellipse cx="157" cy="20" rx="7" ry="12" transform="rotate(-45 157 20)"/><ellipse cx="193" cy="56" rx="7" ry="12" transform="rotate(-45 193 56)"/><ellipse cx="193" cy="20" rx="7" ry="12" transform="rotate(45 193 20)"/><ellipse cx="157" cy="56" rx="7" ry="12" transform="rotate(45 157 56)"/></g><circle cx="175" cy="38" r="16" fill="#E9B949"/></svg>
+  <div class="herbtag" aria-hidden="true"><small>Herbář · Vracov</small>Heřmánek pravý</div>
+  <p class="eyebrow">Vracov · Hlinická 262, nad restaurací Suez</p>
+  <h1>Masáž pro záda. <em>Byliny</em> pro pleť.</h1>
+  <p class="lead">Dornova metoda, baňky a lávové kameny – a kosmetika s bylinnými přípravky bez konzervantů, barviv a parfémů. U jedné paní, v jednom patře.</p>
+  <div class="cta">
+    <a class="btn btn-call" href="tel:+420731857794">Zavolat 731 857 794</a>
+    <a class="btn btn-alt" href="#objednat">Sestavit objednávku</a>
+  </div>
+  <div class="labels" aria-label="Hlavní služby">
+    <div class="label"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="17" y="4" width="6" height="32" rx="3" fill="#3F5B47"/><circle cx="20" cy="9" r="3" fill="#E9B949"/><circle cx="20" cy="17" r="3" fill="#E9B949"/><circle cx="20" cy="25" r="3" fill="#E9B949"/></svg><div><b>Dornova metoda</b><span>záda a páteř</span></div></div>
+    <div class="label"><svg viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="14" cy="24" rx="9" ry="7" fill="#5C5A4E"/><ellipse cx="27" cy="20" rx="8" ry="6" fill="#2E2A1F"/><path d="M12 12c0-3 3-3 3-6M22 10c0-3 3-3 3-6" stroke="#E9B949" stroke-width="2" fill="none"/></svg><div><b>Lávové kameny</b><span>teplo do svalů</span></div></div>
+    <div class="label"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6c-8 0-12 7-12 14s4 14 12 14 12-7 12-14S28 6 20 6z" fill="#C9D6C3"/><path d="M13 18c2 2 5 2 7 0M20 18c2 2 5 2 7 0M15 27c3 2 7 2 10 0" stroke="#3F5B47" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div><b>Ruční lifting</b><span>obličej bez přístrojů</span></div></div>
+    <div class="label"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="13" y="12" width="14" height="22" rx="3" fill="#3F5B47"/><rect x="16" y="6" width="8" height="7" rx="1" fill="#E9B949"/><rect x="15" y="20" width="10" height="7" fill="#fff"/></svg><div><b>Bylinná kosmetika</b><span>i na doma</span></div></div>
+  </div>
+</div></section>
+
+<section id="nabidka" style="background:var(--bila)"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Nabídka</p><h2>Co u mě můžete mít</h2><p>Všechno, co uvádím na svém současném webu – teď přehledně na jednom místě.</p></div>
+  <div class="cols">
+    <div class="card"><h3><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="7" r="4" fill="#3F5B47"/><path d="M8 27c0-8 3-14 7-14s7 6 7 14" fill="#C9D6C3"/></svg>Masáže</h3>
+      <ul><li>Dornova metoda</li><li>Klasická masáž – záda, šíje, nohy, ruce, hýždě, břicho, krk</li><li>Baňky a vakuová masáž</li><li>Uvolnění šíje a krku vsedě i vleže</li><li>Lávové měšce a teplé kameny</li><li>Jemné techniky ošetření zad</li><li>Masáž a zábal proti celulitidě</li><li>Indická masáž hlavy, krku a šíje</li></ul></div>
+    <div class="card"><h3><svg viewBox="0 0 30 30" aria-hidden="true"><ellipse cx="15" cy="15" rx="10" ry="12" fill="#C9D6C3"/><path d="M10 17c2 2 8 2 10 0" stroke="#3F5B47" stroke-width="2" fill="none"/></svg>Kosmetika</h3>
+      <ul><li>Ošetření bylinnými a aromaterapeutickými přípravky bez konzervantů, barviv a parfémů</li><li>Kosmetická masáž obličeje, krku, dekoltu a hlavy</li><li>Ruční lifting pleti (kúra 10–12 ošetření)</li><li>Masáž obličeje a dekoltu lávovými kameny – hodina s lymfatickou drenáží a chladivým mramorem</li></ul></div>
+    <div class="card"><h3><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 14c5-5 15-5 20 0" stroke="#3F5B47" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M8 13l-2-4M12 11l-1-4M18 11l1-4M22 13l2-4" stroke="#3F5B47" stroke-width="2" stroke-linecap="round"/></svg>Řasy, obočí a vosk</h3>
+      <ul><li>Barvení řas a obočí (Thuia, RefectoCil)</li><li>Depilace teplým voskem – ret, tváře, krk, ruce, nohy, třísla</li></ul>
+      <h3 style="margin-top:20px"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="9" y="9" width="12" height="18" rx="3" fill="#3F5B47"/><rect x="12" y="4" width="6" height="6" fill="#E9B949"/></svg>Bylinkový koutek</h3>
+      <ul><li>Bylinná a aromaterapeutická kosmetika, sirupy, kapky, tablety a 100% éterické oleje (Karel Hadek, ATOK, TOPVET, Nobilis Tilia)</li></ul></div>
+  </div>
+  <div class="price-note"><p><b>Ceny Vám řeknu předem do telefonu.</b> Až mi pošlete ceník, bude tady u každé služby. <span class="tag">ukázkový text</span></p><a class="btn btn-call" href="tel:+420731857794">Zeptat se na cenu</a></div>
+</div></section>
+
+<section class="recipe-sec" id="objednat"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow" style="color:#DCE6D8">Objednání bez dlouhého vysvětlování</p><h2>Napište si recept na pohodu</h2><p>Zaškrtněte, co si chcete dopřát, a kdy se Vám to hodí. Z výběru se složí krátká SMS – stačí ji odeslat a já Vám potvrdím termín.</p></div>
+  <div class="recipe">
+    <form class="pick" id="rxform" onsubmit="return false">
+      <fieldset><legend>Masáže</legend><div class="chips" data-g="m"></div></fieldset>
+      <fieldset><legend>Obličej a pleť</legend><div class="chips" data-g="k"></div></fieldset>
+      <fieldset><legend>Řasy a vosk</legend><div class="chips" data-g="r"></div></fieldset>
+      <fieldset><legend>Kdy se Vám to hodí</legend><div class="chips" id="days"></div></fieldset>
+      <fieldset><legend>Část dne</legend><div class="chips" id="part"></div></fieldset>
+    </form>
+    <div class="paper" aria-live="polite">
+      <div class="rx">Rp.</div>
+      <h3>Pro mě, prosím:</h3>
+      <div class="who">Lenka Procházková · kosmetika a masáže · Vracov</div>
+      <ol id="rxlist"></ol>
+      <div class="when" id="rxwhen">Termín: domluvíme</div>
+      <div class="send">
+        <a class="btn btn-call" id="rxsms" href="sms:+420731857794">Odeslat jako SMS</a>
+        <a class="btn btn-line" href="tel:+420731857794">Raději zavolám</a>
+        <div class="num">Číslo: <b>731 857 794</b></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="lifting"><div class="wrap cure">
+  <div>
+    <p class="eyebrow">Novinka</p>
+    <h2>Ruční lifting pleti. Kúra po týdnech.</h2>
+    <p>Kúra má 10–12 ošetření, jednou týdně. Masáž stimuluje tvorbu kolagenu a uvolňuje obličejové svaly, a tak vyhlazuje vrásky. Pomáhá i k uvolnění a lepšímu spánku a využívá se na jizvy nebo po obrně lícního nervu.</p>
+    <p>Posuňte jezdec a uvidíte, kdy byste kúru dokončila, když začnete tento týden.</p>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <label for="cnt" class="eyebrow" style="display:block;margin-top:16px">Počet ošetření</label>
+    <input type="range" id="cnt" min="10" max="12" value="10">
+    <div class="out" id="cntout"></div>
+  </div>
+  <div class="photo">Sem přijde Vaše fotka<br>(ošetřovna nebo detail ošetření)</div>
+</div></section>
+
+<section style="background:var(--bila)"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Jak to probíhá</p><h2>Od telefonu po hodinu klidu</h2></div>
+  <ol class="steps">
+    <li><b>Zavoláte nebo pošlete SMS</b>Řeknete, co Vás trápí nebo co si chcete dopřát. Domluvíme den a čas.</li>
+    <li><b>Přijdete do Hlinické 262</b>Ošetřovna je v patře nad restaurací Suez. Řekneme si, co Vám sedne nejlépe.</li>
+    <li><b>Odejdete lehčí</b>Doporučím, jak pokračovat doma, a ráda poradím s bylinnou kosmetikou.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Proč ke mně</p><h2>Poctivě a bez chemie navíc</h2></div>
+  <div class="trust">
+    <div><b>Přípravky bez konzervantů</b>Bylinné a aromaterapeutické, bez barviv a parfémů.</div>
+    <div><b>Masáž i kosmetika u jedné paní</b>Záda i pleť v jedné návštěvě, bez přecházení.</div>
+    <div><b>Vracov, Hlinická 262</b>Živnostnice, IČO 48313874 (Firmy.cz).</div>
+    <div><b>Cena předem</b>Vždy ji řeknu dřív, než začneme.</div>
+  </div>
+</div></section>
+
+<section class="faq" style="background:var(--bila)"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Časté otázky</p><h2>Na co se lidé ptají</h2></div>
+  <details><summary>Kde Vás najdu?</summary><p>Hlinická 262 ve Vracově, v patře nad restaurací Suez.</p></details>
+  <details><summary>Musím se objednat předem?</summary><p>Ano, každou návštěvu domlouváme předem telefonem nebo SMS na 731 857 794.</p></details>
+  <details><summary>Jak často chodit na ruční lifting?</summary><p>Jednou týdně, celá kúra má 10–12 ošetření. Masáž obličeje lávovými kameny se doporučuje jednou měsíčně.</p></details>
+  <details><summary>Můžu si koupit kosmetiku i bez ošetření?</summary><p>Ano, prodávám bylinnou a aromaterapeutickou kosmetiku, sirupy, kapky a éterické oleje. Domluvte se se mnou, kdy se pro ně zastavíte.</p></details>
+  <details><summary>Dáváte dárkové poukazy?</summary><p>Napište mi a domluvíme se. <span class="tag">ukázkový text</span></p></details>
+</div></section>
+
+<section id="kontakt"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Kontakt</p><h2>Ozvěte se, domluvíme termín</h2></div>
+  <div class="contact">
+    <div>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420731857794">731 857 794</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:prochazkova.l@seznam.cz">prochazkova.l@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Hlinická 262 (nad restaurací Suez), 696 42 Vracov</dd>
+        <dt>Otevřeno</dt><dd>Podle objednání. <span class="tag">ukázkový text</span><br>Otevírací dobu doplníme podle Vás.</dd>
+      </dl>
+      <div class="cta"><a class="btn btn-call" href="tel:+420731857794">Zavolat</a><a class="btn btn-line" href="https://mapy.cz/zakladni?q=Hlinick%C3%A1%20262%2C%20Vracov" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></div>
+    </div>
+    <div class="mapcard">
+      <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="260" fill="#C9D6C3"/><path d="M-10 190 C90 170 200 200 410 150" stroke="#fff" stroke-width="18" fill="none"/><path d="M230 -10 C240 80 220 160 250 270" stroke="#fff" stroke-width="12" fill="none"/><g fill="#B3C4AC"><rect x="40" y="40" width="70" height="50" rx="4"/><rect x="130" y="60" width="60" height="70" rx="4"/><rect x="280" y="40" width="80" height="60" rx="4"/><rect x="280" y="200" width="90" height="40" rx="4"/></g><circle cx="244" cy="172" r="14" fill="#3F5B47"/><circle cx="244" cy="172" r="5" fill="#E9B949"/></svg>
+      <div class="pin"><b>Hlinická 262</b><br>vchod u restaurace Suez, ošetřovna v patře</div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Kosmetika a masáže Lenka Procházková · Hlinická 262, 696 42 Vracov · IČO 48313874 · <a href="tel:+420731857794">731 857 794</a> · <a href="mailto:prochazkova.l@seznam.cz">prochazkova.l@seznam.cz</a><br>Návrh připravilo studio Weby na míru.</div></footer>
+
+<div class="sticky"><a class="btn btn-call" href="tel:+420731857794">Zavolat</a><a class="btn btn-alt" href="#objednat">Objednat</a></div>
+
+<script>
+(function(){
+  var G={m:["Dornova metoda","Klasická masáž","Baňky a vakuová masáž","Uvolnění šíje","Lávové kameny","Masáž a zábal proti celulitidě","Indická masáž hlavy"],
+         k:["Bylinné ošetření pleti","Kosmetická masáž obličeje","Ruční lifting pleti","Obličej lávovými kameny"],
+         r:["Barvení řas a obočí","Depilace voskem"]};
+  var sel=[], day="", part="";
+  function chip(box,name,label,type,cb){var l=document.createElement("label");l.className="chip";var i=document.createElement("input");i.type=type;i.name=name;i.value=label;i.id=name+"-"+box.children.length+"-"+(box.dataset.g||box.id);i.addEventListener("change",cb);var s=document.createElement("span");s.textContent=label;l.appendChild(i);l.appendChild(s);box.appendChild(l);return i;}
+  document.querySelectorAll(".chips[data-g]").forEach(function(box){G[box.dataset.g].forEach(function(x){chip(box,"svc",x,"checkbox",upd);});});
+  var HOL=["2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08"];
+  var dn=["ne","po","út","st","čt","pá","so"], d=new Date(), days=document.getElementById("days"), n=0;
+  chip(days,"day","Kdykoli","radio",upd).checked=true;
+  while(n<8){d.setDate(d.getDate()+1);var iso=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");if(d.getDay()===0||HOL.indexOf(iso)>-1)continue;chip(days,"day",dn[d.getDay()]+" "+d.getDate()+". "+(d.getMonth()+1)+".","radio",upd);n++;}
+  var pb=document.getElementById("part");["dopoledne","odpoledne","je mi to jedno"].forEach(function(x,i){var c=chip(pb,"part",x,"radio",upd);if(i===2)c.checked=true;});
+  var dflt=document.querySelector('input[value="Dornova metoda"]');if(dflt)dflt.checked=true;
+  function upd(){
+    sel=[].map.call(document.querySelectorAll('input[name=svc]:checked'),function(i){return i.value;});
+    day=(document.querySelector('input[name=day]:checked')||{}).value||"Kdykoli";
+    part=(document.querySelector('input[name=part]:checked')||{}).value||"";
+    var ol=document.getElementById("rxlist");ol.innerHTML="";sel.forEach(function(s){var li=document.createElement("li");li.textContent=s;ol.appendChild(li);});
+    var w=(day==="Kdykoli"?"kdykoli":day)+(part&&part!=="je mi to jedno"?", "+part:"");
+    document.getElementById("rxwhen").textContent="Termín: "+w;
+    var body="Dobrý den, paní Procházková, chtěla bych se objednat: "+(sel.length?sel.join(", "):"poradit, co mi sedne")+". Hodilo by se mi: "+w+". Děkuji.";
+    document.getElementById("rxsms").href="sms:+420731857794?body="+encodeURIComponent(body);
+  }
+  upd();
+  var dots=document.getElementById("dots"),r=document.getElementById("cnt"),o=document.getElementById("cntout");
+  function cure(){var k=+r.value;dots.innerHTML="";for(var i=1;i<=12;i++){var e=document.createElement("div");e.className="dot"+(i<=k?" on":"");e.textContent=i;e.style.opacity=i<=k?1:.35;dots.appendChild(e);}
+    var end=new Date();end.setDate(end.getDate()+7*(k-1));o.textContent=k+" ošetření jednou týdně – poslední zhruba "+end.getDate()+". "+(end.getMonth()+1)+". "+end.getFullYear()+".";}
+  r.addEventListener("input",cure);cure();
+})();
+</script>
+</body>
+</html>

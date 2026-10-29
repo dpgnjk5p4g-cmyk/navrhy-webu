@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Masáže Hovorany Jitka Lantošová</title>
+<meta name="description" content="Masáže Hovorany Jitka Lantošová, Hovorany 614: masáže a náprava pohybového aparátu s prvky chiropraxe, Dornova metoda, lymfatické masáže, osteopresura, baňkování. Po–Pá 8–17, tel. 721 202 033.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Masáže Hovorany Jitka Lantošová","telephone":"+420721202033","email":"jitkahovorany@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"Hovorany 614","postalCode":"696 12","addressLocality":"Hovorany","addressCountry":"CZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}],"taxID":"88130291"}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Layout: modrotiskový pás přes celou šířku s nápisem a cedulí ordinačních hodin; výrazný prvek „Test u zdi“ s olovnicí */
+:root{
+  color-scheme:light;
+  --modr:#1F3F73;     /* modrotisk */
+  --modr-tm:#152C52;
+  --okr:#D9A441;      /* akcent, tlačítka s tmavým textem */
+  --platno:#F5F7FA;   /* pozadí */
+  --uhel:#1A1D24;     /* text */
+  --sedy:#4E5868;
+  --bila:#FFFFFF;
+  --f-disp:"Bree Serif",Rockwell,Georgia,serif;
+  --f-text:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--platno);color:var(--uhel);font:17px/1.6 var(--f-text)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;margin:0;line-height:1.12;text-wrap:balance}
+h2{font-size:clamp(28px,4.8vw,44px);color:var(--modr)}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--sedy);margin:0}
+.tag{display:inline-block;font:700 11px/1 var(--f-text);letter-spacing:.06em;text-transform:uppercase;background:#FFF2D6;color:#6E4B00;border:1px solid #E8C97E;padding:4px 7px;border-radius:3px;vertical-align:middle}
+.banner{background:var(--uhel);color:#E8ECF2;text-align:center;font-size:14px;padding-block:9px}
+.banner b{color:var(--okr)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bila);border-bottom:1px solid #DCE2EA}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bila)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.logo{text-decoration:none;color:var(--modr);font:20px/1.1 var(--f-disp)}
+.logo small{display:block;font:500 12px var(--f-text);color:var(--sedy);letter-spacing:.04em}
+.top nav{display:flex;gap:18px;font-size:15px}.top nav a{color:var(--uhel);text-decoration:none}
+@media (max-width:760px){.top nav{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:6px;font:700 17px var(--f-text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--okr);color:var(--uhel)}
+.btn-blue{background:var(--modr);color:#fff}
+.btn-line{border-color:#fff;color:#fff}
+.btn-line.d{border-color:var(--modr);color:var(--modr)}
+.btn:focus-visible,input:focus-visible+span{outline:3px solid var(--okr);outline-offset:2px}
+.top .btn{min-height:42px;padding:0 16px;font-size:15px;background:var(--modr);color:#fff}
+
+/* modrotisk */
+.print{background-color:var(--modr);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23F5F7FA' stroke-opacity='.16' stroke-width='2'%3E%3Ccircle cx='36' cy='36' r='9'/%3E%3Cpath d='M36 14c5 6 5 10 0 13-5-3-5-7 0-13zM36 58c5-6 5-10 0-13-5 3-5 7 0 13zM14 36c6-5 10-5 13 0-3 5-7 5-13 0zM58 36c-6-5-10-5-13 0 3 5 7 5 13 0z'/%3E%3C/g%3E%3Cg fill='%23F5F7FA' fill-opacity='.16'%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='72' cy='0' r='3'/%3E%3Ccircle cx='0' cy='72' r='3'/%3E%3Ccircle cx='72' cy='72' r='3'/%3E%3Ccircle cx='36' cy='36' r='2.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero{color:#fff;padding-block:42px 0;overflow:hidden}
+.hero .wrap{position:relative}
+.orn{position:absolute;right:20px;top:10px;width:330px;height:330px;pointer-events:none}
+@media (max-width:980px){.orn{display:none}}
+.hero .eyebrow{color:var(--okr)}
+.hero h1{font-size:clamp(40px,8vw,90px);margin-top:12px;max-width:15ch}
+.hero .lead{max-width:46ch;font-size:clamp(17px,2vw,20px);color:#DCE5F2;margin:18px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.board{margin-top:36px;background:var(--bila);color:var(--uhel);border-radius:10px 10px 0 0;padding:18px 20px 16px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}
+@media (max-width:700px){.board{grid-template-columns:1fr;gap:10px}}
+.status{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap}
+.status i{width:12px;height:12px;border-radius:50%;background:#2E8B57;display:inline-block}
+.status.off i{background:#B33A3A}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.week div{text-align:center;border-radius:4px;padding:6px 2px;background:#EEF2F7;font-size:13px;line-height:1.3}
+.week b{display:block;font-size:14px}
+.week .open{background:var(--modr);color:#fff}
+.week .today{outline:3px solid var(--okr);outline-offset:-3px}
+.board small{grid-column:1/-1;color:var(--sedy);font-size:13px}
+
+section{padding-block:56px}
+.head{display:grid;gap:10px;margin-bottom:26px;max-width:62ch}
+.head p{margin:0;color:var(--sedy)}
+
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.s{background:var(--bila);border:1px solid #DCE2EA;border-radius:8px;padding:20px;display:grid;grid-template-columns:52px 1fr;gap:14px;min-width:0}
+.s svg{width:52px;height:52px}
+.s h3{font-size:21px;color:var(--modr)}
+.s p{margin:4px 0 0;color:var(--sedy);font-size:15px}
+.s.wide{grid-column:1/-1;background:var(--modr);color:#fff;border-color:var(--modr)}
+.s.wide h3{color:#fff;font-size:24px}.s.wide p{color:#DCE5F2}
+.price{margin-top:18px;background:#E9EEF6;border-radius:8px;padding:16px 20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+.price p{margin:0}
+
+/* test u zdi */
+.wall{background:var(--bila)}
+.test{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}
+@media (max-width:860px){.test{grid-template-columns:1fr}}
+.fig{background:var(--platno);border-radius:10px;padding:16px;position:relative;min-width:0}
+.fig svg{width:100%;max-width:320px;height:auto;display:block;margin:auto}
+.fig .t{transition:transform .4s ease}
+.qs{display:grid;gap:12px;min-width:0}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--platno);border-radius:8px;padding:14px 16px}
+.q p{margin:0;font-weight:600}
+.q p small{display:block;font-weight:400;color:var(--sedy);font-size:14px}
+.yn{display:flex;gap:6px}
+.yn label{position:relative}
+.yn input{position:absolute;opacity:0;width:1px;height:1px}
+.yn span{display:inline-block;min-width:56px;text-align:center;padding:9px 10px;border-radius:6px;border:1.5px solid #B9C4D3;cursor:pointer;font-weight:600;background:var(--bila)}
+.yn input:checked+span{background:var(--modr);border-color:var(--modr);color:#fff}
+.result{background:var(--modr-tm);color:#fff;border-radius:10px;padding:22px;margin-top:6px}
+.result h3{font-size:24px}
+.result ul{margin:10px 0 0;padding-left:20px}
+.result .pick{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.result .pick label{position:relative}
+.result .pick input{position:absolute;opacity:0;width:1px;height:1px}
+.result .pick span{display:inline-block;padding:8px 12px;border-radius:6px;border:1.5px solid #6F86AE;cursor:pointer;font-size:15px}
+.result .pick input:checked+span{background:var(--okr);border-color:var(--okr);color:var(--uhel);font-weight:700}
+.result .send{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;align-items:center}
+.result .num{font-size:14px;color:#C9D5E8}.result .num b{color:#fff;user-select:all}
+.lbl{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--okr);font-weight:700;margin-top:14px}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--bila);border:1px solid #DCE2EA;border-radius:8px;padding:20px}
+.steps li::before{content:counter(s);font:30px/1 var(--f-disp);color:var(--okr);display:block;margin-bottom:8px}
+.steps b{display:block;font-size:18px}
+.photo{border:2px dashed #AFC0D6;border-radius:10px;min-height:200px;display:grid;place-items:center;text-align:center;color:var(--sedy);background:repeating-linear-gradient(45deg,#EDF1F6 0 12px,#F5F7FA 12px 24px);padding:20px}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+.trust div{border-left:4px solid var(--okr);padding-left:14px}
+.trust b{display:block;font:20px var(--f-disp);color:var(--modr)}
+.faq details{background:var(--bila);border:1px solid #DCE2EA;border-radius:8px;padding:14px 18px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin:8px 0 0;color:var(--sedy)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0}
+.contact dt{font-weight:700;color:var(--sedy)}.contact dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.map{position:relative;min-height:250px;border-radius:10px;overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .pin{position:absolute;left:16px;top:16px;background:var(--bila);border-radius:8px;padding:12px 14px;box-shadow:0 6px 16px rgba(26,29,36,.18)}
+footer{color:#DCE5F2;font-size:14px;padding-block:30px 100px}
+footer a{color:var(--okr)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;gap:10px;background:rgba(255,255,255,.97);border-top:1px solid #DCE2EA;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sticky .btn{flex:1;min-height:48px;padding:0 10px;font-size:16px}
+.sticky .btn-call{background:var(--modr);color:#fff}.sticky .btn-alt{background:var(--okr);color:var(--uhel)}
+@media (max-width:760px){.sticky{display:flex}}
+@media (prefers-reduced-motion:reduce){.fig .t{transition:none}}
+</style>
+
+<div class="banner">Nezávazný návrh webu – není to oficiální stránka firmy <b>Masáže Hovorany Jitka Lantošová</b></div>
+<div class="top" role="banner"><div class="wrap">
+  <a class="logo" href="#uvod">Masáže Hovorany<small>Jitka Lantošová · Hovorany 614</small></a>
+  <nav aria-label="Hlavní menu"><a href="#sluzby">Služby</a><a href="#test">Test u zdi</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="btn" href="tel:+420721202033">Zavolat</a>
+</div></div>
+
+<main id="uvod">
+<section class="hero print"><div class="wrap">
+  <svg class="orn" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#D9A441" stroke-width="3"><circle cx="100" cy="100" r="26"/><circle cx="100" cy="100" r="70" stroke-dasharray="2 9" stroke-linecap="round"/></g><g fill="#F5F7FA"><path d="M100 20c14 18 14 30 0 42-14-12-14-24 0-42z"/><path d="M100 180c14-18 14-30 0-42-14 12-14 24 0 42z"/><path d="M20 100c18-14 30-14 42 0-12 14-24 14-42 0z"/><path d="M180 100c-18-14-30-14-42 0 12 14 24 14 42 0z"/></g><g fill="#D9A441"><circle cx="100" cy="100" r="9"/><circle cx="44" cy="44" r="6"/><circle cx="156" cy="44" r="6"/><circle cx="44" cy="156" r="6"/><circle cx="156" cy="156" r="6"/></g></svg>
+  <p class="eyebrow">Hovorany 614 · Hodonínsko</p>
+  <h1>Srovnáme záda, šíje i klouby.</h1>
+  <p class="lead">Masáže a náprava pohybového aparátu s prvky chiropraxe, Dornova metoda, lymfatické masáže, osteopresura a baňkování.</p>
+  <div class="cta">
+    <a class="btn btn-call" href="tel:+420721202033">Zavolat 721 202 033</a>
+    <a class="btn btn-line" href="#test">Udělat test u zdi</a>
+  </div>
+  <div class="board" aria-label="Otevírací doba">
+    <div class="status" id="status"><i></i><span>Po–Pá 8–17</span></div>
+    <div class="week" id="week"></div>
+    <small>Otevírací doba podle Firmy.cz. Ve státní svátek se může lišit – raději zavolejte.</small>
+  </div>
+</div></section>
+
+<section id="sluzby"><div class="wrap">
+  <div class="head"><p class="eyebrow">Služby</p><h2>S čím Vám pomůžu</h2></div>
+  <div class="svc">
+    <div class="s wide"><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="22" y="4" width="8" height="44" rx="4" fill="#D9A441"/><g fill="#1F3F73"><rect x="18" y="10" width="16" height="5" rx="2.5"/><rect x="18" y="20" width="16" height="5" rx="2.5"/><rect x="18" y="30" width="16" height="5" rx="2.5"/><rect x="18" y="40" width="16" height="5" rx="2.5"/></g></svg><div><h3>Náprava pohybového aparátu s prvky chiropraxe</h3><p>Když záda, krk nebo klouby nejsou v pořádku a masáž sama nestačí.</p></div></div>
+    <div class="s"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="#E9EEF6"/><path d="M26 8v36" stroke="#1F3F73" stroke-width="4" stroke-linecap="round"/><circle cx="26" cy="16" r="4" fill="#D9A441"/><circle cx="26" cy="28" r="4" fill="#D9A441"/><circle cx="26" cy="40" r="4" fill="#D9A441"/></svg><div><h3>Dornova metoda</h3><p>Šetrné srovnání páteře a kloubů v pohybu.</p></div></div>
+    <div class="s"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="#E9EEF6"/><path d="M18 10v20c0 6 4 10 10 10h8" stroke="#1F3F73" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M36 16c4 4 4 9 0 13" stroke="#D9A441" stroke-width="3" fill="none"/></svg><div><h3>Lymfatické masáže</h3><p>Pro oteklé a těžké nohy.</p></div></div>
+    <div class="s"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="#E9EEF6"/><circle cx="26" cy="26" r="6" fill="#D9A441"/><circle cx="26" cy="26" r="13" fill="none" stroke="#1F3F73" stroke-width="2.5" stroke-dasharray="4 4"/></svg><div><h3>Osteopresura</h3><p>Tlak na přesná místa, kde napětí sedí.</p></div></div>
+    <div class="s"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="#E9EEF6"/><path d="M16 32c0-8 4-14 10-14s10 6 10 14z" fill="#1F3F73"/><rect x="14" y="32" width="24" height="5" rx="2" fill="#D9A441"/></svg><div><h3>Baňkování</h3><p>Podtlak prokrví a povolí ztuhlé svaly.</p></div></div>
+  </div>
+  <p style="font-size:14px;color:var(--sedy);margin:10px 0 0">Krátké popisy služeb jsou <span class="tag">ukázkový text</span> – doplníme Vašimi slovy.</p>
+  <div class="price"><p><b>Cenu řeknu předem do telefonu.</b> Až mi pošlete ceník, bude tady. <span class="tag">ukázkový text</span></p><a class="btn btn-blue" href="tel:+420721202033">Zeptat se na cenu</a></div>
+</div></section>
+
+<section class="wall" id="test"><div class="wrap">
+  <div class="head"><p class="eyebrow">Test u zdi · 1 minuta</p><h2>Stoupněte si ke zdi a odpovězte</h2><p>Paty, zadek a lopatky ke zdi, hlavu rovně. Klepněte na Ano nebo Ne – postava ukáže, co se děje, a dole uvidíte, co z mé nabídky se hodí. <span class="tag">orientační, nenahrazuje lékaře</span></p></div>
+  <div class="test">
+    <div class="fig">
+      <svg viewBox="0 0 240 360" aria-hidden="true">
+        <line x1="120" y1="6" x2="120" y2="340" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 6"/>
+        <path d="M112 6h16l-8 16z" fill="#D9A441"/><path d="M114 340h12l-6 12z" fill="#D9A441"/>
+        <g fill="#1F3F73">
+          <g class="t" id="gHead"><circle cx="120" cy="52" r="22"/><rect x="113" y="72" width="14" height="14" rx="4"/></g>
+          <g class="t" id="gSh"><rect x="66" y="84" width="108" height="20" rx="10"/><rect x="58" y="92" width="16" height="96" rx="8"/><rect x="166" y="92" width="16" height="96" rx="8"/></g>
+          <rect x="88" y="96" width="64" height="94" rx="14"/>
+          <g class="t" id="gPel"><rect x="84" y="184" width="72" height="26" rx="12"/></g>
+          <g class="t" id="gLegs"><rect x="90" y="206" width="24" height="128" rx="12"/><rect x="126" y="206" width="24" height="128" rx="12"/></g>
+        </g>
+        <g id="mark" fill="#D9A441"></g>
+      </svg>
+    </div>
+    <div class="qs" id="qs"></div>
+  </div>
+  <div class="result" aria-live="polite">
+    <h3 id="rT"></h3>
+    <ul id="rL"></ul>
+    <div class="lbl">Kdy přijdete (Po–Pá, bez svátků)</div>
+    <div class="pick" id="days"></div>
+    <div class="lbl">Část dne</div>
+    <div class="pick" id="parts"></div>
+    <div class="send"><a class="btn btn-call" id="sms" href="sms:+420721202033">Poslat SMS s výsledkem</a><span class="num">nebo volejte <b>721 202 033</b></span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="head"><p class="eyebrow">Jak to probíhá</p><h2>Od telefonu po volná záda</h2></div>
+  <ol class="steps">
+    <li><b>Zavoláte nebo pošlete SMS</b>Řeknete, co a jak dlouho Vás bolí. Termín domluvíme Po–Pá mezi 8 a 17.</li>
+    <li><b>Přijedete do Hovoran 614</b>Domluvíme se, co Vás trápí, a vyberu techniku z nabídky. <span class="tag">ukázkový text</span></li>
+    <li><b>Masáž a náprava</b>Poradím, co dělat doma, a kdy případně přijít znovu.</li>
+  </ol>
+  <div class="photo" style="margin-top:26px">Sem přijde Vaše fotka<br>(masérna nebo Vy při práci)</div>
+</div></section>
+
+<section style="background:var(--bila)"><div class="wrap">
+  <div class="head"><p class="eyebrow">Proč ke mně</p><h2>Náprava i masáž v jedné návštěvě</h2></div>
+  <div class="trust">
+    <div><b>Náprava, ne jen masáž</b>Prvky chiropraxe a Dornova metoda v jedné návštěvě.</div>
+    <div><b>Po–Pá 8–17</b>Pevná otevírací doba, termín domluvíte předem.</div>
+    <div><b>Hovorany 614</b>Živnostnice, IČO 88130291 (Firmy.cz).</div>
+    <div><b>Cena předem</b>Vždy ji řeknu do telefonu.</div>
+  </div>
+</div></section>
+
+<section class="faq"><div class="wrap">
+  <div class="head"><p class="eyebrow">Časté otázky</p><h2>Než zavoláte</h2></div>
+  <details><summary>Kdy máte otevřeno?</summary><p>Pondělí až pátek 8–17. Ve státní svátek se doba může lišit, raději zavolejte.</p></details>
+  <details><summary>Jak se objednám?</summary><p>Zavolejte nebo pošlete SMS na 721 202 033. Můžete použít test u zdi – SMS se složí sama.</p></details>
+  <details><summary>Co je náprava pohybového aparátu?</summary><p>Ošetření, které kromě masáže srovnává klouby a páteř – u mě s prvky chiropraxe a Dornovou metodou.</p></details>
+  <details><summary>Co si vzít s sebou?</summary><p>Pohodlné oblečení. <span class="tag">ukázkový text</span></p></details>
+</div></section>
+
+<section id="kontakt" style="background:var(--bila)"><div class="wrap">
+  <div class="head"><p class="eyebrow">Kontakt</p><h2>Hovorany 614</h2></div>
+  <div class="contact">
+    <div>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+420721202033">721 202 033</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:jitkahovorany@seznam.cz">jitkahovorany@seznam.cz</a></dd>
+        <dt>Adresa</dt><dd>Hovorany 614, 696 12</dd>
+        <dt>Otevřeno</dt><dd>Po–Pá 8:00–17:00, So–Ne zavřeno</dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/people/Masaze-Hovorany-Jitka-Lantosova" target="_blank" rel="noopener">Masáže Hovorany</a></dd>
+      </dl>
+      <div class="cta"><a class="btn btn-blue" href="tel:+420721202033">Zavolat</a><a class="btn btn-line d" href="https://mapy.cz/zakladni?q=Hovorany%20614" target="_blank" rel="noopener">Otevřít v Mapy.cz</a></div>
+    </div>
+    <div class="map">
+      <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="260" fill="#E9EEF6"/><g stroke="#C9D3E2" stroke-width="2">
+        <path d="M0 200 C80 180 140 210 400 170" fill="none"/><path d="M0 230 C90 210 160 240 400 200" fill="none"/></g>
+        <g stroke="#8FA36B" stroke-width="3" opacity=".6"><path d="M240 20v80M256 20v80M272 20v80M288 20v80M304 20v80M320 20v80M336 20v80"/></g>
+        <path d="M-10 140 C120 120 200 150 410 110" stroke="#fff" stroke-width="16" fill="none"/>
+        <g fill="#CCD6E4"><rect x="40" y="40" width="70" height="56" rx="4"/><rect x="130" y="30" width="60" height="70" rx="4"/><rect x="60" y="160" width="90" height="50" rx="4"/></g>
+        <circle cx="168" cy="134" r="14" fill="#1F3F73"/><circle cx="168" cy="134" r="5" fill="#D9A441"/></svg>
+      <div class="pin"><b>Hovorany 614</b><br>Po–Pá 8–17</div>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="print"><div class="wrap">Masáže Hovorany Jitka Lantošová · Hovorany 614, 696 12 · IČO 88130291 · <a href="tel:+420721202033">721 202 033</a> · <a href="mailto:jitkahovorany@seznam.cz">jitkahovorany@seznam.cz</a><br>Návrh připravilo studio Weby na míru.</div></footer>
+<div class="sticky"><a class="btn btn-call" href="tel:+420721202033">Zavolat</a><a class="btn btn-alt" href="#test">Test u zdi</a></div>
+
+<script>
+(function(){
+  var HOL=["2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08"];
+  function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+  var now=new Date(),dow=(now.getDay()+6)%7,names=["Po","Út","St","Čt","Pá","So","Ne"],wk=document.getElementById("week");
+  names.forEach(function(n,i){var e=document.createElement("div");if(i<5)e.className="open";if(i===dow)e.className+=" today";e.innerHTML="<b>"+n+"</b>"+(i<5?"8–17":"zavřeno");wk.appendChild(e);});
+  var st=document.getElementById("status"),h=now.getHours()+now.getMinutes()/60,hol=HOL.indexOf(iso(now))>-1;
+  if(hol){st.className="status off";st.lastChild.textContent="Dnes svátek – zavolejte, zda máme otevřeno";}
+  else if(dow<5&&h>=8&&h<17){st.lastChild.textContent="Teď otevřeno · do 17:00";}
+  else{st.className="status off";st.lastChild.textContent="Teď zavřeno · Po–Pá 8–17";}
+
+  var Q=[{id:"sh",q:"Máte jedno rameno výš?",s:"Podívejte se do zrcadla",a:["Náprava pohybového aparátu s prvky chiropraxe","Dornova metoda"]},
+         {id:"lo",q:"Bolí Vás v kříži při předklonu?",s:"Třeba při obouvání",a:["Dornova metoda","Náprava pohybového aparátu s prvky chiropraxe"]},
+         {id:"nk",q:"Bolí Vás za krkem nebo brní ruce?",s:"Hlavně po práci u počítače",a:["Osteopresura","Baňkování"]},
+         {id:"lg",q:"Máte večer oteklé nohy?",s:"Kotníky, lýtka",a:["Lymfatická masáž"]}];
+  var ans={},box=document.getElementById("qs");
+  Q.forEach(function(x){var d=document.createElement("div");d.className="q";d.innerHTML='<p>'+x.q+'<small>'+x.s+'</small></p><div class="yn"><label><input type="radio" name="'+x.id+'" id="'+x.id+'-a" value="1"><span>Ano</span></label><label><input type="radio" name="'+x.id+'" id="'+x.id+'-n" value="0" checked><span>Ne</span></label></div>';
+    d.querySelectorAll("input").forEach(function(i){i.addEventListener("change",function(){ans[x.id]=i.value==="1";upd();});});box.appendChild(d);});
+  ans.sh=true;document.getElementById("sh-a").checked=true;
+  var day="co nejdřív",part="kdykoli";
+  function chips(id,arr,cb,first){var b=document.getElementById(id);arr.forEach(function(x,i){var l=document.createElement("label");l.innerHTML='<input type="radio" name="'+id+'" id="'+id+'-'+i+'"'+(i===0?" checked":"")+'><span>'+x+'</span>';l.querySelector("input").addEventListener("change",function(){cb(x);upd();});b.appendChild(l);});}
+  var dl=["co nejdřív"],d=new Date();while(dl.length<9){d.setDate(d.getDate()+1);var w=d.getDay();if(w===0||w===6||HOL.indexOf(iso(d))>-1)continue;dl.push(names[(w+6)%7].toLowerCase()+" "+d.getDate()+". "+(d.getMonth()+1)+".");}
+  chips("days",dl,function(x){day=x;});chips("parts",["kdykoli","dopoledne 8–12","odpoledne 12–17"],function(x){part=x;});
+  function upd(){
+    document.getElementById("gSh").style.transform=ans.sh?"rotate(-5deg)":"";document.getElementById("gSh").style.transformOrigin="120px 94px";
+    document.getElementById("gHead").style.transform=ans.nk?"translateX(10px)":"";
+    document.getElementById("gPel").style.transform=ans.lo?"rotate(4deg)":"";document.getElementById("gPel").style.transformOrigin="120px 197px";
+    var mk=document.getElementById("mark");mk.innerHTML=(ans.nk?'<circle cx="138" cy="80" r="9" opacity=".85"/>':'')+(ans.lo?'<circle cx="120" cy="182" r="10" opacity=".85"/>':'')+(ans.lg?'<circle cx="102" cy="318" r="9" opacity=".85"/><circle cx="138" cy="318" r="9" opacity=".85"/>':'')+(ans.sh?'<circle cx="68" cy="88" r="9" opacity=".85"/>':'');
+    var rec=[],why=[];Q.forEach(function(x){if(ans[x.id]){why.push(x.q.replace("?","").replace("Máte ","").replace("Bolí Vás ","bolí "));x.a.forEach(function(a){if(rec.indexOf(a)<0)rec.push(a);});}});
+    document.getElementById("rT").textContent=rec.length?"Hodí se Vám:":"Nic z toho? Zavolejte, co Vás trápí.";
+    var ul=document.getElementById("rL");ul.innerHTML="";(rec.length?rec:["Klasická masáž nebo konzultace po telefonu"]).forEach(function(a){var li=document.createElement("li");li.textContent=a;ul.appendChild(li);});
+    var b="Dobrý den, paní Lantošová, udělal(a) jsem test u zdi: "+(why.length?why.join(", "):"nic z toho")+". Chtěl(a) bych se objednat"+(rec.length?" ("+rec.join(", ")+")":"")+". Termín: "+day+", "+part+". Děkuji.";
+    document.getElementById("sms").href="sms:+420721202033?body="+encodeURIComponent(b);
+  }
+  upd();
+})();
+</script>
+</body>
+</html>
