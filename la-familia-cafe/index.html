@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – La Familia Café</title>
+<meta name="description" content="La Familia Café, Horní Česká 35, Znojmo: snídaně, brunch, denní polední menu, dorty a sweet bary na zakázku, káva. Zahrádka, salonek, dětský koutek, rozvoz. Tel. 721 441 413.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Rubik:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"La Familia Café","telephone":"+420721441413","email":"tonda.krul@seznam.cz","taxID":"03094715","address":{"@type":"PostalAddress","streetAddress":"Horní Česká 206/35","addressLocality":"Znojmo","postalCode":"669 02","addressCountry":"CZ"},"servesCuisine":["česká","mezinárodní"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday"],"opens":"08:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Friday"],"opens":"08:00","closes":"21:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"22:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"71","bestRating":"5"}}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Rodinný stůl ve Znojmě: karta přes vínovou plochu s ubrusovým vzorem, vedle tabule poledního menu; výrazný prvek = objednávkový lístek dortu a sweet baru */
+:root{--vino:#6E1E3A;--okurka:#4F7A2B;--mleko:#FFF7EC;--kakao:#33241B;--ruz:#F6DDE2;--bila:#FFFFFF;--line:#EAD9C6;
+--disp:"Gloock",Georgia,serif;--body:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif}
+.nb{background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.uk{display:inline-block;font:600 10px/1.2 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;background:#FFF3B0;color:#5A4500;border:1px solid #E2C94C;border-radius:3px;padding:2px 5px;vertical-align:middle;margin-left:4px;white-space:nowrap}
+.foto{display:grid;place-items:center;text-align:center;border:2px dashed currentColor;opacity:.75;border-radius:10px;min-height:150px;padding:16px;font:600 14px/1.35 system-ui,sans-serif}
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:8px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.sticky a{flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none}
+@media (max-width:760px){.sticky{display:flex}body{padding-bottom:76px}}
+.smsout{white-space:pre-wrap;font:14px/1.45 ui-monospace,Menlo,monospace;border-radius:10px;padding:12px;margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid #2D7FF9;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--mleko);color:var(--kakao);font:16px/1.6 var(--body)}
+.w{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.05;text-wrap:balance;margin:0;color:var(--vino)}
+h2{font-size:clamp(30px,4.6vw,46px)}
+a{color:var(--vino)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--mleko);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:41;background:var(--mleko)}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.logo{font:400 26px/1 var(--disp);color:var(--vino);text-decoration:none}
+.logo small{font:500 13px var(--body);color:var(--okurka);margin-left:4px}
+.nav{display:flex;gap:18px;align-items:center}.nav a{text-decoration:none;color:var(--kakao);font-weight:500}
+@media(max-width:860px){.nav a:not(.btn){display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:14px;font:700 16px var(--body);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.b1{background:var(--vino);color:#fff}.b2{background:var(--bila);color:var(--vino);border-color:var(--vino)}
+.nav .btn{min-height:42px;color:#fff}
+.hero{background-color:var(--vino);background-image:linear-gradient(45deg,rgba(255,255,255,.07) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.07) 75%),linear-gradient(45deg,rgba(255,255,255,.07) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.07) 75%);background-size:56px 56px;background-position:0 0,28px 28px;padding-block:40px}
+.hero .w{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:stretch}
+@media(max-width:880px){.hero .w{grid-template-columns:1fr}.hero{padding-block:20px 28px}}
+.karta{background:var(--mleko);border-radius:22px;padding:clamp(22px,4vw,40px);display:flex;flex-direction:column;gap:14px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.stav{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--okurka)}
+.stav i{width:10px;height:10px;border-radius:50%;background:#B9A895}.stav[data-k=open] i{background:var(--okurka)}
+.karta h1{font-size:clamp(40px,6.4vw,74px)}
+.karta p{margin:0;font-size:18px}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.ikony{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.ikony li{background:var(--ruz);color:var(--vino);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500}
+.tabule{background:#2B2E2A;color:#F2EFE6;border:10px solid #8A6440;border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:10px;font-family:var(--body)}
+.tabule h2{color:#fff;font-size:30px}
+.tabule ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.tabule li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(255,255,255,.25);padding-bottom:10px}
+.tabule li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.tabule small{color:#CFCABE}
+section{padding-block:56px}
+.sh{max-width:46em;margin-bottom:24px;display:flex;flex-direction:column;gap:8px}.sh p{margin:0;font-size:17px}
+.nab{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:880px){.nab{grid-template-columns:repeat(2,1fr)}}
+.nab div{background:var(--bila);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.nab svg{width:48px;height:48px}.nab h3{font-size:22px}.nab p{margin:0;font-size:14.5px}
+.hod{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+@media(max-width:700px){.hod{grid-template-columns:1fr}.hod div{display:flex;justify-content:space-between}}
+.hod div{background:var(--bila);border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center;font-variant-numeric:tabular-nums}
+.hod b{display:block;font-family:var(--disp);font-weight:400;font-size:20px;color:var(--vino)}
+.hod .dnes{background:var(--vino);color:#fff;border-color:var(--vino)}.hod .dnes b{color:#fff}
+.sweet{background:var(--ruz)}
+.lis{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media(max-width:880px){.lis{grid-template-columns:1fr}}
+.listek{background:var(--bila);border-radius:6px;padding:22px;box-shadow:0 10px 26px rgba(110,30,58,.15);display:flex;flex-direction:column;gap:14px;position:relative;min-width:0}
+.listek::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:radial-gradient(circle at 8px 8px,transparent 6px,var(--bila) 6.5px) 0 0/16px 8px}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+legend{font-weight:700;font-size:14px;margin-bottom:8px;width:100%}
+.opt{border:1.5px solid var(--vino);background:transparent;color:var(--vino);border-radius:999px;padding:8px 14px;font:500 14px var(--body);cursor:pointer}
+.opt[aria-pressed=true]{background:var(--vino);color:#fff}
+label{font-weight:700;font-size:14px;display:flex;flex-direction:column;gap:6px}
+input[type=date],input[type=text]{font:16px var(--body);padding:10px;border:1.5px solid var(--line);border-radius:10px;width:100%;color:var(--kakao);background:#fff}
+input[type=range]{width:100%;accent-color:var(--vino)}
+.hoste{font:400 34px var(--disp);color:var(--vino)}
+.smsout{background:var(--mleko);border:1px dashed var(--vino)}
+.rod{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.rod div{border:2px solid var(--okurka);border-radius:16px;padding:14px;font-weight:500}.rod b{display:block;color:var(--okurka);font-size:17px}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;color:var(--vino)}
+@media(max-width:760px){.fotky{grid-template-columns:1fr}}
+.duv{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+.skore{font:400 64px/1 var(--disp);color:var(--vino)}
+details{background:var(--bila);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}summary{font-weight:700;cursor:pointer}
+.kon{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:760px){.kon{grid-template-columns:1fr}}
+dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0}dt{font-weight:700;color:var(--okurka)}dd{margin:0}
+footer{background:var(--kakao);color:#EADCCB;padding-block:26px;font-size:14px}footer a{color:#fff}
+.sticky{background:var(--mleko)}.sticky .s1{background:var(--vino);color:#fff}.sticky .s2{border:2px solid var(--vino);color:var(--vino)}
+</style>
+
+<div class="nb">Nezávazný návrh webu – není to oficiální stránka firmy La Familia Café</div>
+<div class="top" role="banner"><div class="w">
+  <a class="logo" href="#uvod">La Familia <small>café · Znojmo</small></a>
+  <nav class="nav" aria-label="Hlavní"><a href="#menu">Menu</a> <a href="#oteviraci">Otevírací doba</a> <a href="#dorty">Dorty a sweet bar</a> <a href="#kontakt">Kontakt</a> <a class="btn b1" href="tel:+420721441413">Zavolat</a></nav>
+</div></div>
+
+<main id="uvod">
+<section class="hero"><div class="w">
+  <div class="karta">
+    <span class="stav" id="stav" data-k=""><i></i><span>Otevřeno každý den</span></span>
+    <h1>Snídaně, oběd i dort. Každý den v Horní České.</h1>
+    <p>Rodinná kavárna a bistro ve Znojmě – polední menu, brunch, domácí zákusky a dorty na zakázku.</p>
+    <div class="row"><a class="btn b1" href="tel:+420721441413">Zavolat 721 441 413</a> <a class="btn b2" href="#dorty">Objednat dort</a></div>
+    <ul class="ikony"><li>Zahrádka</li> <li>Dětský koutek</li> <li>Salonek</li> <li>Rozvoz</li> <li>S pejskem</li></ul>
+  </div>
+  <div class="tabule" id="menu">
+    <small>Polední menu</small>
+    <h2>Dnes vaříme</h2>
+    <ul>
+      <li><span>Bramboračka</span> <b>49 Kč</b></li>
+      <li><span>Masové koule v rajské omáčce, těstovina</span> <b>159 Kč</b></li>
+      <li><span>Tagliatelle s krémovou dýňovou omáčkou, slaninou a dýňovými semínky</span> <b>229 Kč</b></li>
+    </ul>
+    <small>Ukázka menu ze 22. 10. podle Firmy.cz – tady se bude menu měnit každý den. <span class="uk">ukázka</span></small>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <div class="sh"><h2>Co u nás najdete</h2><p>Od ranní kávy po večerní dezert. Česká i zahraniční kuchyně.</p></div>
+  <div class="nab">
+    <div><svg viewBox="0 0 48 48" fill="none" stroke="#6E1E3A" stroke-width="2.4"><circle cx="24" cy="26" r="16"/><circle cx="24" cy="26" r="7" fill="#F2C14E" stroke="none"/></svg><h3>Snídaně a brunch</h3><p>Pro pomalé ráno i víkendový brunch.</p></div>
+    <div><svg viewBox="0 0 48 48" fill="none" stroke="#6E1E3A" stroke-width="2.4"><path d="M6 22h36c0 10-8 18-18 18S6 32 6 22z"/><path d="M16 14c0-4 4-4 4-8M26 14c0-4 4-4 4-8"/></svg><h3>Polední menu</h3><p>Denní menu – polévka a hlavní jídla.</p></div>
+    <div><svg viewBox="0 0 48 48" fill="none" stroke="#6E1E3A" stroke-width="2.4"><rect x="8" y="22" width="32" height="18" rx="2"/><path d="M8 30h32M24 8v8"/><circle cx="24" cy="18" r="3" fill="#F2C14E" stroke="none"/></svg><h3>Dorty a zákusky</h3><p>Domácí moučníky k posezení i s sebou.</p></div>
+    <div><svg viewBox="0 0 48 48" fill="none" stroke="#6E1E3A" stroke-width="2.4"><path d="M10 16h24v12a12 12 0 0 1-24 0z"/><path d="M34 19h4a4 4 0 0 1 0 8h-4"/></svg><h3>Káva a čokoláda</h3><p>Káva, horká čokoláda a k tomu něco sladkého.</p></div>
+  </div>
+</div></section>
+
+<section id="oteviraci" style="padding-top:0"><div class="w">
+  <div class="sh"><h2>Otevírací doba</h2><p>Otevřeno 7 dní v týdnu. Dnešek je zvýrazněný.</p></div>
+  <div class="hod" id="hod"></div>
+</div></section>
+
+<section class="sweet" id="dorty"><div class="w">
+  <div class="sh"><h2>Dort nebo sweet bar na oslavu</h2><p>Pečeme dorty na zakázku a připravujeme sweet bary na svatby, narozeniny a firemní akce. Vyplňte lístek, cenu domluvíme po telefonu.</p></div>
+  <div class="lis">
+    <div class="listek">
+      <fieldset id="f-akce"><legend>Příležitost</legend></fieldset>
+      <fieldset id="f-co"><legend>Co chcete</legend></fieldset>
+      <label for="hos">Počet hostů <span class="hoste" id="hosv">30</span><input id="hos" type="range" min="5" max="150" step="5" value="30"></label>
+      <label for="dat">Datum oslavy<input id="dat" type="date"></label>
+      <label for="pozn">Přání (příchuť, barva, nápis)<input id="pozn" type="text" placeholder="např. čokoládový, nápis Honzovi 40"></label>
+    </div>
+    <div class="listek">
+      <pre class="smsout" id="sms"></pre>
+      <div class="row"><a class="btn b1" id="smsbtn" href="#">Poslat SMS</a> <button class="btn b2" id="kop" type="button">Zkopírovat text</button></div>
+      <small>Zpráva jde na 721 441 413.</small>
+      <div class="foto" style="color:var(--vino)">Sem přijde Vaše fotka – sweet bar ze svatby</div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <div class="sh"><h2>Pro rodiny i větší společnost</h2></div>
+  <div class="rod">
+    <div><b>Dětský koutek</b>Děti si hrají, Vy dopijete kávu.</div>
+    <div><b>Zahrádka</b>Venkovní posezení vpředu i vzadu.</div>
+    <div><b>Salonek</b>Pro oslavy a menší akce.</div>
+    <div><b>Rozvoz a s sebou</b>Jídlo k Vám domů nebo do krabičky.</div>
+    <div><b>Stravenky</b>Papírové i elektronické, platba kartou.</div>
+    <div><b>Pejsci vítáni</b>Klidně i s vaším psem.</div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="fotky"><div class="foto">Sem přijde Vaše fotka – kavárna</div><div class="foto">Sem přijde Vaše fotka – snídaně</div><div class="foto">Sem přijde Vaše fotka – dort</div></div>
+</div></section>
+
+<section class="sweet"><div class="w">
+  <div class="duv"><div class="skore">4,4</div><div><b>Hodnocení „Výborné“ ze 71 recenzí</b><br>na <a href="https://www.firmy.cz/detail/13123818-la-familia-cafe-znojmo.html" target="_blank" rel="noopener">Firmy.cz</a> · IČO 03094715</div></div>
+</div></section>
+
+<section><div class="w">
+  <div class="sh"><h2>Časté otázky <span class="uk">ukázkový text</span></h2></div>
+  <details><summary>Kde najdu dnešní polední menu?</summary><p>Vždy tady na webu nahoře – stačí otevřít stránku na telefonu.</p></details>
+  <details><summary>Jak dlouho předem objednat dort?</summary><p>Ideálně pár dní předem, na svatbu dřív. Termín potvrdíme po telefonu.</p></details>
+  <details><summary>Dá se u Vás uspořádat oslava?</summary><p>Ano, máme salonek. Zavolejte a domluvíme počet hostů a občerstvení.</p></details>
+  <details><summary>Rozvážíte jídlo?</summary><p>Ano, nabízíme rozvoz i výdej s sebou. Podrobnosti po telefonu.</p></details>
+</div></section>
+
+<section class="sweet" id="kontakt"><div class="w">
+  <div class="sh"><h2>Kde nás najdete</h2></div>
+  <div class="kon">
+    <dl><dt>Adresa</dt><dd>Horní Česká 206/35, 669 02 Znojmo</dd><dt>Telefon</dt><dd><a href="tel:+420721441413">721 441 413</a></dd><dt>E-mail</dt><dd><a href="mailto:tonda.krul@seznam.cz">tonda.krul@seznam.cz</a></dd><dt>Facebook</dt><dd><a href="https://www.facebook.com/La-Familia-Café-607303169392474" target="_blank" rel="noopener">La Familia Café</a></dd></dl>
+    <div><svg viewBox="0 0 300 140" width="100%" aria-hidden="true"><rect width="300" height="140" rx="12" fill="#F3E5D6"/><path d="M0 70H300" stroke="#fff" stroke-width="12"/><path d="M150 0V140" stroke="#fff" stroke-width="7"/><circle cx="170" cy="62" r="10" fill="#6E1E3A"/><text x="186" y="56" font-family="Rubik,sans-serif" font-size="13" font-weight="700" fill="#33241B">Horní Česká</text></svg>
+    <p><a href="https://mapy.cz/zakladni?q=Horn%C3%AD%20%C4%8Desk%C3%A1%20206%2F35%20Znojmo" target="_blank" rel="noopener">Otevřít v Mapy.cz →</a></p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="w">La Familia Café · Horní Česká 206/35, 669 02 Znojmo · IČO 03094715 · <a href="tel:+420721441413">721 441 413</a> · <a href="mailto:tonda.krul@seznam.cz">tonda.krul@seznam.cz</a> <br>Návrh připravilo studio Weby na míru.</div></footer>
+<div class="sticky"><a class="s1" href="tel:+420721441413">Zavolat</a> <a class="s2" href="#dorty">Objednat dort</a></div>
+<script>
+var HOL=["2026-01-01","2026-04-03","2026-04-06","2026-05-01","2026-05-08","2026-07-05","2026-07-06","2026-09-28","2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08","2027-07-05","2027-07-06","2027-09-28","2027-10-28","2027-11-17","2027-12-24","2027-12-25","2027-12-26"];
+var DNY=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"],DNYK=["Ne","Po","Út","St","Čt","Pá","So"];
+function praha(){var p=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Prague",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23",weekday:"short"}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];return{date:o.year+"-"+o.month+"-"+o.day,wd:wd,min:(+o.hour)*60+(+o.minute)}}
+function hm(s){var a=s.split(":");return(+a[0])*60+(+a[1])}
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+/* H = {0:[["10:00","20:00"]],...}; konec "24:00" = půlnoc */
+function stav(H){var t=praha();if(HOL.indexOf(t.date)>-1)return{k:"svatek",txt:"Dnes je státní svátek – zavolejte, zda máme otevřeno."};var d=H[t.wd]||[];for(var i=0;i<d.length;i++){var a=hm(d[i][0]),b=hm(d[i][1]);if(t.min>=a&&t.min<b)return{k:"open",txt:"Teď otevřeno, do "+d[i][1].replace("24:00","půlnoci")};if(t.min<a)return{k:"later",txt:"Dnes otevíráme v "+d[i][0]}}for(var j=1;j<8;j++){var w=(t.wd+j)%7;if((H[w]||[]).length)return{k:"closed",txt:"Teď zavřeno · otevíráme "+(j==1?"zítra":DNY[w])+" v "+H[w][0][0]}}return{k:"closed",txt:"Teď zavřeno"}}
+function dalsiDny(H,n){var out=[],d=new Date();for(var i=0;out.length<n&&i<40;i++){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+i);if(H&&!(H[x.getDay()]||[]).length)continue;if(HOL.indexOf(iso(x))>-1)continue;out.push({d:x,l:(i==0?"dnes":i==1?"zítra":DNYK[x.getDay()])+" "+x.getDate()+". "+(x.getMonth()+1)+"."})}return out}
+function smsHref(num,txt){return"sms:"+num+"?&body="+encodeURIComponent(txt)}
+function kopiruj(btn,txt){try{navigator.clipboard.writeText(txt).then(function(){btn.textContent="Zkopírováno"},function(){btn.textContent="Označte text a zkopírujte"})}catch(e){btn.textContent="Označte text a zkopírujte"}}
+
+(function(){
+var H={1:[["08:00","22:30"]],2:[["08:00","21:30"]],3:[["08:00","22:30"]],4:[["08:00","22:30"]],5:[["08:00","21:30"]],6:[["09:00","22:30"]],0:[["10:00","22:00"]]};
+var st=stav(H),el=document.getElementById("stav");el.dataset.k=st.k;el.lastElementChild.textContent=st.txt;
+var t=praha(),hd=document.getElementById("hod");[1,2,3,4,5,6,0].forEach(function(d){var x=document.createElement("div");if(d==t.wd)x.className="dnes";x.innerHTML="<b>"+DNY[d].charAt(0).toUpperCase()+DNY[d].slice(1)+"</b><span>"+H[d][0][0].replace(/^0/,"")+"–"+H[d][0][1]+"</span>";hd.appendChild(x)});
+var sel={akce:"narozeniny",co:"dort"};
+function opts(id,key,list){var f=document.getElementById(id);list.forEach(function(v){var b=document.createElement("button");b.type="button";b.className="opt";b.textContent=v;b.setAttribute("aria-pressed",v==sel[key]?"true":"false");b.onclick=function(){sel[key]=v;[].forEach.call(f.querySelectorAll(".opt"),function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");sms()};f.appendChild(b)})}
+opts("f-akce","akce",["narozeniny","svatba","firemní akce","jiná oslava"]);opts("f-co","co",["dort","sweet bar","dort i sweet bar"]);
+var Ho=document.getElementById("hos"),D=document.getElementById("dat"),P=document.getElementById("pozn");
+var d0=new Date();d0.setDate(d0.getDate()+3);D.min=iso(new Date());
+function sms(){document.getElementById("hosv").textContent=Ho.value;var dt=D.value?D.value.split("-").reverse().map(function(x){return +x}).join(". "):"zatím nevím";
+var txt="Dobrý den,\nchtěl(a) bych objednat: "+sel.co+".\nPříležitost: "+sel.akce+", cca "+Ho.value+" hostů.\nDatum: "+dt+"."+(P.value.trim()?"\nPřání: "+P.value.trim():"")+"\nProsím o zavolání kvůli ceně. Děkuji.";
+document.getElementById("sms").textContent=txt;document.getElementById("smsbtn").href=smsHref("+420721441413",txt)}
+[Ho,D,P].forEach(function(e){e.addEventListener("input",sms)});document.getElementById("kop").onclick=function(){kopiruj(this,document.getElementById("sms").textContent)};sms();
+})();
+</script>
+</body>
+</html>

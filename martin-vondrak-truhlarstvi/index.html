@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Martin Vondrák – truhlářství</title>
+<meta name="description" content="Martin Vondrák – truhlářství, Studénky 23, Puklice u Jihlavy: kuchyňské linky, skříně, postele, stoly, komody, pergoly a zahradní domky na míru. Tel. 775 366 171.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Mulish:wght@400;600;700;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Martin Vondrák – truhlářství","telephone":"+420775366171","email":"mvinteriercz@gmail.com","taxID":"75764377","address":{"@type":"PostalAddress","streetAddress":"Studénky 23","addressLocality":"Puklice","postalCode":"588 31","addressCountry":"CZ"},"description":"Zakázková truhlářská výroba: kuchyňské linky, obývací stěny, skříně, postele, stoly, židle, komody, botníky, police, zahradní domky a pergoly."}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+/* Dílna a výkres: dělený hero (text + technický výkres linky), výrazný prvek = „Narýsujte si to“ s živým výkresem a SMS */
+:root{--orech:#4E3524;--smrk:#2F4A3A;--hobl:#F4EBDD;--tuzka:#B83A26;--papir:#FFFDF8;--ink:#2A1E16;--linka:#D9CBB4;
+--disp:"Alegreya",Georgia,"Times New Roman",serif;--body:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif}
+.nb{background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.uk{display:inline-block;font:600 10px/1.2 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;background:#FFF3B0;color:#5A4500;border:1px solid #E2C94C;border-radius:3px;padding:2px 5px;vertical-align:middle;margin-left:4px;white-space:nowrap}
+.foto{display:grid;place-items:center;text-align:center;border:2px dashed currentColor;opacity:.75;border-radius:10px;min-height:150px;padding:16px;font:600 14px/1.35 system-ui,sans-serif}
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:8px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.sticky a{flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none}
+@media (max-width:760px){.sticky{display:flex}body{padding-bottom:76px}}
+.smsout{white-space:pre-wrap;font:14px/1.45 ui-monospace,Menlo,monospace;border-radius:10px;padding:12px;margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid #2D7FF9;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--hobl);color:var(--ink);font:16px/1.6 var(--body)}
+.w{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--disp);line-height:1.1;text-wrap:balance;margin:0;color:var(--orech)}
+h2{font-size:clamp(28px,4.4vw,42px)}
+a{color:var(--tuzka)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--papir);border-bottom:1px solid var(--linka)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:41;background:var(--papir)}
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.logo{display:flex;flex-direction:column;text-decoration:none;color:var(--orech);font:800 20px/1.05 var(--disp)}
+.logo small{font:600 12px/1.3 var(--body);color:var(--smrk);letter-spacing:.06em;text-transform:uppercase}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:var(--body);font-size:16px}
+.b1{background:var(--tuzka);color:#fff}.b2{background:transparent;color:var(--orech);border-color:var(--orech)}
+.nav .b1{min-height:42px;padding:0 16px;color:#fff}
+@media(max-width:820px){.nav a:not(.b1){display:none}}
+.hero{padding-block:44px 56px}
+.hero .w{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.eyebrow{font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:var(--smrk)}
+.hero h1{font-size:clamp(40px,6.2vw,72px);margin:10px 0 16px}
+.hero h1 em{font-style:italic;color:var(--tuzka)}
+.lead{font-size:19px;max-width:34em;margin:0 0 22px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.chips li{background:var(--papir);border:1px solid var(--linka);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+.vykres{background:var(--papir);border:1px solid var(--linka);border-radius:6px;padding:14px;box-shadow:8px 8px 0 var(--smrk)}
+.vykres svg{display:block;width:100%;height:auto}
+.vykres p{margin:8px 0 0;font:600 12px/1.3 var(--body);color:#6b5a4a;display:flex;justify-content:space-between;gap:8px}
+@media(max-width:820px){.hero .w{grid-template-columns:1fr}.hero{padding-block:28px 40px}.vykres{order:2}}
+section{padding-block:56px}
+.alt{background:var(--papir)}
+.sh{display:flex;flex-direction:column;gap:8px;margin-bottom:26px;max-width:46em}
+.sh p{margin:0;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+.it{background:var(--papir);border:1px solid var(--linka);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.alt .it{background:var(--hobl)}
+.it svg{width:44px;height:44px}
+.it h3{font-size:21px}
+.it p{margin:0;font-size:14.5px;color:#4a3b2f}
+.note{margin-top:18px;font-weight:700}
+.tool{display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:start}
+@media(max-width:860px){.tool{grid-template-columns:1fr}}
+.panel{background:var(--papir);border:1px solid var(--linka);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.kusy{display:flex;flex-wrap:wrap;gap:8px}
+.kusy button{border:1.5px solid var(--orech);background:transparent;color:var(--orech);border-radius:999px;padding:8px 14px;font:700 14px var(--body);cursor:pointer}
+.kusy button[aria-pressed=true]{background:var(--orech);color:#fff}
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+label{font-weight:700;font-size:14px;display:flex;flex-direction:column;gap:4px}
+input,select,textarea{font:16px var(--body);padding:10px;border:1.5px solid var(--linka);border-radius:8px;background:#fff;color:var(--ink);width:100%}
+.platno{background:#fff;border:1px solid var(--linka);border-radius:10px;padding:10px;background-image:linear-gradient(#efe7da 1px,transparent 1px),linear-gradient(90deg,#efe7da 1px,transparent 1px);background-size:20px 20px}
+.platno svg{width:100%;height:auto;display:block}
+.smsout{background:#F7F1E6;border:1px dashed var(--orech)}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:k;padding:0;list-style:none}
+.kroky li{background:var(--papir);border-top:4px solid var(--smrk);padding:18px;border-radius:0 0 8px 8px}
+.kroky b{display:block;font:800 20px/1.2 var(--disp);color:var(--orech);margin-bottom:4px}
+@media(max-width:760px){.kroky{grid-template-columns:1fr}}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;color:var(--smrk)}
+@media(max-width:760px){.fotky{grid-template-columns:1fr}}
+.duvera{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.duvera div{border-left:3px solid var(--tuzka);padding:6px 14px}
+.duvera b{display:block;font:800 19px/1.2 var(--disp);color:var(--orech)}
+details{background:var(--papir);border:1px solid var(--linka);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+summary{font-weight:800;cursor:pointer}
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.kontakt{grid-template-columns:1fr}}
+.kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0}
+.kontakt dt{font-weight:800;color:var(--smrk)}.kontakt dd{margin:0}
+.mapa{background:var(--papir);border:1px solid var(--linka);border-radius:10px;padding:14px}
+footer{background:var(--orech);color:#F4EBDD;padding-block:26px;font-size:14px}
+footer a{color:#fff}
+.sticky{background:var(--papir)}.sticky .s1{background:var(--tuzka);color:#fff}.sticky .s2{border:2px solid var(--orech);color:var(--orech)}
+</style>
+
+<div class="nb">Nezávazný návrh webu – není to oficiální stránka firmy Martin Vondrák – truhlářství</div>
+<div class="top" role="banner"><div class="w">
+  <a class="logo" href="#uvod">Martin Vondrák <small>truhlářství · Puklice</small></a>
+  <nav class="nav" aria-label="Hlavní"><a href="#vyrobky">Co vyrobím</a> <a href="#narys">Narýsujte si to</a> <a href="#postup">Jak to probíhá</a> <a href="#kontakt">Kontakt</a> <a class="btn b1" href="tel:+420775366171">Zavolat</a></nav>
+</div></div>
+
+<main id="uvod">
+<section class="hero"><div class="w">
+  <div>
+    <div class="eyebrow">Truhlářství · Puklice u Jihlavy</div>
+    <h1>Nábytek na míru. <em>Z dílny v Puklicích.</em></h1>
+    <p class="lead">Provádím veškeré truhlářské práce – od kuchyňské linky a šatní skříně po pergolu a zahradní domek. Stačí rozměry a fotka místa.</p>
+    <div class="row"><a class="btn b1" href="tel:+420775366171">Zavolat 775 366 171</a> <a class="btn b2" href="#narys">Poptat nábytek</a></div>
+    <ul class="chips"><li>Kuchyně</li> <li>Skříně a stěny</li> <li>Postele a stoly</li> <li>Pergoly a domky</li></ul>
+  </div>
+  <figure class="vykres" style="margin:0">
+    <svg viewBox="0 0 520 330" role="img" aria-label="Výkres kuchyňské linky s kótami">
+      <g fill="none" stroke="#4E3524" stroke-width="2">
+        <rect x="40" y="40" width="440" height="80"/><line x1="150" y1="40" x2="150" y2="120"/><line x1="260" y1="40" x2="260" y2="120"/><line x1="370" y1="40" x2="370" y2="120"/>
+        <rect x="40" y="170" width="440" height="110"/><line x1="40" y1="182" x2="480" y2="182"/>
+        <line x1="150" y1="182" x2="150" y2="280"/><line x1="260" y1="182" x2="260" y2="280"/><line x1="370" y1="182" x2="370" y2="280"/>
+        <rect x="270" y="194" width="90" height="74" rx="3"/><circle cx="315" cy="231" r="22"/>
+        <line x1="380" y1="210" x2="470" y2="210"/><line x1="380" y1="240" x2="470" y2="240"/>
+      </g>
+      <g fill="#2F4A3A"><rect x="88" y="76" width="24" height="4" rx="2"/><rect x="198" y="76" width="24" height="4" rx="2"/><rect x="308" y="76" width="24" height="4" rx="2"/><rect x="418" y="76" width="24" height="4" rx="2"/><rect x="83" y="196" width="24" height="4" rx="2"/><rect x="193" y="196" width="24" height="4" rx="2"/><rect x="413" y="196" width="24" height="4" rx="2"/></g>
+      <g stroke="#B83A26" stroke-width="1.5" fill="#B83A26" font-family="Mulish,sans-serif" font-size="13" font-weight="700">
+        <line x1="40" y1="305" x2="480" y2="305"/><path d="M40 305l8-4v8zM480 305l-8-4v8z" stroke="none"/>
+        <line x1="500" y1="170" x2="500" y2="280"/><path d="M500 170l-4 8h8zM500 280l-4-8h8z" stroke="none"/>
+        <text x="236" y="322" stroke="none" text-anchor="middle">šířka podle Vaší kuchyně</text>
+        <text x="512" y="232" stroke="none" transform="rotate(-90 512 232)" text-anchor="middle">90 cm</text>
+      </g>
+      <g transform="translate(330 8) rotate(8)"><rect width="150" height="14" rx="2" fill="#B83A26"/><path d="M150 0l22 7-22 7z" fill="#E9C9A0"/><path d="M166 5l6 2-6 2z" fill="#2A1E16"/></g>
+    </svg>
+    <p><span>Výkres č. 1 · kuchyňská linka</span><span>ilustrace</span></p>
+  </figure>
+</div></section>
+
+<section class="alt" id="vyrobky"><div class="w">
+  <div class="sh"><h2>Co pro Vás vyrobím</h2><p>Všechno na míru Vašeho bytu, domu nebo zahrady. Seznam je přesně podle mé nabídky.</p></div>
+  <div class="grid">
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><rect x="5" y="22" width="38" height="20"/><rect x="5" y="6" width="38" height="10"/><line x1="24" y1="22" x2="24" y2="42"/></svg><h3>Kuchyňské linky</h3><p>Rohové i rovné, podle místa a spotřebičů.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><rect x="4" y="8" width="16" height="34"/><rect x="20" y="24" width="24" height="18"/><line x1="20" y1="14" x2="44" y2="14"/></svg><h3>Obývací stěny</h3><p>Pro televizi, knihy i úložné prostory.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><rect x="8" y="4" width="32" height="40"/><line x1="24" y1="4" x2="24" y2="44"/><line x1="20" y1="22" x2="20" y2="28"/><line x1="28" y1="22" x2="28" y2="28"/></svg><h3>Skříně</h3><p>Šatní skříně a skříně do výklenků.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><path d="M4 38V14M44 38V26M4 26h40"/><rect x="8" y="18" width="12" height="8"/></svg><h3>Postele a válendy</h3><p>Pevné, na Vaši matraci.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><path d="M4 16h40M10 16v26M38 16v26"/></svg><h3>Stoly</h3><p>Konferenční, jídelní, televizní i pracovní.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><path d="M14 6v36M14 24h20v18M34 24V30"/></svg><h3>Židle</h3><p>K jídelnímu stolu, ve stejném dřevě.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><rect x="8" y="8" width="32" height="32"/><line x1="8" y1="19" x2="40" y2="19"/><line x1="8" y1="30" x2="40" y2="30"/></svg><h3>Komody a noční stolky</h3><p>Do ložnice i předsíně.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><path d="M6 10h36M6 22h36M6 34h36M6 6v34M42 6v34"/></svg><h3>Botníky a police</h3><p>Do předsíně, spíže i dílny.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><path d="M6 22L24 8l18 14v20H6z"/><rect x="19" y="28" width="10" height="14"/></svg><h3>Zahradní domky</h3><p>Na nářadí i posezení.</p></div>
+    <div class="it"><svg viewBox="0 0 48 48" fill="none" stroke="#2F4A3A" stroke-width="2.4"><path d="M4 14h40M8 14v28M40 14v28M4 8h40"/></svg><h3>Pergoly</h3><p>Ke stěně domu nebo volně stojící.</p></div>
+  </div>
+  <p class="note">Cenu řeknu předem – podle rozměrů a materiálu. Zavolejte nebo pošlete rozměry níže.</p>
+</div></section>
+
+<section id="narys"><div class="w">
+  <div class="sh"><h2>Narýsujte si to</h2><p>Vyberte, co potřebujete, a napište přibližné rozměry. Výkres se kreslí sám a z údajů se složí zpráva, kterou pošlete jedním dotykem.</p></div>
+  <div class="tool">
+    <div class="panel">
+      <div class="kusy" id="kusy" role="group" aria-label="Co potřebujete"></div>
+      <div class="dims">
+        <label for="d-s">Šířka (cm)<input id="d-s" type="number" inputmode="numeric" min="20" max="2000"></label>
+        <label for="d-v">Výška (cm)<input id="d-v" type="number" inputmode="numeric" min="20" max="600"></label>
+        <label for="d-h">Hloubka (cm)<input id="d-h" type="number" inputmode="numeric" min="10" max="1200"></label>
+      </div>
+      <label for="d-mat">Materiál<select id="d-mat"><option>zatím nevím, poraďte</option><option>lamino</option><option>masiv</option><option>dýha</option></select></label>
+      <label for="d-pozn">Poznámka a obec<textarea id="d-pozn" rows="2" placeholder="např. do podkroví, Jihlava"></textarea></label>
+    </div>
+    <div class="panel">
+      <div class="platno"><svg id="plat" viewBox="0 0 400 260" role="img" aria-label="Náčrt s rozměry"></svg></div>
+      <pre class="smsout" id="sms"></pre>
+      <div class="row"><a class="btn b1" id="smsbtn" href="#">Poslat SMS</a> <button class="btn b2" id="kop" type="button">Zkopírovat text</button></div>
+      <small>Zpráva jde na 775 366 171. Fotku místa pak pošlete do stejné konverzace.</small>
+    </div>
+  </div>
+</div></section>
+
+<section class="alt" id="postup"><div class="w">
+  <div class="sh"><h2>Jak to probíhá <span class="uk">ukázkový text</span></h2></div>
+  <ol class="kroky">
+    <li><b>Ozvete se</b>Zavoláte nebo pošlete rozměry a fotku místa.</li>
+    <li><b>Domluvíme detaily</b>Materiál, vzhled, kování a cenu předem.</li>
+    <li><b>Vyrobím</b>Nábytek vznikne v dílně v Puklicích a domluvíme předání.</li>
+  </ol>
+</div></section>
+
+<section><div class="w">
+  <div class="sh"><h2>Hotové práce</h2><p>Kuchyně, skříně a pergoly, které už u zákazníků slouží.</p></div>
+  <div class="fotky"><div class="foto">Sem přijde Vaše fotka<br>– hotová kuchyň</div><div class="foto">Sem přijde Vaše fotka<br>– skříň nebo stěna</div><div class="foto">Sem přijde Vaše fotka<br>– pergola nebo domek</div></div>
+</div></section>
+
+<section class="alt"><div class="w">
+  <div class="sh"><h2>Proč truhlář z Puklic</h2></div>
+  <div class="duvera">
+    <div><b>Jeden truhlář na všechno</b>Kuchyň, skříně i zahradní stavby od jednoho člověka.</div>
+    <div><b>Dílna kousek od Jihlavy</b>Studénky 23, Puklice.</div>
+    <div><b>Cena předem</b>Podle rozměrů a materiálu, bez překvapení.</div>
+    <div><b>Živnostník, IČO 75764377</b>Ověřitelné v obchodním rejstříku.</div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <div class="sh"><h2>Časté otázky <span class="uk">ukázkový text</span></h2></div>
+  <details><summary>Musím znát přesné rozměry?</summary><p>Ne. Na začátek stačí přibližné rozměry a fotka, přesné míry doladíme spolu.</p></details>
+  <details><summary>Lamino, nebo masiv?</summary><p>Lamino je odolné a cenově dostupnější, masiv je přírodní dřevo, které jde po letech přebrousit. Poradím podle místa a rozpočtu.</p></details>
+  <details><summary>Děláte i venkovní stavby?</summary><p>Ano, zahradní domky a pergoly patří do mé nabídky.</p></details>
+  <details><summary>Jak dlouho se čeká?</summary><p>Podle velikosti zakázky a aktuální práce v dílně – termín řeknu při domluvě.</p></details>
+</div></section>
+
+<section class="alt" id="kontakt"><div class="w">
+  <div class="sh"><h2>Kontakt</h2></div>
+  <div class="kontakt">
+    <dl>
+      <dt>Telefon</dt><dd><a href="tel:+420775366171">775 366 171</a></dd>
+      <dt>E-mail</dt><dd><a href="mailto:mvinteriercz@gmail.com">mvinteriercz@gmail.com</a></dd>
+      <dt>Dílna</dt><dd>Studénky 23, 588 31 Puklice</dd>
+      <dt>Dílna otevřena</dt><dd>Doplníme podle Vás <span class="uk">ukázkový text</span><br>Než přijedete, zavolejte.</dd>
+      <dt>IČO</dt><dd>75764377</dd>
+    </dl>
+    <div class="mapa"><svg viewBox="0 0 300 150" width="100%" aria-hidden="true"><rect width="300" height="150" fill="#EFE6D6"/><path d="M0 110C80 90 140 120 300 70" stroke="#fff" stroke-width="10" fill="none"/><path d="M120 0L150 150" stroke="#fff" stroke-width="6"/><circle cx="148" cy="98" r="9" fill="#B83A26"/><text x="162" y="94" font-family="Mulish,sans-serif" font-size="13" font-weight="800" fill="#2A1E16">Puklice</text></svg>
+      <p style="margin:10px 0 0"><a href="https://mapy.cz/zakladni?q=Puklice%20Stud%C3%A9nky%2023" target="_blank" rel="noopener">Otevřít v Mapy.cz →</a></p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="w">Martin Vondrák – truhlářství · Studénky 23, 588 31 Puklice · IČO 75764377 · <a href="tel:+420775366171">775 366 171</a> · <a href="mailto:mvinteriercz@gmail.com">mvinteriercz@gmail.com</a> <br>Návrh připravilo studio Weby na míru.</div></footer>
+<div class="sticky"><a class="s1" href="tel:+420775366171">Zavolat</a> <a class="s2" href="#narys">Poptat</a></div>
+
+<script>
+var HOL=["2026-01-01","2026-04-03","2026-04-06","2026-05-01","2026-05-08","2026-07-05","2026-07-06","2026-09-28","2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08","2027-07-05","2027-07-06","2027-09-28","2027-10-28","2027-11-17","2027-12-24","2027-12-25","2027-12-26"];
+var DNY=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"],DNYK=["Ne","Po","Út","St","Čt","Pá","So"];
+function praha(){var p=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Prague",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23",weekday:"short"}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];return{date:o.year+"-"+o.month+"-"+o.day,wd:wd,min:(+o.hour)*60+(+o.minute)}}
+function hm(s){var a=s.split(":");return(+a[0])*60+(+a[1])}
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+/* H = {0:[["10:00","20:00"]],...}; konec "24:00" = půlnoc */
+function stav(H){var t=praha();if(HOL.indexOf(t.date)>-1)return{k:"svatek",txt:"Dnes je státní svátek – zavolejte, zda máme otevřeno."};var d=H[t.wd]||[];for(var i=0;i<d.length;i++){var a=hm(d[i][0]),b=hm(d[i][1]);if(t.min>=a&&t.min<b)return{k:"open",txt:"Teď otevřeno, do "+d[i][1].replace("24:00","půlnoci")};if(t.min<a)return{k:"later",txt:"Dnes otevíráme v "+d[i][0]}}for(var j=1;j<8;j++){var w=(t.wd+j)%7;if((H[w]||[]).length)return{k:"closed",txt:"Teď zavřeno · otevíráme "+(j==1?"zítra":DNY[w])+" v "+H[w][0][0]}}return{k:"closed",txt:"Teď zavřeno"}}
+function dalsiDny(H,n){var out=[],d=new Date();for(var i=0;out.length<n&&i<40;i++){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+i);if(H&&!(H[x.getDay()]||[]).length)continue;if(HOL.indexOf(iso(x))>-1)continue;out.push({d:x,l:(i==0?"dnes":i==1?"zítra":DNYK[x.getDay()])+" "+x.getDate()+". "+(x.getMonth()+1)+"."})}return out}
+function smsHref(num,txt){return"sms:"+num+"?&body="+encodeURIComponent(txt)}
+function kopiruj(btn,txt){try{navigator.clipboard.writeText(txt).then(function(){btn.textContent="Zkopírováno"},function(){btn.textContent="Označte text a zkopírujte"})}catch(e){btn.textContent="Označte text a zkopírujte"}}
+
+(function(){
+var K=[["linka","Kuchyňská linka",[260,90,60]],["skrin","Skříň",[200,240,60]],["postel","Postel",[180,45,210]],["stul","Stůl",[160,75,90]],["police","Botník / police",[100,180,35]],["pergola","Pergola",[400,250,300]],["domek","Zahradní domek",[300,230,250]]];
+var cur=K[0],box=document.getElementById("kusy");
+K.forEach(function(k,i){var b=document.createElement("button");b.type="button";b.textContent=k[1];b.setAttribute("aria-pressed",i==0?"true":"false");b.onclick=function(){cur=k;[].forEach.call(box.children,function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");nast(k[2]);kresli()};box.appendChild(b)});
+var S=document.getElementById("d-s"),V=document.getElementById("d-v"),H=document.getElementById("d-h"),M=document.getElementById("d-mat"),P=document.getElementById("d-pozn");
+function nast(d){S.value=d[0];V.value=d[1];H.value=d[2]}
+function kresli(){
+ var s=Math.max(20,+S.value||0),v=Math.max(20,+V.value||0),sc=Math.min(300/s,180/v),w=s*sc,h=v*sc,x=(400-w)/2+10,y=200-h,c="#4E3524",g='';
+ var t=cur[0];
+ if(t=="linka"){var n=Math.max(2,Math.round(s/60));g+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="#fff" stroke="'+c+'" stroke-width="2"/>';g+='<line x1="'+x+'" y1="'+(y+8)+'" x2="'+(x+w)+'" y2="'+(y+8)+'" stroke="'+c+'" stroke-width="2"/>';for(var i=1;i<n;i++)g+='<line x1="'+(x+w*i/n)+'" y1="'+(y+8)+'" x2="'+(x+w*i/n)+'" y2="'+(y+h)+'" stroke="'+c+'"/>';}
+ else if(t=="skrin"||t=="police"){g+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="#fff" stroke="'+c+'" stroke-width="2"/>';if(t=="skrin"){var n2=Math.max(2,Math.round(s/50));for(var j=1;j<n2;j++)g+='<line x1="'+(x+w*j/n2)+'" y1="'+y+'" x2="'+(x+w*j/n2)+'" y2="'+(y+h)+'" stroke="'+c+'"/>';}else{for(var k=1;k<5;k++)g+='<line x1="'+x+'" y1="'+(y+h*k/5)+'" x2="'+(x+w)+'" y2="'+(y+h*k/5)+'" stroke="'+c+'"/>';}}
+ else if(t=="postel"){g+='<rect x="'+x+'" y="'+(y)+'" width="'+w+'" height="'+h+'" fill="#fff" stroke="'+c+'" stroke-width="2"/><rect x="'+(x+6)+'" y="'+(y-12)+'" width="'+(w-12)+'" height="12" fill="#F4EBDD" stroke="'+c+'"/>';}
+ else if(t=="stul"){g+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="8" fill="#C9A47A" stroke="'+c+'"/><rect x="'+(x+8)+'" y="'+(y+8)+'" width="8" height="'+(h-8)+'" fill="'+c+'"/><rect x="'+(x+w-16)+'" y="'+(y+8)+'" width="8" height="'+(h-8)+'" fill="'+c+'"/>';}
+ else if(t=="pergola"){g+='<rect x="'+(x-6)+'" y="'+y+'" width="'+(w+12)+'" height="10" fill="#C9A47A" stroke="'+c+'"/>';for(var m=0;m<=3;m++)g+='<rect x="'+(x+(w-10)*m/3)+'" y="'+(y+10)+'" width="10" height="'+(h-10)+'" fill="'+c+'"/>';}
+ else {g+='<path d="M'+x+' '+(y+h*.35)+'L'+(x+w/2)+' '+y+'L'+(x+w)+' '+(y+h*.35)+'V'+(y+h)+'H'+x+'Z" fill="#fff" stroke="'+c+'" stroke-width="2"/><rect x="'+(x+w*.4)+'" y="'+(y+h*.55)+'" width="'+(w*.2)+'" height="'+(h*.45)+'" fill="#F4EBDD" stroke="'+c+'"/>';}
+ var r="#B83A26";
+ g+='<g stroke="'+r+'" fill="'+r+'" font-family="Mulish,sans-serif" font-size="13" font-weight="700"><line x1="'+x+'" y1="225" x2="'+(x+w)+'" y2="225"/><text stroke="none" x="'+(x+w/2)+'" y="246" text-anchor="middle">'+s+' cm</text><line x1="'+(x-14)+'" y1="'+y+'" x2="'+(x-14)+'" y2="200"/><text stroke="none" x="'+(x-20)+'" y="'+(y+h/2)+'" text-anchor="end">'+v+'</text></g>';
+ document.getElementById("plat").innerHTML=g;
+ var txt="Dobrý den, pane Vondráku,\nměl(a) bych zájem o: "+cur[1].toLowerCase()+".\nRozměr cca "+S.value+" × "+V.value+" × "+H.value+" cm (š × v × h).\nMateriál: "+M.value+"."+(P.value.trim()?"\nPoznámka: "+P.value.trim():"")+"\nFotku místa pošlu. Děkuji.";
+ document.getElementById("sms").textContent=txt;document.getElementById("smsbtn").href=smsHref("+420775366171",txt);
+}
+[S,V,H,M,P].forEach(function(e){e.addEventListener("input",kresli)});
+document.getElementById("kop").onclick=function(){kopiruj(this,document.getElementById("sms").textContent)};
+nast(cur[2]);kresli();
+})();
+</script>
+</body>
+</html>
