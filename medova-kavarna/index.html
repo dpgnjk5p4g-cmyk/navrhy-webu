@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Návrh webu – Medová kavárna</title>
+<meta name="description" content="Medová kavárna, Čečínská 146, Bělá nad Radbuzou: káva z El Salvadoru, čaje Eilles Tee, čokoláda Cocaya, domácí medovník, zákusky a točená zmrzlina. Terasa, Wi-Fi. Tel. 736 676 078.">
+<meta name="theme-color" content="#3B2410">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Sen:wght@400;600;700;800&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Medová kavárna", "telephone": "+420736676078", "email": "medova.kavarna@seznam.cz", "taxID": "64352331", "sameAs": ["https://www.facebook.com/people/Medov%C3%A1-kav%C3%A1rna/100057436630458"], "address": {"@type": "PostalAddress", "streetAddress": "Čečínská 146", "addressLocality": "Bělá nad Radbuzou", "postalCode": "345 26", "addressCountry": "CZ"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "09:00", "closes": "17:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "22:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "13:00", "closes": "17:00"}], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "54", "bestRating": "5"}}</script>
+<style>
+.nb{background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.uk{display:inline-block;font:600 10px/1.2 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;background:#FFF3B0;color:#5A4500;border:1px solid #E2C94C;border-radius:3px;padding:2px 5px;vertical-align:middle;margin-left:4px;white-space:nowrap}
+.foto{display:grid;place-items:center;text-align:center;border:2px dashed currentColor;opacity:.75;border-radius:10px;min-height:150px;padding:16px;font:600 14px/1.35 system-ui,sans-serif}
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:8px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.sticky a{flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none}
+@media (max-width:760px){.sticky{display:flex}body{padding-bottom:76px}}
+.smsout{white-space:pre-wrap;font:14px/1.45 ui-monospace,Menlo,monospace;border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid #2D7FF9;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+*{box-sizing:border-box}
+html{scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+.w{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+:root{--med:#E8A317;--med2:#FFE9B3;--vosk:#FFF8E6;--hneda:#3B2410;--hneda2:#6B4423;--line:#EED9A8;--ink:#2A1A0B;--list:#6E8B3D;
+--disp:"Rufina",Georgia,serif;--body:"Sen",system-ui,-apple-system,"Segoe UI",sans-serif}
+body{margin:0;background:var(--vosk);color:var(--ink);font:17px/1.6 var(--body)}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,4.8vw,54px);color:var(--hneda)}
+h3{font-size:20px}
+a{color:var(--hneda2)}
+.top{position:sticky;top:0;z-index:40;background:var(--hneda);color:#fff}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:10px}
+.logo{font:700 22px/1 var(--disp);color:var(--med);text-decoration:none;display:flex;gap:8px;align-items:center}
+.nav{display:flex;gap:20px;align-items:center}.nav a{color:#fff;text-decoration:none;font-weight:600}
+@media(max-width:880px){.nav a:not(.btn){display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:24px 6px 24px 6px;font:700 16px var(--body);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.b1{background:var(--med);color:var(--hneda)}.b2{border-color:var(--hneda);color:var(--hneda);background:transparent}
+.hero{position:relative;overflow:hidden;background:var(--med2);padding-block:44px 54px}
+.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 0l28 16v33L28 65 0 49V16zM28 65l28 16v33M0 81l28-16' fill='none' stroke='%23E8A317' stroke-opacity='.35' stroke-width='2'/%3E%3C/svg%3E");opacity:.9}
+.hero .w{position:relative}
+.stav{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-weight:700;font-size:14px}
+.stav i{width:10px;height:10px;border-radius:50%;background:#AAA}.stav[data-k=open] i{background:#3E9E3E}
+.hero h1{font-size:clamp(44px,8vw,100px);color:var(--hneda);margin:16px 0 12px}
+.hero p{font-size:19px;margin:0 0 22px;max-width:32em}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.kapka{display:inline-block;background:var(--hneda);color:var(--med2);padding:8px 14px;border-radius:6px;font-weight:700;margin-top:18px}
+section{padding-block:60px}
+.sh{max-width:44em;margin-bottom:26px;display:flex;flex-direction:column;gap:10px}.sh p{margin:0}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.trio{grid-template-columns:1fr}}
+.trio div{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.trio p{margin:0}.trio small{color:var(--hneda2);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.plast{background:var(--hneda);color:#F5E6C8}
+.plast h2{color:var(--med)}
+.pw{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+@media(max-width:900px){.pw{grid-template-columns:1fr}}
+.hex{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:520px;margin:0 auto}
+.hex button{width:31%;max-width:150px;aspect-ratio:1/1.1;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:#5A3A1A;color:#F5E6C8;border:0;font:700 14px/1.2 var(--body);cursor:pointer;padding:12px;display:flex;align-items:center;justify-content:center;text-align:center}
+.hex button:nth-child(5n+4){margin-left:0}
+.hex button[aria-pressed=true]{background:var(--med);color:var(--hneda)}
+.napoj{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.napoj button{border:2px solid var(--hneda);background:#fff;color:var(--hneda);border-radius:6px;padding:10px 14px;font:700 15px var(--body);cursor:pointer}
+.napoj button[aria-pressed=true]{background:var(--med);color:var(--hneda)}
+.talir{background:var(--vosk);color:var(--ink);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.talir h3{color:var(--hneda)}
+.smsout{background:#fff;border:1px dashed var(--hneda)}
+.patek{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;background:#fff;border:2px solid var(--med);border-radius:6px;padding:22px}
+@media(max-width:600px){.patek{grid-template-columns:1fr}}
+.patek b{font:700 64px/1 var(--disp);color:var(--med)}
+.fotky{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;color:var(--hneda2)}
+@media(max-width:760px){.fotky{grid-template-columns:1fr}}
+.skore{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+.skore b{font:700 72px/1 var(--disp);color:var(--hneda)}
+details{border-bottom:1px solid var(--line);padding-block:12px}summary{font-weight:700;cursor:pointer}
+.kon{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:760px){.kon{grid-template-columns:1fr}}
+dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0}dt{font-weight:700}dd{margin:0;overflow-wrap:anywhere}
+.tyden{width:100%;border-collapse:collapse}.tyden td{padding:6px 0;border-bottom:1px solid var(--line)}.tyden tr.dnes td{font-weight:800;background:var(--med2)}
+footer{background:var(--hneda);color:#E6D3B0;padding-block:26px;font-size:14px}footer a{color:#fff}
+.sticky{background:var(--vosk)}.sticky .s1{background:var(--hneda);color:#fff}.sticky .s2{background:var(--med);color:var(--hneda)}
+</style>
+</head>
+<body>
+<div class="nb">Nezávazný návrh webu – není to oficiální stránka firmy Medová kavárna</div>
+
+<header class="top"><div class="w">
+  <a class="logo" href="#uvod"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true"><path d="M11 0l11 6v12l-11 6L0 18V6z" fill="#E8A317"/></svg>Medová kavárna</a>
+  <nav class="nav" aria-label="Hlavní"><a href="#nabidka">Nabídka</a> <a href="#plast">Ke kávě</a> <a href="#kontakt">Kontakt</a> <a class="btn b1" href="tel:+420736676078">Zavolat</a></nav>
+</div></header>
+<main id="uvod">
+<section class="hero"><div class="w">
+  <span class="stav" id="stav" data-k=""><i></i><span>Otevřeno úterý až neděle</span></span>
+  <h1>Káva, medovník a&nbsp;klid</h1>
+  <p>Malá kavárna v Bělé nad Radbuzou. Káva z El Salvadoru, čaje Eilles Tee a horká čokoláda Cocaya. K tomu domácí medovník, věnečky, větrníky a točená zmrzlina – pod zastřešenou letní terasou.</p>
+  <div class="row"><a class="btn b1" href="tel:+420736676078">Zavolat 736 676 078</a> <a class="btn b2" href="#plast">Vybrat, co ke kávě</a></div>
+  <span class="kapka">V pátek otevřeno až do 22:00</span>
+</div></section>
+
+<section id="nabidka"><div class="w">
+  <div class="sh"><h2>Co nalijeme</h2></div>
+  <div class="trio">
+    <div><small>káva</small><h3>Z El Salvadoru</h3><p>Espresso i s mlékem.</p></div>
+    <div><small>čaj</small><h3>Eilles Tee</h3><p>Když zrovna nechcete kávu.</p></div>
+    <div><small>čokoláda</small><h3>Cocaya</h3><p>Horká čokoláda na chladné dny.</p></div>
+  </div>
+</div></section>
+
+<section class="plast" id="plast"><div class="w">
+  <div class="sh"><h2>Co si dáte ke kávě?</h2><p>Klepněte na pláství – vyberte nápoj a dobroty. Připravíme zprávu, ať víme, na co se těšíte.</p></div>
+  <div class="pw">
+    <div class="hex" id="hex" role="group" aria-label="Dobroty ke kávě"></div>
+    <div class="talir" aria-live="polite">
+      <h3>Váš výběr</h3>
+      <div class="napoj" id="napoj" role="group" aria-label="Nápoj"></div>
+      <pre class="smsout" id="sms"></pre>
+      <div class="row"><a class="btn b1" id="smsbtn" href="#">Poslat SMS</a> <button class="btn b2" id="kop" type="button">Zkopírovat</button></div>
+      <small>Nabídka ve vitríně se mění – co zrovna máme, Vám řekneme po telefonu.</small>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <div class="patek"><b>Pá</b><div><h3>Páteční večery do 22:00</h3><p style="margin:6px 0 0">V pátek u nás posedíte déle. Wi-Fi zdarma, zastřešená terasa.</p></div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="fotky"><div class="foto">Sem přijde Vaše fotka – terasa</div><div class="foto">Sem přijde Vaše fotka – medovník</div><div class="foto">Sem přijde Vaše fotka – výrobky z medu</div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="skore"><b>4,7</b><div><strong>„Výborné“ – 54 hodnocení</strong><br>na <a href="https://www.firmy.cz/detail/12952018-medova-kavarna-bela-nad-radbuzou.html" target="_blank" rel="noopener">Firmy.cz</a></div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="sh"><h2>Časté otázky <span class="uk">ukázkový text</span></h2></div>
+  <details><summary>Kdy máte otevřeno v pondělí?</summary><p>V pondělí máme zavřeno.</p></details>
+  <details><summary>Dá se posedět venku?</summary><p>Ano, máme zastřešenou letní terasu.</p></details>
+  <details><summary>Prodáváte i výrobky z medu?</summary><p>Zeptejte se u nás nebo zavolejte, co zrovna máme.</p></details>
+</div></section>
+
+<section id="kontakt" style="background:#fff;border-top:1px solid var(--line)"><div class="w">
+  <div class="sh"><h2>Kontakt</h2></div>
+  <div class="kon">
+    <dl><dt>Adresa</dt><dd>Čečínská 146, 345 26 Bělá nad Radbuzou</dd><dt>Telefon</dt><dd><a href="tel:+420736676078">736 676 078</a></dd><dt>E-mail</dt><dd><a href="mailto:medova.kavarna@seznam.cz">medova.kavarna@seznam.cz</a></dd><dt>Facebook</dt><dd><a href="https://www.facebook.com/people/Medov%C3%A1-kav%C3%A1rna/100057436630458" target="_blank" rel="noopener">Medová kavárna</a></dd><dt>IČO</dt><dd>64352331</dd></dl>
+    <div><table class="tyden" id="tyden"></table><p><a href="https://mapy.cz/zakladni?q=%C4%8Ce%C4%8D%C3%ADnsk%C3%A1%20146%20B%C4%9Bl%C3%A1%20nad%20Radbuzou" target="_blank" rel="noopener">Otevřít v Mapy.cz →</a></p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="w">Medová kavárna · Čečínská 146, 345 26 Bělá nad Radbuzou · IČO 64352331 · <a href="tel:+420736676078">736 676 078</a> · <a href="mailto:medova.kavarna@seznam.cz">medova.kavarna@seznam.cz</a><br>Návrh připravilo studio Weby na míru.</div></footer>
+<div class="sticky"><a class="s1" href="tel:+420736676078">Zavolat</a> <a class="s2" href="#plast">Ke kávě</a></div>
+
+<script>
+var HOL=["2026-01-01","2026-04-03","2026-04-06","2026-05-01","2026-05-08","2026-07-05","2026-07-06","2026-09-28","2026-10-28","2026-11-17","2026-12-24","2026-12-25","2026-12-26","2027-01-01","2027-03-26","2027-03-29","2027-05-01","2027-05-08","2027-07-05","2027-07-06","2027-09-28","2027-10-28","2027-11-17","2027-12-24","2027-12-25","2027-12-26"];
+var DNY=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"],DNYK=["Ne","Po","Út","St","Čt","Pá","So"];
+function praha(){var p=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Prague",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23",weekday:"short"}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];return{date:o.year+"-"+o.month+"-"+o.day,wd:wd,min:(+o.hour)*60+(+o.minute)}}
+function hm(s){var a=s.split(":");return(+a[0])*60+(+a[1])}
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function stav(H){var t=praha();if(HOL.indexOf(t.date)>-1)return{k:"svatek",txt:"Dnes je státní svátek – zavolejte, zda máme otevřeno."};var d=H[t.wd]||[];for(var i=0;i<d.length;i++){var a=hm(d[i][0]),b=hm(d[i][1]);if(t.min>=a&&t.min<b)return{k:"open",txt:"Teď otevřeno, do "+d[i][1]};if(t.min<a)return{k:"later",txt:"Dnes otevíráme v "+d[i][0]}}for(var j=1;j<8;j++){var w=(t.wd+j)%7;if((H[w]||[]).length)return{k:"closed",txt:"Teď zavřeno · otevíráme "+(j==1?"zítra":DNY[w])+" v "+H[w][0][0]}}return{k:"closed",txt:"Teď zavřeno"}}
+function dalsiDny(H,n){var out=[],d=new Date();for(var i=0;out.length<n&&i<40;i++){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+i);if(H&&!(H[x.getDay()]||[]).length)continue;if(HOL.indexOf(iso(x))>-1)continue;out.push({d:x,i:i,l:(i==0?"dnes":i==1?"zítra":DNYK[x.getDay()])+" "+x.getDate()+". "+(x.getMonth()+1)+"."})}return out}
+function smsHref(num,txt){return"sms:"+num+"?&body="+encodeURIComponent(txt)}
+function kopiruj(btn,txt){try{navigator.clipboard.writeText(txt).then(function(){btn.textContent="Zkopírováno"},function(){btn.textContent="Označte text a zkopírujte"})}catch(e){btn.textContent="Označte text a zkopírujte"}}
+function setStav(id,H){var st=stav(H),el=document.getElementById(id);if(!el)return st;el.dataset.k=st.k;el.querySelector("span").textContent=st.txt;return st}
+
+(function(){
+var H={2:[["09:00","17:00"]],3:[["09:00","17:00"]],4:[["09:00","17:00"]],5:[["09:00","22:00"]],6:[["10:00","17:00"]],0:[["13:00","17:00"]]};
+setStav("stav",H);
+var t=praha(),tb=document.getElementById("tyden");
+[1,2,3,4,5,6,0].forEach(function(d){var r=document.createElement("tr");if(d==t.wd)r.className="dnes";var h=H[d];r.innerHTML="<td>"+DNY[d]+"</td><td style='text-align:right'>"+(h?h[0][0].replace(/^0/,"")+"–"+h[0][1]:"zavřeno")+"</td>";tb.appendChild(r)});
+var S=["Domácí medovník","Čokoládový dort","Věneček","Větrník","Špička","Linecké placičky","Ovocný zákusek","Krémový řez","Točená zmrzlina"],N=["Káva","Čaj Eilles Tee","Čokoláda Cocaya"],sel={},sn=0;
+var hx=document.getElementById("hex"),np=document.getElementById("napoj");
+function upd(){[].forEach.call(np.children,function(b,j){b.setAttribute("aria-pressed",j==sn?"true":"false")});var v=S.filter(function(s){return sel[s]});
+var txt="Dobrý den,\nchystám se k Vám na "+N[sn].toLowerCase()+(v.length?" a k tomu: "+v.join(", ").toLowerCase():"")+".\nPřijdu __ (den a čas), bude nás __.\nDěkuji.";
+document.getElementById("sms").textContent=txt;document.getElementById("smsbtn").href=smsHref("+420736676078",txt)}
+S.forEach(function(s){var b=document.createElement("button");b.type="button";b.textContent=s;b.setAttribute("aria-pressed","false");b.onclick=function(){sel[s]=!sel[s];b.setAttribute("aria-pressed",sel[s]?"true":"false");upd()};hx.appendChild(b)});
+N.forEach(function(n,i){var b=document.createElement("button");b.type="button";b.textContent=n;b.onclick=function(){sn=i;upd()};np.appendChild(b)});
+document.getElementById("kop").onclick=function(){kopiruj(this,document.getElementById("sms").textContent)};upd();
+})();
+</script>
+</body>
+</html>
