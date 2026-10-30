@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Kadeřnické studio M – Holičství</title>
+<meta name="description" content="Kadeřnické studio M – Holičství, Miroslav: dámské, pánské a dětské střihy na Radniční 609/17. Objednání telefonem 605 188 660.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Karla:wght@400;500;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Kadeřnické studio M – Holičství",
+  "telephone":"+420605188660",
+  "email":"kadernictvi-m@seznam.cz",
+  "identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"48922773"},
+  "address":{"@type":"PostalAddress","streetAddress":"Radniční 609/17","addressLocality":"Miroslav","postalCode":"671 72","addressCountry":"CZ"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"13:00","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"11:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"13:00","closes":"17:00"}
+  ]
+}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+<style>
+:root{
+  color-scheme:light;
+  --pet:#0F5257; --pet-ink:#0A3D41; --pet-soft:#D5E6E4; --pet-mid:#5E9A9C;
+  --coral:#E8604F; --coral-ink:#B8402F; --coral-soft:#FBE1DC;
+  --sand:#F4EDE1; --sand-2:#EBE1CF; --card:#FFFCF6; --line:#DCCFB9;
+  --graf:#22282B; --muted:#4F5659; --on-dark:#F4EDE1;
+  --head:'Bricolage Grotesque','Arial Narrow','Segoe UI',system-ui,sans-serif;
+  --sans:'Karla','Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --r:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--graf);font-family:var(--sans);font-size:17px;line-height:1.55;margin:0;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--head);text-wrap:balance;line-height:1.05;margin:0 0 .5em;color:var(--pet-ink);letter-spacing:-.015em}
+h1{font-size:clamp(2.2rem,8vw,4.1rem);font-weight:800}
+h2{font-size:clamp(1.75rem,4.8vw,2.7rem);font-weight:800}
+h3{font-size:1.22rem;font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--pet)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,input:focus-visible+label{outline:3px solid var(--coral-ink);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.demo{display:inline-block;vertical-align:middle;font:800 .66rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;color:#7A2A1E;background:var(--coral-soft);border:1px dashed var(--coral-ink);border-radius:99px;padding:.33em .6em;margin-left:.35em;white-space:nowrap}
+.proto{background:var(--graf);color:var(--on-dark);font-size:.82rem;text-align:center;padding:.45rem 0}
+.top{background:var(--sand);border-bottom:2px solid var(--graf);position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:1rem;min-height:62px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--graf);margin-right:auto}
+.brand b{font-family:var(--head);font-weight:800;font-size:1.08rem;display:block;line-height:1.05}
+.brand small{display:block;font-size:.8rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
+.brand b{white-space:nowrap}
+@media (max-width:420px){.brand b{font-size:.98rem}.tel-top{font-size:.95rem}.top .wrap{gap:.6rem}}
+nav{display:none;gap:1.3rem}
+nav a{color:var(--graf);font-weight:700;text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--coral-ink)}
+.tel-top{font-weight:800;color:var(--pet);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:.35rem}
+@media (min-width:900px){nav{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.8rem 1.3rem;border-radius:12px;font:800 1.02rem/1.1 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-main{background:var(--pet);color:#fff}
+.btn-main:hover{background:var(--pet-ink)}
+.btn-coral{background:var(--coral);color:#0E1214;border-color:var(--coral)}
+.btn-coral:hover{background:#F07A6B}
+.btn-ghost{background:transparent;color:var(--pet);border-color:var(--pet)}
+.btn-ghost:hover{background:var(--pet-soft)}
+/* hero */
+.hero{padding:1.5rem 0 2.6rem}
+.hero .wrap{display:grid;gap:1.6rem}
+@media (min-width:980px){.hero{padding:3rem 0 4rem}.hero .wrap{grid-template-columns:1fr 1.08fr;gap:3rem;align-items:start}}
+.mono{display:flex;align-items:center;gap:.9rem;margin-bottom:1rem}
+.mono svg{flex:none;width:76px;height:76px}
+.mono span{font-weight:800;font-size:.86rem;letter-spacing:.07em;text-transform:uppercase;color:var(--coral-ink);line-height:1.35}
+@media (min-width:980px){.mono svg{width:150px;height:150px}}
+.lead{font-size:1.1rem;color:var(--muted);max-width:33rem}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.2rem 0 1rem}
+.cta .btn{flex:1 1 200px}
+.status{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;padding:.5rem .8rem;border-radius:99px;background:var(--card);border:2px solid var(--line);font-size:.95rem}
+.status i{width:11px;height:11px;border-radius:50%;background:#8B9396;flex:none}
+.status.open{color:var(--pet);border-color:var(--pet-mid)} .status.open i{background:#1E8A6E;box-shadow:0 0 0 4px rgba(30,138,110,.18)}
+.status.pause{color:#7A2A1E;border-color:var(--coral)} .status.pause i{background:var(--coral)}
+.status.closed{color:var(--graf)}
+.status.holiday{color:#7A2A1E}
+.hrs{font-size:.95rem;color:var(--muted);margin:.7rem 0 0}
+.hrs b{color:var(--graf)}
+/* board */
+.board{background:var(--pet);color:#fff;border-radius:22px;padding:1.1rem 1rem 1.2rem;box-shadow:0 14px 0 -6px var(--coral)}
+.board h2{color:#fff;font-size:clamp(1.5rem,4vw,2rem);margin:0 0 .25rem}
+.board .sub{color:#CFE3E1;font-size:.95rem;margin:0 0 .9rem}
+.tabs{display:flex;gap:.4rem;margin-bottom:.8rem}
+.tabs button{flex:1;min-height:44px;border-radius:10px;border:2px solid #5E9A9C;background:transparent;color:#fff;font:800 .95rem var(--sans);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--sand);color:var(--pet-ink);border-color:var(--sand)}
+.axis,.row{display:grid;grid-template-columns:58px 1fr;gap:.5rem;align-items:center}
+.axis{font-size:.75rem;color:#CFE3E1;margin-bottom:.3rem}
+.axis .ticks{position:relative;height:1.1em}
+.axis .ticks span{position:absolute;transform:translateX(-50%)}
+.axis .ticks span:first-child{transform:none}
+.axis .ticks span:last-child{transform:translateX(-100%)}
+.rows{display:grid;gap:.45rem}
+.row .lab{font-weight:800;line-height:1.1;font-size:.95rem}
+.row .lab small{display:block;font-weight:500;color:#CFE3E1;font-size:.78rem}
+.row.today .lab{color:#FFD2CA}
+.track{position:relative;height:50px;border-radius:10px;background:rgba(255,255,255,.08)}
+.seg{position:absolute;top:0;bottom:0;border-radius:9px;border:2px solid transparent;font:800 .9rem var(--sans);display:flex;align-items:center;justify-content:center;padding:0 .2rem;text-align:center;line-height:1.1}
+button.seg{background:var(--sand);color:var(--pet-ink);cursor:pointer;border-color:var(--sand)}
+button.seg:hover{background:#fff}
+button.seg[aria-pressed=true]{background:var(--coral);border-color:#fff;color:#0E1214;box-shadow:0 0 0 2px var(--coral)}
+button.seg:disabled{background:rgba(255,255,255,.12);border-color:transparent;color:#A9C6C4;cursor:default;text-decoration:line-through}
+.seg.pause{background:repeating-linear-gradient(135deg,rgba(255,255,255,.22) 0 5px,transparent 5px 10px);color:#E4F0EF;font-size:.72rem;font-weight:700;border:1px dashed rgba(255,255,255,.45)}
+.seg.shut{background:transparent;color:#A9C6C4;font-size:.8rem;font-weight:700;border:1px dashed rgba(255,255,255,.3)}
+.seg.hol{left:0;right:0;background:rgba(232,96,79,.18);color:#FFD2CA;border:1px dashed var(--coral);font-size:.82rem}
+.now{position:absolute;top:-6px;bottom:-6px;width:0;border-left:3px solid var(--coral);z-index:2;pointer-events:none}
+.now::after{content:"teď";position:absolute;top:-1.15em;left:-1.1em;background:var(--coral);color:var(--graf);font:800 .66rem/1 var(--sans);padding:.2em .4em;border-radius:4px}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.8rem;color:#CFE3E1;margin:.8rem 0 0}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:.3rem}
+.picker{background:var(--card);color:var(--graf);border-radius:14px;padding:1rem;margin-top:1rem}
+.picker .chosen{font-weight:800;color:var(--pet-ink);margin:0 0 .7rem}
+.picker .chosen em{font-style:normal;color:var(--coral-ink)}
+.who{display:flex;flex-wrap:wrap;gap:.45rem}
+.who input{position:absolute;opacity:0;pointer-events:none}
+.who label{display:inline-flex;align-items:center;gap:.4rem;min-height:46px;padding:.4rem .9rem;border-radius:10px;border:2px solid var(--line);background:#fff;font-weight:800;cursor:pointer}
+.who input:checked+label{background:var(--pet);border-color:var(--pet);color:#fff}
+.who input:checked+label::before{content:"✓"}
+.name{display:grid;gap:.3rem;margin-top:.8rem;font-weight:700;font-size:.9rem}
+.name input{font:inherit;font-weight:400;min-height:46px;padding:.6rem .8rem;border-radius:10px;border:2px solid var(--line);background:#fff;color:var(--graf)}
+.err{color:#9B1C1C;font-weight:800;font-size:.9rem;min-height:1.2em;margin:.5rem 0 0}
+.result{display:none;margin-top:.8rem;border:2px dashed var(--pet);border-radius:12px;padding:.9rem;background:#F6FAF9}
+.result.show{display:block}
+.result .msg{font-size:1.08rem;font-weight:700;color:var(--pet-ink);margin:.2rem 0 .7rem}
+.result .row2{display:flex;flex-wrap:wrap;gap:.5rem}
+.result .btn{min-height:46px;padding:.55rem 1rem;font-size:.95rem}
+.small{font-size:.83rem;color:var(--muted)}
+section{padding:3.2rem 0}
+.sec-head{max-width:44rem;margin-bottom:1.6rem}
+.sec-head p{color:var(--muted)}
+.kick{font-weight:800;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--coral-ink);margin-bottom:.4rem}
+/* services */
+.svc{display:grid;gap:1rem}
+@media (min-width:780px){.svc{grid-template-columns:repeat(3,1fr)}}
+.svc article{background:var(--card);border:2px solid var(--graf);border-radius:var(--r);padding:1.3rem;position:relative;overflow:hidden}
+.svc .letter{position:absolute;right:-.06em;top:-.22em;font:800 6.5rem/1 var(--head);color:var(--sand-2);pointer-events:none}
+.svc h3,.svc p{position:relative}
+.svc p{color:var(--muted);margin:0}
+.price{margin-top:1.1rem;padding:.9rem 1rem;border-radius:12px;background:var(--pet-soft);color:var(--pet-ink);font-weight:800;display:flex;gap:.6rem;align-items:center}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+@media (min-width:780px){.gal{grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto}.gal .ph:first-child{grid-row:span 2;aspect-ratio:auto}}
+.gal .ph:first-child{grid-column:span 2;aspect-ratio:16/9}
+@media (min-width:780px){.gal .ph:first-child{grid-column:auto;aspect-ratio:auto}}
+.ph{aspect-ratio:4/5;border-radius:var(--r);border:2px dashed #B9A88B;background:repeating-linear-gradient(45deg,#EFE6D6 0 10px,#E9DEC9 10px 20px);display:flex;flex-direction:column;justify-content:flex-end;padding:.9rem}
+.ph b{font-family:var(--head);color:var(--pet-ink)}
+.ph span{font-size:.82rem;color:var(--muted)}
+.trust{background:var(--sand-2)}
+.facts{display:grid;gap:1rem}
+@media (min-width:780px){.facts{grid-template-columns:repeat(3,1fr)}}
+.fact{background:var(--card);border-radius:var(--r);padding:1.2rem;border-top:6px solid var(--pet)}
+.fact .k{font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--coral-ink)}
+.fact .v{font:800 1.3rem/1.2 var(--head);color:var(--pet-ink);margin:.25rem 0}
+.fact p{margin:0;font-size:.92rem;color:var(--muted)}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:1rem;counter-reset:s}
+@media (min-width:780px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{background:var(--card);border-radius:var(--r);padding:1.2rem;border:2px solid var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:var(--coral);color:#0E1214;font:800 1.35rem var(--head);margin-bottom:.7rem}
+.steps p{margin:0;color:var(--muted)}
+.contact{background:var(--graf);color:var(--on-dark)}
+.contact h2{color:#fff}
+.contact .sec-head p{color:#D9D2C6}
+.cgrid{display:grid;gap:1rem}
+@media (min-width:860px){.cgrid{grid-template-columns:1fr 1fr}}
+.cbox{background:var(--card);color:var(--graf);border-radius:var(--r);padding:1.3rem}
+.cbox dl{margin:0;display:grid;gap:.75rem}
+.cbox dt{font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.cbox dd{margin:0;font-weight:800;font-size:1.08rem;overflow-wrap:anywhere}
+.htable{width:100%;border-collapse:collapse}
+.htable th,.htable td{text-align:left;padding:.5rem .25rem;border-bottom:1px solid var(--line)}
+.htable td{text-align:right;font-weight:800}
+.htable tr.today th,.htable tr.today td{background:var(--pet-soft);color:var(--pet-ink)}
+.htable tr.off td{font-weight:400;color:var(--muted)}
+.faq details{background:var(--card);border:2px solid var(--line);border-radius:12px;margin-bottom:.6rem}
+.faq summary{cursor:pointer;list-style:none;padding:1rem 1.1rem;font-weight:800;color:var(--pet-ink);display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--coral-ink);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0;padding:0 1.1rem 1rem;color:var(--muted)}
+footer{background:#161B1D;color:#D9D2C6;padding:2.2rem 0;font-size:.92rem}
+footer .wrap{display:grid;gap:.35rem}
+footer b{font-family:var(--head);color:#fff;font-size:1.15rem}
+footer a{color:#fff}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:2px solid var(--graf);padding:.6rem max(16px,env(safe-area-inset-right,0px)) calc(.6rem + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;gap:.5rem}
+.sticky .btn{flex:1;min-height:50px;padding:.6rem .8rem}
+@media (min-width:900px){.sticky{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="proto" role="note"><div class="wrap">Nezávazný návrh webu – není to oficiální stránka firmy Kadeřnické studio M – Holičství</div></div>
+
+<div role="banner" class="top">
+  <div class="wrap">
+    <a class="brand" href="#uvod" aria-label="Kadeřnické studio M – Holičství, Miroslav – úvod">
+      <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="10" fill="#0F5257"/><path d="M9 31V11h4.5L21 22l7.5-11H33v20h-4.4V18.6L21 29.4l-7.6-10.8V31z" fill="#F4EDE1"/><circle cx="33" cy="33" r="5" fill="#E8604F"/></svg>
+      <span><b>Kadeřnické studio M</b> <small>· Holičství · Miroslav</small></span>
+    </a>
+    <nav aria-label="Hlavní"><a href="#tabule">Kdy to stihnu?</a> <a href="#sluzby">Střihy</a> <a href="#kontakt">Kontakt</a> <a href="#otazky">Otázky</a></nav>
+    <a class="tel-top" href="tel:+420605188660"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg> 605 188 660</a>
+  </div>
+</div>
+
+<main id="uvod">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <div class="mono">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Monogram M s nůžkami">
+          <rect width="120" height="120" rx="26" fill="#0F5257"/>
+          <path d="M22 92V26h14l24 34 24-34h14v66H84V50L60 84 36 50v42z" fill="#F4EDE1"/>
+          <g transform="translate(60 98) rotate(-90)" stroke="#E8604F" stroke-width="4" fill="none" stroke-linecap="round">
+            <circle cx="-2" cy="-8" r="6"/><circle cx="-2" cy="8" r="6"/>
+            <path d="M3 -5 L26 6 M3 5 L26 -6"/>
+          </g>
+        </svg>
+        <span>Dámské · pánské · dětské střihy<br>Radniční 17, Miroslav</span>
+      </div>
+      <h1 id="h1">Střih v Miroslavi bez dlouhého čekání.</h1>
+      <p class="lead">Na tabuli vidíte celý týden. Ťukněte na dopoledne nebo odpoledne, které Vám vyjde, a pošlete SMS – nebo rovnou zavolejte.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="tel:+420605188660"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg> Zavolat 605 188 660</a>
+        <a class="btn btn-coral" href="#tabule">Objednat se</a>
+      </div>
+      <span class="status" data-status><i></i><span>Otevírací doba</span></span>
+      <p class="hrs"><b>Po</b> 13–17 · <b>Út–Pá</b> 8–11 a 13–17 · víkend zavřeno</p>
+    </div>
+
+    <div class="board" id="tabule" aria-labelledby="h-tabule">
+      <h2 id="h-tabule">Kdy to stihnu?</h2>
+      <p class="sub">Vyberte volný úsek na tabuli a kdo jde stříhat. SMS Vám poskládáme.</p>
+      <div class="tabs" role="tablist" aria-label="Týden">
+        <button type="button" role="tab" id="t0" aria-selected="true">Tento týden</button>
+        <button type="button" role="tab" id="t1" aria-selected="false">Příští týden</button>
+      </div>
+      <div class="axis" aria-hidden="true"><span></span><div class="ticks"><span style="left:0">8:00</span><span style="left:33.33%">11</span><span style="left:55.55%">13</span><span style="left:100%">17:00</span></div></div>
+      <div class="rows" id="rows" role="group" aria-label="Dny a úseky"></div>
+      <div class="legend" aria-hidden="true"><span><i style="background:#F4EDE1"></i>volné k výběru</span><span><i style="background:repeating-linear-gradient(135deg,rgba(255,255,255,.5) 0 3px,transparent 3px 6px);border:1px dashed #CFE3E1"></i>polední pauza 11–13</span><span><i style="background:#E8604F"></i>Váš výběr</span></div>
+      <form class="picker" id="mForm" novalidate>
+        <p class="chosen" id="chosen">Nejdřív ťukněte na úsek v tabuli.</p>
+        <div class="who" role="group" aria-label="Kdo jde stříhat">
+          <input type="checkbox" id="w-d" value="dámský"><label for="w-d">Dámský</label>
+          <input type="checkbox" id="w-p" value="pánský"><label for="w-p">Pánský</label>
+          <input type="checkbox" id="w-c" value="dětský"><label for="w-c">Dětský</label>
+        </div>
+        <label class="name">Jméno (nepovinné)<input id="mname" autocomplete="name" placeholder="např. Dvořák"></label>
+        <button class="btn btn-main" type="submit" style="width:100%;margin-top:.9rem">Sestavit SMS</button>
+        <p class="err" id="merr" role="alert"></p>
+        <div class="result" id="mres" aria-live="polite">
+          <p class="small" style="margin:0">Text zprávy:</p>
+          <p class="msg" id="msg"></p>
+          <div class="row2"><a class="btn btn-main" id="msms" href="sms:+420605188660">Otevřít v SMS</a><button class="btn btn-ghost" type="button" id="mcopy">Kopírovat text</button></div>
+          <p class="small" id="mnote" style="margin:.6rem 0 0">Nic se neodesílá samo – zprávu pošlete Vy na 605 188 660. Termín Vám potvrdíme.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" aria-labelledby="h-sluzby">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick">Kadeřnictví i holičství</p>
+      <h2 id="h-sluzby">Stříháme dámy, pány i děti</h2>
+      <p>Tak to studio uvádí na Firmy.cz: dámské, pánské a dětské střihy. Jedno místo pro celou domácnost.</p>
+    </div>
+    <div class="svc">
+      <article><span class="letter" aria-hidden="true">D</span><h3>Dámské střihy</h3><p>Zkrátit, upravit tvar, nebo něco nového. Fotka v telefonu pomůže. <span class="demo">ukázkový text</span></p></article>
+      <article><span class="letter" aria-hidden="true">P</span><h3>Pánské střihy · holičství</h3><p>Rychlá úprava cestou z práce i pořádný střih na sobotu. Řekněte, jak to nosíte. <span class="demo">ukázkový text</span></p></article>
+      <article><span class="letter" aria-hidden="true">Dě</span><h3>Dětské střihy</h3><p>Vezměte děti s sebou – na tabuli vyberte stejný úsek pro všechny. <span class="demo">ukázkový text</span></p></article>
+    </div>
+    <div class="price"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0F5257" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 15-5-5 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg><span>Cenu Vám řekneme předem, ještě než vezmeme nůžky do ruky.</span></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-foto" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-foto">Z křesla na Radniční</h2><p>Místo pro Vaše vlastní fotky střihů a studia.</p></div>
+    <div class="gal">
+      <div class="ph"><b>Sem přijde Vaše fotka</b><span>studio zevnitř – křeslo a zrcadlo</span></div>
+      <div class="ph"><b>Sem přijde Vaše fotka</b><span>dámský střih</span></div>
+      <div class="ph"><b>Sem přijde Vaše fotka</b><span>pánský střih</span></div>
+      <div class="ph"><b>Sem přijde Vaše fotka</b><span>dětský střih (se souhlasem rodičů)</span></div>
+      <div class="ph"><b>Sem přijde Vaše fotka</b><span>vchod z Radniční ulice</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="h-duvera">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-duvera">Místní studio, žádný řetězec</h2><p>Ověřené údaje z veřejného profilu na Firmy.cz.</p></div>
+    <div class="facts">
+      <div class="fact"><div class="k">Obor</div><div class="v">Kadeřnictví a holičství</div><p>Dámské, pánské a dětské střihy – <a href="https://www.firmy.cz/detail/14051873-kadernicke-studio-m-holicstvi-miroslav.html" rel="noopener">profil na Firmy.cz</a></p></div>
+      <div class="fact"><div class="k">Kde</div><div class="v">Radniční 609/17, Miroslav</div><p>671 72 Miroslav</p></div>
+      <div class="fact"><div class="k">Živnostník</div><div class="v">IČO 48922773</div><p>Ověřitelné v živnostenském rejstříku</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-jak">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-jak">Jak to probíhá <span class="demo">ukázkový text</span></h2></div>
+    <ol class="steps">
+      <li><h3>Vyberete úsek na tabuli</h3><p>Dopoledne nebo odpoledne, kdo jde – a pošlete SMS. Nebo zavoláte.</p></li>
+      <li><h3>Potvrdíme Vám čas</h3><p>Ozveme se s přesnou hodinou, ať u nás nesedíte zbytečně.</p></li>
+      <li><h3>Přijdete na Radniční 17</h3><p>Střih, cena řečená předem a jste zpátky ve svém dni.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-kontakt">Kontakt a otevírací doba</h2><p>Než přijdete, zavolejte – domluvíme čas, ať nečekáte.</p></div>
+    <div class="cgrid">
+      <div class="cbox">
+        <dl>
+          <div><dt>Telefon</dt><dd><a href="tel:+420605188660">605 188 660</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:kadernictvi-m@seznam.cz">kadernictvi-m@seznam.cz</a></dd></div>
+          <div><dt>Adresa</dt><dd>Radniční 609/17, 671 72 Miroslav</dd></div>
+        </dl>
+        <p style="margin:1.1rem 0 0"><a class="btn btn-ghost" href="https://mapy.cz/zakladni?q=Radni%C4%8Dn%C3%AD%20609%2F17%2C%20Miroslav" rel="noopener">Ukázat na Mapy.cz</a></p>
+      </div>
+      <div class="cbox">
+        <p style="margin:0 0 .6rem"><span class="status" data-status><i></i><span>Otevírací doba</span></span></p>
+        <table class="htable" id="htable"><tbody>
+          <tr data-d="1"><th>Pondělí</th><td>13:00–17:00</td></tr>
+          <tr data-d="2"><th>Úterý</th><td>8:00–11:00, 13:00–17:00</td></tr>
+          <tr data-d="3"><th>Středa</th><td>8:00–11:00, 13:00–17:00</td></tr>
+          <tr data-d="4"><th>Čtvrtek</th><td>8:00–11:00, 13:00–17:00</td></tr>
+          <tr data-d="5"><th>Pátek</th><td>8:00–11:00, 13:00–17:00</td></tr>
+          <tr data-d="6" class="off"><th>Sobota</th><td>zavřeno</td></tr>
+          <tr data-d="0" class="off"><th>Neděle</th><td>zavřeno</td></tr>
+        </tbody></table>
+        <p class="small" style="margin:.7rem 0 0">O státních svátcích se otevírací doba může lišit – zavolejte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="otazky" aria-labelledby="h-faq">
+  <div class="wrap" style="max-width:860px">
+    <div class="sec-head"><h2 id="h-faq">Časté otázky <span class="demo">ukázkový text</span></h2></div>
+    <details><summary>Musím se objednat předem?</summary><p>Nejjistější je zavolat nebo poslat SMS přes tabuli nahoře. Termín Vám potvrdíme, ať nečekáte.</p></details>
+    <details><summary>Mám si vzít fotku účesu?</summary><p>Klidně. Ukázka v telefonu ušetří dlouhé vysvětlování a výsledek bude blíž Vaší představě.</p></details>
+    <details><summary>Můžu přijít i s dětmi?</summary><p>Ano, studio stříhá i děti. V tabuli zaškrtněte „Dětský“ a napište, kolik dětí půjde.</p></details>
+    <details><summary>Proč je mezi 11 a 13 zavřeno?</summary><p>Úterý až pátek je polední pauza. V tabuli je vyšrafovaná, ať na ni nenarazíte.</p></details>
+    <details><summary>Kolik zaplatím a jak?</summary><p>Cenu Vám řekneme předem. Na způsob platby se zeptejte při objednání.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Kadeřnické studio M – Holičství</b> <span>Radniční 609/17, 671 72 Miroslav · IČO 48922773</span> <span>Tel. <a href="tel:+420605188660">605 188 660</a> · <a href="mailto:kadernictvi-m@seznam.cz">kadernictvi-m@seznam.cz</a></span> <span style="opacity:.85">Nezávazný návrh webu – údaje podle veřejného profilu na Firmy.cz.</span>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-main" href="tel:+420605188660">Zavolat 605 188 660</a>
+  <a class="btn btn-coral" href="#tabule" style="flex:0 0 auto">Termín</a>
+</div>
+
+
+<script>
+(function(){
+  var START=8,END=17,SPAN=END-START;
+  var HOURS={1:[[13,17]],2:[[8,11],[13,17]],3:[[8,11],[13,17]],4:[[8,11],[13,17]],5:[[8,11],[13,17]]};
+  var DAYACC=['neděli','pondělí','úterý','středu','čtvrtek','pátek','sobotu'];
+  var DAYS=['Ne','Po','Út','St','Čt','Pá','So'];
+  var V=['ve','v','v','ve','ve','v','v'];
+  function prague(){
+    var p={};
+    try{new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});}
+    catch(e){var d=new Date();return {y:d.getFullYear(),m:d.getMonth()+1,d:d.getDate(),h:d.getHours()+d.getMinutes()/60};}
+    return {y:+p.year,m:+p.month,d:+p.day,h:(+p.hour%24)+(+p.minute)/60};
+  }
+  function easter(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(Date.UTC(y,mo-1,da));}
+  function isHoliday(dt){
+    var k=(dt.getUTCMonth()+1)+'-'+dt.getUTCDate();
+    if(['1-1','5-1','5-8','7-5','7-6','9-28','10-28','11-17','12-24','12-25','12-26'].indexOf(k)>=0)return true;
+    var e=easter(dt.getUTCFullYear()).getTime(),t=dt.getTime(),D=864e5;return t===e-2*D||t===e+D;
+  }
+  function fmt(h){var H=Math.floor(h),M=Math.round((h-H)*60);return H+':'+(M<10?'0':'')+M;}
+  var now=prague(),D=864e5,today=new Date(Date.UTC(now.y,now.m-1,now.d)),dow=today.getUTCDay();
+  // status
+  (function(){
+    var txt,cls='closed',sl=HOURS[dow]||[];
+    if(isHoliday(today)){txt='Dnes je svátek – zavolejte, zda máme otevřeno';cls='holiday';}
+    else{
+      var open=sl.filter(function(s){return now.h>=s[0]&&now.h<s[1]})[0];
+      var next=sl.filter(function(s){return now.h<s[0]})[0];
+      if(open){txt='Teď otevřeno · do '+fmt(open[1]);cls='open';}
+      else if(next&&sl.length>1&&now.h>=sl[0][1]){txt='Polední pauza do '+fmt(next[0]);cls='pause';}
+      else if(next){txt='Zavřeno, otevíráme dnes v '+fmt(next[0]);}
+      else{for(var i=1;i<15;i++){var d=new Date(today.getTime()+i*D),w=d.getUTCDay();if(HOURS[w]&&!isHoliday(d)){txt='Zavřeno, otevíráme '+(i===1?'zítra':V[w]+' '+DAYACC[w])+' v '+fmt(HOURS[w][0][0]);break;}}}
+    }
+    document.querySelectorAll('[data-status]').forEach(function(el){el.className='status '+cls;el.querySelector('span').textContent=txt;});
+    var tr=document.querySelector('#htable tr[data-d="'+dow+'"]');if(tr)tr.classList.add('today');
+  })();
+  // board
+  var monday=new Date(today.getTime()-((dow+6)%7)*D);
+  var rowsEl=document.getElementById('rows'),sel=null;
+  function pct(h){return ((h-START)/SPAN*100).toFixed(2)+'%';}
+  function available(d,s){ // segment end must be > now+0.5h if today, day not past
+    var t=d.getTime();if(t<today.getTime())return false;if(t===today.getTime()&&now.h>s[1]-1)return false;return true;
+  }
+  function anyFree(week){
+    for(var i=0;i<5;i++){var d=new Date(monday.getTime()+(week*7+i)*D);if(isHoliday(d))continue;var sl=HOURS[d.getUTCDay()];for(var j=0;j<sl.length;j++)if(available(d,sl[j]))return true;}
+    return false;
+  }
+  function render(week){
+    rowsEl.innerHTML='';
+    for(var i=0;i<5;i++){
+      var d=new Date(monday.getTime()+(week*7+i)*D),w=d.getUTCDay(),isT=d.getTime()===today.getTime();
+      var row=document.createElement('div');row.className='row'+(isT?' today':'');
+      var dl=d.getUTCDate()+'. '+(d.getUTCMonth()+1)+'.';
+      row.innerHTML='<div class="lab">'+DAYS[w]+' <small>'+(isT?'dnes · ':'')+dl+'</small></div>';
+      var tr=document.createElement('div');tr.className='track';
+      if(isHoliday(d)){tr.innerHTML='<span class="seg hol">'+dl+' státní svátek – zavřeno</span>';}
+      else{
+        var sl=HOURS[w];
+        if(sl[0][0]>START){var sh=document.createElement('span');sh.className='seg shut';sh.style.left='0';sh.style.width=pct(sl[0][0]);sh.textContent='dopoledne zavřeno';tr.appendChild(sh);}
+        sl.forEach(function(s,k){
+          var b=document.createElement('button');b.type='button';b.className='seg';
+          b.style.left=pct(s[0]);b.style.width='calc('+(((s[1]-s[0])/SPAN*100).toFixed(2))+'% - 2px)';
+          var part=s[0]<12?'dopoledne':'odpoledne';
+          b.textContent=s[0]+'–'+s[1];
+          var key=d.toISOString().slice(0,10)+'-'+part;
+          b.dataset.key=key;b.dataset.txt=V[w]+' '+DAYACC[w]+' '+dl+' '+part+' ('+s[0]+'–'+s[1]+' h)';
+          b.setAttribute('aria-label',DAYACC[w]+' '+dl+' '+part+' '+s[0]+' až '+s[1]);
+          b.setAttribute('aria-pressed',sel&&sel.key===key?'true':'false');
+          if(!available(d,s)){b.disabled=true;b.setAttribute('aria-label',b.getAttribute('aria-label')+' – už nelze');}
+          tr.appendChild(b);
+          if(k===0&&sl[1]){var p=document.createElement('span');p.className='seg pause';p.style.left=pct(s[1]);p.style.width=pct(START+sl[1][0]-s[1]);p.textContent='pauza';p.setAttribute('aria-hidden','true');tr.appendChild(p);}
+        });
+      }
+      if(isT&&now.h>=START&&now.h<=END){var n=document.createElement('span');n.className='now';n.style.left=pct(now.h);n.setAttribute('aria-hidden','true');tr.appendChild(n);}
+      row.appendChild(tr);rowsEl.appendChild(row);
+    }
+  }
+  var cur=anyFree(0)?0:1;
+  function setWeek(w){cur=w;document.getElementById('t0').setAttribute('aria-selected',w===0);document.getElementById('t1').setAttribute('aria-selected',w===1);render(w);}
+  document.getElementById('t0').onclick=function(){setWeek(0)};
+  document.getElementById('t1').onclick=function(){setWeek(1)};
+  setWeek(cur);
+  var chosen=document.getElementById('chosen');
+  rowsEl.addEventListener('click',function(e){
+    var b=e.target.closest('button.seg');if(!b||b.disabled)return;
+    sel={key:b.dataset.key,txt:b.dataset.txt};
+    rowsEl.querySelectorAll('button.seg').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    chosen.innerHTML='Vybráno: <em></em>';chosen.querySelector('em').textContent=sel.txt;
+    document.getElementById('merr').textContent='';
+  });
+  var form=document.getElementById('mForm'),res=document.getElementById('mres'),msg=document.getElementById('msg'),err=document.getElementById('merr');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();err.textContent='';
+    if(!sel){err.textContent='Ťukněte nejdřív na úsek v tabuli.';res.classList.remove('show');return;}
+    var who=[].slice.call(form.querySelectorAll('.who input:checked')).map(function(x){return x.value});
+    if(!who.length){err.textContent='Zaškrtněte, jaký střih chcete.';res.classList.remove('show');return;}
+    var w=who.length===1?who[0]:who.slice(0,-1).join(', ')+' a '+who[who.length-1];
+    var nm=document.getElementById('mname').value.trim();
+    var t='Dobrý den, prosím o termín na '+w+' střih '+sel.txt+'. Šlo by to? Děkuji'+(nm?', '+nm:'')+'.';
+    msg.textContent=t;
+    document.getElementById('msms').href='sms:+420605188660?body='+encodeURIComponent(t);
+    res.classList.add('show');
+  });
+  document.getElementById('mcopy').addEventListener('click',function(){
+    var t=msg.textContent,note=document.getElementById('mnote');
+    function ok(){note.textContent='Zkopírováno – vložte do SMS na 605 188 660.';}
+    function bad(){note.textContent='Kopírování se nepovedlo – text si označte a zkopírujte ručně.';}
+    function fb(){try{var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var r=document.execCommand('copy');document.body.removeChild(ta);r?ok():bad();}catch(e){bad();}}
+    try{if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fb);}else fb();}catch(e){fb();}
+  });
+})();
+</script>
+</body>
+</html>

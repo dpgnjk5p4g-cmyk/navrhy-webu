@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Kadeřnické studio Helena Dittrichová</title>
+<meta name="description" content="Kadeřnické studio Helena Dittrichová, Miroslav – svatební a společenské účesy, líčení, dámské, pánské a dětské kadeřnictví, barvení a melíry. Nám. Svobody 22, Miroslav.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Kadeřnické studio - Helena Dittrichová","telephone":"+420602789993","email":"salond@seznam.cz","address":{"@type":"PostalAddress","streetAddress":"nám. Svobody 22/22","postalCode":"671 72","addressLocality":"Miroslav","addressCountry":"CZ"},"taxID":"45660361","sameAs":["https://www.facebook.com/kadernickestudioznojmo"]}
+</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+<style>
+:root{
+  color-scheme: light;
+  --champ:#F3E9DC;
+  --paper:#FBF7F1;
+  --blush:#EBD9D0;
+  --bordo:#6E1E33;
+  --bordo-deep:#4F1424;
+  --gold:#A9802F;
+  --gold-text:#7A5A1A;
+  --gold-soft:#E4D2A8;
+  --ink:#1D1A22;
+  --muted:#4B4350;
+  --line:#D9C6A6;
+  --on-bordo:#FBF2E6;
+  --serif:"Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", Georgia, serif;
+  --sans:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--champ);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:var(--bordo)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;text-wrap:balance;margin:0;color:var(--ink)}
+h2{font-size:clamp(34px,6vw,54px);letter-spacing:-.01em}
+h3{font-size:26px}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--bordo);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tag{display:inline-block;font:600 11px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;background:#fff;color:var(--muted);border:1px dashed #9B8E9C;border-radius:99px;padding:3px 8px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.eyebrow{font:700 13px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+
+/* demo strip */
+.demo{background:var(--ink);color:#F3E9DC;font-size:13px;text-align:center;padding:7px 0;line-height:1.35}
+
+/* banner */
+.top{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px}
+.brand{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px;min-width:0}
+.brand svg{flex:none}
+.brand-txt{display:flex;flex-direction:column;line-height:1.05}
+.brand-a{font:600 11px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text)}
+.brand-b{font:600 22px/1.05 var(--serif);color:var(--bordo)}
+nav ul{list-style:none;margin:0;padding:0;display:none;gap:26px}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+nav a:hover{color:var(--bordo)}
+.top-tel{display:inline-flex;align-items:center;gap:8px;background:var(--bordo);color:var(--on-bordo);text-decoration:none;font-weight:700;font-size:15px;border-radius:99px;padding:9px 14px;white-space:nowrap}
+.top-tel svg{width:16px;height:16px}
+@media (min-width:960px){nav ul{display:flex}}
+
+/* buttons */
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:99px;font:700 16px/1 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-p{background:var(--bordo);color:var(--on-bordo)}
+.btn-p:hover{background:var(--bordo-deep)}
+.btn-s{background:transparent;color:var(--bordo);border-color:var(--bordo)}
+.btn-s:hover{background:#fff}
+
+/* hero */
+.hero{position:relative;padding:22px 0 46px;background:
+  radial-gradient(120% 80% at 50% 0%, #FFF9F0 0%, var(--champ) 60%);overflow:hidden}
+.hero-grid{display:grid;gap:28px;align-items:center}
+.mirror{position:relative;margin:0 auto;width:min(100%,560px);padding:12px;border-radius:300px 300px 34px 34px;background:linear-gradient(160deg,#C9A65A,#A9802F 40%,#E8D3A0 60%,#A9802F);box-shadow:0 30px 60px -30px rgba(79,20,36,.45)}
+.mirror-in{position:relative;border-radius:290px 290px 26px 26px;padding:58px 22px 30px;text-align:center;overflow:hidden;
+  background:linear-gradient(180deg,#FFFDF9 0%,#F8EEE2 70%,#F1E2D2 100%);box-shadow:inset 0 0 0 1.5px #fff, inset 0 0 0 7px #F3E9DC, inset 0 0 0 8.5px var(--gold)}
+.mirror-in::before{content:"";position:absolute;top:-20%;left:-30%;width:42%;height:150%;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.75),rgba(255,255,255,0));transform:rotate(18deg);pointer-events:none}
+.mirror-in>*{position:relative}
+.mirror .eyebrow::before{display:none}
+.mirror .crest{display:block;margin:0 auto 10px;width:62px;height:auto}
+.hero h1{font-size:clamp(36px,9.4vw,64px);color:var(--ink);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--bordo);font-weight:600}
+.hero .lead{color:var(--muted);font-size:16.5px;max-width:30em;margin:0 auto 20px}
+.hero .ctas{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:0 auto}
+.hero .meta{margin-top:16px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px}
+.hero .meta b{color:var(--ink)}
+.hero-side{display:none}
+.stand{display:block;margin:-2px auto 0;width:min(70%,300px);height:auto}
+@media (min-width:960px){
+  .hero{padding:48px 0 70px}
+  .hero-grid{grid-template-columns:1fr 560px 1fr}
+  .hero-side{display:block}
+  .mirror-in{padding:84px 46px 40px}
+  .hero .ctas{flex-direction:row;max-width:none;justify-content:center}
+}
+.side-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px;font-size:15px}
+.side-card h3{font-size:24px;margin-bottom:6px}
+.side-card ul{margin:0;padding:0;list-style:none}
+.side-card li{padding:7px 0;border-top:1px solid #EADCC5}
+.side-card li:first-child{border-top:0}
+
+/* sections */
+section{padding:64px 0}
+.sec-head{max-width:720px;margin-bottom:30px}
+.sec-head p{color:var(--muted)}
+.sec-head h2+p{margin-top:14px}
+
+/* planner */
+.planner-sec{background:var(--bordo);color:var(--on-bordo);position:relative;overflow:hidden}
+.planner-sec h2{color:#fff}
+.planner-sec .eyebrow{color:var(--gold-soft)}
+.planner-sec .eyebrow::before{background:var(--gold-soft)}
+.planner-sec .sec-head p{color:#F0DCCF}
+.planner{display:grid;gap:18px}
+.card{background:var(--paper);color:var(--ink);border-radius:22px;padding:22px}
+.step-n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--bordo);color:#fff;font:700 14px/1 var(--sans);margin-right:10px;flex:none}
+.card h3{display:flex;align-items:center;font-size:25px;margin-bottom:14px}
+label.lbl{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+input[type=date],input[type=text],input[type=time]{width:100%;min-height:50px;border:1.5px solid #B9A58A;border-radius:12px;background:#fff;color:var(--ink);font:500 17px var(--sans);padding:10px 12px}
+.count{margin:12px 0 0;border-radius:16px;background:var(--champ);padding:16px;display:flex;gap:14px;align-items:center}
+.count .num{font:700 50px/1 var(--serif);color:var(--bordo);min-width:2ch;text-align:center}
+.count p{margin:0;font-size:15px}
+.advice{margin-top:12px;font-size:15px;border-left:3px solid var(--gold);padding:4px 0 4px 12px}
+.badge{display:inline-block;font:700 11px/1 var(--sans);text-transform:uppercase;letter-spacing:.08em;background:var(--gold-soft);color:#4A3609;border-radius:99px;padding:4px 8px;margin-right:6px;vertical-align:1px}
+.warn{color:#8A1C1C;font-weight:600}
+.row{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;padding:14px 0;border-top:1px solid #E7D8C2}
+.row:first-of-type{border-top:0}
+.row .who{font-weight:700}
+.row .who small{display:block;font-weight:400;color:var(--muted);font-size:13.5px}
+.stepper{display:flex;align-items:center;gap:4px}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--bordo);background:#fff;color:var(--bordo);font:700 22px/1 var(--sans);cursor:pointer}
+.stepper button:disabled{opacity:.35;cursor:not-allowed}
+.stepper output{min-width:2ch;text-align:center;font:700 22px/1 var(--sans)}
+.seg{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0}
+.seg span{display:inline-block;padding:8px 14px;border-radius:99px;border:1.5px solid #C7B394;font-size:14.5px;font-weight:600;background:#fff;cursor:pointer}
+.seg input:checked+span{background:var(--bordo);border-color:var(--bordo);color:#fff}
+.seg input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.seg[aria-disabled=true]{opacity:.45}
+.out{background:#fff;border:1.5px dashed var(--gold);border-radius:14px;padding:14px;white-space:pre-wrap;font-size:15.5px;min-height:120px}
+.out-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.note{font-size:13.5px;color:var(--muted);margin-top:10px}
+.copied{font-size:14px;color:var(--bordo);font-weight:600;min-height:1.4em;margin:8px 0 0}
+@media (min-width:960px){.planner{grid-template-columns:1fr 1.15fr 1fr;align-items:start}}
+
+/* services */
+.svc-grid{display:grid;gap:16px}
+.svc{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative}
+.svc .ico{width:44px;height:44px;margin-bottom:10px}
+.svc h3{margin-bottom:8px}
+.svc ul{margin:0;padding:0;list-style:none}
+.svc li{padding:6px 0 6px 20px;position:relative;font-size:16px}
+.svc li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border:1.5px solid var(--gold);transform:rotate(45deg)}
+.svc.feat{background:linear-gradient(160deg,#FFF9F2,#F2E1D6);border-color:var(--gold)}
+.price-note{margin-top:22px;font-size:16px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+@media (min-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1040px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* photos */
+.ph-grid{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.ph{aspect-ratio:3/4;border-radius:200px 200px 16px 16px;border:1.5px solid var(--gold);background:repeating-linear-gradient(135deg,#F6ECDF 0 14px,#F0E2D1 14px 28px);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:16px 12px;text-align:center;font-size:13.5px;color:var(--muted)}
+.ph b{display:block;color:var(--bordo);font-size:14px}
+@media (min-width:900px){.ph-grid{grid-template-columns:repeat(4,1fr)}.ph{aspect-ratio:4/5}}
+
+/* trust */
+.trust{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;gap:22px;align-items:center}
+.who-box{display:grid;gap:18px;grid-template-columns:1fr}
+.facts{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.fact{background:var(--champ);border-radius:16px;padding:16px}
+.fact b{display:block;font:600 23px/1.15 var(--serif);color:var(--bordo);margin-bottom:4px}
+.fact span{font-size:14px;color:var(--muted)}
+@media (min-width:900px){.trust-grid{grid-template-columns:1fr 1.1fr;gap:50px}}
+
+/* steps */
+.steps{display:grid;gap:14px;counter-reset:s}
+.st{background:var(--paper);border-radius:var(--radius);padding:22px;border:1px solid var(--line)}
+.st .n{font:600 46px/1 var(--serif);color:var(--gold-text)}
+.st h3{margin:6px 0 8px}
+.st p{margin:0;color:var(--muted)}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* contact */
+.contact{background:var(--ink);color:#F3E9DC}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--gold-soft)}
+.contact .eyebrow::before{background:var(--gold-soft)}
+.c-grid{display:grid;gap:18px}
+.c-grid>*{min-width:0}
+.c-card dd{overflow-wrap:anywhere}
+.map-art{display:block;aspect-ratio:16/10}
+.map-art svg{display:block;width:100%;height:100%}
+.c-card{background:#2A2530;border-radius:var(--radius);padding:22px;border:1px solid #3D3544}
+.c-card dt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#D8C8A6;margin-top:14px}
+.c-card dt:first-child{margin-top:0}
+.c-card dd{margin:4px 0 0;font-size:18px}
+.c-card a{color:#fff}
+.c-big{font:600 34px/1.1 var(--serif);text-decoration:none}
+.contact .tag{background:#2A2530;color:#E8DCCB;border-color:#8C7F92}
+.contact .btn-s{color:#fff;border-color:#E4D2A8}
+.contact .btn-s:hover{background:#3A3240}
+.map-art{border-radius:var(--radius);overflow:hidden;background:#2A2530;border:1px solid #3D3544}
+@media (min-width:900px){.c-grid{grid-template-columns:1fr 1fr}}
+
+/* faq */
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font-weight:700;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font:600 28px/1 var(--serif);color:var(--bordo)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 20px 18px;margin:0;color:var(--muted)}
+
+/* footer */
+footer{background:var(--bordo-deep);color:#F3E3D6;padding:36px 0 110px;font-size:15px}
+footer .f-name{font:600 26px/1.1 var(--serif);color:#fff;margin-bottom:8px}
+footer a{color:#fff}
+footer .small{font-size:13px;color:#E3C9C0;margin-top:16px}
+@media (min-width:900px){footer{padding-bottom:36px}}
+
+/* sticky call */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(251,247,241,.97);border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left,0px));display:flex;gap:8px;box-shadow:0 -8px 24px rgba(29,26,34,.12)}
+.callbar a{flex:1;min-height:50px}
+@media (min-width:900px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+
+<div class="demo">Nezávazný návrh webu – není to oficiální stránka firmy Kadeřnické studio – Helena Dittrichová</div>
+
+<div role="banner" class="top">
+  <div class="wrap">
+    <a class="brand" href="#uvod" aria-label="Kadeřnické studio Helena Dittrichová – úvod">
+      <svg width="34" height="40" viewBox="0 0 34 40" aria-hidden="true"><path d="M17 2C8.7 2 3 8.6 3 17v21h28V17C31 8.6 25.3 2 17 2z" fill="none" stroke="#A9802F" stroke-width="2"/><path d="M17 7c-6 0-10 4.8-10 11v16h20V18c0-6.2-4-11-10-11z" fill="#6E1E33" opacity=".12"/><path d="M12 14c3-3 7-3 10 0" stroke="#A9802F" stroke-width="1.6" fill="none"/></svg>
+      <span class="brand-txt"><span class="brand-a">Kadeřnické studio</span> <span class="brand-b">Helena Dittrichová</span></span>
+    </a>
+    <nav aria-label="Hlavní menu">
+      <ul>
+        <li><a href="#planovac">Svatební plánovač</a></li>
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#studio">O studiu</a></li>
+        <li><a href="#otazky">Otázky</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="top-tel" href="tel:+420602789993"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><span>602 789 993</span></a>
+  </div>
+</div>
+
+<main id="uvod">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero-grid">
+      <aside class="hero-side" aria-label="Co ve studiu uděláme">
+        <div class="side-card">
+          <h3>Pro nevěstu</h3>
+          <ul>
+            <li>Svatební účes</li>
+            <li>Svatební líčení</li>
+            <li>Účesy pro maminky a družičky</li>
+          </ul>
+        </div>
+      </aside>
+      <div>
+        <div class="mirror">
+          <div class="mirror-in">
+            <svg class="crest" viewBox="0 0 62 22" aria-hidden="true"><path d="M2 11h20M40 11h20" stroke="#A9802F" stroke-width="1.2"/><path d="M31 2l3 9-3 9-3-9z" fill="#A9802F"/><circle cx="24" cy="11" r="2" fill="#A9802F"/><circle cx="38" cy="11" r="2" fill="#A9802F"/></svg>
+            <p class="eyebrow" style="justify-content:center">Kadeřnictví a líčení · Miroslav</p>
+            <h1 id="h1">Účes a líčení na Váš velký den. <em>Na náměstí v Miroslavi.</em></h1>
+            <p class="lead">Svatební a společenské účesy, denní i večerní líčení. A k tomu běžné stříhání, barvení a melíry pro celou rodinu.</p>
+            <div class="ctas">
+              <a class="btn btn-p" href="tel:+420602789993"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>Zavolat 602 789 993</a>
+              <a class="btn btn-s" href="#planovac">Naplánovat svatbu</a>
+            </div>
+            <p class="meta"><span><b>Termín</b> po telefonické domluvě</span><span>nám. Svobody 22, Miroslav</span></p>
+          </div>
+        </div>
+        <svg class="stand" viewBox="0 0 300 40" aria-hidden="true"><path d="M20 4h260" stroke="#A9802F" stroke-width="2"/><path d="M60 4c10 18 40 26 90 26s80-8 90-26" fill="none" stroke="#A9802F" stroke-width="1.2"/><circle cx="150" cy="30" r="3" fill="#A9802F"/></svg>
+      </div>
+      <aside class="hero-side" aria-label="Pro celou rodinu">
+        <div class="side-card">
+          <h3>Pro celou rodinu</h3>
+          <ul>
+            <li>Dámské, pánské i dětské střihy</li>
+            <li>Barvení, tónování, melíry</li>
+            <li>Kosmetika L'Oréal a poradenství</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="planovac" class="planner-sec" aria-labelledby="h-plan">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Svatební plánovač</p>
+        <h2 id="h-plan">Kolik dní zbývá do svatby – a co je potřeba domluvit</h2>
+        <p>Zadejte datum, kolik vás bude a co si přejete. Plánovač z toho složí zprávu, kterou pošlete jedním klepnutím. Nic se neodesílá samo.</p>
+      </div>
+      <form class="planner" id="planForm" novalidate>
+        <div class="card">
+          <h3><span class="step-n">1</span>Datum svatby</h3>
+          <label class="lbl" for="wDate">Kdy se berete?</label>
+          <input type="date" id="wDate" name="wDate" required>
+          <div class="count" aria-live="polite">
+            <span class="num" id="days">–</span>
+            <p id="daysTxt">Vyberte datum a ukážeme, kolik dní zbývá.</p>
+          </div>
+          <p class="advice" id="advice"><span class="badge">orientační</span>Zkoušku účesu a líčení si domluvte zhruba měsíc předem.</p>
+          <label class="lbl" for="ready" style="margin-top:14px">V kolik musíte být hotové? <span style="font-weight:400;color:var(--muted)">(nepovinné)</span></label>
+          <input type="time" id="ready" name="ready">
+        </div>
+        <div class="card">
+          <h3><span class="step-n">2</span>Kdo a co</h3>
+          <div id="people"></div>
+        </div>
+        <div class="card">
+          <h3><span class="step-n">3</span>Vaše zpráva</h3>
+          <label class="lbl" for="name">Vaše jméno <span style="font-weight:400;color:var(--muted)">(nepovinné)</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="např. Petra">
+          <button class="btn btn-p" type="submit" style="width:100%;margin:14px 0">Složit zprávu</button>
+          <div class="out" id="out" aria-live="polite">Zpráva se objeví tady.</div>
+          <div class="out-actions">
+            <a class="btn btn-p" id="smsBtn" href="sms:+420602789993" aria-disabled="true">Otevřít SMS</a>
+            <button class="btn btn-s" type="button" id="copyBtn">Kopírovat</button>
+          </div>
+          <p class="copied" id="copied" aria-live="polite"></p>
+          <p class="note">SMS na číslo 602 789 993. Termín potvrdí paní Dittrichová – nebo rovnou zavolejte.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="sluzby" aria-labelledby="h-sluzby">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Služby</p>
+        <h2 id="h-sluzby">Od svatebního účesu po dětský střih</h2>
+      </div>
+      <div class="svc-grid">
+        <article class="svc feat">
+          <svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#6E1E33"/><path d="M14 27c2-8 6-12 8-12s6 4 8 12" stroke="#E4D2A8" stroke-width="1.8" fill="none"/><circle cx="22" cy="13" r="2.4" fill="#E4D2A8"/><path d="M12 29h20" stroke="#E4D2A8" stroke-width="1.6"/></svg>
+          <h3>Svatby a společenské akce</h3>
+          <ul><li>Svatební účesy</li><li>Společenské účesy</li><li>Účesy pro maminky a družičky</li></ul>
+        </article>
+        <article class="svc feat">
+          <svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#6E1E33"/><rect x="19" y="10" width="6" height="16" rx="2" fill="#E4D2A8"/><path d="M18 26h8l-1 9h-6z" fill="#E4D2A8" opacity=".7"/></svg>
+          <h3>Líčení</h3>
+          <ul><li>Denní líčení</li><li>Večerní líčení</li><li>Svatební líčení</li></ul>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E9DC" stroke="#A9802F"/><path d="M13 30c1-10 5-17 9-17s8 7 9 17" stroke="#6E1E33" stroke-width="1.8" fill="none"/><path d="M17 30c1-7 3-12 5-12" stroke="#6E1E33" stroke-width="1.4" fill="none"/></svg>
+          <h3>Dámské kadeřnictví</h3>
+          <ul><li>Střihy</li><li>Foukaná</li><li>Péče o vlasy a poradenství</li></ul>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E9DC" stroke="#A9802F"/><circle cx="16" cy="28" r="4" stroke="#6E1E33" stroke-width="1.8" fill="none"/><circle cx="28" cy="28" r="4" stroke="#6E1E33" stroke-width="1.8" fill="none"/><path d="M18.5 25 29 12M25.5 25 15 12" stroke="#6E1E33" stroke-width="1.8"/></svg>
+          <h3>Barvení a melíry</h3>
+          <ul><li>Barvení</li><li>Tónování</li><li>Melíry</li></ul>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E9DC" stroke="#A9802F"/><path d="M14 18c2-4 14-4 16 0v2H14z" fill="#6E1E33"/><path d="M15 22c0 6 3 9 7 9s7-3 7-9" stroke="#6E1E33" stroke-width="1.8" fill="none"/></svg>
+          <h3>Pánské a dětské</h3>
+          <ul><li>Pánské střihy</li><li>Dětské střihy</li></ul>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E9DC" stroke="#A9802F"/><rect x="16" y="15" width="12" height="18" rx="3" stroke="#6E1E33" stroke-width="1.8" fill="none"/><rect x="19" y="10" width="6" height="5" rx="1" fill="#6E1E33"/></svg>
+          <h3>Kosmetika L'Oréal</h3>
+          <ul><li>Prodej vlasové kosmetiky L'Oréal</li><li>Poradenství: co na Vaše vlasy doma</li></ul>
+        </article>
+      </div>
+      <p class="price-note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" style="flex:none;margin-top:3px"><circle cx="11" cy="11" r="10" fill="none" stroke="#A9802F" stroke-width="1.6"/><path d="M11 6v6M11 15v1" stroke="#6E1E33" stroke-width="2" stroke-linecap="round"/></svg><span>Cenu Vám řekneme předem – podle délky vlasů a toho, co si přejete. Stačí zavolat.</span></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-foto" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Ukázky</p>
+        <h2 id="h-foto">Účesy, které odcházely z náměstí</h2>
+      </div>
+      <div class="ph-grid">
+        <div class="ph"><b>Sem přijde Vaše fotka</b>svatební účes – drdol nebo vlny</div>
+        <div class="ph"><b>Sem přijde Vaše fotka</b>svatební líčení zblízka</div>
+        <div class="ph"><b>Sem přijde Vaše fotka</b>barvení / melír – výsledek</div>
+        <div class="ph"><b>Sem přijde Vaše fotka</b>interiér studia na náměstí</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio" class="trust" aria-labelledby="h-studio">
+    <div class="wrap trust-grid">
+      <div>
+        <p class="eyebrow">O studiu</p>
+        <h2 id="h-studio">Studio na náměstí, termín přímo s paní Dittrichovou</h2>
+        <p style="margin-top:16px">Ve studiu na náměstí Svobody v Miroslavi Vás obslouží Helena Dittrichová. Termín si domlouváte přímo s ní po telefonu, takže hned víte, na čem jste.</p>
+        <p style="color:var(--muted);font-size:15px">Krátké představení paní Dittrichové – kolik let stříhá, co ji na svatbách baví. <span class="tag">ukázkový text</span></p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>nám. Svobody 22</b><span>studio přímo na náměstí v Miroslavi</span></div>
+        <div class="fact"><b>Ženy, muži i děti</b><span>dámské, pánské a dětské kadeřnictví</span></div>
+        <div class="fact"><b>L'Oréal</b><span>prodej vlasové kosmetiky a poradenství</span></div>
+        <div class="fact"><b>IČO 45660361</b><span>živnostnice, ověřeno na Firmy.cz</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-jak">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Jak to probíhá</p>
+        <h2 id="h-jak">Ke svatebnímu účesu ve třech krocích</h2>
+      </div>
+      <div class="steps">
+        <div class="st"><div class="n">01</div><h3>Zavoláte nebo pošlete SMS</h3><p>Řeknete datum, kolik vás bude a co si přejete. Termín domluvíme po telefonu.</p></div>
+        <div class="st"><div class="n">02</div><h3>Zkouška účesu a líčení</h3><p>Orientačně zhruba měsíc předem. Vezměte s sebou fotky účesů, které se Vám líbí, a fotku šatů.</p></div>
+        <div class="st"><div class="n">03</div><h3>Ráno velkého dne</h3><p>Přijdete do studia a odcházíte učesaná a nalíčená – i s maminkami a družičkami.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="otazky" class="faq" aria-labelledby="h-faq" style="padding-top:0">
+    <div class="wrap" style="max-width:860px">
+      <div class="sec-head">
+        <p class="eyebrow">Časté otázky</p>
+        <h2 id="h-faq">Na co se nevěsty a klientky ptají</h2>
+      </div>
+      <details><summary>Kdy si domluvit svatební účes?</summary><p>Ozvěte se, jakmile znáte datum svatby. Zkoušku účesu a líčení je dobré mít orientačně zhruba měsíc předem – stihnete pak doladit detaily.</p></details>
+      <details><summary>Mám vzít fotku účesu, který se mi líbí?</summary><p>Ano, určitě. Fotka z telefonu nebo časopisu pomůže nejvíc. U svatby se hodí i fotka šatů a ozdob do vlasů.</p></details>
+      <details><summary>Jak dlouho trvá barvení nebo melír?</summary><p>Záleží na délce a hustotě vlasů a na technice. Přibližný čas i cenu Vám řekneme předem při domlouvání termínu.</p></details>
+      <details><summary>Stříháte i děti a pány?</summary><p>Ano. Studio je dámské, pánské i dětské kadeřnictví – můžete přijít celá rodina.</p></details>
+      <details><summary>Jak se platí?</summary><p>Způsob platby Vám řekneme při objednání. <span class="tag">ukázkový text</span></p></details>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact" aria-labelledby="h-kontakt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="h-kontakt">Termín po telefonické domluvě</h2>
+      </div>
+      <div class="c-grid">
+        <div class="c-card">
+          <dl style="margin:0">
+            <dt>Telefon</dt><dd><a class="c-big" href="tel:+420602789993">602 789 993</a></dd>
+            <dt>E-mail</dt><dd><a href="mailto:salond@seznam.cz">salond@seznam.cz</a></dd>
+            <dt>Adresa</dt><dd>nám. Svobody 22/22, 671 72 Miroslav</dd>
+            <dt>Otevírací doba</dt><dd>Dle telefonické domluvy – než přijdete, zavolejte.</dd>
+            <dt>Facebook</dt><dd><a href="https://www.facebook.com/kadernickestudioznojmo" rel="noopener">facebook.com/kadernickestudioznojmo</a></dd>
+          </dl>
+          <div class="out-actions" style="margin-top:20px">
+            <a class="btn btn-p" href="tel:+420602789993">Zavolat</a>
+            <a class="btn btn-s" href="https://mapy.cz/zakladni?q=n%C3%A1m.%20Svobody%2022%2C%20Miroslav" rel="noopener">Otevřít v Mapy.cz</a>
+          </div>
+        </div>
+        <a class="map-art" href="https://mapy.cz/zakladni?q=n%C3%A1m.%20Svobody%2022%2C%20Miroslav" rel="noopener" aria-label="Náměstí Svobody 22, Miroslav – otevřít v Mapy.cz">
+          <svg viewBox="0 0 520 320" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="520" height="320" fill="#2A2530"/><g stroke="#4A4150" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 230C120 210 220 200 520 120"/><path d="M180 -10 230 330"/><path d="M380 -10C350 120 360 220 400 330"/></g><rect x="200" y="120" width="120" height="80" rx="6" fill="#3A3240" stroke="#A9802F" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(260 128)"><path d="M0 46C-14 28-20 18-20 8a20 20 0 0 1 40 0c0 10-6 20-20 38z" fill="#6E1E33" stroke="#E4D2A8" stroke-width="2"/><circle cy="8" r="7" fill="#E4D2A8"/></g><text x="260" y="226" text-anchor="middle" fill="#E8DCCB" font-family="Georgia,serif" font-size="18">nám. Svobody 22 · Miroslav</text></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="f-name">Kadeřnické studio – Helena Dittrichová</p>
+    <p style="margin:0">nám. Svobody 22/22, 671 72 Miroslav · IČO 45660361</p>
+    <p style="margin:4px 0 0"><a href="tel:+420602789993">602 789 993</a> · <a href="mailto:salond@seznam.cz">salond@seznam.cz</a></p>
+    <p class="small">Nezávazný návrh webu. Údaje převzaty z veřejného profilu na Firmy.cz.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-p" href="tel:+420602789993">Zavolat 602 789 993</a>
+  <a class="btn btn-s" href="#planovac" style="flex:0 0 auto;padding:0 18px">Svatba</a>
+</div>
+
+
+<script>
+(function(){
+  var PHONE='+420602789993';
+  function pragueToday(){
+    var s=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Prague',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+    var p=s.split('-');return Date.UTC(+p[0],+p[1]-1,+p[2]);
+  }
+  function easter(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return Date.UTC(y,mo-1,da);}
+  var DAY=864e5;
+  function isHoliday(t){
+    var d=new Date(t),m=d.getUTCMonth()+1,dd=d.getUTCDate(),y=d.getUTCFullYear();
+    var fixed=['1-1','5-1','5-8','7-5','7-6','9-28','10-28','11-17','12-24','12-25','12-26'];
+    if(fixed.indexOf(m+'-'+dd)>-1)return true;
+    var e=easter(y);return t===e-2*DAY||t===e+DAY;
+  }
+  var WD=['neděle','pondělí','úterý','středa','čtvrtek','pátek','sobota'];
+  function fmt(t){var d=new Date(t);return d.getUTCDate()+'. '+(d.getUTCMonth()+1)+'. '+d.getUTCFullYear();}
+  function fmtW(t){return WD[new Date(t).getUTCDay()]+' '+fmt(t);}
+  function plural(n,a,b,c){return n===1?a:(n>=2&&n<=4?b:c);}
+
+  var today=pragueToday();
+  var dateEl=document.getElementById('wDate');
+  dateEl.min=new Date(today).toISOString().slice(0,10);
+  var daysEl=document.getElementById('days'),daysTxt=document.getElementById('daysTxt'),adv=document.getElementById('advice');
+
+  var groups=[
+    {id:'nev',label:'Nevěsta',sub:'účes, líčení, nebo obojí',min:0,max:1,val:1,form:['nevěsta','nevěsta','nevěsta']},
+    {id:'mam',label:'Maminky',sub:'nevěstina i ženichova',min:0,max:4,val:0,form:['maminka','maminky','maminek']},
+    {id:'dru',label:'Družičky a svědkyně',sub:'případně sestry, kamarádky',min:0,max:8,val:0,form:['družička','družičky','družiček']}
+  ];
+  var CH=[['ucess','účes'],['liceni','líčení'],['oboji','účes i líčení']];
+  var wrap=document.getElementById('people');
+  groups.forEach(function(g){
+    var row=document.createElement('div');row.className='row';
+    var h='<div class="who" id="lbl-'+g.id+'">'+g.label+' <small>'+g.sub+'</small></div>'+
+      '<div class="stepper" role="group" aria-labelledby="lbl-'+g.id+'"><button type="button" data-g="'+g.id+'" data-d="-1" aria-label="Ubrat – '+g.label+'">−</button><output id="o-'+g.id+'" aria-live="polite">'+g.val+'</output><button type="button" data-g="'+g.id+'" data-d="1" aria-label="Přidat – '+g.label+'">+</button></div>'+
+      '<div class="seg" role="radiogroup" aria-label="Co si přeje: '+g.label+'" id="s-'+g.id+'">';
+    CH.forEach(function(c,i){h+='<label><input type="radio" name="c-'+g.id+'" value="'+c[0]+'"'+(i===2?' checked':'')+'><span>'+c[1]+'</span></label>';});
+    row.innerHTML=h+'</div>';wrap.appendChild(row);
+  });
+  function sync(){groups.forEach(function(g){
+    document.getElementById('o-'+g.id).textContent=g.val;
+    var b=wrap.querySelectorAll('button[data-g="'+g.id+'"]');b[0].disabled=g.val<=g.min;b[1].disabled=g.val>=g.max;
+    var s=document.getElementById('s-'+g.id);s.setAttribute('aria-disabled',g.val===0?'true':'false');
+    s.querySelectorAll('input').forEach(function(i){i.disabled=g.val===0;});
+  });}
+  wrap.addEventListener('click',function(e){var b=e.target.closest('button[data-g]');if(!b)return;
+    var g=groups.filter(function(x){return x.id===b.dataset.g;})[0];g.val=Math.max(g.min,Math.min(g.max,g.val+ +b.dataset.d));sync();});
+  sync();
+
+  function wedding(){var v=dateEl.value;if(!v)return null;var p=v.split('-');return Date.UTC(+p[0],+p[1]-1,+p[2]);}
+  function trialDate(w){var t=w-30*DAY;while(isHoliday(t)||new Date(t).getUTCDay()===0)t-=DAY;return t;}
+  function updateDate(){
+    var w=wedding();
+    if(w===null){daysEl.textContent='–';daysTxt.textContent='Vyberte datum a ukážeme, kolik dní zbývá.';return;}
+    var n=Math.round((w-today)/DAY);
+    if(n<0){daysEl.textContent='–';daysTxt.innerHTML='<span class="warn">Toto datum už proběhlo.</span> Zkontrolujte prosím rok.';return;}
+    daysEl.textContent=n;
+    var t=fmtW(w);
+    daysTxt.innerHTML=(n===0?'Svatba je dnes!':plural(n,'den','dny','dní')+' do svatby · '+t)+(isHoliday(w)?'<br><span class="warn">Je to státní svátek – zda studio ten den pracuje, domluvte po telefonu.</span>':'');
+    var tr=trialDate(w);
+    if(tr<=today){adv.innerHTML='<span class="badge">orientační</span>Do svatby zbývá méně než měsíc – zkoušku účesu a líčení domluvte co nejdřív, ideálně telefonicky.';}
+    else{adv.innerHTML='<span class="badge">orientační</span>Zkoušku účesu a líčení si domluvte zhruba měsíc předem – tedy kolem <b>'+fmt(tr)+'</b>.';}
+  }
+  dateEl.addEventListener('change',updateDate);dateEl.addEventListener('input',updateDate);
+
+  var out=document.getElementById('out'),sms=document.getElementById('smsBtn'),copied=document.getElementById('copied');
+  var msg='';
+  document.getElementById('planForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var w=wedding(),lines=[];
+    if(w===null||w<today){out.textContent='Nejdřív prosím vyberte datum svatby (krok 1).';dateEl.focus();msg='';return;}
+    var parts=[];
+    groups.forEach(function(g){if(!g.val)return;var c=wrap.querySelector('input[name="c-'+g.id+'"]:checked');var lbl=CH.filter(function(x){return x[0]===c.value;})[0][1];
+      var who=g.id==='nev'?'nevěsta':(g.val+'× '+(g.val===1?g.form[0]:g.form[1]));parts.push(who+' – '+lbl);});
+    if(!parts.length){out.textContent='Přidejte prosím aspoň jednu osobu (krok 2).';msg='';return;}
+    var r=document.getElementById('ready').value,nm=document.getElementById('name').value.trim();
+    lines.push('Dobrý den, paní Dittrichová,');
+    lines.push('plánuji svatbu '+fmt(w)+' ('+WD[new Date(w).getUTCDay()]+(isHoliday(w)?', státní svátek':'')+') a ráda bych u Vás objednala:');
+    parts.forEach(function(p){lines.push('• '+p);});
+    if(r)lines.push('Hotové potřebujeme být v '+r+'.');
+    lines.push(trialDate(w)>today?'Ráda bych si domluvila i zkoušku účesu a líčení, zhruba měsíc předem.':'Ráda bych si co nejdřív domluvila i zkoušku.');
+    lines.push('Můžete mi prosím potvrdit termín a orientační cenu? Děkuji'+(nm?', '+nm:'')+'.');
+    msg=lines.join('\n');
+    out.textContent=msg;
+    sms.href='sms:'+PHONE+'?body='+encodeURIComponent(msg);sms.removeAttribute('aria-disabled');
+    copied.textContent='Zpráva je připravená – odešlete ji ze svého telefonu.';
+  });
+  sms.addEventListener('click',function(e){if(!msg){e.preventDefault();out.textContent='Nejdřív klepněte na „Složit zprávu“.';}});
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    if(!msg){copied.textContent='Nejdřív složte zprávu.';return;}
+    function fallback(){try{var ta=document.createElement('textarea');ta.value=msg;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);copied.textContent=ok?'Zkopírováno.':'Kopírování se nepovedlo – označte text ručně.';}catch(err){copied.textContent='Kopírování se nepovedlo – označte text ručně.';}}
+    try{if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(msg).then(function(){copied.textContent='Zkopírováno.';},fallback);}else fallback();}catch(err){fallback();}
+  });
+})();
+</script>
+</body>
+</html>
