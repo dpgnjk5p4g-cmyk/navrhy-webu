@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Návrh webu – Kavárna U Šálků</title>
+<meta name="description" content="Kavárna U Šálků v Pavlíkově na Rakovnicku: káva, čaj a teplé i studené nápoje. Otevřeno každý den. Tel. 702 160 087.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#F7F4EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Karla:wght@400;500;700&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Kavárna U Šálků", "telephone": "+420702160087", "address": {"@type": "PostalAddress", "streetAddress": "Pavlíkov 87", "addressLocality": "Pavlíkov", "addressCountry": "CZ"}, "description": "Kavárna U Šálků v Pavlíkově na Rakovnicku: káva, čaj a teplé i studené nápoje. Otevřeno každý den. Tel. 702 160 087.", "email": "kavarnausalku@gmail.com", "taxID": "27613704"}</script>
+<style>
+:root{--bg:#F7F4EE;--surface:#FFFFFF;--ink:#22201B;--muted:#5F5A50;--line:#E4DED2;
+--accent:#3F6A4A;--accent-ink:#FFFFFF;--soft:#EDE8DD;--dark:#1F2A22;
+--disp:"Literata",Georgia,serif;--body:"Karla",system-ui,sans-serif;--r:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+h1,h2,h3{font-family:var(--disp);font-weight:500;line-height:1.12;margin:0 0 .5em;letter-spacing:-.015em}
+h1{font-size:clamp(2.3rem,4.6vw,3.9rem)}h2{font-size:clamp(1.8rem,3.2vw,2.7rem)}h3{font-size:1.25rem}
+p{margin:0 0 1em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.nb{background:var(--soft);color:var(--muted);font:500 12.5px/1.4 var(--body);text-align:center;padding:7px 16px;border-bottom:1px solid var(--line)}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:72px}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1;margin-right:auto}
+.logo b{font:500 1.45rem/1.1 var(--disp);letter-spacing:-.015em}
+.logo small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav{display:flex;gap:26px;font-size:.95rem}.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:999px;border:1px solid var(--accent);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px -10px var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.top .btn{padding:10px 20px;font-size:.92rem}
+.hero{padding:64px 0 72px}.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+.lead{font-size:1.12rem;color:var(--muted);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+.himg{position:relative}
+.ph{position:relative;overflow:hidden;border-radius:var(--r);background:linear-gradient(135deg,var(--soft),var(--line));aspect-ratio:4/3}
+.ph span{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph.hero-ph{aspect-ratio:4/5;max-height:620px;width:100%}.ph.tall{aspect-ratio:4/5}
+.ill{position:absolute;right:14px;bottom:14px;background:rgba(0,0,0,.45);color:#fff;font-size:.7rem;padding:4px 9px;border-radius:99px;letter-spacing:.04em}
+.hcard{position:absolute;left:-28px;bottom:36px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;box-shadow:0 18px 40px -22px rgba(0,0,0,.35);display:flex;flex-direction:column;max-width:250px}
+.hcard strong{font-family:var(--disp);font-size:1.35rem;line-height:1.2}.hcard span{font-size:.85rem;color:var(--muted)}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.trust ul{list-style:none;margin:0 auto;padding:26px 24px;max-width:1180px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.trust li{display:flex;flex-direction:column}.trust strong{font-family:var(--disp);font-size:1.2rem}.trust span{font-size:.88rem;color:var(--muted)}
+.sec{padding:96px 0}.band-soft{background:var(--soft)}
+.head{max-width:640px;margin-bottom:48px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;transition:border-color .2s}
+.svc:hover{border-color:var(--accent)}
+.svc .num{display:block;font-size:.8rem;color:var(--accent);font-weight:600;letter-spacing:.1em;margin-bottom:14px}
+.svc p{color:var(--muted);font-size:.97rem;margin:0}.svc .price{margin-top:14px;color:var(--ink);font-weight:600}
+.svc-note{margin-top:26px;color:var(--muted);font-size:.95rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.checks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.checks li{padding-left:30px;position:relative}.checks li::before{content:"";position:absolute;left:0;top:.55em;width:16px;height:9px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg) translateY(-4px)}
+.gal{padding-top:0}.gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}.gal-grid .ph{aspect-ratio:auto;height:340px}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.steps span{display:block;font-family:var(--disp);font-size:3rem;line-height:1;color:var(--accent);margin-bottom:16px}
+.steps p{color:var(--muted);margin:0}
+.rev{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center;border:1px solid var(--line);border-radius:var(--r);padding:40px 48px;background:var(--surface)}
+.score{display:flex;flex-direction:column;align-items:flex-start}.score .big{font-family:var(--disp);font-size:3.6rem;line-height:1}
+.stars{color:var(--accent);letter-spacing:3px;margin:6px 0}.score span{font-size:.9rem;color:var(--muted)}
+.quote{font-family:var(--disp);font-size:1.5rem;line-height:1.35;margin:0}
+.faq{max-width:820px}details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.06rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::after{content:"+";color:var(--accent);font-size:1.4rem;line-height:1}details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:12px 0 0}
+.contact{display:grid;grid-template-columns:1fr 1.15fr;gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:36px}
+.card p{margin:0 0 14px;display:flex;flex-direction:column}.lbl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.card a{text-decoration:none}.card .phone{font-family:var(--disp);font-size:1.7rem}
+.hours{border-collapse:collapse;width:100%;font-size:.95rem}.hours th{text-align:left;font-weight:500;padding:6px 0;color:var(--muted)}.hours td{text-align:right;padding:6px 0}
+.hours tr+tr{border-top:1px solid var(--line)}
+.tag{display:inline-block!important;font-size:.75rem;background:var(--soft);color:var(--muted);padding:3px 10px;border-radius:99px;margin-top:8px!important}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:420px;background:var(--soft)}.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+.ctaband{background:var(--dark);color:#fff;padding:72px 0}.ctaband .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.ctaband h2{margin:0;max-width:18em}.ctaband .btn{background:#fff;color:var(--dark);border-color:#fff}
+footer{background:var(--dark);color:rgba(255,255,255,.65);font-size:.88rem;border-top:1px solid rgba(255,255,255,.12);padding:28px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.mbar{display:none}
+@media (max-width:900px){
+ .nav{display:none}.hero{padding:32px 0 48px}.hero .wrap,.split,.contact{grid-template-columns:1fr;gap:32px}
+ .ph.hero-ph{aspect-ratio:4/3}.hcard{left:12px;bottom:12px}
+ .trust ul{grid-template-columns:1fr 1fr}.svc-grid,.steps{grid-template-columns:1fr}
+ .gal-grid{grid-template-columns:1fr 1fr}.gal-grid .ph:first-child{grid-column:1/-1}.gal-grid .ph{height:220px}
+ .sec{padding:64px 0}.rev{grid-template-columns:1fr;gap:20px;padding:28px}
+ .top .btn{display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line)}
+ .mbar a{text-align:center;padding:13px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+ .mbar .m1{background:var(--accent);color:var(--accent-ink)}.mbar .m2{border:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<div class="nb">Nezávazný návrh webu – není to oficiální stránka firmy Kavárna U Šálků</div>
+<div class="top" role="banner"><div class="wrap">
+  <a class="logo" href="#"><b>Kavárna U Šálků</b><small>Pavlíkov · Rakovnicko</small></a>
+  <nav class="nav" aria-label="Hlavní menu"><a href="#sluzby">Nabídka</a><a href="#o-nas">O kavárně</a><a href="#otazky">Otázky</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="btn" href="tel:+420702160087">702 160 087</a>
+</div></div>
+<main>
+<section class="hero"><div class="wrap">
+  <div>
+    <p class="eyebrow">Kavárna · Pavlíkov</p>
+    <h1>Zastávka na kávu uprostřed Rakovnicka</h1>
+    <p class="lead">Vesnická kavárna v Pavlíkově, kde si vychutnáte oblíbenou kávu, čaj nebo osvěžující nápoj. Otevřeno každý den – ideální zastávka na výletě.</p>
+    <div class="cta"><a class="btn" href="tel:+420702160087">Zavolat</a><a class="btn ghost" href="#kontakt">Kde nás najdete</a></div>
+  </div>
+  <div class="himg"><div class="ph hero-ph"><span>Sem přijde Vaše fotka</span><img src="https://images.unsplash.com/photo-1776703808255-42a98f22547f?auto=format&fit=crop&w=1400&q=80" alt="Útulné posezení v kavárně" loading="eager" onerror="this.remove()"></div><span class="ill">Ilustrační foto</span><div class="hcard"><strong>4,5 ★ z 35 hodnocení</strong><span>hostů na Firmy.cz</span></div></div>
+</div></section>
+<div class="trust"><ul><li><strong>4,5 z 5</strong><span>35 hodnocení na Firmy.cz</span></li><li><strong>Otevřeno denně</strong><span>i o víkendu</span></li><li><strong>Káva a čaj</strong><span>teplé i studené nápoje</span></li><li><strong>Pavlíkov 87</strong><span>Rakovnicko</span></li></ul></div>
+<section class="sec" id="sluzby"><div class="wrap">
+  <div class="head"><p class="eyebrow">Nabídka</p><h2>Co si u nás dáte</h2><p class="lead">Malá kavárna s velkým výběrem pití – pro místní, výletníky i cyklisty.</p></div>
+  <div class="svc-grid"><article class="svc"><span class="num">01</span><h3>Káva</h3><p>Vaše oblíbená káva, připravená s péčí.</p></article><article class="svc"><span class="num">02</span><h3>Čaj</h3><p>Čaj pro chvíli klidu nebo zahřátí po cestě.</p></article><article class="svc"><span class="num">03</span><h3>Studené nápoje</h3><p>Osvěžení v létě i po vyjížďce na kole.</p></article></div>
+  <p class="svc-note">Na aktuální nabídku se zeptejte přímo u nás nebo po telefonu.</p>
+</div></section>
+<section class="sec gal" aria-label="Fotografie">
+  <div class="wrap"><div class="gal-grid"><div class="ph "><span>Sem přijde Vaše fotka</span><img src="https://images.unsplash.com/photo-1779282159217-226d9e831c03?auto=format&fit=crop&w=1000&q=80" alt="Cheesecake s borůvkami" loading="lazy" onerror="this.remove()"></div><div class="ph "><span>Sem přijde Vaše fotka</span><img src="https://images.unsplash.com/photo-1699559510594-12624b72312c?auto=format&fit=crop&w=1000&q=80" alt="Káva a pečivo" loading="lazy" onerror="this.remove()"></div><div class="ph "><span>Sem přijde Vaše fotka</span><img src="https://images.unsplash.com/photo-1761695939616-1c03087c1ce4?auto=format&fit=crop&w=1000&q=80" alt="Interiér kavárny" loading="lazy" onerror="this.remove()"></div></div>
+  <p class="note">Ilustrační fotografie – na webu je nahradíme Vašimi vlastními.</p></div></section>
+<section class="sec band-soft" id="o-nas"><div class="wrap split">
+  <div class="ph tall"><span>Sem přijde Vaše fotka</span><img src="https://images.unsplash.com/photo-1696308090000-2eb77f9499bb?auto=format&fit=crop&w=1200&q=80" alt="Káva a dort venku" loading="lazy" onerror="this.remove()"></div>
+  <div><p class="eyebrow">O kavárně</p><h2>Kavárna, kam se rádi vracíte</h2>
+  <p class="lead">Kavárna U Šálků je místem, kde se potkávají sousedé i výletníci. Hosté nás na Firmy.cz hodnotí průměrem 4,5 z 5 – děkujeme.</p><ul class="checks"><li>Otevřeno každý den</li><li>Příjemné posezení</li><li>Zastávka pro výletníky a cyklisty</li></ul></div>
+</div></section>
+<section class="sec" aria-label="Hodnocení"><div class="wrap rev">
+  <div class="score"><span class="big">4,5</span><span class="stars" aria-hidden="true">★★★★★</span>
+  <span>z 35 hodnocení na <a href="https://www.firmy.cz/detail/13809161-kavarna-u-salku-pavlikov.html" rel="nofollow">Firmy.cz</a></span></div>
+  <p class="quote">Hosté nás na Firmy.cz hodnotí průměrem 4,5 z 5. Těšíme se i na Vás.</p></div></section>
+<section class="sec" id="postup"><div class="wrap">
+  <div class="head"><p class="eyebrow">Jak to probíhá</p><h2>Přijďte nás navštívit</h2></div>
+  <ol class="steps"><li><span>1</span><h3>Zastavte se</h3><p>Pavlíkov 87 na Rakovnicku.</p></li><li><span>2</span><h3>Vyberte si</h3><p>Kávu, čaj nebo něco studeného.</p></li><li><span>3</span><h3>Odpočiňte si</h3><p>Než vyrazíte dál.</p></li></ol>
+</div></section>
+
+<section class="sec" id="otazky"><div class="wrap faq">
+  <div class="head"><p class="eyebrow">Časté otázky</p><h2>Na co se nás lidé ptají</h2></div><details><summary>Kdy máte otevřeno?</summary><p>Úterý až neděle 10–18, v pondělí 13–18.</p></details><details><summary>Zastaví se u Vás cyklisté?</summary><p>Rádi – jsme ideální zastávka na výletě po Rakovnicku.</p></details><details><summary>Máte i něco k jídlu?</summary><p>Na aktuální nabídku se zeptejte po telefonu.</p></details>
+</div></section>
+<section class="sec band-soft" id="kontakt"><div class="wrap">
+  <div class="head"><p class="eyebrow">Kontakt</p><h2>Najdete nás v Pavlíkově</h2></div>
+  <div class="contact">
+    <div class="card">
+      <p><span class="lbl">Telefon</span><a class="phone" href="tel:+420702160087">702 160 087</a></p>
+      <p><span class="lbl">E-mail</span><a href="mailto:kavarnausalku@gmail.com">kavarnausalku@gmail.com</a></p>
+      <p><span class="lbl">Adresa</span>Pavlíkov 87<a href="https://www.google.com/maps/search/?api=1&query=Pavl%C3%ADkov%2087" style="color:var(--accent);font-size:.92rem;margin-top:4px">Navigovat →</a></p>
+      
+      <p><span class="lbl">IČO</span>27613704</p>
+      <h3>Otevírací doba</h3><table class="hours"><tr><th>Pondělí</th><td>13:00 – 18:00</td></tr><tr><th>Úterý – neděle</th><td>10:00 – 18:00</td></tr></table><p class="tag">podle Firmy.cz</p>
+    </div>
+    <div class="map"><iframe title="Mapa – Kavárna U Šálků" loading="lazy" src="https://maps.google.com/maps?q=Pavl%C3%ADkov%2087&z=15&output=embed"></iframe></div>
+  </div>
+</div></section>
+<section class="ctaband"><div class="wrap"><h2>Jedete kolem? Zastavte se na šálek.</h2><a class="btn" href="tel:+420702160087">Zavolat 702 160 087</a></div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Kavárna U Šálků · Pavlíkov 87</span><span>Návrh webu připravil Lukáš Trnka · studio.webycz@gmail.com</span></div></footer>
+<div class="mbar"><a class="m1" href="tel:+420702160087">Zavolat</a><a class="m2" href="mailto:kavarnausalku@gmail.com">Napsat e-mail</a></div>
+<script>
+// Stín záhlaví po posunutí stránky
+(function(){var t=document.querySelector('.top');addEventListener('scroll',function(){t.style.boxShadow=scrollY>8?'0 6px 24px -18px rgba(0,0,0,.4)':'none'},{passive:true})})();
+</script>
+</body>
+</html>

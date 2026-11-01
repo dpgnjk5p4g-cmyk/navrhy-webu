@@ -1,0 +1,1448 @@
+[
+ {
+  "slug": "vyroba-nabytku-tomas-indra",
+  "name": "Výroba nábytku Tomáš Indra",
+  "logo": "Tomáš Indra",
+  "logo_sub": "Výroba nábytku · Strakonicko",
+  "phone": "608 065 919",
+  "email": "indrat@seznam.cz",
+  "ico": "70528454",
+  "address": "Nové Kestřany 50, Štěkeň",
+  "street": "Nové Kestřany 50",
+  "city": "Štěkeň",
+  "map_query": "Nové Kestřany 50, Štěkeň",
+  "schema": "HomeAndConstructionBusiness",
+  "description": "Výroba nábytku Tomáš Indra, Nové Kestřany u Strakonic: kuchyňské linky a vestavěné skříně z lamina na míru, výroba i montáž. Tel. 608 065 919.",
+  "colors": {
+   "bg": "#F6F7F5",
+   "surface": "#FFFFFF",
+   "ink": "#1B1F1D",
+   "muted": "#58605C",
+   "line": "#DFE3DF",
+   "accent": "#2F5D50",
+   "accent_ink": "#FFFFFF",
+   "soft": "#EBEFEC",
+   "dark": "#18231F"
+  },
+  "fonts": [
+   {
+    "gf": "Plus Jakarta Sans:wght@600;700",
+    "css": "\"Plus Jakarta Sans\",system-ui,sans-serif"
+   },
+   {
+    "gf": "Inter:wght@400;500;600",
+    "css": "\"Inter\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 700,
+  "disp_track": "-.025em",
+  "radius": "10px",
+  "nav": [
+   [
+    "sluzby",
+    "Co vyrábím"
+   ],
+   [
+    "postup",
+    "Jak to probíhá"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Kuchyně a vestavěné skříně · Strakonicko",
+  "h1": "Kuchyně a vestavěné skříně přesně na míru",
+  "lead": "Vyrábím a montuji nábytek z lamina – hlavně kuchyňské linky a vestavěné skříně. Využijete každý centimetr a cenu znáte předem.",
+  "cta": "Poptat nábytek",
+  "cta2": [
+   "sluzby",
+   "Co vyrábím"
+  ],
+  "hero_card": [
+   "Výroba i montáž",
+   "od jednoho člověka"
+  ],
+  "trust": [
+   [
+    "Kuchyňské linky",
+    "na míru Vaší kuchyni"
+   ],
+   [
+    "Vestavěné skříně",
+    "i do podkroví a výklenků"
+   ],
+   [
+    "Výroba i montáž",
+    "vše z jedné ruky"
+   ],
+   [
+    "Nové Kestřany",
+    "u Strakonic"
+   ]
+  ],
+  "svc_eyebrow": "Co vyrábím",
+  "svc_title": "Nábytek, který využije každý centimetr",
+  "svc_lead": "Lamino je odolné, snadno se udržuje a vybírat můžete z mnoha dekorů. Proto z něj dělám kuchyně i skříně.",
+  "services": [
+   {
+    "title": "Kuchyňské linky",
+    "text": "Linka navržená podle Vašeho prostoru, spotřebičů a způsobu vaření."
+   },
+   {
+    "title": "Vestavěné skříně",
+    "text": "Skříně do chodby, ložnice i pod šikminu – od podlahy po strop."
+   },
+   {
+    "title": "Montáž",
+    "text": "Nábytek, který vyrobím, Vám také přivezu a namontuji."
+   }
+  ],
+  "svc_note": "Cenu Vám řeknu předem, jakmile budu znát rozměry a dekor.",
+  "gallery": [
+   [
+    "photo-1718939045285-b67f9e9f9f8b",
+    "Šatní skříň s policemi"
+   ],
+   [
+    "photo-1791140842017-ff731195de5c",
+    "Šatna s dřevěnými policemi"
+   ],
+   [
+    "photo-1720694054419-d433d311b0b2",
+    "Kuchyňská linka s barem"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O mně",
+   "title": "Výroba i montáž z jedné ruky",
+   "text": "Jmenuji se Tomáš Indra a v Nových Kestřanech u Strakonic vyrábím nábytek z lamina. Zakázku od zaměření po montáž dělám sám, takže víte, s kým jednáte.",
+   "points": [
+    "Specializace na kuchyně a vestavby",
+    "Cena předem, bez překvapení",
+    "Strakonice a okolí"
+   ],
+   "photo": "photo-1659930087003-2d64e33181f7",
+   "alt": "Truhlář si rýsuje na desku"
+  },
+  "steps_title": "Od rozměrů po hotovou kuchyň",
+  "steps": [
+   [
+    "Ozvěte se",
+    "Zavolejte nebo napište, co potřebujete – ideálně s rozměry nebo fotkou místnosti."
+   ],
+   [
+    "Návrh a cena",
+    "Domluvíme se na rozložení, dekoru a ceně."
+   ],
+   [
+    "Výroba a montáž",
+    "Nábytek vyrobím a namontuji u Vás doma."
+   ]
+  ],
+  "faq": [
+   [
+    "Proč lamino?",
+    "Je odolné, snadno se čistí a nabízí spoustu dekorů včetně imitací dřeva. Za rozumnou cenu."
+   ],
+   [
+    "Jak dlouho výroba trvá?",
+    "Termín Vám řeknu při domluvě podle velikosti zakázky."
+   ],
+   [
+    "Uděláte i skříň do podkroví?",
+    "Ano, vestavěná skříň se přizpůsobí šikmině i výklenku."
+   ],
+   [
+    "Kolik stojí kuchyň?",
+    "Záleží na rozměrech, dekoru a kování. Cenu řeknu předem."
+   ]
+  ],
+  "hours_text": "Schůzku domluvíme po telefonu.",
+  "contact_title": "Pojďme probrat Váš nábytek",
+  "band": "Plánujete novou kuchyň nebo skříň? Zavolejte.",
+  "hero_photo": "photo-1589268395705-ecd1dca58cb9",
+  "hero_alt": "Dřevěná kuchyně s ostrůvkem"
+ },
+ {
+  "slug": "truhlarstvi-ondrej-soukup",
+  "name": "Truhlářství Ondřej Soukup",
+  "logo": "Truhlářství Soukup",
+  "logo_sub": "Albrechtice · Strakonicko",
+  "phone": "724 417 696",
+  "email": "dv-soukup@seznam.cz",
+  "ico": "73528455",
+  "address": "Albrechtice 23, Drahonice",
+  "street": "Albrechtice 23",
+  "city": "Drahonice",
+  "map_query": "Albrechtice 23, Drahonice",
+  "schema": "HomeAndConstructionBusiness",
+  "description": "Truhlářství Ondřej Soukup, Albrechtice u Drahonic: zakázková výroba nábytku, dveří, kuchyní, schodů, plotů a pergol z masivu, dýhy i lamina. Tel. 724 417 696.",
+  "colors": {
+   "bg": "#F8F5EF",
+   "surface": "#FFFFFF",
+   "ink": "#231C15",
+   "muted": "#625649",
+   "line": "#E6DDD0",
+   "accent": "#8B5A2B",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F0E9DD",
+   "dark": "#2A2018"
+  },
+  "fonts": [
+   {
+    "gf": "Alegreya:wght@500;700",
+    "css": "\"Alegreya\",Georgia,serif"
+   },
+   {
+    "gf": "Alegreya Sans:wght@400;500;700",
+    "css": "\"Alegreya Sans\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 700,
+  "disp_track": "-.01em",
+  "radius": "6px",
+  "nav": [
+   [
+    "sluzby",
+    "Co vyrábíme"
+   ],
+   [
+    "postup",
+    "Jak to probíhá"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Truhlářství · Strakonicko",
+  "h1": "Od kuchyně po pergolu – vše ze dřeva na míru",
+  "lead": "Vyrábíme nábytek, dveře, kuchyně, schody, ploty i pergoly. Z masivu, dýhy nebo lamina, přesně podle Vašeho domu.",
+  "cta": "Poptat zakázku",
+  "cta2": [
+   "sluzby",
+   "Co vyrábíme"
+  ],
+  "hero_card": [
+   "Masiv · dýha · lamino",
+   "vyberete materiál podle sebe"
+  ],
+  "trust": [
+   [
+    "Interiér i exteriér",
+    "od kuchyně po plot"
+   ],
+   [
+    "Tři materiály",
+    "masiv, dýha, lamino"
+   ],
+   [
+    "Na zakázku",
+    "podle Vašich rozměrů"
+   ],
+   [
+    "Albrechtice",
+    "u Drahonic"
+   ]
+  ],
+  "svc_eyebrow": "Co vyrábíme",
+  "svc_title": "Dřevo uvnitř domu i kolem něj",
+  "svc_lead": "Jedno truhlářství pro celý dům – nemusíte shánět zvlášť na kuchyň, schody a pergolu.",
+  "services": [
+   {
+    "title": "Nábytek na zakázku",
+    "text": "Skříně, stoly, police a další kusy přesně do Vašeho prostoru."
+   },
+   {
+    "title": "Kuchyně",
+    "text": "Kuchyňské linky z masivu, dýhy nebo lamina."
+   },
+   {
+    "title": "Dveře",
+    "text": "Interiérové dveře vyrobené na míru."
+   },
+   {
+    "title": "Schody",
+    "text": "Dřevěné schodiště, které vydrží generace."
+   },
+   {
+    "title": "Ploty",
+    "text": "Dřevěné ploty pro zahradu i chalupu."
+   },
+   {
+    "title": "Pergoly",
+    "text": "Pergola, pod kterou se budete rádi scházet."
+   }
+  ],
+  "svc_note": "Cenu Vám řekneme předem podle rozměrů a materiálu.",
+  "gallery": [
+   [
+    "photo-1764592119348-0aaeab50e2d0",
+    "Dřevěné dveře"
+   ],
+   [
+    "photo-1588383138973-1b471194c837",
+    "Dřevěné schodiště"
+   ],
+   [
+    "photo-1736506159893-22cca29b8018",
+    "Detail dřeva"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O nás",
+   "title": "Poctivé truhlářské řemeslo ze Strakonicka",
+   "text": "Truhlářství Ondřeje Soukupa v Albrechticích vyrábí na zakázku pro domy a chalupy v okolí. Pracujeme s masivem, dýhou i laminem – podle toho, co se k Vašemu domu hodí.",
+   "points": [
+    "Interiér i exteriér z jedné dílny",
+    "Masiv, dýha i lamino",
+    "Cena předem"
+   ],
+   "photo": "photo-1643503752212-7af77aff43ec",
+   "alt": "Truhlářská dílna s pilou"
+  },
+  "steps_title": "Jak probíhá zakázka",
+  "steps": [
+   [
+    "Zavolejte nebo napište",
+    "Popište, co potřebujete. Pomůže fotka a rozměry."
+   ],
+   [
+    "Domluvíme materiál a cenu",
+    "Poradíme s materiálem a řekneme cenu předem."
+   ],
+   [
+    "Vyrobíme a osadíme",
+    "Hotový kus vyrobíme v dílně a domluvíme se na montáži."
+   ]
+  ],
+  "faq": [
+   [
+    "Masiv, dýha, nebo lamino?",
+    "Masiv je nejodolnější, dýha nabídne vzhled dřeva za nižší cenu, lamino je praktické a cenově dostupné. Poradíme."
+   ],
+   [
+    "Děláte i venkovní pergoly a ploty?",
+    "Ano, vyrábíme ploty i pergoly ze dřeva."
+   ],
+   [
+    "Jak dlouho výroba trvá?",
+    "Termín řekneme při domluvě podle rozsahu zakázky."
+   ],
+   [
+    "Kolik to stojí?",
+    "Cenu řekneme předem, jakmile víme rozměry a materiál."
+   ]
+  ],
+  "hours_text": "Schůzku domluvíme po telefonu.",
+  "contact_title": "Ozvěte se nám",
+  "band": "Máte nápad na nábytek, schody nebo pergolu? Zavolejte.",
+  "hero_photo": "photo-1623654816619-dd66988b63c2",
+  "hero_alt": "Masivní dřevěný stůl a židle"
+ },
+ {
+  "slug": "cukrarna-a-kavarna-u-nycu",
+  "name": "Cukrárna a kavárna U Nyčů",
+  "logo": "U Nyčů",
+  "logo_sub": "Cukrárna a kavárna · Jilemnice",
+  "phone": "704 021 350",
+  "email": "cukrarnaunycu@gmail.com",
+  "ico": "25051555",
+  "address": "Jana Harracha 129, Jilemnice",
+  "street": "Jana Harracha 129",
+  "city": "Jilemnice",
+  "map_query": "Jana Harracha 129, Jilemnice",
+  "schema": "CafeOrCoffeeShop",
+  "description": "Cukrárna a kavárna U Nyčů v centru Jilemnice: dezerty a dorty, výběrová káva, domácí zmrzlina, víno od lokálních dodavatelů. Denně 10–18. Tel. 704 021 350.",
+  "colors": {
+   "bg": "#FBF7F4",
+   "surface": "#FFFFFF",
+   "ink": "#2C1E1E",
+   "muted": "#6B5858",
+   "line": "#EEE1DC",
+   "accent": "#8E3B46",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F5EAE6",
+   "dark": "#2E1C1F"
+  },
+  "fonts": [
+   {
+    "gf": "Libre Baskerville:wght@400;700",
+    "css": "\"Libre Baskerville\",Georgia,serif"
+   },
+   {
+    "gf": "Work Sans:wght@400;500;600",
+    "css": "\"Work Sans\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 400,
+  "disp_track": "-.01em",
+  "nav": [
+   [
+    "sluzby",
+    "Nabídka"
+   ],
+   [
+    "o-nas",
+    "O nás"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Cukrárna a kavárna · Jilemnice",
+  "h1": "Tradiční cukrárna v centru Jilemnice",
+  "lead": "Dezerty a dorty, výběrová káva a domácí zmrzlina. Otevřeno každý den od 10 do 18 hodin, kousek od náměstí.",
+  "cta": "Zavolat",
+  "cta2": [
+   "sluzby",
+   "Naše nabídka"
+  ],
+  "hero_card": [
+   "Denně 10–18",
+   "i o víkendu"
+  ],
+  "trust": [
+   [
+    "Domácí zmrzlina",
+    "z vlastní výroby"
+   ],
+   [
+    "Výběrová káva",
+    "připravená s péčí"
+   ],
+   [
+    "Lokální dodavatelé",
+    "z Krkonoš a okolí"
+   ],
+   [
+    "Denně 10–18",
+    "Jana Harracha 129"
+   ]
+  ],
+  "svc_eyebrow": "Nabídka",
+  "svc_title": "Na co se k nám zastavit",
+  "svc_lead": "Sladká zastávka v centru Jilemnice – po procházce, po výletu na hory nebo jen tak.",
+  "services": [
+   {
+    "title": "Dezerty a dorty",
+    "text": "Klasické zákusky i dorty k odpolední kávě."
+   },
+   {
+    "title": "Domácí zmrzlina",
+    "text": "Zmrzlina, kterou si u nás připravujeme sami."
+   },
+   {
+    "title": "Výběrová káva",
+    "text": "Espresso, cappuccino i filtrovaná káva."
+   },
+   {
+    "title": "Víno",
+    "text": "Sklenka vína k posezení s přáteli."
+   },
+   {
+    "title": "Lokální dodavatelé",
+    "text": "Spolupracujeme s dodavateli z okolí."
+   },
+   {
+    "title": "Výdejní místo zásilek",
+    "text": "Balíček si vyzvednete u nás – a rovnou si dáte kávu."
+   }
+  ],
+  "svc_note": "Na aktuální nabídku dortů a zákusků se zeptejte po telefonu.",
+  "gallery": [
+   [
+    "photo-1743356629196-20a2e357341c",
+    "Ovocný koláč se šlehačkou"
+   ],
+   [
+    "photo-1670899604825-5b25fd14b4db",
+    "Cappuccino"
+   ],
+   [
+    "photo-1514435390218-898a0e01517a",
+    "Citronová bábovka"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O nás",
+   "title": "Sladké místo uprostřed města",
+   "text": "Cukrárna a kavárna U Nyčů stojí v ulici Jana Harracha v centru Jilemnice. Sázíme na poctivé dezerty, domácí zmrzlinu a suroviny od dodavatelů z okolí.",
+   "points": [
+    "Otevřeno každý den",
+    "Domácí zmrzlina",
+    "Lokální suroviny"
+   ],
+   "photo": "photo-1733924315486-ba553719c91f",
+   "alt": "Vitrína s dorty"
+  },
+  "steps_title": "Přijďte se posadit",
+  "steps": [
+   [
+    "Zastavte se",
+    "Jana Harracha 129, kousek od náměstí."
+   ],
+   [
+    "Vyberte si",
+    "Dezert, zmrzlinu, kávu nebo sklenku vína."
+   ],
+   [
+    "Odpočiňte si",
+    "Každý den od 10 do 18 hodin."
+   ]
+  ],
+  "faq": [
+   [
+    "Máte otevřeno i o víkendu?",
+    "Ano, otevřeno máme každý den od 10 do 18 hodin."
+   ],
+   [
+    "Je zmrzlina domácí?",
+    "Ano, domácí zmrzlinu připravujeme sami."
+   ],
+   [
+    "Můžu si u Vás vyzvednout balík?",
+    "Ano, jsme výdejní místo zásilek."
+   ],
+   [
+    "Dá se objednat dort?",
+    "Zavolejte nám a domluvíme se."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí – neděle",
+    "10:00 – 18:00"
+   ]
+  ],
+  "hours_note": "podle Firmy.cz",
+  "contact_title": "Najdete nás v centru Jilemnice",
+  "band": "Zastavte se na kávu a dezert. Těšíme se na Vás.",
+  "hero_photo": "photo-1619555179111-88cedaa9db7d",
+  "hero_alt": "Zmrzlinové poháry"
+ },
+ {
+  "slug": "kavarna-u-salku",
+  "name": "Kavárna U Šálků",
+  "logo": "Kavárna U Šálků",
+  "logo_sub": "Pavlíkov · Rakovnicko",
+  "phone": "702 160 087",
+  "email": "kavarnausalku@gmail.com",
+  "ico": "27613704",
+  "address": "Pavlíkov 87",
+  "street": "Pavlíkov 87",
+  "city": "Pavlíkov",
+  "map_query": "Pavlíkov 87",
+  "schema": "CafeOrCoffeeShop",
+  "description": "Kavárna U Šálků v Pavlíkově na Rakovnicku: káva, čaj a teplé i studené nápoje. Otevřeno každý den. Tel. 702 160 087.",
+  "colors": {
+   "bg": "#F7F4EE",
+   "surface": "#FFFFFF",
+   "ink": "#22201B",
+   "muted": "#5F5A50",
+   "line": "#E4DED2",
+   "accent": "#3F6A4A",
+   "accent_ink": "#FFFFFF",
+   "soft": "#EDE8DD",
+   "dark": "#1F2A22"
+  },
+  "fonts": [
+   {
+    "gf": "Literata:opsz,wght@7..72,500;7..72,600",
+    "css": "\"Literata\",Georgia,serif"
+   },
+   {
+    "gf": "Karla:wght@400;500;700",
+    "css": "\"Karla\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.015em",
+  "nav": [
+   [
+    "sluzby",
+    "Nabídka"
+   ],
+   [
+    "o-nas",
+    "O kavárně"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Kavárna · Pavlíkov",
+  "h1": "Zastávka na kávu uprostřed Rakovnicka",
+  "lead": "Vesnická kavárna v Pavlíkově, kde si vychutnáte oblíbenou kávu, čaj nebo osvěžující nápoj. Otevřeno každý den – ideální zastávka na výletě.",
+  "cta": "Zavolat",
+  "cta2": [
+   "kontakt",
+   "Kde nás najdete"
+  ],
+  "hero_card": [
+   "4,5 ★ z 35 hodnocení",
+   "hostů na Firmy.cz"
+  ],
+  "trust": [
+   [
+    "4,5 z 5",
+    "35 hodnocení na Firmy.cz"
+   ],
+   [
+    "Otevřeno denně",
+    "i o víkendu"
+   ],
+   [
+    "Káva a čaj",
+    "teplé i studené nápoje"
+   ],
+   [
+    "Pavlíkov 87",
+    "Rakovnicko"
+   ]
+  ],
+  "svc_eyebrow": "Nabídka",
+  "svc_title": "Co si u nás dáte",
+  "svc_lead": "Malá kavárna s velkým výběrem pití – pro místní, výletníky i cyklisty.",
+  "services": [
+   {
+    "title": "Káva",
+    "text": "Vaše oblíbená káva, připravená s péčí."
+   },
+   {
+    "title": "Čaj",
+    "text": "Čaj pro chvíli klidu nebo zahřátí po cestě."
+   },
+   {
+    "title": "Studené nápoje",
+    "text": "Osvěžení v létě i po vyjížďce na kole."
+   }
+  ],
+  "svc_note": "Na aktuální nabídku se zeptejte přímo u nás nebo po telefonu.",
+  "gallery": [
+   [
+    "photo-1779282159217-226d9e831c03",
+    "Cheesecake s borůvkami"
+   ],
+   [
+    "photo-1699559510594-12624b72312c",
+    "Káva a pečivo"
+   ],
+   [
+    "photo-1761695939616-1c03087c1ce4",
+    "Interiér kavárny"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O kavárně",
+   "title": "Kavárna, kam se rádi vracíte",
+   "text": "Kavárna U Šálků je místem, kde se potkávají sousedé i výletníci. Hosté nás na Firmy.cz hodnotí průměrem 4,5 z 5 – děkujeme.",
+   "points": [
+    "Otevřeno každý den",
+    "Příjemné posezení",
+    "Zastávka pro výletníky a cyklisty"
+   ],
+   "photo": "photo-1696308090000-2eb77f9499bb",
+   "alt": "Káva a dort venku"
+  },
+  "rating": {
+   "score": "4,5",
+   "count": "35",
+   "url": "https://www.firmy.cz/detail/13809161-kavarna-u-salku-pavlikov.html",
+   "text": "Hosté nás na Firmy.cz hodnotí průměrem 4,5 z 5. Těšíme se i na Vás."
+  },
+  "steps_title": "Přijďte nás navštívit",
+  "steps": [
+   [
+    "Zastavte se",
+    "Pavlíkov 87 na Rakovnicku."
+   ],
+   [
+    "Vyberte si",
+    "Kávu, čaj nebo něco studeného."
+   ],
+   [
+    "Odpočiňte si",
+    "Než vyrazíte dál."
+   ]
+  ],
+  "faq": [
+   [
+    "Kdy máte otevřeno?",
+    "Úterý až neděle 10–18, v pondělí 13–18."
+   ],
+   [
+    "Zastaví se u Vás cyklisté?",
+    "Rádi – jsme ideální zastávka na výletě po Rakovnicku."
+   ],
+   [
+    "Máte i něco k jídlu?",
+    "Na aktuální nabídku se zeptejte po telefonu."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí",
+    "13:00 – 18:00"
+   ],
+   [
+    "Úterý – neděle",
+    "10:00 – 18:00"
+   ]
+  ],
+  "hours_note": "podle Firmy.cz",
+  "contact_title": "Najdete nás v Pavlíkově",
+  "band": "Jedete kolem? Zastavte se na šálek.",
+  "hero_photo": "photo-1776703808255-42a98f22547f",
+  "hero_alt": "Útulné posezení v kavárně"
+ },
+ {
+  "slug": "kavarna-az-na-pudu",
+  "name": "Kavárna Až na půdu",
+  "logo": "Až na půdu",
+  "logo_sub": "Kavárna · bistro · bar · Písek",
+  "phone": "773 996 543",
+  "email": "kavarna@aznapudu.cz",
+  "ico": "03492541",
+  "address": "Jungmannova 34/11, Písek",
+  "street": "Jungmannova 34/11",
+  "city": "Písek",
+  "map_query": "Jungmannova 34/11, Písek",
+  "schema": "CafeOrCoffeeShop",
+  "description": "Kavárna Až na půdu v historickém centru Písku: ráno kavárna, přes den bistro, večer bar. Jungmannova 34/11. Tel. 773 996 543.",
+  "colors": {
+   "bg": "#F5F2EC",
+   "surface": "#FFFFFF",
+   "ink": "#1E1B18",
+   "muted": "#5E5850",
+   "line": "#E2DCD2",
+   "accent": "#B4532A",
+   "accent_ink": "#FFFFFF",
+   "soft": "#ECE6DB",
+   "dark": "#1C1916"
+  },
+  "fonts": [
+   {
+    "gf": "Newsreader:opsz,wght@6..72,500;6..72,600",
+    "css": "\"Newsreader\",Georgia,serif"
+   },
+   {
+    "gf": "Space Grotesk:wght@400;500;600",
+    "css": "\"Space Grotesk\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.02em",
+  "nav": [
+   [
+    "sluzby",
+    "Ráno · den · večer"
+   ],
+   [
+    "o-nas",
+    "O nás"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Kavárna · bistro · bar · Písek",
+  "h1": "Ráno kavárna, přes den bistro, večer bar",
+  "lead": "Až na půdu v historickém centru Písku. Přijďte na snídani a kávu, na oběd nebo večer na skleničku.",
+  "cta": "Zavolat",
+  "cta2": [
+   "kontakt",
+   "Otevírací doba"
+  ],
+  "hero_card": [
+   "4,8 ★ z 51 hodnocení",
+   "hostů na Firmy.cz"
+  ],
+  "trust": [
+   [
+    "4,8 z 5",
+    "51 hodnocení na Firmy.cz"
+   ],
+   [
+    "Od 8 ráno",
+    "Po–So"
+   ],
+   [
+    "Historické centrum",
+    "Jungmannova 34/11"
+   ],
+   [
+    "Celý den",
+    "káva, bistro, bar"
+   ]
+  ],
+  "svc_eyebrow": "Ráno · den · večer",
+  "svc_title": "Jedno místo na celý den",
+  "svc_lead": "Podnik, který se mění s denní dobou – a pokaždé se k nám hodí přijít.",
+  "services": [
+   {
+    "title": "Ráno: kavárna",
+    "text": "Káva a snídaně pro dobrý začátek dne."
+   },
+   {
+    "title": "Přes den: bistro",
+    "text": "Oběd nebo něco menšího k jídlu v centru Písku."
+   },
+   {
+    "title": "Večer: bar",
+    "text": "Sklenička s přáteli – v pátek a v sobotu až do 22 hodin."
+   }
+  ],
+  "svc_note": "Aktuální nabídku Vám rádi řekneme po telefonu.",
+  "gallery": [
+   [
+    "photo-1766634001824-a514fdf9df16",
+    "Zákusek a káva"
+   ],
+   [
+    "photo-1521917441209-e886f0404a7b",
+    "Posezení v kavárně"
+   ],
+   [
+    "photo-1748712869489-95dce7262348",
+    "Dort a šálek"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O nás",
+   "title": "Útulné místo v historickém centru",
+   "text": "Až na půdu najdete v Jungmannově ulici v centru Písku. Hosté nás na Firmy.cz hodnotí průměrem 4,8 z 5 – a to je pro nás největší pochvala.",
+   "points": [
+    "Otevřeno od rána do večera",
+    "Historické centrum Písku",
+    "Kavárna, bistro i bar"
+   ],
+   "photo": "photo-1676300185983-d5f242babe34",
+   "alt": "Cheesecake a káva"
+  },
+  "rating": {
+   "score": "4,8",
+   "count": "51",
+   "url": "https://www.firmy.cz/detail/12984443-kavarna-az-na-pudu-pisek-vnitrni-mesto.html",
+   "text": "Hosté nás na Firmy.cz hodnotí průměrem 4,8 z 5. Děkujeme, že se k nám vracíte."
+  },
+  "steps_title": "Kdy k nám zajít",
+  "steps": [
+   [
+    "Ráno",
+    "Od 8 hodin káva a snídaně."
+   ],
+   [
+    "V poledne",
+    "Bistro pro rychlý i pohodový oběd."
+   ],
+   [
+    "Večer",
+    "Bar v pátek a sobotu až do 22 hodin."
+   ]
+  ],
+  "faq": [
+   [
+    "Kdy máte otevřeno?",
+    "Po–Čt 8–20, Pá–So 8–22, Ne 9–16."
+   ],
+   [
+    "Můžu si u Vás dát snídani?",
+    "Ano, ráno jsme kavárna – zastavte se na snídani a kávu."
+   ],
+   [
+    "Dá se u Vás rezervovat stůl?",
+    "Zavolejte nám na 773 996 543 a domluvíme se."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí – čtvrtek",
+    "8:00 – 20:00"
+   ],
+   [
+    "Pátek – sobota",
+    "8:00 – 22:00"
+   ],
+   [
+    "Neděle",
+    "9:00 – 16:00"
+   ]
+  ],
+  "hours_note": "podle Firmy.cz",
+  "contact_title": "Najdete nás v centru Písku",
+  "band": "Ráno, v poledne i večer. Těšíme se na Vás.",
+  "hero_photo": "photo-1741265805852-32186a6d0dd3",
+  "hero_alt": "Interiér kavárny s barem"
+ },
+ {
+  "slug": "vk-nehtove-studio",
+  "name": "VK nehtové studio",
+  "logo": "VK nehtové studio",
+  "logo_sub": "Velké Němčice",
+  "phone": "607 989 483",
+  "email": "vercihubena@seznam.cz",
+  "ico": "14142970",
+  "address": "Osvobození 485, Velké Němčice",
+  "street": "Osvobození 485",
+  "city": "Velké Němčice",
+  "map_query": "Osvobození 485, Velké Němčice",
+  "schema": "NailSalon",
+  "description": "VK nehtové studio ve Velkých Němčicích: nehtová modeláž. Otevřeno Po–Pá 9–17. Osvobození 485. Tel. 607 989 483.",
+  "colors": {
+   "bg": "#FBF8F8",
+   "surface": "#FFFFFF",
+   "ink": "#261E22",
+   "muted": "#675B61",
+   "line": "#EEE3E6",
+   "accent": "#8C4A63",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F5EBEE",
+   "dark": "#2B1E24"
+  },
+  "fonts": [
+   {
+    "gf": "Playfair Display:wght@500;600",
+    "css": "\"Playfair Display\",Georgia,serif"
+   },
+   {
+    "gf": "Mulish:wght@400;500;700",
+    "css": "\"Mulish\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.01em",
+  "radius": "16px",
+  "nav": [
+   [
+    "sluzby",
+    "Služby"
+   ],
+   [
+    "o-nas",
+    "O studiu"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Nehtové studio · Velké Němčice",
+  "h1": "Upravené nehty bez dlouhého dojíždění",
+  "lead": "Nehtová modeláž přímo ve Velkých Němčicích. Otevřeno v pracovní dny od 9 do 17 hodin – termín domluvíte jedním telefonátem.",
+  "cta": "Objednat se",
+  "cta2": [
+   "sluzby",
+   "Služby"
+  ],
+  "hero_card": [
+   "Po–Pá 9–17",
+   "termín po telefonu"
+  ],
+  "trust": [
+   [
+    "Nehtová modeláž",
+    "podle Vašeho přání"
+   ],
+   [
+    "Po–Pá 9–17",
+    "pevná otevírací doba"
+   ],
+   [
+    "Velké Němčice",
+    "Osvobození 485"
+   ],
+   [
+    "Osobní přístup",
+    "jedna nehtařka, jeden styl"
+   ]
+  ],
+  "svc_eyebrow": "Služby",
+  "svc_title": "Co pro Vás udělám",
+  "svc_lead": "Nehty, které vydrží každodenní práci a pořád vypadají upraveně.",
+  "services": [
+   {
+    "title": "Nehtová modeláž",
+    "text": "Nové nehty podle Vašeho tvaru, délky a barvy."
+   },
+   {
+    "title": "Doplnění",
+    "text": "Pravidelná péče, aby nehty vypadaly stále jako nové."
+   },
+   {
+    "title": "Poradenství",
+    "text": "Poradím s tvarem i barvou, která Vám bude slušet."
+   }
+  ],
+  "svc_note": "Cenu Vám řeknu předem po telefonu.",
+  "gallery": [
+   [
+    "photo-1754799670410-b282791342c3",
+    "Zdobené pastelové nehty"
+   ],
+   [
+    "photo-1571290274554-6a2eaa771e5f",
+    "Upravené nehty"
+   ],
+   [
+    "photo-1619607146034-5a05296c8f9a",
+    "Laky v nehtovém studiu"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O studiu",
+   "title": "Malé studio s pevnou otevírací dobou",
+   "text": "VK nehtové studio najdete ve Velkých Němčicích na ulici Osvobození. Otevřeno je každý pracovní den, takže termín najdete snadno.",
+   "points": [
+    "Otevřeno Po–Pá 9–17",
+    "Klidné prostředí",
+    "Termín domluvíte po telefonu"
+   ],
+   "photo": "photo-1659391542239-9648f307c0b1",
+   "alt": "Příprava gelových nehtů"
+  },
+  "steps_title": "Objednání je jednoduché",
+  "steps": [
+   [
+    "Zavolejte",
+    "607 989 483, Po–Pá 9–17."
+   ],
+   [
+    "Domluvíme termín",
+    "Poradím s tvarem a barvou."
+   ],
+   [
+    "Přijďte",
+    "Osvobození 485, Velké Němčice."
+   ]
+  ],
+  "faq": [
+   [
+    "Jak dlouho modeláž trvá?",
+    "Záleží na délce a zdobení. Čas Vám řeknu při objednání."
+   ],
+   [
+    "Jak často je potřeba doplnění?",
+    "Obvykle po několika týdnech – podle toho, jak rychle Vám nehty rostou."
+   ],
+   [
+    "Kolik to stojí?",
+    "Cenu Vám řeknu předem."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí – pátek",
+    "9:00 – 17:00"
+   ],
+   [
+    "Sobota – neděle",
+    "zavřeno"
+   ]
+  ],
+  "hours_note": "podle Firmy.cz",
+  "contact_title": "Domluvte si termín",
+  "band": "Těšíte se na nové nehty? Zavolejte.",
+  "hero_photo": "photo-1519014816548-bf5fe059798b",
+  "hero_alt": "Růžová manikúra"
+ },
+ {
+  "slug": "nehtove-studio-fenix",
+  "name": "Nehtové studio Fénix",
+  "logo": "Nehtové studio Fénix",
+  "logo_sub": "Břeclav · Charvátská Nová Ves",
+  "phone": "731 436 331",
+  "email": "nehty-fenix@email.cz",
+  "ico": "70294020",
+  "address": "Na Valtické 696/63, Břeclav-Charvátská Nová Ves",
+  "street": "Na Valtické 696/63",
+  "city": "Břeclav",
+  "map_query": "Na Valtické 696/63, Břeclav",
+  "schema": "NailSalon",
+  "description": "Nehtové studio Fénix, Břeclav: gelové i akrylové nehty, manikúra, P-shine, zdobení, parafínové zábaly. Po–Pá 9–19. Tel. 731 436 331.",
+  "colors": {
+   "bg": "#FAF7F2",
+   "surface": "#FFFFFF",
+   "ink": "#241C17",
+   "muted": "#665A50",
+   "line": "#EBE1D5",
+   "accent": "#B0603A",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F3EADF",
+   "dark": "#2A1D16"
+  },
+  "fonts": [
+   {
+    "gf": "Noto Serif Display:wght@500;600",
+    "css": "\"Noto Serif Display\",Georgia,serif"
+   },
+   {
+    "gf": "Outfit:wght@400;500;600",
+    "css": "\"Outfit\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.01em",
+  "radius": "12px",
+  "nav": [
+   [
+    "sluzby",
+    "Služby"
+   ],
+   [
+    "o-nas",
+    "O studiu"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Nehtové studio · Břeclav",
+  "h1": "Nehty, které Vám udělají radost každý den",
+  "lead": "Gelové i akrylové nehty, manikúra, P-shine a parafínové zábaly v Břeclavi. Otevřeno v pracovní dny až do 19 hodin – stihnete to i po práci.",
+  "cta": "Objednat se",
+  "cta2": [
+   "sluzby",
+   "Služby"
+  ],
+  "hero_card": [
+   "Po–Pá do 19:00",
+   "stihnete to i po práci"
+  ],
+  "trust": [
+   [
+    "Gel i akryl",
+    "podle Vašeho přání"
+   ],
+   [
+    "Do 19 hodin",
+    "Po–Pá"
+   ],
+   [
+    "Parafínové zábaly",
+    "péče o ruce"
+   ],
+   [
+    "Charvátská Nová Ves",
+    "Na Valtické 696/63"
+   ]
+  ],
+  "svc_eyebrow": "Služby",
+  "svc_title": "Péče o Vaše nehty i ruce",
+  "svc_lead": "Od klasické manikúry po zdobené nehty s kamínky.",
+  "services": [
+   {
+    "title": "Gelové nehty",
+    "text": "Modeláž gelovou technikou – přirozený vzhled i výrazné tvary."
+   },
+   {
+    "title": "Akrylové nehty",
+    "text": "Odolná modeláž pro delší nehty."
+   },
+   {
+    "title": "Manikúra a P-shine",
+    "text": "Upravené přírodní nehty s japonským leštěním P-shine."
+   },
+   {
+    "title": "Zdobení",
+    "text": "Kamínky, třpytky a ozdoby podle Vaší chuti."
+   },
+   {
+    "title": "Parafínové zábaly",
+    "text": "Hydratace a hebké ruce, hlavně v zimě."
+   },
+   {
+    "title": "Poradenství",
+    "text": "Poradím s tvarem, délkou i barvou."
+   }
+  ],
+  "svc_note": "Cenu Vám řeknu předem po telefonu.",
+  "gallery": [
+   [
+    "photo-1632345031435-8727f6897d53",
+    "Úprava nehtů"
+   ],
+   [
+    "photo-1512207046665-7592bb0ce5e6",
+    "Laky na nehty"
+   ],
+   [
+    "photo-1762373349045-c2decd4ec3f3",
+    "Francouzská manikúra"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O studiu",
+   "title": "Studio, kde se o Vás postarají",
+   "text": "Nehtové studio Fénix najdete v Břeclavi-Charvátské Nové Vsi. Otevřeno je každý pracovní den až do 19 hodin, takže se objednáte i po práci.",
+   "points": [
+    "Gel, akryl i P-shine",
+    "Parafínové zábaly",
+    "Otevřeno Po–Pá 9–19"
+   ],
+   "photo": "photo-1695527081827-fdbc4e77be9b",
+   "alt": "Místnost kosmetického studia"
+  },
+  "steps_title": "Objednání je jednoduché",
+  "steps": [
+   [
+    "Zavolejte",
+    "731 436 331, Po–Pá 9–19."
+   ],
+   [
+    "Domluvíme termín a styl",
+    "Poradím, co se k Vám hodí."
+   ],
+   [
+    "Přijďte",
+    "Na Valtické 696/63, Břeclav."
+   ]
+  ],
+  "faq": [
+   [
+    "Gel, nebo akryl?",
+    "Obojí drží dobře. Ráda poradím, co se hodí k Vašim nehtům."
+   ],
+   [
+    "Co je P-shine?",
+    "Japonská metoda leštění přírodních nehtů, po které jsou lesklé a pevnější."
+   ],
+   [
+    "Stihnu to po práci?",
+    "Ano, otevřeno je v pracovní dny až do 19 hodin."
+   ],
+   [
+    "Kolik to stojí?",
+    "Cenu Vám řeknu předem."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí – pátek",
+    "9:00 – 19:00"
+   ],
+   [
+    "Sobota – neděle",
+    "zavřeno"
+   ]
+  ],
+  "hours_note": "podle Firmy.cz",
+  "contact_title": "Domluvte si termín",
+  "band": "Dopřejte si krásné nehty. Zavolejte.",
+  "hero_photo": "photo-1772322586754-34c9e6f5be6f",
+  "hero_alt": "Francouzské gelové nehty s třpytkami"
+ },
+ {
+  "slug": "masaze-monika-damborice",
+  "name": "Masáže Monika",
+  "logo": "Masáže Monika",
+  "logo_sub": "Dambořice",
+  "phone": "608 714 654",
+  "email": "masaze.monika@seznam.cz",
+  "ico": "87226545",
+  "address": "Dambořice 70",
+  "street": "Dambořice 70",
+  "city": "Dambořice",
+  "map_query": "Dambořice 70",
+  "schema": "HealthAndBeautyBusiness",
+  "description": "Masáže Monika, Dambořice: reflexologie, Dornova metoda, Breussova masáž, lymfatická, klasická a medová masáž, lávové kameny, masáž obličeje. Tel. 608 714 654.",
+  "colors": {
+   "bg": "#F8F6F2",
+   "surface": "#FFFFFF",
+   "ink": "#202421",
+   "muted": "#5B625D",
+   "line": "#E1E3DD",
+   "accent": "#5C6E4E",
+   "accent_ink": "#FFFFFF",
+   "soft": "#ECEEE6",
+   "dark": "#232A22"
+  },
+  "fonts": [
+   {
+    "gf": "Crimson Pro:wght@500;600",
+    "css": "\"Crimson Pro\",Georgia,serif"
+   },
+   {
+    "gf": "Rubik:wght@400;500",
+    "css": "\"Rubik\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.01em",
+  "nav": [
+   [
+    "sluzby",
+    "Masáže"
+   ],
+   [
+    "o-nas",
+    "O mně"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Masáže · Dambořice",
+  "h1": "Klid na duši a úleva pro tělo",
+  "lead": "Reflexologie, Dornova metoda, Breussova masáž i lávové kameny v Dambořicích. Termín domluvíte v pracovní dny po telefonu.",
+  "cta": "Objednat masáž",
+  "cta2": [
+   "sluzby",
+   "Druhy masáží"
+  ],
+  "hero_card": [
+   "9 technik",
+   "od klasiky po lávové kameny"
+  ],
+  "trust": [
+   [
+    "Dornova metoda",
+    "i Breussova masáž"
+   ],
+   [
+    "Reflexologie",
+    "masáž chodidel"
+   ],
+   [
+    "Po–Pá",
+    "podle domluvy"
+   ],
+   [
+    "Dambořice 70",
+    "u Kyjova"
+   ]
+  ],
+  "svc_eyebrow": "Masáže",
+  "svc_title": "Vyberte si masáž",
+  "svc_lead": "Každá technika pomáhá s něčím jiným. Pokud si nejste jistí, zavolejte – poradím.",
+  "services": [
+   {
+    "title": "Klasická masáž",
+    "text": "Uvolnění zad, šíje a ramen po náročném dni."
+   },
+   {
+    "title": "Dornova metoda a Breussova masáž",
+    "text": "Šetrné techniky zaměřené na páteř a klouby."
+   },
+   {
+    "title": "Reflexologie",
+    "text": "Masáž reflexních zón na chodidlech pro celkové uvolnění."
+   },
+   {
+    "title": "Lymfatická masáž",
+    "text": "Jemná technika, která ulehčí těžkým nohám."
+   },
+   {
+    "title": "Medová masáž a lávové kameny",
+    "text": "Hřejivé a tradiční techniky pro hluboké uvolnění."
+   },
+   {
+    "title": "Masáž obličeje",
+    "text": "Uvolnění a péče, po které se budete cítit svěží."
+   }
+  ],
+  "svc_note": "Cenu Vám řeknu předem po telefonu. K dispozici jsou i mobilizační techniky.",
+  "gallery": [
+   [
+    "photo-1620733723572-11c53f73a416",
+    "Svíčky a ručník"
+   ],
+   [
+    "photo-1772915022472-ffc1df2d6051",
+    "Svíčka"
+   ],
+   [
+    "photo-1650044252595-cacd425982ff",
+    "Masáž zad"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O mně",
+   "title": "Prostředí, které přináší klid",
+   "text": "V Dambořicích se věnuji masážím a šetrným technikám pro páteř. Ke každému přistupuji individuálně a v klidu – tak, abyste odcházeli odpočatí.",
+   "points": [
+    "Devět technik masáže",
+    "Individuální přístup",
+    "Termín podle domluvy"
+   ],
+   "photo": "photo-1675159364615-38e1f6b62282",
+   "alt": "Reflexní masáž chodidla"
+  },
+  "steps_title": "Od telefonátu k odpočinku",
+  "steps": [
+   [
+    "Zavolejte",
+    "608 714 654, v pracovní dny."
+   ],
+   [
+    "Domluvíme masáž",
+    "Poradím, která technika se pro Vás hodí."
+   ],
+   [
+    "Přijďte",
+    "Dambořice 70."
+   ]
+  ],
+  "faq": [
+   [
+    "Co je Dornova metoda?",
+    "Šetrná technika zaměřená na páteř a klouby, často doplněná Breussovou masáží."
+   ],
+   [
+    "Kterou masáž si vybrat?",
+    "Zavolejte a řekněte, co Vás trápí – doporučím vhodnou."
+   ],
+   [
+    "Kdy se dá přijít?",
+    "V pracovní dny podle telefonické domluvy."
+   ],
+   [
+    "Kolik masáž stojí?",
+    "Cenu Vám řeknu předem po telefonu."
+   ]
+  ],
+  "hours_text": "Pondělí – pátek podle telefonické domluvy.",
+  "contact_title": "Domluvte si termín",
+  "band": "Dopřejte si chvíli klidu. Zavolejte a domluvíme se.",
+  "hero_photo": "photo-1639162906614-0603b0ae95fd",
+  "hero_alt": "Masáž zad"
+ }
+]
