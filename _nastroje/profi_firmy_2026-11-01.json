@@ -1,0 +1,1300 @@
+[
+ {
+  "slug": "centrum-pohody-znojmo",
+  "name": "Centrum pohody",
+  "logo": "Centrum pohody",
+  "logo_sub": "Znojmo · Vídeňská třída",
+  "phone": "737 260 866",
+  "email": "info@centrum-pohody.cz",
+  "ico": "02949466",
+  "address": "Vídeňská třída 594/12, Znojmo",
+  "street": "Vídeňská třída 594/12",
+  "city": "Znojmo",
+  "map_query": "Vídeňská třída 594/12, Znojmo",
+  "schema": "HealthAndBeautyBusiness",
+  "description": "Centrum pohody ve Znojmě: pedikúra, manikúra, kosmetika, masáže, reflexní terapie, jóga a pilates na Vídeňské třídě. Tel. 737 260 866.",
+  "colors": {
+   "bg": "#FBF9F5",
+   "surface": "#FFFFFF",
+   "ink": "#1F2622",
+   "muted": "#5C665F",
+   "line": "#E3E0D8",
+   "accent": "#4F6B58",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F1EEE6",
+   "dark": "#26332B"
+  },
+  "fonts": [
+   {
+    "gf": "Cormorant Garamond:wght@500;600",
+    "css": "\"Cormorant Garamond\",Georgia,serif"
+   },
+   {
+    "gf": "Jost:wght@400;500;600",
+    "css": "\"Jost\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 600,
+  "disp_track": "0",
+  "nav": [
+   [
+    "sluzby",
+    "Služby"
+   ],
+   [
+    "o-nas",
+    "O centru"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Pedikúra · kosmetika · masáže · jóga",
+  "h1": "Péče o tělo i mysl pod jednou střechou ve Znojmě",
+  "lead": "Pedikúra, manikúra, kosmetika, masáže i cvičení na Vídeňské třídě. Termín na cokoli z nabídky domluvíte jedním telefonátem.",
+  "cta": "Domluvit termín",
+  "cta2": [
+   "sluzby",
+   "Prohlédnout služby"
+  ],
+  "hero_card": [
+   "Jeden telefonát",
+   "a domluvíme termín na cokoli z nabídky"
+  ],
+  "trust": [
+   [
+    "Vše na jednom místě",
+    "od pedikúry po jógu"
+   ],
+   [
+    "Vídeňská třída 12",
+    "Znojmo"
+   ],
+   [
+    "Více odborníků",
+    "každý se věnuje svému oboru"
+   ],
+   [
+    "IČO 02949466",
+    "zapsaná firma"
+   ]
+  ],
+  "svc_eyebrow": "Služby",
+  "svc_title": "Co pro Vás uděláme",
+  "svc_lead": "Péče o nohy, ruce, pleť i záda. A když si chcete odpočinout hlavou, přijďte si zacvičit.",
+  "services": [
+   {
+    "title": "Pedikúra a nehtové špony",
+    "text": "Ošetření nohou, úprava nehtů a nehtové špony při zarůstání."
+   },
+   {
+    "title": "Manikúra",
+    "text": "Upravené ruce a nehty – na každý den i na zvláštní příležitost."
+   },
+   {
+    "title": "Kosmetika",
+    "text": "Ošetření pleti podle toho, co Vaše pleť právě potřebuje."
+   },
+   {
+    "title": "Masáže a reflexní terapie",
+    "text": "Uvolnění zad a šíje, reflexní ošetření chodidel."
+   },
+   {
+    "title": "Jóga, pilates a relaxační cvičení",
+    "text": "Pohyb, který posílí tělo a zklidní mysl."
+   },
+   {
+    "title": "Terapie a čínská medicína",
+    "text": "Tradiční přístupy k péči o zdraví a rovnováhu těla."
+   }
+  ],
+  "svc_note": "Ceny Vám rádi řekneme předem po telefonu.",
+  "gallery": [
+   [
+    "photo-1779636198585-658170ee0283",
+    "Nástroje na manikúru a pedikúru"
+   ],
+   [
+    "photo-1611073615830-9f76902c10fe",
+    "Masáž rukou na ručníku"
+   ],
+   [
+    "photo-1772915022472-ffc1df2d6051",
+    "Svíčka na dřevěném stole"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O centru",
+   "title": "Místo, kam si chodíte odpočinout",
+   "text": "V Centru pohody najdete několik odborníků v jednom domě. Nemusíte obíhat město – pedikúru, kosmetiku i masáž zvládnete na jedné adrese ve Znojmě.",
+   "points": [
+    "Pedikúra, manikúra i kosmetika na jednom místě",
+    "Masáže, reflexní terapie a cvičení",
+    "Klidné prostředí v centru Znojma"
+   ],
+   "photo": "photo-1620733723572-11c53f73a416",
+   "alt": "Svíčky, aroma difuzér a srolovaný ručník"
+  },
+  "steps_title": "Termín domluvíte za pár minut",
+  "steps": [
+   [
+    "Zavolejte nebo napište",
+    "Řekněte, o jakou službu máte zájem. Na 737 260 866 nebo e-mailem."
+   ],
+   [
+    "Domluvíme termín",
+    "Najdeme čas, který se Vám hodí, a řekneme Vám cenu předem."
+   ],
+   [
+    "Přijďte si odpočinout",
+    "Vídeňská třída 594/12 ve Znojmě. Zbytek nechte na nás."
+   ]
+  ],
+  "faq": [
+   [
+    "Je potřeba se objednat předem?",
+    "Ano, doporučujeme. Termín domluvíme po telefonu, abyste nemuseli čekat."
+   ],
+   [
+    "Můžu spojit více služeb v jeden den?",
+    "Zeptejte se při objednání – pokusíme se termíny navázat."
+   ],
+   [
+    "Co si vzít na jógu nebo pilates?",
+    "Stačí pohodlné oblečení. Na podrobnosti se zeptejte při objednání."
+   ],
+   [
+    "Kolik ošetření stojí?",
+    "Cenu Vám řekneme předem po telefonu, podle služby, o kterou máte zájem."
+   ]
+  ],
+  "hours_text": "Termíny podle domluvy – zavolejte nám.",
+  "contact_title": "Najdete nás na Vídeňské třídě",
+  "band": "Dopřejte si chvíli pro sebe. Termín domluvíme po telefonu.",
+  "hero_photo": "photo-1787651344170-c2f81514934d",
+  "hero_alt": "Kožené křeslo a nádoba na koupel nohou v pedikérské místnosti"
+ },
+ {
+  "slug": "gelove-nehty-monika-ramstorfer",
+  "name": "Gelové nehty Monika Ramstorfer",
+  "logo": "Monika Ramstorfer",
+  "logo_sub": "Gelové nehty · Mikulov",
+  "phone": "733 299 920",
+  "email": "monis.15@seznam.cz",
+  "ico": "10837493",
+  "address": "Hraničářů 1476/10, Mikulov",
+  "street": "Hraničářů 1476/10",
+  "city": "Mikulov",
+  "map_query": "Hraničářů 1476/10, Mikulov",
+  "schema": "NailSalon",
+  "description": "Gelové a akrylové nehty, modeláž a francouzská manikúra v Mikulově – Monika Ramstorfer, Hraničářů 1476/10. Tel. 733 299 920.",
+  "colors": {
+   "bg": "#FCF8F6",
+   "surface": "#FFFFFF",
+   "ink": "#2A2120",
+   "muted": "#6E5F5B",
+   "line": "#EEE2DD",
+   "accent": "#9E6A5E",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F6ECE8",
+   "dark": "#3A2B28"
+  },
+  "fonts": [
+   {
+    "gf": "Bodoni Moda:opsz,wght@6..96,500",
+    "css": "\"Bodoni Moda\",Didot,Georgia,serif"
+   },
+   {
+    "gf": "Manrope:wght@400;500;600",
+    "css": "\"Manrope\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.01em",
+  "radius": "6px",
+  "nav": [
+   [
+    "sluzby",
+    "Služby"
+   ],
+   [
+    "o-nas",
+    "O mně"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Nehtové studio · Mikulov",
+  "h1": "Upravené nehty, na které se budete rádi dívat",
+  "lead": "Gelové a akrylové nehty, modeláž i francouzská manikúra v Mikulově. Termín si domluvíte telefonem nebo e-mailem.",
+  "cta": "Objednat se",
+  "cta2": [
+   "sluzby",
+   "Co nabízím"
+  ],
+  "hero_card": [
+   "Hraničářů 10",
+   "Mikulov – termín po domluvě"
+  ],
+  "trust": [
+   [
+    "Gelové i akrylové",
+    "nehty podle Vašeho přání"
+   ],
+   [
+    "Francouzská manikúra",
+    "klasika, která se hodí ke všemu"
+   ],
+   [
+    "Mikulov",
+    "Hraničářů 1476/10"
+   ],
+   [
+    "Osobní přístup",
+    "celou dobu jedna nehtařka"
+   ]
+  ],
+  "svc_eyebrow": "Služby",
+  "svc_title": "Co pro Vás udělám",
+  "svc_lead": "Nehty, které sednou k Vaší ruce i stylu – na každý den i na svatbu.",
+  "services": [
+   {
+    "title": "Gelové nehty",
+    "text": "Pevné a lesklé nehty z gelu, přirozené i výrazné."
+   },
+   {
+    "title": "Akrylové nehty",
+    "text": "Odolná modeláž pro ty, kdo chtějí delší nehty."
+   },
+   {
+    "title": "Francouzská manikúra",
+    "text": "Čistá bílá špička – elegance, která se nikdy neokouká."
+   }
+  ],
+  "svc_note": "Cenu Vám řeknu předem – stačí zavolat nebo napsat.",
+  "gallery": [
+   [
+    "photo-1762373349045-c2decd4ec3f3",
+    "Francouzská manikúra"
+   ],
+   [
+    "photo-1632345031435-8727f6897d53",
+    "Úprava nehtů v salonu"
+   ],
+   [
+    "photo-1512207046665-7592bb0ce5e6",
+    "Laky na nehty"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O mně",
+   "title": "Každé nehty dělám, jako by byly moje",
+   "text": "Jmenuji se Monika Ramstorfer a v Mikulově se věnuji gelovým a akrylovým nehtům. Zákaznice mi píšou, že odcházejí spokojené – a o to mi jde.",
+   "points": [
+    "Poradím s tvarem i barvou",
+    "Pracuji pečlivě a v klidu",
+    "Termín přizpůsobím Vám"
+   ],
+   "photo": "photo-1693776529070-2cdea397595b",
+   "alt": "Modeláž gelových nehtů ve studiu"
+  },
+  "steps_title": "Objednání je jednoduché",
+  "steps": [
+   [
+    "Napište nebo zavolejte",
+    "733 299 920 nebo monis.15@seznam.cz."
+   ],
+   [
+    "Domluvíme termín i styl",
+    "Poradím, co se k Vašim nehtům hodí."
+   ],
+   [
+    "Odcházíte s krásnými nehty",
+    "Hraničářů 1476/10 v Mikulově."
+   ]
+  ],
+  "faq": [
+   [
+    "Jak dlouho modeláž trvá?",
+    "Záleží na technice a délce nehtů. Přesný čas Vám řeknu při objednání."
+   ],
+   [
+    "Gel, nebo akryl?",
+    "Obojí drží dobře. Ráda poradím, co se hodí právě k Vašim nehtům."
+   ],
+   [
+    "Můžu si přinést obrázek, jak nehty chci?",
+    "Určitě, inspirace se vždycky hodí."
+   ],
+   [
+    "Kolik to stojí?",
+    "Cenu Vám řeknu předem podle toho, co si vyberete."
+   ]
+  ],
+  "hours_text": "Termín po domluvě telefonem nebo e-mailem.",
+  "contact_title": "Domluvte si termín",
+  "band": "Těšíte se na nové nehty? Napište nebo zavolejte.",
+  "hero_photo": "photo-1610992015762-45dca7fa3a85",
+  "hero_alt": "Ruka se světle růžovými nehty"
+ },
+ {
+  "slug": "masazni-studio-monika-kyjov",
+  "name": "Masážní studio Monika",
+  "logo": "Masážní studio Monika",
+  "logo_sub": "Kyjov · OD Skleňák",
+  "phone": "607 781 099",
+  "email": "monika.vytonska@seznam.cz",
+  "ico": "88143741",
+  "address": "Jungmannova 499/41, Kyjov (obchodní dům Skleňák)",
+  "street": "Jungmannova 499/41",
+  "city": "Kyjov",
+  "map_query": "Jungmannova 499/41, Kyjov",
+  "schema": "HealthAndBeautyBusiness",
+  "description": "Masážní studio Monika v Kyjově: klasická, relaxační, lymfatická, protimigrénová, medová, kokosová, konopná a marocká masáž. Dárkové poukazy. Tel. 607 781 099.",
+  "colors": {
+   "bg": "#FAF7F3",
+   "surface": "#FFFFFF",
+   "ink": "#2B2420",
+   "muted": "#6A5D55",
+   "line": "#E8DFD6",
+   "accent": "#8A5A3C",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F2EAE1",
+   "dark": "#33271F"
+  },
+  "fonts": [
+   {
+    "gf": "Marcellus",
+    "css": "\"Marcellus\",Georgia,serif"
+   },
+   {
+    "gf": "Nunito Sans:wght@400;600;700",
+    "css": "\"Nunito Sans\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 400,
+  "disp_track": "0",
+  "nav": [
+   [
+    "sluzby",
+    "Masáže"
+   ],
+   [
+    "poukazy",
+    "Dárkové poukazy"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Masáže · Kyjov",
+  "h1": "Hodina jen pro Vás, uprostřed Kyjova",
+  "lead": "Osm druhů masáží v obchodním domě Skleňák – od klasické a lymfatické po medovou a marockou. Masáž můžete i darovat.",
+  "cta": "Objednat masáž",
+  "cta2": [
+   "poukazy",
+   "Dárkový poukaz"
+  ],
+  "hero_card": [
+   "8 druhů masáží",
+   "od klasiky po marockou"
+  ],
+  "trust": [
+   [
+    "8 druhů masáží",
+    "vyberete podle nálady i potíží"
+   ],
+   [
+    "Dárkové poukazy",
+    "dárek, který potěší"
+   ],
+   [
+    "OD Skleňák",
+    "Jungmannova 499/41, Kyjov"
+   ],
+   [
+    "Podle objednávek",
+    "termín přizpůsobíme Vám"
+   ]
+  ],
+  "svc_eyebrow": "Masáže",
+  "svc_title": "Vyberte si masáž",
+  "svc_lead": "Nevíte, kterou zvolit? Zavolejte a poradíme podle toho, co Vás trápí nebo na co máte chuť.",
+  "services": [
+   {
+    "title": "Klasická masáž",
+    "text": "Uvolní ztuhlá záda, šíji a ramena. Ideální po dlouhém sezení."
+   },
+   {
+    "title": "Relaxační masáž",
+    "text": "Pomalé, klidné tahy pro odpočinek celého těla i hlavy."
+   },
+   {
+    "title": "Lymfatická masáž",
+    "text": "Jemná technika, která podporuje proudění lymfy a ulehčí těžkým nohám."
+   },
+   {
+    "title": "Protimigrénová masáž",
+    "text": "Zaměřená na hlavu, šíji a ramena – tam, kde se napětí drží nejčastěji."
+   },
+   {
+    "title": "Medová masáž",
+    "text": "Tradiční masáž zad s medem, po které je pokožka hebká."
+   },
+   {
+    "title": "Kokosová, konopná a marocká",
+    "text": "Masáže s vonnými oleji pro hluboké uvolnění a výjimečný zážitek."
+   }
+  ],
+  "svc_note": "Ceny Vám rádi řekneme po telefonu.",
+  "gallery": [
+   [
+    "photo-1544161515-4ab6ce6db874",
+    "Odpočinek při masáži"
+   ],
+   [
+    "photo-1712638932314-e2b185ca0930",
+    "Masáž nohou"
+   ],
+   [
+    "photo-1696841212541-449ca29397cc",
+    "Masáž kameny"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O studiu",
+   "title": "Klidné místo v obchodním domě Skleňák",
+   "text": "Studio najdete v centru Kyjova, v obchodním domě Skleňák. Přijdete, odložíte starosti a necháte se hýčkat – na čase a termínu se domluvíme podle Vás.",
+   "points": [
+    "Osm druhů masáží v jednom studiu",
+    "Termíny podle objednávek",
+    "Dárkové poukazy na kteroukoli masáž"
+   ],
+   "photo": "photo-1519823551278-64ac92734fb1",
+   "alt": "Masáž zad"
+  },
+  "steps_title": "Od telefonátu k odpočinku",
+  "steps": [
+   [
+    "Zavolejte",
+    "607 781 099 – poradíme, která masáž je pro Vás."
+   ],
+   [
+    "Domluvíme termín",
+    "Studio je otevřené podle objednávek, termín přizpůsobíme Vám."
+   ],
+   [
+    "Přijďte a odpočívejte",
+    "OD Skleňák, Jungmannova 499/41, Kyjov."
+   ]
+  ],
+  "extra": {
+   "id": "poukazy",
+   "eyebrow": "Dárkové poukazy",
+   "title": "Darujte hodinu klidu",
+   "text": "Hledáte dárek k narozeninám, k svátku nebo pod stromeček? Dárkový poukaz na masáž potěší každého, kdo potřebuje vypnout. Zavolejte a poukaz připravíme.",
+   "cta": "Objednat poukaz",
+   "photo": "photo-1515377905703-c4788e51af15",
+   "alt": "Lahvička s masážním olejem"
+  },
+  "faq": [
+   [
+    "Kterou masáž si vybrat poprvé?",
+    "Pokud nevíte, začněte klasickou nebo relaxační. Rádi poradíme i po telefonu."
+   ],
+   [
+    "Co si vzít s sebou?",
+    "Nic zvláštního. Ručník i oleje máme připravené."
+   ],
+   [
+    "Je studio otevřené každý den?",
+    "Pracujeme podle objednávek – zavolejte a termín najdeme."
+   ],
+   [
+    "Dá se masáž darovat?",
+    "Ano, připravíme dárkový poukaz na kteroukoli masáž."
+   ]
+  ],
+  "hours_text": "Otevřeno podle objednávek.",
+  "contact_title": "Najdete nás v OD Skleňák",
+  "band": "Zasloužíte si odpočinek. Objednejte se ještě dnes.",
+  "hero_photo": "photo-1600334089648-b0d9d3028eb2",
+  "hero_alt": "Masáž lávovými kameny na zádech"
+ },
+ {
+  "slug": "masaze-jarmila-uhrova",
+  "name": "Masáže Jarmila Uhrová",
+  "logo": "Jarmila Uhrová",
+  "logo_sub": "Masáže · Břeclav",
+  "phone": "776 055 858",
+  "email": "jarmila.uhrova@seznam.cz",
+  "ico": "62145541",
+  "address": "Poliklinika Břeclav, Bří. Mrštíků 2708/38",
+  "address_note": "adresu ověříme s Vámi",
+  "street": "Bří. Mrštíků 2708/38",
+  "city": "Břeclav",
+  "map_query": "Poliklinika Břeclav, Bří. Mrštíků 2708/38, Břeclav",
+  "schema": "HealthAndBeautyBusiness",
+  "description": "Masáže Jarmila Uhrová, Břeclav: rekondiční, regenerační, bambusové, tvarovací a reflexní masáže. Po–Čt 9–18. Dárkové poukazy. Tel. 776 055 858.",
+  "colors": {
+   "bg": "#F7FAF9",
+   "surface": "#FFFFFF",
+   "ink": "#17282A",
+   "muted": "#4F6264",
+   "line": "#DCE6E5",
+   "accent": "#2D6A6E",
+   "accent_ink": "#FFFFFF",
+   "soft": "#EAF2F1",
+   "dark": "#163437"
+  },
+  "fonts": [
+   {
+    "gf": "Lora:wght@500;600",
+    "css": "\"Lora\",Georgia,serif"
+   },
+   {
+    "gf": "Source Sans 3:wght@400;600",
+    "css": "\"Source Sans 3\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.01em",
+  "radius": "10px",
+  "nav": [
+   [
+    "sluzby",
+    "Masáže"
+   ],
+   [
+    "poukazy",
+    "Dárkové poukazy"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Masáže · Břeclav",
+  "h1": "Masáže, po kterých se Vám bude lépe hýbat",
+  "lead": "Rekondiční, regenerační, bambusové, tvarovací i reflexní masáže v Břeclavi. Po–Čt od 9 do 18 hodin, termín domluvíte jedním telefonátem.",
+  "cta": "Objednat masáž",
+  "cta2": [
+   "sluzby",
+   "Druhy masáží"
+  ],
+  "hero_card": [
+   "Po–Čt 9–18",
+   "termín po telefonu"
+  ],
+  "trust": [
+   [
+    "5 druhů masáží",
+    "rekondiční až reflexní"
+   ],
+   [
+    "Po–Čt 9–18",
+    "i v odpoledních hodinách"
+   ],
+   [
+    "Dárkové poukazy",
+    "na kteroukoli masáž"
+   ],
+   [
+    "Břeclav",
+    "Bří. Mrštíků 2708/38"
+   ]
+  ],
+  "svc_eyebrow": "Masáže",
+  "svc_title": "Vyberte si masáž",
+  "svc_lead": "Každá masáž má jiný cíl. Pokud si nejste jistí, zavolejte – poradím, která se hodí právě Vám.",
+  "services": [
+   {
+    "title": "Rekondiční masáž",
+    "text": "Pomáhá tělu zotavit se z únavy a dlouhého sezení."
+   },
+   {
+    "title": "Regenerační masáž",
+    "text": "Pro sportovce i všechny, kdo potřebují uvolnit namožené svaly."
+   },
+   {
+    "title": "Bambusová masáž",
+    "text": "Masáž bambusovými tyčemi – hluboké, ale příjemné uvolnění."
+   },
+   {
+    "title": "Tvarovací masáž",
+    "text": "Zaměřená na problémové partie, doplněk péče o postavu."
+   },
+   {
+    "title": "Reflexní masáž",
+    "text": "Masáž chodidel a reflexních zón pro celkové uvolnění."
+   },
+   {
+    "title": "Dárkový poukaz",
+    "text": "Kteroukoli masáž můžete darovat svým blízkým."
+   }
+  ],
+  "svc_note": "Ceny Vám řeknu předem po telefonu.",
+  "gallery": [
+   [
+    "photo-1639162906614-0603b0ae95fd",
+    "Masáž zad"
+   ],
+   [
+    "photo-1712725213051-8d7d6a52edaf",
+    "Masážní místnost"
+   ],
+   [
+    "photo-1650044252595-cacd425982ff",
+    "Masáž zad"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O mně",
+   "title": "Rozumím tomu, co Vaše záda potřebují",
+   "text": "Jmenuji se Jarmila Uhrová a masážím se v Břeclavi věnuji dlouhá léta. Ke každému přistupuji individuálně – nejdřív se zeptám, co Vás trápí, a podle toho zvolím masáž.",
+   "points": [
+    "Pět druhů masáží podle Vašich potíží",
+    "Klidné prostředí",
+    "Odpolední termíny až do 18 hodin"
+   ],
+   "photo": "photo-1741522509438-a120c0bb5e88",
+   "alt": "Masáž zad a ramen"
+  },
+  "steps_title": "Objednání za pár minut",
+  "steps": [
+   [
+    "Zavolejte",
+    "776 055 858, Po–Čt 9–18."
+   ],
+   [
+    "Domluvíme masáž i termín",
+    "Poradím, která masáž se pro Vás hodí."
+   ],
+   [
+    "Přijďte",
+    "Bří. Mrštíků 2708/38, Břeclav."
+   ]
+  ],
+  "extra": {
+   "id": "poukazy",
+   "eyebrow": "Dárkové poukazy",
+   "title": "Darujte masáž",
+   "text": "Dárkový poukaz na masáž je dárek, který opravdu potěší – k narozeninám, svátku i Vánocům. Stačí zavolat a poukaz připravím.",
+   "cta": "Objednat poukaz",
+   "photo": "photo-1675159364615-38e1f6b62282",
+   "alt": "Reflexní masáž chodidla"
+  },
+  "faq": [
+   [
+    "Kterou masáž si vybrat?",
+    "Zavolejte a řekněte, co Vás trápí. Doporučím vhodnou masáž."
+   ],
+   [
+    "Jak dlouho masáž trvá?",
+    "Podle druhu masáže – délku Vám řeknu při objednání."
+   ],
+   [
+    "Můžu přijít i odpoledne?",
+    "Ano, od pondělí do čtvrtka masíruji až do 18 hodin."
+   ],
+   [
+    "Dá se masáž darovat?",
+    "Ano, připravím dárkový poukaz."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí",
+    "9:00 – 18:00"
+   ],
+   [
+    "Úterý",
+    "9:00 – 18:00"
+   ],
+   [
+    "Středa",
+    "9:00 – 18:00"
+   ],
+   [
+    "Čtvrtek",
+    "9:00 – 18:00"
+   ],
+   [
+    "Pátek – neděle",
+    "zavřeno"
+   ]
+  ],
+  "contact_title": "Kde mě najdete",
+  "band": "Ulevte svým zádům. Termín domluvíme po telefonu.",
+  "hero_photo": "photo-1745327883508-b6cd32e5dde5",
+  "hero_alt": "Masáž zad"
+ },
+ {
+  "slug": "cukrarna-u-kocoura",
+  "name": "Cukrárna U Kocoura",
+  "logo": "Cukrárna U Kocoura",
+  "logo_sub": "Jičín · vlastní výroba",
+  "phone": "604 840 187",
+  "email": "info@cukrarnaukocoura.cz",
+  "ico": "24125725",
+  "address": "Nerudova 46, Jičín",
+  "street": "Nerudova 46",
+  "city": "Jičín",
+  "map_query": "Nerudova 46, Jičín",
+  "schema": "Bakery",
+  "description": "Cukrárna U Kocoura v Jičíně: dorty a zákusky z vlastní výroby, venkovní posezení, dorty na objednávku. Nerudova 46. Tel. 604 840 187.",
+  "colors": {
+   "bg": "#FCF8F2",
+   "surface": "#FFFFFF",
+   "ink": "#2E1F1A",
+   "muted": "#6B5A52",
+   "line": "#EDE3D6",
+   "accent": "#A3405A",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F5ECE1",
+   "dark": "#3B241D"
+  },
+  "fonts": [
+   {
+    "gf": "Fraunces:opsz,wght@9..144,500;9..144,600",
+    "css": "\"Fraunces\",Georgia,serif"
+   },
+   {
+    "gf": "Figtree:wght@400;500;600",
+    "css": "\"Figtree\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 500,
+  "disp_track": "-.015em",
+  "nav": [
+   [
+    "sluzby",
+    "Nabídka"
+   ],
+   [
+    "dorty",
+    "Dorty na objednávku"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Cukrárna · Jičín",
+  "h1": "Dorty a zákusky z vlastní výroby v centru Jičína",
+  "lead": "Peču je sami, každý den. Zastavte se na zákusek a kávu na Nerudově ulici, posaďte se venku, nebo si objednejte dort na oslavu.",
+  "cta": "Objednat dort",
+  "cta2": [
+   "sluzby",
+   "Naše nabídka"
+  ],
+  "hero_card": [
+   "4,7 ★ z 29 hodnocení",
+   "zákazníků na Firmy.cz"
+  ],
+  "trust": [
+   [
+    "4,7 z 5",
+    "29 hodnocení na Firmy.cz"
+   ],
+   [
+    "Vlastní výroba",
+    "dorty a zákusky pečeme sami"
+   ],
+   [
+    "Venkovní posezení",
+    "v centru Jičína"
+   ],
+   [
+    "Nerudova 46",
+    "Jičín"
+   ]
+  ],
+  "svc_eyebrow": "Nabídka",
+  "svc_title": "Co u nás ochutnáte",
+  "svc_lead": "Zákusky, dorty a káva – všechno, co potřebujete na sladkou chvilku nebo oslavu.",
+  "services": [
+   {
+    "title": "Zákusky z vlastní výroby",
+    "text": "Denní výběr zákusků, které pečeme přímo u nás."
+   },
+   {
+    "title": "Dorty na objednávku",
+    "text": "Dort na narozeniny, svatbu nebo firemní oslavu. Objednávky po telefonu."
+   },
+   {
+    "title": "Káva a posezení",
+    "text": "Dejte si kávu se zákuskem uvnitř nebo na venkovním posezení."
+   }
+  ],
+  "svc_note": "Aktuální nabídku zákusků a ceny Vám rádi řekneme po telefonu.",
+  "gallery": [
+   [
+    "photo-1571115177098-24ec42ed204d",
+    "Řez dortem"
+   ],
+   [
+    "photo-1766634001824-a514fdf9df16",
+    "Zákusek a káva"
+   ],
+   [
+    "photo-1519733870-f96bef9bc85f",
+    "Plnění makronek"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O nás",
+   "title": "Poctivé sladkosti z Nerudovy ulice",
+   "text": "Cukrárna U Kocoura stojí v centru Jičína. Dorty i zákusky vyrábíme sami a zákazníci nám to oplácejí – na Firmy.cz nás hodnotí průměrem 4,7 z 5.",
+   "points": [
+    "Vlastní výroba dortů a zákusků",
+    "Venkovní posezení",
+    "Dorty na objednávku na každou oslavu"
+   ],
+   "photo": "photo-1508365506999-5fb01a52525d",
+   "alt": "Zdobení čerstvě upečeného dortu"
+  },
+  "rating": {
+   "score": "4,7",
+   "count": "29",
+   "url": "https://www.firmy.cz/detail/12957908-cukrarna-u-kocoura-jicin-stare-mesto.html",
+   "text": "Zákazníci nás na Firmy.cz hodnotí průměrem 4,7 z 5. Děkujeme – pro Vás pečeme každý den."
+  },
+  "steps_title": "Jak si objednat dort",
+  "steps": [
+   [
+    "Zavolejte",
+    "604 840 187 – řekněte, pro kolik lidí a k jaké příležitosti."
+   ],
+   [
+    "Domluvíme dort",
+    "Poradíme s druhem, velikostí i termínem vyzvednutí."
+   ],
+   [
+    "Vyzvedněte si ho",
+    "Nerudova 46, Jičín – dort bude připravený."
+   ]
+  ],
+  "extra": {
+   "id": "dorty",
+   "eyebrow": "Dorty na objednávku",
+   "title": "Dort, na který budou hosté vzpomínat",
+   "text": "Narozeniny, svatba, křtiny nebo firemní oslava – dort upečeme podle Vašeho přání. Stačí zavolat a domluvit se na detailech.",
+   "cta": "Objednat dort",
+   "photo": "photo-1568051243857-068aa3ea934d",
+   "alt": "Dort s malinami"
+  },
+  "faq": [
+   [
+    "Jak dlouho dopředu objednat dort?",
+    "Ideálně několik dní předem. Přesný termín Vám řekneme po telefonu."
+   ],
+   [
+    "Máte venkovní posezení?",
+    "Ano, za hezkého počasí si můžete sednout venku."
+   ],
+   [
+    "Pečete si zákusky sami?",
+    "Ano, dorty i zákusky jsou z naší vlastní výroby."
+   ],
+   [
+    "Kolik stojí dort?",
+    "Záleží na druhu a velikosti. Cenu řekneme předem po telefonu."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí – sobota",
+    "9:00 – 17:30"
+   ],
+   [
+    "Neděle",
+    "10:00 – 17:00"
+   ]
+  ],
+  "hours_note": "podle Firmy.cz – ověříme s Vámi",
+  "contact_title": "Přijďte na Nerudovu",
+  "band": "Chystáte oslavu? Dort upečeme na objednávku.",
+  "hero_photo": "photo-1726950189914-8fe1016eb9c7",
+  "hero_alt": "Vitrína plná dortů a zákusků"
+ },
+ {
+  "slug": "cukrarna-a-kavarna-u-toma",
+  "name": "Cukrárna a Kavárna u Toma",
+  "logo": "u Toma",
+  "logo_sub": "Cukrárna a kavárna · Žatec",
+  "phone": "776 894 090",
+  "email": "tomovacukrarna@gmail.com",
+  "ico": "03084671",
+  "address": "Bratří Čapků 3191, Žatec",
+  "street": "Bratří Čapků 3191",
+  "city": "Žatec",
+  "map_query": "Bratří Čapků 3191, Žatec",
+  "schema": "CafeOrCoffeeShop",
+  "description": "Cukrárna a Kavárna u Toma v Žatci: káva a zákusky, Bratří Čapků 3191. Tel. 776 894 090.",
+  "colors": {
+   "bg": "#FAF6F0",
+   "surface": "#FFFFFF",
+   "ink": "#2A1E17",
+   "muted": "#685A50",
+   "line": "#E9DFD3",
+   "accent": "#9A6532",
+   "accent_ink": "#FFFFFF",
+   "soft": "#F1E8DC",
+   "dark": "#2F221A"
+  },
+  "fonts": [
+   {
+    "gf": "DM Serif Display",
+    "css": "\"DM Serif Display\",Georgia,serif"
+   },
+   {
+    "gf": "DM Sans:wght@400;500;700",
+    "css": "\"DM Sans\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 400,
+  "disp_track": "0",
+  "nav": [
+   [
+    "sluzby",
+    "Nabídka"
+   ],
+   [
+    "o-nas",
+    "O nás"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Cukrárna a kavárna · Žatec",
+  "h1": "Dobrá káva a zákusek, jak má být",
+  "lead": "Sousedská cukrárna a kavárna v Žatci, v ulici Bratří Čapků. Zastavte se na kávu, zákusek nebo si sladkosti vezměte s sebou domů.",
+  "cta": "Zavolat",
+  "cta2": [
+   "kontakt",
+   "Kde nás najdete"
+  ],
+  "hero_card": [
+   "Bratří Čapků 3191",
+   "Žatec"
+  ],
+  "trust": [
+   [
+    "Káva",
+    "připravená s péčí"
+   ],
+   [
+    "Zákusky",
+    "každý den v nabídce"
+   ],
+   [
+    "Bratří Čapků 3191",
+    "Žatec"
+   ],
+   [
+    "Telefon",
+    "776 894 090"
+   ]
+  ],
+  "svc_eyebrow": "Nabídka",
+  "svc_title": "Na co se k nám zastavit",
+  "svc_lead": "Malá chvilka pro sebe, posezení s kamarádkou nebo sladkost k odpolední kávě.",
+  "services": [
+   {
+    "title": "Káva",
+    "text": "Espresso, cappuccino i káva s mlékem – na místě i s sebou."
+   },
+   {
+    "title": "Zákusky",
+    "text": "Výběr zákusků k odpolední kávě nebo domů pro rodinu."
+   },
+   {
+    "title": "Posezení",
+    "text": "Klidné místo na setkání s přáteli nebo krátkou pauzu."
+   }
+  ],
+  "svc_note": "Na aktuální nabídku zákusků se zeptejte po telefonu.",
+  "gallery": [
+   [
+    "photo-1536599524557-5f784dd53282",
+    "Řezy dortů"
+   ],
+   [
+    "photo-1713774788222-78dde5aa19ff",
+    "Zákusek na talířku"
+   ],
+   [
+    "photo-1741265805852-32186a6d0dd3",
+    "Interiér kavárny"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O nás",
+   "title": "Kavárna, kam se chodí jako k sousedům",
+   "text": "U Toma v Žatci dáváme přednost dobré kávě a poctivým zákuskům. Přijďte se posadit, nebo si sladkost vezměte domů.",
+   "points": [
+    "Káva a zákusky",
+    "Příjemné posezení",
+    "Ulice Bratří Čapků v Žatci"
+   ],
+   "photo": "photo-1521917441209-e886f0404a7b",
+   "alt": "Útulný interiér kavárny"
+  },
+  "steps_title": "Přijďte nás navštívit",
+  "steps": [
+   [
+    "Zastavte se",
+    "Bratří Čapků 3191, Žatec."
+   ],
+   [
+    "Vyberte si",
+    "Kávu, zákusek nebo obojí."
+   ],
+   [
+    "Odpočiňte si",
+    "Na chvilku, nebo na celé odpoledne."
+   ]
+  ],
+  "faq": [
+   [
+    "Máte otevřeno i o víkendu?",
+    "Podle Firmy.cz máme otevřeno v pracovní dny. Než přijedete, raději zavolejte."
+   ],
+   [
+    "Můžu si zákusky vzít s sebou?",
+    "Zeptejte se nás – rádi Vám je zabalíme."
+   ],
+   [
+    "Kde zaparkuji?",
+    "Zavolejte nám, poradíme Vám."
+   ]
+  ],
+  "hours": [
+   [
+    "Pondělí – pátek",
+    "9:00 – 12:00, 13:00 – 17:00"
+   ],
+   [
+    "Sobota – neděle",
+    "zavřeno"
+   ]
+  ],
+  "hours_note": "podle Firmy.cz – ověříme s Vámi",
+  "contact_title": "Najdete nás v Žatci",
+  "band": "Těšíme se na Vás u kávy.",
+  "hero_photo": "photo-1748712869489-95dce7262348",
+  "hero_alt": "Kousek dortu a šálek"
+ },
+ {
+  "slug": "truhlarstvi-knez",
+  "name": "Truhlářství Kněz",
+  "logo": "Truhlářství Kněz",
+  "logo_sub": "Strakonice · nábytek na zakázku",
+  "phone": "603 324 475",
+  "email": "truhlarstvi.strakonice@seznam.cz",
+  "ico": "15817547",
+  "address": "Švandy dudáka 939, Strakonice",
+  "street": "Švandy dudáka 939",
+  "city": "Strakonice",
+  "map_query": "Švandy dudáka 939, Strakonice",
+  "schema": "HomeAndConstructionBusiness",
+  "description": "Truhlářství Kněz, Strakonice: kuchyně a kancelářský nábytek na zakázku, obklady stěn, dveře a vrata. Tel. 603 324 475.",
+  "colors": {
+   "bg": "#F7F5F1",
+   "surface": "#FFFFFF",
+   "ink": "#1D1C1A",
+   "muted": "#5E5A53",
+   "line": "#E2DDD4",
+   "accent": "#7A5230",
+   "accent_ink": "#FFFFFF",
+   "soft": "#EEE9E0",
+   "dark": "#1F1D1A"
+  },
+  "fonts": [
+   {
+    "gf": "Sora:wght@500;600",
+    "css": "\"Sora\",system-ui,sans-serif"
+   },
+   {
+    "gf": "Inter:wght@400;500;600",
+    "css": "\"Inter\",system-ui,sans-serif"
+   }
+  ],
+  "disp_weight": 600,
+  "disp_track": "-.025em",
+  "radius": "8px",
+  "nav": [
+   [
+    "sluzby",
+    "Co vyrábíme"
+   ],
+   [
+    "postup",
+    "Jak to probíhá"
+   ],
+   [
+    "otazky",
+    "Otázky"
+   ],
+   [
+    "kontakt",
+    "Kontakt"
+   ]
+  ],
+  "eyebrow": "Truhlářství · Strakonice",
+  "h1": "Kuchyně a nábytek na míru ze Strakonic",
+  "lead": "Vyrábíme kuchyňský a kancelářský nábytek na zakázku, obklady stěn, dveře i vrata. Přesně podle Vašeho prostoru a představ.",
+  "cta": "Poptat zakázku",
+  "cta2": [
+   "sluzby",
+   "Co vyrábíme"
+  ],
+  "hero_card": [
+   "Na zakázku",
+   "každý kus podle Vašich rozměrů"
+  ],
+  "trust": [
+   [
+    "Kuchyně na míru",
+    "podle Vašeho prostoru"
+   ],
+   [
+    "Kancelářský nábytek",
+    "pro firmy i domácnosti"
+   ],
+   [
+    "Dveře a vrata",
+    "i obklady stěn"
+   ],
+   [
+    "Strakonice",
+    "Švandy dudáka 939"
+   ]
+  ],
+  "svc_eyebrow": "Co vyrábíme",
+  "svc_title": "Nábytek, který sedí na centimetr",
+  "svc_lead": "Žádné kompromisy s rozměry. Každou zakázku vyrábíme přesně pro Váš prostor.",
+  "services": [
+   {
+    "title": "Kuchyně na zakázku",
+    "text": "Kuchyňská linka navržená pro Váš prostor, způsob vaření i rozpočet."
+   },
+   {
+    "title": "Kancelářský nábytek",
+    "text": "Stoly, skříně a úložné prostory pro kanceláře i domácí pracovny."
+   },
+   {
+    "title": "Obklady stěn",
+    "text": "Dřevěné obklady, které dodají místnosti teplo a charakter."
+   },
+   {
+    "title": "Dveře",
+    "text": "Interiérové dveře vyrobené na míru."
+   },
+   {
+    "title": "Vrata",
+    "text": "Dřevěná vrata na zakázku."
+   },
+   {
+    "title": "Další nábytek na míru",
+    "text": "Máte jiný nápad? Zavolejte a domluvíme se, co se dá vyrobit."
+   }
+  ],
+  "svc_note": "Cenu Vám řekneme předem, jakmile budeme znát rozměry a materiál.",
+  "gallery": [
+   [
+    "photo-1788296817269-8df0458ab799",
+    "Nářadí na ponku v dílně"
+   ],
+   [
+    "photo-1600422048144-11b28b00815d",
+    "Detail dřevěné skříňky"
+   ],
+   [
+    "photo-1680965585463-386646047473",
+    "Místnost s dřevěným obkladem"
+   ]
+  ],
+  "about": {
+   "eyebrow": "O nás",
+   "title": "Řemeslo ze Strakonic",
+   "text": "Truhlářství Kněz vyrábí nábytek na zakázku pro domácnosti i firmy ze Strakonic a okolí. Každý kus děláme podle skutečných rozměrů – proto sedí tam, kam patří.",
+   "points": [
+    "Výroba přesně na míru",
+    "Pro domácnosti i firmy",
+    "Cena předem, bez překvapení"
+   ],
+   "photo": "photo-1759523121247-76be6b3490b2",
+   "alt": "Ruce opracovávají dřevo dlátem"
+  },
+  "steps_title": "Od nápadu k hotovému nábytku",
+  "steps": [
+   [
+    "Ozvěte se",
+    "Zavolejte nebo napište, co potřebujete – ideálně s rozměry nebo fotkou."
+   ],
+   [
+    "Domluvíme návrh a cenu",
+    "Probereme materiál, provedení a termín. Cenu znáte předem."
+   ],
+   [
+    "Vyrobíme a namontujeme",
+    "Nábytek vyrobíme v dílně a domluvíme se na předání."
+   ]
+  ],
+  "faq": [
+   [
+    "Kolik stojí kuchyň na zakázku?",
+    "Záleží na rozměrech, materiálu a kováních. Cenu řekneme předem, jakmile víme, co chcete."
+   ],
+   [
+    "Jak dlouho výroba trvá?",
+    "Termín se odvíjí od velikosti zakázky. Řekneme Vám ho při domluvě."
+   ],
+   [
+    "Děláte i menší zakázky?",
+    "Zavolejte a popište, co potřebujete – domluvíme se."
+   ],
+   [
+    "Pracujete jen ve Strakonicích?",
+    "Jsme ze Strakonic a pracujeme pro zákazníky z okolí. Zeptejte se nás."
+   ]
+  ],
+  "hours_text": "Schůzku domluvíme po telefonu.",
+  "contact_title": "Pojďme probrat Vaši zakázku",
+  "band": "Máte představu o novém nábytku? Zavolejte, probereme ji.",
+  "hero_photo": "photo-1748183781742-a2473d27a763",
+  "hero_alt": "Moderní kuchyně se světlými dřevěnými dvířky"
+ }
+]
