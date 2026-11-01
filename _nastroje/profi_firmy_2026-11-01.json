@@ -26,15 +26,15 @@
   },
   "fonts": [
    {
-    "gf": "Cormorant Garamond:wght@500;600",
-    "css": "\"Cormorant Garamond\",Georgia,serif"
+    "gf": "EB Garamond:wght@500;600",
+    "css": "\"EB Garamond\",Georgia,serif"
    },
    {
     "gf": "Jost:wght@400;500;600",
     "css": "\"Jost\",system-ui,sans-serif"
    }
   ],
-  "disp_weight": 600,
+  "disp_weight": 500,
   "disp_track": "0",
   "nav": [
    [
