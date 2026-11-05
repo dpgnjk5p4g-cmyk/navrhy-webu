@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Návrh webu – Pneuservis IMAR</title>
+<meta name="description" content="Pneuservis a prodej pneumatik ve Žďáru nad Sázavou – přezutí aut, dodávek i motorek, vyvážení, opravy, uskladnění kol, rovnání ALU disků. Po–Pá 7:30–16:30, tel. 739 019 845.">
+<meta name="theme-color" content="#F4F5F6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow%20Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TireShop", "name": "Pneuservis IMAR", "telephone": "+420739019845", "address": {"@type": "PostalAddress", "streetAddress": "Novoměstská 2286/17", "addressLocality": "Žďár nad Sázavou", "postalCode": "591 01", "addressCountry": "CZ"}, "description": "Pneuservis a prodej pneumatik ve Žďáru nad Sázavou – přezutí aut, dodávek i motorek, vyvážení, opravy, uskladnění kol, rovnání ALU disků. Po–Pá 7:30–16:30, tel. 739 019 845.", "email": "pneu@pneuimar.cz", "taxID": "15261441", "openingHours": ["Mo-Fr 07:30-11:30", "Mo-Fr 12:30-16:30"]}</script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+
+
+
+
+
+<style>
+/* Hero jako týdenní tabule s ručičkou Teď; prvek Přečtěte si svou pneumatiku; signální žlutá na grafitu */
+:root{--bg:#F4F5F6;--surface:#FFFFFF;--ink:#16191D;--muted:#545B63;--line:#DDE1E5;
+--accent:#F2B705;--accent-ink:#16191D;--soft:#FFF5D1;--dark:#16191D;--on-dark:#FFFFFF;
+--disp:'Barlow Condensed','Arial Narrow',sans-serif;--body:Barlow,system-ui,sans-serif;--r:8px;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+img{max-width:100%;display:block}a{color:inherit}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.12;margin:0 0 .5em;letter-spacing:0;text-wrap:balance}
+h1{font-size:clamp(2.2rem,4.4vw,3.6rem)}h2{font-size:clamp(1.7rem,3vw,2.5rem)}h3{font-size:1.2rem}
+p{margin:0 0 1em}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.nb{background:var(--soft);color:var(--muted);font:500 12.5px/1.4 var(--body);text-align:center;padding:7px 16px;border-bottom:1px solid var(--line)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:70px}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1;margin-right:auto;min-width:0}
+.logo b{font:700 1.35rem/1.1 var(--disp);letter-spacing:0}
+.logo small{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav{display:flex;gap:24px;font-size:.95rem}.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:.98rem;padding:14px 26px;border-radius:8px;border:1px solid var(--accent);cursor:pointer;font-family:var(--body)}
+.btn:hover{filter:brightness(1.06)}.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.top .btn{padding:10px 18px;font-size:.92rem}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:16px}
+.lead{font-size:1.1rem;color:var(--muted);max-width:36em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+.ph{position:relative;overflow:hidden;border-radius:var(--r);background:linear-gradient(135deg,var(--soft),var(--line));aspect-ratio:4/3;margin:0;max-width:100%}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ill{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.5);color:#fff;font-size:.7rem;padding:4px 9px;border-radius:99px;letter-spacing:.04em}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.trust ul{list-style:none;margin:0 auto;padding:24px max(20px,env(safe-area-inset-right,0px)) 24px max(20px,env(safe-area-inset-left,0px));max-width:1180px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.trust li{display:flex;flex-direction:column;min-width:0}.trust strong{font-family:var(--disp);font-size:1.15rem}.trust span{font-size:.88rem;color:var(--muted)}
+.sec{padding-block:88px}.band-soft{background:var(--soft)}
+.head{max-width:660px;margin-bottom:40px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;display:flex;flex-direction:column}
+.svc p{color:var(--muted);font-size:.97rem;margin:0}.svc .price{margin-top:auto;padding-top:14px;color:var(--ink);font-weight:600}
+.svc-note{margin-top:24px;color:var(--muted);font-size:.95rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.split>*{min-width:0}
+.checks{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.checks li{padding-left:30px;position:relative}.checks li::before{content:"";position:absolute;left:2px;top:.5em;width:14px;height:8px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.gal{padding-top:0}.gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;align-items:start}.gal-grid .ph{aspect-ratio:auto;height:320px;width:100%}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.sn{display:block;font-family:var(--disp);font-size:2.6rem;line-height:1;color:var(--accent);margin-bottom:14px}
+.steps p{color:var(--muted);margin:0}
+.faq{max-width:820px}details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--accent);font-size:1.4rem;line-height:1}details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:12px 0 0}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contact>*{min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:32px}
+.card p{margin:0 0 14px;display:flex;flex-direction:column}.lbl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.card a{text-decoration:none}.card .phone{font-family:var(--disp);font-size:1.7rem}
+.hours{border-collapse:collapse;width:100%;font-size:.95rem;font-variant-numeric:tabular-nums}.hours th{text-align:left;font-weight:500;padding:6px 0;color:var(--muted)}.hours td{text-align:right;padding:6px 0}
+.hours tr+tr{border-top:1px solid var(--line)}.hours tr.today th,.hours tr.today td{color:var(--accent);font-weight:700}
+.htext{font-size:.92rem;color:var(--muted);margin-top:10px}
+.tag{display:inline-block;font-size:.74rem;background:var(--soft);color:var(--muted);padding:3px 10px;border-radius:99px;font-weight:500;letter-spacing:.02em}
+.mapcard{background:var(--dark);color:var(--on-dark);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:300px}
+.mapcard .addr{font-family:var(--disp);font-size:1.6rem;line-height:1.25}.mapcard p{opacity:.8;margin:0}
+.mapcard .row{display:flex;flex-wrap:wrap;gap:10px}.mapcard .btn{background:var(--on-dark);color:var(--dark);border-color:var(--on-dark)}.mapcard .btn.ghost{background:transparent;color:var(--on-dark);border-color:rgba(255,255,255,.35)}
+.ctaband{background:var(--dark);color:var(--on-dark);padding-block:64px}.ctaband .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.ctaband h2{margin:0;max-width:20em}.ctaband .btn{background:var(--on-dark);color:var(--dark);border-color:var(--on-dark)}
+footer{background:var(--dark);color:var(--on-dark);opacity:.92;font-size:.88rem;border-top:1px solid rgba(255,255,255,.14);padding-block:26px 100px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer span{opacity:.75}
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:9px 16px;font:500 .93rem var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.out{margin-top:18px;padding:18px;border-radius:calc(var(--r) - 4px);background:var(--soft);font-size:.97rem}
+.out b{font-family:var(--disp)}
+.field{display:flex;flex-direction:column;gap:6px;font-size:.9rem;color:var(--muted)}
+.field input,.field select{font:500 1rem var(--body);padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.small{font-size:.82rem;color:var(--muted)}
+.mbar{display:none}
+.hero-board{padding-block:60px 70px;background:var(--surface);border-bottom:1px solid var(--line)}.hero-board .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}.hero-board .wrap>*{min-width:0}
+.hero-board h1{text-transform:uppercase;font-size:clamp(2.3rem,4.6vw,3.8rem);line-height:1}
+.board{background:var(--dark);color:#fff;border-radius:12px;padding:26px 24px 20px;font-variant-numeric:tabular-nums}
+.b-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:14px;flex-wrap:wrap}.b-head span{font:700 1.3rem var(--disp);text-transform:uppercase;letter-spacing:.04em}.b-head b{background:var(--accent);color:var(--ink);padding:3px 10px;border-radius:6px;font-size:.85rem}
+.b-scale{display:flex;justify-content:space-between;margin-left:44px;font-size:.72rem;color:#9aa3ad;margin-bottom:6px}
+.b-row{display:grid;grid-template-columns:36px 1fr;gap:8px;align-items:center;margin:7px 0;font-size:.85rem}.b-row.today .b-d{color:var(--accent);font-weight:700}
+.b-track{position:relative;height:22px;background:#262b31;border-radius:4px}.b-seg{position:absolute;top:0;bottom:0;background:var(--accent);border-radius:3px;opacity:.9}.b-seg.tel{background:repeating-linear-gradient(45deg,#5d6670 0 4px,#3a4148 4px 8px)}
+.b-now{position:absolute;top:-4px;bottom:-4px;width:2px;background:#fff}.b-note{color:#9aa3ad;margin:12px 0 0}
+.tyre{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.tyre>*{min-width:0}.tyre .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gauge{height:14px;border-radius:7px;background:linear-gradient(90deg,#d64545 0 20%,#f2b705 20% 50%,#3c9a5f 50%);position:relative;margin:10px 0 4px}.gauge i{position:absolute;top:-5px;width:4px;height:24px;background:var(--ink);border-radius:2px}
+.zima{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.zima div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px}.zima b{font:700 2.2rem var(--disp);display:block;color:var(--ink)}
+@media (max-width:900px){
+ .nav{display:none}.split,.contact{grid-template-columns:1fr;gap:30px}
+ .trust ul{grid-template-columns:1fr 1fr}.svc-grid,.steps{grid-template-columns:1fr}
+ .gal-grid{grid-template-columns:1fr 1fr}.gal-grid .ph:first-child{grid-column:1/-1}.gal-grid .ph{height:200px}
+ .sec{padding-block:60px}.top .btn{display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:var(--surface);border-top:1px solid var(--line)}
+ .mbar a{text-align:center;padding:13px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+ .mbar .m1{background:var(--accent);color:var(--accent-ink)}.mbar .m2{border:1px solid var(--line);color:var(--ink)}
+ .hero-board{padding-block:28px 40px}.hero-board .wrap{grid-template-columns:1fr;gap:28px}.tyre,.zima{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+<div class="nb">Nezávazný návrh webu – není to oficiální stránka firmy Pneuservis IMAR</div>
+<div class="top" role="banner"><div class="wrap">
+  <a class="logo" href="#"><b>Pneuservis IMAR</b> <small>Žďár nad Sázavou</small></a>
+  <nav class="nav" aria-label="Hlavní menu"><a href="#sluzby">Služby</a> <a href="#pneu">Vaše pneumatika</a> <a href="#zima">Zima</a> <a href="#kontakt">Kontakt</a></nav>
+  <a class="btn" href="tel:+420739019845">739 019 845</a>
+</div></div>
+<main>
+<section class="hero-board"><div class="wrap">
+ <div><p class="eyebrow" style="color:var(--ink)">Pneuservis · Žďár nad Sázavou</p><h1>Přezutí, pneu a kola ve Žďáru – bez dlouhého čekání</h1>
+ <p class="lead">Montáž, vyvážení a opravy pneumatik pro auta, dodávky i motorky. Prodej Bridgestone, Firestone, Dayton a Lassa, uskladnění kol a rovnání ALU disků.</p>
+ <div class="cta"><a class="btn" href="tel:+420739019845">Objednat přezutí</a> <a class="btn ghost" href="#pneu">Zkontrolovat pneu</a></div></div>
+ <div class="board" aria-label="Otevírací doba"><div class="b-head"><span>Otevírací doba</span> <b id="bnow">—</b></div>
+ <div class="b-scale"><span>7</span><span>9</span><span>11</span><span>13</span><span>15</span><span>17</span></div>
+ <div id="bdays"></div><p class="small b-note">Polední pauza 11:30–12:30 · sobota po telefonické domluvě · o svátcích zavolejte</p></div>
+</div></section>
+<div class="trust"><ul><li><strong>Auta, dodávky, motorky</strong> <span>přezutí i opravy pneu</span></li><li><strong>Bridgestone · Firestone</strong> <span>Dayton a Lassa skladem i na objednávku</span></li><li><strong>Hodnocení 4,0</strong> <span>z 8 recenzí na Firmy.cz</span></li><li><strong>Platba kartou</strong> <span>i hotově</span></li></ul></div>
+<section class="sec" id="sluzby"><div class="wrap">
+  <div class="head"><p class="eyebrow">Služby</p><h2>Všechno kolem pneumatik na jednom místě</h2><p class="lead">Od sezónního přezutí po rovnání poškozeného ALU disku.</p></div>
+  <div class="svc-grid"><article class="svc"><h3>Přezutí a vyvážení</h3> <p>Montáž, demontáž a vyvážení kol osobních aut, dodávek i motorek. Dělají to vyškolení pracovníci.</p></article><article class="svc"><h3>Opravy pneumatik</h3> <p>Oprava defektu u auta, dodávky i motorky kvalitním značkovým materiálem.</p></article><article class="svc"><h3>Mytí a uskladnění kol</h3> <p>Kola po sezóně umyjeme a uskladníme, ať je nemusíte vozit domů.</p></article><article class="svc"><h3>Rovnání ALU disků</h3> <p>Poškozený disk vyrovnáme na moderním zařízení a zkontrolujeme vyvážení.</p></article><article class="svc"><h3>Prodej pneumatik</h3> <p>Letní i zimní pneu, zaměření na Bridgestone, Firestone a Dayton, dále Lassa. Disky, duše, sněhové řetězy.</p></article><article class="svc"><h3>Olej, brzdy, výfuky</h3> <p>Výměna oleje, brzdových destiček a výfuků, když už jste u nás.</p></article></div>
+  <p class="svc-note">Ceny přezutí a pneumatik doplníme podle Vás – cenu řekneme předem po telefonu.</p>
+</div></section>
+
+<section class="sec" id="pneu"><div class="wrap"><div class="head"><p class="eyebrow" style="color:var(--ink)">Vaše pneumatika</p><h2>Přečtěte si svou pneumatiku</h2>
+<p class="lead">Na boku pneumatiky najdete rozměr a čtyřmístné číslo DOT (týden a rok výroby). Zadejte je a hloubku dezénu – řekneme, jestli je čas na nové, a připravíme SMS.</p></div>
+<div class="tyre"><div class="tool"><div class="fields">
+<label class="field" for="trozm">Rozměr (např. 205/55 R16)<input id="trozm" value="205/55 R16" autocomplete="off"></label>
+<label class="field" for="tdot">DOT – 4 číslice (např. 2219)<input id="tdot" value="2219" inputmode="numeric" maxlength="4"></label>
+<label class="field" for="tdez">Hloubka dezénu v mm<input id="tdez" type="number" min="0" max="12" step="0.5" value="4.5"></label>
+<label class="field" for="tkus">Kolik kusů<select id="tkus"><option>4</option><option>2</option><option>1</option></select></label></div>
+<p class="small" style="margin-top:12px">Orientační kontrola podle obecných pravidel – přesně posoudíme na místě.</p></div>
+<div class="tool" aria-live="polite"><p class="lbl">Výsledek</p><p id="tout" style="font-size:1.05rem"></p><div class="gauge"><i id="tg"></i></div><p class="small">0 mm · 4 mm zimní minimum · 8 mm nová zimní</p>
+<a class="btn" id="tsms" href="sms:+420739019845" style="margin-top:14px;width:100%">Poslat SMS na 739 019 845</a></div></div></div></section>
+<section class="sec gal" aria-label="Fotografie"><div class="wrap"><div class="gal-grid"><figure class="ph "><img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=1000&q=80" alt="Pneumatiky ve skladu" loading="lazy" onerror="this.remove()"><span class="ill">Ilustrační foto</span></figure><figure class="ph "><img src="https://images.unsplash.com/photo-1601411101851-ea0e07766235?auto=format&fit=crop&w=1000&q=80" alt="Kolo s ALU diskem" loading="lazy" onerror="this.remove()"><span class="ill">Ilustrační foto</span></figure><figure class="ph "><img src="https://images.unsplash.com/photo-1527266258038-6ae3e089a609?auto=format&fit=crop&w=1000&q=80" alt="Pneumatiky v regálu" loading="lazy" onerror="this.remove()"><span class="ill">Ilustrační foto</span></figure></div><p class="note">Ilustrační fotografie z Unsplash – na webu je nahradíme Vašimi vlastními.</p></div></section>
+<section class="sec band-soft" id="o-nas"><div class="wrap split">
+  <figure class="ph tall"><img src="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?auto=format&fit=crop&w=1200&q=80" alt="Pneuservis v dílně" loading="lazy" onerror="this.remove()"><span class="ill">Ilustrační foto</span></figure>
+  <div><p class="eyebrow">O nás</p><h2>Pneuservis na Novoměstské ulici</h2>
+  <p class="lead">Pneuservis IMAR ve Žďáru nad Sázavou vede Miloš Tlačbaba. Přezujeme, vyvážíme a opravíme pneumatiky aut, dodávek i motorek a prodáme Vám nové.</p><ul class="checks"><li>Vyškolení pracovníci</li><li>Specializace na Bridgestone, Firestone a Dayton</li><li>Uskladnění kol mezi sezónami</li><li>Platba kartou</li></ul></div>
+</div></section>
+<section class="sec" id="postup"><div class="wrap">
+  <div class="head"><p class="eyebrow">Jak to probíhá</p><h2>Přezutí ve třech krocích</h2></div>
+  <ol class="steps"><li><span class="sn">1</span> <h3>Zavolejte nebo pošlete SMS</h3> <p>739 019 845 – řekněte rozměr pneu a jestli máte kola na discích.</p></li><li><span class="sn">2</span> <h3>Přijeďte v domluvený čas</h3> <p>Novoměstská 17, Po–Pá 7:30–16:30, v sobotu po domluvě.</p></li><li><span class="sn">3</span> <h3>Odjedete přezutí</h3> <p>Kola vyvážíme, zkontrolujeme dezén a letní můžeme uskladnit.</p></li></ol>
+</div></section>
+<section class="sec band-soft" id="zima"><div class="wrap"><div class="head"><p class="eyebrow" style="color:var(--ink)">Zima 2026/27</p><h2>Zimní pneu jsou povinné</h2>
+<p class="lead">Od 1. listopadu do 31. března musíte mít zimní pneumatiky, když jsou na silnici zimní podmínky. Přezutí si domluvte včas.</p></div>
+<div class="zima"><div><b>1. 11.–31. 3.</b>období, kdy platí povinnost za zimních podmínek</div><div><b>4 mm</b>minimální hloubka dezénu zimní pneu u osobního auta</div><div><b>Uskladnění</b>letní kola Vám do jara uschováme</div></div></div></section>
+<section class="sec" id="otazky"><div class="wrap faq">
+  <div class="head"><p class="eyebrow">Časté otázky</p><h2>Na co se lidé ptají</h2></div><details><summary>Musím se na přezutí objednat?</summary><p>V sezóně doporučujeme – zavolejte nebo pošlete SMS na 739 019 845.</p></details><details><summary>Funguje ještě pevná linka?</summary><p>Ne, pevná linka byla zrušena. Volejte na mobil 739 019 845.</p></details><details><summary>Máte otevřeno v sobotu?</summary><p>V sobotu po telefonické domluvě.</p></details><details><summary>Přezouváte i motorky a dodávky?</summary><p>Ano, osobní auta, dodávky i motorky.</p></details><details><summary>Můžu platit kartou?</summary><p>Ano, kartou i hotově.</p></details>
+</div></section>
+<section class="sec band-soft" id="kontakt"><div class="wrap">
+  <div class="head"><p class="eyebrow">Kontakt</p><h2>Domluvte si přezutí</h2></div>
+  <div class="contact">
+    <div class="card">
+      <p><span class="lbl">Telefon</span> <a class="phone" href="tel:+420739019845">739 019 845</a></p>
+      <p><span class="lbl">E-mail</span> <a href="mailto:pneu@pneuimar.cz">pneu@pneuimar.cz</a></p>
+      <p><span class="lbl">Adresa</span> Novoměstská 2286/17, 591 01 Žďár nad Sázavou</p>
+      <p><span class="lbl">IČO</span> 15261441</p>
+      <h3>Otevírací doba</h3><table class="hours"><tr data-d="1"><th>Pondělí</th><td>7:30–11:30, 12:30–16:30</td></tr><tr data-d="2"><th>Úterý</th><td>7:30–11:30, 12:30–16:30</td></tr><tr data-d="3"><th>Středa</th><td>7:30–11:30, 12:30–16:30</td></tr><tr data-d="4"><th>Čtvrtek</th><td>7:30–11:30, 12:30–16:30</td></tr><tr data-d="5"><th>Pátek</th><td>7:30–11:30, 12:30–16:30</td></tr><tr data-d="6"><th>Sobota</th><td>po telefonické domluvě</td></tr><tr data-d="7"><th>Neděle</th><td>zavřeno</td></tr></table><p class="htext">Podle Firmy.cz – v pátek ověříme s Vámi (starý web uvádí zavírání v 15:30).</p>
+    </div>
+    <div class="mapcard"><div><p class="lbl" style="color:inherit;opacity:.7">Kde nás najdete</p><div class="addr">Novoměstská 2286/17, 591 01 Žďár nad Sázavou</div>
+      <p>V sobotu po telefonické domluvě. Platit můžete i kartou.</p></div>
+      <div class="row"><a class="btn" href="https://mapy.cz/zakladni?q=Novom%C4%9Bstsk%C3%A1%202286/17%2C%20%C5%BD%C4%8F%C3%A1r%20nad%20S%C3%A1zavou" target="_blank" rel="noopener">Mapy.cz</a> <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Novom%C4%9Bstsk%C3%A1%202286/17%2C%20%C5%BD%C4%8F%C3%A1r%20nad%20S%C3%A1zavou" target="_blank" rel="noopener">Google Mapy</a></div></div>
+  </div>
+</div></section>
+<section class="ctaband"><div class="wrap"><h2>Zima je tady. Objednejte přezutí ještě tento týden.</h2><a class="btn" href="tel:+420739019845">Zavolat 739 019 845</a></div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Pneuservis IMAR · Novoměstská 2286/17, 591 01 Žďár nad Sázavou</span> <span>Návrh webu připravil Lukáš Trnka · studio.webycz@gmail.com</span></div></footer>
+<div class="mbar"><a class="m1" href="tel:+420739019845">Zavolat</a> <a class="m2" href="sms:+420739019845">Poslat SMS</a></div>
+<script>
+(function(){var d=new Date().getDay();d=d===0?7:d;document.querySelectorAll('.hours tr[data-d="'+d+'"]').forEach(function(r){r.classList.add('today')});})();
+
+function smsLink(a,num,body){a.href='sms:'+num+'?body='+encodeURIComponent(body);}
+function isHoliday(d){return ['1-1','5-1','5-8','7-5','7-6','9-28','10-28','11-17','12-24','12-25','12-26'].indexOf((d.getMonth()+1)+'-'+d.getDate())>-1;}
+
+(function(){var days=['Po','Út','St','Čt','Pá','So','Ne'],S=7,E=17,box=document.getElementById('bdays'),d=new Date(),wd=(d.getDay()+6)%7,h=d.getHours()+d.getMinutes()/60;
+function pct(x){return ((x-S)/(E-S)*100)+'%'}
+days.forEach(function(n,i){var r=document.createElement('div');r.className='b-row'+(i===wd?' today':'');var segs='';
+if(i<5){segs='<span class="b-seg" style="left:'+pct(7.5)+';width:calc('+pct(11.5)+' - '+pct(7.5)+')"></span><span class="b-seg" style="left:'+pct(12.5)+';width:calc('+pct(16.5)+' - '+pct(12.5)+')"></span>'}
+else if(i===5){segs='<span class="b-seg tel" style="left:'+pct(8)+';width:calc('+pct(12)+' - '+pct(8)+')" title="po domluvě"></span>'}
+if(i===wd&&h>=S&&h<=E)segs+='<span class="b-now" style="left:'+pct(h)+'"></span>';
+r.innerHTML='<span class="b-d">'+n+'</span><div class="b-track">'+segs+'</div>';box.appendChild(r)});
+var open=wd<5&&((h>=7.5&&h<11.5)||(h>=12.5&&h<16.5));var t=isHoliday(d)?'Svátek – zavolejte':(open?'Teď otevřeno':(wd<5&&h>=11.5&&h<12.5?'Polední pauza':'Teď zavřeno'));document.getElementById('bnow').textContent=t;
+var r=document.getElementById('trozm'),dot=document.getElementById('tdot'),dz=document.getElementById('tdez'),k=document.getElementById('tkus'),o=document.getElementById('tout'),g=document.getElementById('tg'),a=document.getElementById('tsms');
+function upd(){var s=dot.value.replace(/\D/g,''),msg=[],age=null;if(s.length===4){var w=+s.slice(0,2),y=2000+ +s.slice(2);if(w>=1&&w<=53&&y<=d.getFullYear()){age=d.getFullYear()-y;msg.push('Vyrobeno '+w+'. týden '+y+' – stáří asi '+age+' '+(age===1?'rok':(age>1&&age<5?'roky':'let'))+'.')}}
+if(age===null)msg.push('DOT zadejte jako 4 číslice, např. 2219.');
+var mm=parseFloat(dz.value);if(!isNaN(mm)){g.style.left='calc('+Math.min(mm/10,1)*100+'% - 2px)';msg.push(mm<4?'Dezén pod 4 mm – v zimě už nevyhovuje, je čas na nové.':(mm<5?'Dezén těsně nad zimním minimem – na další zimu nové.':'Dezén v pořádku.'))}
+if(age!==null&&age>=6)msg.push('Pneu starší 6 let doporučujeme zkontrolovat i kvůli stáří pryže.');
+o.textContent=msg.join(' ');
+smsLink(a,'+420739019845','Dobrý den, chtěl(a) bych přezutí / pneumatiky '+r.value+', '+k.value+' ks (DOT '+dot.value+', dezén '+dz.value+' mm). Kdy můžu přijet? Děkuji.')}
+[r,dot,dz,k].forEach(function(x){x.addEventListener('input',upd)});upd();})();
+
+</script>
+</body>
+</html>
